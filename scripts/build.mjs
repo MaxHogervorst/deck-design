@@ -17,6 +17,9 @@ const html = (await read('site/index.html'))
 await mkdir(path.join(root, 'dist'), { recursive: true });
 await writeFile(path.join(root, 'dist/index.html'), html);
 await mkdir(path.join(root, 'docs'), { recursive: true });
-await writeFile(path.join(root, 'docs/index.html'), html);
+const publicHTML = html
+  .replace(/<script type="application\/json" id="source-documents">[\s\S]*?<\/script>/, '<script type="application/json" id="source-documents">{}</script>')
+  .replace(/^[ \t]*<section class="sources-section page-width"[\s\S]*?<\/section>[ \t]*\n?/m, '');
+await writeFile(path.join(root, 'docs/index.html'), publicHTML);
 await writeFile(path.join(root, 'docs/.nojekyll'), '');
-console.log(`Built dist/index.html and docs/index.html (${Math.round(Buffer.byteLength(html) / 1024)} KB). No external assets or dependencies.`);
+console.log(`Built dist/index.html and docs/index.html (${Math.round(Buffer.byteLength(html) / 1024)} KB). Pages output excludes private working documents.`);

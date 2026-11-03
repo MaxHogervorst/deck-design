@@ -23,13 +23,13 @@ npm start
 
 The server uses port 3000 by default; set `PORT` to change it. `npm run dev` builds and starts the server in one command. Rebuild after editing website sources or project Markdown, then refresh the browser. There is no automatic file watcher.
 
-The build creates **`dist/index.html`**, containing all styles, scripts, SVG drawing code and project source documents. No remote fonts, analytics, APIs, accounts or external assets are required. The finished HTML can be opened directly in a modern browser.
+The build creates **`dist/index.html`**, containing all styles, scripts, SVG drawing code and project source documents. No remote fonts, analytics, APIs, accounts or external assets are required. The finished HTML can be opened directly in a modern browser. The public `docs/index.html` variant omits the private working-note downloads.
 
 ## Share with reviewers
 
 Send `dist/index.html` as an attachment, or use **Share design → Download website** inside the page. Reviewers should download the HTML attachment and open it in a browser; some email clients do not preview active HTML attachments.
 
-For a public URL, GitHub Pages can serve the generated **`docs/`** folder on the **`main`** branch. In repository **Settings → Pages**, choose **Deploy from a branch**, then **main /docs**, and save. The website supports the `/deck-design/` subpath without an asset-path configuration. The build refreshes `docs/index.html` and `docs/.nojekyll` alongside `dist/index.html`; commit the refreshed `docs/` output when publishing changes. The private source repository stays private. Pages availability for private repositories depends on the GitHub account plan. The build itself does not deploy or publish the cloud environment.
+For a public URL, GitHub Pages can serve the generated **`docs/`** folder on the **`main`** branch. In repository **Settings → Pages**, choose **Deploy from a branch**, then **main /docs**, and save. The website supports the `/deck-design/` subpath without an asset-path configuration. The build refreshes `docs/index.html` and `docs/.nojekyll` alongside `dist/index.html`; commit the refreshed `docs/` output when publishing changes. **Public Pages output excludes the embedded working Markdown documents and their download section.** The private repository retains those source files. The separate `dist/index.html` portable bundle includes the working notes; share that fuller version only with intended reviewers. The private source repository stays private. Pages availability for private repositories depends on the GitHub account plan. The build itself does not deploy or publish the cloud environment.
 
 Reviewers enter optional names, assessments and notes. These stay in their browser when storage is available. They must use **Download review** or **Copy review** and send the result to the project owner; there is no shared database or automatic submission. A downloaded website excludes those personal review inputs. Downloaded reviews contain them intentionally. On browsers that block local storage, download the review before closing the page.
 
