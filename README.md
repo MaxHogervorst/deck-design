@@ -2,10 +2,10 @@
 
 Technical reference for the owner and builder:
 
-- **Plans:** framing opens first, with 16 numbered joist lines, three dashed continuation candidates, bearer/pile positions and a coordinate table. Dimensions and side profile are separate views.
+- **Plans:** framing opens first, with 16 numbered joist lines, three dashed continuity candidates, rebuilt cross-blocking, a tread ladder and a coordinate table. Separate views explain rotated-board fixings, the tread frame, dimensions and side profile.
 - **Materials:** specifications, planning quantities and outstanding decisions in one table.
 - **Build steps:** seven short phases, open by default.
-- **Builder checks:** a table for the in-person discussion. No online forms or feedback workflow.
+- **Builder plan review:** one in-person review before construction, with no during-build inspections planned. No online forms or feedback workflow.
 
 Live site: **https://maxhogervorst.github.io/deck-design/**
 
@@ -16,7 +16,7 @@ The design remains **preliminary, not construction drawings**. Confirmed owner c
 - Main deck: **6600 × 2600 mm**; rebuilt section: **900 × 1970 mm**.
 - Main + rebuilt area: **18.933 m²**, excluding tread.
 - **Deck → one full-width tread → garden**. Tread: **6600 × 400 mm**, selected surface **250 mm above the garden**, beneath a deck about **500 mm high**. The vertical access detail is not verified.
-- **38 mm-thick pine decking**; 138 mm board width remains provisional until the actual product is selected.
+- **38 mm-thick pine decking**; 138 mm width remains provisional. The rebuilt section is illustrated with boards turned 90° along its 1970 mm depth, interpreting the owner’s description.
 - Freestanding from the house. Double 140×45 bearers and 140×45 joists remain structural concepts.
 
 ## Build and view
@@ -43,9 +43,9 @@ No remote fonts, analytics, APIs, accounts or external assets are required. The 
 
 The framing view is the default. J01–J03 fit within the 900 mm rebuilt strip at 427.5 mm centres; the remaining 13 bays are approximately 438.46 mm. Dashed continuations remain provisional. Open the joist coordinate table for centre positions, or enlarge the drawing. No displayed coordinate is an approved cut length.
 
-The owner build guide covers design/pre-work, set-out, footings, bearers/bracing, joists and the rebuilt-section junction, decking, and the garden tread/completion. It explains the order of work without treating unresolved structural choices as approved construction details.
+The owner build guide covers the pre-build plan review, set-out, footings, bearers/bracing, joists and rebuilt cross-blocks, board fixing, and the independent tread frame/completion. It explains the order of work without treating unresolved structural choices as approved construction details.
 
-The builder-checks table lists six topics: layout/house interface, the rebuilt section and retained bearer, framing/bracing/connections, footings/ground, deck-to-tread-to-garden access, and the exact decking/purchase plan. Use these during the in-person discussion. Agreed changes belong in the project record rather than an on-site review form.
+The builder reviews the proposed joist continuity and rebuilt cross-blocks, main framing/bracing, footing plan, tread frame/access and the actual decking/fasteners once before construction. The owner builds from the agreed plan; no during-build builder inspections are planned. The requested site-clearance checklist is outside that review, and no handrails are proposed.
 
 ## Share and publish
 
@@ -83,6 +83,12 @@ The Markdown files remain the working design record. After changing dimensions, 
 
 ## Validation after changes
 
-Run `npm run build` and check both HTML variants in a browser on desktop and mobile. Exercise plan selection by mouse/keyboard, drawing tabs, the single-tread profile, the seven build phases, the six in-person discussion topics, source downloads in the fuller bundle and the share controls. Confirm that the public variant contains no embedded working notes, and that review forms, feedback exports and reviewer-note storage are absent.
+Run `npm run build` and check both HTML variants in a browser on desktop and mobile. Exercise plan selection by mouse/keyboard, drawing tabs, the single-tread profile, the seven build phases, the five pre-build review topics, source downloads in the fuller bundle and the share controls. Confirm that the public variant contains no embedded working notes, and that review forms, feedback exports and reviewer-note storage are absent.
 
-These checks validate website behaviour, not structural design or compliance. No current NZ structural or regulatory requirement has been independently verified by this website work.
+These checks validate website behaviour, not structural design or compliance. General BRANZ board-fixing guidance is recorded in REFERENCES.md. The full frame, foundations, connections and access geometry remain proposals for pre-build review, not independently verified construction details.
+
+## New framing details
+
+- **J01–J03:** proposed continuations across the 4570 mm finished main-plus-rebuilt envelope. This is not a member cut length.
+- **Rebuilt rotated boards:** 12 flush cross-blocks in six rows at 385 mm centres; board-fixing examples are shown in the Decking fixings view. Block-end connections and the actual screw schedule remain to specify.
+- **One tread:** a standalone, single-layer 140×45 ladder frame, two long rails and 16 nominal 310 mm crosspieces. Six support stations give 12 rail-bearing points. With 38 mm boards at a 250 mm surface, frame top/bottom are nominally 212/72 mm. Grade/treatment, supports, anchorage and access geometry remain open; there is no assumed H3.2 offcut/paver solution.

@@ -9,15 +9,18 @@ No supplier order should be placed from these quantities until the footing/braci
 | H3.2 SG8 140×45 double bearers | 4 × 6600 mm nominal plies = **26.4 lm installed** | Splice, cuts and allowable joint positions to be engineered/checked |
 | H3.2 SG8 140×45 joists | 16 total main joist lines; J01–J03 shown with candidate continuations; cuts TBD | Three longer candidates replace three short members, not three extra joists. Side edges counted once; junction, bearings, butt supports and cuts unverified |
 | H3.2 SG8 140×45 rims | 2 × 6600 mm = 13.2 lm nominal along long edges; side edge joists already included in the 16-line baseline | Confirm end-joint layout and method |
-| H3.2 138×38 decking | Conditional 19 main + 14 rebuilt + 3 tread rows = 157.8 lm of row-length stock before allowances; actual product and final order unresolved | Not a purchase length/stock list; actual board width, perimeter clearances, gap/moisture, joints and waste govern |
+| H3.2 138×38 decking | Current rotated-board scenario: 19 main + 7 rebuilt + 3 tread rows = 158.99 lm (~159.0 lm) before allowances; actual product and final order unresolved | Not a purchase length/stock list; actual board width, perimeter clearances, gap/moisture, joints and waste govern |
 | Decking screws | Previous allowance **2 × 500 packs** | Count from final joist/butt layout and ends; stainless or appropriate corrosion rating |
 | DPC | At each pile top as required | Exact grade/size per detail |
 | Ordinary/anchor pile structural fixing kits | TBD | **Do not buy until connection type is verified** |
 | Concrete | TBD; earlier **~0.8–1.1 m³** not verified | Must derive from footing dimensions and soil |
-| Stairs | TBD | One full-width 6600×400 mm tread at selected 250 mm surface level; access detail and supports unverified |
+| Rebuilt cross-blocks | 12×382.5 mm nominal = 4.59 lm, 140×45 concept | Flush between J01–J03; exact hangers/structural fixings and cuts unverified |
+| Tread frame rails | 2×6600 mm nominal = 13.2 lm, 140×45 concept | Grade/treatment for 72 mm nominal clearance and rail/support capacity to specify |
+| Tread crosspieces | 16×310 mm nominal = 4.96 lm, 140×45 concept | Includes end pieces; frame connections/cuts unverified |
+| Tread supports | Six stations / 12 rail-bearing points | Foundations, actual support system, anchorage and sizes TBD |
 
 ## Earlier generic retail estimate (unverified / historical)
-ChatGPT previously estimated **NZ$3,000–4,500** for deck materials with steps excluded or poorly scoped; do not rely on this as a quote. Earlier budget decking estimate was **NZ$5.42 per lineal metre × 132 lm = NZ$715.44** (historical, must recheck current price, stock, length mix and grade).
+ChatGPT previously estimated **NZ$3, 000–4, 500** for deck materials with steps excluded or poorly scoped; do not rely on this as a quote. Earlier budget decking estimate was **NZ$5.42 per lineal metre × 132 lm = NZ$715.44** (historical, must recheck current price, stock, length mix and grade).
 
 ## Builder invoices: trade pricing evidence (NOT current quotes)
 Builder obtains materials from Grove Mitre 10. Invoice line prices were **ex GST**. Useful examples from 2026 invoices:
@@ -29,11 +32,11 @@ Builder obtains materials from Grove Mitre 10. Invoice line prices were **ex GST
 | H5 125×125 × 1.5 m | $35.18 | $40.46 | 2026-09-04 invoice |
 | H3.2 SG8 140×45 × 4.8 m KD | $38.02 | $43.72 | 2026-10-06 invoice |
 | H3.2 SG8 190×45 × 6.0 m KD | $68.64 | $78.94 | 2026-09-04 invoice |
-| 25 MPa pumped concrete (large job) | $380.64 per m³ | $437.74 per m³ | Large 4.8m³ batch; separate pump/delivery costs |
+| 25 MPa pumped concrete (large job) | $380.64 per m³ | $437.74 per m³ | Large 4.8 m³ batch; separate pump/delivery costs |
 | Trade HIAB delivery | $231.00 | $265.65 | Different renovation order; not a deck quote |
-| SS subfloor 12kN fixing | $60.16 | $69.18 | Verify exactly which kit/components; invoice listing only |
+| SS subfloor 12 kN fixing | $60.16 | $69.18 | Verify exactly which kit/components; invoice listing only |
 
-The actual builder resale price may include markup, fees or delivery. Ask for all-in quote; compare against direct retail at same GST basis. Never assume the bulk-concrete price applies to <1m³.
+The actual builder resale price may include markup, fees or delivery. Ask for all-in quote; compare against direct retail at same GST basis. Never assume the bulk-concrete price applies to <1 m³.
 
 ## Cost-saving opportunities to investigate
 1. Builder trade account for exact H3.2 SG8 timber, H5 structural piles and connectors; confirm markup.
@@ -45,7 +48,7 @@ The actual builder resale price may include markup, fees or delivery. Ask for al
 ## Cutting list: TODO after design freeze
 Create a cut-by-stock schedule with: stock length, each piece, quantity, saw kerf, leftovers, butt joint/structural support, merchant price and treatment. Do **not** reuse old 4.8 m + 6 m cuts without checking their total versus actual 6.6 m lines.
 
-## 2026-11-03 geometry revision — quantities not yet recalculated
+## Areas and geometry
 - **New main deck area:** 6.6×2.6 = **17.16 m²**, excluding rebuilt section and step.
 - **Selected full-width tread:** 6600×400 mm = **2.64 m²**, surface 250 mm above garden. Vertical access detail and framing remain unverified; no tread/landing order is released.
 - **Rebuilt old section:** user now supplies 1970 mm depth: 0.9×1.970=**1.773 m²**. Main plus rebuilt = **18.933 m²**, excluding stairs. Support details and the board/stock layout still govern timber quantities.
@@ -60,7 +63,7 @@ Create a cut-by-stock schedule with: stock length, each piece, quantity, saw ker
 
 With 17 full-width interior rows and two equally trimmed edge rows:
 
-`edge width = [D−17b−18g]/2`
+`edge width = [D−17 b−18 g]/2`
 
 | Example interboard gap g | Coverage with 18 full rows | Rows required | Width of each of two edge rows |
 |---|---:|---:|---:|
@@ -71,17 +74,17 @@ With 17 full-width interior rows and two equally trimmed edge rows:
 
 **No gap has been selected.** Follow the actual supplier's wet/dry-board installation instructions, allowable edge ripping and fixing edge distances. Nineteen 6600 mm rows represent **125.4 lm** of full-width row-length stock before stock-length availability, supported butt joints, kerf, defects and waste. Ripping edges reduces installed board width, not the nominal board lengths purchased; possible offcut reuse requires a real cut plan.
 
-The current geometric joist baseline is **16 main lines**, with two 427.5 mm bays in the 900 mm rebuilt strip and thirteen 5700/13 ≈ 438.46 mm bays across the remaining frontage. See DESIGN.md for the centre schedule. The former uniform 437 mm illustration is superseded. J01–J03 show candidate continuations to the retained bearer; if adopted, they replace three short main members within the 16 count. No member cuts, bearings or continuous spans are approved. Extra butt supports and tread framing remain unquantified; side edge joists are already counted once.
+The current geometric joist baseline is **16 main lines**, with two 427.5 mm bays in the 900 mm rebuilt strip and thirteen 5700/13 ≈ 438.46 mm bays across the remaining frontage. See DESIGN.md for the centre schedule. The former uniform 437 mm illustration is superseded. J01–J03 show candidate continuations to the retained bearer; if adopted, they replace three short main members within the 16 count. No member cuts, bearings or continuous spans are approved. Extra butt supports remain unquantified; the new tread-frame scenario below is geometry-only. Side edge joists are already counted once.
 
 A **two-screws-per-board-per-support illustration** is 19×16×2 = **608 screws**, before butt joints, extra supports, stairs, rebuilt section, rim connections or waste. Verify the selected decking manufacturer's screw type/length, corrosion suitability, edge distances and actual fixing pattern first. This does not validate the earlier two-500-pack allowance.
 
 Rebuilt finished area is `0.9×(1970/1000) = 1.773 m²` from the newly supplied depth. Main plus rebuilt = **18.933 m²**, excluding stairs. A separate follow-up now places the retained bearer at the back edge; support separation to proposed rear bearer is approximately 2320 mm. Exact offsets and joist lengths are not established. Decking direction, support/junction and real stock lengths still determine its order. Stair area/quantities remain separate.
 
-### Rebuilt-section board scenario, after the 1970 mm reply
+### Historical rebuilt-board scenario — superseded for the rotated-board proposal
 
-Assuming decking still runs in X, nominal covered depth is 1970 mm and each row is 900 mm long. With actual 138 mm boards, each illustrative 3–6 mm gap requires **14 rows**. Twelve full interior rows plus two equal edge rows give:
+This earlier calculation assumed decking ran in X. It is superseded by the Y-running rebuilt-board proposal below. Nominal covered depth was 1970 mm and each row is 900 mm long. With actual 138 mm boards, each illustrative 3–6 mm gap requires **14 rows**. Twelve full interior rows plus two equal edge rows give:
 
-`edge width = [1970−12×138−13g]/2`
+`edge width = [1970−12×138−13 g]/2`
 
 | Example gap | Equal edge widths |
 |---|---:|
@@ -110,4 +113,23 @@ With the retained bearer now reported at the back edge, a joist continuous from 
 
 **CONFIRMED BY USER:** 38 mm-thick pine; 138 mm board width is still a calculation assumption. Previous 32 mm thickness is superseded. The framing stack gives nominal pile exposure **500−38−140−140=182 mm**, before DPC, actual sizes and grade variation.
 
-Tread dimensions **6600×400 mm**, surface 250 mm above garden; area **2.64 m²**. Combined main + rebuilt + tread horizontal area **21.573 m²**. A separate rectangular tread layout with actual 138 mm boards and example gaps of 3–6 mm needs **3 rows / 19.8 lm** of row-length stock, before allowances. Along with the other independent-rectangle scenarios this gives **157.8 lm** total, before merchant lengths, joints, alignment, kerf, defects and waste. No gap/product/cut schedule has been selected and none of these figures is an order.
+Tread dimensions **6600×400 mm**, surface 250 mm above garden; area **2.64 m²**. Combined main + rebuilt + tread horizontal area **21.573 m²**. A separate rectangular tread layout with actual 138 mm boards and example gaps of 3–6 mm needs **3 rows / 19.8 lm** of row-length stock, before allowances. With the now-superseded X-running rebuilt-board scenario, this gave **157.8 lm** total, before merchant lengths, joints, alignment, kerf, defects and waste. No gap/product/cut schedule has been selected and none of these figures is an order.
+
+## Current rotated-board and tread-frame proposal
+
+**PROVISIONAL interpretation:** rebuilt boards turn 90° relative to the main deck and run along 1970 mm in Y. Actual board width is still assumed 138 mm, with example gaps 3–6 mm; no gap/product has been selected.
+
+| Area | Rows / nominal row length | Row-length stock |
+|---|---|---:|
+| Main deck | 19×6.6 m | 125.4 lm |
+| Rebuilt section, rotated | 7×1.970 m | 13.79 lm |
+| Full-width tread | 3×6.6 m | 19.8 lm |
+| Total | Before allowances | **158.99 lm (~159.0 lm)** |
+
+For the 900 mm rebuilt width, five full interior boards and two equal edge boards give `edge width=[900−5×138−6 g]/2`:96/93/90/87 mm for 3/4/5/6 mm gaps. This replaces the 14 rebuilt rows/12.6 lm and 157.8 lm total scenarios for the present orientation. Area stays 21.573 m² including the tread.
+
+New support geometry: **12 flush cross-blocks ×382.5 mm =4.59 lm** between J01–J03; tread **two 6.6 m rails =13.2 lm** plus **16×310 mm crosspieces =4.96 lm**, in a single 140 mm-deep layer. Six tread support stations provide 12 rail-bearing points. These are not final cuts, splice positions or an order. Connections, supported stock joints, bearing and stable footings/supports remain to specify.
+
+At the 250 mm tread surface with 38 mm decking, frame top is 212 and underside 72 mm above garden before separation details. Select structural grade and treatment for that exposure; do not automatically use main-deck H3.2 offcuts or claim an unsourced clearance threshold.
+
+The drawing's two board fastenings per cross-support are illustrative. Select the 38 mm-board screw product/length/edge distances and block-end hanger/structural fixing schedule in the pre-build plan review. The builder is not providing inspections during the build; no handrails are included in the owner's brief.

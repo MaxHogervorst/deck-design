@@ -28,9 +28,9 @@ Scott discussed approximately 1.2–1.3 m bearer spans, six pile positions per 6
 ## New geometry source (2026-11-03)
 User provided a site photograph and multiple clarifications: extension frontage 5700 mm, demolished old deck frontage 900 mm alongside extension, new deck 6600×2600 mm full rectangle, 400 mm garden-side step, retained old bearer parallel to frontage and candidate support shared with new rear bearer. These are user-reported site facts, not surveyed or verified dimensions.
 
-## Verification log — 2026-11-03
+## Initial verification log — 2026-11-03 (historical)
 
-**No current structural or regulatory requirement was verified with a primary source in this pass.** Existing linked articles, manufacturer details and remembered rules remain leads. The site photograph and original invoices described in the handoff are not present in this repository/ZIP, so they have not been independently inspected here.
+**The initial pass did not verify a structural or regulatory requirement with a primary source.** Existing linked articles, manufacturer details and remembered rules remain leads. The site photograph and original invoices described in the handoff are not present in this repository/ZIP, so they have not been independently inspected here.
 
 | Attempted host | Operation | Observed result | Consequence |
 |---|---|---|---|
@@ -60,10 +60,24 @@ For each successful check, record **title, issuer, edition/date/amendments, URL,
 
 - **CONFIRMED BY USER:** facts/preferences reported in the uploaded handoff, not newly surveyed here.
 - **PROVISIONAL:** chosen-for-calculation geometry or product scenarios; not construction instructions.
-- **VERIFIED WITH PRIMARY SOURCE:** reserved for a claim whose current applicable source was actually read and recorded; none yet.
+- **VERIFIED WITH PRIMARY SOURCE:** reserved for a claim whose source was actually read and recorded. General board-fixing guidance read later is listed below; project-specific structural/access compliance remains unverified.
 - **HOLD POINT:** missing site facts, source access or professional/manufacturer assessment needed before the affected design can be fixed.
 - Independently recalculated arithmetic is labelled as such and does not substitute for primary-source structural verification.
 
 ## Latest user design evidence
 
 The website conversation confirms full-width **6600×400 mm** tread, selected halfway surface at **250 mm**, and **38 mm-thick pine decking**. These are owner choices, not independently verified engineering requirements. Old 32 mm thickness and 188 mm pile remainder are superseded; revised arithmetic gives 182 mm before DPC and actual sizes/levels.
+
+## Primary guidance read for the tread / rotated-board proposal — 2026-11-03
+
+Access succeeded in this later pass. The earlier proxy failures are historical. These are general published installation principles, not approval of the proposed spans, cross-block connections, support foundations, treatment selection or access geometry.
+
+| Source actually read | Relevant text | Supported use and limits |
+|---|---|---|
+| [BRANZ — Slatted decking](https://www.branz.co.nz/design-build/articles/slatted-decking) | “Radiata pine must be treated to hazard class H3.2.” “End joints should be butted and must be made over joists.” “Fix decking boards to each joist with two nails.” | Supports treated decking, supported board ends and two-fixing illustrations. Its nail recommendations for other thicknesses do not specify screws for the selected 38 mm boards. |
+| [BRANZ — Timber decks – common problems and repairs](https://www.branz.co.nz/design-build/articles/timber-decks-common-problems-and-repairs), updated 1 February 2022 | “Nail or screw-fasten each into place with two fastenings at each end and two fastenings to each intermediate joist.” | General basis for showing two board fixings at each cross-support row. Specify actual screw size/type, corrosion rating, end/edge distances and the selected product's instructions before construction. |
+| Same BRANZ repair article | “Continuously damp timber will rot.” “Most problems occur in decks where the timber is unable to dry in between periods of wetting.” | Supports treating the nominal 72 mm-underframe clearance as a durability/detail question. This does not give a minimum-clearance rule or certify H3.2 for the proposed low frame. |
+
+No automatic “under 150 mm means H4” rule was verified. Treatment, structural grade, separation and support details for the actual tread exposure remain a pre-build decision. No footing dimensions or approved pad/paver system are established by these articles.
+
+The owner requests **no handrails** and **one plan review before construction**, not builder inspections during the DIY build. The selected handrail omission is recorded as an owner requirement, not a new primary-source regulatory finding. The rebuilt-board direction is illustrated at 90° from the main boards, interpreting the owner's description; the explicit direction-choice question was not answered.

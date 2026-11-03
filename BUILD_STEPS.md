@@ -1,58 +1,56 @@
-# DIY construction sequence (subject to structural hold points)
+# DIY build sequence — follow the agreed pre-build plan
 
-## Phase 0 — design sign-off / pre-work
-1. Complete [SITE_MEASUREMENTS.md](SITE_MEASUREMENTS.md): finished deck datum at door/corners, final garden levels, rebuilt depth, retained bearer setback/condition and stair envelope.
-2. Mark weatherboard clearance, drainage/vents/flashings, and house footing locations.
-3. Locate buried utilities; check site soil and suitable bearing. Seek competent design advice if fill, groundwater, drainage issues, shallow house footing or uncertain ground.
-4. Verify NZS 3604 loads, joist spans, bearer spans, cantilevers, bracing units and pile layout. Resolve specified anchor-pile/ordinary pile connections for double bearers and the actual exposed pile height.
-5. Resolve the rebuilt-section joist/rim junction crossing Y=0 to rear bearer Y=350. Freeze the source-checked dimensioned structural plan and stair design before buying or digging.
+The builder reviews the plan **once before construction**. No builder inspection visits during the build are assumed. The owner follows the agreed details and makes the construction checks below.
+
+## Phase 0 — settle the plan
+
+1. Confirm recorded footprints and finished levels: main 6600×2600, rebuilt 900×1970, tread 6600×400 at selected 250 mm above garden.
+2. Supply the retained-support dimensions and evidence needed to review J01–J03 continuity and combined loads.
+3. Settle spans, bracing, footings, exact connectors, the rebuilt cross-block/rim junction and the independent tread supports/low-clearance treatment.
+4. Specify the decking product, screws, gap guidance and supported stock/cut plan. No handrails are included in the owner's brief.
+
+The house-clearance/services checklist is outside this builder brief at the owner's request. Applicable owner-managed physical site constraints are not thereby marked verified.
 
 ## Phase 1 — set out
-1. Put stakes/string around a 6600×2600 rectangle, checking square: diagonal `sqrt(6600²+2600²) ≈ 7094 mm` (both diagonals equal).
-2. Mark confirmed pile coordinate grid, but confirm coordinates against existing foundations and underground services.
-3. Set laser/level datum for finished deck surface; deduct **measured** decking + joist + bearer thickness (and DPC) to calculate actual pile top.
-4. Consider decking board module/gaps so final edge is not an unusably thin ripped strip.
 
-## Phase 2 — dig and concrete footings
-1. Excavate holes only to the VERIFIED footing schedule, with specified bearing ground and clearances.
-2. Place H5 piles as specified; plumb and brace temporarily; establish consistent tops where suitable for chosen connectors.
-3. Pour specified concrete; protect/cure adequately; no premature structural loading.
+1. Mark the 6600×2600 main rectangle; both diagonals are approximately 7094 mm.
+2. Mark the rebuilt section and one full-width 400 mm tread projection.
+3. Transfer the finished datum. Calculate individual pile/support heights from actual timber sizes, DPC/separation and local ground levels.
+4. Mark supports from the agreed plan. Main stack arithmetic 500−38−140−140=182 mm is not a pile-cut schedule.
 
-## Phase 3 — bearers and lateral load system
-1. Fit compliant DPC to short pile tops if required.
-2. Install two double 140×45 bearers, with allowable joins located where the verified design permits.
-3. Install exact specified ordinary- and anchor-pile brackets, bolts/nails/ties with correct corrosion treatment and edge distances.
-4. Check long-line straightness and finished upper datum with string/laser; confirm the structure has the required bracing before proceeding.
+## Phase 2 — main piles and footings
 
-## Phase 4 — joists/rims/blocking
-1. Fix joists to bearers at verified centres, including any bracing joist ties and blocking.
-2. Add rim joists and required intermediate blocking, particularly at board butt joints.
-3. Check the deck plane with long straightedge; plane only where structurally/grade appropriate and without compromising required member dimensions/treatment. Treat cuts as required.
+1. Excavate only to the agreed footing schedule for each support type and the specified ground assumptions.
+2. Check supplied pile treatment/structural suitability; position, plumb and brace piles.
+3. Check coordinates and tops, place the specified concrete, then protect/cure it before loading.
 
-## Phase 5 — deck boards
-1. Inspect board dryness/moisture; follow supplier's gap guidance, **not a fixed universal gap** (wet treated timber shrinks).
-2. Plan board lengths/butt joints so both ends are supported; pre-drill ends where specified.
-3. Fasten with appropriate exterior screws per manufacturer and timber treatment/corrosion environment.
-4. Keep cladding gap and weep/drainage details unobstructed; trim edges uniformly.
+If actual ground or support conditions do not match the plan, resolve that discrepancy before proceeding; this is not a scheduled builder inspection stage.
 
-## Phase 6 — garden steps & completion
-1. Build the approved stepped access using measured total rise, even risers, suitable supporting structure and stable footings.
-2. Treat exposed cuts and finish timber per manufacturer recommendations.
-3. Check all visible fasteners, square/flatness, trip hazards, soil drainage and attachment independence.
+## Phase 3 — bearers and bracing
 
-## Builder quality tips from conversation
-- Set first and last joists accurately, use strings/long straightedge to keep joist top surfaces in one plane.
-- Measure actual lumber rather than assuming the nominal 140 mm is exact.
-- Arrange board/gap layout before building to avoid a thin last board.
-- A long level/straightedge, planer, string line and clamps are particularly useful.
+1. Fit the specified DPC/separation and double bearers; place and fasten ply joints only as detailed.
+2. Install the exact ordinary/anchor/bracing connectors, components and fixings in the schedule.
+3. Check alignment, levels and the completed lateral-load system against the agreed plan.
 
-## Additional sequence for the rebuilt old-deck section
-1. Before reuse, inspect retained bearer, piles, fixings and timber grade/treatment. Record condition and span measurements.
-2. Verify the proposed shared new rear bearer can carry loads from both sides and has a code-compliant connection method.
-3. Use the confirmed 1970 mm rebuilt depth; verify actual framing offsets, bearing faces/centres and the junction with main joists/rim. Check the continuous-joist candidate and combined support reactions before selecting cut lengths or fixing details.
-4. Align the old-section deck top with the new main deck without blocking extension cladding/door drainage.
-5. Preserve the selected **one full-width 6600×400 mm tread at selected 250 mm surface level**. The measured approximately 500 mm drop means approximately two 250 mm equal rises; fix the precise finished landing datum. Resolve allowable risers and any necessary level change, going/nosing, width, supports and landing/handrail requirements before construction.
+## Phase 4 — joists, rebuilt cross-blocks and junction
 
-## Latest surface selection
+1. Fit J01–J16 at the agreed centres, bearing and connections. If adopted, J01–J03 continue through rebuilt and main areas as three of the 16 members; 4570 mm is only the finished envelope.
+2. For the rotated rebuilt-board proposal, fit 12 flush 140×45 cross-blocks between J01/J02/J03: six rows at 385 mm centres, two nominal 382.5 mm clear pieces per row. Use the agreed block-end fixing detail.
+3. Detail the Y=0 rear-rim junction around the continuous candidates; do not run a rim through them. Fit the remaining rims, blocking and butt supports.
+4. Check the framing plane while preserving required member sizes, grade, treatment and connections.
 
-Use the selected **38 mm pine thickness** in level calculations, not the superseded 32 mm assumption. The nominal framing-stack remainder is 182 mm before DPC and real sizes. The full-width tread surface is selected at 250 mm above garden; verify access geometry, structure and final levels before building it.
+## Phase 5 — decking
+
+1. Check the actual 38 mm pine product, width and moisture. Main/tread boards run in X; rebuilt boards are provisionally shown turned 90° in Y along 1970 mm.
+2. Set rows, edge strips and gaps from product guidance. Every board butt joint needs appropriate support and fixing space.
+3. Fix the rebuilt boards into the flush cross-support rows. The drawing's two fastenings per board per support are illustrative; use the specified screw product, length, corrosion rating and edge distances.
+4. Pre-drill where required, trim consistently and treat cut ends to the product instructions.
+
+## Phase 6 — independent tread and completion
+
+1. Build the separate single-layer 140×45 ladder frame: two nominal 6600 mm rails and 16 nominal 310 mm crosspieces including ends. Do not add a stacked bearer layer or hang it from deck boards/cladding.
+2. Install the specified stable supports/foundations and anchors. Six proposed stations give 12 rail-bearing points; no loose-paver or footing-size assumption is approved.
+3. Set the selected 250 mm surface using 38 mm decking: nominal frame top 212 / underside 72 mm above garden, before separation details. Use the agreed grade/treatment and access detail.
+4. Check final levels, rises, going/nosing, fixings and stability against the plan; treat cuts and finish to product guidance. No handrails are proposed.
+
+Nominal member lengths are geometry only, not a purchase/cut schedule. Agree treatment, supports, stock joints and all connection details before the affected work.

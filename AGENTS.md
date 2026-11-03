@@ -32,7 +32,7 @@ Read `README.md`, `PROJECT.md`, `DESIGN.md`, `OPEN_ISSUES.md`, `MATERIALS.md`, `
 - User explicitly selects one tread / 400 mm total run, ending at Y=3000. The two-tread/800 mm alternative was arithmetic explanation only, not selected. About 500 mm drop is measured; precise finished levels and allowable rises must be resolved, and full-width layout and selected 250 mm level are now confirmed; access verification remains open.
 - Primary-source reads were blocked by proxy CONNECT 403. The user subsequently published the environment. The earlier network failure record is historical, not proof of current access failure. Do not reapply or publish previous environment configuration changes. Do not mark structural/regulatory checks complete until actual current applicable sources are read.
 
-- Latest reply is “400mm total and i only want 1 tread”. Preserve this requirement. Do not call the resulting nominal 250 mm rises compliant; if actual fall exceeds the verified two-riser capacity, a compatible level change or further user decision is needed.
+- Latest reply is “400 mm total and i only want 1 tread”. Preserve this requirement. Do not call the resulting nominal 250 mm rises compliant; if actual fall exceeds the verified two-riser capacity, a compatible level change or further user decision is needed.
 
 - A continuous-joist candidate in the 900 mm strip spans a 4570 mm finished envelope with approximate 2320/1900 mm support separations. Treat it as a multi-support structural check, not an approved cut or capacity.
 
@@ -51,3 +51,15 @@ Read `README.md`, `PROJECT.md`, `DESIGN.md`, `OPEN_ISSUES.md`, `MATERIALS.md`, `
 - User requests a compact technical reference: explicit joist layout, a materials table, build steps and open builder checks. Remove promotional copy and decorative material cards.
 - Show all 16 main joists. J01–J03 have dashed candidate continuations into the 900 mm rebuilt strip; these replace three short main joists if adopted, not three extra members.
 - With 45 mm members, the illustrated first member left face is X=0, J03 right face X=900 and last member right face X=6600. Do not imply the grid, continuous spans, support condition or connections have been verified.
+
+## Latest plan-review scope and support proposals
+- Builder reviews the plan once with the owner **before construction**. Do not imply staged site inspections, builder visits or approvals during the build; later checks in build steps are the owner's checks against the agreed plan.
+- Remove the house-clearance/services checklist from the builder brief at the user's request. Preserve relevant physical constraints as owner-managed matters outside that brief; do not mark them technically verified.
+- **CONFIRMED BY USER:** no handrails proposed. Do not add handrail tasks to the website/build sequence or present this preference as an independent regulatory determination.
+- The latest description says the rebuilt decking runs the other direction. The current proposal interprets this as Y-running boards along the 1970 mm depth, perpendicular to main-deck X-running boards. A direction-choice question was not answered explicitly; label this interpretation **PROVISIONAL**.
+- J01–J03 are proposed to continue through rebuilt and main areas, Y≈−1970…2600: 4570 mm finished envelope, not an approved cut length. They remain three of the 16 main joist lines.
+- For the rotated boards, show 12 flush 140×45 cross-blocks: two nominal 382.5 mm clear pieces per row at Y=−1947.5, −1562.5, −1177.5, −792.5, −407.5 and −22.5 mm. Rows are 385 mm apart. Blocks sit between J01/J02/J03, not above them; block connections and the Y=0 rim junction require a pre-build detail.
+- Show two board fastenings at each cross-support as an illustration only. Exact screw type, length, edge distances, corrosion class and block-end connectors remain to specify.
+- Tread concept: independent single-layer 140×45 ladder frame, outer 6600×400 mm, two 6600 mm rails and 16 nominal 310 mm crosspieces including ends. Six support stations at X=250/1470/2690/3910/5130/6350 provide 12 rail-bearing points; foundations, supports and anchors are not designed. Do not assume loose pavers, an unsupported 6.6 m rail or attachment to deck boards/cladding.
+- At tread surface 250 and boards 38, frame top 212 / underside 72 mm above garden before separation details. Specify grade/treatment for the actual low-clearance exposure; do not assume main-deck H3.2 offcuts are suitable or invent a 150 mm-to-H4 rule.
+- Rotated rebuilt-board estimate is 7×1.970=13.79 lm. Current combined row-stock scenario is 125.4+13.79+19.8=158.99 lm (~159.0), before allowances; older 14-row /157.8 lm scenarios are superseded for this orientation.

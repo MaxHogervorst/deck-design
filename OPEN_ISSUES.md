@@ -1,65 +1,46 @@
-# Resolution tracker
+# Resolution tracker — pre-build plan review
 
-Updated 2026-11-03. **Not build-ready.** Tick marks close only the exact task described, not structural compliance. Status labels distinguish arithmetic, reported preferences, primary evidence and construction hold points.
+Updated 2026-11-03. **Not build-ready.** The builder reviews the plan once before construction; no staged site inspections or builder visits are assumed. Construction checks after that are the owner's checks against the agreed details.
 
-## Resolved by geometry / record reconciliation
+## Recorded choices and illustrated geometry
 
-- [x] Main rectangle is 6600×2600 mm throughout; 5700+900=6600 frontage, area 17.16 m², diagonal 7093.66 mm. Source: user handoff; arithmetic checked.
-- [x] The rebuilt section lies behind Y=0 beside the extension; user now supplies **1970 mm finished depth** with **900 mm frontage**. Area 1.773 m² / combined 18.933 m² excluding stairs. This does not locate the retained bearer.
-- [x] Identify centre/face distinction: proposed 90 mm bearers at Y=350/2250 have 1900 mm centre separation and 1810 mm clear gap. This is not a span-table approval.
-- [x] Identify the shared-bearer junction conflict: rebuilt joists reaching Y=350 enter main-deck framing. Junction/rim/support detail remains open below.
-- [x] Replace old 18-row assumption with conditional 19-row board-layout scenarios and balanced edge strips. Product/gap and order remain open.
-- [x] Show all 16 main joist lines in the framing illustration, aligned to the 900 mm rebuilt strip: 2×427.5 mm and 13×438.46 mm bays. J01–J03 dashed continuations are candidates only; this closes the missing illustration, not structural approval.
-- [x] User confirms **one intermediate tread and 400 mm total run**. Horizontal outline ends at Y=3000. Nominal 500 mm fall would create two 250 mm rises; vertical fit remains a HOLD POINT, not a compliant stair selection.
+- [x] Main 6600×2600, rebuilt 900×1970, one full-width 6600×400 tread, selected tread surface 250 above garden; deck drop about 500 mm.
+- [x] Pine 38 mm thickness; 138 mm board width remains provisional.
+- [x] No handrails proposed — **CONFIRMED BY USER requirement**, not an independent regulatory finding.
+- [x] Remove the threshold/cladding/drainage/ventilation/services/foundation-conflict checklist from the builder brief at the owner's request. This closes the presentation/scope decision, not technical compliance.
+- [x] Show 16 main joist lines and three dashed J01–J03 continuation candidates within that count.
+- [x] Show a rotated rebuilt-board proposal, interpreted from the user's description: Y-running boards supported by 12 flush cross-blocks in six 385 mm-centre rows.
+- [x] Show a simple independent tread-frame concept: two long rails, 16 short crosspieces and six support stations/12 rail-bearing points.
 
-## Awaiting user site facts and preference
+The direction-choice question was not explicitly answered. The rotated rebuilt orientation is **PROVISIONAL**, not a new confirmed preference.
 
-Use [SITE_MEASUREMENTS.md](SITE_MEASUREMENTS.md); unknown values are acceptable until measured.
+## Inputs needed for the plan review
 
-- [x] M1: record user-supplied rebuilt finished depth **1970 mm**.
-- [x] M2: user separately confirms retained bearer at the rebuilt back edge, nominal Y≈−1970. Support separation to proposed rear bearer is approximately 2320 mm.
-- [ ] M2–M3: exact bearer face/centre offsets, member size and support spacing remain to measure.
-- [ ] M3–M4: retained bearer section/grade/condition, support spans, piles, connections and footing evidence.
-- [x] M5: user confirms about 500 mm measured drop at the intended step location. One tread would therefore give about 250 mm per equal rise.
-- [ ] M5–M7: precise finished landing datum, remaining corner/perimeter/threshold levels and maximum fall; drainage/cladding/foundation clearance, ground and utilities.
-- [x] M8: one intermediate tread and 400 mm total projection are CONFIRMED BY USER.
-- [x] M8: owner selects full 6600 mm tread width, 400 mm projection, surface halfway at 250 mm above garden.
-- [ ] M8: verify access geometry, landing/approach space and supports for the selected levels; a chosen level is not compliance evidence.
-- [x] M9: owner selects pine decking at 38 mm thickness.
-- [ ] M9: exact product, actual width, finish, moisture/gaps, fixing instructions and available stock lengths.
+- [ ] Owner-supplied dimensions/evidence for retained bearer section, grade/treatment if identifiable, support spacing, connections, footing condition and exact bearing faces/centre offset.
+- [ ] Actual ground/support assumptions needed to select the main and tread footing/support details.
+- [ ] Actual board product, width, moisture/gap instructions, fixing guidance, finish and stock lengths.
+- [ ] Precise finished levels/separation details for the selected tread frame and supports.
 
-## Primary-source verification — still required
+Use [SITE_MEASUREMENTS.md](SITE_MEASUREMENTS.md). Other applicable house/site-interface matters are owner-managed outside the builder-review checklist; their omission is not a verification result.
 
-- [x] User reports the environment was published. Do not reapply previous settings or publish environment changes.
-- [ ] Retry actual primary documents after a meaningful runtime policy change; capture edition/amendment, section/page, applicability and relevant limits in REFERENCES.md.
+## Decisions to settle on the plan before DIY construction
 
-Historical observation before the later environment publication: proxy CONNECT 403 on MiTek, MBIE and Auckland Council hosts. No structural/regulatory claim is **VERIFIED WITH PRIMARY SOURCE** in this pass. Other listed domains are needed research destinations, not tested successful sources.
-
-## Structural resolution — NZ professional / manufacturer evidence
-
-| Hold point | Evidence needed to close it |
+| Plan item | Required decision / evidence |
 |---|---|
-| Applicable standard and loads | Current applicable NZS 3604 edition/amendments and scope; site/loading/ground/exposure inputs; identify any specific engineering required |
-| Main bearer/joist sizing | Cited span/cantilever definitions/tables, actual member grade/size, loading, supports and permitted centres; verify the illustrated 427.5/438.46 mm grid before finalising |
-| Rebuilt junction / shared support | Measured retained support geometry/condition; verify or replace the three dashed J01–J03 continuation candidates, their continuity/bearing, rim junction and combined support reactions |
-| Bracing | Demand in both directions and a documented system/layout meeting it; identify exact anchor/ordinary piles and rated connections |
-| Footings | Ordinary/anchor dimensions, embedment, ground-bearing basis and house-footing/service clearance; no round/square ambiguity |
-| Connections | Exact pile → double bearer → joist detail at measured exposure, DPC, corrosion class, edge distances, component/fixing schedule and ply fastening/splices |
-| Existing support reuse | Condition/grade/treatment, spans, pile/footing adequacy, connections and load-capacity assessment, not simply visual reassurance |
+| Main support system | Applicable loads/standard scope, bearer and joist spans/cantilevers, bracing, pile classes, footing schedule and exact doubled-bearer connectors |
+| J01–J03 continuity | Verify or replace the continuous candidates through Y≈−1970…2600; 4570 mm finished envelope is not a cut length; actual bearing and approximate 2320/1900 mm support separations need assessment |
+| Rebuilt board support | Confirm rotated direction and 12 flush 140×45 blocks: two 382.5 mm nominal pieces per row at Y=−1947.5…−22.5, 385 mm centres; specify block-end hangers/structural fixings and Y=0 rim junction |
+| Board attachment | Specify the actual 38 mm-board screws, length, corrosion class and edge distances; two fastenings per cross-support are illustrative; support every butt joint |
+| Tread ladder frame | Verify single-layer 140×45 rails/crosspieces, rail capacity, joints and bearing; no stacked bearer layer or unsupported 6.6 m rail |
+| Tread support system | Specify stable foundations/supports and anchors at six proposed stations providing 12 rail bearings; no loose-paver or footing-size assumption |
+| Tread durability | At selected levels, frame top 212 / underside 72 mm above garden; specify grade/treatment and separation for actual exposure rather than assuming H3.2 offcuts or an unsourced H4/clearance rule |
+| Access geometry | Resolve the selected 250 mm tread surface, two approximately 250 mm rises, going/nosing and approach; no handrails proposed in the owner's brief |
 
-The earlier 12 total piles, four anchors, generic “12 kN kit,” 182 mm nominal exposure and footing/concrete allowances remain concepts. A continuous-joist candidate for the rebuilt strip has a 4570 mm finished envelope and approximately 2320/1900 mm support separations; it remains subject to bearing/junction and multi-support analysis, not a cut list. Do not close these tasks using a product name or a remembered web article. Refer unresolved bracing, footing, anchor-connector and retained-bearer capacity to a suitably qualified NZ professional.
+## Source and release checks
 
-## Consent, access and house interface
+- [ ] Record applicable current source editions, sections and limits for the project-specific structural/access decisions in REFERENCES.md.
+- [ ] Freeze dimensioned framing, support/footing, connection and tread details before the affected work.
+- [ ] Produce final cut-by-stock quantities and concrete/support quantities after those details are agreed.
+- [ ] Obtain comparable current GST-inclusive quotes for the frozen scope.
 
-- [ ] Confirm building-consent exemption against actual maximum fall and all applicable conditions; distinguish it from Building Code compliance and Auckland planning/site restrictions.
-- [ ] Verify current D1 stair category and dimensions, goings/nosings, uniformity, landings, handrails and slip resistance.
-- [ ] Verify F4 barriers using actual fall/edge conditions; a nominal 500 mm height alone does not close stair handrail or site requirements.
-- [ ] Confirm cladding/threshold/ventilation/drainage and foundation clearances from applicable details. Do not prescribe a universal 12 mm wall gap.
-
-## Deliverables released after those checks
-
-- [ ] Frozen dimensioned X/Y/Z framing, footing, connection and stair plans with sources.
-- [ ] Confirmed joist/rim/butt-support counts and cut-by-stock schedule; saw kerf, waste and splice supports shown.
-- [ ] Concrete order from verified geometry and embedment.
-- [ ] Current all-in GST-inclusive supplier/trade comparison for the same scope.
-- [ ] Construction checklist updated to match the approved details rather than historical estimates.
+The earlier 12-pile/four-anchor, generic “12 kN kit” and concrete estimates remain concepts. General primary-source guidance does not validate this project's spans, connections, low tread frame or access geometry. The user has already published the cloud environment; do not reapply or publish earlier environment configuration changes.

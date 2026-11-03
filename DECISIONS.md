@@ -3,18 +3,18 @@
 | Date / phase | Decision or change | Status |
 |---|---|---|
 | Initial | Deck roughly 3×2.5 m, possibly 600–1000 mm high | Superseded |
-| Later | Expand to 6.6×2.5 m (16.5m²) | Confirmed |
+| Later | Expand to 6.6×2.5 m (16.5 m²) | Confirmed |
 | Later | Finished height approximately 500 mm | Confirmed |
 | Later | Mostly level soil/grass in Auckland; deck beside weatherboard house | Confirmed |
 | Later | Freestanding, not attached to house | Confirmed |
 | Later | Budget H3.2 pine decking, nominal 138×32 | Confirmed preference |
 | Later | Garden access with 'one step down' | Confirmed preference, geometry unresolved |
-| Builder discussion | Six pile positions per bearer line, ~1.2–1.3m bays; 140×45 SG8 members | Builder suggestion, verify spans |
+| Builder discussion | Six pile positions per bearer line, ~1.2–1.3 m bays; 140×45 SG8 members | Builder suggestion, verify spans |
 | Builder discussion | Long straightedge, string, level, measure timber, plan board finish | Practical method |
 | User clarification | **Double 140×45 bearers** (NOT single) | Confirmed |
 | Prior assistant concept | 12 piles, 2 rows of six, 4 provisional anchors | Not verified as compliant |
 | Prior assistant concept | Nominal pile exposure = 500−32−140−140 = 188 mm | Arithmetic correct; construction value provisional |
-| Prior assistant concept | Anchor pile ~900mm embedment and 12kN fixing kit considered | Requires exact verified system & site design |
+| Prior assistant concept | Anchor pile ~900 mm embedment and 12 kN fixing kit considered | Requires exact verified system & site design |
 | 2026-11-03 | Migrate state to Claude Code in Markdown, not PDFs | Confirmed |
 | 2026-11-03 | Main new deck depth changed **2500 → 2600 mm**, width still 6600 mm; new main area 17.16 m² | Confirmed, supersedes earlier footprint |
 | 2026-11-03 | 400 mm deep garden step; total projection approximately 3000 mm | Confirmed horizontal dimensions; stair design open |
@@ -46,6 +46,15 @@
 | 2026-11-03 framing illustration | Show 16 main joists: centres 22.5/450/877.5 mm, then 13 bays of 5700/13 ≈ 438.46 mm to centre 6577.5; first two bays 427.5 mm | PROVISIONAL illustration, supersedes uniform 437 mm grid; no structural approval |
 | 2026-11-03 framing illustration | J01–J03 fit the 900 mm rebuilt strip and have dashed continuation candidates towards retained bearer; three longer candidates replace three short main members within 16 total | PROVISIONAL; continuity, bearing, support reactions, fixing and cuts remain HOLD POINTS |
 | 2026-11-03 website format | User requests clear joist drawings and a concise materials table, build steps and builder checks, without promotional copy or decorative material cards | CONFIRMED BY USER presentation preference |
+| 2026-11-03 plan-review scope | Builder checks the plan once before DIY construction; no staged site inspections or builder visits during the build | CONFIRMED BY USER |
+| 2026-11-03 plan-review scope | Omit threshold/cladding/drainage/ventilation/services/foundation-conflict checklist from builder brief; relevant owner-managed constraints are not marked verified | CONFIRMED BY USER scope; not a compliance finding |
+| 2026-11-03 handrails | No handrails proposed | CONFIRMED BY USER requirement; not independently verified as a regulatory conclusion |
+| 2026-11-03 decking direction | Illustrate rebuilt boards turned 90° and running along 1970 mm depth, following the user's description; direction-choice question was not explicitly answered | PROVISIONAL interpretation |
+| 2026-11-03 rebuilt support | J01–J03 remain continuous candidates; add 12 flush 140×45 cross-blocks, two nominal 382.5 mm pieces at each of six 385 mm-centre rows | PROVISIONAL support/connection detail for pre-build review |
+| 2026-11-03 attachment | Show two board fastenings per cross-support as an illustration; specify actual 38 mm-board screws and block-end connectors | PROVISIONAL fixing layout, not a final schedule |
+| 2026-11-03 tread frame | Independent single-layer 140×45 ladder frame, two 6.6 m rails, 16 nominal 310 mm crosspieces, six support stations/12 rail bearings | PROVISIONAL; grade/treatment, foundations, bearing, anchors and fixings open |
+| 2026-11-03 tread levels | Selected surface 250, boards 38: frame top 212 / underside 72 mm above garden before separation details; no stacked bearer layer | Arithmetic only; low-clearance exposure detail required |
+| 2026-11-03 rotated quantities | Rebuilt 7×1.970=13.79 lm; main+tread+rebuilt=158.99 lm (~159.0) before allowances | PROVISIONAL; supersedes 14 rebuilt rows/157.8 lm for the current orientation |
 
 
 ## Next action

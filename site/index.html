@@ -13,7 +13,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="#top">Auckland deck</a>
-    <nav aria-label="Sections"><a href="#plan">Plans</a><a href="#materials">Materials</a><a href="#build-guide">Build steps</a><a href="#builder-brief">Builder checks</a></nav>
+    <nav aria-label="Sections"><a href="#plan">Plans</a><a href="#materials">Materials</a><a href="#build-guide">Build steps</a><a href="#builder-brief">Plan review</a></nav>
     <button class="button button-small" id="share-open">Share</button>
   </header>
   <main id="main" class="page-width">
@@ -27,48 +27,56 @@
         <div><dt>One full-width tread</dt><dd>6600 × 400 mm; surface at 250 mm</dd></div>
         <div><dt>House connection</dt><dd>Freestanding</dd></div>
       </dl>
-      <p class="status-note">Confirm spans, footing/bracing and fixing schedules, the rebuilt junction and tread geometry before ordering structural materials or digging.</p>
+      <p class="status-note">Builder: one plan review before construction; owner completes the build. Handrails: none proposed. Structural and access details below remain provisional.</p>
     </section>
 
     <section id="plan" class="content-section" aria-labelledby="plan-title">
       <div class="section-heading"><h2 id="plan-title">1. Plans</h2><span>Dimensions in mm · framing provisional</span></div>
       <div class="plan-workspace">
         <div class="drawing-card">
-          <div class="drawing-toolbar"><div class="view-tabs" role="tablist" aria-label="Drawing view"><button role="tab" id="tab-framing" aria-controls="drawing-panel" aria-selected="true" tabindex="0" data-view="framing">Framing &amp; joists</button><button role="tab" id="tab-layout" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="layout">Dimensions</button><button role="tab" id="tab-elevation" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="elevation">Side profile</button></div><span id="drawing-scale" class="drawing-scale">TOP VIEW</span></div>
+          <div class="drawing-toolbar"><div class="view-tabs" role="tablist" aria-label="Drawing view"><button role="tab" id="tab-framing" aria-controls="drawing-panel" aria-selected="true" tabindex="0" data-view="framing">Framing &amp; joists</button><button role="tab" id="tab-decking" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="decking">Decking fixings</button><button role="tab" id="tab-tread" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="tread">Tread frame</button><button role="tab" id="tab-layout" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="layout">Dimensions</button><button role="tab" id="tab-elevation" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="elevation">Side profile</button></div><span id="drawing-scale" class="drawing-scale">TOP VIEW</span></div>
           <div id="drawing-panel" role="tabpanel" aria-labelledby="tab-framing" tabindex="0"><svg id="design-drawing" xmlns="http://www.w3.org/2000/svg" aria-label="Deck framing and joist layout"></svg></div>
           <div class="drawing-footer"><div class="legend" id="drawing-legend"><span><i class="legend-joist"></i>Joists</span><span><i class="legend-bearer"></i>Bearers</span><span><i class="legend-pile"></i>Piles</span></div><div class="drawing-controls"><button class="text-button" id="zoom-drawing" aria-pressed="false">Enlarge +</button><button class="text-button" id="reset-view">Reset</button></div></div>
           <p id="drawing-note" class="drawing-note">16 joist lines. Dashed extensions into the rebuilt section are continuity candidates; junction and support capacity need checking.</p>
         </div>
         <aside id="selection-detail" class="detail-card" aria-labelledby="detail-title" aria-live="polite" aria-atomic="true"></aside>
       </div>
+      <div class="table-scroll proposal-table"><table><caption>Framing proposals</caption><thead><tr><th scope="col">Detail</th><th scope="col">Proposal for the pre-build review</th><th scope="col">Drawing</th></tr></thead><tbody>
+        <tr><th scope="row">J01–J03</th><td>Continue from retained bearer through the main deck. 4570 mm finished envelope; actual cuts, bearing and joints to confirm.</td><td><button class="text-button" data-open-view="framing">Main frame</button></td></tr>
+        <tr><th scope="row">Rebuilt decking</th><td>Boards run along the 1970 mm depth. Add 12 flush cross-blocks between J01–J03; screw boards down at six support rows.</td><td><button class="text-button" data-open-view="decking">Fixing detail</button></td></tr>
+        <tr><th scope="row">One tread</th><td>Independent single-layer ladder frame: two 6600 mm rails and 16 short crosspieces. No stacked bearer layer or attachment through deck boards.</td><td><button class="text-button" data-open-view="tread">Tread frame</button></td></tr>
+      </tbody></table></div>
+      <p class="table-note">Fixing dots illustrate <a href="https://www.branz.co.nz/design-build/articles/timber-decks-common-problems-and-repairs" target="_blank" rel="noopener noreferrer">BRANZ’s two-fastener approach</a>. Specify screws and edge distances for the actual 38 mm board.</p>
       <details class="coordinate-details"><summary>Joist centre coordinates — J01 to J16</summary><p class="table-note">Provisional layout. Coordinates are from the left finished deck edge; these are not cut lengths or an approved set-out schedule.</p><div class="table-scroll"><table id="joist-coordinates"><caption>16 proposed joist centre lines</caption><thead><tr><th scope="col">Joist</th><th scope="col">X centre (mm)</th><th scope="col">Run shown</th></tr></thead><tbody></tbody></table></div></details>
     </section>
 
     <section id="materials" class="content-section" aria-labelledby="materials-title">
       <div class="section-heading"><h2 id="materials-title">2. Materials</h2><span>Planning quantities · not an order</span></div>
       <p class="mobile-table-hint">Scroll sideways for quantities and notes.</p><div class="table-scroll"><table class="materials-table"><caption>Materials and quantities to confirm</caption><thead><tr><th scope="col">Item</th><th scope="col">Specification</th><th scope="col">Provisional quantity</th><th scope="col">Still to confirm</th></tr></thead><tbody>
-        <tr><th scope="row">Decking</th><td>38 mm pine; 138 mm width assumed</td><td>157.8 lm row-length stock¹</td><td>Actual board, treatment, width, gap, finish and stock/cut plan</td></tr>
+        <tr><th scope="row">Decking</th><td>38 mm pine; 138 mm width assumed</td><td>159.0 lm row-length stock¹</td><td>Actual board, treatment, width, gap, finish and stock/cut plan</td></tr>
         <tr><th scope="row">Joists</th><td>140 × 45 H3.2 SG8</td><td>16 lines; 3 continuation candidates</td><td>Spans, junction, bearing, extra butt supports and cut lengths</td></tr>
+        <tr><th scope="row">Rebuilt cross-blocks</th><td>140 × 45, flush with joist tops</td><td>12 × 382.5 mm nominal / 4.59 lm</td><td>Block-end connections, board fixing and exact cuts</td></tr>
         <tr><th scope="row">Bearers</th><td>Double 140 × 45 H3.2 SG8</td><td>2 lines / 4 plies / 26.4 lm nominal</td><td>Load capacity, ply fixings, joints and support details</td></tr>
         <tr><th scope="row">Long-edge rims</th><td>140 × 45 H3.2 SG8 concept</td><td>2 × 6.6 m / 13.2 lm nominal</td><td>End connections; side edge joists already included above</td></tr>
         <tr><th scope="row">Piles</th><td>125 × 125 H5 concept</td><td>12 new, proposed</td><td>Final count, structural suitability, lengths and anchor allocation</td></tr>
         <tr><th scope="row">Pile / framing fixings</th><td>Exact approved assembly TBD</td><td>TBD</td><td>Bracing rating, doubled-bearer detail, corrosion class and components</td></tr>
         <tr><th scope="row">Decking screws</th><td>To match actual board / exposure</td><td>TBD</td><td>Length, corrosion rating, pattern and total including butt joints</td></tr>
         <tr><th scope="row">Concrete / DPC</th><td>Footing and separation details TBD</td><td>TBD</td><td>Verified hole sizes, embedment, ground and DPC specification</td></tr>
-        <tr><th scope="row">Tread framing</th><td>Support for 6600 × 400 mm tread</td><td>TBD</td><td>Supports, foundations, access geometry and fixings</td></tr>
+        <tr><th scope="row">Tread frame</th><td>140 × 45 single layer; suitable grade/treatment TBD</td><td>2 × 6600 rails + 16 × 310 crosspieces, nominal</td><td>Only 72 mm nominal underside clearance; treatment, anchorage and joints to confirm</td></tr>
+        <tr><th scope="row">Tread supports</th><td>Support both long rails</td><td>6 stations / 12 rail bearing points</td><td>Footing/pedestal design and ground suitability; no loose-paver assumption</td></tr>
       </tbody></table></div>
-      <p class="table-note">¹ Assumes 138 mm boards and example 3–6 mm gaps: 19 main-deck rows + 14 rebuilt rows + 3 tread rows. Excludes stock-length losses, joints, defects and waste. Confirm the product and gap before using this estimate. No current price quote or final cut list.</p>
+      <p class="table-note">¹ Assumes 138 mm boards and example 3–6 mm gaps: 19 main-deck rows + 7 rotated rebuilt boards + 3 tread rows. Excludes stock-length losses, joints, defects and waste. Confirm the product and gap before using this estimate. No current price quote or final cut list.</p>
     </section>
 
     <section id="build-guide" class="content-section" aria-labelledby="build-guide-title">
-      <div class="section-heading"><h2 id="build-guide-title">3. Build sequence</h2><span>Use the verified details at each stage</span></div>
+      <div class="section-heading"><h2 id="build-guide-title">3. Build sequence</h2><span>Owner follows the agreed plan</span></div>
       <div id="build-phases" class="build-phases"></div>
     </section>
 
     <section id="builder-brief" class="content-section" aria-labelledby="discussion-title">
-      <div class="section-heading"><h2 id="discussion-title">4. Builder checks</h2><button class="button button-small" id="print-guide">Print guide</button></div>
-      <p class="section-note">Discuss these in person. Record agreed dimensions and details in the working plan.</p>
-      <p class="mobile-table-hint">Scroll sideways for the full check.</p><div class="table-scroll"><table id="discussion-topics" class="builder-table"></table></div>
+      <div class="section-heading"><h2 id="discussion-title">4. Pre-build plan review</h2><button class="button button-small" id="print-guide">Print guide</button></div>
+      <p class="section-note">Review these drawings with the builder once, before construction. No builder inspections during the build are planned.</p>
+      <p class="mobile-table-hint">Scroll sideways for the full plan detail.</p><div class="table-scroll"><table id="discussion-topics" class="builder-table"></table></div>
     </section>
 
     <section class="sources-section page-width" aria-labelledby="sources-title"><h2 id="sources-title">Working documents</h2><div id="source-list" class="source-list"></div></section>
