@@ -6,7 +6,7 @@ These links are **research leads** from the earlier conversation. Current accura
 - BRANZ — free-standing timber decks: https://www.branz.co.nz/design-build/articles/free-standing-timber-decks
 - BRANZ — deck bracing design: https://www.branz.co.nz/design-build/articles/deck-bracing-design
 - MiTek NZ — 12 kN pile fixing product/detail: https://mitek.co.nz/products/subfloor-and-slab-fixings/12kn6knpf/
-- MiTek NZ — LUMBERLOK 12 kN Pile Fixing PDF (reference only; read source even though **project output must stay Markdown**): https://miteknz.co.nz/wp-content/uploads/2024/03/12kN-Pile-Fixing_2024-v1.pdf
+- MiTek NZ — LUMBERLOK 12 kN Pile Fixing PDF (manufacturer source; the working design record remains Markdown alongside the requested website): https://mitek.co.nz/wp-content/uploads/2024/03/12kN-Pile-Fixing_2024-v1.pdf
 - NZS 3604 Timber-framed buildings: consult the current applicable standard and any relevant amendments via authorised access; a web article is not a substitute for the tables.
 - Auckland Council / MBIE: verify current consent and barrier requirements for actual height and site.
 
@@ -81,3 +81,31 @@ Access succeeded in this later pass. The earlier proxy failures are historical. 
 No automatic “under 150 mm means H4” rule was verified. Treatment, structural grade, separation and support details for the actual tread exposure remain a pre-build decision. No footing dimensions or approved pad/paver system are established by these articles.
 
 The owner requests **no handrails** and **one plan review before construction**, not builder inspections during the DIY build. The selected handrail omission is recorded as an owner requirement, not a new primary-source regulatory finding. The rebuilt-board direction is illustrated at 90° from the main boards, interpreting the owner's description; the explicit direction-choice question was not answered.
+
+## Anchor-pile connection sources read — 2026-11-03
+
+“Mitel” is interpreted as **MiTek**. The following sources were read successfully. They establish published connection options and installation limits; they do not verify this project's bracing demand, anchor-pile count or exact joint geometry.
+
+| Source actually read | Supported conclusion | Project limit |
+|---|---|---|
+| [MiTek NZ — 12kN & 6kN Pile Fixing](https://mitek.co.nz/products/subfloor-and-slab-fixings/12kn6knpf/), product page | The 12 kN option is for anchor/brace piles; the 6 kN option is for cantilever piles. | Do not substitute the 6 kN connection merely because it is cheaper, or treat every main pile as an anchor pile. |
+| [MiTek — 12 kN Pile Fixing, 2024 Edition V1](https://mitek.co.nz/wp-content/uploads/2024/03/12kN-Pile-Fixing_2024-v1.pdf), PDF pp. 1–2 / printed guide pp. 45–46 | The published system includes pile-to-bearer **and joist-to-bearer** connections. It requires the complete illustrated fastening schedule, with the bearer centrally located on the pile. | This is not a generic angle-bracket detail. The manual does not explicitly verify the proposed doubled 140×45 bearer arrangement or available installation space at nominal 182 mm exposed pile height. Confirm an applicable detail before ordering or fixing. |
+| Same MiTek manual, corrosion/exposure table | Standard HDG **12KN** is listed for zones B/C above 600 mm; **12KNH, SS304**, is listed for zone D and fixings below 600 mm. | If this MiTek detail is adopted for the low deck, 12KNH is the candidate. Exposure selection does not establish geometry, bracing or load suitability. |
+| [BRANZ — Deck bracing design](https://www.branz.co.nz/design-build/articles/deck-bracing-design), Alide Elkink, updated 1 August 2011, anchor-pile connection discussion | Describes M12 bolts with 50×50×3 mm washers, threaded rods or fixings with 12 kN capacity in tension and compression. | MiTek is not a compulsory brand. This older general article is not a project bolt schedule or a substitute for the applicable current NZS 3604 detail and full bracing assessment. |
+
+The MiTek 2024 detail calls for two 1×100×160 mm Nailon plates, each with eight 45 mm nails into the pile and eight into the bearer, plus two 90 mm skew nails; its illustrated joist connections use CT160 cleats and skew nails. The pack lists two plates, eight cleats and eighty 45×3.55 mm spiral nails. The stainless 12KNH pack also lists six 90×4 mm stainless annular nails; the standard pack's 90 mm HDG nails are not included. This records the manual's contents, **not an installation instruction for the unverified doubled bearer**. Follow the complete applicable manufacturer detail, including lateral support/blocking and all fastenings. The product page's generic “all nails” description must not replace the variant-specific manual.
+
+The manual's “joists deeper than 150 mm” blocking note does not remove other required joist lateral restraint. Its illustrated splice over an ordinary pile does not authorise arbitrary splices over anchor piles. No confirmed anchor count or four-anchor allocation follows from these sources.
+
+## Tread ground-connection research read — 2026-11-03
+
+**GP01 remains a proposal:** R1/R2 bear directly through DPC/separation on cast-concrete G01–G12 footing/plinth heads, which transfer weight into suitable bearing soil. A separate C1 side connector, C2 concrete anchorage and C3 timber fixings provide restraint. No product below has been verified for the proposed 45 mm horizontal rail at nominal 72 mm underside clearance.
+
+| Source actually read | Relevant product/detail | Supported limit |
+|---|---|---|
+| [Pryda NZ — Bolt Down Post Anchors](https://www.pryda.co.nz/product/bolt-down-post-anchors/) | Products for 90 mm posts | A 90 mm post anchor is not automatically a suitable restraint/bearing detail for a 45 mm horizontal rail. |
+| [MiTek — BOWMAC Post & Bearer Brackets, May 2023](https://mitek.co.nz/wp-content/uploads/2024/03/BOWMAC-Post-Bearer-Brackets_05.2023.pdf), PDF p. 1 / printed p. 115 | Common post sizes 100×100; B132 depicts 100×50; cast-in bracket embedment illustrated | The illustrated 150 mm bracket embedment is not a concrete footing depth. These details do not establish a product/fit for the proposed tread rail. |
+| [MiTek — BOWMAC Angle Brackets Without Gusset, May 2023](https://mitek.co.nz/wp-content/uploads/2024/03/BOWMAC-Angle-Brackets-Without-Gusset_05.2023.pdf), PDF p. 1 / printed p. 117 | Paired-angle post arrangements with M12/Dynabolt callouts | Do not copy a 90×90 post connection's anchor size, count or capacity into GP01. |
+| [MiTek — BOWMAC Structural Brackets, 2024 V1](https://mitek.co.nz/wp-content/uploads/2024/03/BOWMAC-Structural-Brackets_2024-v1.pdf), PDF p. 2 / printed p. 25 | Bracket suitability/loading require assessment; the small B50 angle is excluded from the cited scope | A small generic angle is not a verified structural restraint for this tread. |
+
+The website's ground cutaway shows a **load path and component families**, not a manufacturer installation drawing. Concrete continues below ground with a drawing break; its size/depth, bearing capacity, concrete/reinforcement, rail bearing area, timber grade/treatment, connectors, corrosion class, anchor embedment/edge distances and fastener schedule remain GP01 inputs. Twelve rail-bearing locations do not establish twelve brackets or anchors. No loose-paver foundation, generic post-shoe substitution or M12 drilling recipe has been verified.

@@ -8,7 +8,7 @@ No supplier order should be placed from these quantities until the footing/braci
 | H5 125×125 piles | 12 | Lengths depend on confirmed footing depth, exposed height and connection geometry; anchor-grade suitability to be checked |
 | H3.2 SG8 140×45 double bearers | 4 × 6600 mm nominal plies = **26.4 lm installed** | Splice, cuts and allowable joint positions to be engineered/checked |
 | H3.2 SG8 140×45 joists | 16 total main joist lines; J01–J03 shown with candidate continuations; cuts TBD | Three longer candidates replace three short members, not three extra joists. Side edges counted once; junction, bearings, butt supports and cuts unverified |
-| H3.2 SG8 140×45 rims | 2 × 6600 mm = 13.2 lm nominal along long edges; side edge joists already included in the 16-line baseline | Confirm end-joint layout and method |
+| H3.2 SG8 140×45 rims | RM1/RM2: 2 × 6600 mm overall = 13.2 lm allowance; side edge joists already included in the 16-line baseline | AP01 cuts/joints; rear rim split around J01–J03, not two approved cuts |
 | H3.2 138×38 decking | Current rotated-board scenario: 19 main + 7 rebuilt + 3 tread rows = 158.99 lm (~159.0 lm) before allowances; actual product and final order unresolved | Not a purchase length/stock list; actual board width, perimeter clearances, gap/moisture, joints and waste govern |
 | Decking screws | Previous allowance **2 × 500 packs** | Count from final joist/butt layout and ends; stainless or appropriate corrosion rating |
 | DPC | At each pile top as required | Exact grade/size per detail |
@@ -17,7 +17,8 @@ No supplier order should be placed from these quantities until the footing/braci
 | Rebuilt cross-blocks | 12×382.5 mm nominal = 4.59 lm, 140×45 concept | Flush between J01–J03; exact hangers/structural fixings and cuts unverified |
 | Tread frame rails | 2×6600 mm nominal = 13.2 lm, 140×45 concept | Grade/treatment for 72 mm nominal clearance and rail/support capacity to specify |
 | Tread crosspieces | 16×310 mm nominal = 4.96 lm, 140×45 concept | Includes end pieces; frame connections/cuts unverified |
-| Tread supports | Six stations / 12 rail-bearing points | Foundations, actual support system, anchorage and sizes TBD |
+| Tread concrete G01–G12 | Six stations / 12 proposed cast-concrete footing/plinth heads | GP01 ground/bearing, dimensions, concrete and bearing level TBD |
+| C1/C2/C3 tread restraint | Side bracket / concrete anchor / timber-fastener families | Products, quantities per location, corrosion class, embedment and edge distances TBD; not a hanging support |
 
 ## Earlier generic retail estimate (unverified / historical)
 ChatGPT previously estimated **NZ$3, 000–4, 500** for deck materials with steps excluded or poorly scoped; do not rely on this as a quote. Earlier budget decking estimate was **NZ$5.42 per lineal metre × 132 lm = NZ$715.44** (historical, must recheck current price, stock, length mix and grade).
@@ -133,3 +134,29 @@ New support geometry: **12 flush cross-blocks ×382.5 mm =4.59 lm** between J01�
 At the 250 mm tread surface with 38 mm decking, frame top is 212 and underside 72 mm above garden before separation details. Select structural grade and treatment for that exposure; do not automatically use main-deck H3.2 offcuts or claim an unsourced clearance threshold.
 
 The drawing's two board fastenings per cross-support are illustrative. Select the 38 mm-board screw product/length/edge distances and block-end hanger/structural fixing schedule in the pre-build plan review. The builder is not providing inspections during the build; no handrails are included in the owner's brief.
+
+## Assembly parts and connection selection
+
+| Part IDs | Nominal description | Quantity / limit |
+|---|---|---|
+| P01–P12 | Main 125×125 H5 pile concept | 12 proposed; FP01 must specify lengths, classes and footings |
+| BA-1 / BA-2 | Rear double-bearer plies | Two nominal 6600 mm lengths |
+| BB-1 / BB-2 | Front double-bearer plies | Two nominal 6600 mm lengths |
+| J01–J03 | Main + rebuilt continuity candidates | Three 4570 mm finished envelopes, not cut lengths |
+| J04–J16 | Remaining main joists | Thirteen 2600 mm finished envelopes, not cut lengths |
+| B01–B12 | Rebuilt flush cross-blocks | Twelve nominal 382.5 mm clear pieces; end connection still to specify |
+| R1 / R2 | Tread long rails | Two nominal 6600 mm lengths |
+| T01–T16 | Tread crosspieces including ends | Sixteen nominal 310 mm clear pieces |
+| G01–G12 | Cast-concrete tread footing/plinth bearing heads | Twelve proposed locations; no footing sizes/depths or concrete volume supplied |
+| TD1–TD3 | Illustrated tread decking rows | 38 mm thick; actual row widths/gaps/cuts from DF01 |
+| C1 | Structural side-restraint bracket family | GP01 product and quantity per location TBD |
+| C2 | Concrete-anchor family | GP01 product, count, concrete, embedment and edges TBD |
+| C3 | Timber-fastener family for C1-to-rail | GP01 product, count and timber edge distances TBD |
+
+The tread weight bears directly on concrete through DPC/separation. C1/C2/C3 provide lateral/uplift restraint, not a bracket-suspended vertical load path. Twelve ground-connection locations do not establish twelve brackets/anchors. Loose pavers or repurposed post shoes are not the specified concept.
+
+### Do MiTek anchor fixings need buying?
+
+Not automatically, and not simply because there are twelve piles. AP01 must select the bracing connections and locations. MiTek is one possible complete rated system; an adequately specified alternative may be used. The manufacturer's cited 12 kN system is for anchor/brace locations, with a 6 kN cantilever application rather than a generic ordinary-pile connection.
+
+If that MiTek system is selected, the cited exposure table points the below 600 mm candidate towards **12KNH (SS304)** rather than standard hot-dip-galvanised **12KN**. This does not settle doubled 140×45 compatibility or fit at nominal 182 mm pile exposure. Confirm the full manufacturer assembly and its component list before ordering; no anchor count, generic screw substitution or partial kit is released here.

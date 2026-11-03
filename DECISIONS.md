@@ -55,7 +55,15 @@
 | 2026-11-03 tread frame | Independent single-layer 140×45 ladder frame, two 6.6 m rails, 16 nominal 310 mm crosspieces, six support stations/12 rail bearings | PROVISIONAL; grade/treatment, foundations, bearing, anchors and fixings open |
 | 2026-11-03 tread levels | Selected surface 250, boards 38: frame top 212 / underside 72 mm above garden before separation details; no stacked bearer layer | Arithmetic only; low-clearance exposure detail required |
 | 2026-11-03 rotated quantities | Rebuilt 7×1.970=13.79 lm; main+tread+rebuilt=158.99 lm (~159.0) before allowances | PROVISIONAL; supersedes 14 rebuilt rows/157.8 lm for the current orientation |
+| 2026-11-03 assembly guide | Replace generic phases with 11 numbered assembly actions, labelled parts, tools and check dimensions | CONFIRMED BY USER presentation request; dimensions remain nominal until schedules exist |
+| 2026-11-03 missing inputs | FP01 main footings, AP01 main anchor/bracing connections, GP01 tread concrete/bearing/restraint/treatment, DF01 actual boards/fixings gate affected assembly | HOLD POINTS; illustrations do not supply these schedules |
+| 2026-11-03 ground proposal | G01–G12 cast-concrete footing/plinth heads support R1/R2 through DPC; vertical load goes directly to concrete and suitable soil | PROVISIONAL; footing sizes/depths, bearing and levels unverified |
+| 2026-11-03 tread restraint | C1 side bracket, C2 concrete anchor and C3 timber fastener families restrain lateral/uplift movement; rail is not bracket-suspended | PROVISIONAL; exact products, counts, corrosion, embedment and edges are GP01 inputs |
+| 2026-11-03 anchor question | MiTek brand is optional; use the complete rated system required by the bracing design at its required locations, not automatically all 12 piles | Project connection/locations remain AP01 inputs; former four anchors unverified |
+| 2026-11-03 MiTek source | Cited 2024 V1 manual distinguishes 12 kN anchor/brace and 6 kN cantilever uses; exposure table directs below 600 mm candidate towards 12KNH (SS304), not standard HDG 12KN | General source selection only; doubled 140×45 and 182 mm exposure fit remain unverified |
 
 
 ## Next action
 Complete remaining `SITE_MEASUREMENTS.md` evidence and verify current primary sources, then resolve the structural/stair checklist in `OPEN_ISSUES.md`. Preserve this history when modifying the design.
+
+- Assembly follow-up: RM1/RM2 identify front/rear rim lines; step 05 includes their fitting. The rear line splits or terminates around continuous J01–J03; 6600 mm is an overall allowance, not a verified rim cut.

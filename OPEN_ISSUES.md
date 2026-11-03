@@ -1,46 +1,49 @@
-# Resolution tracker — pre-build plan review
+# Missing plan inputs — before assembly
 
-Updated 2026-11-03. **Not build-ready.** The builder reviews the plan once before construction; no staged site inspections or builder visits are assumed. Construction checks after that are the owner's checks against the agreed details.
+**Draft, not build-ready.** Builder involvement is one plan review before construction; no builder visits or inspections during the DIY build are assumed. No handrails are proposed in the owner's brief. The site/house-clearance checklist remains outside this review at the owner's request.
 
-## Recorded choices and illustrated geometry
+## Four inputs that gate the assembly guide
 
-- [x] Main 6600×2600, rebuilt 900×1970, one full-width 6600×400 tread, selected tread surface 250 above garden; deck drop about 500 mm.
-- [x] Pine 38 mm thickness; 138 mm board width remains provisional.
-- [x] No handrails proposed — **CONFIRMED BY USER requirement**, not an independent regulatory finding.
-- [x] Remove the threshold/cladding/drainage/ventilation/services/foundation-conflict checklist from the builder brief at the owner's request. This closes the presentation/scope decision, not technical compliance.
-- [x] Show 16 main joist lines and three dashed J01–J03 continuation candidates within that count.
-- [x] Show a rotated rebuilt-board proposal, interpreted from the user's description: Y-running boards supported by 12 flush cross-blocks in six 385 mm-centre rows.
-- [x] Show a simple independent tread-frame concept: two long rails, 16 short crosspieces and six support stations/12 rail-bearing points.
+| Input | Must contain | Assembly gate |
+|---|---|---|
+| **FP01 — main footings** | Ground/bearing basis; P01–P12 classes/locations/lengths; footing shape/dimensions, concrete and levels | Do not excavate or install piles from the schematic grid alone |
+| **AP01 — main bracing/anchor connections** | Required bracing locations/demands; complete doubled-bearer/joist connection, components, fastening and ply/splice/bearing details; retained-support evidence and continuity decision | Do not assume four anchors, twelve anchor kits or a generic 12 kN bracket; no structural cuts/joints released |
+| **GP01 — tread ground connection** | Cast G01–G12 footing/plinth sizes/depths/concrete; direct rail bearing through DPC; suitable low-clearance timber; C1/C2/C3 products, counts, corrosion class, embedment/edge distances and anchors; rail splices and levels | Do not install undefined footings, loose pavers, repurposed post shoes or generic concrete anchors |
+| **DF01 — decking and fixings** | Actual 38 mm pine product/width; gaps and edge rows; supported board ends; screws/fasteners, corrosion/edge guidance and stock/cut schedule | Do not use the illustration's dots or nominal rows as a screw/cut order |
 
-The direction-choice question was not explicitly answered. The rotated rebuilt orientation is **PROVISIONAL**, not a new confirmed preference.
+FP01/AP01/GP01/DF01 are missing plan details, not requests for staged builder inspections. The owner checks the assembled work against these details once they exist.
 
-## Inputs needed for the plan review
+## Tread ground detail to review
 
-- [ ] Owner-supplied dimensions/evidence for retained bearer section, grade/treatment if identifiable, support spacing, connections, footing condition and exact bearing faces/centre offset.
-- [ ] Actual ground/support assumptions needed to select the main and tread footing/support details.
-- [ ] Actual board product, width, moisture/gap instructions, fixing guidance, finish and stock lengths.
-- [ ] Precise finished levels/separation details for the selected tread frame and supports.
+**PROVISIONAL:** R1/R2 bear on G01–G12 cast-concrete footing/plinth heads through specified DPC/separation. Vertical path: **rail → DPC → concrete → suitable bearing soil**. Footings extend below garden grade to the verified bearing depth. C1 structural side restraint, C2 concrete anchors and C3 timber fixings resist lateral/uplift loads; the rail is not suspended from an angle.
 
-Use [SITE_MEASUREMENTS.md](SITE_MEASUREMENTS.md). Other applicable house/site-interface matters are owner-managed outside the builder-review checklist; their omission is not a verification result.
+- [ ] Specify GP01 footing/head dimensions, bearing area, ground assumptions and exact top levels.
+- [ ] Specify all C1/C2/C3 products and quantities per location; twelve locations are not a bracket/anchor count.
+- [ ] Check actual concrete anchor requirements, embedment and edges before any drilling recipe is written.
+- [ ] Confirm the selected 250 mm surface with 38 mm boards: frame top 212 /underside 72 mm, allowing for separation and actual levels; choose suitable timber grade/treatment.
 
-## Decisions to settle on the plan before DIY construction
+## MiTek decision
 
-| Plan item | Required decision / evidence |
-|---|---|
-| Main support system | Applicable loads/standard scope, bearer and joist spans/cantilevers, bracing, pile classes, footing schedule and exact doubled-bearer connectors |
-| J01–J03 continuity | Verify or replace the continuous candidates through Y≈−1970…2600; 4570 mm finished envelope is not a cut length; actual bearing and approximate 2320/1900 mm support separations need assessment |
-| Rebuilt board support | Confirm rotated direction and 12 flush 140×45 blocks: two 382.5 mm nominal pieces per row at Y=−1947.5…−22.5, 385 mm centres; specify block-end hangers/structural fixings and Y=0 rim junction |
-| Board attachment | Specify the actual 38 mm-board screws, length, corrosion class and edge distances; two fastenings per cross-support are illustrative; support every butt joint |
-| Tread ladder frame | Verify single-layer 140×45 rails/crosspieces, rail capacity, joints and bearing; no stacked bearer layer or unsupported 6.6 m rail |
-| Tread support system | Specify stable foundations/supports and anchors at six proposed stations providing 12 rail bearings; no loose-paver or footing-size assumption |
-| Tread durability | At selected levels, frame top 212 / underside 72 mm above garden; specify grade/treatment and separation for actual exposure rather than assuming H3.2 offcuts or an unsourced H4/clearance rule |
-| Access geometry | Resolve the selected 250 mm tread surface, two approximately 250 mm rises, going/nosing and approach; no handrails proposed in the owner's brief |
+- [ ] Decide the main bracing system and locations in AP01. The MiTek brand is optional; complete rated connection performance is required where the design calls for it.
+- [ ] If selecting the cited MiTek system, confirm its 12 kN anchor/brace role and exposure table. The below 600 mm candidate is 12KNH (SS304), not standard hot-dip-galvanised 12KN; 6 kN cantilever applications are not ordinary-pile substitutions.
+- [ ] Obtain the exact double 140×45 bearer detail and verify fit at nominal 182 mm exposed pile height. A product name or exposure-table selection does not close this geometry check.
+- [ ] Use the complete manufacturer's parts/fastener schedule, not partial plates/cleats or generic substitutes.
 
-## Source and release checks
+The manufacturer's table does not approve this project's spans, anchor count, doubled-bearer geometry or low tread foundations.
 
-- [ ] Record applicable current source editions, sections and limits for the project-specific structural/access decisions in REFERENCES.md.
-- [ ] Freeze dimensioned framing, support/footing, connection and tread details before the affected work.
-- [ ] Produce final cut-by-stock quantities and concrete/support quantities after those details are agreed.
-- [ ] Obtain comparable current GST-inclusive quotes for the frozen scope.
+## Recorded geometry, not unresolved preferences
 
-The earlier 12-pile/four-anchor, generic “12 kN kit” and concrete estimates remain concepts. General primary-source guidance does not validate this project's spans, connections, low tread frame or access geometry. The user has already published the cloud environment; do not reapply or publish earlier environment configuration changes.
+- Main 6600×2600, rebuilt 900×1970, one full-width 6600×400 tread at selected 250 mm surface; main drop about 500 mm.
+-38 mm pine selected; 138 mm width remains a calculation assumption.
+-16 main joist lines, with J01–J03 continuity candidates within that count; 4570 mm finished envelope is not a cut length.
+- Rebuilt boards provisionally illustrated turned 90° in Y, supported by 12 flush B blocks in six 385 mm-centre rows. The explicit direction-choice question was not answered.
+- Tread ladder: R1/R2 plus 16 T crosspieces in one 140 mm-deep layer; six stations give 12 G bearing locations.
+
+## Other project-specific plan decisions
+
+- [ ] Verify continuous-joist support reactions, bearing, B-block end fixings and the Y=0 rim termination.
+- [ ] Resolve the selected two approximately 250 mm rises, going/nosing and approach in the pre-build access detail; no handrails proposed by the owner is not an independent regulatory finding.
+- [ ] Freeze final cuts, stock joints and quantities after the four schedules are complete.
+- [ ] Record applicable source editions/details and their limits in REFERENCES.md; obtain current comparable all-in quotes for the agreed scope.
+
+No earlier environmental settings need reapplication or publication. Existing source limits remain visible; general manufacturer guidance is not a project-specific construction approval.

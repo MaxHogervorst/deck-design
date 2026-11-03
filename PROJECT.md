@@ -46,7 +46,7 @@ Originally considered 3×2.5 m at 600–1000 mm, later changed to 6.6×2.5 m and
 - **PROVISIONAL:** 16-line joist illustration aligned with the rebuilt strip and 19 main decking-row scenarios in [DESIGN.md](DESIGN.md) and [MATERIALS.md](MATERIALS.md). These are arithmetic, not source-verified span/fixing selections.
 - **HOLD POINT:** rebuilt joists crossing Y=0 to the proposed bearer at Y=350 need an explicit junction detail; shared loading alone is not the whole issue.
 - **HOLD POINT:** record the supplied rebuilt depth/bearer location/drop and verify exact support offsets/condition, remaining heights and the landing/approach envelope using [SITE_MEASUREMENTS.md](SITE_MEASUREMENTS.md).
-- **VERIFIED WITH PRIMARY SOURCE:** none yet. The earlier primary-source attempts were blocked. The environment was subsequently published by the user; that historic access result is not a claim about current networking, and no structural verification has been performed in this website task.
+- **VERIFIED WITH PRIMARY SOURCE:** later reads establish general BRANZ board-fixing guidance and MiTek's published 12 kN connection/exposure requirements; see REFERENCES.md for precise claims and limits. Earlier blocked attempts are historical. No project-specific structural or access compliance has been verified.
 
 ### Latest clarification
 
@@ -60,7 +60,7 @@ The owner selected a **full-width 6600×400 mm tread**, with its surface halfway
 
 The website serves two audiences:
 
-1. **Owner:** a practical build guide covering seven phases, from design/pre-work and set-out through footings, framing, decking, the one full-width tread and completion. The applicable hold points remain visible before the affected construction steps.
+1. **Owner:** an IKEA-style guide with eleven numbered assembly actions, labelled parts, matching illustrations, tools and check dimensions. Missing footing, anchor, tread-ground and board-fixing schedules gate the affected actions.
 2. **Builder:** a readable design brief with drawings, dimensions, material assumptions for a single **in-person pre-build plan review with the owner**.
 
 The website does not collect or manage the builder's review. Online review forms, assessments, feedback downloads and reviewer-note storage are outside this workflow. The owner and builder discuss the design together and bring agreed changes back into the project record.
@@ -77,6 +77,14 @@ The website is a compact technical reference: visible joists, a materials table,
 
 J01–J03 are shown as continuous candidates through the rebuilt and main deck, within the existing 16-line layout. Twelve flush cross-blocks give the rotated rebuilt boards perpendicular support/fixing rows. The block connections, continuity and support reactions remain part of the pre-build plan decision.
 
-The proposed tread is a separate, single-layer 140×45 ladder frame: two 6.6 m rails, 16 nominal 310 mm crosspieces and six support stations providing 12 rail-bearing points. Its surface remains 250 mm above garden. With 38 mm boards, frame top is 212 and underside 72 mm above garden; suitable low-clearance timber, rated supports/footings and anchors still need specifying. Do not add a stacked bearer layer or hang the tread from decking.
+The proposed tread is a separate, single-layer 140×45 ladder frame: two 6.6 m rails, 16 nominal 310 mm crosspieces and six support stations providing 12 rail-bearing points. Its surface remains 250 mm above garden. With 38 mm boards, frame top is 212 and underside 72 mm above garden; suitable low-clearance timber and the proposed G01–G12 cast-concrete footing/plinth heads with direct rail bearing and C1/C2/C3 side restraint still need final specification. Do not add a stacked bearer layer or hang the tread from decking.
 
 The builder reviews these details on the plan before the DIY work. The owner then follows the agreed details and performs the construction checks; no continuing builder inspection service is assumed.
+
+## Assembly and connection brief
+
+The website shows eleven numbered assembly actions, not ongoing builder inspection stages. Before the affected work, complete four plan inputs: **FP01** main footing schedule, **AP01** bracing-pile locations and exact pile/bearer/joist connections, **GP01** tread concrete foundations/direct bearing/restraint/treatment, and **DF01** actual board and fixing schedule.
+
+Tread ground concept: R1/R2 bear directly through DPC/separation onto **G01–G12 cast-concrete footing/plinth heads**. The weight path is rail → DPC → concrete → suitable bearing soil. Proposed C1 side brackets, C2 concrete anchors and C3 timber fasteners restrain lateral movement/uplift; they do not suspend the rail. Twelve locations do not determine bracket/anchor quantities. Concrete sizes/depths, anchors/edges/embedment and low-clearance timber remain GP01 inputs.
+
+MiTek-branded anchor fixings are not mandatory. The plan needs the complete rated connection required by the selected bracing system, wherever that system calls for it; ordinary supports are not automatically twelve anchor connections. The manufacturer's cited low-exposure option is a candidate only, because the doubled bearer and approximately 182 mm pile exposure have not been shown to fit an exact approved detail.

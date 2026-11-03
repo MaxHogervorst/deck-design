@@ -2,9 +2,9 @@
 
 Technical reference for the owner and builder:
 
-- **Plans:** framing opens first, with 16 numbered joist lines, three dashed continuity candidates, rebuilt cross-blocking, a tread ladder and a coordinate table. Separate views explain rotated-board fixings, the tread frame, dimensions and side profile.
+- **Plans:** framing opens first, with 16 numbered joist lines, three dashed continuity candidates, rebuilt cross-blocking, a tread ladder and a coordinate table. Separate views explain rotated-board fixings, the tread frame, ground fixing, dimensions and side profile.
 - **Materials:** specifications, planning quantities and outstanding decisions in one table.
-- **Build steps:** seven short phases, open by default.
+- **Build steps:** 11 numbered assembly pictures with part IDs, tools, actions and check dimensions. Previous/Next controls show one action at a time; printing includes all actions.
 - **Builder plan review:** one in-person review before construction, with no during-build inspections planned. No online forms or feedback workflow.
 
 Live site: **https://maxhogervorst.github.io/deck-design/**
@@ -43,7 +43,7 @@ No remote fonts, analytics, APIs, accounts or external assets are required. The 
 
 The framing view is the default. J01–J03 fit within the 900 mm rebuilt strip at 427.5 mm centres; the remaining 13 bays are approximately 438.46 mm. Dashed continuations remain provisional. Open the joist coordinate table for centre positions, or enlarge the drawing. No displayed coordinate is an approved cut length.
 
-The owner build guide covers the pre-build plan review, set-out, footings, bearers/bracing, joists and rebuilt cross-blocks, board fixing, and the independent tread frame/completion. It explains the order of work without treating unresolved structural choices as approved construction details.
+The owner build guide works through set-out, piles, doubled bearers, joists, rebuilt cross-blocks, deck boards, the tread frame, its ground connection and finished measurements. Each action has a matching assembly picture. The part table lists nominal geometry, not approved cut lengths. Four missing plan inputs gate the affected work: **FP01** main footings/pile classes, **AP01** pile/joist connections and blocking, **GP01** tread foundations/restraint/timber, and **DF01** boards and screws.
 
 The builder reviews the proposed joist continuity and rebuilt cross-blocks, main framing/bracing, footing plan, tread frame/access and the actual decking/fasteners once before construction. The owner builds from the agreed plan; no during-build builder inspections are planned. The requested site-clearance checklist is outside that review, and no handrails are proposed.
 
@@ -62,7 +62,8 @@ Public Pages output excludes the embedded working Markdown documents and their d
 | `site/index.html` | Page content and accessible structure |
 | `site/styles.css` | Responsive layout, diagram controls and print styling |
 | `site/diagrams.js` | Proportional plan, provisional framing and one-tread side profile |
-| `site/build-guide.js` | Seven-phase owner build guide |
+| `site/assembly-diagrams.js` | Labelled assembly pictures and the tread ground-connection cutaway |
+| `site/build-guide.js` | Eleven-action owner assembly guide, part table, navigation and print mode |
 | `site/app.js` | Drawing selection, in-person discussion topics, source downloads and page sharing |
 | `scripts/build.mjs` | Creates self-contained HTML and the public variant without working-note downloads |
 | `scripts/serve.mjs` | Minimal local static server |
@@ -83,7 +84,7 @@ The Markdown files remain the working design record. After changing dimensions, 
 
 ## Validation after changes
 
-Run `npm run build` and check both HTML variants in a browser on desktop and mobile. Exercise plan selection by mouse/keyboard, drawing tabs, the single-tread profile, the seven build phases, the five pre-build review topics, source downloads in the fuller bundle and the share controls. Confirm that the public variant contains no embedded working notes, and that review forms, feedback exports and reviewer-note storage are absent.
+Run `npm run build` and check both HTML variants in a browser on desktop and mobile. Exercise plan selection by mouse/keyboard, all six drawing tabs, the single-tread profile, the eleven assembly actions, print-all behaviour, the five pre-build review topics, source downloads in the fuller bundle and the share controls. Confirm that the public variant contains no embedded working notes, and that review forms, feedback exports and reviewer-note storage are absent.
 
 These checks validate website behaviour, not structural design or compliance. General BRANZ board-fixing guidance is recorded in REFERENCES.md. The full frame, foundations, connections and access geometry remain proposals for pre-build review, not independently verified construction details.
 
@@ -91,4 +92,5 @@ These checks validate website behaviour, not structural design or compliance. Ge
 
 - **J01–J03:** proposed continuations across the 4570 mm finished main-plus-rebuilt envelope. This is not a member cut length.
 - **Rebuilt rotated boards:** 12 flush cross-blocks in six rows at 385 mm centres; board-fixing examples are shown in the Decking fixings view. Block-end connections and the actual screw schedule remain to specify.
-- **One tread:** a standalone, single-layer 140×45 ladder frame, two long rails and 16 nominal 310 mm crosspieces. Six support stations give 12 rail-bearing points. With 38 mm boards at a 250 mm surface, frame top/bottom are nominally 212/72 mm. Grade/treatment, supports, anchorage and access geometry remain open; there is no assumed H3.2 offcut/paver solution.
+- **One tread:** a standalone, single-layer 140×45 ladder frame, two long rails and 16 nominal 310 mm crosspieces. Six support stations give 12 rail-bearing points. With 38 mm boards at a 250 mm surface, frame top/bottom are nominally 212/72 mm. The proposed rails bear through DPC onto cast-concrete footing/plinth heads G01–G12; C1 side brackets, C2 concrete anchors and C3 timber fasteners provide separate restraint. GP01 must specify footing dimensions, bearing, connectors, timber treatment/grade and anchorage; the twelve locations do not determine hardware quantities.
+- **Anchor-pile fixings:** MiTek is an optional brand. Its cited 2024 manual distinguishes 12 kN anchor/brace connections from 6 kN cantilever connections and directs below-600 mm fixings to stainless 12KNH. Compatibility with doubled 140×45 bearers and the nominal 182 mm pile exposure remains unverified. See REFERENCES.md for source details and limits.

@@ -111,7 +111,7 @@ function drawTreadFrame(parent, x0, y0, scale) {
   for (const x of TREAD_SUPPORT_X) {
     for (const [side, y] of [['rear', 22.5], ['front', 377.5]]) {
       parent.append(el('rect', {
-        class: 'tread-bearing', 'data-x-mm': x, 'data-side': side, 'data-symbolic': 'true',
+        class: 'tread-bearing', 'data-x-mm': x, 'data-side': side, 'data-symbolic': 'true', 'data-ground-id': `G${String(TREAD_SUPPORT_X.indexOf(x) * 2 + (side === 'rear' ? 1 : 2)).padStart(2, '0')}`,
         x: x0 + x * scale - marker / 2, y: y0 + y * scale - marker / 2,
         width: marker, height: marker, fill: '#fff', stroke: '#8d6637',
         'stroke-width': 1.6, 'stroke-dasharray': '3 2'
@@ -265,7 +265,7 @@ export function renderElevation(svg) {
 /** Independent 6600 x 400 tread ladder, including the constrained height stack. */
 export function renderTreadFrame(svg) {
   begin(svg, 'Proposed independent tread ladder frame',
-    'One full-width 6600 by 400 millimetre tread. Two long 140 by 45 rails and sixteen 310 millimetre nominal crosspieces form one layer beneath 38 millimetre decking. Surface is selected at 250 millimetres above garden, frame top is 212 and underside 72. Twelve rail bearing points at six stations are symbols, not specified footings. Grade and treatment for low clearance, supports, anchorage, joints, spans and access geometry need the pre-build plan check.',
+    'One full-width 6600 by 400 millimetre tread. Two long 140 by 45 rails and sixteen 310 millimetre nominal crosspieces form one layer beneath 38 millimetre decking. Surface is selected at 250 millimetres above garden, frame top is 212 and underside 72. G01 to G12 show proposed concrete bearing locations at six stations; their footing dimensions and restraint connectors are not specified. Grade and treatment for low clearance, supports, anchorage, joints, spans and access geometry need the pre-build plan check.',
     '0 0 1180 800');
   svg.append(el('rect', { width: 1180, height: 800, fill: C.paper }));
   text(svg, 90, 35, 'TREAD FRAME — PROPOSAL', { 'font-size': 21, 'font-weight': 650 });
@@ -274,7 +274,7 @@ export function renderTreadFrame(svg) {
   dimH(svg, X, X + 6600 * S, 72, '6600 mm outer frame');
   dimV(svg, X + 6600 * S + 38, Y, Y + 400 * S, '400 mm');
   text(svg, 100, 195, '2 long rails + 16 crosspieces (including end pieces). Crosspiece clear space: 310 mm.', { 'font-size': 16 });
-  text(svg, 100, 222, 'Dashed bearing symbols: 6 stations × 2 rail bearings. Footing and anchorage design not specified.', { 'font-size': 15, fill: C.muted });
+  text(svg, 100, 222, 'G01–G12: concrete bearing locations proposed. See Ground fixing for the restraint load path.', { 'font-size': 15, fill: C.muted });
   text(svg, 100, 276, 'SIDE SECTION THROUGH THE 400 mm DEPTH', { 'font-size': 16, 'font-weight': 650 });
 
   const left = 130, ground = 620, top = ground - 250, frameTop = ground - 212, frameBottom = ground - 72;
@@ -296,7 +296,7 @@ export function renderTreadFrame(svg) {
   text(svg, 690, frameTop + 25, 'Frame top: 212 mm', { 'font-size': 17 });
   text(svg, 690, frameTop + 55, '140 mm-deep members, one layer', { 'font-size': 16 });
   text(svg, 690, frameBottom + 7, 'Frame underside: 72 mm', { 'font-size': 17 });
-  text(svg, 690, frameBottom + 38, 'Low-clearance timber grade/treatment', { 'font-size': 15, fill: C.amber });
+  text(svg, 690, frameBottom + 38, 'Low-clearance timber / ground fixing', { 'font-size': 15, fill: C.amber });
   text(svg, 690, frameBottom + 61, 'and support details: to confirm.', { 'font-size': 15, fill: C.amber });
   text(svg, 100, 700, 'No stacked bearer layer. Frame uses independent ground supports.', { 'font-size': 16 });
   text(svg, 100, 727, 'Rail support stations X: 250 / 1470 / 2690 / 3910 / 5130 / 6350 mm — provisional.', { 'font-size': 15, fill: C.muted });

@@ -34,7 +34,7 @@
       <div class="section-heading"><h2 id="plan-title">1. Plans</h2><span>Dimensions in mm · framing provisional</span></div>
       <div class="plan-workspace">
         <div class="drawing-card">
-          <div class="drawing-toolbar"><div class="view-tabs" role="tablist" aria-label="Drawing view"><button role="tab" id="tab-framing" aria-controls="drawing-panel" aria-selected="true" tabindex="0" data-view="framing">Framing &amp; joists</button><button role="tab" id="tab-decking" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="decking">Decking fixings</button><button role="tab" id="tab-tread" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="tread">Tread frame</button><button role="tab" id="tab-layout" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="layout">Dimensions</button><button role="tab" id="tab-elevation" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="elevation">Side profile</button></div><span id="drawing-scale" class="drawing-scale">TOP VIEW</span></div>
+          <div class="drawing-toolbar"><div class="view-tabs" role="tablist" aria-label="Drawing view"><button role="tab" id="tab-framing" aria-controls="drawing-panel" aria-selected="true" tabindex="0" data-view="framing">Framing &amp; joists</button><button role="tab" id="tab-decking" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="decking">Decking fixings</button><button role="tab" id="tab-tread" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="tread">Tread frame</button><button role="tab" id="tab-ground" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="ground">Ground fixing</button><button role="tab" id="tab-layout" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="layout">Dimensions</button><button role="tab" id="tab-elevation" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="elevation">Side profile</button></div><span id="drawing-scale" class="drawing-scale">TOP VIEW</span></div>
           <div id="drawing-panel" role="tabpanel" aria-labelledby="tab-framing" tabindex="0"><svg id="design-drawing" xmlns="http://www.w3.org/2000/svg" aria-label="Deck framing and joist layout"></svg></div>
           <div class="drawing-footer"><div class="legend" id="drawing-legend"><span><i class="legend-joist"></i>Joists</span><span><i class="legend-bearer"></i>Bearers</span><span><i class="legend-pile"></i>Piles</span></div><div class="drawing-controls"><button class="text-button" id="zoom-drawing" aria-pressed="false">Enlarge +</button><button class="text-button" id="reset-view">Reset</button></div></div>
           <p id="drawing-note" class="drawing-note">16 joist lines. Dashed extensions into the rebuilt section are continuity candidates; junction and support capacity need checking.</p>
@@ -44,7 +44,7 @@
       <div class="table-scroll proposal-table"><table><caption>Framing proposals</caption><thead><tr><th scope="col">Detail</th><th scope="col">Proposal for the pre-build review</th><th scope="col">Drawing</th></tr></thead><tbody>
         <tr><th scope="row">J01–J03</th><td>Continue from retained bearer through the main deck. 4570 mm finished envelope; actual cuts, bearing and joints to confirm.</td><td><button class="text-button" data-open-view="framing">Main frame</button></td></tr>
         <tr><th scope="row">Rebuilt decking</th><td>Boards run along the 1970 mm depth. Add 12 flush cross-blocks between J01–J03; screw boards down at six support rows.</td><td><button class="text-button" data-open-view="decking">Fixing detail</button></td></tr>
-        <tr><th scope="row">One tread</th><td>Independent single-layer ladder frame: two 6600 mm rails and 16 short crosspieces. No stacked bearer layer or attachment through deck boards.</td><td><button class="text-button" data-open-view="tread">Tread frame</button></td></tr>
+        <tr><th scope="row">One tread</th><td>Independent single-layer ladder frame: two 6600 mm rails and 16 short crosspieces. Rails bear on proposed concrete supports; side connectors provide restraint.</td><td><button class="text-button" data-open-view="tread">Tread frame</button> · <button class="text-button" data-open-view="ground">Ground fixing</button></td></tr>
       </tbody></table></div>
       <p class="table-note">Fixing dots illustrate <a href="https://www.branz.co.nz/design-build/articles/timber-decks-common-problems-and-repairs" target="_blank" rel="noopener noreferrer">BRANZ’s two-fastener approach</a>. Specify screws and edge distances for the actual 38 mm board.</p>
       <details class="coordinate-details"><summary>Joist centre coordinates — J01 to J16</summary><p class="table-note">Provisional layout. Coordinates are from the left finished deck edge; these are not cut lengths or an approved set-out schedule.</p><div class="table-scroll"><table id="joist-coordinates"><caption>16 proposed joist centre lines</caption><thead><tr><th scope="col">Joist</th><th scope="col">X centre (mm)</th><th scope="col">Run shown</th></tr></thead><tbody></tbody></table></div></details>
@@ -57,19 +57,27 @@
         <tr><th scope="row">Joists</th><td>140 × 45 H3.2 SG8</td><td>16 lines; 3 continuation candidates</td><td>Spans, junction, bearing, extra butt supports and cut lengths</td></tr>
         <tr><th scope="row">Rebuilt cross-blocks</th><td>140 × 45, flush with joist tops</td><td>12 × 382.5 mm nominal / 4.59 lm</td><td>Block-end connections, board fixing and exact cuts</td></tr>
         <tr><th scope="row">Bearers</th><td>Double 140 × 45 H3.2 SG8</td><td>2 lines / 4 plies / 26.4 lm nominal</td><td>Load capacity, ply fixings, joints and support details</td></tr>
-        <tr><th scope="row">Long-edge rims</th><td>140 × 45 H3.2 SG8 concept</td><td>2 × 6.6 m / 13.2 lm nominal</td><td>End connections; side edge joists already included above</td></tr>
+        <tr><th scope="row">Long-edge rims</th><td>RM1/RM2 · 140 × 45 H3.2 SG8 concept</td><td>2 × 6.6 m overall / 13.2 lm allowance</td><td>AP01 cuts/joints; rear rim split around J01–J03. Side edge joists included above</td></tr>
         <tr><th scope="row">Piles</th><td>125 × 125 H5 concept</td><td>12 new, proposed</td><td>Final count, structural suitability, lengths and anchor allocation</td></tr>
-        <tr><th scope="row">Pile / framing fixings</th><td>Exact approved assembly TBD</td><td>TBD</td><td>Bracing rating, doubled-bearer detail, corrosion class and components</td></tr>
+        <tr><th scope="row">Anchor-pile fixings</th><td>Complete connection from AP01; MiTek 12KNH candidate</td><td>Anchor locations / kit count TBD</td><td>Double 140 × 45 bearer compatibility, low pile height and complete installation detail</td></tr>
         <tr><th scope="row">Decking screws</th><td>To match actual board / exposure</td><td>TBD</td><td>Length, corrosion rating, pattern and total including butt joints</td></tr>
         <tr><th scope="row">Concrete / DPC</th><td>Footing and separation details TBD</td><td>TBD</td><td>Verified hole sizes, embedment, ground and DPC specification</td></tr>
         <tr><th scope="row">Tread frame</th><td>140 × 45 single layer; suitable grade/treatment TBD</td><td>2 × 6600 rails + 16 × 310 crosspieces, nominal</td><td>Only 72 mm nominal underside clearance; treatment, anchorage and joints to confirm</td></tr>
-        <tr><th scope="row">Tread supports</th><td>Support both long rails</td><td>6 stations / 12 rail bearing points</td><td>Footing/pedestal design and ground suitability; no loose-paver assumption</td></tr>
+        <tr><th scope="row">Tread bearings</th><td>G01–G12 concrete footing/plinth heads + separation</td><td>12 proposed bearing locations</td><td>Footing size/depth and bearing ground from GP01</td></tr>
+        <tr><th scope="row">Tread restraints</th><td>C1 bracket + C2 concrete anchors + C3 timber fixings</td><td>12 connection locations; hardware quantities TBD</td><td>Compatible rail/bracket detail, capacity, corrosion, anchor embedment and edge distances</td></tr>
       </tbody></table></div>
       <p class="table-note">¹ Assumes 138 mm boards and example 3–6 mm gaps: 19 main-deck rows + 7 rotated rebuilt boards + 3 tread rows. Excludes stock-length losses, joints, defects and waste. Confirm the product and gap before using this estimate. No current price quote or final cut list.</p>
     </section>
 
+    <section id="anchor-fixings" class="content-section" aria-labelledby="anchor-fixings-title">
+      <div class="section-heading"><h2 id="anchor-fixings-title">Anchor-pile fixings</h2><span>Plan input AP01</span></div>
+      <p class="section-note"><strong>MiTek is optional.</strong> Specify the complete connection required by the bracing plan. MiTek’s 12 kN pack is for anchor/brace piles; its 6 kN pack is for cantilever piles.</p>
+      <div class="connection-note"><strong>For this low MiTek connection:</strong> the 2024 brochure specifies stainless <strong>12KNH</strong> for fixings below 600 mm above ground. Its detail does not explicitly verify the doubled 140 × 45 bearers or fit at the nominal 182 mm pile exposure. Confirm AP01 before ordering; the previous four-anchor idea is not an approved allocation.</div>
+      <p class="table-note"><a href="https://mitek.co.nz/wp-content/uploads/2024/03/12kN-Pile-Fixing_2024-v1.pdf" target="_blank" rel="noopener noreferrer">MiTek 12 kN installation detail, 2024 V1, pp. 45–46</a> · Use the full specified plate/cleat/nail assembly. Do not substitute a generic bracket or assume every pile is an anchor.</p>
+    </section>
+
     <section id="build-guide" class="content-section" aria-labelledby="build-guide-title">
-      <div class="section-heading"><h2 id="build-guide-title">3. Build sequence</h2><span>Owner follows the agreed plan</span></div>
+      <div class="section-heading"><h2 id="build-guide-title">3. Illustrated assembly</h2><span>Parts → action → check</span></div>
       <div id="build-phases" class="build-phases"></div>
     </section>
 
@@ -81,7 +89,7 @@
 
     <section class="sources-section page-width" aria-labelledby="sources-title"><h2 id="sources-title">Working documents</h2><div id="source-list" class="source-list"></div></section>
   </main>
-  <footer class="site-footer page-width"><span>Auckland deck · 03 November 2026</span><span>Draft design · not construction drawings</span></footer>
+  <footer class="site-footer page-width"><span>Auckland deck · 04 November 2026</span><span>Draft design · not construction drawings</span></footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <dialog id="share-dialog" aria-labelledby="share-title"><button class="dialog-close" id="share-close" aria-label="Close share dialog">×</button><h2 id="share-title">Share guide</h2><p id="hosted-note">Share the website link or download a copy for offline use.</p><button class="button button-primary" id="copy-link">Copy page link</button><button class="button" id="download-website">Download HTML</button></dialog>
   <noscript><p class="noscript-note">Enable JavaScript for the drawings, build steps and builder checks. Dimensions and materials are listed above.</p></noscript>

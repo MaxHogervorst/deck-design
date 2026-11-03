@@ -43,3 +43,13 @@ Builder involvement is one plan review before DIY construction; the owner suppli
 **PROVISIONAL direction interpretation:** the rebuilt boards are turned 90° relative to the main deck, running along 1970 mm in Y. The direction-choice question was not explicitly answered. The proposed perpendicular supports are 12 flush cross-blocks in six 385 mm-centre rows, not an added batten layer.
 
 The separate tread ladder frame is 6600×400, 140 mm deep below 38 mm boards: top 212 / underside 72 above garden at the selected surface 250. Six support stations provide 12 rail-bearing points. Exact support levels, ground/foundation detail, anchors, timber grade/treatment and separation remain to specify before construction. No assumed 150 mm/H4 rule is recorded.
+
+## Concrete tread bearing and restraint inputs
+
+G01–G12 identify twelve proposed cast-concrete footing/plinth bearing heads, not pre-sized pavers. Record the ground/bearing evidence and levels needed for **GP01**, including below-grade footing depth/shape, concrete, head bearing area and top levels.
+
+R1/R2 bear through DPC/separation onto the concrete. The weight path is rail → DPC → concrete → suitable bearing soil. C1 side brackets, C2 concrete anchors and C3 timber fasteners are restraint families whose products, corrosion class, counts, embedment, edge distances and installation details are still unselected. Twelve locations do not determine twelve brackets or anchors.
+
+At the selected tread surface 250 and board thickness 38, frame top is 212 and underside 72 mm above garden before actual sizes/separation. Concrete plus separation must meet that underside level; the footing itself extends below grade to verified bearing. No generic M12 hole or loose-paver solution is recorded.
+
+Other missing plan inputs: **FP01** main footings, **AP01** bracing-pile/connection locations and exact doubled-bearer compatibility, **DF01** actual board and fastening schedule. For a cited MiTek option, the low-exposure table selection does not prove the doubled bearer fits at nominal 182 mm exposed pile height.

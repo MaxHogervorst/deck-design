@@ -53,7 +53,7 @@ First two bays:427.5 mm. Remaining 13 bays:5700/13≈438.46 mm. Assumed member f
 
 **Answer to the continuity question:** J01–J03 are proposed to run through **both areas**, from the retained bearer near Y=−1970 through the main deck towards Y=2600. The finished envelope is 4570 mm; it is not a cut length. Approximate support separations are 2320 mm to the new rear bearer, then 1900 mm to the new front bearer. These three longer candidates replace three short main members within 16 total; do not add three extra joists.
 
-Before adopting that option, resolve member spans/continuity, actual bearing, old-support evidence, combined reactions and fixings in the pre-build plan. A rear rim at Y=0 must not be drawn through the three continuous members; detail its termination/blocks around them. Do not assume half of a 90 mm bearer is adequate end bearing for a joint.
+Before adopting that option, resolve member spans/continuity, actual bearing, old-support evidence, combined reactions and fixings in the pre-build plan. RM1 denotes the front rim; RM2 the rear rim line at Y=0. RM2 must not pass through the three continuous members; detail its termination/blocks around them. Each rim line has a 6600 mm overall envelope, not an approved cut length. Do not assume half of a 90 mm bearer is adequate end bearing for a joint.
 
 ## Rebuilt decking turned 90°: support and attachment
 
@@ -94,15 +94,31 @@ The exact block/rim/junction detail and added loading on the continuous joists a
 | Tread component | Geometry-only proposal |
 |---|---|
 | Outside frame | 6600×400 mm |
-| Long rails | Two 140×45 members, each 6600 mm nominal |
-| Crosspieces including both ends | 16 at the main-joist X centre layout |
+| Long rails | R1/R2: two 140×45 members, each 6600 mm nominal |
+| Crosspieces including both ends | T01–T16 at the main-joist X centre layout |
 | Clear crosspiece length | 400−2×45=310 mm nominal |
 | Total crosspiece length | 4.96 lm |
 | Support stations X | 250, 1470, 2690, 3910, 5130, 6350 mm |
-| Rail-bearing points | 12 total: front and rear rail at each of six stations |
+| Rail-bearing points | G01–G12: 12 proposed cast-concrete footing/plinth heads, front and rear at each of six stations |
 | Maximum station spacing | 1220 mm centre-to-centre; 250 mm end offset |
 
-The support symbols show bearing locations, **not a footing size or an approved loose-paver/pedestal system**. Specify stable foundations/supports, rail capacity, splice locations, bearing, anchors and frame connections before construction. Neither 6.6 m rail is an unsupported span. Do not assume six support stations mean six already-designed pads; each station must provide both rail bearings.
+### Tread-to-ground connection: direct bearing plus restraint
+
+**PROVISIONAL GP01 concept:** each G01–G12 is a cast-concrete footing/plinth bearing head. R1/R2 sit on it through specified DPC/separation. The vertical weight path is **rail → DPC → concrete → suitable bearing soil**. The footing extends below garden grade to the verified bearing depth; its below-ground size, shape and depth are not specified here.
+
+A structural **C1 side-restraint bracket**, **C2 concrete anchor** and **C3 timber fasteners** connect each rail/restraint location to its plinth to resist lateral movement/uplift. The rail is **not suspended from the bracket**. These are component-family labels, not an approved product combination or a specified count per location.
+
+| GP01 must specify | Still missing |
+|---|---|
+| Concrete footing/plinth | Ground/bearing basis, head and below-ground dimensions, concrete, reinforcement if required, curing and bearing level |
+| Rail bearing/separation | Required bearing area, DPC/separation, actual top level and low-clearance timber grade/treatment |
+| C1 bracket | Product, structural role, fit to the 45 mm horizontal rail, corrosion class and required quantity/orientation |
+| C2 concrete anchor | Product and quantity, concrete requirements, embedment, drilling/installation and edge/spacing distances |
+| C3 timber fasteners | Product, size and quantity, timber suitability, end/edge distances and installation |
+
+Twelve locations do not mean twelve brackets or twelve anchors. Do not substitute loose pavers, generic decorative angles or an unverified post shoe. A product made for a 90/100 mm post has not thereby been verified for this 45 mm horizontal rail. No generic M12 anchor recipe is specified.
+
+Neither 6.6 m rail is an unsupported span. Keep six support stations/twelve rail-bearing locations as geometry to assess with rail capacity, bearing, stock joints/splices and the complete GP01 connection. Do not hang the tread from deck boards or house cladding.
 
 | Selected level | Height above garden |
 |---|---:|
@@ -110,7 +126,7 @@ The support symbols show bearing locations, **not a footing size or an approved 
 | Decking underside / frame top | 250−38=212 mm |
 | Frame underside | 212−140=72 mm |
 
-Allow for actual sizes and separation details. The 72 mm nominal underside clearance is a durability/design issue: specify structural grade and treatment suitable for the actual low-clearance exposure. Do not automatically reuse main-deck H3.2 offcuts, and do not infer a particular H4/150 mm rule without the applicable source/product detail.
+The concrete bearing head plus separation must meet the rail underside at nominal 72 mm; the top of concrete alone is lower by the actual separation thickness. Allow for actual sizes and final garden levels. The 72 mm nominal underside clearance is a durability/design issue: specify structural grade and treatment suitable for the actual low-clearance exposure. Do not automatically reuse main-deck H3.2 offcuts, and do not infer a particular H4/150 mm rule without the applicable source/product detail.
 
 The two approximately 250 mm rises, going/nosing and approach still need a pre-build access detail. **No handrails proposed — owner requirement**, not an independently verified regulatory conclusion. No builder inspection visits during construction are assumed.
 
@@ -123,3 +139,29 @@ The two approximately 250 mm rises, going/nosing and approach still need a pre-b
 - Tread access geometry and final finished levels.
 
 The house-clearance/services checklist is omitted from the builder brief at the owner's request. Any applicable physical site constraints remain owner-managed outside this plan-review scope; omission does not establish compliance.
+
+## Main anchor-pile connection: optional MiTek system
+
+**MiTek is not a mandatory brand.** AP01 must identify the bracing system and which pile locations require its rated connections. Not all twelve proposed piles are anchor piles; the earlier illustration of four anchors is not a verified requirement.
+
+The manufacturer's **12 kN Pile Fixing, 2024 V1**, printed pages 45–46, distinguishes:
+
+| Manufacturer item | Manual role / exposure selection | Project limit |
+|---|---|---|
+| 12 kN pile fixing | Anchor/brace pile connections | Use only where the bracing design requires this system |
+| 6 kN fixing application | Cantilever pile connection | Not a generic ordinary-pile substitute |
+| 12KN standard hot-dip-galvanised variant | Exposure table: above 600 mm in corrosion zones B/C | Not the table's selection for this low-deck candidate |
+| 12KNH (SS304) | Exposure table: below 600 mm or corrosion zone D | Candidate if this MiTek system is selected; exact project fit still unverified |
+
+See [REFERENCES.md](REFERENCES.md) for the read source and exact qualifications. The table does **not** by itself verify a **double 140×45 bearer** or the proposed geometry at **182 mm exposed pile height**. Confirm the exact applicable manufacturer detail and its complete plates, cleats, nails and other components before ordering. Do not assemble a partial kit from generic brackets or select a product from its 12 kN label alone.
+
+## Missing plan inputs for the assembly guide
+
+| Input | Needed before |
+|---|---|
+| FP01 — main footing/pile schedule | Excavation and P01–P12 installation |
+| AP01 — bracing locations and complete pile/bearer/joist connection | Installing main rated connections and releasing structural cuts/joints |
+| GP01 — tread concrete, direct bearing, restraint, treatment and final levels | Constructing G01–G12 and installing C1/C2/C3 |
+| DF01 — actual boards, gap, screw and supported joint/cut schedule | Cutting/fixing deck boards and TD1–TD3 |
+
+These schedules are not supplied by the assembly illustrations. They are specific pre-build plan inputs, not requests for builder visits during construction.

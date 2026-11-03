@@ -7,10 +7,11 @@ const files = ['PROJECT.md', 'DESIGN.md', 'MATERIALS.md', 'OPEN_ISSUES.md', 'SIT
 const sources = Object.fromEntries(await Promise.all(files.map(async name => [name, await read(name)])));
 const css = await read('site/styles.css');
 const diagrams = (await read('site/diagrams.js')).replace(/^export\s+/gm, '');
-const buildGuide = (await read('site/build-guide.js')).replace(/^export\s+/gm, '');
-const app = (await read('site/app.js')).replace(/^import\s+\{[^}]*\}\s+from\s+['"]\.\/(?:diagrams|build-guide)\.js['"];?\s*$/gm, '');
+const assembly = (await read('site/assembly-diagrams.js')).replace(/^export\s+/gm, '');
+const buildGuide = (await read('site/build-guide.js')).replace(/^import[^\n]+from\s+['"]\.\/assembly-diagrams\.js['"];?\s*$/m, '').replace(/^export\s+/gm, '');
+const app = (await read('site/app.js')).replace(/^import\s+\{[^}]*\}\s+from\s+['"]\.\/(?:diagrams|build-guide|assembly-diagrams)\.js['"];?\s*$/gm, '');
 const safeJSON = JSON.stringify(sources).replace(/</g, '\\u003c');
-const script = (diagrams + '\n' + buildGuide + '\n' + app).replace(/<\/script/gi, '<\\/script');
+const script = (diagrams + '\n' + assembly + '\n' + buildGuide + '\n' + app).replace(/<\/script/gi, '<\\/script');
 const html = (await read('site/index.html'))
   .replace('<!-- INLINE_STYLES -->', `<style>\n${css}\n</style>`)
   .replace('<!-- SOURCE_DOCUMENTS -->', `<script type="application/json" id="source-documents">${safeJSON}</script>`)
