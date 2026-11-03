@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "A portable, interactive review of the Auckland deck concept.",
+  "description": "A portable Auckland deck build guide and in-person builder discussion brief.",
   "scripts": {
     "build": "node scripts/build.mjs",
     "dev": "node scripts/build.mjs && node scripts/serve.mjs",

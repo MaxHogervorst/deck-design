@@ -41,6 +41,8 @@
 | 2026-11-03 recalculation | Nominal pile-stack remainder becomes **182 mm**, not 188; tread area 2.64 m²; combined horizontal area 21.573 m² | Arithmetic only, not construction approval |
 | 2026-11-03 website | User requests a shareable website and GitHub Pages hosting | Website assets and deployment authorised; keep source repository visibility unchanged |
 | 2026-11-03 environment | User reports environment publication; prior source-access configuration state is historical | Do not reapply or publish previous environment changes |
+| 2026-11-03 website purpose | Website serves as build steps for the owner and a design brief for an in-person discussion with the builder | CONFIRMED BY USER |
+| 2026-11-03 review workflow | Builder review happens with the owner in person; remove online review forms, assessments, feedback exports and reviewer-note storage | CONFIRMED BY USER; drawings and discussion questions remain useful |
 
 
 ## Next action

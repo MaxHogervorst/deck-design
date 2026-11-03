@@ -40,3 +40,9 @@ Read `README.md`, `PROJECT.md`, `DESIGN.md`, `OPEN_ISSUES.md`, `MATERIALS.md`, `
 - Full-width one tread: **6600×400 mm**, selected surface **250 mm above garden**, below the deck at about 500 mm. Access compliance remains unverified.
 - Pine decking **38 mm thick**; 138 mm width remains provisional until an actual product is selected.
 - Nominal framing-stack remainder **182 mm** (500−38−140−140) before DPC and actual sizes/levels; older 32 mm/188 mm assumptions are superseded.
+
+## Website purposes — confirmed by user
+- The website has two purposes: a build guide for the owner, and a design brief to discuss with the builder in person.
+- Keep the build sequence practical and readable, with the existing structural hold points before the affected work.
+- Builder review happens with the owner in person. Present drawings, confirmed choices and discussion questions; do not add online review forms, assessments, feedback exports or reviewer-note storage.
+- Sharing the page or downloading the website remains useful. Keep working-document downloads excluded from the public Pages variant.

@@ -1,6 +1,13 @@
-# Auckland deck — design review website
+# Auckland deck — build guide and builder brief
 
-A portable website for reviewing a freestanding Auckland timber-deck concept. It includes interactive, dimensioned plan and framing views, a side profile, material assumptions, downloadable source notes and reviewer feedback exports.
+A portable website for a freestanding Auckland timber-deck project, with two purposes:
+
+- **For the owner:** a practical seven-phase build guide, with the required checks before the affected work.
+- **For the builder:** drawings, dimensions, material assumptions and six topics to discuss with the owner **in person**.
+
+The builder's review happens in conversation with the owner. The website is a reference for that conversation; it has no review form, online assessments, feedback exports or reviewer-note storage.
+
+Live site: **https://maxhogervorst.github.io/deck-design/**
 
 The design remains **preliminary, not construction drawings**. Confirmed owner choices are distinguished from provisional structural details and checks still requiring verification.
 
@@ -23,15 +30,30 @@ npm start
 
 The server uses port 3000 by default; set `PORT` to change it. `npm run dev` builds and starts the server in one command. Rebuild after editing website sources or project Markdown, then refresh the browser. There is no automatic file watcher.
 
-The build creates **`dist/index.html`**, containing all styles, scripts, SVG drawing code and project source documents. No remote fonts, analytics, APIs, accounts or external assets are required. The finished HTML can be opened directly in a modern browser. The public `docs/index.html` variant omits the private working-note downloads.
+The build creates two self-contained HTML variants:
 
-## Share with reviewers
+| Output | Contents |
+|---|---|
+| `docs/index.html` | Public Pages website: drawings, materials, owner build guide, builder discussion brief and page-sharing controls. Working Markdown downloads are excluded. |
+| `dist/index.html` | Portable website with the same guide and brief, plus embedded working Markdown documents and source downloads. Share this fuller bundle with the intended recipients. |
 
-Send `dist/index.html` as an attachment, or use **Share design → Download website** inside the page. Reviewers should download the HTML attachment and open it in a browser; some email clients do not preview active HTML attachments.
+No remote fonts, analytics, APIs, accounts or external assets are required. The HTML can be opened directly in a modern browser.
 
-For a public URL, GitHub Pages can serve the generated **`docs/`** folder on the **`main`** branch. In repository **Settings → Pages**, choose **Deploy from a branch**, then **main /docs**, and save. The website supports the `/deck-design/` subpath without an asset-path configuration. The build refreshes `docs/index.html` and `docs/.nojekyll` alongside `dist/index.html`; commit the refreshed `docs/` output when publishing changes. **Public Pages output excludes the embedded working Markdown documents and their download section.** The private repository retains those source files. The separate `dist/index.html` portable bundle includes the working notes; share that fuller version only with intended reviewers. The private source repository stays private. Pages availability for private repositories depends on the GitHub account plan. The build itself does not deploy or publish the cloud environment.
+## Using the website
 
-Reviewers enter optional names, assessments and notes. These stay in their browser when storage is available. They must use **Download review** or **Copy review** and send the result to the project owner; there is no shared database or automatic submission. A downloaded website excludes those personal review inputs. Downloaded reviews contain them intentionally. On browsers that block local storage, download the review before closing the page.
+The shared plan includes layout, provisional framing and side-profile views. Select an area for its dimensions, enlarge the drawing when needed, and use the selected full-width, one-tread arrangement as the reference.
+
+The owner build guide covers design/pre-work, set-out, footings, bearers/bracing, joists and the rebuilt-section junction, decking, and the garden tread/completion. It explains the order of work without treating unresolved structural choices as approved construction details.
+
+The builder brief brings together the confirmed choices and six topics: layout/house interface, the rebuilt section and retained bearer, framing/bracing/connections, footings/ground, deck-to-tread-to-garden access, and the exact decking/purchase plan. Use these during the in-person discussion. Agreed changes belong in the project record rather than an on-site review form.
+
+## Share and publish
+
+Share the live link, or use **Share design → Download website** to send an HTML attachment. Some email clients do not preview active HTML; recipients can download the attachment and open it in a browser.
+
+GitHub Pages serves the generated **`docs/`** folder on the **`main`** branch. The site supports the `/deck-design/` subpath without asset-path configuration. `npm run build` refreshes `docs/index.html` and `docs/.nojekyll` alongside `dist/index.html`; commit the refreshed `docs/` output when publishing website changes.
+
+Public Pages output excludes the embedded working Markdown documents and their download section. Those source files remain in the repository and in the fuller `dist/` bundle. This does not imply that the repository itself is private. The build does not change hosting/domain settings or publish the cloud environment.
 
 ## Website sources
 
@@ -40,13 +62,14 @@ Reviewers enter optional names, assessments and notes. These stay in their brows
 | `site/index.html` | Page content and accessible structure |
 | `site/styles.css` | Responsive layout, diagram controls and print styling |
 | `site/diagrams.js` | Proportional plan, provisional framing and one-tread side profile |
-| `site/app.js` | Drawing selection, review notes, source exports and sharing |
-| `scripts/build.mjs` | Creates the self-contained HTML and embeds Markdown sources |
+| `site/build-guide.js` | Seven-phase owner build guide |
+| `site/app.js` | Drawing selection, in-person discussion topics, source downloads and page sharing |
+| `scripts/build.mjs` | Creates self-contained HTML and the public variant without working-note downloads |
 | `scripts/serve.mjs` | Minimal local static server |
 
 ## Project sources
 
-The Markdown files remain the working design record. After changing dimensions or materials, update the affected source notes and website content together, then rebuild. The build embeds current source documents; the illustrated design and summaries are intentionally curated rather than automatically inferred from prose.
+The Markdown files remain the working design record. After changing dimensions, materials or construction details, update the affected notes and website content together, then rebuild. The portable build embeds current source documents; illustrated plans and summaries are curated rather than automatically inferred from prose.
 
 - [PROJECT.md](PROJECT.md): requirements and latest owner choices
 - [DESIGN.md](DESIGN.md): coordinates, framing concepts and access geometry
@@ -58,8 +81,8 @@ The Markdown files remain the working design record. After changing dimensions o
 - [DECISIONS.md](DECISIONS.md): decision history
 - [AGENTS.md](AGENTS.md): repository guidance
 
-## Validation
+## Validation after changes
 
-The current build has been exercised in Chromium on desktop and at a 390 px mobile viewport: plan selection by mouse/keyboard, drawing tabs and framing pile count, single-tread profile, review persistence and export, source downloads, sharing controls and exclusion of private review notes from website downloads. Self-contained downloaded HTML is also tested with networking disabled. Direct `file://` navigation is blocked by this cloud browser's administrator policy; offline testing loads the HTML content into the browser instead.
+Run `npm run build` and check both HTML variants in a browser on desktop and mobile. Exercise plan selection by mouse/keyboard, drawing tabs, the single-tread profile, the seven build phases, the six in-person discussion topics, source downloads in the fuller bundle and the share controls. Confirm that the public variant contains no embedded working notes, and that review forms, feedback exports and reviewer-note storage are absent.
 
-This validates website behaviour, not structural design, compliance or fresh-host deployment. No current NZ structural or regulatory requirement has been independently verified by this website work.
+These checks validate website behaviour, not structural design or compliance. No current NZ structural or regulatory requirement has been independently verified by this website work.

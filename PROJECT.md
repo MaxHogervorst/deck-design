@@ -15,7 +15,7 @@
 | Access | **One intermediate tread, 400 mm total projection**, confirmed in this pass; total outward outline 3000 mm. About 500 mm drop is measured; full 6600 mm width and selected 250 mm tread surface level are confirmed; safe vertical detail and supports remain unverified |
 | Shopping | Auckland, ideally Bunnings or Mitre 10; builder has Mitre 10 trade account |
 | User goal | DIY construction, safe and straightforward, low waste/cost, with detailed diagrams and shopping list |
-| Preferred outputs | Markdown working notes plus the requested shareable review website |
+| Preferred outputs | Markdown working notes plus a website with an owner build guide and an in-person builder design brief |
 
 ## The site/house interface
 - Keep wall cladding, flashings, vents and any drainage path unobstructed.
@@ -55,3 +55,12 @@ Originally considered 3×2.5 m at 600–1000 mm, later changed to 6.6×2.5 m and
 ### Confirmed website choices
 
 The owner selected a **full-width 6600×400 mm tread**, with its surface halfway down at **250 mm above garden**, and **38 mm-thick pine**. The intended horizontal area is 2.64 m² for the tread, or **21.573 m²** main + rebuilt + tread. The selected levels do not establish access compliance. Board width, exact product, finish, stock lengths and all structural/access checks remain open.
+
+## Website use — confirmed by user
+
+The website serves two audiences:
+
+1. **Owner:** a practical build guide covering seven phases, from design/pre-work and set-out through footings, framing, decking, the one full-width tread and completion. The applicable hold points remain visible before the affected construction steps.
+2. **Builder:** a readable design brief with drawings, dimensions, material assumptions and six discussion topics for an **in-person review with the owner**.
+
+The website does not collect or manage the builder's review. Online review forms, assessments, feedback downloads and reviewer-note storage are outside this workflow. The owner and builder discuss the design together and bring agreed changes back into the project record.
