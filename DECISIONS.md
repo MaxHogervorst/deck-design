@@ -25,7 +25,7 @@
 | 2026-11-03 | Transfer state to **Codex** with `AGENTS.md`; Markdown files only | Confirmed |
 | 2026-11-03 resolution | Check main area 17.16 m² and diagonal 7093.66 mm; distinguish 1900 mm bearer centres from 1810 mm clear gap for 90 mm bearers | Arithmetic checked; spans not approved |
 | 2026-11-03 resolution | Rear bearer at Y=350 creates a joist/rim junction within the main deck for the rebuilt 900 mm strip; explicit framing detail required | HOLD POINT |
-| 2026-11-03 resolution | Conditional main-only layout: 16 joist lines at 437 mm centres and 19 decking rows with balanced edge rips | PROVISIONAL; actual product/junction/overhang/support verification pending |
+| 2026-11-03 resolution | Conditional main-only layout: 16 joist lines at 437 mm centres and 19 decking rows with balanced edge rips | Historical illustration: joist grid superseded by the rebuilt-strip-aligned grid below; board scenarios remain provisional |
 | 2026-11-03 resolution | Three rises and two 400 mm goings imply 800 mm stair run / approximately 3400 mm overall projection; former 3000 mm outline is not a resolved stair | Arithmetic checked; user run/width decision pending |
 | 2026-11-03 resolution | Primary MiTek/MBIE/Council reads blocked by proxy CONNECT 403; seven necessary source domains saved to environment draft | Access not restored or sources verified; review/save/publication pending |
 | 2026-11-03 resolution | Record missing rebuilt-depth, retained-support and finished-ground/stair measurements in SITE_MEASUREMENTS.md | HOLD POINT; no new survey values assumed |
@@ -43,6 +43,9 @@
 | 2026-11-03 environment | User reports environment publication; prior source-access configuration state is historical | Do not reapply or publish previous environment changes |
 | 2026-11-03 website purpose | Website serves as build steps for the owner and a design brief for an in-person discussion with the builder | CONFIRMED BY USER |
 | 2026-11-03 review workflow | Builder review happens with the owner in person; remove online review forms, assessments, feedback exports and reviewer-note storage | CONFIRMED BY USER; drawings and discussion questions remain useful |
+| 2026-11-03 framing illustration | Show 16 main joists: centres 22.5/450/877.5 mm, then 13 bays of 5700/13 ≈ 438.46 mm to centre 6577.5; first two bays 427.5 mm | PROVISIONAL illustration, supersedes uniform 437 mm grid; no structural approval |
+| 2026-11-03 framing illustration | J01–J03 fit the 900 mm rebuilt strip and have dashed continuation candidates towards retained bearer; three longer candidates replace three short main members within 16 total | PROVISIONAL; continuity, bearing, support reactions, fixing and cuts remain HOLD POINTS |
+| 2026-11-03 website format | User requests clear joist drawings and a concise materials table, build steps and builder checks, without promotional copy or decorative material cards | CONFIRMED BY USER presentation preference |
 
 
 ## Next action

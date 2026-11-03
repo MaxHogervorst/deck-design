@@ -3,111 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#254d3b">
-  <meta name="description" content="Auckland deck build guide and builder discussion brief: dimensions, interactive drawings, materials and the construction sequence.">
-  <title>Auckland Deck — Build Guide &amp; Builder Brief</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23254d3b'/%3E%3Cpath d='M16 16h32v32H16zM16 24h32M16 32h32M16 40h32M24 16v32M40 16v32' fill='none' stroke='%23f2ebdc' stroke-width='2'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#244c3b">
+  <meta name="description" content="Auckland deck: dimensioned framing and joist layout, materials table, build sequence and items to confirm with the builder.">
+  <title>Auckland Deck — Plans, Materials &amp; Build Steps</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23244c3b'/%3E%3Cpath d='M16 16h32v32H16zM24 16v32M40 16v32M16 28h32M16 40h32' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
   <style>
-:root{--ink:#263e32;--muted:#6c746b;--green:#254d3b;--green-dark:#193b2b;--cream:#f8f7f2;--line:#dfE2d7;--paper:#fffefa;--sand:#ece6d8;--amber:#8e6133;--serif:Georgia,'Times New Roman',serif;--sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;color:var(--ink);background:var(--cream);font-family:var(--sans);font-size:15px;line-height:1.65}button,input,textarea,select{font:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}button{cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid #9b753c;outline-offset:4px}button:disabled{opacity:.5;cursor:not-allowed}h1,h2,h3,p{margin:0}h2{font:normal 44px/1.17 var(--serif);letter-spacing:-1.5px}h3{line-height:1.3}p{color:var(--muted)}.page-width{max-width:1280px;width:calc(100% - 112px);margin-inline:auto}.site-header{height:90px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);padding:0 56px;background:var(--cream)}.brand{display:inline-flex;align-items:center;gap:13px;font-size:14px;letter-spacing:1.5px;font-weight:750;text-decoration:none;white-space:nowrap}.brand-light{color:var(--muted);font-weight:400}.brand-mark{display:flex;width:30px;height:30px;gap:4px;border:1px solid var(--green);padding:4px;transform:rotate(-4deg)}.brand-mark i{flex:1;background:var(--green)}.site-header nav{display:flex;gap:34px;font-size:13px}.site-header nav a{text-decoration:none}.site-header nav a:hover{color:#7d653d}.button{border:1px solid transparent;min-height:46px;padding:12px 21px;display:inline-flex;align-items:center;justify-content:center;gap:23px;line-height:1.4;font-size:13px;font-weight:600;text-decoration:none;border-radius:4px;transition:background .15s,transform .15s}.button:hover{transform:translateY(-1px)}.button-primary{background:var(--green);color:#fffef8}.button-primary:hover{background:var(--green-dark)}.button-outline{background:transparent;border-color:#bec8bb;color:var(--green)}.button-outline:hover{background:#ebeee5}.button-small{min-height:38px;padding:9px 15px;gap:9px}.eyebrow{display:flex;gap:12px;align-items:center;font-size:10px;letter-spacing:2px;line-height:1.5;font-weight:650}.little-line{height:1px;width:26px;background:var(--green)}.hero{padding-top:76px;padding-bottom:65px;display:grid;grid-template-columns:1.5fr 1fr;gap:80px;align-items:center}.hero h1{font:normal clamp(58px,5.5vw,81px)/1.09 var(--serif);letter-spacing:-3.5px;margin-top:26px}.hero h1 em{color:#597454;font-weight:normal}.hero-description{font-size:15px;max-width:485px;margin-top:25px;line-height:1.8}.hero-actions{display:flex;align-items:center;gap:24px;margin-top:30px}.status{font-size:11px;color:#796340;display:inline-flex;gap:7px;align-items:center;white-space:nowrap}.status-dot{width:6px;height:6px;background:#b58b4a;border-radius:50%}.brief-card{background:#e9eddf;padding:28px 31px 0;border:1px solid #e0e5d5;border-radius:4px;position:relative;overflow:hidden}.brief-card:after{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 27px,#314a2705 27px,#314a2705 28px)}.brief-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.revision{font-size:9px;letter-spacing:1px;border:1px solid #bdc7b5;border-radius:3px;padding:3px 8px}.brief-number{font:normal 61px/1.3 var(--serif);letter-spacing:-2px;margin-top:27px}.brief-number>span:first-child{font-size:36px;color:#829379;margin:0 4px}.brief-number .brief-unit{font-size:23px;margin-left:8px;letter-spacing:0}.brief-card>p{font-size:12px;line-height:1.75;margin-top:4px}.brief-divider{height:1px;background:#cfd6c4;margin:25px 0 20px}.brief-list{padding:0;margin:0;list-style:none;font-size:12px;display:grid;gap:11px}.brief-list li{display:flex;align-items:center;gap:12px}.brief-list li>span{width:20px;font-size:19px;color:#5b7351;line-height:1}.brief-footer{display:flex;justify-content:space-between;border-top:1px solid #cfd6c4;margin-top:28px;padding:15px 0;font-size:8px;letter-spacing:1px;color:#68745d}.metrics{display:grid;grid-template-columns:repeat(4,1fr);padding-block:29px 31px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.metrics>div{display:flex;flex-direction:column;padding-left:31px;border-left:1px solid var(--line)}.metrics>div:first-child{padding-left:0;border-left:0}.metric-label{font-size:9px;letter-spacing:1.5px;color:#70796c}.metric-value{font:normal 34px/1.6 var(--serif);letter-spacing:-1px}.metric-value small{font:normal 16px var(--sans);color:#7c8675;letter-spacing:0}.metric-detail{font-size:11px;color:#737b70}.design-section,.decisions-section{padding-block:80px}.section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:36px;margin-bottom:32px}.section-number{color:#78806d;margin-bottom:14px}.section-heading>p{max-width:330px;font-size:12px;line-height:1.8;padding-bottom:3px}.plan-workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:start}.drawing-card{background:var(--paper);border:1px solid var(--line);border-radius:5px;overflow:hidden}.drawing-toolbar{padding:14px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:12px}.view-tabs{display:flex;padding:3px;background:#eff1e9;border-radius:4px;gap:2px}.view-tabs button{border:0;border-radius:3px;background:transparent;font-size:11px;padding:8px 13px;color:#6b7567;line-height:1.3}.view-tabs button[aria-selected=true]{background:var(--paper);box-shadow:0 1px 4px #14280e13;color:var(--green);font-weight:650}.drawing-scale{font-size:8px;letter-spacing:1px;color:#7f8878;white-space:nowrap}#drawing-panel{background-color:#fbfcf7;background-image:linear-gradient(#dee4d633 1px,transparent 1px),linear-gradient(90deg,#dee4d633 1px,transparent 1px);background-size:24px 24px;padding:10px 10px 0;overflow:auto}#design-drawing{display:block;width:100%;height:auto;min-width:480px}#design-drawing [data-select]{cursor:pointer}.drawing-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:16px 20px;border-top:1px solid var(--line)}.legend{display:flex;gap:15px;flex-wrap:wrap}.legend>span{display:inline-flex;align-items:center;gap:6px;font-size:9px;color:#6d7966}.legend i{width:10px;height:10px;border-radius:2px;display:inline-block}.legend-main{background:#dcc9a8}.legend-rebuilt{background:#a5b492}.legend-tread{background:#ece4d1;border:1px dashed #a28150}.text-button{border:0;padding:0;background:transparent;color:var(--green);font-size:11px;text-decoration:underline;text-decoration-color:#aab9a0;text-underline-offset:4px;line-height:1.6}.text-button:hover{color:#9a6e30}.drawing-note{padding:0 20px 15px;font-size:10px;line-height:1.6}.detail-card{background:#eef0e7;border:1px solid #e1e5d7;padding:25px 24px;border-radius:5px;min-height:420px}.detail-kicker{display:flex;align-items:center;justify-content:space-between;gap:5px;margin-bottom:22px;font-size:9px;letter-spacing:1px;color:#7b8670}.detail-icon{width:31px;height:31px;display:grid;place-items:center;border:1px solid #bdc7b2;font-size:17px;border-radius:50%;color:#638057}.detail-card h3{font:normal 30px/1.2 var(--serif);letter-spacing:-.7px;margin-bottom:12px}.badge{display:inline-flex;padding:4px 7px;font-size:8px;font-weight:500;border-radius:3px;white-space:nowrap;line-height:1.4;letter-spacing:.2px}.badge-green{background:#e0e8d8;color:#4b6847;border:1px solid #cad8bf}.badge-sand{background:#f0e8da;color:#896335;border:1px solid #e5d7be}.detail-values{margin:24px 0 19px;padding:0}.detail-values>div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #d5ddcb;padding-block:11px;font-size:11px}.detail-values dt{color:#6a7861}.detail-values dd{margin:0;text-align:right;font-weight:600;max-width:60%}.detail-description{font-size:12px;line-height:1.8}.detail-footnote{margin-top:18px;font-size:10px;line-height:1.7;border-top:1px solid #d5ddcb;padding-top:16px}.detail-discussion-link{display:inline-block;margin-top:20px;font-size:11px;text-decoration:underline;text-underline-offset:4px}.concept-note{margin-top:20px;border:1px solid #e2dfd1;background:#f2efe5;border-radius:4px;display:flex;align-items:center;gap:15px;padding:18px 21px}.note-symbol{flex-shrink:0;border:1px solid #a49b7f;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;color:#887c59;font-size:12px;font-family:var(--serif)}.concept-note p{font-size:11px;flex:1;line-height:1.8;color:#7a755f}.concept-note strong{font-weight:600;color:#5c604d}.concept-note a{font-size:10px;white-space:nowrap;text-decoration:none;color:#6c714e}.materials-section{background:#efefe6;border-block:1px solid #e2e4d7;padding-block:68px}.material-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.material-card{border:1px solid #dce0d1;border-radius:4px;background:#f8f8f1;padding:21px 20px;position:relative;overflow:hidden}.material-index{font-size:9px;color:#9b9d89;position:absolute;top:16px;right:17px}.timber-swatch{height:78px;width:100%;margin:20px 0 26px;position:relative;filter:drop-shadow(4px 5px 1px #87714912)}.timber-swatch:before,.timber-swatch:after{content:'';position:absolute;background:repeating-linear-gradient(0deg,#c0a174 0,#c0a174 2px,#cfb184 3px,#cfb184 7px,#c5a476 9px,#c8a97c 12px);border:1px solid #b99563}.swatch-decking:before{height:45px;width:90%;top:20px;transform:skewY(-7deg);box-shadow:0 7px #9f7d4f}.swatch-decking:after{height:4px;width:90%;top:38px;transform:skewY(-7deg);background:#d6bd94;opacity:.6;border:0}.swatch-bearer:before,.swatch-bearer:after{height:40px;width:74%;top:20px;transform:skewY(-7deg);box-shadow:0 6px #96784e}.swatch-bearer:after{left:23%;top:29px;width:65%;background-color:#b89a6c}.swatch-joist:before{height:43px;width:89%;top:23px;transform:skewY(-7deg);box-shadow:0 7px #9f7d4f}.swatch-pile:before{width:38px;height:60px;left:33%;top:0;transform:skewY(-10deg);box-shadow:17px 7px #b59361}.swatch-pile:after{width:39px;height:14px;left:33%;top:-3px;transform:skewY(-10deg);background:repeating-radial-gradient(ellipse at center,#d3ba90 0,#d3ba90 3px,#baa072 4px,#d3ba90 5px)}.material-type{font-size:8px;letter-spacing:1.4px;color:#8a8b75}.material-card h3{font:normal 23px var(--serif);margin:8px 0 12px;letter-spacing:-.4px}.material-size{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:10px;color:#4f6247;margin-bottom:13px}.material-card>p:last-child{font-size:11px;line-height:1.85}.quantity-details{margin-top:20px;border-top:1px solid #d9ddcd;border-bottom:1px solid #d9ddcd}.quantity-details summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;font-size:12px}.quantity-details summary::-webkit-details-marker{display:none}.quantity-details summary>span:first-child{display:flex;align-items:center;gap:12px}.small-circle{width:21px;height:21px;border:1px solid #b6bfa6;display:grid;place-items:center;border-radius:50%;font-size:16px;transition:transform .2s}.quantity-details[open] .small-circle{transform:rotate(45deg)}.muted{color:var(--muted);font-size:10px}.quantity-content{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:6px 0 24px 33px}.quantity-content h3{font-size:12px;margin-bottom:8px}.quantity-content p{font-size:12px;line-height:1.8}.decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}.decision-heading{padding-bottom:22px;border-bottom:1px solid var(--line)}.decision-heading h3{font:normal 26px var(--serif);letter-spacing:-.6px;margin-top:13px}.decision-column ul{list-style:none;padding:0;margin:0}.decision-column li{display:flex;gap:18px;padding:21px 0;border-bottom:1px solid var(--line)}.decision-column li>span{font-size:9px;color:#879475;padding-top:4px;min-width:15px}.decision-column li strong{font-size:12px;font-weight:600}.decision-column li p{font-size:11px;margin-top:4px;line-height:1.75}.open-column li>span{font-size:15px;color:#a18754;padding-top:0}.builder-discussion-section{background:#e9ede1;padding-block:76px;border-block:1px solid #dbe1d1}.builder-layout{display:grid;grid-template-columns:310px minmax(0,1fr);gap:80px}.builder-intro{position:sticky;top:25px;align-self:start}.builder-intro h2{font-size:44px;margin-bottom:22px}.builder-intro>p{font-size:12px;line-height:1.9}.review-progress{margin:27px 0}.review-progress>div:first-child{font-size:11px;color:#768069}.review-progress strong{color:var(--green)}.progress-track{height:3px;background:#d3dcc7;margin-top:11px;border-radius:3px;overflow:hidden}.progress-track span{height:100%;background:var(--green);display:block;width:0;transition:width .2s}.field-label{font-size:11px;display:block;margin-bottom:8px}.field-label>span{color:#808875;font-size:10px}input,textarea,select{border:1px solid #cdd5c1;border-radius:4px;background:#f8f9f2;color:var(--ink);padding:10px 12px;font-size:12px;width:100%}input{height:41px}textarea{resize:vertical;min-height:93px;line-height:1.8}textarea::placeholder,input::placeholder{color:#949c8c}.builder-intro .privacy-note{font-size:10px;margin-top:13px;line-height:1.75}.review-actions{display:flex;align-items:center;gap:18px;margin-top:23px;flex-wrap:wrap}.review-actions .button{font-size:12px;gap:17px;padding-inline:15px}.clear-button{font-size:10px;margin-top:19px;color:#78826a}.discussion-topics{display:grid;gap:12px}.discussion-topic{border:1px solid #d6ddcb;background:#f8f9f2;border-radius:5px;overflow:hidden}.discussion-topic summary{list-style:none;display:flex;align-items:center;gap:14px;padding:20px 21px;cursor:pointer}.discussion-topic summary::-webkit-details-marker{display:none}.topic-number{font-size:10px;color:#929d84;align-self:start;padding-top:1px}.topic-summary{flex:1;min-width:0}.topic-summary h3{font-size:13px;font-weight:600}.topic-summary p{font-size:10px;line-height:1.7;margin-top:4px}.topic-chevron{font-size:19px;line-height:1;color:#849471;transform:rotate(0);transition:transform .15s}.discussion-topic[open] .topic-chevron{transform:rotate(45deg)}.topic-status{font-size:8px;letter-spacing:.5px;white-space:nowrap;color:#8f927c;background:#eeeee4;border-radius:3px;padding:3px 6px}.topic-status.is-reviewed{color:#4b6847;background:#e0e8d8}.topic-body{padding:0 21px 22px 45px}.topic-question{padding-top:16px;border-top:1px solid #e0e5d6;font-size:11px;line-height:1.8;margin-bottom:18px}.topic-question strong{color:#5a6d4d}.topic-body select{margin-bottom:14px}.topic-body label{display:block;font-size:10px;margin-bottom:7px;color:#5a6b50}.topic-body textarea{background:#fffefa}.sources-section{padding-block:74px;display:grid;grid-template-columns:1fr 1fr;gap:80px}.sources-intro h2{font-size:36px;max-width:400px}.sources-intro p{font-size:12px;max-width:420px;margin-top:21px;line-height:1.85}.source-list{border-top:1px solid var(--line)}.source-button{display:flex;align-items:center;gap:14px;width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;text-align:left;padding:13px 2px;color:var(--green)}.source-button>span:first-child{font-size:14px;color:#8a987b}.source-button>span:nth-child(2){flex:1;font-size:11px}.source-button small{display:block;font-size:9px;font-weight:400;color:#8c9484;line-height:1.8}.source-button:hover{background:#eef0e7}.site-footer{padding-block:26px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:15px}.site-footer .brand{font-size:10px;gap:0}.site-footer p,.site-footer>span{font-size:9px;color:#8b9282}.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);z-index:20;max-width:calc(100% - 40px);border-radius:5px;background:var(--green-dark);color:#fffef8;padding:12px 21px;font-size:12px;box-shadow:0 4px 25px #20321e20;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}.toast.visible{opacity:1;transform:translate(-50%,0)}dialog{width:min(470px,calc(100% - 32px));border:1px solid #d7ddcd;border-radius:8px;padding:40px;background:var(--paper);color:var(--ink);box-shadow:0 20px 100px #1b302633}dialog::backdrop{background:#173b2b66;backdrop-filter:blur(3px)}dialog h2{font-size:37px;margin:20px 0 18px}dialog>p{font-size:12px;line-height:1.85;margin-bottom:22px}dialog>.button{width:100%}.dialog-close{position:absolute;right:15px;top:10px;font-size:25px;border:0;background:transparent;color:#73846b;line-height:1.5}.share-divider{margin:27px 0 16px;border-top:1px solid var(--line);text-align:center}.share-divider>span{display:inline-block;position:relative;top:-9px;background:var(--paper);padding-inline:10px;font-size:8px;letter-spacing:1px;color:#8a967e}dialog .small-copy{font-size:10px;line-height:1.8;margin-bottom:14px}dialog>p:last-child{margin:17px 0 0}.skip-link{position:absolute;top:8px;left:8px;z-index:100;transform:translateY(-200%);background:var(--green);color:white;padding:10px}.skip-link:focus{transform:none}.noscript-note{padding:20px;background:#f0e8da;text-align:center;font-size:12px}
-@media(min-width:1500px){.hero{padding-top:90px;gap:150px}.brief-card{max-width:415px;margin-left:auto;width:100%}}
-@media(max-width:1100px){.page-width{width:calc(100% - 64px)}.site-header{padding-inline:32px}.hero{gap:40px;padding-top:58px}.hero h1{font-size:66px}.hero-actions{gap:14px}.hero-actions .status{font-size:10px}.brief-card{padding-inline:24px}.brief-number{font-size:54px}.plan-workspace{grid-template-columns:minmax(0,1fr) 260px;gap:14px}.detail-card{padding:22px 20px}.detail-card h3{font-size:27px}.drawing-toolbar{padding-inline:13px}.drawing-scale{font-size:7px}.view-tabs button{padding:8px 10px}.material-grid{gap:12px}.material-card{padding-inline:16px}.material-size{font-size:9px}.builder-layout{gap:42px;grid-template-columns:280px minmax(0,1fr)}.sources-section{gap:45px}.concept-note a{max-width:110px;white-space:normal}.site-header nav{gap:24px}}
-@media(max-width:850px){.hero{grid-template-columns:1.3fr 1fr;gap:28px}.hero h1{font-size:58px;letter-spacing:-2.6px}.hero-description{font-size:13px}.hero-actions{align-items:flex-start;flex-direction:column}.brief-card{padding:23px 21px 0}.brief-number{font-size:45px;letter-spacing:-1px}.brief-number>span:first-child{font-size:29px}.brief-list{font-size:11px}.brief-card>p{font-size:11px}.metrics>div{padding-left:20px}.metric-value{font-size:29px}.metric-label{font-size:8px}.metric-detail{font-size:10px}.section-heading h2{font-size:38px}.section-heading>p{max-width:260px;font-size:11px}.plan-workspace{grid-template-columns:1fr}.detail-card{min-height:0;display:grid;grid-template-columns:1fr 1fr;column-gap:30px}.detail-kicker{grid-column:1/-1;margin-bottom:12px}.detail-card h3{grid-column:1}.detail-card>.badge{justify-self:start;grid-column:1}.detail-values{grid-column:2;grid-row:2/5;margin:0}.detail-description{grid-column:1;margin-top:15px}.detail-footnote{grid-column:1/-1}.detail-discussion-link{grid-column:1/-1;margin-top:8px}.material-grid{grid-template-columns:repeat(2,1fr);gap:18px}.material-card{padding-inline:23px}.material-card>p:last-child{font-size:12px}.timber-swatch{max-width:185px}.builder-layout{grid-template-columns:1fr;gap:30px}.builder-intro{position:static;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}.builder-intro>.eyebrow,.builder-intro>h2,.builder-intro>p:not(.privacy-note){grid-column:1}.builder-intro>h2{grid-row:2/4;margin-bottom:14px}.review-progress{grid-column:2;grid-row:1/3;margin:0 0 18px}.builder-intro>.field-label{grid-column:2;grid-row:3}.builder-intro>input{grid-column:2;grid-row:4}.builder-intro>.privacy-note{grid-column:2;grid-row:5;margin-top:11px}.builder-intro>p:not(.privacy-note){grid-row:4/6}.review-actions{grid-column:1/-1;margin-top:22px}.clear-button{grid-column:1/-1;justify-self:start}.sources-section{grid-template-columns:1fr 1fr;gap:28px}.sources-intro h2{font-size:31px}.decision-grid{gap:28px}.decision-heading h3{font-size:24px}.site-header .brand{font-size:12px;gap:9px}.site-header nav{font-size:12px;gap:18px}.site-header{gap:12px}.brief-footer{font-size:7px}}
-@media(max-width:620px){.page-width{width:calc(100% - 36px)}.site-header{height:74px;padding-inline:18px}.site-header nav{display:none}.brand-mark{width:25px;height:25px;padding:3px;gap:3px}.site-header .brand{font-size:10px;letter-spacing:1px}.button-small{font-size:10px;min-height:34px;padding:8px 10px}.hero{grid-template-columns:1fr;padding:44px 0 34px;gap:32px}.hero h1{font-size:61px;letter-spacing:-2.9px;margin-top:20px}.eyebrow{font-size:9px;letter-spacing:1.7px}.hero-description{font-size:13px;max-width:420px;margin-top:21px}.hero-actions{flex-direction:row;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px}.hero-actions .button{font-size:12px;padding-inline:16px}.hero-actions .status{font-size:10px}.brief-card{padding:23px 24px 0}.brief-number{font-size:57px;margin-top:15px}.brief-card>p{font-size:12px}.brief-divider{margin:17px 0}.brief-list{font-size:12px;gap:9px}.brief-footer{margin-top:23px;font-size:8px}.metrics{grid-template-columns:1fr 1fr;padding:0;row-gap:0}.metrics>div{padding:20px 15px!important;border-bottom:1px solid var(--line)}.metrics>div:nth-child(odd){border-left:0}.metrics>div:nth-child(n+3){border-bottom:0}.metric-value{font-size:31px}.metric-detail{font-size:10px}.metric-label{font-size:8px;letter-spacing:1px}.design-section,.decisions-section{padding-block:48px}.section-heading{display:block;margin-bottom:23px}.section-heading h2{font-size:35px;letter-spacing:-1px}.section-heading>p{max-width:100%;margin-top:14px;font-size:12px}.section-number{margin-bottom:12px}.drawing-toolbar{padding:11px;flex-wrap:wrap}.view-tabs button{font-size:10px;padding:8px 10px}.drawing-scale{font-size:7px;letter-spacing:.6px}.drawing-footer{padding:13px 12px;align-items:flex-start}.legend{gap:9px}.legend>span{font-size:8px}.drawing-footer .text-button{font-size:9px;max-width:95px}.drawing-note{padding:0 12px 14px;font-size:10px}#drawing-panel{padding-inline:0}#design-drawing{min-width:580px}.detail-card{padding:20px;grid-template-columns:1fr;display:block}.detail-kicker{margin-bottom:14px}.detail-card h3{font-size:29px}.detail-values{margin:16px 0}.detail-values>div{font-size:12px}.detail-description{font-size:12px}.detail-footnote{font-size:11px;margin-top:14px}.detail-discussion-link{font-size:12px;margin-top:16px}.concept-note{align-items:flex-start;flex-wrap:wrap;padding:17px 15px;gap:12px}.concept-note p{font-size:11px;min-width:210px}.concept-note a{max-width:none;margin-left:31px;font-size:11px}.materials-section{padding-block:46px}.material-grid{gap:12px}.material-card{padding:17px 13px}.material-card h3{font-size:21px}.material-card>p:last-child{font-size:11px}.material-size{font-size:10px;gap:7px}.material-card .badge{font-size:7px}.timber-swatch{margin-top:20px;margin-bottom:20px;height:62px}.swatch-decking:before{height:35px}.swatch-decking:after{top:32px}.swatch-bearer:before,.swatch-bearer:after{height:30px}.swatch-joist:before{height:34px}.swatch-pile:before{height:51px;width:32px}.swatch-pile:after{width:33px;height:12px}.quantity-details summary{font-size:11px;gap:10px}.quantity-details summary>.muted{display:none}.quantity-content{grid-template-columns:1fr;padding-left:0;gap:20px}.quantity-content p{font-size:11px}.decision-grid{grid-template-columns:1fr;gap:29px}.decision-heading h3{font-size:25px}.decision-column li strong{font-size:13px}.decision-column li p{font-size:12px}.decision-column li{padding:17px 0}.builder-discussion-section{padding-block:46px}.builder-intro{display:block}.builder-intro h2{font-size:38px}.builder-intro h2 br{display:none}.builder-intro>p{font-size:12px}.review-progress{margin:22px 0}.review-actions{gap:22px}.discussion-topic summary{padding:17px 14px;gap:10px}.topic-status{font-size:7px;padding:3px 5px}.topic-summary h3{font-size:12px}.topic-summary p{font-size:10px}.topic-body{padding:0 14px 19px 35px}.topic-question{font-size:11px}.topic-body textarea{font-size:12px}.sources-section{padding-block:45px;grid-template-columns:1fr;gap:27px}.sources-intro h2{font-size:33px}.sources-intro p{margin-top:15px}.source-button{padding-block:15px}.source-button>span:nth-child(2){font-size:12px}.site-footer{flex-wrap:wrap;padding-block:24px;gap:10px}.site-footer .brand{width:100%}.site-footer p,.site-footer>span{font-size:8px}.site-footer .brand{font-size:11px}dialog{padding:33px 23px}dialog h2{font-size:32px}html{scroll-padding-top:20px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.button:hover{transform:none}}
-@media print{@page{size:A4;margin:14mm}html{scroll-behavior:auto}body{background:white;color:#1d3528;font-size:10pt}.page-width{width:100%;max-width:none}.site-header{padding:0;height:40px;border-bottom:1px solid #bbb}.site-header nav,.site-header button,.hero-actions,.builder-discussion-section,.sources-section,.drawing-toolbar,.drawing-footer,.concept-note>a,.detail-discussion-link,.toast,dialog,.skip-link,.noscript-note{display:none!important}.hero{padding:25px 0;gap:30px;grid-template-columns:1.4fr 1fr}.hero h1{font-size:38pt}.hero-description{font-size:9pt}.brief-card{padding:15px 15px 0}.brief-number{font-size:35pt}.brief-list{font-size:8pt}.brief-footer{margin-top:15px}.metrics{padding-block:10px}.metric-value{font-size:23pt}.design-section,.decisions-section,.materials-section{padding-block:23px}.section-heading h2{font-size:25pt}.section-heading>p{font-size:8pt}.section-heading{margin-bottom:15px}.plan-workspace{grid-template-columns:1fr 190px;gap:12px}.drawing-card{overflow:visible}#drawing-panel{overflow:visible;padding:0}#design-drawing{min-width:0;width:100%}.detail-card{display:block;padding:13px;min-height:0}.detail-card h3{font-size:19pt}.detail-kicker{font-size:6pt}.detail-description,.detail-values>div{font-size:7pt}.detail-footnote{font-size:6.5pt}.detail-values{margin:10px 0}.detail-values>div{padding:6px 0}.concept-note{padding:10px;margin-top:12px}.concept-note p{font-size:7pt}.material-grid{grid-template-columns:repeat(4,1fr);gap:8px}.material-card{padding:10px}.material-card h3{font-size:14pt}.material-card>p:last-child{font-size:7pt}.material-size{font-size:6pt}.timber-swatch{height:55px;margin:12px 0}.quantity-details{display:none}.decision-grid{grid-template-columns:1fr 1fr;gap:25px}.decision-column li strong{font-size:8pt}.decision-column li p{font-size:7pt}.decision-column li{padding:10px 0}.decision-heading h3{font-size:17pt}.site-footer{padding:12px 0}.badge{font-size:6pt}.drawing-card,.material-card,.decision-column,.metrics{break-inside:avoid}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+:root{--ink:#202b30;--muted:#556168;--green:#244c3b;--line:#d4dbdd;--soft:#f3f6f5;--amber:#805724;--sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}body{margin:0;background:#fff;color:var(--ink);font:14px/1.55 var(--sans)}h1,h2,h3,p{margin:0}a{color:var(--green)}button,input,textarea,select{font:inherit}button{cursor:pointer}a,button{touch-action:manipulation}a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #8a6930;outline-offset:3px}button:disabled{opacity:.5;cursor:not-allowed}.page-width{width:calc(100% - 48px);max-width:1280px;margin-inline:auto}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:24px;min-height:58px;padding:9px max(24px,calc((100% - 1280px)/2));background:#fff;border-bottom:1px solid var(--line)}.brand{font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap}.site-header nav{display:flex;gap:24px;margin-left:auto}.site-header nav a{font-size:12px;text-decoration:none;color:var(--muted)}.site-header nav a:hover{text-decoration:underline}.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:8px 13px;border:1px solid #bcc8c3;border-radius:3px;background:#fff;color:var(--green);font-size:12px;text-decoration:none;font-weight:600}.button:hover{background:#edf2ee}.button-small{min-height:32px;padding:6px 11px;font-size:11px}.button-primary{background:var(--green);color:#fff}.button-primary:hover{background:#1c3c2f}.text-button{padding:0;border:0;background:transparent;color:var(--green);font-size:11px;text-decoration:underline;text-underline-offset:3px}.project-summary{padding:28px 0 22px;border-bottom:1px solid var(--line)}.title-row{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}h1{font-size:27px;line-height:1.2;letter-spacing:-.6px}h2{font-size:19px;line-height:1.3;letter-spacing:-.25px}h3{font-size:14px;line-height:1.4}.badge{display:inline-block;padding:3px 7px;border-radius:3px;font-size:10px;line-height:1.5;white-space:nowrap}.badge-sand{color:#765220;background:#f4ecdd;border:1px solid #e4d6bb}.badge-green{color:#28533b;background:#edf4ee;border:1px solid #cbdcce}.project-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:13px 25px;margin:0}.project-facts>div{display:flex;flex-direction:column;gap:2px}.project-facts dt{font-size:11px;color:var(--muted)}.project-facts dd{margin:0;font-size:13px;font-weight:600}.status-note{font-size:12px;color:#6c542c;background:#faf7ef;border-left:3px solid #b89c62;padding:9px 12px;margin-top:18px}.content-section{padding:25px 0;border-bottom:1px solid var(--line)}.section-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:14px}.section-heading>span{font-size:11px;color:var(--muted)}.section-note{font-size:12px;color:var(--muted);margin-bottom:12px}.plan-workspace{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:16px;align-items:start}.drawing-card{min-width:0;border:1px solid var(--line);border-radius:3px;overflow:hidden}.drawing-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line);background:#f7f9f8}.view-tabs{display:flex;gap:3px}.view-tabs button{font-size:11px;line-height:1.3;min-height:32px;padding:7px 11px;background:transparent;border:1px solid transparent;border-radius:3px;color:var(--muted)}.view-tabs button[aria-selected=true]{background:#fff;color:var(--green);border-color:#b8c8bf;font-weight:650}.drawing-scale{font-size:9px;color:var(--muted);white-space:nowrap}#drawing-panel{overflow:auto;background:#fff}#design-drawing{display:block;width:100%;height:auto;min-width:0}#drawing-panel.is-zoomed #design-drawing{min-width:1180px}.drawing-footer{padding:10px 12px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.legend{display:flex;align-items:center;flex-wrap:wrap;gap:11px}.legend span{display:inline-flex;align-items:center;gap:5px;color:var(--muted);font-size:10px}.legend i{display:inline-block;width:10px;height:10px;border:1px solid #7d8981}.legend-joist{background:#49745d}.legend-bearer{background:#e7bd84}.legend-pile{background:#fff;border:2px solid #805724!important}.legend-main{background:#dfc5a0}.legend-rebuilt{background:#dce7dc}.legend-tread{background:#dfc5a0}.drawing-controls{display:flex;gap:13px;white-space:nowrap}.drawing-note{font-size:11px;color:var(--muted);line-height:1.6;padding:0 12px 11px}.detail-card{border:1px solid var(--line);border-radius:3px;padding:16px;background:#f7f9f8}.detail-kicker{font-size:10px;color:var(--muted);margin-bottom:10px}.detail-card h3{font-size:17px;margin-bottom:9px}.detail-values{margin:14px 0}.detail-values>div{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #dce2df;font-size:11px}.detail-values dt{color:var(--muted)}.detail-values dd{margin:0;text-align:right;font-weight:600;max-width:62%}.detail-description,.detail-footnote{font-size:11px;color:var(--muted);line-height:1.7}.detail-footnote{border-top:1px solid var(--line);margin-top:11px;padding-top:10px}.detail-discussion-link{display:inline-block;margin-top:12px;font-size:11px}.coordinate-details{border:1px solid var(--line);border-radius:3px;margin-top:12px}.coordinate-details>summary{padding:10px 12px;font-size:12px;font-weight:600;cursor:pointer}.coordinate-details .table-note{margin:0;padding:0 12px 12px}.coordinate-details .table-scroll{padding:0 12px 12px}.table-scroll{overflow-x:auto;width:100%}table{border-collapse:collapse;width:100%;font-size:12px;text-align:left}caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top;line-height:1.6}thead th{background:#f0f4f2;font-size:11px;color:#48564e;font-weight:650}tbody th{font-weight:600}.materials-table{min-width:790px}.materials-table th:first-child{width:135px}.materials-table td:nth-child(2){width:220px}.materials-table td:nth-child(3){width:220px}.materials-table td:last-child{color:var(--muted)}.table-note{font-size:11px;line-height:1.7;color:var(--muted);margin-top:10px}#joist-coordinates{font-variant-numeric:tabular-nums;min-width:420px}#joist-coordinates td,#joist-coordinates th{padding:6px 12px}#joist-coordinates tr:nth-child(-n+3) td{background:#faf7ef}.build-phases{display:grid;gap:8px}.build-phase{border:1px solid var(--line);border-radius:3px}.build-phase summary{display:flex;gap:12px;align-items:center;cursor:pointer;padding:11px 14px;list-style:none;background:#f7f9f8}.build-phase summary::-webkit-details-marker{display:none}.phase-number{font-size:11px;color:#64746a;font-variant-numeric:tabular-nums;min-width:20px}.phase-copy{flex:1}.phase-copy h3{font-size:13px;font-weight:650}.phase-copy>span{display:none}.phase-toggle{font-size:17px;color:#65796d;line-height:1;transition:transform .1s}.build-phase[open] .phase-toggle{transform:rotate(45deg)}.phase-body{padding:12px 15px 12px 46px}.phase-body ol{padding-left:18px;margin:0;font-size:12px;line-height:1.8}.phase-body li{padding-left:3px;margin-bottom:5px}.phase-body li::marker{color:#64746a;font-size:11px}.phase-gate{font-size:11px;color:#795b2e;border-left:2px solid #c4aa7d;padding-left:10px;margin-top:10px;line-height:1.6}.builder-table{min-width:670px}.builder-table th:first-child{width:190px}.builder-table td:last-child{width:150px;color:var(--muted);font-size:11px}.discussion-row:target,.discussion-row.is-focused{background:#f8f1df}.discussion-row{scroll-margin-top:80px}.site-footer{padding:18px 0 28px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:10px}.sources-section{padding:20px 0}.source-list{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.source-button{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:10px 12px;text-align:left;color:var(--green);font-size:12px}.source-button>span:nth-child(2){flex:1}.source-button small{display:block;font-size:10px;color:var(--muted)}dialog{width:min(400px,calc(100% - 32px));padding:27px;border:1px solid var(--line);border-radius:5px;color:var(--ink);background:#fff}dialog::backdrop{background:#1d2f2959}dialog h2{font-size:20px;margin-bottom:16px}dialog p{font-size:12px;color:var(--muted);line-height:1.8;margin-bottom:18px}dialog>.button{width:100%;margin-top:8px}.dialog-close{position:absolute;right:9px;top:5px;border:0;background:transparent;font-size:23px;line-height:1.4;color:var(--muted)}.toast{position:fixed;bottom:20px;left:50%;max-width:calc(100% - 32px);z-index:30;transform:translate(-50%,10px);background:var(--green);color:#fff;padding:10px 16px;border-radius:4px;font-size:12px;opacity:0;pointer-events:none;transition:opacity .15s,transform .15s}.toast.visible{opacity:1;transform:translate(-50%,0)}.skip-link{position:absolute;top:8px;left:8px;z-index:50;background:var(--green);color:white;padding:8px 12px;transform:translateY(-200%)}.skip-link:focus{transform:none}.noscript-note{padding:15px 24px;background:#faf7ef}.ui-icon{display:inline-block;width:12px;height:12px;vertical-align:-2px}
+@media(max-width:1000px){.plan-workspace{grid-template-columns:minmax(0,1fr) 230px;gap:12px}.detail-card{padding:13px}.site-header nav{gap:17px}}
+@media(max-width:800px){.plan-workspace{grid-template-columns:1fr}.detail-card{display:grid;grid-template-columns:1fr 1fr;column-gap:24px;align-items:start}.detail-kicker{grid-column:1/-1;margin-bottom:7px}.detail-card h3{grid-column:1}.detail-card>.badge{grid-column:1;justify-self:start}.detail-values{grid-column:2;grid-row:2/5;margin:0}.detail-description{grid-column:1;margin-top:10px}.detail-footnote,.detail-discussion-link{grid-column:1/-1}.project-facts{grid-template-columns:repeat(2,1fr)}.title-row{align-items:flex-start}.title-row .badge{margin-top:3px}h1{font-size:24px}}
+@media(max-width:580px){html{scroll-padding-top:108px}.page-width{width:calc(100% - 28px)}.site-header{padding:10px 14px;gap:12px;flex-wrap:wrap}.site-header .brand{font-size:14px}.site-header>.button{margin-left:auto}.site-header nav{order:3;width:100%;margin-left:0;justify-content:space-between;gap:10px}.site-header nav a{font-size:11px}.project-summary{padding:19px 0 17px}.title-row{flex-direction:column;gap:8px;margin-bottom:15px}h1{font-size:23px}.project-facts{gap:12px}.project-facts dt{font-size:10px}.project-facts dd{font-size:12px}.status-note{font-size:11px;padding:8px 10px;margin-top:14px}.content-section{padding:20px 0}.section-heading{gap:10px;align-items:flex-start;margin-bottom:12px}h2{font-size:17px}.section-heading>span{font-size:10px;text-align:right;max-width:130px}.drawing-toolbar{padding:8px;gap:5px}.view-tabs button{font-size:10px;padding:7px 8px;min-height:32px}.drawing-scale{font-size:8px}.drawing-footer{align-items:flex-start;padding:9px}.legend{gap:7px}.legend span{font-size:9px}.drawing-controls{gap:10px}.drawing-controls .text-button{font-size:10px}.drawing-note{font-size:10px;padding:0 9px 10px}#drawing-panel.is-zoomed #design-drawing{min-width:950px}.detail-card{display:block;padding:13px}.detail-card h3{font-size:16px}.detail-values{margin-top:12px}.detail-values>div{font-size:12px}.detail-footnote,.detail-description{font-size:11px}.detail-discussion-link{font-size:12px}.coordinate-details>summary{font-size:11px}.table-note{font-size:10px}.phase-body{padding:10px 12px 12px 17px}.phase-body ol{font-size:12px}.build-phase summary{padding:10px 12px;gap:9px}.phase-copy h3{font-size:12px}.phase-gate{font-size:10px}.site-footer{font-size:9px;gap:15px;padding-bottom:20px}.source-list{grid-template-columns:1fr}.discussion-row{scroll-margin-top:112px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{@page{size:A4;margin:12mm}body{font-size:9pt;color:#111}.page-width{width:100%;max-width:none}.site-header,.drawing-controls,.print-brief,#print-guide,.toast,dialog,.sources-section,.skip-link,.noscript-note{display:none!important}.project-summary{padding-top:0}.title-row{margin-bottom:12px}h1{font-size:19pt}h2{font-size:14pt}.project-facts{grid-template-columns:repeat(3,1fr)}.project-facts dt{font-size:7pt}.project-facts dd{font-size:8pt}.status-note{font-size:7pt}.content-section{padding:16px 0}.section-heading>span{font-size:7pt}.plan-workspace{grid-template-columns:minmax(0,1fr) 170px;gap:10px}.drawing-toolbar{padding:6px}.view-tabs button{font-size:7pt;padding:4px 6px;min-height:0}.drawing-scale{font-size:6pt}.drawing-footer{padding:6px}.legend span{font-size:6pt}.drawing-note{font-size:6.5pt}.detail-card{display:block;padding:10px}.detail-card h3{font-size:11pt}.detail-kicker{font-size:6pt}.detail-values{margin:9px 0}.detail-values>div{font-size:6.5pt;padding:4px 0}.detail-description,.detail-footnote{font-size:6.5pt}.detail-discussion-link{display:none}.table-scroll{overflow:visible}table,.materials-table,.builder-table,#joist-coordinates{min-width:0;font-size:7.5pt}th,td{padding:6px;line-height:1.5}thead th{font-size:7pt}.table-note{font-size:6.5pt}.materials-table th:first-child{width:auto}.materials-table td:nth-child(2),.materials-table td:nth-child(3){width:auto}.build-phases{display:block}.build-phase{break-inside:avoid;margin-bottom:8px}.build-phase summary{padding:7px 10px}.phase-copy h3{font-size:9pt}.phase-toggle{display:none}.phase-body{padding:8px 10px 9px 34px}.phase-body ol{font-size:8pt;line-height:1.6}.phase-body li{margin-bottom:3px}.phase-gate{font-size:7pt;margin-top:6px}.builder-table td:last-child{font-size:7pt;width:85px}.site-footer{font-size:6.5pt;padding-top:12px}.drawing-card{break-inside:avoid}#drawing-panel{overflow:visible}#drawing-panel.is-zoomed #design-drawing{min-width:0}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 
-.drawing-controls{display:flex;align-items:center;gap:15px;flex-wrap:wrap;justify-content:flex-end}.drawing-controls button{white-space:nowrap}#drawing-panel.is-zoomed #design-drawing{min-width:1050px}@media(max-width:620px){#design-drawing{min-width:0}.drawing-controls{gap:7px;flex-direction:column;align-items:flex-end}#drawing-panel.is-zoomed #design-drawing{min-width:760px}}
-@media print{.drawing-controls{display:none!important}#drawing-panel.is-zoomed #design-drawing{min-width:0}}
-
-/* Owner build sequence and in-person builder brief. */
-.purpose-links{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-top:26px}.purpose-card{display:grid;gap:8px;background:#f0f2e9;border:1px solid #dfe4d5;padding:21px 24px;border-radius:4px;text-decoration:none;transition:background .15s,border-color .15s}.purpose-card:hover{background:#e8ecdf;border-color:#acbca3}.purpose-number{font-size:8px;font-weight:600;letter-spacing:1.5px;color:#7a866f}.purpose-title{display:flex;justify-content:space-between;gap:20px;font:normal 23px/1.3 var(--serif);letter-spacing:-.4px}.purpose-title>span{font:normal 18px var(--sans);color:#7d9270}.purpose-card>span:last-child{font-size:11px;color:#748169;line-height:1.8}.hero-builder-link{font-size:12px}.build-guide-section{padding-block:74px;background:#f1f0e7;border-block:1px solid #dfe3d5}.build-guide-layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:66px;align-items:start}.build-guide-intro{position:sticky;top:24px}.build-guide-intro h3{font:normal 28px/1.25 var(--serif);letter-spacing:-.7px;margin:19px 0 18px}.build-guide-intro>p{font-size:12px;line-height:1.9}.build-guide-intro>a{display:inline-block;margin-top:19px;font-size:12px}.tools-note{padding-top:24px;margin-top:26px;border-top:1px solid #d6ddcc}.tools-note .eyebrow{font-size:8px;color:#7e8c71}.tools-note p{font-size:11px;line-height:1.9;margin-top:10px}.build-guide-intro .build-scope-note{font-size:10px;margin-top:20px;color:#8b8064}.build-phases{display:grid;gap:12px}.build-phase{border:1px solid #d9dfce;border-radius:5px;background:#fffef8;overflow:hidden}.build-phase summary{list-style:none;display:flex;gap:17px;padding:21px 23px;align-items:flex-start;cursor:pointer}.build-phase summary::-webkit-details-marker{display:none}.phase-number{height:30px;min-width:30px;display:grid;place-items:center;font-size:10px;line-height:1;border:1px solid #ced9c1;border-radius:50%;color:#6e825d;background:#f2f5ea}.phase-copy{flex:1;min-width:0}.phase-copy h3{font-size:13px;font-weight:600;line-height:1.5}.phase-copy>span{font-size:10px;line-height:1.8;color:#7e8773;display:block;margin-top:3px}.phase-toggle{font-size:21px;line-height:1.4;color:#819472;transition:transform .15s}.build-phase[open] .phase-toggle{transform:rotate(45deg)}.phase-body{padding:0 23px 22px 70px}.phase-body ol{font-size:12px;color:#69745e;line-height:1.9;padding:16px 0 0 20px;margin:0;border-top:1px solid #e1e6d6}.phase-body li{padding:0 0 12px 5px}.phase-body li::marker{font-size:10px;color:#7a8e68;font-weight:600}.phase-gate{font-size:10px;line-height:1.8;background:#f1eee3;border-left:2px solid #b6a57b;padding:11px 13px;color:#827454;margin-top:5px}.phase-gate strong{font-weight:650;color:#6d654d}.builder-summary{padding-block:76px 50px}.builder-discussion-section{padding-block:50px 70px}.builder-intro .print-brief{margin-top:24px;font-size:11px}.builder-intro .meeting-note{margin-top:17px;font-size:10px;line-height:1.8}.discussion-outcome{font-size:11px;line-height:1.8;color:#6c7c5c}.discussion-outcome strong{color:#4e6844;font-weight:600}.discussion-topic .topic-question{margin-bottom:14px}.builder-intro{display:block}.builder-layout{align-items:start}.builder-intro>p{font-size:12px;line-height:1.9}
-@media(max-width:1100px){.build-guide-layout{grid-template-columns:250px minmax(0,1fr);gap:37px}}
-@media(max-width:850px){.build-guide-layout{grid-template-columns:1fr;gap:28px}.build-guide-intro{position:static;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}.build-guide-intro>.badge{justify-self:start;grid-column:1/-1}.build-guide-intro h3{grid-column:1;grid-row:2/4;font-size:29px;margin-bottom:8px}.build-guide-intro>p:not(.build-scope-note){grid-column:2;grid-row:2/4;margin-top:19px}.build-guide-intro>a{grid-column:1;justify-self:start;margin-top:10px}.tools-note{grid-column:2;grid-row:4/6;padding-top:12px;margin-top:10px}.build-guide-intro .build-scope-note{grid-column:1;margin-top:17px}.builder-intro{display:block}.builder-intro>p:not(.privacy-note){font-size:12px}.builder-intro h2 br{display:none}.builder-intro .meeting-note{font-size:11px}.builder-layout{gap:27px}.builder-summary{padding-bottom:35px}.purpose-card{padding:19px}.purpose-title{font-size:21px}}
-@media(max-width:620px){.purpose-links{grid-template-columns:1fr;gap:11px;padding-top:20px}.purpose-card{padding:18px 19px;gap:7px}.purpose-title{font-size:23px}.purpose-card>span:last-child{font-size:11px}.purpose-number{font-size:8px}.hero-builder-link{font-size:11px}.build-guide-section{padding-block:46px}.build-guide-intro{display:block}.build-guide-intro h3{font-size:28px;margin:17px 0 14px}.build-guide-intro>p:not(.build-scope-note){margin:0;font-size:12px}.build-guide-intro>a{margin-top:17px}.tools-note{margin-top:20px;padding-top:17px}.build-guide-intro .build-scope-note{margin-top:15px}.build-phase summary{padding:17px 15px;gap:12px}.phase-number{height:27px;min-width:27px;font-size:9px}.phase-copy h3{font-size:12px}.phase-copy>span{font-size:10px}.phase-body{padding:0 16px 18px 16px}.phase-body ol{font-size:12px;padding-top:14px}.phase-body li{padding-bottom:11px}.phase-gate{font-size:10px}.builder-summary{padding-block:46px 30px}.builder-discussion-section{padding-block:30px 45px}.builder-intro .print-brief{margin-top:18px}.discussion-outcome{font-size:11px}}
-@media print{.purpose-links,.print-brief,.hero-builder-link{display:none!important}.build-guide-section{padding-block:22px;background:white}.build-guide-layout,.builder-layout{display:block}.build-guide-intro,.builder-intro{position:static;display:block;margin-bottom:20px}.build-guide-intro h3{font-size:18pt;margin:10px 0}.build-guide-intro>p,.builder-intro>p{font-size:8pt}.tools-note{display:none}.build-guide-intro .build-scope-note{font-size:7pt}.build-phases,.discussion-topics{display:block}.build-phase,.discussion-topic{break-inside:avoid;margin-bottom:12px}.build-phase summary{padding:10px 13px}.phase-copy h3{font-size:10pt}.phase-copy>span{font-size:7pt}.phase-body{padding:0 13px 12px 40px}.phase-body ol{font-size:8pt;padding-top:10px}.phase-body li{padding-bottom:6px}.phase-gate{font-size:7pt;padding:7px 10px}.builder-summary{padding-block:23px}.builder-discussion-section{display:block!important;background:white;padding-block:22px}.builder-intro h2{font-size:25pt}.builder-intro h2 br{display:none}.discussion-topic summary{padding:10px 13px}.topic-summary h3{font-size:10pt}.topic-summary p{font-size:7pt}.topic-body{padding:0 13px 12px 36px}.topic-question,.discussion-outcome{font-size:8pt}.phase-toggle,.topic-chevron{display:none}}
-
-.ui-icon{display:inline-block;width:13px;height:13px;flex-shrink:0;vertical-align:-2px}.hero-builder-link .ui-icon,.detail-discussion-link .ui-icon{margin-left:3px}.purpose-title>.ui-icon{width:18px;height:18px}.brief-list .ui-icon{width:18px;height:18px}.concept-note a .ui-icon{width:11px;height:11px}.open-column li>span>.ui-icon{width:14px;height:14px}
+.mobile-table-hint{display:none}@media(max-width:580px){.mobile-table-hint{display:block;font-size:10px;color:var(--muted);margin:0 0 7px}}@media print{.mobile-table-hint{display:none}}
 
 </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to design</a>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Auckland Deck, back to top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>AUCKLAND<span class="brand-light"> / DECK</span></span></a>
-    <nav aria-label="Main navigation"><a href="#plan">The plan</a><a href="#build-guide">Build guide</a><a href="#builder-brief">Builder brief</a></nav>
-    <button class="button button-small button-outline" id="share-open"><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span> Share design</button>
+    <a class="brand" href="#top">Auckland deck</a>
+    <nav aria-label="Sections"><a href="#plan">Plans</a><a href="#materials">Materials</a><a href="#build-guide">Build steps</a><a href="#builder-brief">Builder checks</a></nav>
+    <button class="button button-small" id="share-open">Share</button>
   </header>
-
-  <main id="main">
-    <section class="hero page-width" id="top" aria-labelledby="hero-title">
-      <div class="hero-main">
-        <div class="eyebrow"><span class="little-line"></span> FROM THE FIRST MEASUREMENT</div>
-        <h1 id="hero-title">A deck, from<br>plan to <em>build.</em></h1>
-        <p class="hero-description">Your step-by-step guide to building the deck, and a shared design brief to work through with your builder in person.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#build-guide">Follow the build steps <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M6 18h12V6"/></svg></span></a><a class="text-button hero-builder-link" href="#builder-brief">Discuss with the builder <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
-      </div>
-      <aside class="brief-card" aria-label="Project brief">
-        <div class="brief-top"><span class="eyebrow">THE PROJECT</span><span class="revision">REV. 02</span></div>
-        <div class="brief-number">6.6 <span>×</span> 2.6<span class="brief-unit">m</span></div>
-        <p>Auckland, New Zealand<br>Freestanding · DIY timber deck</p>
-        <div class="brief-divider"></div>
-        <ul class="brief-list"><li><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span> Independent of the house</li><li><span aria-hidden="true">≋</span> Budget treated-pine decking</li><li><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3v14h14m-5-5 5 5-5 5"/></svg></span> Deck → one tread → garden</li></ul>
-        <div class="brief-footer"><span>DESIGN BRIEF</span><time datetime="2026-11-03">03 NOV 2026</time></div>
-      </aside>
+  <main id="main" class="page-width">
+    <section id="top" class="project-summary" aria-labelledby="page-title">
+      <div class="title-row"><h1 id="page-title">Deck plan &amp; build guide</h1><span class="badge badge-sand">Draft · structural checks open</span></div>
+      <dl class="project-facts">
+        <div><dt>Main deck</dt><dd>6600 × 2600 mm</dd></div>
+        <div><dt>Rebuilt section</dt><dd>900 × 1970 mm</dd></div>
+        <div><dt>Decking</dt><dd>Pine, 38 mm thick</dd></div>
+        <div><dt>Deck height</dt><dd>About 500 mm above garden</dd></div>
+        <div><dt>One full-width tread</dt><dd>6600 × 400 mm; surface at 250 mm</dd></div>
+        <div><dt>House connection</dt><dd>Freestanding</dd></div>
+      </dl>
+      <p class="status-note">Confirm spans, footing/bracing and fixing schedules, the rebuilt junction and tread geometry before ordering structural materials or digging.</p>
     </section>
 
-    <section class="metrics page-width" aria-label="Key dimensions">
-      <div><span class="metric-label">MAIN DECK</span><span class="metric-value">17.16 <small>m²</small></span><span class="metric-detail">6600 × 2600 mm</span></div>
-      <div><span class="metric-label">REBUILT SECTION</span><span class="metric-value">1.773 <small>m²</small></span><span class="metric-detail">900 × 1970 mm</span></div>
-      <div><span class="metric-label">COMBINED AREA</span><span class="metric-value">18.933 <small>m²</small></span><span class="metric-detail">Excludes the garden tread</span></div>
-      <div><span class="metric-label">GARDEN ACCESS</span><span class="metric-value">1 <small>tread</small></span><span class="metric-detail">400 mm total projection</span></div>
-    </section>
-
-    <section class="purpose-links page-width" aria-label="Two ways to use this guide">
-      <a class="purpose-card" href="#build-guide"><span class="purpose-number">01 / FOR THE DIY BUILD</span><span class="purpose-title">Follow the sequence <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M6 18h12V6"/></svg></span></span><span>Seven phases, practical steps and the points to resolve before moving on.</span></a>
-      <a class="purpose-card" href="#builder-brief"><span class="purpose-number">02 / FOR THE CONVERSATION</span><span class="purpose-title">Sit down with the builder <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M6 18h12V6"/></svg></span></span><span>Use the plan and open questions together in person, then update the agreed design.</span></a>
-    </section>
-
-    <section class="design-section page-width" id="plan" aria-labelledby="plan-title">
-      <div class="section-heading"><div><div class="eyebrow section-number">01 / THE LAYOUT</div><h2 id="plan-title">Get the full picture.</h2></div><p>Select a part of the plan to see its dimensions and what needs checking.</p></div>
+    <section id="plan" class="content-section" aria-labelledby="plan-title">
+      <div class="section-heading"><h2 id="plan-title">1. Plans</h2><span>Dimensions in mm · framing provisional</span></div>
       <div class="plan-workspace">
         <div class="drawing-card">
-          <div class="drawing-toolbar"><div class="view-tabs" role="tablist" aria-label="Drawing view"><button role="tab" id="tab-layout" aria-controls="drawing-panel" aria-selected="true" tabindex="0" data-view="layout">Plan</button><button role="tab" id="tab-framing" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="framing">Framing</button><button role="tab" id="tab-elevation" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="elevation">Side profile</button></div><span class="drawing-scale" id="drawing-scale">DIMENSIONS IN MM</span></div>
-          <div id="drawing-panel" role="tabpanel" aria-labelledby="tab-layout" tabindex="0"><svg id="design-drawing" xmlns="http://www.w3.org/2000/svg" aria-label="Deck layout"></svg></div>
-          <div class="drawing-footer"><div class="legend"><span><i class="legend-main"></i>New deck</span><span><i class="legend-rebuilt"></i>Rebuilt</span><span><i class="legend-tread"></i>One tread</span></div><div class="drawing-controls"><button class="text-button" id="zoom-drawing" aria-pressed="false">Enlarge drawing +</button><button class="text-button" id="reset-view">Reset selection <span aria-hidden="true">↺</span></button></div></div>
-          <p class="drawing-note" id="drawing-note">Finished outlines shown to proportion. One full-width 6600 × 400 mm tread along the garden edge. Select an area for details.</p>
+          <div class="drawing-toolbar"><div class="view-tabs" role="tablist" aria-label="Drawing view"><button role="tab" id="tab-framing" aria-controls="drawing-panel" aria-selected="true" tabindex="0" data-view="framing">Framing &amp; joists</button><button role="tab" id="tab-layout" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="layout">Dimensions</button><button role="tab" id="tab-elevation" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="elevation">Side profile</button></div><span id="drawing-scale" class="drawing-scale">TOP VIEW</span></div>
+          <div id="drawing-panel" role="tabpanel" aria-labelledby="tab-framing" tabindex="0"><svg id="design-drawing" xmlns="http://www.w3.org/2000/svg" aria-label="Deck framing and joist layout"></svg></div>
+          <div class="drawing-footer"><div class="legend" id="drawing-legend"><span><i class="legend-joist"></i>Joists</span><span><i class="legend-bearer"></i>Bearers</span><span><i class="legend-pile"></i>Piles</span></div><div class="drawing-controls"><button class="text-button" id="zoom-drawing" aria-pressed="false">Enlarge +</button><button class="text-button" id="reset-view">Reset</button></div></div>
+          <p id="drawing-note" class="drawing-note">16 joist lines. Dashed extensions into the rebuilt section are continuity candidates; junction and support capacity need checking.</p>
         </div>
-        <aside class="detail-card" id="selection-detail" aria-labelledby="detail-title" aria-live="polite" aria-atomic="true"></aside>
+        <aside id="selection-detail" class="detail-card" aria-labelledby="detail-title" aria-live="polite" aria-atomic="true"></aside>
       </div>
-      <div class="concept-note"><span class="note-symbol" aria-hidden="true">i</span><p><strong>The working plan, with open details kept visible.</strong> Confirmed dimensions are separated from provisional framing. Piles, bracing, connections and access geometry still need verification before construction.</p><a href="#builder-brief">Builder discussion <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div>
+      <details class="coordinate-details"><summary>Joist centre coordinates — J01 to J16</summary><p class="table-note">Provisional layout. Coordinates are from the left finished deck edge; these are not cut lengths or an approved set-out schedule.</p><div class="table-scroll"><table id="joist-coordinates"><caption>16 proposed joist centre lines</caption><thead><tr><th scope="col">Joist</th><th scope="col">X centre (mm)</th><th scope="col">Run shown</th></tr></thead><tbody></tbody></table></div></details>
     </section>
 
-    <section class="materials-section" id="materials" aria-labelledby="materials-title"><div class="page-width">
-      <div class="section-heading"><div><div class="eyebrow section-number">02 / THE MATERIALS</div><h2 id="materials-title">Simple timber. Clear intent.</h2></div><p>The starting palette is practical treated pine. Member selections are a concept, with structural checks still open.</p></div>
-      <div class="material-grid">
-        <article class="material-card"><span class="material-index">01</span><div class="timber-swatch swatch-decking" aria-hidden="true"></div><span class="material-type">THE SURFACE</span><h3>Treated pine</h3><p class="material-size">138 × 38 mm <span class="badge badge-green">Preference</span></p><p>H3.2 decking, running parallel to the house. 38 mm thickness selected; 138 mm width provisional. Exact product, finish, moisture, gaps and stock lengths to confirm.</p></article>
-        <article class="material-card"><span class="material-index">02</span><div class="timber-swatch swatch-bearer" aria-hidden="true"></div><span class="material-type">THE BEARERS</span><h3>Doubled timber</h3><p class="material-size">2 × 140 × 45 mm <span class="badge badge-sand">Provisional</span></p><p>Two new H3.2 SG8 double-bearer lines. The retained bearer and shared loading need assessment.</p></article>
-        <article class="material-card"><span class="material-index">03</span><div class="timber-swatch swatch-joist" aria-hidden="true"></div><span class="material-type">THE JOISTS</span><h3>SG8 framing</h3><p class="material-size">140 × 45 mm <span class="badge badge-sand">Provisional</span></p><p>16 main-deck lines at 437 mm centres as a layout scenario. Junctions, butt supports and cuts remain open.</p></article>
-        <article class="material-card"><span class="material-index">04</span><div class="timber-swatch swatch-pile" aria-hidden="true"></div><span class="material-type">THE FOUNDATIONS</span><h3>H5 timber piles</h3><p class="material-size">125 × 125 mm <span class="badge badge-sand">Provisional</span></p><p>12 new piles in the concept. Final count, grades, footings, bracing and fixing system are not verified.</p></article>
-      </div>
-      <details class="quantity-details"><summary><span><span class="small-circle" aria-hidden="true">+</span> Quantity scenarios &amp; budgeting</span><span class="muted">Planning figures only</span></summary><div class="quantity-content"><div><h3>Decking, before purchase allowances</h3><p>With actual 138 mm boards and example gaps of 3–6 mm: <strong>19 main-deck rows + 14 rebuilt-section rows</strong>. Independent rectangle layouts give <strong>138.0 lineal metres</strong> of row-length stock before merchant lengths, joints, defects and waste. Tread and landing excluded.</p></div><div><h3>What is not priced yet</h3><p>No current all-in quote or frozen cutting list. Footings, approved connectors, stair details, delivery and stock-length optimisation must be agreed before a reliable shopping total.</p></div></div></details>
-    </div></section>
+    <section id="materials" class="content-section" aria-labelledby="materials-title">
+      <div class="section-heading"><h2 id="materials-title">2. Materials</h2><span>Planning quantities · not an order</span></div>
+      <p class="mobile-table-hint">Scroll sideways for quantities and notes.</p><div class="table-scroll"><table class="materials-table"><caption>Materials and quantities to confirm</caption><thead><tr><th scope="col">Item</th><th scope="col">Specification</th><th scope="col">Provisional quantity</th><th scope="col">Still to confirm</th></tr></thead><tbody>
+        <tr><th scope="row">Decking</th><td>38 mm pine; 138 mm width assumed</td><td>157.8 lm row-length stock¹</td><td>Actual board, treatment, width, gap, finish and stock/cut plan</td></tr>
+        <tr><th scope="row">Joists</th><td>140 × 45 H3.2 SG8</td><td>16 lines; 3 continuation candidates</td><td>Spans, junction, bearing, extra butt supports and cut lengths</td></tr>
+        <tr><th scope="row">Bearers</th><td>Double 140 × 45 H3.2 SG8</td><td>2 lines / 4 plies / 26.4 lm nominal</td><td>Load capacity, ply fixings, joints and support details</td></tr>
+        <tr><th scope="row">Long-edge rims</th><td>140 × 45 H3.2 SG8 concept</td><td>2 × 6.6 m / 13.2 lm nominal</td><td>End connections; side edge joists already included above</td></tr>
+        <tr><th scope="row">Piles</th><td>125 × 125 H5 concept</td><td>12 new, proposed</td><td>Final count, structural suitability, lengths and anchor allocation</td></tr>
+        <tr><th scope="row">Pile / framing fixings</th><td>Exact approved assembly TBD</td><td>TBD</td><td>Bracing rating, doubled-bearer detail, corrosion class and components</td></tr>
+        <tr><th scope="row">Decking screws</th><td>To match actual board / exposure</td><td>TBD</td><td>Length, corrosion rating, pattern and total including butt joints</td></tr>
+        <tr><th scope="row">Concrete / DPC</th><td>Footing and separation details TBD</td><td>TBD</td><td>Verified hole sizes, embedment, ground and DPC specification</td></tr>
+        <tr><th scope="row">Tread framing</th><td>Support for 6600 × 400 mm tread</td><td>TBD</td><td>Supports, foundations, access geometry and fixings</td></tr>
+      </tbody></table></div>
+      <p class="table-note">¹ Assumes 138 mm boards and example 3–6 mm gaps: 19 main-deck rows + 14 rebuilt rows + 3 tread rows. Excludes stock-length losses, joints, defects and waste. Confirm the product and gap before using this estimate. No current price quote or final cut list.</p>
+    </section>
 
-    <section class="build-guide-section" id="build-guide" aria-labelledby="build-guide-title"><div class="page-width">
-      <div class="section-heading"><div><div class="eyebrow section-number">03 / YOUR BUILD GUIDE</div><h2 id="build-guide-title">One phase at a time.</h2></div><p>A practical sequence from measuring up to the final tread. Use the agreed structural details at each stage.</p></div>
-      <div class="build-guide-layout"><aside class="build-guide-intro"><span class="badge badge-sand">Current stage: design &amp; checks</span><h3>Start with the details that everything rests on.</h3><p>Before buying structural fixings or digging, settle the footing and bracing schedule, the rebuilt-section junction and the one-tread access detail with your builder and any required specialist.</p><a href="#builder-brief" class="text-button">Go to the builder brief <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M6 18h12V6"/></svg></a><div class="tools-note"><span class="eyebrow">KEEP HANDY</span><p>Tape measure · level or laser · string line · long straightedge · square · clamps</p></div><p class="build-scope-note">This is a draft work sequence. The provisional framing shown above is not yet a verified construction plan.</p></aside><div id="build-phases" class="build-phases"></div></div>
-    </div></section>
+    <section id="build-guide" class="content-section" aria-labelledby="build-guide-title">
+      <div class="section-heading"><h2 id="build-guide-title">3. Build sequence</h2><span>Use the verified details at each stage</span></div>
+      <div id="build-phases" class="build-phases"></div>
+    </section>
 
-    <section class="builder-summary page-width" id="builder-brief" aria-labelledby="decisions-title"><div class="section-heading"><div><div class="eyebrow section-number">04 / WITH THE BUILDER</div><h2 id="decisions-title">A plan to talk through.</h2></div><p>Use this brief at your in-person review. Agree the remaining details together before the construction plan is finalised.</p></div><div class="decision-grid"><article class="decision-column"><div class="decision-heading"><span class="badge badge-green">Confirmed by owner</span><h3>The brief we’re working to</h3></div><ul><li><span>01</span><div><strong>6600 × 2600 mm main deck</strong><p>A full rectangle across the whole frontage.</p></div></li><li><span>02</span><div><strong>900 × 1970 mm rebuilt section</strong><p>Beside the extension, behind its front face.</p></div></li><li><span>03</span><div><strong>Deck → one tread → garden</strong><p>Full-width 6600 × 400 mm tread, halfway at 250 mm above garden; about 500 mm measured drop.</p></div></li><li><span>04</span><div><strong>Freestanding, with budget pine</strong><p>Independent of the house; double-bearer preference.</p></div></li></ul></article><article class="decision-column open-column"><div class="decision-heading"><span class="badge badge-sand">To discuss in person</span><h3>The details to work through</h3></div><ul><li><span><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span><div><strong>Exact decking product &amp; finish</strong><p>38 mm-thick pine is selected. Confirm actual board width, finish, wet/dry gap guidance and stock lengths.</p></div></li><li><span><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span><div><strong>Vertical access detail</strong><p>The selected halfway tread is 250 mm above garden, with two approximately 250 mm rises. Acceptable access geometry and any level adjustment need checking.</p></div></li><li><span><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span><div><strong>Rebuilt framing junction</strong><p>Joists reaching the rear bearer enter the main deck. Their connection, bearing and combined loads need a coherent detail.</p></div></li><li><span><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span><div><strong>Foundations and exact products</strong><p>Confirm bracing, footing geometry, exact connectors, ground conditions and support capacity.</p></div></li></ul></article></div></section>
-
-    <section class="builder-discussion-section" aria-labelledby="discussion-title"><div class="page-width builder-layout"><div class="builder-intro"><div class="eyebrow section-number">THE MEETING AGENDA</div><h2 id="discussion-title">Six things to<br>work through.</h2><p>Walk the site together, inspect the existing support and use these prompts to agree the next details. Discuss them face to face, then record the decisions in the working plan.</p><button class="button button-outline print-brief" id="print-guide">Print this guide <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span></button><p class="meeting-note">Keep the confirmed footprint and one-tread layout visible while checking the technical details.</p></div><div class="discussion-topics" id="discussion-topics"></div></div></section>
+    <section id="builder-brief" class="content-section" aria-labelledby="discussion-title">
+      <div class="section-heading"><h2 id="discussion-title">4. Builder checks</h2><button class="button button-small" id="print-guide">Print guide</button></div>
+      <p class="section-note">Discuss these in person. Record agreed dimensions and details in the working plan.</p>
+      <p class="mobile-table-hint">Scroll sideways for the full check.</p><div class="table-scroll"><table id="discussion-topics" class="builder-table"></table></div>
+    </section>
 
   </main>
-
-  <footer class="site-footer page-width"><a class="brand" href="#top">AUCKLAND<span class="brand-light"> / DECK</span></a><p>Build guide &amp; builder brief · 03 November 2026</p><span>Not construction drawings</span></footer>
+  <footer class="site-footer page-width"><span>Auckland deck · 03 November 2026</span><span>Draft design · not construction drawings</span></footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <dialog id="share-dialog" aria-labelledby="share-title"><button class="dialog-close" id="share-close" aria-label="Close share dialog">×</button><div class="eyebrow">BUILD GUIDE &amp; BUILDER BRIEF</div><h2 id="share-title">Pass the plan around.</h2><p>Send the website link to your builder before you meet, or download a copy to take on site. The HTML file opens in a browser without an internet connection.</p><button class="button button-primary" id="download-website">Download website <span aria-hidden="true">↓</span></button><div class="share-divider"><span>OR SHARE A HOSTED VERSION</span></div><p class="small-copy" id="hosted-note">Once the page is on public hosting, copy its link to share it.</p><button class="button button-outline" id="copy-link">Copy page link <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span></button><p class="small-copy">Use the drawings and discussion brief together in person. The website also keeps the build sequence close at hand.</p></dialog>
-  <noscript><div class="noscript-note">Enable JavaScript to use the drawings, build phases and builder discussion prompts. The main dimensions, materials and design summary remain available above.</div></noscript>
+  <dialog id="share-dialog" aria-labelledby="share-title"><button class="dialog-close" id="share-close" aria-label="Close share dialog">×</button><h2 id="share-title">Share guide</h2><p id="hosted-note">Share the website link or download a copy for offline use.</p><button class="button button-primary" id="copy-link">Copy page link</button><button class="button" id="download-website">Download HTML</button></dialog>
+  <noscript><p class="noscript-note">Enable JavaScript for the drawings, build steps and builder checks. Dimensions and materials are listed above.</p></noscript>
   <script type="application/json" id="source-documents">{}</script>
   <script type="module">
 const NS = 'http://www.w3.org/2000/svg';
@@ -117,6 +95,8 @@ const C = {
   amberFill: '#f2e5d2', paper: '#fafbf7', white: '#ffffff', outline: '#415f4b'
 };
 let sequence = 0;
+
+const JOIST_CENTRES = [22.5, 450, 877.5, ...Array.from({ length: 13 }, (_, i) => 877.5 + (5700 / 13) * (i + 1))];
 
 function el(name, attributes = {}, children = []) {
   const node = document.createElementNS(NS, name);
@@ -170,7 +150,7 @@ function begin(svg, title, description, viewBox) {
   const d = el('desc', { id: `${uid}-desc` }); d.textContent = description;
   svg.append(t, d);
   const style = el('style');
-  style.textContent = '.deck-area{cursor:pointer;outline:none}.deck-area .area-outline{transition:stroke .15s,stroke-width .15s}.deck-area:hover .area-outline,.deck-area:focus-visible .area-outline,.deck-area.selected .area-outline{stroke:#2a6651;stroke-width:4}.deck-label{pointer-events:none;user-select:none}';
+  style.textContent = '.deck-area{cursor:pointer;outline:none}.deck-area .area-outline{transition:stroke .15s,stroke-width .15s}.deck-area:hover .area-outline,.deck-area:focus-visible .area-outline,.deck-area.selected .area-outline{stroke:#2a6651;stroke-width:4}.deck-area.selected .main-joist{fill:#164c34;stroke:#164c34}.deck-area:focus-visible .main-joist,.deck-area.selected .main-joist{stroke:#133c27;stroke-width:1.8}.deck-label{pointer-events:none;user-select:none}';
   svg.append(style);
   return uid;
 }
@@ -191,72 +171,85 @@ function outline(selected, id, normal = C.outline) {
   return { class: 'area-outline', stroke: selected === id ? '#23694d' : normal, 'stroke-width': selected === id ? 4 : 1.8 };
 }
 
-/** Proportional, dimensioned concept plan. All member positions are provisional. */
+/** Proportional concept plan. Member positions and continuity are provisional. */
 function renderPlan(svg, { view = 'layout', selected = null } = {}) {
   const framing = view === 'framing';
-  const uid = begin(svg, framing ? 'Provisional deck framing plan' : 'Deck layout and dimensions',
-    'Main deck 6600 by 2600 millimetres. A 900 by 1970 millimetre rebuilt section sits behind the left end beside the extension. One full-width tread spans 6600 millimetres and projects 400 millimetres towards the garden, as selected by the user. Activate an area for its details. Framing positions are provisional, not approved construction details.',
+  const uid = begin(svg, framing ? 'Joist and bearer layout — provisional' : 'Deck layout and dimensions',
+    'Main deck 6600 by 2600 millimetres. Rebuilt section 900 by 1970 millimetres behind the left end. One full-width tread projects 400 millimetres. Framing view shows sixteen 45 millimetre-wide joists J01 to J16, three dashed continuation candidates in the rebuilt section, two double bearer lines and twelve proposed piles. Continuity, spans, bearing and fixing details require verification.',
     '0 0 1180 870');
   svg.setAttribute('role', 'group');
   const defs = el('defs');
   const boards = el('pattern', { id: `${uid}-boards`, width: 20, height: 18.8, patternUnits: 'userSpaceOnUse' });
-  boards.append(el('rect', { width: 20, height: 18.8, fill: framing ? '#efe3d0' : C.timber }));
-  boards.append(el('line', { x1: 0, y1: 18.1, x2: 20, y2: 18.1, stroke: C.timberLine, 'stroke-width': .65, opacity: framing ? .3 : .7 }));
+  boards.append(el('rect', { width: 20, height: 18.8, fill: C.timber }));
+  boards.append(el('line', { x1: 0, y1: 18.1, x2: 20, y2: 18.1, stroke: C.timberLine, 'stroke-width': .65, opacity: .7 }));
   defs.append(boards);
-  const grid = el('pattern', { id: `${uid}-grid`, width: 24, height: 24, patternUnits: 'userSpaceOnUse' });
-  grid.append(el('circle', { cx: 1, cy: 1, r: .65, fill: '#cfd7ca' }));
-  defs.append(grid);
-  svg.append(defs, el('rect', { width: 1180, height: 870, fill: C.paper }), el('rect', { x: 45, y: 20, width: 1090, height: 785, fill: `url(#${uid}-grid)`, opacity: .55 }));
+  svg.append(defs, el('rect', { width: 1180, height: 870, fill: C.paper }));
+
   const S = .13, X = 130, Y = 346.1, W = 6600 * S, H = 2600 * S, RW = 900 * S, RH = 1970 * S;
-  const main = interactive(svg, 'main', 'Main deck: 6600 by 2600 millimetres, 17.16 square metres, confirmed dimensions', selected);
-  main.append(el('rect', { x: X, y: Y, width: W, height: H, fill: `url(#${uid}-boards)`, ...outline(selected, 'main') }));
-  const rebuilt = interactive(svg, 'rebuilt', 'Rebuilt section: 900 by 1970 millimetres, 1.773 square metres; retained bearer at back edge', selected);
-  rebuilt.append(el('rect', { x: X, y: Y - RH, width: RW, height: RH, fill: `url(#${uid}-boards)`, ...outline(selected, 'rebuilt') }));
-  const extension = interactive(svg, 'extension', 'House extension: 5700 millimetre frontage; back extent unknown; deck is freestanding', selected);
+  const TX = X, TY = Y + H, TW = W, TH = 400 * S;
+  const main = interactive(svg, 'main', 'Main deck: 6600 by 2600 millimetres, 17.16 square metres', selected);
+  main.append(el('rect', { x: X, y: Y, width: W, height: H, fill: framing ? '#ffffff' : `url(#${uid}-boards)`, ...outline(selected, 'main') }));
+  const rebuilt = interactive(svg, 'rebuilt', 'Rebuilt section: 900 by 1970 millimetres; retained bearer at back edge', selected);
+  rebuilt.append(el('rect', { x: X, y: Y - RH, width: RW, height: RH, fill: framing ? '#f3f7f0' : `url(#${uid}-boards)`, ...outline(selected, 'rebuilt') }));
+  const extension = interactive(svg, 'extension', 'House extension: 5700 millimetre frontage; rear extent not surveyed', selected);
   extension.append(el('rect', { x: X + RW, y: Y - RH, width: W - RW, height: RH, fill: '#e6ece4', ...outline(selected, 'extension', '#99a99a') }));
-  // Dashed back edge indicates that the extension's true rear extent is not surveyed.
   line(extension, X + RW + 2, Y - RH, X + W - 2, Y - RH, { stroke: C.paper, 'stroke-width': 5 });
   line(extension, X + RW, Y - RH, X + W, Y - RH, { stroke: '#99a99a', 'stroke-dasharray': '8 6', 'stroke-width': 1.7 });
-  const tread = interactive(svg, 'tread', 'One full-width garden tread: 6600 millimetres wide by 400 millimetres total projection; selected surface level about 250 millimetres above the garden', selected);
-  const TX = X, TY = Y + H, TW = W, TH = 400 * S;
-  tread.append(el('rect', { x: TX, y: TY, width: TW, height: TH, rx: 1, fill: `url(#${uid}-boards)`, ...outline(selected, 'tread', C.outline) }));
+  const tread = interactive(svg, 'tread', 'One full-width tread: 6600 by 400 millimetres, selected surface 250 millimetres above garden; tread framing not detailed', selected);
+  tread.append(el('rect', { x: TX, y: TY, width: TW, height: TH, rx: 1, fill: framing ? '#f1eee5' : `url(#${uid}-boards)`, ...outline(selected, 'tread', C.outline) }));
 
   if (framing) {
-    const bearer = interactive(svg, 'bearer', 'Provisional framing: two double 140 by 45 bearer lines, twelve suggested piles; structural verification outstanding', selected);
-    // Joist alignment in the rebuilt strip requires a junction detail; do not draw a resolved grid there.
-    for (let i = 0; i < 16; i++) {
-      const px = X + (22.5 + 437 * i) * S;
-      if (px <= X + RW) continue;
-      line(bearer, px, Y + 5, px, Y + H - 5, { stroke: '#7c8874', 'stroke-width': 1.6, opacity: .65 });
-    }
-    bearer.append(el('rect', { x: X + 3, y: Y + 3, width: RW - 6, height: 350 * S, fill: '#e6c492', opacity: .48, stroke: C.amber, 'stroke-dasharray': '3 4' }));
+    // Bearers and piles sit beneath the joists; all are visible independently.
+    const bearer = interactive(svg, 'bearer', 'Two provisional double 140 by 45 bearer lines at Y350 and Y2250, with twelve proposed piles', selected);
     for (const position of [350, 2250]) {
       const py = Y + position * S;
-      bearer.append(el('rect', { x: X, y: py - 5.85, width: W, height: 11.7, fill: C.amberFill, ...outline(selected, 'bearer', C.amber), 'stroke-dasharray': '7 4' }));
+      bearer.append(el('rect', { class: 'new-bearer area-outline', 'data-y-mm': position, x: X, y: py - 45 * S, width: W, height: 90 * S, fill: '#f4d6a6', stroke: C.amber, 'stroke-width': 1.8 }));
+      // Split the double bearer into its two 45 mm plies in the plan.
+      line(bearer, X, py, X + W, py, { stroke: '#b17c3d', 'stroke-width': .8 });
       for (const pile of [250, 1470, 2690, 3910, 5130, 6350]) {
-        bearer.append(el('rect', { x: X + pile * S - 8.125, y: py - 8.125, width: 16.25, height: 16.25, rx: 1.5, fill: C.paper, stroke: C.amber, 'stroke-width': 2 }));
+        bearer.append(el('rect', { class: 'pile', 'data-x-mm': pile, 'data-y-mm': position, x: X + pile * S - 8.125, y: py - 8.125, width: 16.25, height: 16.25, fill: '#fffefa', stroke: C.amber, 'stroke-width': 2 }));
       }
+    }
+    // Align J01–J03 with the 900 mm-wide rebuilt strip. This is a layout option,
+    // not a verified span, bearing, continuity or cutting detail.
+    const centres = JOIST_CENTRES;
+    const joists = interactive(svg, 'joists', 'Sixteen provisional 140 by 45 joists J01 to J16; centres 427.5 millimetres twice then approximately 438.46 millimetres thirteen times. J01 to J03 have dashed rebuilt-section continuation candidates.', selected);
+    for (const [i, centre] of centres.entries()) {
+      const px = X + (centre - 22.5) * S;
+      const id = `J${String(i + 1).padStart(2, '0')}`;
+      if (i < 3) {
+        joists.append(el('rect', { class: 'rebuilt-joist-extension', 'data-member-id': id, 'data-x-mm': centre, x: px, y: Y - RH, width: 45 * S, height: RH, fill: '#edf5e7', stroke: '#426b49', 'stroke-width': 1.4, 'stroke-dasharray': '6 4' }));
+      }
+      joists.append(el('rect', { class: 'main-joist', 'data-member-id': id, 'data-x-mm': centre, x: px, y: Y, width: 45 * S, height: H, fill: selected === 'joists' ? '#164c34' : '#456b4c', stroke: '#234c32', 'stroke-width': .7 }));
+      text(svg, X + centre * S, Y + 23, id, {
+        class: 'deck-label joist-id', 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 650,
+        fill: '#203d2b', 'paint-order': 'stroke', stroke: '#ffffff', 'stroke-width': 4, 'stroke-linejoin': 'round'
+      });
     }
     text(svg, X + W + 11, Y + 350 * S + 5, 'A', { fill: C.amber, 'font-size': 17, 'font-weight': 700 });
     text(svg, X + W + 11, Y + 2250 * S + 5, 'B', { fill: C.amber, 'font-size': 17, 'font-weight': 700 });
-    text(svg, X + W / 2, Y + H / 2 - 12, 'PROVISIONAL FRAMING', { class: 'deck-label', 'text-anchor': 'middle', 'font-size': 24, 'font-weight': 650, 'letter-spacing': 1.4, fill: C.ink, 'paint-order': 'stroke', stroke: '#efe3d0', 'stroke-width': 9 });
-    text(svg, X + W / 2, Y + H / 2 + 18, '2 double bearer lines · 12 suggested piles', { class: 'deck-label', 'text-anchor': 'middle', 'font-size': 17, fill: C.muted, 'paint-order': 'stroke', stroke: '#efe3d0', 'stroke-width': 8 });
-    text(svg, X, 825, 'Dashed amber = proposed members. Junction, spans, bracing and connections need verification.', { 'font-size': 16, fill: C.amber });
+    text(svg, X, 818, 'J01–J16: 45 mm wide · first 2 bays 427.5 mm · remaining 13 bays ≈438.46 mm', { 'font-size': 16, fill: C.ink });
+    text(svg, X, 845, 'Dashed J01–J03 = continuation option. Junction, bearing, spans and fixings to confirm.', { 'font-size': 15, fill: C.muted });
   } else {
     text(svg, X + W / 2, Y + H / 2 - 5, 'MAIN DECK', { class: 'deck-label', 'text-anchor': 'middle', 'font-size': 31, 'font-weight': 550, 'letter-spacing': 2.5 });
     text(svg, X + W / 2, Y + H / 2 + 29, '6.60 × 2.60 m  /  17.16 m²', { class: 'deck-label', 'text-anchor': 'middle', 'font-size': 19, fill: '#5f664e' });
-    text(svg, X, 825, 'Confirmed layout: main deck, rebuilt section and full-width tread. Structural details need review.', { 'font-size': 16, fill: C.muted });
+    text(svg, X, 825, 'Confirmed footprint. Structural details remain provisional.', { 'font-size': 16, fill: C.muted });
   }
+
   const labels = el('g', { class: 'deck-label', 'pointer-events': 'none' }); svg.append(labels);
-  text(labels, X + RW / 2, Y - RH / 2 - 18, 'REBUILT', { 'text-anchor': 'middle', 'font-size': 16, 'font-weight': 650, 'letter-spacing': .5 });
-  text(labels, X + RW / 2, Y - RH / 2 + 7, '0.90 × 1.97 m', { 'text-anchor': 'middle', 'font-size': 13 });
-  text(labels, X + RW / 2, Y - RH / 2 + 30, '1.773 m²', { 'text-anchor': 'middle', 'font-size': 14, fill: '#5f664e' });
+  if (!framing) {
+    text(labels, X + RW / 2, Y - RH / 2 - 18, 'REBUILT', { 'text-anchor': 'middle', 'font-size': 16, 'font-weight': 650 });
+    text(labels, X + RW / 2, Y - RH / 2 + 7, '0.90 × 1.97 m', { 'text-anchor': 'middle', 'font-size': 13 });
+    text(labels, X + RW / 2, Y - RH / 2 + 30, '1.773 m²', { 'text-anchor': 'middle', 'font-size': 14, fill: '#5f664e' });
+  } else {
+    text(labels, X + RW / 2, Y - RH + 32, 'REBUILT', { 'text-anchor': 'middle', 'font-size': 13, 'font-weight': 650, 'paint-order': 'stroke', stroke: '#f3f7f0', 'stroke-width': 4 });
+  }
   text(labels, X + RW + (W - RW) / 2, Y - RH / 2 - 12, 'HOUSE EXTENSION', { 'text-anchor': 'middle', 'font-size': 25, 'font-weight': 450, 'letter-spacing': 2 });
-  text(labels, X + RW + (W - RW) / 2, Y - RH / 2 + 20, '5.70 m frontage · rear extent not surveyed', { 'text-anchor': 'middle', 'font-size': 17, fill: C.muted });
-  text(labels, TX + TW / 2, TY + TH / 2 + 6, 'ONE TREAD · 6600 × 400 mm', { 'text-anchor': 'middle', 'font-size': 17, 'font-weight': 600, 'letter-spacing': 1 });
+  text(labels, X + RW + (W - RW) / 2, Y - RH / 2 + 20, '5700 mm frontage · rear extent not surveyed', { 'text-anchor': 'middle', 'font-size': 17, fill: C.muted });
+  text(labels, TX + TW / 2, TY + TH / 2 + 6, framing ? 'ONE TREAD · FRAMING TO CONFIRM' : 'ONE TREAD · 6600 × 400 mm', { 'text-anchor': 'middle', 'font-size': 17, 'font-weight': 600, 'letter-spacing': .6 });
   text(labels, X + W / 2, 781, 'GARDEN', { 'text-anchor': 'middle', 'font-size': 17, 'letter-spacing': 3, fill: C.green });
-  const retained = interactive(svg, 'rebuilt', 'Retained bearer at rebuilt section back edge, approximately Y minus 1970 millimetres; capacity and exact offset unverified', selected);
-  retained.append(el('rect', { x: X + 2, y: Y - RH - 4, width: RW - 4, height: 8, rx: 1, fill: C.green, stroke: selected === 'rebuilt' ? '#23694d' : C.green, 'stroke-width': 1.5 }));
+  const retained = interactive(svg, 'rebuilt', 'Retained bearer at rebuilt-section back edge, approximately Y minus 1970 millimetres; exact offset and capacity unverified', selected);
+  retained.append(el('rect', { x: X + 2, y: Y - RH - 4, width: RW - 4, height: 8, fill: C.green, stroke: C.green, 'stroke-width': 1.5 }));
   text(svg, X + RW + 17, Y - RH - 11, 'Retained bearer · exact offset to verify', { 'font-size': 13, fill: C.green });
   dimH(svg, X, X + W, 43, '6600 mm main frontage');
   dimH(svg, X, X + RW, Y - 20, '900');
@@ -264,10 +257,6 @@ function renderPlan(svg, { view = 'layout', selected = null } = {}) {
   dimV(svg, 83, Y - RH, Y, '1970 mm');
   dimV(svg, X + W + 54, Y, Y + H, '2600 mm');
   dimV(svg, TX + TW + 30, TY, TY + TH, '400 mm');
-  line(svg, X + W + 78, 111, X + W + 78, 161, { stroke: C.green, 'stroke-width': 1.5 });
-  line(svg, X + W + 78, 111, X + W + 73, 120, { stroke: C.green });
-  line(svg, X + W + 78, 111, X + W + 83, 120, { stroke: C.green });
-  text(svg, X + W + 78, 184, 'HOUSE', { 'text-anchor': 'middle', 'font-size': 11, fill: C.muted, 'letter-spacing': 1 });
 }
 
 /** One full-width tread between the deck and garden, at the selected halfway level. */
@@ -301,83 +290,73 @@ function renderElevation(svg) {
 
 const buildPhases = [
   {
-    title: 'Settle the design before buying or digging',
-    context: 'Bring the plan and its open details to the builder first.',
+    title: 'Confirm the design',
     steps: [
-      'Record finished deck levels at the door and corners, garden levels, cladding and flashing clearances, drainage routes and nearby house footings.',
-      'Inspect the retained bearer and its piles, connections, condition and support spacing. Record exact bearing faces and centre lines; the rebuilt section is 900 × 1970 mm.',
-      'Locate buried services and establish suitable bearing ground. Resolve uncertain fill, wet ground or foundation conflicts before excavation.',
-      'Have the applicable spans, cantilevers, bracing, pile classes, footings and exact pile-to-double-bearer-to-joist connections checked. Resolve the rebuilt-section junction and shared loading.',
-      'Agree the one full-width 6600 × 400 mm tread and verify the selected 250 mm surface level, access geometry and supports. Freeze the dimensioned plan, fixing schedule and cut list.'
+      'Measure door, deck and garden levels; mark cladding, drainage, vents, services and house footings.',
+      'Inspect the retained bearer, piles and fixings. Record timber sizes, condition, bearing faces and support spacing.',
+      'Resolve spans, bracing, footings, connectors and the rebuilt-section junction with the builder and any required specialist.',
+      'Verify the one-tread access detail, then agree the dimensioned plan, fixing schedule and cut list.'
     ],
-    gate: 'Do not order structural quantities, cut members or dig holes until the affected design details are verified. The current 12-pile layout and framing remain provisional.'
+    gate: 'Do not buy structural quantities, cut framing or dig until the affected details are verified.'
   },
   {
-    title: 'Set out the footprint and finished levels',
-    context: 'Make the reference lines accurate before locating individual supports.',
+    title: 'Set out',
     steps: [
-      'Set out the 6600 × 2600 mm main rectangle. Check both diagonals against approximately 7094 mm and confirm the rectangle is square.',
-      'Mark the 900 × 1970 mm rebuilt section behind the extension’s front face and the full-width 400 mm tread projection along the garden edge.',
-      'Transfer a consistent finished-deck datum with a laser or level. Use actual delivered decking, joist, bearer and DPC thicknesses to calculate pile tops at each ground level.',
-      'Mark pile and framing locations from the verified plan and check them against services and foundations. The illustrated bearer positions are not a final excavation layout.',
-      'Plan the actual board-width and gap module, supported butt joints and edge strips before fixing the framing layout.'
+      'Mark the 6600 × 2600 mm main deck; check both diagonals are about 7094 mm.',
+      'Mark the 900 × 1970 mm rebuilt section and 6600 × 400 mm garden tread.',
+      'Set the finished-deck datum. Calculate each pile top using actual timber sizes, DPC and local ground level.',
+      'Mark supports from the verified plan; check services, foundations, board rows and butt-joint positions.'
     ],
-    gate: 'The nominal stack is 500 − 38 − 140 − 140 = 182 mm before DPC. It is an arithmetic starting point, not a universal pile-cut height.'
+    gate: '500 − 38 − 140 − 140 = 182 mm is nominal pile exposure before DPC, not a pile-cut schedule.'
   },
   {
-    title: 'Excavate and concrete the specified footings',
-    context: 'Follow the verified footing schedule for each pile type.',
+    title: 'Install piles and footings',
     steps: [
-      'Excavate only the specified hole shape, width and depth, with the required bearing ground and clearances. Keep ordinary and bracing-pile details distinct.',
-      'Check the supplied piles have the specified treatment and structural suitability, including any anchor-pile requirements.',
-      'Position, plumb and temporarily brace the piles. Check support coordinates and tops against the datum before placing concrete.',
-      'Place the specified concrete and protect and cure it as required. Recheck pile position and plumb, and allow the required curing before loading.'
+      'Excavate to the verified footing schedule for each ordinary or bracing pile.',
+      'Check pile treatment and structural suitability; position, plumb and brace the piles.',
+      'Check support coordinates and pile tops before placing the specified concrete.',
+      'Protect and cure the concrete for the required period before loading.'
     ],
-    gate: 'Stop if the excavation exposes unsuitable ground, services or a house-footing conflict. No hole dimensions or concrete order are approved by this website.'
+    gate: 'Stop if ground, services or nearby foundations differ from the verified footing assumptions.'
   },
   {
-    title: 'Install bearers and the lateral-load system',
-    context: 'Establish a straight, braced support platform.',
+    title: 'Fit bearers and bracing',
     steps: [
-      'Fit the specified DPC or separation detail at pile tops, allowing for its thickness in the finished level.',
-      'Install the specified double-bearer members. Locate ply joins only where the verified detail permits and fix the plies together as scheduled.',
-      'Fit the exact ordinary-pile and bracing/anchor connections, including the specified components, fixings, corrosion class and edge distances.',
-      'Check bearer straightness and top levels with a string or laser. Confirm the complete bracing system and all support connections before proceeding.'
+      'Fit the specified DPC and double-bearer members; join and fasten plies only as detailed.',
+      'Install the scheduled ordinary-pile and anchor/bracing connections, using the exact components and fixings.',
+      'Check bearer alignment, levels and the completed lateral-load system.'
     ],
-    gate: 'A generic bracket or “12 kN kit” label does not settle the doubled-bearer connection. Use the actual verified assembly and installation detail.'
+    gate: 'Confirm the doubled-bearer connection detail; a generic bracket or “12 kN kit” label is insufficient.'
   },
   {
-    title: 'Fit joists, rims, blocking and the rebuilt junction',
-    context: 'Resolve the junction once, then keep every board support in the same plane.',
+    title: 'Fit joists and blocking',
     steps: [
-      'Set first and last joists from the verified framing envelope, then install the remaining joists at the specified centres and with the required bearing and fixings.',
-      'Build the agreed junction between the rebuilt section and main deck. Joists reaching the proposed rear bearer cross into the main footprint; do not overlap separate members in the same space.',
-      'Install rims, blocking, board-butt supports and any ties required for the lateral-load system. Do not count side edge joists twice.',
-      'Check the framing plane with a long straightedge and string. Correct discrepancies only in a way that preserves the required member size, grade, treatment and connections.'
+      'Set edge joists, then fit the remaining joists at the verified centres with specified bearing and fixings.',
+      'Build the agreed rebuilt-section junction; do not overlap separate joists in the same space.',
+      'Fit rims, blocking, butt-joint supports and required ties; count side edge joists once.',
+      'Check the framing plane with a string and straightedge; preserve required member sizes and treatment when correcting it.'
     ],
-    gate: 'The 16 main-only joist lines and continuous-joist option are layout scenarios. Use the verified junction, support and cut details rather than cutting from those counts alone.'
+    gate: 'The illustrated 16-line grid and three rebuilt-section continuations are provisional, not approved cuts or connections.'
   },
   {
-    title: 'Lay and fix the pine decking',
-    context: 'Use the actual product and moisture guidance, not a universal gap.',
+    title: 'Fix the decking',
     steps: [
-      'Measure the supplied boards and check their condition, treatment and moisture. The selected thickness is 38 mm; 138 mm width remains provisional until the product is confirmed.',
-      'Dry-plan the rows, gaps and edge strips using the supplier’s installation guidance. Align the main and rebuilt areas without obstructing cladding, vents or drainage.',
-      'Arrange lengths so every butt joint has the specified support and fixing space. Pre-drill ends where required and keep the required fixing edge distances.',
-      'Use the specified exterior fixings for the timber treatment and corrosion environment. Trim edges uniformly and treat cut ends as required by the product instructions.'
+      'Check actual board size, treatment and moisture: 38 mm pine is selected; 138 mm width remains provisional.',
+      'Set board gaps and edge strips from the supplier’s instructions; keep cladding, vents and drainage clear.',
+      'Support every butt joint; pre-drill and keep fixing edge distances as specified.',
+      'Use the specified exterior fixings, trim edges and treat cut ends.'
     ],
-    gate: 'Board-row estimates are not a purchase or cutting schedule. Confirm stock lengths, supported joints, kerf, defects and waste before ordering or cutting.'
+    gate: 'Confirm actual stock lengths, supported joints, kerf, defects and waste before ordering or cutting.'
   },
   {
-    title: 'Build the one tread and complete the deck',
-    context: 'Keep the agreed route: deck → one full-width tread → garden.',
+    title: 'Build the tread and finish',
     steps: [
-      'Build the verified tread structure and foundations for the 6600 × 400 mm full-width layout. The selected surface is 250 mm above garden beneath the deck at about 500 mm.',
-      'Check final rises, going and nosing, landing/approach, slip resistance and any required handrail details against the agreed access design. The selected halfway level is not proof of compliance.',
-      'Treat exposed cuts and apply the chosen finish in accordance with the timber and finish manufacturers’ instructions.',
-      'Inspect connections and visible fixings, deck flatness, edges and trip hazards. Confirm clear drainage and ventilation and that the deck remains structurally independent of the house.'
+      'Build the verified supports for one full-width 6600 × 400 mm tread, with the selected surface 250 mm above garden.',
+      'Check final rises, going/nosing, approach, slip resistance and any required handrails against the verified access detail.',
+      'Treat exposed cuts and apply the selected finish to the product instructions.',
+      'Check fixings, flatness, edges, drainage and ventilation; confirm structural independence from the house.'
     ],
-    gate: 'Complete the access and structural checks before using the finished deck. Resolve any difference between the built levels and the verified details.'
+    gate: 'Resolve any difference between the built levels and verified access or structural details before use.'
   }
 ];
 
@@ -387,8 +366,8 @@ function renderBuildGuide(container) {
     const details = document.createElement('details');
     details.className = 'build-phase';
     details.id = `build-phase-${index}`;
-    details.open = index === 0;
-    details.innerHTML = `<summary><span class="phase-number">0${index}</span><span class="phase-copy"><h3>${phase.title}</h3><span>${phase.context}</span></span><span class="phase-toggle" aria-hidden="true">+</span></summary><div class="phase-body"><ol>${phase.steps.map(step => `<li>${step}</li>`).join('')}</ol><p class="phase-gate"><strong>${index === 0 ? 'Before starting:' : 'Before continuing:'}</strong> ${phase.gate}</p></div>`;
+    details.open = true;
+    details.innerHTML = `<summary><span class="phase-number">0${index}</span><span class="phase-copy"><h3>${phase.title}</h3></span><span class="phase-toggle" aria-hidden="true">+</span></summary><div class="phase-body"><ol>${phase.steps.map(step => `<li>${step}</li>`).join('')}</ol><p class="phase-gate"><strong>${index === 0 ? 'Before starting:' : 'Check:'}</strong> ${phase.gate}</p></div>`;
     container.append(details);
   }
 }
@@ -397,19 +376,20 @@ function renderBuildGuide(container) {
 
 const $ = (selector) => document.querySelector(selector);
 const topicData = [
-  { id: 'layout', title: 'Layout & house interface', summary: 'Footprint, thresholds, drainage and clearances', question: 'Does the 6600 × 2600 mm main deck and 900 × 1970 mm rebuilt section fit the site? What cladding, door, ventilation, drainage or foundation clearance details are needed?' },
-  { id: 'junction', title: 'Rebuilt section & retained bearer', summary: 'Joist junction, existing condition and shared loading', question: 'The retained bearer is at the rebuilt section’s back edge, approximately 2320 mm from the proposed rear bearer. How should the rebuilt joists meet or continue into the main deck without conflicting with its joists/rim? Check support condition, bearing and combined reactions.' },
-  { id: 'structure', title: 'Framing, bracing & connections', summary: 'Spans, member grades, pile layout and exact fixings', question: 'Check the provisional double 140 × 45 bearers, 140 × 45 joists, proposed support locations and 12-pile concept against the applicable design requirements. Which bracing and exact pile-to-bearer-to-joist connection details are needed?' },
-  { id: 'ground', title: 'Footings & ground', summary: 'Bearing, excavation, services and neighbouring footings', question: 'What ground, footing and embedment evidence is needed? Confirm ordinary versus bracing-pile requirements, footing shape, buried services and clearance from the house foundations. No excavation schedule is fixed.' },
-  { id: 'access', title: 'Deck → tread → garden', summary: 'One full-width 400 mm tread, proposed halfway level', question: 'The owner wants one 6600 × 400 mm tread, with its surface 250 mm above the garden under a deck about 500 mm high. This creates two approximately 250 mm rises. Check the applicable access geometry, going/nosing, supports, slip resistance, landing/approach and any required level changes; the proposal is not verified.' },
-  { id: 'materials', title: 'Decking & purchase plan', summary: '38 mm pine, actual width, finish and stock lengths', question: 'Pine decking at 38 mm thickness is selected. Board width is provisionally 138 mm. Confirm the exact product, treatment, actual sizes, wet/dry installation gap, fixing pattern, finish, available stock lengths and a supported butt-joint/cut plan before ordering.' }
+  { id: 'layout', title: 'House / site', question: 'Confirm threshold, cladding, drainage and ventilation clearances; locate services and foundation conflicts.', stage: 'Before set-out' },
+  { id: 'junction', title: 'Retained bearer / junction', question: 'Inspect retained supports. Verify the three joist continuation candidates, bearing, rim junction and combined loads.', stage: 'Before cutting framing' },
+  { id: 'structure', title: 'Spans / bracing / fixings', question: 'Confirm spans, cantilevers, pile count, bracing and the exact doubled-bearer connection schedule.', stage: 'Before ordering fixings' },
+  { id: 'ground', title: 'Footings', question: 'Specify hole shapes, dimensions, embedment and concrete from the actual ground and pile types.', stage: 'Before digging' },
+  { id: 'access', title: 'One tread', question: 'Check the two proposed 250 mm rises, going/nosing, landing, supports and any required handrails.', stage: 'Before tread construction' },
+  { id: 'materials', title: 'Decking product', question: 'Choose the actual 38 mm pine board, width, gap, finish, screws and stock/cut plan.', stage: 'Before ordering boards' }
 ];
 const selectionData = {
-  main: { number: '01', icon: '▤', title: 'The main deck', badge: 'Confirmed dimensions', type: 'green', values: [['Frontage', '6600 mm'], ['Depth', '2600 mm'], ['Area', '17.16 m²'], ['Garden drop', 'About 500 mm']], description: 'A full rectangle across the entire frontage, sitting independently of the house. Decking runs parallel to the frontage.', note: 'The shape is confirmed. Member spans, bracing, connections, footings and clearances are still provisional.', topic: 'layout' },
-  rebuilt: { number: '02', icon: '↰', title: 'The rebuilt section', badge: 'Confirmed dimensions', type: 'green', values: [['Frontage', '900 mm'], ['Depth', '1970 mm'], ['Area', '1.773 m²'], ['Retained bearer', 'At back edge']], description: 'The demolished section is to be rebuilt beside the extension, behind its front face. It does not reduce the new deck’s 6600 mm frontage.', note: 'Approx. 2320 mm to the proposed rear bearer. Exact bearing faces, retained support condition and the joist junction need checking.', topic: 'junction' },
-  tread: { number: '03', icon: '↳', title: 'One garden tread', badge: 'Owner’s selected layout', type: 'green', values: [['Width', '6600 mm · full-width'], ['Projection', '400 mm total'], ['Horizontal area', '2.64 m²'], ['Proposed surface', '250 mm above garden']], description: 'Deck → one tread → garden. A single full-width tread runs along the new deck’s garden edge, halfway down the approximately 500 mm drop.', note: 'The two approximately 250 mm rises are proposed geometry, not a verified access detail. Rises, going/nosing, landing and tread structure need checking.', topic: 'access' },
-  extension: { number: '04', icon: '⌂', title: 'The house extension', badge: 'Frontage confirmed', type: 'green', values: [['Frontage', '5700 mm'], ['Rebuilt alongside', '900 mm'], ['House attachment', 'None proposed'], ['Back extent', 'Not surveyed here']], description: 'The extension and rebuilt section meet the front face at the same line. The new main deck sits in front of both.', note: 'Keep cladding, door flashings, vents and drainage clear. The extension’s drawn back extent is context, not a measured building plan.', topic: 'layout' },
-  bearer: { number: '05', icon: '⫶', title: 'The framing concept', badge: 'Provisional · check required', type: 'sand', values: [['New bearers', '2 double 140 × 45 lines'], ['Centre separation', '1900 mm'], ['New piles', '12 proposed'], ['Joist layout', '16 main-only lines']], description: 'Two new bearer lines sit 350 mm and 2250 mm out from the house front face. Six proposed pile centres support each line.', note: 'Pile count, anchor/bracing allocation, spans, footing sizes and connector details are not verified. Main-only spacing does not settle the rebuilt junction.', topic: 'structure' }
+  main: { title: 'Main deck', badge: 'Dimensions confirmed', type: 'green', values: [['Width × depth', '6600 × 2600 mm'], ['Area', '17.16 m²'], ['Garden drop', 'About 500 mm']], description: 'Freestanding. Boards run parallel to the frontage.', note: 'Member spans, supports and fixings remain provisional.', topic: 'layout' },
+  rebuilt: { title: 'Rebuilt section', badge: 'Dimensions confirmed', type: 'green', values: [['Width × depth', '900 × 1970 mm'], ['Area', '1.773 m²'], ['Retained bearer', 'At back edge']], description: 'Three dashed joist continuations are shown as a layout option.', note: 'Check retained supports, combined loads, junction and bearing. Support separation to new rear bearer is about 2320 mm.', topic: 'junction' },
+  tread: { title: 'One full-width tread', badge: 'Layout selected', type: 'green', values: [['Width × projection', '6600 × 400 mm'], ['Surface above garden', '250 mm proposed'], ['Area', '2.64 m²']], description: 'Deck → one tread → garden.', note: 'Two approximately 250 mm rises. Access geometry, supports and fixings need checking.', topic: 'access' },
+  extension: { title: 'House extension', badge: 'Frontage confirmed', type: 'green', values: [['Frontage', '5700 mm'], ['Rebuilt alongside', '900 mm'], ['Rear extent', 'Not surveyed']], description: 'Deck remains independent of the house.', note: 'Verify cladding, door, vent and drainage clearances.', topic: 'layout' },
+  bearer: { title: 'Bearers & piles', badge: 'Provisional', type: 'sand', values: [['New bearers', '2 double 140 × 45 lines'], ['Y centre lines', '350 / 2250 mm'], ['Separation', '1900 mm centres'], ['New piles', '12 proposed']], description: 'Six proposed pile positions on each new bearer line.', note: 'Check spans, footing/bracing requirements, ply joints and exact connectors.', topic: 'structure' },
+  joists: { title: 'Joist layout', badge: 'Provisional', type: 'sand', values: [['Main lines', '16 · J01–J16'], ['Member', '140 × 45 H3.2 SG8'], ['First 2 bays', '427.5 mm centres'], ['Next 13 bays', '438.46 mm centres'], ['Rebuilt continuations', 'J01–J03 · candidates']], description: 'Joists run towards the garden. J01–J03 align within the 900 mm rebuilt strip.', note: 'Dashed continuity is not verified. The 4570 mm finished envelope is not a cut length. Extra butt supports and final rims/blocking remain to detail.', topic: 'junction' }
 };
 const sourceLabels = {
   'PROJECT.md': ['Project brief', 'Confirmed requirements and latest owner decisions'],
@@ -428,33 +408,18 @@ function toast(message) {
   $('#toast').classList.add('visible');
   toastTimer = setTimeout(() => $('#toast').classList.remove('visible'), 4200);
 }
-const discussionOutcomes = {
-  layout: 'Confirm the site fit, finished datum and house clearances.',
-  junction: 'Agree retained-support reuse and a dimensioned joist/rim junction.',
-  structure: 'Settle the member layout and exact bracing and connection schedule.',
-  ground: 'Confirm ground suitability and a footing schedule for each support type.',
-  access: 'Agree a verified access detail for the selected one-tread arrangement.',
-  materials: 'Choose the actual product, fixing/gap guidance and a cut-by-stock list.'
-};
 function renderDiscussionTopics() {
-  const container = $('#discussion-topics');
-  container.replaceChildren();
-  for (const [i, topic] of topicData.entries()) {
-    const details = document.createElement('details');
-    details.className = 'discussion-topic';
-    details.id = `discussion-${topic.id}`;
-    if (i === 0) details.open = true;
-    details.innerHTML = `<summary><span class="topic-number">0${i + 1}</span><span class="topic-summary"><h3>${topic.title}</h3><p>${topic.summary}</p></span><span class="topic-chevron" aria-hidden="true">+</span></summary><div class="topic-body"><p class="topic-question">${topic.question}</p><p class="discussion-outcome"><strong>To settle together:</strong> ${discussionOutcomes[topic.id]}</p></div>`;
-    container.append(details);
-  }
+  $('#discussion-topics').innerHTML = `<caption>Items to confirm with the builder in person</caption><thead><tr><th scope="col">Check</th><th scope="col">Decision needed</th><th scope="col">When</th></tr></thead><tbody>${topicData.map(topic => `<tr id="discussion-${topic.id}" class="discussion-row"><th scope="row">${topic.title}</th><td>${topic.question}</td><td>${topic.stage}</td></tr>`).join('')}</tbody>`;
 }
-let selected = 'main';
-let currentView = 'layout';
+function renderJoistCoordinates() {
+  $('#joist-coordinates tbody').innerHTML = JOIST_CENTRES.map((x, i) => `<tr><th scope="row">J${String(i + 1).padStart(2, '0')}</th><td>${Number(x.toFixed(2))}</td><td>${i < 3 ? 'Main + dashed rebuilt continuation candidate' : 'Main deck'}</td></tr>`).join('');
+}
+let selected = 'joists';
 function selectArea(id) {
   if (!selectionData[id]) return;
   selected = id;
   const data = selectionData[id];
-  $('#selection-detail').innerHTML = `<div class="detail-kicker"><span>DESIGN DETAIL / ${data.number}</span><span class="detail-icon" aria-hidden="true">${data.icon}</span></div><h3 id="detail-title">${data.title}</h3><span class="badge badge-${data.type}">${data.badge}</span><dl class="detail-values">${data.values.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl><p class="detail-description">${data.description}</p><p class="detail-footnote">${data.note}</p><a class="detail-discussion-link" href="#discussion-${data.topic}">Discuss this with the builder <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>`;
+  $('#selection-detail').innerHTML = `<h3 id="detail-title">${data.title}</h3><span class="badge badge-${data.type}">${data.badge}</span><dl class="detail-values">${data.values.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl><p class="detail-description">${data.description}</p><p class="detail-footnote">${data.note}</p><a class="detail-discussion-link" href="#discussion-${data.topic}">Builder check →</a>`;
   for (const element of $('#design-drawing').querySelectorAll('[data-select]')) {
     const active = element.dataset.select === selected;
     element.classList.toggle('selected', active);
@@ -463,10 +428,10 @@ function selectArea(id) {
   $('.detail-discussion-link').addEventListener('click', () => openTopic(data.topic));
 }
 function setView(view) {
-  currentView = view;
+  if (view === 'framing' && ['main', 'extension'].includes(selected)) selected = 'joists';
   $('#drawing-panel').classList.remove('is-zoomed');
   $('#zoom-drawing').setAttribute('aria-pressed', 'false');
-  $('#zoom-drawing').textContent = 'Enlarge drawing +';
+  $('#zoom-drawing').textContent = 'Enlarge +';
   for (const tab of document.querySelectorAll('[data-view]')) {
     const active = tab.dataset.view === view;
     tab.setAttribute('aria-selected', String(active));
@@ -476,19 +441,22 @@ function setView(view) {
   const svg = $('#design-drawing');
   if (view === 'elevation') {
     renderElevation(svg);
-    $('#drawing-note').textContent = 'Selected layout: deck → one full-width 400 mm tread → garden. Halfway tread surface at 250 mm is proposed; access geometry and structure need verification.';
-    $('#drawing-scale').textContent = 'SCHEMATIC SIDE PROFILE';
+    $('#drawing-note').textContent = 'One full-width 400 mm tread, surface at 250 mm. Rises, supports and access geometry remain unverified.';
+    $('#drawing-scale').textContent = 'SIDE PROFILE';
     selectArea('tread');
   } else {
     renderPlan(svg, { view, selected });
-    $('#drawing-note').textContent = view === 'framing' ? 'Dashed framing and pile locations are provisional. Retained support condition, spans, bracing, junctions and connections are not verified.' : 'Finished deck and full-width tread outlines shown to proportion. Extension back extent is contextual. Select an area for details.';
-    $('#drawing-scale').textContent = 'DIMENSIONS IN MM';
+    $('#drawing-note').textContent = view === 'framing' ? '16 joist lines. Dashed J01–J03 are rebuilt-section continuation candidates. Check continuity, bearing, spans and fixings.' : 'Finished footprint. Extension rear extent is illustrative.';
+    $('#drawing-scale').textContent = 'TOP VIEW';
+    if (view === 'layout' && ['joists', 'bearer'].includes(selected)) selected = 'main';
     selectArea(selected);
   }
+  $('#drawing-legend').innerHTML = view === 'framing' ? '<span><i class="legend-joist"></i>Joists</span><span><i class="legend-bearer"></i>Bearers</span><span><i class="legend-pile"></i>Piles</span>' : view === 'layout' ? '<span><i class="legend-main"></i>Deck</span><span><i class="legend-rebuilt"></i>Rebuilt</span><span><i class="legend-tread"></i>One tread</span>' : '<span>Surface levels proposed</span>';
 }
 function openTopic(id) {
   const topic = $(`#discussion-${id}`);
-  if (topic) topic.open = true;
+  document.querySelectorAll('.discussion-row.is-focused').forEach(row => row.classList.remove('is-focused'));
+  if (topic) topic.classList.add('is-focused');
 }
 $('#design-drawing').addEventListener('plan-select', (event) => selectArea(event.detail.id));
 for (const tab of document.querySelectorAll('[data-view]')) {
@@ -509,9 +477,9 @@ for (const tab of document.querySelectorAll('[data-view]')) {
 $('#zoom-drawing').addEventListener('click', () => {
   const zoomed = $('#drawing-panel').classList.toggle('is-zoomed');
   $('#zoom-drawing').setAttribute('aria-pressed', String(zoomed));
-  $('#zoom-drawing').textContent = zoomed ? 'Fit to screen −' : 'Enlarge drawing +';
+  $('#zoom-drawing').textContent = zoomed ? 'Fit −' : 'Enlarge +';
 });
-$('#reset-view').addEventListener('click', () => { selected = 'main'; setView('layout'); });
+$('#reset-view').addEventListener('click', () => { selected = 'joists'; setView('framing'); });
 
 function download(filename, content, type = 'text/plain;charset=utf-8') {
   const url = URL.createObjectURL(new Blob([content], { type }));
@@ -543,10 +511,11 @@ async function copy(text, success) {
   }
 }
 renderDiscussionTopics();
+renderJoistCoordinates();
 renderBuildGuide($('#build-phases'));
 let printDetails = [];
 window.addEventListener('beforeprint', () => {
-  printDetails = Array.from(document.querySelectorAll('.build-phase, .discussion-topic')).map(element => [element, element.open]);
+  printDetails = Array.from(document.querySelectorAll('.build-phase, .coordinate-details')).map(element => [element, element.open]);
   for (const [element] of printDetails) element.open = true;
 });
 window.addEventListener('afterprint', () => {
@@ -582,9 +551,9 @@ $('#download-website').addEventListener('click', () => {
   clone.querySelector('#toast').textContent = '';
   clone.querySelector('#toast').classList.remove('visible');
   download('auckland-deck-design.html', '<!doctype html>\n' + clone.outerHTML, 'text/html;charset=utf-8');
-  toast('Guide downloaded. Open the HTML file on site or share it with your builder.');
+  toast('Guide downloaded.');
 });
-setView('layout');
+setView('framing');
 function openLinkedDiscussion() {
   if (location.hash.startsWith('#discussion-')) openTopic(location.hash.slice('#discussion-'.length));
   else if (location.hash.startsWith('#review-')) {

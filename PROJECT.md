@@ -43,7 +43,7 @@ Originally considered 3×2.5 m at 600–1000 mm, later changed to 6.6×2.5 m and
 ## Resolution pass — 2026-11-03
 
 - **CONFIRMED BY USER:** the handoff dimensions/preferences above; user now supplies rebuilt-section depth **1970 mm**, giving **1.773 m²** rebuilt / **18.933 m²** combined excluding stairs. Retained bearer is now confirmed at the back edge; about 500 mm drop at the intended step is measured. Exact support-face/centre offsets and remaining site levels are not supplied.
-- **PROVISIONAL:** revised main-only 16-line joist layout and 19 decking-row scenarios in [DESIGN.md](DESIGN.md) and [MATERIALS.md](MATERIALS.md). These are arithmetic, not source-verified span/fixing selections.
+- **PROVISIONAL:** 16-line joist illustration aligned with the rebuilt strip and 19 main decking-row scenarios in [DESIGN.md](DESIGN.md) and [MATERIALS.md](MATERIALS.md). These are arithmetic, not source-verified span/fixing selections.
 - **HOLD POINT:** rebuilt joists crossing Y=0 to the proposed bearer at Y=350 need an explicit junction detail; shared loading alone is not the whole issue.
 - **HOLD POINT:** record the supplied rebuilt depth/bearer location/drop and verify exact support offsets/condition, remaining heights and the landing/approach envelope using [SITE_MEASUREMENTS.md](SITE_MEASUREMENTS.md).
 - **VERIFIED WITH PRIMARY SOURCE:** none yet. The earlier primary-source attempts were blocked. The environment was subsequently published by the user; that historic access result is not a claim about current networking, and no structural verification has been performed in this website task.
@@ -64,3 +64,9 @@ The website serves two audiences:
 2. **Builder:** a readable design brief with drawings, dimensions, material assumptions and six discussion topics for an **in-person review with the owner**.
 
 The website does not collect or manage the builder's review. Online review forms, assessments, feedback downloads and reviewer-note storage are outside this workflow. The owner and builder discuss the design together and bring agreed changes back into the project record.
+
+## Framing illustration and website format
+
+The website is a compact technical reference: visible joists, a materials table, build steps and open builder checks, without promotional copy or decorative material cards.
+
+**PROVISIONAL illustration:** 16 main joist lines. J01–J03 centres are X=22.5/450/877.5 mm; the other 13 bays are 5700/13 ≈ 438.46 mm each, ending at X=6577.5. This supersedes the former uniform 437 mm illustration. The first three dashed continuations show a possible rebuilt-section solution, not approved construction. If adopted, those three longer members replace three of the 16 main members; no extra count is added.

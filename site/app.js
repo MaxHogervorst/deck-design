@@ -1,21 +1,22 @@
-import { renderPlan, renderElevation } from './diagrams.js';
+import { renderPlan, renderElevation, JOIST_CENTRES } from './diagrams.js';
 import { renderBuildGuide } from './build-guide.js';
 
 const $ = (selector) => document.querySelector(selector);
 const topicData = [
-  { id: 'layout', title: 'Layout & house interface', summary: 'Footprint, thresholds, drainage and clearances', question: 'Does the 6600 × 2600 mm main deck and 900 × 1970 mm rebuilt section fit the site? What cladding, door, ventilation, drainage or foundation clearance details are needed?' },
-  { id: 'junction', title: 'Rebuilt section & retained bearer', summary: 'Joist junction, existing condition and shared loading', question: 'The retained bearer is at the rebuilt section’s back edge, approximately 2320 mm from the proposed rear bearer. How should the rebuilt joists meet or continue into the main deck without conflicting with its joists/rim? Check support condition, bearing and combined reactions.' },
-  { id: 'structure', title: 'Framing, bracing & connections', summary: 'Spans, member grades, pile layout and exact fixings', question: 'Check the provisional double 140 × 45 bearers, 140 × 45 joists, proposed support locations and 12-pile concept against the applicable design requirements. Which bracing and exact pile-to-bearer-to-joist connection details are needed?' },
-  { id: 'ground', title: 'Footings & ground', summary: 'Bearing, excavation, services and neighbouring footings', question: 'What ground, footing and embedment evidence is needed? Confirm ordinary versus bracing-pile requirements, footing shape, buried services and clearance from the house foundations. No excavation schedule is fixed.' },
-  { id: 'access', title: 'Deck → tread → garden', summary: 'One full-width 400 mm tread, proposed halfway level', question: 'The owner wants one 6600 × 400 mm tread, with its surface 250 mm above the garden under a deck about 500 mm high. This creates two approximately 250 mm rises. Check the applicable access geometry, going/nosing, supports, slip resistance, landing/approach and any required level changes; the proposal is not verified.' },
-  { id: 'materials', title: 'Decking & purchase plan', summary: '38 mm pine, actual width, finish and stock lengths', question: 'Pine decking at 38 mm thickness is selected. Board width is provisionally 138 mm. Confirm the exact product, treatment, actual sizes, wet/dry installation gap, fixing pattern, finish, available stock lengths and a supported butt-joint/cut plan before ordering.' }
+  { id: 'layout', title: 'House / site', question: 'Confirm threshold, cladding, drainage and ventilation clearances; locate services and foundation conflicts.', stage: 'Before set-out' },
+  { id: 'junction', title: 'Retained bearer / junction', question: 'Inspect retained supports. Verify the three joist continuation candidates, bearing, rim junction and combined loads.', stage: 'Before cutting framing' },
+  { id: 'structure', title: 'Spans / bracing / fixings', question: 'Confirm spans, cantilevers, pile count, bracing and the exact doubled-bearer connection schedule.', stage: 'Before ordering fixings' },
+  { id: 'ground', title: 'Footings', question: 'Specify hole shapes, dimensions, embedment and concrete from the actual ground and pile types.', stage: 'Before digging' },
+  { id: 'access', title: 'One tread', question: 'Check the two proposed 250 mm rises, going/nosing, landing, supports and any required handrails.', stage: 'Before tread construction' },
+  { id: 'materials', title: 'Decking product', question: 'Choose the actual 38 mm pine board, width, gap, finish, screws and stock/cut plan.', stage: 'Before ordering boards' }
 ];
 const selectionData = {
-  main: { number: '01', icon: '▤', title: 'The main deck', badge: 'Confirmed dimensions', type: 'green', values: [['Frontage', '6600 mm'], ['Depth', '2600 mm'], ['Area', '17.16 m²'], ['Garden drop', 'About 500 mm']], description: 'A full rectangle across the entire frontage, sitting independently of the house. Decking runs parallel to the frontage.', note: 'The shape is confirmed. Member spans, bracing, connections, footings and clearances are still provisional.', topic: 'layout' },
-  rebuilt: { number: '02', icon: '↰', title: 'The rebuilt section', badge: 'Confirmed dimensions', type: 'green', values: [['Frontage', '900 mm'], ['Depth', '1970 mm'], ['Area', '1.773 m²'], ['Retained bearer', 'At back edge']], description: 'The demolished section is to be rebuilt beside the extension, behind its front face. It does not reduce the new deck’s 6600 mm frontage.', note: 'Approx. 2320 mm to the proposed rear bearer. Exact bearing faces, retained support condition and the joist junction need checking.', topic: 'junction' },
-  tread: { number: '03', icon: '↳', title: 'One garden tread', badge: 'Owner’s selected layout', type: 'green', values: [['Width', '6600 mm · full-width'], ['Projection', '400 mm total'], ['Horizontal area', '2.64 m²'], ['Proposed surface', '250 mm above garden']], description: 'Deck → one tread → garden. A single full-width tread runs along the new deck’s garden edge, halfway down the approximately 500 mm drop.', note: 'The two approximately 250 mm rises are proposed geometry, not a verified access detail. Rises, going/nosing, landing and tread structure need checking.', topic: 'access' },
-  extension: { number: '04', icon: '⌂', title: 'The house extension', badge: 'Frontage confirmed', type: 'green', values: [['Frontage', '5700 mm'], ['Rebuilt alongside', '900 mm'], ['House attachment', 'None proposed'], ['Back extent', 'Not surveyed here']], description: 'The extension and rebuilt section meet the front face at the same line. The new main deck sits in front of both.', note: 'Keep cladding, door flashings, vents and drainage clear. The extension’s drawn back extent is context, not a measured building plan.', topic: 'layout' },
-  bearer: { number: '05', icon: '⫶', title: 'The framing concept', badge: 'Provisional · check required', type: 'sand', values: [['New bearers', '2 double 140 × 45 lines'], ['Centre separation', '1900 mm'], ['New piles', '12 proposed'], ['Joist layout', '16 main-only lines']], description: 'Two new bearer lines sit 350 mm and 2250 mm out from the house front face. Six proposed pile centres support each line.', note: 'Pile count, anchor/bracing allocation, spans, footing sizes and connector details are not verified. Main-only spacing does not settle the rebuilt junction.', topic: 'structure' }
+  main: { title: 'Main deck', badge: 'Dimensions confirmed', type: 'green', values: [['Width × depth', '6600 × 2600 mm'], ['Area', '17.16 m²'], ['Garden drop', 'About 500 mm']], description: 'Freestanding. Boards run parallel to the frontage.', note: 'Member spans, supports and fixings remain provisional.', topic: 'layout' },
+  rebuilt: { title: 'Rebuilt section', badge: 'Dimensions confirmed', type: 'green', values: [['Width × depth', '900 × 1970 mm'], ['Area', '1.773 m²'], ['Retained bearer', 'At back edge']], description: 'Three dashed joist continuations are shown as a layout option.', note: 'Check retained supports, combined loads, junction and bearing. Support separation to new rear bearer is about 2320 mm.', topic: 'junction' },
+  tread: { title: 'One full-width tread', badge: 'Layout selected', type: 'green', values: [['Width × projection', '6600 × 400 mm'], ['Surface above garden', '250 mm proposed'], ['Area', '2.64 m²']], description: 'Deck → one tread → garden.', note: 'Two approximately 250 mm rises. Access geometry, supports and fixings need checking.', topic: 'access' },
+  extension: { title: 'House extension', badge: 'Frontage confirmed', type: 'green', values: [['Frontage', '5700 mm'], ['Rebuilt alongside', '900 mm'], ['Rear extent', 'Not surveyed']], description: 'Deck remains independent of the house.', note: 'Verify cladding, door, vent and drainage clearances.', topic: 'layout' },
+  bearer: { title: 'Bearers & piles', badge: 'Provisional', type: 'sand', values: [['New bearers', '2 double 140 × 45 lines'], ['Y centre lines', '350 / 2250 mm'], ['Separation', '1900 mm centres'], ['New piles', '12 proposed']], description: 'Six proposed pile positions on each new bearer line.', note: 'Check spans, footing/bracing requirements, ply joints and exact connectors.', topic: 'structure' },
+  joists: { title: 'Joist layout', badge: 'Provisional', type: 'sand', values: [['Main lines', '16 · J01–J16'], ['Member', '140 × 45 H3.2 SG8'], ['First 2 bays', '427.5 mm centres'], ['Next 13 bays', '438.46 mm centres'], ['Rebuilt continuations', 'J01–J03 · candidates']], description: 'Joists run towards the garden. J01–J03 align within the 900 mm rebuilt strip.', note: 'Dashed continuity is not verified. The 4570 mm finished envelope is not a cut length. Extra butt supports and final rims/blocking remain to detail.', topic: 'junction' }
 };
 const sourceLabels = {
   'PROJECT.md': ['Project brief', 'Confirmed requirements and latest owner decisions'],
@@ -34,33 +35,18 @@ function toast(message) {
   $('#toast').classList.add('visible');
   toastTimer = setTimeout(() => $('#toast').classList.remove('visible'), 4200);
 }
-const discussionOutcomes = {
-  layout: 'Confirm the site fit, finished datum and house clearances.',
-  junction: 'Agree retained-support reuse and a dimensioned joist/rim junction.',
-  structure: 'Settle the member layout and exact bracing and connection schedule.',
-  ground: 'Confirm ground suitability and a footing schedule for each support type.',
-  access: 'Agree a verified access detail for the selected one-tread arrangement.',
-  materials: 'Choose the actual product, fixing/gap guidance and a cut-by-stock list.'
-};
 function renderDiscussionTopics() {
-  const container = $('#discussion-topics');
-  container.replaceChildren();
-  for (const [i, topic] of topicData.entries()) {
-    const details = document.createElement('details');
-    details.className = 'discussion-topic';
-    details.id = `discussion-${topic.id}`;
-    if (i === 0) details.open = true;
-    details.innerHTML = `<summary><span class="topic-number">0${i + 1}</span><span class="topic-summary"><h3>${topic.title}</h3><p>${topic.summary}</p></span><span class="topic-chevron" aria-hidden="true">+</span></summary><div class="topic-body"><p class="topic-question">${topic.question}</p><p class="discussion-outcome"><strong>To settle together:</strong> ${discussionOutcomes[topic.id]}</p></div>`;
-    container.append(details);
-  }
+  $('#discussion-topics').innerHTML = `<caption>Items to confirm with the builder in person</caption><thead><tr><th scope="col">Check</th><th scope="col">Decision needed</th><th scope="col">When</th></tr></thead><tbody>${topicData.map(topic => `<tr id="discussion-${topic.id}" class="discussion-row"><th scope="row">${topic.title}</th><td>${topic.question}</td><td>${topic.stage}</td></tr>`).join('')}</tbody>`;
 }
-let selected = 'main';
-let currentView = 'layout';
+function renderJoistCoordinates() {
+  $('#joist-coordinates tbody').innerHTML = JOIST_CENTRES.map((x, i) => `<tr><th scope="row">J${String(i + 1).padStart(2, '0')}</th><td>${Number(x.toFixed(2))}</td><td>${i < 3 ? 'Main + dashed rebuilt continuation candidate' : 'Main deck'}</td></tr>`).join('');
+}
+let selected = 'joists';
 function selectArea(id) {
   if (!selectionData[id]) return;
   selected = id;
   const data = selectionData[id];
-  $('#selection-detail').innerHTML = `<div class="detail-kicker"><span>DESIGN DETAIL / ${data.number}</span><span class="detail-icon" aria-hidden="true">${data.icon}</span></div><h3 id="detail-title">${data.title}</h3><span class="badge badge-${data.type}">${data.badge}</span><dl class="detail-values">${data.values.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl><p class="detail-description">${data.description}</p><p class="detail-footnote">${data.note}</p><a class="detail-discussion-link" href="#discussion-${data.topic}">Discuss this with the builder <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>`;
+  $('#selection-detail').innerHTML = `<h3 id="detail-title">${data.title}</h3><span class="badge badge-${data.type}">${data.badge}</span><dl class="detail-values">${data.values.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl><p class="detail-description">${data.description}</p><p class="detail-footnote">${data.note}</p><a class="detail-discussion-link" href="#discussion-${data.topic}">Builder check →</a>`;
   for (const element of $('#design-drawing').querySelectorAll('[data-select]')) {
     const active = element.dataset.select === selected;
     element.classList.toggle('selected', active);
@@ -69,10 +55,10 @@ function selectArea(id) {
   $('.detail-discussion-link').addEventListener('click', () => openTopic(data.topic));
 }
 function setView(view) {
-  currentView = view;
+  if (view === 'framing' && ['main', 'extension'].includes(selected)) selected = 'joists';
   $('#drawing-panel').classList.remove('is-zoomed');
   $('#zoom-drawing').setAttribute('aria-pressed', 'false');
-  $('#zoom-drawing').textContent = 'Enlarge drawing +';
+  $('#zoom-drawing').textContent = 'Enlarge +';
   for (const tab of document.querySelectorAll('[data-view]')) {
     const active = tab.dataset.view === view;
     tab.setAttribute('aria-selected', String(active));
@@ -82,19 +68,22 @@ function setView(view) {
   const svg = $('#design-drawing');
   if (view === 'elevation') {
     renderElevation(svg);
-    $('#drawing-note').textContent = 'Selected layout: deck → one full-width 400 mm tread → garden. Halfway tread surface at 250 mm is proposed; access geometry and structure need verification.';
-    $('#drawing-scale').textContent = 'SCHEMATIC SIDE PROFILE';
+    $('#drawing-note').textContent = 'One full-width 400 mm tread, surface at 250 mm. Rises, supports and access geometry remain unverified.';
+    $('#drawing-scale').textContent = 'SIDE PROFILE';
     selectArea('tread');
   } else {
     renderPlan(svg, { view, selected });
-    $('#drawing-note').textContent = view === 'framing' ? 'Dashed framing and pile locations are provisional. Retained support condition, spans, bracing, junctions and connections are not verified.' : 'Finished deck and full-width tread outlines shown to proportion. Extension back extent is contextual. Select an area for details.';
-    $('#drawing-scale').textContent = 'DIMENSIONS IN MM';
+    $('#drawing-note').textContent = view === 'framing' ? '16 joist lines. Dashed J01–J03 are rebuilt-section continuation candidates. Check continuity, bearing, spans and fixings.' : 'Finished footprint. Extension rear extent is illustrative.';
+    $('#drawing-scale').textContent = 'TOP VIEW';
+    if (view === 'layout' && ['joists', 'bearer'].includes(selected)) selected = 'main';
     selectArea(selected);
   }
+  $('#drawing-legend').innerHTML = view === 'framing' ? '<span><i class="legend-joist"></i>Joists</span><span><i class="legend-bearer"></i>Bearers</span><span><i class="legend-pile"></i>Piles</span>' : view === 'layout' ? '<span><i class="legend-main"></i>Deck</span><span><i class="legend-rebuilt"></i>Rebuilt</span><span><i class="legend-tread"></i>One tread</span>' : '<span>Surface levels proposed</span>';
 }
 function openTopic(id) {
   const topic = $(`#discussion-${id}`);
-  if (topic) topic.open = true;
+  document.querySelectorAll('.discussion-row.is-focused').forEach(row => row.classList.remove('is-focused'));
+  if (topic) topic.classList.add('is-focused');
 }
 $('#design-drawing').addEventListener('plan-select', (event) => selectArea(event.detail.id));
 for (const tab of document.querySelectorAll('[data-view]')) {
@@ -115,9 +104,9 @@ for (const tab of document.querySelectorAll('[data-view]')) {
 $('#zoom-drawing').addEventListener('click', () => {
   const zoomed = $('#drawing-panel').classList.toggle('is-zoomed');
   $('#zoom-drawing').setAttribute('aria-pressed', String(zoomed));
-  $('#zoom-drawing').textContent = zoomed ? 'Fit to screen −' : 'Enlarge drawing +';
+  $('#zoom-drawing').textContent = zoomed ? 'Fit −' : 'Enlarge +';
 });
-$('#reset-view').addEventListener('click', () => { selected = 'main'; setView('layout'); });
+$('#reset-view').addEventListener('click', () => { selected = 'joists'; setView('framing'); });
 
 function download(filename, content, type = 'text/plain;charset=utf-8') {
   const url = URL.createObjectURL(new Blob([content], { type }));
@@ -149,10 +138,11 @@ async function copy(text, success) {
   }
 }
 renderDiscussionTopics();
+renderJoistCoordinates();
 renderBuildGuide($('#build-phases'));
 let printDetails = [];
 window.addEventListener('beforeprint', () => {
-  printDetails = Array.from(document.querySelectorAll('.build-phase, .discussion-topic')).map(element => [element, element.open]);
+  printDetails = Array.from(document.querySelectorAll('.build-phase, .coordinate-details')).map(element => [element, element.open]);
   for (const [element] of printDetails) element.open = true;
 });
 window.addEventListener('afterprint', () => {
@@ -188,9 +178,9 @@ $('#download-website').addEventListener('click', () => {
   clone.querySelector('#toast').textContent = '';
   clone.querySelector('#toast').classList.remove('visible');
   download('auckland-deck-design.html', '<!doctype html>\n' + clone.outerHTML, 'text/html;charset=utf-8');
-  toast('Guide downloaded. Open the HTML file on site or share it with your builder.');
+  toast('Guide downloaded.');
 });
-setView('layout');
+setView('framing');
 function openLinkedDiscussion() {
   if (location.hash.startsWith('#discussion-')) openTopic(location.hash.slice('#discussion-'.length));
   else if (location.hash.startsWith('#review-')) {

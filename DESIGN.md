@@ -57,11 +57,43 @@ It also occupies Y=0…350 inside the main deck. Separate main joists at the sam
 
 For the main deck alone, equal loading and the symmetric proposed two-support geometry give an equivalent reaction tributary width of **1300 mm per bearer**. This is a loading input, not a capacity check. The rebuilt strip and stair connections can change reactions; they require a combined load check rather than blindly applying a main-deck-only span table.
 
-## Joist spacing: conditional layout arithmetic
+## Joist layout — PROVISIONAL illustration
 
-For an example with 45 mm-wide outer joists whose outer faces are at X=0 and 6600, centre-line width is 6555 mm. Fifteen equal bays give **16 joist lines at 437 mm centres**: `X_i=22.5+437i`, i=0…15. This meets a *geometric target* of no more than 450 mm centres; the target itself still requires decking/joist source verification.
+The framing view shows **16 main-deck joist lines**, labelled J01–J16. With 45 mm-wide members, J01–J03 fit the 900 mm rebuilt strip. Their dashed extensions towards the retained bearer are a **continuous-joist candidate**, not an approved support or junction detail.
 
-This count includes the two side edge joists. It excludes extra butt-joint supports, stair framing and any changes in the rebuilt 900 mm strip. Decking overhang, long-edge rim arrangement and real timber sizes can alter the layout. Neither 2600 mm nor 2510 mm is an approved joist cut length: define the framing envelope, board overhang and rim connections first.
+| Layout item | Illustration value |
+|---|---|
+| First three centre lines | X=22.5, 450, 877.5 mm |
+| First two bays | 427.5 mm each |
+| Remaining centre lines | `X=877.5+(5700/13)×i`, i=1…13 |
+| Remaining thirteen bays | 5700/13 ≈ 438.46 mm each |
+| Last centre line | X=6577.5 mm |
+| Assumed outer member faces | X=0 and X=6600; J03 right face X=900 |
+
+| Joist | Centre X (mm) | Extent shown |
+|---|---:|---|
+| J01 | 22.50 | Dashed continuation into rebuilt section; unverified |
+| J02 | 450.00 | Dashed continuation into rebuilt section; unverified |
+| J03 | 877.50 | Dashed continuation into rebuilt section; unverified |
+| J04 | 1315.96 | Main deck only |
+| J05 | 1754.42 | Main deck only |
+| J06 | 2192.88 | Main deck only |
+| J07 | 2631.35 | Main deck only |
+| J08 | 3069.81 | Main deck only |
+| J09 | 3508.27 | Main deck only |
+| J10 | 3946.73 | Main deck only |
+| J11 | 4385.19 | Main deck only |
+| J12 | 4823.65 | Main deck only |
+| J13 | 5262.12 | Main deck only |
+| J14 | 5700.58 | Main deck only |
+| J15 | 6139.04 | Main deck only |
+| J16 | 6577.50 | Main deck only |
+
+This replaces the earlier **uniform 437 mm-centre illustration**, which did not align an edge member with the rebuilt strip's 900 mm boundary. The maximum illustrated spacing is approximately 438.46 mm, below the geometric target of 450 mm; the target and structural member capacity still need source verification.
+
+J01–J03 remain part of the **16 total main-deck lines**. If the continuous candidate is adopted, the three longer members replace three short main members; they are not three additional joists. Their finished plan envelope is approximately 4570 mm from Y≈−1970 to Y=2600, with support separations approximately 2320/1900 mm. These are not cut lengths or verified spans.
+
+**HOLD POINT:** confirm the existing support, continuity/junction, support reactions, bearing, rims, blocking, joints, fixing and bracing details before cutting or ordering. The count includes the two side edge joists; extra butt-joint supports and tread framing remain unquantified. Actual framing offsets, board overhang and delivered sizes may change the final grid.
 
 ## Garden access: one tread, 400 mm total run
 

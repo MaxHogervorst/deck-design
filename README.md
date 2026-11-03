@@ -1,11 +1,11 @@
 # Auckland deck — build guide and builder brief
 
-A portable website for a freestanding Auckland timber-deck project, with two purposes:
+Technical reference for the owner and builder:
 
-- **For the owner:** a practical seven-phase build guide, with the required checks before the affected work.
-- **For the builder:** drawings, dimensions, material assumptions and six topics to discuss with the owner **in person**.
-
-The builder's review happens in conversation with the owner. The website is a reference for that conversation; it has no review form, online assessments, feedback exports or reviewer-note storage.
+- **Plans:** framing opens first, with 16 numbered joist lines, three dashed continuation candidates, bearer/pile positions and a coordinate table. Dimensions and side profile are separate views.
+- **Materials:** specifications, planning quantities and outstanding decisions in one table.
+- **Build steps:** seven short phases, open by default.
+- **Builder checks:** a table for the in-person discussion. No online forms or feedback workflow.
 
 Live site: **https://maxhogervorst.github.io/deck-design/**
 
@@ -41,11 +41,11 @@ No remote fonts, analytics, APIs, accounts or external assets are required. The 
 
 ## Using the website
 
-The shared plan includes layout, provisional framing and side-profile views. Select an area for its dimensions, enlarge the drawing when needed, and use the selected full-width, one-tread arrangement as the reference.
+The framing view is the default. J01–J03 fit within the 900 mm rebuilt strip at 427.5 mm centres; the remaining 13 bays are approximately 438.46 mm. Dashed continuations remain provisional. Open the joist coordinate table for centre positions, or enlarge the drawing. No displayed coordinate is an approved cut length.
 
 The owner build guide covers design/pre-work, set-out, footings, bearers/bracing, joists and the rebuilt-section junction, decking, and the garden tread/completion. It explains the order of work without treating unresolved structural choices as approved construction details.
 
-The builder brief brings together the confirmed choices and six topics: layout/house interface, the rebuilt section and retained bearer, framing/bracing/connections, footings/ground, deck-to-tread-to-garden access, and the exact decking/purchase plan. Use these during the in-person discussion. Agreed changes belong in the project record rather than an on-site review form.
+The builder-checks table lists six topics: layout/house interface, the rebuilt section and retained bearer, framing/bracing/connections, footings/ground, deck-to-tread-to-garden access, and the exact decking/purchase plan. Use these during the in-person discussion. Agreed changes belong in the project record rather than an on-site review form.
 
 ## Share and publish
 

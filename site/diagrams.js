@@ -6,6 +6,8 @@ const C = {
 };
 let sequence = 0;
 
+export const JOIST_CENTRES = [22.5, 450, 877.5, ...Array.from({ length: 13 }, (_, i) => 877.5 + (5700 / 13) * (i + 1))];
+
 function el(name, attributes = {}, children = []) {
   const node = document.createElementNS(NS, name);
   for (const [key, value] of Object.entries(attributes)) {
@@ -58,7 +60,7 @@ function begin(svg, title, description, viewBox) {
   const d = el('desc', { id: `${uid}-desc` }); d.textContent = description;
   svg.append(t, d);
   const style = el('style');
-  style.textContent = '.deck-area{cursor:pointer;outline:none}.deck-area .area-outline{transition:stroke .15s,stroke-width .15s}.deck-area:hover .area-outline,.deck-area:focus-visible .area-outline,.deck-area.selected .area-outline{stroke:#2a6651;stroke-width:4}.deck-label{pointer-events:none;user-select:none}';
+  style.textContent = '.deck-area{cursor:pointer;outline:none}.deck-area .area-outline{transition:stroke .15s,stroke-width .15s}.deck-area:hover .area-outline,.deck-area:focus-visible .area-outline,.deck-area.selected .area-outline{stroke:#2a6651;stroke-width:4}.deck-area.selected .main-joist{fill:#164c34;stroke:#164c34}.deck-area:focus-visible .main-joist,.deck-area.selected .main-joist{stroke:#133c27;stroke-width:1.8}.deck-label{pointer-events:none;user-select:none}';
   svg.append(style);
   return uid;
 }
@@ -79,72 +81,85 @@ function outline(selected, id, normal = C.outline) {
   return { class: 'area-outline', stroke: selected === id ? '#23694d' : normal, 'stroke-width': selected === id ? 4 : 1.8 };
 }
 
-/** Proportional, dimensioned concept plan. All member positions are provisional. */
+/** Proportional concept plan. Member positions and continuity are provisional. */
 export function renderPlan(svg, { view = 'layout', selected = null } = {}) {
   const framing = view === 'framing';
-  const uid = begin(svg, framing ? 'Provisional deck framing plan' : 'Deck layout and dimensions',
-    'Main deck 6600 by 2600 millimetres. A 900 by 1970 millimetre rebuilt section sits behind the left end beside the extension. One full-width tread spans 6600 millimetres and projects 400 millimetres towards the garden, as selected by the user. Activate an area for its details. Framing positions are provisional, not approved construction details.',
+  const uid = begin(svg, framing ? 'Joist and bearer layout — provisional' : 'Deck layout and dimensions',
+    'Main deck 6600 by 2600 millimetres. Rebuilt section 900 by 1970 millimetres behind the left end. One full-width tread projects 400 millimetres. Framing view shows sixteen 45 millimetre-wide joists J01 to J16, three dashed continuation candidates in the rebuilt section, two double bearer lines and twelve proposed piles. Continuity, spans, bearing and fixing details require verification.',
     '0 0 1180 870');
   svg.setAttribute('role', 'group');
   const defs = el('defs');
   const boards = el('pattern', { id: `${uid}-boards`, width: 20, height: 18.8, patternUnits: 'userSpaceOnUse' });
-  boards.append(el('rect', { width: 20, height: 18.8, fill: framing ? '#efe3d0' : C.timber }));
-  boards.append(el('line', { x1: 0, y1: 18.1, x2: 20, y2: 18.1, stroke: C.timberLine, 'stroke-width': .65, opacity: framing ? .3 : .7 }));
+  boards.append(el('rect', { width: 20, height: 18.8, fill: C.timber }));
+  boards.append(el('line', { x1: 0, y1: 18.1, x2: 20, y2: 18.1, stroke: C.timberLine, 'stroke-width': .65, opacity: .7 }));
   defs.append(boards);
-  const grid = el('pattern', { id: `${uid}-grid`, width: 24, height: 24, patternUnits: 'userSpaceOnUse' });
-  grid.append(el('circle', { cx: 1, cy: 1, r: .65, fill: '#cfd7ca' }));
-  defs.append(grid);
-  svg.append(defs, el('rect', { width: 1180, height: 870, fill: C.paper }), el('rect', { x: 45, y: 20, width: 1090, height: 785, fill: `url(#${uid}-grid)`, opacity: .55 }));
+  svg.append(defs, el('rect', { width: 1180, height: 870, fill: C.paper }));
+
   const S = .13, X = 130, Y = 346.1, W = 6600 * S, H = 2600 * S, RW = 900 * S, RH = 1970 * S;
-  const main = interactive(svg, 'main', 'Main deck: 6600 by 2600 millimetres, 17.16 square metres, confirmed dimensions', selected);
-  main.append(el('rect', { x: X, y: Y, width: W, height: H, fill: `url(#${uid}-boards)`, ...outline(selected, 'main') }));
-  const rebuilt = interactive(svg, 'rebuilt', 'Rebuilt section: 900 by 1970 millimetres, 1.773 square metres; retained bearer at back edge', selected);
-  rebuilt.append(el('rect', { x: X, y: Y - RH, width: RW, height: RH, fill: `url(#${uid}-boards)`, ...outline(selected, 'rebuilt') }));
-  const extension = interactive(svg, 'extension', 'House extension: 5700 millimetre frontage; back extent unknown; deck is freestanding', selected);
+  const TX = X, TY = Y + H, TW = W, TH = 400 * S;
+  const main = interactive(svg, 'main', 'Main deck: 6600 by 2600 millimetres, 17.16 square metres', selected);
+  main.append(el('rect', { x: X, y: Y, width: W, height: H, fill: framing ? '#ffffff' : `url(#${uid}-boards)`, ...outline(selected, 'main') }));
+  const rebuilt = interactive(svg, 'rebuilt', 'Rebuilt section: 900 by 1970 millimetres; retained bearer at back edge', selected);
+  rebuilt.append(el('rect', { x: X, y: Y - RH, width: RW, height: RH, fill: framing ? '#f3f7f0' : `url(#${uid}-boards)`, ...outline(selected, 'rebuilt') }));
+  const extension = interactive(svg, 'extension', 'House extension: 5700 millimetre frontage; rear extent not surveyed', selected);
   extension.append(el('rect', { x: X + RW, y: Y - RH, width: W - RW, height: RH, fill: '#e6ece4', ...outline(selected, 'extension', '#99a99a') }));
-  // Dashed back edge indicates that the extension's true rear extent is not surveyed.
   line(extension, X + RW + 2, Y - RH, X + W - 2, Y - RH, { stroke: C.paper, 'stroke-width': 5 });
   line(extension, X + RW, Y - RH, X + W, Y - RH, { stroke: '#99a99a', 'stroke-dasharray': '8 6', 'stroke-width': 1.7 });
-  const tread = interactive(svg, 'tread', 'One full-width garden tread: 6600 millimetres wide by 400 millimetres total projection; selected surface level about 250 millimetres above the garden', selected);
-  const TX = X, TY = Y + H, TW = W, TH = 400 * S;
-  tread.append(el('rect', { x: TX, y: TY, width: TW, height: TH, rx: 1, fill: `url(#${uid}-boards)`, ...outline(selected, 'tread', C.outline) }));
+  const tread = interactive(svg, 'tread', 'One full-width tread: 6600 by 400 millimetres, selected surface 250 millimetres above garden; tread framing not detailed', selected);
+  tread.append(el('rect', { x: TX, y: TY, width: TW, height: TH, rx: 1, fill: framing ? '#f1eee5' : `url(#${uid}-boards)`, ...outline(selected, 'tread', C.outline) }));
 
   if (framing) {
-    const bearer = interactive(svg, 'bearer', 'Provisional framing: two double 140 by 45 bearer lines, twelve suggested piles; structural verification outstanding', selected);
-    // Joist alignment in the rebuilt strip requires a junction detail; do not draw a resolved grid there.
-    for (let i = 0; i < 16; i++) {
-      const px = X + (22.5 + 437 * i) * S;
-      if (px <= X + RW) continue;
-      line(bearer, px, Y + 5, px, Y + H - 5, { stroke: '#7c8874', 'stroke-width': 1.6, opacity: .65 });
-    }
-    bearer.append(el('rect', { x: X + 3, y: Y + 3, width: RW - 6, height: 350 * S, fill: '#e6c492', opacity: .48, stroke: C.amber, 'stroke-dasharray': '3 4' }));
+    // Bearers and piles sit beneath the joists; all are visible independently.
+    const bearer = interactive(svg, 'bearer', 'Two provisional double 140 by 45 bearer lines at Y350 and Y2250, with twelve proposed piles', selected);
     for (const position of [350, 2250]) {
       const py = Y + position * S;
-      bearer.append(el('rect', { x: X, y: py - 5.85, width: W, height: 11.7, fill: C.amberFill, ...outline(selected, 'bearer', C.amber), 'stroke-dasharray': '7 4' }));
+      bearer.append(el('rect', { class: 'new-bearer area-outline', 'data-y-mm': position, x: X, y: py - 45 * S, width: W, height: 90 * S, fill: '#f4d6a6', stroke: C.amber, 'stroke-width': 1.8 }));
+      // Split the double bearer into its two 45 mm plies in the plan.
+      line(bearer, X, py, X + W, py, { stroke: '#b17c3d', 'stroke-width': .8 });
       for (const pile of [250, 1470, 2690, 3910, 5130, 6350]) {
-        bearer.append(el('rect', { x: X + pile * S - 8.125, y: py - 8.125, width: 16.25, height: 16.25, rx: 1.5, fill: C.paper, stroke: C.amber, 'stroke-width': 2 }));
+        bearer.append(el('rect', { class: 'pile', 'data-x-mm': pile, 'data-y-mm': position, x: X + pile * S - 8.125, y: py - 8.125, width: 16.25, height: 16.25, fill: '#fffefa', stroke: C.amber, 'stroke-width': 2 }));
       }
+    }
+    // Align J01–J03 with the 900 mm-wide rebuilt strip. This is a layout option,
+    // not a verified span, bearing, continuity or cutting detail.
+    const centres = JOIST_CENTRES;
+    const joists = interactive(svg, 'joists', 'Sixteen provisional 140 by 45 joists J01 to J16; centres 427.5 millimetres twice then approximately 438.46 millimetres thirteen times. J01 to J03 have dashed rebuilt-section continuation candidates.', selected);
+    for (const [i, centre] of centres.entries()) {
+      const px = X + (centre - 22.5) * S;
+      const id = `J${String(i + 1).padStart(2, '0')}`;
+      if (i < 3) {
+        joists.append(el('rect', { class: 'rebuilt-joist-extension', 'data-member-id': id, 'data-x-mm': centre, x: px, y: Y - RH, width: 45 * S, height: RH, fill: '#edf5e7', stroke: '#426b49', 'stroke-width': 1.4, 'stroke-dasharray': '6 4' }));
+      }
+      joists.append(el('rect', { class: 'main-joist', 'data-member-id': id, 'data-x-mm': centre, x: px, y: Y, width: 45 * S, height: H, fill: selected === 'joists' ? '#164c34' : '#456b4c', stroke: '#234c32', 'stroke-width': .7 }));
+      text(svg, X + centre * S, Y + 23, id, {
+        class: 'deck-label joist-id', 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 650,
+        fill: '#203d2b', 'paint-order': 'stroke', stroke: '#ffffff', 'stroke-width': 4, 'stroke-linejoin': 'round'
+      });
     }
     text(svg, X + W + 11, Y + 350 * S + 5, 'A', { fill: C.amber, 'font-size': 17, 'font-weight': 700 });
     text(svg, X + W + 11, Y + 2250 * S + 5, 'B', { fill: C.amber, 'font-size': 17, 'font-weight': 700 });
-    text(svg, X + W / 2, Y + H / 2 - 12, 'PROVISIONAL FRAMING', { class: 'deck-label', 'text-anchor': 'middle', 'font-size': 24, 'font-weight': 650, 'letter-spacing': 1.4, fill: C.ink, 'paint-order': 'stroke', stroke: '#efe3d0', 'stroke-width': 9 });
-    text(svg, X + W / 2, Y + H / 2 + 18, '2 double bearer lines · 12 suggested piles', { class: 'deck-label', 'text-anchor': 'middle', 'font-size': 17, fill: C.muted, 'paint-order': 'stroke', stroke: '#efe3d0', 'stroke-width': 8 });
-    text(svg, X, 825, 'Dashed amber = proposed members. Junction, spans, bracing and connections need verification.', { 'font-size': 16, fill: C.amber });
+    text(svg, X, 818, 'J01–J16: 45 mm wide · first 2 bays 427.5 mm · remaining 13 bays ≈438.46 mm', { 'font-size': 16, fill: C.ink });
+    text(svg, X, 845, 'Dashed J01–J03 = continuation option. Junction, bearing, spans and fixings to confirm.', { 'font-size': 15, fill: C.muted });
   } else {
     text(svg, X + W / 2, Y + H / 2 - 5, 'MAIN DECK', { class: 'deck-label', 'text-anchor': 'middle', 'font-size': 31, 'font-weight': 550, 'letter-spacing': 2.5 });
     text(svg, X + W / 2, Y + H / 2 + 29, '6.60 × 2.60 m  /  17.16 m²', { class: 'deck-label', 'text-anchor': 'middle', 'font-size': 19, fill: '#5f664e' });
-    text(svg, X, 825, 'Confirmed layout: main deck, rebuilt section and full-width tread. Structural details need review.', { 'font-size': 16, fill: C.muted });
+    text(svg, X, 825, 'Confirmed footprint. Structural details remain provisional.', { 'font-size': 16, fill: C.muted });
   }
+
   const labels = el('g', { class: 'deck-label', 'pointer-events': 'none' }); svg.append(labels);
-  text(labels, X + RW / 2, Y - RH / 2 - 18, 'REBUILT', { 'text-anchor': 'middle', 'font-size': 16, 'font-weight': 650, 'letter-spacing': .5 });
-  text(labels, X + RW / 2, Y - RH / 2 + 7, '0.90 × 1.97 m', { 'text-anchor': 'middle', 'font-size': 13 });
-  text(labels, X + RW / 2, Y - RH / 2 + 30, '1.773 m²', { 'text-anchor': 'middle', 'font-size': 14, fill: '#5f664e' });
+  if (!framing) {
+    text(labels, X + RW / 2, Y - RH / 2 - 18, 'REBUILT', { 'text-anchor': 'middle', 'font-size': 16, 'font-weight': 650 });
+    text(labels, X + RW / 2, Y - RH / 2 + 7, '0.90 × 1.97 m', { 'text-anchor': 'middle', 'font-size': 13 });
+    text(labels, X + RW / 2, Y - RH / 2 + 30, '1.773 m²', { 'text-anchor': 'middle', 'font-size': 14, fill: '#5f664e' });
+  } else {
+    text(labels, X + RW / 2, Y - RH + 32, 'REBUILT', { 'text-anchor': 'middle', 'font-size': 13, 'font-weight': 650, 'paint-order': 'stroke', stroke: '#f3f7f0', 'stroke-width': 4 });
+  }
   text(labels, X + RW + (W - RW) / 2, Y - RH / 2 - 12, 'HOUSE EXTENSION', { 'text-anchor': 'middle', 'font-size': 25, 'font-weight': 450, 'letter-spacing': 2 });
-  text(labels, X + RW + (W - RW) / 2, Y - RH / 2 + 20, '5.70 m frontage · rear extent not surveyed', { 'text-anchor': 'middle', 'font-size': 17, fill: C.muted });
-  text(labels, TX + TW / 2, TY + TH / 2 + 6, 'ONE TREAD · 6600 × 400 mm', { 'text-anchor': 'middle', 'font-size': 17, 'font-weight': 600, 'letter-spacing': 1 });
+  text(labels, X + RW + (W - RW) / 2, Y - RH / 2 + 20, '5700 mm frontage · rear extent not surveyed', { 'text-anchor': 'middle', 'font-size': 17, fill: C.muted });
+  text(labels, TX + TW / 2, TY + TH / 2 + 6, framing ? 'ONE TREAD · FRAMING TO CONFIRM' : 'ONE TREAD · 6600 × 400 mm', { 'text-anchor': 'middle', 'font-size': 17, 'font-weight': 600, 'letter-spacing': .6 });
   text(labels, X + W / 2, 781, 'GARDEN', { 'text-anchor': 'middle', 'font-size': 17, 'letter-spacing': 3, fill: C.green });
-  const retained = interactive(svg, 'rebuilt', 'Retained bearer at rebuilt section back edge, approximately Y minus 1970 millimetres; capacity and exact offset unverified', selected);
-  retained.append(el('rect', { x: X + 2, y: Y - RH - 4, width: RW - 4, height: 8, rx: 1, fill: C.green, stroke: selected === 'rebuilt' ? '#23694d' : C.green, 'stroke-width': 1.5 }));
+  const retained = interactive(svg, 'rebuilt', 'Retained bearer at rebuilt-section back edge, approximately Y minus 1970 millimetres; exact offset and capacity unverified', selected);
+  retained.append(el('rect', { x: X + 2, y: Y - RH - 4, width: RW - 4, height: 8, fill: C.green, stroke: C.green, 'stroke-width': 1.5 }));
   text(svg, X + RW + 17, Y - RH - 11, 'Retained bearer · exact offset to verify', { 'font-size': 13, fill: C.green });
   dimH(svg, X, X + W, 43, '6600 mm main frontage');
   dimH(svg, X, X + RW, Y - 20, '900');
@@ -152,10 +167,6 @@ export function renderPlan(svg, { view = 'layout', selected = null } = {}) {
   dimV(svg, 83, Y - RH, Y, '1970 mm');
   dimV(svg, X + W + 54, Y, Y + H, '2600 mm');
   dimV(svg, TX + TW + 30, TY, TY + TH, '400 mm');
-  line(svg, X + W + 78, 111, X + W + 78, 161, { stroke: C.green, 'stroke-width': 1.5 });
-  line(svg, X + W + 78, 111, X + W + 73, 120, { stroke: C.green });
-  line(svg, X + W + 78, 111, X + W + 83, 120, { stroke: C.green });
-  text(svg, X + W + 78, 184, 'HOUSE', { 'text-anchor': 'middle', 'font-size': 11, fill: C.muted, 'letter-spacing': 1 });
 }
 
 /** One full-width tread between the deck and garden, at the selected halfway level. */

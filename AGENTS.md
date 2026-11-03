@@ -27,7 +27,7 @@ Read `README.md`, `PROJECT.md`, `DESIGN.md`, `OPEN_ISSUES.md`, `MATERIALS.md`, `
 
 ## Resolution pass — 2026-11-03
 - Read `SITE_MEASUREMENTS.md` as well; newly supplied rebuilt depth is 1970 mm (area 1.773 m²); retained bearer is now confirmed at the back edge and about 500 mm drop is measured at intended step exit. Exact support offsets and remaining perimeter levels are unknown.
-- Main-only 16 joist lines / 19 decking rows are conditional arithmetic, not approved framing or quantities to order.
+- Current framing illustration has 16 main joist lines: centres 22.5, 450, 877.5 mm, then 877.5+(5700/13)×i for i=1…13. Bays are 2×427.5 mm and 13×438.46 mm. The prior uniform 437 mm grid is superseded. All geometry remains PROVISIONAL, not approved framing or an order.
 - Rear bearer at Y=350 mm is inside the main deck; reconstructed joists reaching it need a non-conflicting junction with main joists/rim. Do not freeze cuts before this detail and combined loads are checked.
 - User explicitly selects one tread / 400 mm total run, ending at Y=3000. The two-tread/800 mm alternative was arithmetic explanation only, not selected. About 500 mm drop is measured; precise finished levels and allowable rises must be resolved, and full-width layout and selected 250 mm level are now confirmed; access verification remains open.
 - Primary-source reads were blocked by proxy CONNECT 403. The user subsequently published the environment. The earlier network failure record is historical, not proof of current access failure. Do not reapply or publish previous environment configuration changes. Do not mark structural/regulatory checks complete until actual current applicable sources are read.
@@ -46,3 +46,8 @@ Read `README.md`, `PROJECT.md`, `DESIGN.md`, `OPEN_ISSUES.md`, `MATERIALS.md`, `
 - Keep the build sequence practical and readable, with the existing structural hold points before the affected work.
 - Builder review happens with the owner in person. Present drawings, confirmed choices and discussion questions; do not add online review forms, assessments, feedback exports or reviewer-note storage.
 - Sharing the page or downloading the website remains useful. Keep working-document downloads excluded from the public Pages variant.
+
+## Website presentation and framing illustration
+- User requests a compact technical reference: explicit joist layout, a materials table, build steps and open builder checks. Remove promotional copy and decorative material cards.
+- Show all 16 main joists. J01–J03 have dashed candidate continuations into the 900 mm rebuilt strip; these replace three short main joists if adopted, not three extra members.
+- With 45 mm members, the illustrated first member left face is X=0, J03 right face X=900 and last member right face X=6600. Do not imply the grid, continuous spans, support condition or connections have been verified.

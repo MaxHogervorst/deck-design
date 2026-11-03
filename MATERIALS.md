@@ -7,9 +7,9 @@ No supplier order should be placed from these quantities until the footing/braci
 |---|---|---|
 | H5 125×125 piles | 12 | Lengths depend on confirmed footing depth, exposed height and connection geometry; anchor-grade suitability to be checked |
 | H3.2 SG8 140×45 double bearers | 4 × 6600 mm nominal plies = **26.4 lm installed** | Splice, cuts and allowable joint positions to be engineered/checked |
-| H3.2 SG8 140×45 joists | 16 main-deck joist lines as a conditional geometric baseline; final count/lengths unresolved | Includes side edge joists once; rebuilt-section junction, butt supports, rims and overhangs can change count and cuts |
-| H3.2 SG8 140×45 rims | 2 × 6600 mm nominal along long edges; side edge joists are already included in the 16-line baseline | Confirm end-joint layout and method |
-| H3.2 138×38 decking | Conditional main 19 rows / 125.4 lm plus rebuilt 14 rows / 12.6 lm of row-length stock; see calculations below. Final order and stair quantities unresolved | Not a purchase length/stock list; actual board width, perimeter clearances, gap/moisture, joints and waste govern |
+| H3.2 SG8 140×45 joists | 16 total main joist lines; J01–J03 shown with candidate continuations; cuts TBD | Three longer candidates replace three short members, not three extra joists. Side edges counted once; junction, bearings, butt supports and cuts unverified |
+| H3.2 SG8 140×45 rims | 2 × 6600 mm = 13.2 lm nominal along long edges; side edge joists already included in the 16-line baseline | Confirm end-joint layout and method |
+| H3.2 138×38 decking | Conditional 19 main + 14 rebuilt + 3 tread rows = 157.8 lm of row-length stock before allowances; actual product and final order unresolved | Not a purchase length/stock list; actual board width, perimeter clearances, gap/moisture, joints and waste govern |
 | Decking screws | Previous allowance **2 × 500 packs** | Count from final joist/butt layout and ends; stainless or appropriate corrosion rating |
 | DPC | At each pile top as required | Exact grade/size per detail |
 | Ordinary/anchor pile structural fixing kits | TBD | **Do not buy until connection type is verified** |
@@ -71,7 +71,7 @@ With 17 full-width interior rows and two equally trimmed edge rows:
 
 **No gap has been selected.** Follow the actual supplier's wet/dry-board installation instructions, allowable edge ripping and fixing edge distances. Nineteen 6600 mm rows represent **125.4 lm** of full-width row-length stock before stock-length availability, supported butt joints, kerf, defects and waste. Ripping edges reduces installed board width, not the nominal board lengths purchased; possible offcut reuse requires a real cut plan.
 
-The main-deck-only geometric joist baseline is 16 lines with 15 bays at 437 mm centres, subject to the framing assumptions in DESIGN.md. It is not 16 approved 2600 mm cuts. Extra board-butt supports and the rebuilt junction are excluded. Side edge joists are already counted; do not add the same members again as short rims.
+The current geometric joist baseline is **16 main lines**, with two 427.5 mm bays in the 900 mm rebuilt strip and thirteen 5700/13 ≈ 438.46 mm bays across the remaining frontage. See DESIGN.md for the centre schedule. The former uniform 437 mm illustration is superseded. J01–J03 show candidate continuations to the retained bearer; if adopted, they replace three short main members within the 16 count. No member cuts, bearings or continuous spans are approved. Extra butt supports and tread framing remain unquantified; side edge joists are already counted once.
 
 A **two-screws-per-board-per-support illustration** is 19×16×2 = **608 screws**, before butt joints, extra supports, stairs, rebuilt section, rim connections or waste. Verify the selected decking manufacturer's screw type/length, corrosion suitability, edge distances and actual fixing pattern first. This does not validate the earlier two-500-pack allowance.
 
@@ -104,7 +104,7 @@ The invoice examples above remain historical evidence only. Obtain comparable GS
 
 ### Continuous-joist candidate in the rebuilt 900 mm strip
 
-With the retained bearer now reported at the back edge, a joist continuous from the rebuilt back edge across the main deck would occupy a finished envelope of **4570 mm** in Y. The old-section span to proposed rear bearer is approximately **2320 mm**, followed by **1900 mm** between new bearer centres. These are geometry inputs for a multi-support check, not approved spans or cut lengths. Any such members replace overlapping separate main/rebuilt joists at those X positions; do not add them on top of the current 16-line main-only baseline. No stock length or splice has been selected.
+With the retained bearer now reported at the back edge, a joist continuous from the rebuilt back edge across the main deck would occupy a finished envelope of **4570 mm** in Y. The old-section span to proposed rear bearer is approximately **2320 mm**, followed by **1900 mm** between new bearer centres. These are geometry inputs for a multi-support check, not approved spans or cut lengths. Any such members replace overlapping separate main/rebuilt joists at those X positions; do not add them on top of the current 16-line main baseline. No stock length or splice has been selected.
 
 ## Latest thickness and full-width tread selection
 

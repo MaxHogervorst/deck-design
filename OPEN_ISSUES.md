@@ -9,6 +9,7 @@ Updated 2026-11-03. **Not build-ready.** Tick marks close only the exact task de
 - [x] Identify centre/face distinction: proposed 90 mm bearers at Y=350/2250 have 1900 mm centre separation and 1810 mm clear gap. This is not a span-table approval.
 - [x] Identify the shared-bearer junction conflict: rebuilt joists reaching Y=350 enter main-deck framing. Junction/rim/support detail remains open below.
 - [x] Replace old 18-row assumption with conditional 19-row board-layout scenarios and balanced edge strips. Product/gap and order remain open.
+- [x] Show all 16 main joist lines in the framing illustration, aligned to the 900 mm rebuilt strip: 2×427.5 mm and 13×438.46 mm bays. J01–J03 dashed continuations are candidates only; this closes the missing illustration, not structural approval.
 - [x] User confirms **one intermediate tread and 400 mm total run**. Horizontal outline ends at Y=3000. Nominal 500 mm fall would create two 250 mm rises; vertical fit remains a HOLD POINT, not a compliant stair selection.
 
 ## Awaiting user site facts and preference
@@ -39,8 +40,8 @@ Historical observation before the later environment publication: proxy CONNECT 4
 | Hold point | Evidence needed to close it |
 |---|---|
 | Applicable standard and loads | Current applicable NZS 3604 edition/amendments and scope; site/loading/ground/exposure inputs; identify any specific engineering required |
-| Main bearer/joist sizing | Cited span/cantilever definitions/tables, actual member grade/size, loading, supports and permitted centres |
-| Rebuilt junction / shared support | Measured retained support geometry/condition; coherent continuous/jointed/offset/separate framing detail, rim junction and combined support reactions |
+| Main bearer/joist sizing | Cited span/cantilever definitions/tables, actual member grade/size, loading, supports and permitted centres; verify the illustrated 427.5/438.46 mm grid before finalising |
+| Rebuilt junction / shared support | Measured retained support geometry/condition; verify or replace the three dashed J01–J03 continuation candidates, their continuity/bearing, rim junction and combined support reactions |
 | Bracing | Demand in both directions and a documented system/layout meeting it; identify exact anchor/ordinary piles and rated connections |
 | Footings | Ordinary/anchor dimensions, embedment, ground-bearing basis and house-footing/service clearance; no round/square ambiguity |
 | Connections | Exact pile → double bearer → joist detail at measured exposure, DPC, corrosion class, edge distances, component/fixing schedule and ply fastening/splices |
