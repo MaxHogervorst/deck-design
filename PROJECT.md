@@ -1,0 +1,57 @@
+# Project brief
+
+## Confirmed requirements
+
+| Topic | Decision |
+|---|---|
+| Location | Auckland, New Zealand; immediately beside existing weatherboard house |
+| Type | **Freestanding** timber deck; do not structurally attach to house |
+| Plan dimensions | **6600 mm** along frontage × **2600 mm** outward = **17.16 m²** (main deck only) |
+| Finished surface height | **About 500 mm drop measured at intended step exit**, confirmed in this pass; remaining perimeter/corner ground levels not supplied |
+| Site | Mostly level; existing soil/grass; check local gradients and actual finished ground levels |
+| Decking | Budget **H3.2 treated pine**, **38 mm thickness selected**, with 138 mm width provisional; exact product, finish and stock lengths to confirm |
+| Framing preference | H3.2 SG8 timber, **double 140×45 bearers**, **140×45 joists** |
+| Piles | H5 timber; earlier concept **12 × 125×125 mm**, two rows of six |
+| Access | **One intermediate tread, 400 mm total projection**, confirmed in this pass; total outward outline 3000 mm. About 500 mm drop is measured; full 6600 mm width and selected 250 mm tread surface level are confirmed; safe vertical detail and supports remain unverified |
+| Shopping | Auckland, ideally Bunnings or Mitre 10; builder has Mitre 10 trade account |
+| User goal | DIY construction, safe and straightforward, low waste/cost, with detailed diagrams and shopping list |
+| Preferred outputs | Markdown working notes plus the requested shareable review website |
+
+## The site/house interface
+- Keep wall cladding, flashings, vents and any drainage path unobstructed.
+- The house has weatherboards; user deliberately selected freestanding framing to avoid penetrating cladding.
+- Check location/depth of existing house footings before any excavation near the house.
+- Verify that finished deck level won't bridge cladding clearance or door threshold waterproofing.
+
+## Relevant conversation history
+Originally considered 3×2.5 m at 600–1000 mm, later changed to 6.6×2.5 m and ~500 mm. Builder (Scott) advised using 140×45 timber for both bearer and joist layers, roughly 1.2–1.3 m pile intervals along bearer lines, a long straightedge and strings for flatness, planning board layout to avoid a tiny final ripped board, and carefully measuring actual timber dimensions. User subsequently confirmed **double** bearers.
+
+## Not assumed
+- Neither four anchor piles nor twelve total piles has yet been proven necessary/sufficient by a full bracing calculation.
+- The prior 600 mm builder footing suggestion may not satisfy anchor-pile requirements; footings depend on pile class and ground.
+- User's 'one step' preference does not establish a compliant single-riser staircase.
+
+## Latest site geometry and rebuilt old deck (2026-11-03)
+- The **extension frontage is 5700 mm**, immediately next to a **900 mm frontage of a demolished old-deck section**. The two add to the 6600 mm frontage of the new main deck.
+- The demolished old-deck section was removed for the extension and now needs to be **rebuilt**; it is not an existing completed deck.
+- The rebuilt old-deck section sits **beside the extension** and terminates at the extension's front plane. It does **not** extend forward into the new 2600 mm main deck.
+- The entire new main deck is a simple 6600×2600 rectangle, projecting equally across the full width, and meets the rebuilt section at its rear edge.
+- A bearer remaining from the old deck runs **parallel to the 6600 mm front edge**. User reports the rebuilt section can be joisted between this bearer and the new main deck's rear bearer. This is a structural hypothesis requiring verification, not a confirmed shared-load design.
+- The **900 mm measure is a frontage width**, NOT the distance between the two bearer supports or the old-deck section depth. The user has now supplied the old section depth as **1970 mm**; the retained bearer is now confirmed **at the back edge**, nominally Y≈−1970. Exact bearer faces/centres and structural adequacy remain to verify; separation to proposed rear bearer Y=350 is approximately 2320 mm.
+- User now explicitly confirms **one intermediate tread and 400 mm total projection**, so the intended outward outline is **3000 mm**. At a true 500 mm drop, two equal rises would be 250 mm each; vertical suitability remains unresolved. Do not replace the selected one-tread layout with two treads without a further user decision.
+
+## Resolution pass — 2026-11-03
+
+- **CONFIRMED BY USER:** the handoff dimensions/preferences above; user now supplies rebuilt-section depth **1970 mm**, giving **1.773 m²** rebuilt / **18.933 m²** combined excluding stairs. Retained bearer is now confirmed at the back edge; about 500 mm drop at the intended step is measured. Exact support-face/centre offsets and remaining site levels are not supplied.
+- **PROVISIONAL:** revised main-only 16-line joist layout and 19 decking-row scenarios in [DESIGN.md](DESIGN.md) and [MATERIALS.md](MATERIALS.md). These are arithmetic, not source-verified span/fixing selections.
+- **HOLD POINT:** rebuilt joists crossing Y=0 to the proposed bearer at Y=350 need an explicit junction detail; shared loading alone is not the whole issue.
+- **HOLD POINT:** record the supplied rebuilt depth/bearer location/drop and verify exact support offsets/condition, remaining heights and the landing/approach envelope using [SITE_MEASUREMENTS.md](SITE_MEASUREMENTS.md).
+- **VERIFIED WITH PRIMARY SOURCE:** none yet. The earlier primary-source attempts were blocked. The environment was subsequently published by the user; that historic access result is not a claim about current networking, and no structural verification has been performed in this website task.
+
+### Latest clarification
+
+“1970mm deep” is recorded as the rebuilt section's finished depth: **900×1970 mm**. It is not assumed to locate the retained bearer. The user reiterated **400 mm** for the steps; the follow-up now resolves this as **400 mm total run with one intermediate tread**. Subsequent reply confirms **about 500 mm measured drop at the intended step**, and the retained bearer **at the back edge** of the rebuilt section. Full 6600 mm tread width and 250 mm halfway surface level are now selected. Exact bearer offsets and remaining perimeter levels remain unknown.
+
+### Confirmed website choices
+
+The owner selected a **full-width 6600×400 mm tread**, with its surface halfway down at **250 mm above garden**, and **38 mm-thick pine**. The intended horizontal area is 2.64 m² for the tread, or **21.573 m²** main + rebuilt + tread. The selected levels do not establish access compliance. Board width, exact product, finish, stock lengths and all structural/access checks remain open.

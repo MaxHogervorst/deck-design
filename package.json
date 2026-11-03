@@ -1,0 +1,13 @@
+{
+  "name": "auckland-deck-review",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A portable, interactive review of the Auckland deck concept.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=22" }
+}
