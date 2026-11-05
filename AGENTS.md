@@ -11,6 +11,18 @@ Read `README.md`, `PROJECT.md`, `DESIGN.md`, `OPEN_ISSUES.md`, `MATERIALS.md`, `
 - Don't infer that a 400 mm-deep single tread can handle a 500 mm total rise without safe intermediate risers.
 - Never include private invoice addresses, phone numbers, bank account numbers or GST numbers in project artifacts or research requests.
 
+## Holistic review — 5 November 2026 (current)
+
+**CONFIRMED BY USER:** one build sequence; choose the simplest support arrangement. **PROVISIONAL recommendation:** keep the tread independently ground-supported, and set out/build its foundations with the main deck. Build both frames and all concealed connections before boards. The owner has not selected a landing/deck height change or approved a footing/frame design.
+
+**HOLD POINT — levels first:** the measured 500 mm drop and halfway tread yield 250+250 mm rises. BRANZ's published common/main private stair guidance gives a 190 mm maximum. One tread under that guidance permits at most 380 mm total drop, so a compatible level solution needs at least 120 mm change; no solution is selected. Recheck actual clearance, timber treatment and all foundation heights after any level change. Do not turn the old 250/212/72 mm arithmetic into construction datums.
+
+**Whole-system arithmetic:** at the old levels, deck boards underside=462; main rim bottom=322; tread frame top=212 mm. The 110 mm gap prevents simply bolting a lower ledger alongside the rim. Ground support avoids that unverified drop connection and added rim/joist loads. This is a simplicity recommendation, not a foundation/connection approval.
+
+**Withdrawn:** the six-station/twelve-tread-footing layout and G01–G12 purchasing quantities. Support both rails, but derive foundation count, positions, bearing, spans and restraint from GP01. The two 6600 mm rails and sixteen 310 mm crosspieces remain trial geometry only; frame depth/cuts follow resolved levels. Twelve proposed *main* piles remain a separate, unverified structural layout.
+
+Review the main framing as one system: wet-service spans and 350 mm centre-line end projections, 1220 mm pile spacing/250 mm bearer end offsets, doubled-bearer splices, bracing in both directions, actual pile/joist connector alignment, retained support capacity, three continuous joists, rear rim interruptions and block-end fixings. Actual joist ends depend on rim thickness; 4570/2600 mm are envelopes. Supported board stock joints and the final board product must be decided before covering the frame.
+
 ## Current geometry (updated 2026-11-03)
 - Main *new* deck: 6600 mm along frontage × **2600 mm** out from facade, about 500 mm high, freestanding; full 6600 width remains 2600 deep.
 - Of that 6600 frontage, **5700 mm** faces new extension, **900 mm** is in front of a demolished old deck section alongside the extension.
@@ -52,7 +64,7 @@ Read `README.md`, `PROJECT.md`, `DESIGN.md`, `OPEN_ISSUES.md`, `MATERIALS.md`, `
 - Show all 16 main joists. J01–J03 have dashed candidate continuations into the 900 mm rebuilt strip; these replace three short main joists if adopted, not three extra members.
 - With 45 mm members, the illustrated first member left face is X=0, J03 right face X=900 and last member right face X=6600. Do not imply the grid, continuous spans, support condition or connections have been verified.
 
-## Latest plan-review scope and support proposals
+## Previous plan-review scope and support proposals (tread foundation layout superseded)
 - Builder reviews the plan once with the owner **before construction**. Do not imply staged site inspections, builder visits or approvals during the build; later checks in build steps are the owner's checks against the agreed plan.
 - Remove the house-clearance/services checklist from the builder brief at the user's request. Preserve relevant physical constraints as owner-managed matters outside that brief; do not mark them technically verified.
 - **CONFIRMED BY USER:** no handrails proposed. Do not add handrail tasks to the website/build sequence or present this preference as an independent regulatory determination.
@@ -64,7 +76,7 @@ Read `README.md`, `PROJECT.md`, `DESIGN.md`, `OPEN_ISSUES.md`, `MATERIALS.md`, `
 - At tread surface 250 and boards 38, frame top 212 / underside 72 mm above garden before separation details. Specify grade/treatment for the actual low-clearance exposure; do not assume main-deck H3.2 offcuts are suitable or invent a 150 mm-to-H4 rule.
 - Rotated rebuilt-board estimate is 7×1.970=13.79 lm. Current combined row-stock scenario is 125.4+13.79+19.8=158.99 lm (~159.0), before allowances; older 14-row /157.8 lm scenarios are superseded for this orientation.
 
-## Numbered assembly guide and connection details
+## Previous numbered guide (support count and sequence superseded by holistic review)
 - The user requests an IKEA-style assembly guide: **11 numbered actions**, labelled parts, tools and check dimensions, with a matching drawing for each action. Avoid a generic phase checklist.
 - Part IDs: P01–P12; rear bearer plies BA-1/BA-2; front plies BB-1/BB-2; J01–J16; B01–B12; tread rails R1/R2; T01–T16; concrete tread footing/plinth heads G01–G12; illustrated tread board rows TD1–TD3. Nominal geometry is not an approved cut order.
 - Before affected assembly, the plan needs **FP01** main footings, **AP01** bracing-pile connection/locations, **GP01** tread foundations/direct bearing/restraint/low-clearance treatment, and **DF01** actual decking/fixings. Do not invent these missing schedules.

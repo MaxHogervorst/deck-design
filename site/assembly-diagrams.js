@@ -34,26 +34,30 @@ const assemblyJoistCentres = [22.5, 450, 877.5, ...Array.from({ length: 13 }, (_
 const assemblyBlockRows = [-1947.5, -1562.5, -1177.5, -792.5, -407.5, -22.5];
 const assemblyPileX = [250, 1470, 2690, 3910, 5130, 6350];
 const assemblyDescriptions = {
-  setout: ['Mark the finished outline', 'Set-out diagram of the confirmed 6600 by 2600 millimetre main deck rectangle, with equal diagonals approximately 7094 millimetres.'],
+  setout: ['Mark all three finished outlines', 'One set-out for the main deck 6600 by 2600, rebuilt section 900 by 1970 and single tread 6600 by 400 millimetres. Main-deck diagonals approximately 7094 millimetres. Rebuilt and tread outlines are schematic.'],
   'pile-grid': ['Mark proposed support centres', 'Twelve proposed main pile positions at six X stations on bearer centre lines Y350 and Y2250. Pile classes and footing sizes remain unassigned.'],
   bearer: ['Lower bearer plies onto the specified pile connection', 'Exploded arrangement of two side-by-side bearer plies, separation and pile top. Connection symbol is a placeholder, not a bolt or nail pattern.'],
   joists: ['Position J01 to J16 and RM1/RM2 rims', 'Sixteen proposed joist lines. J01 to J03 continue as candidates through the rebuilt area. RM1 is the front rim line; RM2 is the rear rim, interrupted around the three continuation joists. Rim joints require AP01. This is a layout illustration, not verified cut lengths or bearing detail.'],
   blocking: ['Fit B01 to B12 flush', 'Twelve nominal 382.5 millimetre cross-blocks between three long joists, in six rows at 385 millimetre centres. Block-end connections require the reviewed fixing detail.'],
   boards: ['Fix boards across their supports', 'Main boards run across joists. Rebuilt boards turn ninety degrees and fix at the flush cross-block rows. Two fixing dots per crossing are illustrative.'],
   'tread-box': ['Assemble one tread ladder', 'Two nominal 6600 millimetre rails and sixteen nominal 310 millimetre crosspieces make a 6600 by 400 single-layer tread frame. Exact cuts and joints remain to specify.'],
-  'tread-ground': ['Connect the tread to its foundations', 'Provisional load path: timber rail bears through specified separation onto a concrete plinth or footing; a side connector and concrete anchor provide restraint. G01 is the concrete foundation, DPC the separation, C1 the side connector, C2 the concrete anchor and C3 timber-to-connector fixings. Timber bears directly through separation onto concrete, not suspended from the unverified side connector. Connector, fixings, anchor and foundation sizes are not specified. No loose paver or shallow footing is implied.'],
+  'tread-ground': ['Typical tread bearing and restraint', 'Provisional load path: timber rail bears through specified separation onto a concrete plinth or footing; a side connector and concrete anchor provide restraint. F is a typical concrete foundation, DPC the separation, C1 the side connector, C2 the concrete anchor and C3 timber-to-connector fixings. Timber bears directly through separation onto concrete, not suspended from the unverified side connector. Connector, fixings, anchor and foundation sizes are not specified. No loose paver or shallow footing is implied.'],
   'tread-boards': ['Lower the tread boards onto the frame', 'Three illustrative board rows sit on a single 140 millimetre frame layer. Board thickness 38 and selected surface 250 give a nominal frame underside 72 millimetres above garden. Product gaps and fixings remain to specify.'],
   finish: ['Check the finished levels', 'Side profile of main deck surface about 500 millimetres and one tread surface 250 above garden, with 400 millimetres total tread projection. These selected levels are not an access-compliance finding.']
 };
 function assemblySetout(svg) {
-  assemblyRect(svg, 70, 65, 420, 166, { fill: '#fff', 'data-part': 'main-outline' });
-  assemblyLine(svg, 70, 65, 490, 231, { 'stroke-dasharray': '5 4', stroke: '#8b968d' });
-  assemblyLine(svg, 70, 231, 490, 65, { 'stroke-dasharray': '5 4', stroke: '#8b968d' });
-  assemblyDim(svg, 70, 490, 43, '6600');
-  assemblyText(svg, 51, 152, '2600', { transform: 'rotate(-90 51 152)', 'text-anchor': 'middle' });
-  assemblyText(svg, 280, 154, '7094 ↔ 7094', { 'text-anchor': 'middle', 'font-size': 17, 'font-weight': 650, 'paint-order': 'stroke', stroke: '#fff', 'stroke-width': 6 });
-  for (const [x, y] of [[70,65],[490,65],[490,231],[70,231]]) assemblyAdd(svg, 'circle', { cx:x, cy:y, r:4, fill:assemblyInk });
-  assemblyNote(svg, 'Finished outline only. Keep both diagonals equal.');
+  const x=125,y=125,s=.044,w=6600*s,h=2600*s;
+  assemblyRect(svg,x,y,w,h,{fill:'#fff','data-part':'main-outline'});
+  assemblyRect(svg,x,y-1970*s,900*s,1970*s,{fill:'#edf4ec','stroke-dasharray':'4 3','data-part':'rebuilt-outline'});
+  assemblyRect(svg,x,y+h,w,400*s,{fill:'#f8efe1','stroke-dasharray':'4 3','data-part':'tread-outline'});
+  assemblyLine(svg,x,y,x+w,y+h,{'stroke-dasharray':'5 4',stroke:'#8b968d'});
+  assemblyLine(svg,x,y+h,x+w,y,{'stroke-dasharray':'5 4',stroke:'#8b968d'});
+  assemblyDim(svg,x,x+w,109,'6600');
+  assemblyText(svg,105,190,'2600',{'transform':'rotate(-90 105 190)','text-anchor':'middle'});
+  assemblyText(svg,285,185,'7094 ↔ 7094',{'text-anchor':'middle','font-size':17,'font-weight':650,'paint-order':'stroke',stroke:'#fff','stroke-width':6});
+  assemblyText(svg,180,63,'900 × 1970 rebuilt',{'font-size':11});
+  assemblyText(svg,270,252,'ONE TREAD · 6600 × 400',{'font-size':10,'text-anchor':'middle'});
+  assemblyNote(svg,'One baseline for all areas. Keep both main-deck diagonals equal.');
 }
 function assemblyPileGrid(svg) {
   const x0=65,y0=63,s=.065;
@@ -68,7 +72,9 @@ function assemblyPileGrid(svg) {
   }
   assemblyDim(svg,x0+250*s,x0+1470*s,47,'1220 typical');
   assemblyText(svg,505,y0+350*s+4,'A',{'font-weight':700});assemblyText(svg,505,y0+2250*s+4,'B',{'font-weight':700});
-  assemblyNote(svg,'A: Y350 · B: Y2250. Pile classes / footings still to assign.');
+  assemblyRect(svg,x0,y0+2600*s,6600*s,400*s,{fill:'none','stroke-dasharray':'4 3','data-part':'tread-foundation-zone'});
+  assemblyText(svg,279,252,'Tread foundations: GP01 positions / count TBD',{'font-size':10,'text-anchor':'middle'});
+  assemblyNote(svg,'P01–P12: proposed main piles only. Include tread foundations in the same work.');
 }
 function assemblyBearer(svg) {
   assemblyRect(svg,210,163,125,92,{fill:'#eef0eb','data-part':'pile'});assemblyText(svg,272,229,'H5 pile',{'text-anchor':'middle'});
@@ -87,11 +93,11 @@ function assemblyJoists(svg) {
   for(const y of[350,2250])assemblyRect(svg,x0,y0+(y-45)*s,6600*s,90*s,{fill:'#edd1a8',stroke:'#9a703b'});
   for(const [i,x] of assemblyJoistCentres.entries()){
     if(i<3)assemblyRect(svg,x0+(x-22.5)*s,y0-1970*s,45*s,1970*s,{fill:'#edf5e9','stroke-dasharray':'4 3','data-part':'candidate-continuation'});
-    assemblyRect(svg,x0+(x-22.5)*s,y0,45*s,2600*s,{fill:'#456b4c',stroke:'#244c3b','data-part':'main-joist'});
+    assemblyRect(svg,x0+(x-22.5)*s,y0+(i<3?0:45*s),45*s,(i<3?2555:2510)*s,{fill:'#456b4c',stroke:'#244c3b','data-part':'main-joist'});
     assemblyText(svg,x0+x*s,y0+17,`${i+1}`,{'text-anchor':'middle','font-size':9,'paint-order':'stroke',stroke:'#fff','stroke-width':3});
   }
-  assemblyRect(svg,x0,y0+2600*s,6600*s,4,{fill:'#d6b788',stroke:'#87683d','data-part':'rim','data-part-id':'RM1'});
-  for(const [start,end] of [[45,427.5],[472.5,855],[900,6600]]) assemblyRect(svg,x0+start*s,y0-4,(end-start)*s,4,{fill:'#d6b788',stroke:'#87683d','data-part':'rim','data-part-id':'RM2'});
+  assemblyRect(svg,x0,y0+2555*s,6600*s,45*s,{fill:'#d6b788',stroke:'#87683d','data-part':'rim','data-part-id':'RM1'});
+  for(const [start,end] of [[45,427.5],[472.5,855],[900,6600]]) assemblyRect(svg,x0+start*s,y0,(end-start)*s,45*s,{fill:'#d6b788',stroke:'#87683d','data-part':'rim','data-part-id':'RM2'});
   assemblyText(svg,464,274,'RM1',{'font-size':11});
   assemblyText(svg,62,127,'RM2',{'font-size':11});
   assemblyText(svg,120,35,'J01–J03: rebuilt + main candidate',{'font-size':12});
@@ -138,7 +144,8 @@ function assemblyBoards(svg) {
   assemblyText(svg,45,34,'MAIN DECK',{'font-weight':650});assemblyText(svg,305,34,'REBUILT SECTION',{'font-weight':650});
   assemblyBoardsPanel(svg,40,55,false);assemblyBoardsPanel(svg,300,55,true);
   assemblyText(svg,40,252,'Boards cross joists',{'font-size':12});assemblyText(svg,300,252,'Boards cross added blocks',{'font-size':12});
-  assemblyNote(svg,'Two fixing dots per crossing are examples; screw size / edges pending.');
+  assemblyText(svg,40,274,'Then fix the tread boards using the same DF01 schedule.',{'font-size':11});
+  assemblyNote(svg,'All framing / concealed fixings complete before boards. Dots are examples.');
 }
 function assemblyTreadBox(svg) {
   const x0=55,y0=110,s=.067;
@@ -157,7 +164,7 @@ function assemblyTreadBox(svg) {
 function assemblyTreadGround(svg) {
   assemblyRect(svg,225,91.6,31.5,98,{fill:'#e6cca5','data-part':'rail'});
   assemblyRect(svg,218,190,45,4,{fill:'#68736b','data-part':'separation','data-part-id':'DPC'});
-  assemblyRect(svg,150,194,180,69,{fill:'#edf0ed',stroke:'none','data-part':'concrete-footing','data-part-id':'G01'});
+  assemblyRect(svg,150,194,180,69,{fill:'#edf0ed',stroke:'none','data-part':'concrete-footing','data-part-id':'F'});
   assemblyAdd(svg,'path',{d:'M150 263 V194 H330 V263',fill:'none',stroke:assemblyInk,'stroke-width':1.5});
   // The footing deliberately extends below the soil and ends with a break, not a sized shallow pad.
   assemblyLine(svg,30,240,150,240,{stroke:'#8c8d77'});assemblyLine(svg,330,240,530,240,{stroke:'#8c8d77'});
@@ -171,10 +178,10 @@ function assemblyTreadGround(svg) {
   assemblyLine(svg,257,136,342,91);assemblyText(svg,348,85,'C1 · Side connector',{'font-size':12});assemblyText(svg,348,102,'resists movement',{'font-size':11});
   assemblyLine(svg,290,213,357,165);assemblyText(svg,364,160,'C2 · Concrete anchor',{'font-size':12});assemblyText(svg,364,177,'type / embedment TBD',{'font-size':11});
   assemblyLine(svg,220,192,107,169);assemblyText(svg,29,153,'DPC · Separation',{'font-size':11});assemblyText(svg,29,169,'rail bears on concrete',{'font-size':11});
-  assemblyText(svg,32,218,'SOIL',{'font-size':11});assemblyText(svg,348,228,'G01 · Concrete foundation',{'font-size':11});
+  assemblyText(svg,32,218,'SOIL',{'font-size':11});assemblyText(svg,348,228,'F · Typical foundation',{'font-size':11});
   assemblyLine(svg,158,114,249,151,{stroke:'#627e88'});assemblyText(svg,30,116,'C3 · Timber fixings',{'font-size':11});
   assemblyText(svg,348,249,'Size / depth to specify',{'font-size':11});
-  assemblyNote(svg,'Bearing via DPC to G01. C1–C3 restrain movement; sizes / anchor depth pending.');
+  assemblyNote(svg,'Typical bearing only. Foundation count / sizes and C1–C3 fixings: GP01.');
 }
 function assemblyTreadBoards(svg) {
   assemblyRect(svg,80,155,400,98,{fill:'#e2eadc','data-part':'tread-frame'});
@@ -192,7 +199,8 @@ function assemblyFinish(svg) {
   assemblyText(svg,259,116,'250 rise',{'font-size':12});assemblyText(svg,408,205,'250 rise',{'font-size':12});
   assemblyDim(svg,244,396,193,'400 projection');
   assemblyLine(svg,27,71,27,261,{stroke:'#89968e'});assemblyText(svg,19,166,'500',{'transform':'rotate(-90 19 166)','text-anchor':'middle','font-size':12});
-  assemblyNote(svg,'Selected levels only. Match the agreed access and support detail.');
+  assemblyText(svg,280,23,'CURRENT LEVELS · HOLD',{'text-anchor':'middle','font-size':13,'font-weight':700,fill:assemblyArrow});
+  assemblyNote(svg,'250 + 250 rises exceed BRANZ common/main private 190 mm guidance.');
 }
 
 export function renderAssemblyDiagram(svg, type) {

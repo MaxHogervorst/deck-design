@@ -4,18 +4,19 @@ import { renderAssemblyDiagram } from './assembly-diagrams.js';
 
 const $ = (selector) => document.querySelector(selector);
 const topicData = [
-  { id: 'junction', title: 'J01–J03 / rebuilt decking', question: 'Review the continuous-joist option, retained support data, 12 cross-blocks, block-end joints and board fixing rows.' },
-  { id: 'structure', title: 'AP01 · main connections', question: 'Set anchor/ordinary-pile locations and the complete doubled-bearer/joist connection and lateral-restraint schedule. For the low MiTek option, check 12KNH stainless, available pile height and required geometry.' },
-  { id: 'ground', title: 'FP01 · main footings', question: 'Agree hole dimensions, pile classes/lengths, embedment, concrete and curing instructions from the ground information.' },
-  { id: 'access', title: 'GP01 · tread / ground', question: 'Specify G01–G12 concrete bearings, separation and the C1/C2/C3 rail-to-concrete restraint detail. Confirm timber grade/treatment, footing and anchor dimensions, levels and access geometry.' },
-  { id: 'materials', title: 'DF01 · boards / screws', question: 'Choose the actual 38 mm pine board, width, gap, screw type/size, block-end connectors and stock/cut plan.' }
+  { id: 'levels', title: '1 · Final access levels', question: 'Resolve the 500 mm drop with one tread / 400 mm projection. Current 250 mm rises exceed BRANZ common/main private 190 mm guidance. Any level change must also update foundation heights, clearance and timber selection.' },
+  { id: 'structure', title: '2 · Main structure / AP01', question: 'Verify wet-service spans, 350 mm centre-line projections, bearer capacity, bracing in both directions and pile/joist alignment. Specify complete doubled-bearer joints and connections; MiTek 12KNH remains a fit-dependent candidate.' },
+  { id: 'junction', title: '3 · Rebuilt junction', question: 'Check retained bearer condition, bearing faces and reactions, J01–J03 continuity, the interrupted rear rim and twelve flush cross-blocks with structural end fixings.' },
+  { id: 'ground', title: '4 · All foundations / FP01 + GP01', question: 'Specify main and tread foundation positions, counts, ground basis, dimensions, levels and concrete in one plan. The previous twelve-tread-footing layout is withdrawn; classify ordinary and bracing main piles.' },
+  { id: 'access', title: '5 · Ground-supported tread / GP01', question: 'Set frame depth/grade/treatment after levels are settled. Specify direct bearing, separation, restraint and joints. Avoid adding stair loads to the main rim; no connecting ledger is assumed.' },
+  { id: 'materials', title: '6 · Boards / stock / DF01', question: 'Choose actual 38 mm pine, width/gap, screws and edge/nosing detail. Set supported stock joints, rim/joist cuts and quantities before covering any framing.' }
 ];
 const selectionData = {
   main: { title: 'Main deck', badge: 'Dimensions confirmed', type: 'green', values: [['Width × depth', '6600 × 2600 mm'], ['Area', '17.16 m²'], ['Garden drop', 'About 500 mm']], description: 'Boards run across the joists, parallel to the frontage.', note: 'Frame schedule to be reviewed before construction.', topic: 'structure' },
   rebuilt: { title: 'Rebuilt decking', badge: 'Direction illustrated', type: 'sand', values: [['Width × depth', '900 × 1970 mm'], ['Board direction', 'Along 1970 mm depth'], ['Cross-support rows', '6 · 385 mm centres'], ['Flush blocks', '12 · between J01–J03']], description: 'Rotated boards fix into added cross-blocking, not just parallel joists.', note: 'Direction follows the description of boards turning 90°. Review block-end fixings and the final board/fastener schedule before building.', topic: 'junction' },
   blocking: { title: 'Rebuilt board supports', badge: 'Proposal', type: 'sand', values: [['Joist lines', 'J01 / J02 / J03'], ['Block rows', '6 at 385 mm centres'], ['Blocks', '12 × 382.5 mm nominal'], ['Top level', 'Flush with joists']], description: 'Two short blocks per row span between the three long joists. Board fasteners go into these cross-support rows.', note: 'Use reviewed block-end connectors/structural fixings. Two board fasteners per row are illustrated; actual screw size and edge distances remain to specify.', topic: 'junction' },
-  tread: { title: 'Tread ladder frame', badge: 'Proposal', type: 'sand', values: [['Outer frame', '6600 × 400 mm'], ['Long rails', '2 × 6600 mm'], ['Crosspieces', '16 × 310 mm nominal'], ['Support stations', '6 / 12 rail bearings'], ['Frame top / bottom', '212 / 72 mm nominal']], description: 'Single 140 mm-deep layer under 38 mm boards. Separate supports; no stacked bearer layer.', note: 'Proposed G01–G12 concrete bearings carry both rails. C1/C2/C3 connectors restrain the frame. GP01 must specify the actual support and fixing details.', topic: 'access' },
-  ground: { title: 'Tread ground connection', badge: 'Proposed · GP01 needed', type: 'sand', values: [['Bearings', 'G01–G12 · concrete'], ['Separation', 'DPC / specified layer'], ['C1', 'Structural side connector'], ['C2', 'Concrete anchorage'], ['C3', 'Rail-to-connector fixings']], description: 'Gravity: rail → separation → concrete → suitable soil. The bracket restrains movement and uplift; it does not suspend the rail.', note: 'Specify the actual bracket, timber fixings, concrete anchors, footing size/depth and low-clearance exposure detail before installation. Twelve locations do not establish fastener quantities.', topic: 'access' },
+  tread: { title: 'Ground-supported tread', badge: 'Levels / supports unresolved', type: 'sand', values: [['Outside footprint', '6600 × 400 mm'], ['Frame', 'Single-layer box proposal'], ['Trial geometry', '2 rails / 16 crosspieces'], ['Foundations', 'Count / positions TBD'], ['Finished height', 'Unresolved']], description: 'Build the tread foundations with the main deck’s; complete both frames before boarding.', note: 'The 140 mm-deep / 310 mm-crosspiece layout is trial geometry. GP01 must resolve levels, clearance, treatment, supports and restraint before cuts.', topic: 'access' },
+  ground: { title: 'Typical tread ground bearing', badge: 'GP01 detail required', type: 'sand', values: [['Gravity', 'Frame → bearing → ground'], ['Separation', 'DPC / specified layer'], ['Restraint', 'C1 bracket / C2 anchor / C3 timber fixings'], ['Count / positions', 'TBD']], description: 'Ground support avoids a drop connection to the deck rim. Foundations form part of the overall set-out and groundworks.', note: 'The cutaway is a connection concept, not a hole size, bracket product or anchor schedule. No twelve-footing requirement is established.', topic: 'ground' },
   extension: { title: 'House extension', badge: 'Frontage confirmed', type: 'green', values: [['Frontage', '5700 mm'], ['Rebuilt alongside', '900 mm'], ['Rear extent', 'Not surveyed']], description: 'Shown for context; no structural house attachment.', note: '', topic: 'structure' },
   bearer: { title: 'Bearers & piles', badge: 'Provisional', type: 'sand', values: [['New bearers', '2 double 140 × 45 lines'], ['Y centre lines', '350 / 2250 mm'], ['Separation', '1900 mm centres'], ['New piles', '12 proposed']], description: 'Six proposed pile positions on each new bearer line.', note: 'Review spans, footing/bracing, ply joints and connectors before building.', topic: 'structure' },
   joists: { title: 'J01–J03 continue through', badge: 'Proposed continuity', type: 'sand', values: [['Main lines', '16 · J01–J16'], ['J01–J03 extent', 'Rebuilt + main deck'], ['Finished envelope', '4570 mm'], ['Other joist envelope', '2600 mm'], ['Centres', '427.5 / 438.46 mm']], description: 'Yes: the three left joists are proposed to continue from the retained back bearer through to the main deck’s garden edge.', note: 'Envelope dimensions are not cut lengths. The rim junction, support reactions, bearing and connections remain to confirm in the pre-build plan review.', topic: 'junction' }
@@ -70,17 +71,17 @@ function setView(view) {
   const svg = $('#design-drawing');
   if (view === 'elevation') {
     renderElevation(svg);
-    $('#drawing-note').textContent = 'One full-width 400 mm tread at the proposed 250 mm level. No handrails proposed.';
+    $('#drawing-note').textContent = 'Starting geometry only: 250 + 250 mm rises exceed BRANZ common/main private 190 mm guidance. Resolve finished levels first.';
     $('#drawing-scale').textContent = 'SIDE PROFILE';
     selectArea('tread');
   } else if (view === 'tread') {
     renderTreadFrame(svg);
-    $('#drawing-note').textContent = 'Independent single-layer proposal: 2 rails, 16 crosspieces and 12 rail bearing points. Grade/treatment and support/anchor details are not final.';
+    $('#drawing-note').textContent = 'Ground-supported trial frame. Footing count and layout are unresolved; levels must precede frame section, clearance and foundation heights.';
     $('#drawing-scale').textContent = 'TREAD DETAIL';
     selectArea('tread');
   } else if (view === 'ground') {
     renderAssemblyDiagram(svg, 'tread-ground');
-    $('#drawing-note').textContent = 'Proposed direct concrete bearing plus positive restraint. Footing and connector geometry is schematic; GP01 must specify sizes, product and installation.';
+    $('#drawing-note').textContent = 'Typical direct bearing and restraint only. Design these foundations with the main deck groundworks; count, dimensions and hardware are not specified.';
     $('#drawing-scale').textContent = 'GROUND CONNECTION';
     selectArea('ground');
   } else if (view === 'decking') {
@@ -99,9 +100,9 @@ function setView(view) {
     framing: '<span><i class="legend-joist"></i>Joists</span><span><i class="legend-bearer"></i>Bearers</span><span><i class="legend-block"></i>Cross-blocks</span>',
     layout: '<span><i class="legend-main"></i>Deck boards</span><span>Rebuilt boards rotated 90°</span>',
     decking: '<span><i class="legend-block"></i>Cross-supports</span><span>Dots = example fixings</span>',
-    tread: '<span>One layer · 140 mm frame + 38 mm boards</span>',
-    ground: '<span>Bearing carries weight · connector restrains movement</span>',
-    elevation: '<span>Surface levels proposed</span>'
+    tread: '<span>Single layer · section / supports follow resolved levels</span>',
+    ground: '<span>Typical connection · no footing count specified</span>',
+    elevation: '<span>Current geometry · levels on hold</span>'
   };
   $('#drawing-legend').innerHTML = legends[view] || '';
 }

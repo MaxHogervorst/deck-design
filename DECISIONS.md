@@ -67,3 +67,11 @@
 Complete remaining `SITE_MEASUREMENTS.md` evidence and verify current primary sources, then resolve the structural/stair checklist in `OPEN_ISSUES.md`. Preserve this history when modifying the design.
 
 - Assembly follow-up: RM1/RM2 identify front/rear rim lines; step 05 includes their fitting. The rear line splits or terminates around continuous J01–J03; 6600 mm is an overall allowance, not a verified rim cut.
+
+## Holistic review — 5 November 2026
+
+- User clarified that “not separate” means **one build sequence** and asked which support method is simplest. Ground-supported tread recommended provisionally because connecting the trial frame to the high deck rim introduces a 110 mm drop gap and additional structural loads. Physical attachment is not required by this clarification.
+- Sequence revised: settle levels → one set-out → all foundations → main/rebuilt/tread framing and concealed joints → boards → owner completion check. No staged builder visits.
+- Withdraw six-station/twelve-tread-footing layout and G01–G12 order quantities. Retain one tread, 400 mm projection and full width; two rails / sixteen crosspieces remain trial geometry pending levels/section/support design.
+- 250 mm rises explicitly conflict with published BRANZ common/main private 190 mm guidance. No new height, landing fill or changed tread count is selected. Frame clearance and foundation levels depend on the eventual solution.
+- Whole-system review adds explicit span/cantilever, pile/joist alignment, rim/end-cut, retained-support, stock-joint and concealed-connection dependencies. No project-specific structural compliance is asserted.

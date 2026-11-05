@@ -2,6 +2,18 @@
 
 No supplier order should be placed from these quantities until the footing/bracing and joist/bearer layout are verified. Always check H3.2 SG8 vs H1.2 timber labels.
 
+## Holistic review — 5 November 2026 (current)
+
+**CONFIRMED BY USER:** one build sequence; choose the simplest support arrangement. **PROVISIONAL recommendation:** keep the tread independently ground-supported, and set out/build its foundations with the main deck. Build both frames and all concealed connections before boards. The owner has not selected a landing/deck height change or approved a footing/frame design.
+
+**HOLD POINT — levels first:** the measured 500 mm drop and halfway tread yield 250+250 mm rises. BRANZ's published common/main private stair guidance gives a 190 mm maximum. One tread under that guidance permits at most 380 mm total drop, so a compatible level solution needs at least 120 mm change; no solution is selected. Recheck actual clearance, timber treatment and all foundation heights after any level change. Do not turn the old 250/212/72 mm arithmetic into construction datums.
+
+**Whole-system arithmetic:** at the old levels, deck boards underside=462; main rim bottom=322; tread frame top=212 mm. The 110 mm gap prevents simply bolting a lower ledger alongside the rim. Ground support avoids that unverified drop connection and added rim/joist loads. This is a simplicity recommendation, not a foundation/connection approval.
+
+**Withdrawn:** the six-station/twelve-tread-footing layout and G01–G12 purchasing quantities. Support both rails, but derive foundation count, positions, bearing, spans and restraint from GP01. The two 6600 mm rails and sixteen 310 mm crosspieces remain trial geometry only; frame depth/cuts follow resolved levels. Twelve proposed *main* piles remain a separate, unverified structural layout.
+
+Review the main framing as one system: wet-service spans and 350 mm centre-line end projections, 1220 mm pile spacing/250 mm bearer end offsets, doubled-bearer splices, bracing in both directions, actual pile/joist connector alignment, retained support capacity, three continuous joists, rear rim interruptions and block-end fixings. Actual joist ends depend on rim thickness; 4570/2600 mm are envelopes. Supported board stock joints and the final board product must be decided before covering the frame.
+
 ## Draft structural quantities
 | Component | Preliminary need | Critical note |
 |---|---|---|
@@ -15,9 +27,9 @@ No supplier order should be placed from these quantities until the footing/braci
 | Ordinary/anchor pile structural fixing kits | TBD | **Do not buy until connection type is verified** |
 | Concrete | TBD; earlier **~0.8–1.1 m³** not verified | Must derive from footing dimensions and soil |
 | Rebuilt cross-blocks | 12×382.5 mm nominal = 4.59 lm, 140×45 concept | Flush between J01–J03; exact hangers/structural fixings and cuts unverified |
-| Tread frame rails | 2×6600 mm nominal = 13.2 lm, 140×45 concept | Grade/treatment for 72 mm nominal clearance and rail/support capacity to specify |
+| Tread frame rails | 2×6600 mm nominal = 13.2 lm, 140×45 concept | Trial only: depth/grade/treatment follow resolved levels; rail/support capacity TBD |
 | Tread crosspieces | 16×310 mm nominal = 4.96 lm, 140×45 concept | Includes end pieces; frame connections/cuts unverified |
-| Tread concrete G01–G12 | Six stations / 12 proposed cast-concrete footing/plinth heads | GP01 ground/bearing, dimensions, concrete and bearing level TBD |
+| Tread foundations | Count and positions TBD | GP01 design after levels; former twelve-location layout withdrawn |
 | C1/C2/C3 tread restraint | Side bracket / concrete anchor / timber-fastener families | Products, quantities per location, corrosion class, embedment and edge distances TBD; not a hanging support |
 
 ## Earlier generic retail estimate (unverified / historical)
@@ -75,6 +87,8 @@ With 17 full-width interior rows and two equally trimmed edge rows:
 
 **No gap has been selected.** Follow the actual supplier's wet/dry-board installation instructions, allowable edge ripping and fixing edge distances. Nineteen 6600 mm rows represent **125.4 lm** of full-width row-length stock before stock-length availability, supported butt joints, kerf, defects and waste. Ripping edges reduces installed board width, not the nominal board lengths purchased; possible offcut reuse requires a real cut plan.
 
+All tread frame quantities remain trial geometry until GP01 resolves levels and frame depth.
+
 The current geometric joist baseline is **16 main lines**, with two 427.5 mm bays in the 900 mm rebuilt strip and thirteen 5700/13 ≈ 438.46 mm bays across the remaining frontage. See DESIGN.md for the centre schedule. The former uniform 437 mm illustration is superseded. J01–J03 show candidate continuations to the retained bearer; if adopted, they replace three short main members within the 16 count. No member cuts, bearings or continuous spans are approved. Extra butt supports remain unquantified; the new tread-frame scenario below is geometry-only. Side edge joists are already counted once.
 
 A **two-screws-per-board-per-support illustration** is 19×16×2 = **608 screws**, before butt joints, extra supports, stairs, rebuilt section, rim connections or waste. Verify the selected decking manufacturer's screw type/length, corrosion suitability, edge distances and actual fixing pattern first. This does not validate the earlier two-500-pack allowance.
@@ -129,7 +143,7 @@ Tread dimensions **6600×400 mm**, surface 250 mm above garden; area **2.64 m²*
 
 For the 900 mm rebuilt width, five full interior boards and two equal edge boards give `edge width=[900−5×138−6 g]/2`:96/93/90/87 mm for 3/4/5/6 mm gaps. This replaces the 14 rebuilt rows/12.6 lm and 157.8 lm total scenarios for the present orientation. Area stays 21.573 m² including the tread.
 
-New support geometry: **12 flush cross-blocks ×382.5 mm =4.59 lm** between J01–J03; tread **two 6.6 m rails =13.2 lm** plus **16×310 mm crosspieces =4.96 lm**, in a single 140 mm-deep layer. Six tread support stations provide 12 rail-bearing points. These are not final cuts, splice positions or an order. Connections, supported stock joints, bearing and stable footings/supports remain to specify.
+New support geometry: **12 flush cross-blocks ×382.5 mm =4.59 lm** between J01–J03; tread **two 6.6 m rails =13.2 lm** plus **16×310 mm crosspieces =4.96 lm**, in a single 140 mm-deep layer. Tread footing number and positions remain to design; the old twelve-location assumption is withdrawn. These are not final cuts, splice positions or an order. Connections, supported stock joints, bearing and stable footings/supports remain to specify.
 
 At the 250 mm tread surface with 38 mm decking, frame top is 212 and underside 72 mm above garden before separation details. Select structural grade and treatment for that exposure; do not automatically use main-deck H3.2 offcuts or claim an unsourced clearance threshold.
 
@@ -147,13 +161,13 @@ The drawing's two board fastenings per cross-support are illustrative. Select th
 | B01–B12 | Rebuilt flush cross-blocks | Twelve nominal 382.5 mm clear pieces; end connection still to specify |
 | R1 / R2 | Tread long rails | Two nominal 6600 mm lengths |
 | T01–T16 | Tread crosspieces including ends | Sixteen nominal 310 mm clear pieces |
-| G01–G12 | Cast-concrete tread footing/plinth bearing heads | Twelve proposed locations; no footing sizes/depths or concrete volume supplied |
+| GP01 foundations | Cast-concrete bearing / restraint concept | Count, positions, sizes/depths and concrete volume TBD |
 | TD1–TD3 | Illustrated tread decking rows | 38 mm thick; actual row widths/gaps/cuts from DF01 |
 | C1 | Structural side-restraint bracket family | GP01 product and quantity per location TBD |
 | C2 | Concrete-anchor family | GP01 product, count, concrete, embedment and edges TBD |
 | C3 | Timber-fastener family for C1-to-rail | GP01 product, count and timber edge distances TBD |
 
-The tread weight bears directly on concrete through DPC/separation. C1/C2/C3 provide lateral/uplift restraint, not a bracket-suspended vertical load path. Twelve ground-connection locations do not establish twelve brackets/anchors. Loose pavers or repurposed post shoes are not the specified concept.
+The tread weight bears directly on concrete through DPC/separation. C1/C2/C3 provide lateral/uplift restraint, not a bracket-suspended vertical load path. No tread foundation or hardware count is established. Loose pavers or repurposed post shoes are not the specified concept.
 
 ### Do MiTek anchor fixings need buying?
 

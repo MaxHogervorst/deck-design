@@ -97,7 +97,7 @@ The MiTek 2024 detail calls for two 1×100×160 mm Nailon plates, each with eigh
 
 The manual's “joists deeper than 150 mm” blocking note does not remove other required joist lateral restraint. Its illustrated splice over an ordinary pile does not authorise arbitrary splices over anchor piles. No confirmed anchor count or four-anchor allocation follows from these sources.
 
-## Tread ground-connection research read — 2026-11-03
+## Historical tread ground-connection research — 2026-11-03 (twelve-location layout withdrawn)
 
 **GP01 remains a proposal:** R1/R2 bear directly through DPC/separation on cast-concrete G01–G12 footing/plinth heads, which transfer weight into suitable bearing soil. A separate C1 side connector, C2 concrete anchorage and C3 timber fixings provide restraint. No product below has been verified for the proposed 45 mm horizontal rail at nominal 72 mm underside clearance.
 
@@ -109,3 +109,15 @@ The manual's “joists deeper than 150 mm” blocking note does not remove other
 | [MiTek — BOWMAC Structural Brackets, 2024 V1](https://mitek.co.nz/wp-content/uploads/2024/03/BOWMAC-Structural-Brackets_2024-v1.pdf), PDF p. 2 / printed p. 25 | Bracket suitability/loading require assessment; the small B50 angle is excluded from the cited scope | A small generic angle is not a verified structural restraint for this tread. |
 
 The website's ground cutaway shows a **load path and component families**, not a manufacturer installation drawing. Concrete continues below ground with a drawing break; its size/depth, bearing capacity, concrete/reinforcement, rail bearing area, timber grade/treatment, connectors, corrosion class, anchor embedment/edge distances and fastener schedule remain GP01 inputs. Twelve rail-bearing locations do not establish twelve brackets or anchors. No loose-paver foundation, generic post-shoe substitution or M12 drilling recipe has been verified.
+
+## Holistic source review — 5 November 2026
+
+The following BRANZ source pages were successfully retrieved/read in the preceding review and re-read from those saved pages for this whole-plan pass. They provide published guidance, not current authorised NZS 3604 project verification.
+
+| Source / date | Published guidance | Effect on this plan |
+|---|---|---|
+| [BRANZ — External stairs for houses](https://www.branz.co.nz/design-build/articles/external-stairs-for-houses/), Alide Elkink, updated 1 December 2012; “Work out the design limits” | Common/main private stairs: maximum riser 190 mm, minimum tread depth 280 mm, maximum pitch 37°. Classification depends on use. | 250+250 mm rises do not meet this standard configuration. One intermediate tread gives two rises: maximum total 380 mm under the cited 190 mm guidance. At 500 mm drop a compatible level solution needs at least 120 mm change; no level change is selected. Full going/nosing/classification and applicable current D1 route still need resolution. |
+| Same article, “Support for strings” | Describes stair strings attached to structural boundary/edge joists using hangers and lower support on concrete footings with brackets/cleats, or posts. | This is a different structure from the proposed horizontal box. Do not copy string footing sizes, products or connection counts into GP01. The 110 mm rim/frame gap is calculated project geometry, not a published manufacturer joint. |
+| [BRANZ — Free-standing timber decks](https://www.branz.co.nz/design-build/articles/free-standing-timber-decks/), Alide Elkink, updated 1 December 2013 | Bracing in both directions and distributed as practicable; wet-in-service 2 kPa member selection; bearer continuity/bearing and ordinary-pile splice restrictions; pile-class footing requirements; anchor pile/bearer/joist connections. | Assess the whole freestanding frame, not an attached-deck exception. Existing 140×45, 1220 pile spacing, 2320/1900 support separations and bracing layout are proposals until checked. Retained support, rim joints and actual connector alignment must be included. |
+
+**Design status:** recommend a ground-supported tread within one construction sequence. No product detail verifies the former twelve-location foundation layout; that count is withdrawn. Bearing and restraint principles remain useful, but actual frame depth, foundations and fasteners follow resolved levels/ground/exposure. The old 250/212/72 mm stack is not a construction datum. Choosing a 380 mm drop alone does not verify the rest of the stair or determine clearances.

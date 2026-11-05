@@ -2,9 +2,9 @@
 
 Technical reference for the owner and builder:
 
-- **Plans:** framing opens first, with 16 numbered joist lines, three dashed continuity candidates, rebuilt cross-blocking, a tread ladder and a coordinate table. Separate views explain rotated-board fixings, the tread frame, ground fixing, dimensions and side profile.
+- **Plans:** framing opens first, with 16 numbered joist lines, three dashed continuity candidates, rebuilt cross-blocking, a trial tread frame and a coordinate table. Separate views explain rotated-board fixings, the tread frame, ground fixing, dimensions and side profile.
 - **Materials:** specifications, planning quantities and outstanding decisions in one table.
-- **Build steps:** 11 numbered assembly pictures with part IDs, tools, actions and check dimensions. Previous/Next controls show one action at a time; printing includes all actions.
+- **Build steps:** one sequence for all three areas: levels, set-out, all foundations, all frames, boards, completion. Eleven assembly pictures have part IDs, tools and check dimensions. Previous/Next controls show one action at a time; printing includes all actions.
 - **Builder plan review:** one in-person review before construction, with no during-build inspections planned. No online forms or feedback workflow.
 
 Live site: **https://maxhogervorst.github.io/deck-design/**
@@ -15,7 +15,7 @@ The design remains **preliminary, not construction drawings**. Confirmed owner c
 
 - Main deck: **6600 × 2600 mm**; rebuilt section: **900 × 1970 mm**.
 - Main + rebuilt area: **18.933 m²**, excluding tread.
-- **Deck → one full-width tread → garden**. Tread: **6600 × 400 mm**, selected surface **250 mm above the garden**, beneath a deck about **500 mm high**. The vertical access detail is not verified.
+- **Deck → one full-width tread → garden**. Tread: **6600 × 400 mm**, previously selected surface **250 mm above the garden**, now on hold because it creates two 250 mm rises, beneath a deck about **500 mm high**. BRANZ gives 190 mm maximum for common/main private stairs; final levels must be resolved before foundations.
 - **38 mm-thick pine decking**; 138 mm width remains provisional. The rebuilt section is illustrated with boards turned 90° along its 1970 mm depth, interpreting the owner’s description.
 - Freestanding from the house. Double 140×45 bearers and 140×45 joists remain structural concepts.
 
@@ -43,7 +43,7 @@ No remote fonts, analytics, APIs, accounts or external assets are required. The 
 
 The framing view is the default. J01–J03 fit within the 900 mm rebuilt strip at 427.5 mm centres; the remaining 13 bays are approximately 438.46 mm. Dashed continuations remain provisional. Open the joist coordinate table for centre positions, or enlarge the drawing. No displayed coordinate is an approved cut length.
 
-The owner build guide works through set-out, piles, doubled bearers, joists, rebuilt cross-blocks, deck boards, the tread frame, its ground connection and finished measurements. Each action has a matching assembly picture. The part table lists nominal geometry, not approved cut lengths. Four missing plan inputs gate the affected work: **FP01** main footings/pile classes, **AP01** pile/joist connections and blocking, **GP01** tread foundations/restraint/timber, and **DF01** boards and screws.
+The owner guide starts with final access levels and uses one set-out for main deck, rebuilt section and tread. It builds all foundations together, completes both ground-supported structures and concealed connections, then lays all boards. Four coordinated inputs are missing: GP01 levels/tread, FP01 main foundations, AP01 structural spans/bracing/connections, DF01 boards/stock/fixings. The owner checks uncovered framing before any boards; no builder visit is implied.
 
 The builder reviews the proposed joist continuity and rebuilt cross-blocks, main framing/bracing, footing plan, tread frame/access and the actual decking/fasteners once before construction. The owner builds from the agreed plan; no during-build builder inspections are planned. The requested site-clearance checklist is outside that review, and no handrails are proposed.
 
@@ -84,7 +84,7 @@ The Markdown files remain the working design record. After changing dimensions, 
 
 ## Validation after changes
 
-Run `npm run build` and check both HTML variants in a browser on desktop and mobile. Exercise plan selection by mouse/keyboard, all six drawing tabs, the single-tread profile, the eleven assembly actions, print-all behaviour, the five pre-build review topics, source downloads in the fuller bundle and the share controls. Confirm that the public variant contains no embedded working notes, and that review forms, feedback exports and reviewer-note storage are absent.
+Run `npm run build` and check both HTML variants in a browser on desktop and mobile. Exercise plan selection by mouse/keyboard, all six drawing tabs, the single-tread profile, the eleven assembly actions, print-all behaviour, the six pre-build review topics, source downloads in the fuller bundle and the share controls. Confirm that the public variant contains no embedded working notes, and that review forms, feedback exports and reviewer-note storage are absent.
 
 These checks validate website behaviour, not structural design or compliance. General BRANZ board-fixing guidance is recorded in REFERENCES.md. The full frame, foundations, connections and access geometry remain proposals for pre-build review, not independently verified construction details.
 
@@ -92,5 +92,7 @@ These checks validate website behaviour, not structural design or compliance. Ge
 
 - **J01–J03:** proposed continuations across the 4570 mm finished main-plus-rebuilt envelope. This is not a member cut length.
 - **Rebuilt rotated boards:** 12 flush cross-blocks in six rows at 385 mm centres; board-fixing examples are shown in the Decking fixings view. Block-end connections and the actual screw schedule remain to specify.
-- **One tread:** a standalone, single-layer 140×45 ladder frame, two long rails and 16 nominal 310 mm crosspieces. Six support stations give 12 rail-bearing points. With 38 mm boards at a 250 mm surface, frame top/bottom are nominally 212/72 mm. The proposed rails bear through DPC onto cast-concrete footing/plinth heads G01–G12; C1 side brackets, C2 concrete anchors and C3 timber fasteners provide separate restraint. GP01 must specify footing dimensions, bearing, connectors, timber treatment/grade and anchorage; the twelve locations do not determine hardware quantities.
+- **One tread:** recommend independent ground support within the same build programme. Two rails and sixteen crosspieces remain trial geometry; frame depth, footing count/positions, bearing and restraint follow final levels. The old twelve-foundation assumption is withdrawn. At the old datum the rim bottom is 322 mm and tread frame top 212 mm, so a simple side-fixed ledger cannot bridge the 110 mm gap. A connected stair would need a different structural detail.
 - **Anchor-pile fixings:** MiTek is an optional brand. Its cited 2024 manual distinguishes 12 kN anchor/brace connections from 6 kN cantilever connections and directs below-600 mm fixings to stainless 12KNH. Compatibility with doubled 140×45 bearers and the nominal 182 mm pile exposure remains unverified. See REFERENCES.md for source details and limits.
+
+The Whole-build review table records access-level conflict, tread support rationale, structural dependencies and corrected sequence. Six pre-build discussion topics now cover the complete design.

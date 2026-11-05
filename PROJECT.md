@@ -1,5 +1,18 @@
 # Project brief
 
+## Holistic review — 5 November 2026 (current)
+
+**CONFIRMED BY USER:** one build sequence; choose the simplest support arrangement. **PROVISIONAL recommendation:** keep the tread independently ground-supported, and set out/build its foundations with the main deck. Build both frames and all concealed connections before boards. The owner has not selected a landing/deck height change or approved a footing/frame design.
+
+**HOLD POINT — levels first:** the measured 500 mm drop and halfway tread yield 250+250 mm rises. BRANZ's published common/main private stair guidance gives a 190 mm maximum. One tread under that guidance permits at most 380 mm total drop, so a compatible level solution needs at least 120 mm change; no solution is selected. Recheck actual clearance, timber treatment and all foundation heights after any level change. Do not turn the old 250/212/72 mm arithmetic into construction datums.
+
+**Whole-system arithmetic:** at the old levels, deck boards underside=462; main rim bottom=322; tread frame top=212 mm. The 110 mm gap prevents simply bolting a lower ledger alongside the rim. Ground support avoids that unverified drop connection and added rim/joist loads. This is a simplicity recommendation, not a foundation/connection approval.
+
+**Withdrawn:** the six-station/twelve-tread-footing layout and G01–G12 purchasing quantities. Support both rails, but derive foundation count, positions, bearing, spans and restraint from GP01. The two 6600 mm rails and sixteen 310 mm crosspieces remain trial geometry only; frame depth/cuts follow resolved levels. Twelve proposed *main* piles remain a separate, unverified structural layout.
+
+Review the main framing as one system: wet-service spans and 350 mm centre-line end projections, 1220 mm pile spacing/250 mm bearer end offsets, doubled-bearer splices, bracing in both directions, actual pile/joist connector alignment, retained support capacity, three continuous joists, rear rim interruptions and block-end fixings. Actual joist ends depend on rim thickness; 4570/2600 mm are envelopes. Supported board stock joints and the final board product must be decided before covering the frame.
+
+
 ## Confirmed requirements
 
 | Topic | Decision |
@@ -12,7 +25,7 @@
 | Decking | Budget **H3.2 treated pine**, **38 mm thickness selected**, with 138 mm width provisional; exact product, finish and stock lengths to confirm |
 | Framing preference | H3.2 SG8 timber, **double 140×45 bearers**, **140×45 joists** |
 | Piles | H5 timber; earlier concept **12 × 125×125 mm**, two rows of six |
-| Access | **One full-width 6600×400 mm tread**, surface 250 mm above garden; main deck about 500 mm. Independent low-frame proposal below; access compliance remains unverified |
+| Access | **One full-width 6600×400 mm tread**, surface 250 mm above garden; main deck about 500 mm. Ground-supported frame proposal; finished levels and access detail on hold |
 | Handrails | **None proposed — CONFIRMED BY USER**; this records the selected brief, not an independent regulatory finding |
 | Builder involvement | One **pre-build plan review** with the owner; no staged site inspections or builder visits during construction |
 | Shopping | Auckland, ideally Bunnings or Mitre 10; builder has Mitre 10 trade account |
@@ -77,7 +90,7 @@ The website is a compact technical reference: visible joists, a materials table,
 
 J01–J03 are shown as continuous candidates through the rebuilt and main deck, within the existing 16-line layout. Twelve flush cross-blocks give the rotated rebuilt boards perpendicular support/fixing rows. The block connections, continuity and support reactions remain part of the pre-build plan decision.
 
-The proposed tread is a separate, single-layer 140×45 ladder frame: two 6.6 m rails, 16 nominal 310 mm crosspieces and six support stations providing 12 rail-bearing points. Its surface remains 250 mm above garden. With 38 mm boards, frame top is 212 and underside 72 mm above garden; suitable low-clearance timber and the proposed G01–G12 cast-concrete footing/plinth heads with direct rail bearing and C1/C2/C3 side restraint still need final specification. Do not add a stacked bearer layer or hang the tread from decking.
+The proposed tread is a ground-supported single-layer box frame included in the same groundworks and framing sequence. Its 140×45 / two-rail / sixteen-crosspiece geometry is a trial only. The old twelve-foundation layout is withdrawn; GP01 must establish finished levels, frame depth, foundations, support count and restraint before construction.
 
 The builder reviews these details on the plan before the DIY work. The owner then follows the agreed details and performs the construction checks; no continuing builder inspection service is assumed.
 
@@ -85,6 +98,6 @@ The builder reviews these details on the plan before the DIY work. The owner the
 
 The website shows eleven numbered assembly actions, not ongoing builder inspection stages. Before the affected work, complete four plan inputs: **FP01** main footing schedule, **AP01** bracing-pile locations and exact pile/bearer/joist connections, **GP01** tread concrete foundations/direct bearing/restraint/treatment, and **DF01** actual board and fixing schedule.
 
-Tread ground concept: R1/R2 bear directly through DPC/separation onto **G01–G12 cast-concrete footing/plinth heads**. The weight path is rail → DPC → concrete → suitable bearing soil. Proposed C1 side brackets, C2 concrete anchors and C3 timber fasteners restrain lateral movement/uplift; they do not suspend the rail. Twelve locations do not determine bracket/anchor quantities. Concrete sizes/depths, anchors/edges/embedment and low-clearance timber remain GP01 inputs.
+Tread weight passes through the frame and specified separation into its own foundations and ground. C1/C2/C3 remain schematic restraint-component families, not an approved product/count. Resolve the final footing layout and complete GP01 with FP01 before groundworks.
 
 MiTek-branded anchor fixings are not mandatory. The plan needs the complete rated connection required by the selected bracing system, wherever that system calls for it; ordinary supports are not automatically twelve anchor connections. The manufacturer's cited low-exposure option is a candidate only, because the doubled bearer and approximately 182 mm pile exposure have not been shown to fit an exact approved detail.
