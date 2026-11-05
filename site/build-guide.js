@@ -8,7 +8,7 @@ const assemblySteps = [
     "parts": "Deck 500 · tread 250 mm above garden · 32 mm boards",
     "tools": "Laser or level · tape",
     "action": "Use the owner-selected levels: deck about 500 mm above garden, one tread at 250 mm, 400 mm total projection. Carry these datums through the foundation and framing plans.",
-    "check": "Nominal main pile top188 mm; tread frame top218 /underside78 mm before separation and actual timber sizes. Board width is approximately80 mm, not yet measured.",
+    "check": "Nominal main pile top188 mm; tread frame top218 /underside78 mm before separation and actual timber sizes. Confirmed boards:32 mm pine, about80 mm wide.",
     "status": "Owner levels retained",
     "detail": "Access compliance is not verified. Main framing is based on a 2 kPa residential deck without a cantilevered barrier; ground is reported firm natural. Retained support and exact connection details still need verification."
   },
@@ -27,23 +27,23 @@ const assemblySteps = [
     "id": "supports",
     "title": "Mark all foundation positions",
     "picture": "pile-grid",
-    "parts": "P01–P12 main · M1/M2 intermediate rebuilt piles · six tread pads",
+    "parts": "P01–P12 main · M1/M2 intermediate rebuilt piles · 14 adjustable tread supports",
     "tools": "Tape · strings · level",
-    "action": "Mark the two main rows and six shared tread pads at the same X stations. Mark M1/M2 at X=175/725, Y=−800 for the new 900 mm bearer.",
+    "action": "Mark the two main rows and seven tread-support pairs at X150/1200/2250/3300/4350/5400/6450. Mark M1/M2 at X=175/725, Y=−800 for the new 900 mm bearer.",
     "check": "Main X=250/1470/2690/3910/5130/6350; Y=350/2250. Proposed anchor piles P01/P03/P06/P07/P09/P12; remaining main and M piles ordinary.",
     "status": "Specific proposal for review",
-    "detail": "Anchor lines at X=250/2690/6350 have gaps 2440/3660 mm. Six pads span both tread rails; they are six foundations, not twelve."
+    "detail": "Anchor lines at X=250/2690/6350 have gaps 2440/3660 mm. Tread support pairs are1050 mm apart,150 mm from each end;14 individual ground spikes are proposed."
   },
   {
     "id": "foundations",
-    "title": "Build all foundations in one operation",
+    "title": "Install main piles and tread ground spikes",
     "picture": "tread-ground",
-    "parts": "6 anchor +6 ordinary main piles ·2 ordinary M piles ·6 shared tread pads",
+    "parts": "6 anchor +6 ordinary main piles ·2 ordinary M piles ·14 Nuraspike/Nurajack sets",
     "tools": "Excavation · level · temporary braces · specified installation tools",
-    "action": "Use the footing schedule after its ground and connection assumptions are confirmed. Install all foundations before framing; set bearing tops from the selected datums.",
+    "action": "Concrete the main/rebuilt piles to the agreed schedule. Test-drive one tread spike, then drive all14 flush using the hitting plate. Set the tread height later with the adjustable heads.",
     "check": "Planning sizes: anchors Ø400×900 deep; ordinary main Ø400×450; M piles 350 square×450. Keep at least 100 mm concrete under timber piles.",
     "status": "Conditional foundation schedule",
-    "detail": "Tread pad proposal:500 across the tread ×300 alongX,300 below cleared ground, raised to the bearing datum. With32 mm boards and2 mm separation, pad head is76 mm; calculated net concrete≈1.35 m³ before waste under the stated datum assumption. Ground bearing and exact pad/anchor details still require review."
+    "detail": "No tread concrete. Main/rebuilt net concrete≈1.01 m³ before waste. Check for buried services before driving spikes. Do not use Nuraspikes in waterlogged, heavily compacted or rocky soil; confirm the narrow tread’s lateral restraint before construction."
   },
   {
     "id": "bearers",
@@ -82,12 +82,12 @@ const assemblySteps = [
     "id": "tread-frame",
     "title": "Fit the tread frame on its foundations",
     "picture": "tread-box",
-    "parts": "R1/R2 ·19 crosspieces +2 butt sisters ·6 shared pads",
+    "parts": "R1/R2 ·19 crosspieces +2 butt sisters ·14 adjustable supports",
     "tools": "Tape · square · clamps · specified connection tools",
-    "action": "Assemble the 140×45 single-layer tread frame on its six shared ground supports. Seek SG8 H5 framing for this low, damp exposure; install reviewed separation and restraint.",
-    "check": "6600×400 outer frame;21 short pieces ×310 mm nominal; rail bearings at X=250/1470/2690/3910/5130/6350. The rails do not load the main deck rim.",
+    "action": "Assemble the 140×45 single-layer tread frame on its14 adjustable Nurajack timber heads. Seek SG8 H5 framing for this low, damp exposure; fix the timber to the heads and install the reviewed lateral restraint.",
+    "check": "6600×400 outer frame;21 short pieces ×310 mm nominal; rail bearings at X=150/1200/2250/3300/4350/5400/6450. The rails do not load the main deck rim.",
     "status": "Specific proposal; hardware review",
-    "detail": "H5 structural framing is listed on request by Timberlink NZ, not confirmed shelf stock. Pad reinforcement/bearing, restraint bracket, concrete anchors, timber fasteners and rail joints need a matching reviewed detail; no post-shoe substitution is specified."
+    "detail": "H5 structural framing is listed on request by Timberlink NZ, not confirmed shelf stock. Manufacturer specifies30 mm10-gauge stainless head-to-timber screws. Measure each spike-top-to-rail gap before selecting the head range;78 mm is close to the75 mm minimum of NJSE03-J. Head screws do not provide ground anchorage; restraint and rail joints need the reviewed detail."
   },
   {
     "id": "frame-check",
@@ -107,9 +107,9 @@ const assemblySteps = [
     "parts": "32 mm pine · approximately80 mm wide · matched decking screws",
     "tools": "Driver · spacers · straightedge · saw",
     "action": "Run main boards in X and rebuilt boards in Y. Alternate main/tread board seams at X≈2375 and 3895 on the doubled supports, using the selected product’s butt gap and screw edge distances.",
-    "check": "At provisional80 mm width /5 mm gaps:31 main +11 rebuilt +5 tread rows. Stock scenario:19×2.4,17×3.0,23×4.2,19×4.8 m =284.4 lm, including one spare rebuilt piece.",
-    "status": "Needs DF01",
-    "detail": "Exact width and product gap determine the quantities:88/90 mm boards use fewer rows. Base fixing positions1644;2000 is a provisional allowance. Confirm actual product, available lengths, screw embedment and minimum edge-strip width before ordering or ripping."
+    "check": "At80 mm calculation width /5 mm gaps:31 main +11 rebuilt +5 tread rows. Stock scenario:19×2.4,17×3.0,23×4.2,19×4.8 m =284.4 lm, including one spare rebuilt piece.",
+    "status": "Boards confirmed; fixings to specify",
+    "detail": "Board choice is confirmed32 mm pine, about80 mm wide. Measure actual cover width and set the product gap for final cuts. Base fixing positions1644;2000 is a provisional allowance. Confirm actual product, available lengths, screw embedment and minimum edge-strip width before ordering or ripping."
   },
   {
     "id": "final",
@@ -151,7 +151,7 @@ export function renderBuildGuide(container) {
     <tr><th>L01–L36</th><td>Main lateral blocks</td><td>6×240 +4×290 +26×335 mm;11.31 lm nominal</td></tr>
     <tr><th>B01–B18</th><td>Rebuilt cross-blocks</td><td>18 ×240 mm /4.32 lm nominal</td></tr>
     <tr><th>R1/R2 · T01–T19</th><td>Tread rails / crosspieces</td><td>2 ×6600 rails +21 ×310 short pieces, nominal; SG8 H5 request</td></tr>
-    <tr><th>GP01 · DPC · C1/C2/C3</th><td>Tread foundations / separation / restraint</td><td>6 shared-pad proposals, each bearing both rails; exact hardware review required</td></tr>
+    <tr><th>GP01 · S01–S14</th><td>Tread ground spikes / adjustable heads</td><td>14 sets proposed; lateral restraint and head-height fit require review</td></tr>
     <tr><th>TD1–TD5</th><td>Tread-board rows</td><td>5 illustrated at80 mm width /5 mm gap; confirm actual width/product</td></tr>
   </tbody></table></div></details>
   <div class="assembly-inputs"><strong>One build:</strong> selected 500/250 mm levels → main/rebuilt/tread foundations → all framing/concealed connections → boards. Specific dimensions below remain a proposal for the builder’s pre-build review; retained support and exact connections are not remotely verified. Plan details: FP01 foundations · AP01 main connections · GP01 tread · DF01 boards.</div>

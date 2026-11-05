@@ -41,7 +41,7 @@ const assemblyDescriptions = {
   blocking: ['Fit B01 to B18 flush', 'Eighteen nominal 240 millimetre cross-blocks between four long joists, in six rows at 385 millimetre centres. Block-end connections require the reviewed fixing detail.'],
   boards: ['Fix boards across their supports', 'Main boards run across joists. Rebuilt boards turn ninety degrees and fix at the flush cross-block rows. Two fixing dots per crossing are illustrative.'],
   'tread-box': ['Assemble one tread ladder', 'Two nominal 6600 millimetre rails and nineteen nominal 310 millimetre crosspieces make a 6600 by 400 single-layer tread frame. Exact cuts and joints remain to specify.'],
-  'tread-ground': ['Typical tread bearing and restraint', 'Provisional load path: timber rail bears through specified separation onto a concrete plinth or footing; a side connector and concrete anchor provide restraint. F is a typical concrete foundation, DPC the separation, C1 the side connector, C2 the concrete anchor and C3 timber-to-connector fixings. Timber bears directly through separation onto concrete, not suspended from the unverified side connector. Connector, fixings, anchor and foundation sizes are not specified. No loose paver or shallow footing is implied.'],
+  'tread-ground': ['Adjustable tread support on a ground spike', 'Rail bears on a Nurajack timber head above a500 millimetre Nuraspike driven flush into suitable ground. Turn the head to level the frame; no tread concrete. Fourteen sets at seven stations are proposed. H labels the timber head and S the ground spike. Confirm head range against the actual78 millimetre nominal frame underside, and design separate lateral restraint before construction. The head-to-timber screws do not establish ground anchorage. Drawing is schematic, not product dimensions.'],
   'tread-boards': ['Lower the tread boards onto the frame', 'Five illustrative board rows sit on a single 140 millimetre frame layer. Board thickness 32 and selected surface 250 give a nominal frame underside 78 millimetres above garden. Product gaps and fixings remain to specify.'],
   finish: ['Check the finished levels', 'Side profile of main deck surface about 500 millimetres and one tread surface 250 above garden, with 400 millimetres total tread projection. These selected levels are not an access-compliance finding.']
 };
@@ -79,8 +79,8 @@ function assemblyPileGrid(svg) {
   }
   assemblyText(svg,170,75,'BC:900 bearer · Y−800',{'font-size':11});
   assemblyRect(svg,x0,y0+2600*s,6600*s,400*s,{fill:'none','stroke-dasharray':'4 3'});
-  for(const x of assemblyPileX) assemblyRect(svg,x0+(x-150)*s,y0+2550*s,300*s,500*s,{fill:'none','stroke-dasharray':'3 2','data-part':'shared-tread-pad'});
-  assemblyText(svg,270,267,'6 shared tread pads · typical plan symbols',{'font-size':11,'text-anchor':'middle'});
+  for(const x of [150,1200,2250,3300,4350,5400,6450]) for(const y of [2622.5,2977.5]) assemblyAdd(svg,'circle',{cx:x0+x*s,cy:y0+y*s,r:3.5,fill:'#d7ded8',stroke:assemblyInk,'data-part':'tread-ground-support'});
+  assemblyText(svg,270,267,'14 tread ground-spike supports · symbols',{'font-size':11,'text-anchor':'middle'});
   assemblyNote(svg,'Filled:6 anchor proposals. White:6 main ordinary +2 intermediate ordinary.');
 }
 function assemblyBearer(svg) {
@@ -176,26 +176,25 @@ function assemblyTreadBox(svg) {
   assemblyNote(svg,'Exploded view. T clear length 310 nominal; exact cuts / joints follow the plan.');
 }
 function assemblyTreadGround(svg) {
-  assemblyRect(svg,225,91.6,31.5,98,{fill:'#e6cca5','data-part':'rail'});
-  assemblyRect(svg,218,190,45,4,{fill:'#68736b','data-part':'separation','data-part-id':'DPC'});
-  assemblyRect(svg,150,194,180,69,{fill:'#edf0ed',stroke:'none','data-part':'concrete-footing','data-part-id':'F'});
-  assemblyAdd(svg,'path',{d:'M150 263 V194 H330 V263',fill:'none',stroke:assemblyInk,'stroke-width':1.5});
-  // The footing deliberately extends below the soil and ends with a break, not a sized shallow pad.
-  assemblyLine(svg,30,240,150,240,{stroke:'#8c8d77'});assemblyLine(svg,330,240,530,240,{stroke:'#8c8d77'});
-  for(let x=35;x<530;x+=14)if(x<150||x>337)assemblyLine(svg,x,241,x-7,248,{stroke:'#b2b3a5','stroke-width':.8});
-  assemblyAdd(svg,'path',{d:'M255 132 V194 H300',fill:'none',stroke:'#627e88','stroke-width':5,'data-part':'restraint-angle','data-part-id':'C1'});
-  assemblyAdd(svg,'circle',{cx:252,cy:151,r:4,fill:'#fff',stroke:'#627e88','stroke-width':2,'data-part':'timber-fixing-symbol','data-part-id':'C3'});
-  assemblyLine(svg,285,181,285,258,{stroke:'#627e88','stroke-width':3,'stroke-dasharray':'0'});
-  assemblyRect(svg,279,185,12,5,{fill:'#627e88',stroke:'#627e88','data-part':'concrete-anchor-symbol','data-part-id':'C2'});
-  assemblyAdd(svg,'path',{d:'M150 263 l15 -5 15 10 15 -10 15 10 15 -10 15 10 15 -10 15 10 15 -10 15 10 15 -10 15 5',fill:'none',stroke:assemblyInk,'stroke-width':1.5,'data-part':'foundation-depth-break'});
-  assemblyArrowLine(svg,240,36,240,78,assemblyInk);assemblyText(svg,180,27,'BEARING',{'font-weight':700,'font-size':12});
-  assemblyLine(svg,257,136,342,91);assemblyText(svg,348,85,'C1 · Side connector',{'font-size':12});assemblyText(svg,348,102,'resists movement',{'font-size':11});
-  assemblyLine(svg,290,213,357,165);assemblyText(svg,364,160,'C2 · Concrete anchor',{'font-size':12});assemblyText(svg,364,177,'type / embedment TBD',{'font-size':11});
-  assemblyLine(svg,220,192,107,169);assemblyText(svg,29,153,'DPC · Separation',{'font-size':11});assemblyText(svg,29,169,'rail bears on concrete',{'font-size':11});
-  assemblyText(svg,32,218,'SOIL',{'font-size':11});assemblyText(svg,348,228,'F · Typical foundation',{'font-size':11});
-  assemblyLine(svg,158,114,249,151,{stroke:'#627e88'});assemblyText(svg,30,116,'C3 · Timber fixings',{'font-size':11});
-  assemblyText(svg,348,249,'Size / depth to specify',{'font-size':11});
-  assemblyNote(svg,'Typical bearing only. Foundation count / sizes and C1–C3 fixings: GP01.');
+  // Schematic load path. Actual product dimensions and height range come from the supplier.
+  assemblyRect(svg,228,45,32,100,{fill:'#e6cca5','data-part':'rail'});
+  assemblyRect(svg,215,145,58,8,{fill:'#627e88','data-part':'timber-head','data-part-id':'H'});
+  assemblyLine(svg,218,129,218,150,{stroke:'#627e88','stroke-width':4});
+  assemblyAdd(svg,'circle',{cx:228,cy:135,r:3,fill:'#fff',stroke:'#627e88','data-part':'head-screw'});
+  assemblyRect(svg,234,153,20,32,{fill:'#b8c8bf','data-part':'adjustable-head'});
+  for(let y=158;y<184;y+=6)assemblyLine(svg,232,y,256,y,{stroke:'#627e88'});
+  assemblyRect(svg,202,185,82,6,{fill:'#627e88','data-part':'spike-top'});
+  assemblyLine(svg,30,191,530,191,{stroke:'#8c8d77'});
+  for(let x=35;x<530;x+=14)assemblyLine(svg,x,192,x-7,199,{stroke:'#b2b3a5','stroke-width':.8});
+  assemblyAdd(svg,'path',{d:'M224 193 L243 270 L262 193 Z',fill:'#c7d0cb',stroke:'#627e88','data-part':'ground-spike','data-part-id':'S'});
+  assemblyLine(svg,260,80,335,64);assemblyText(svg,342,61,'140 ×45 rail',{'font-size':12});
+  assemblyLine(svg,255,166,335,119);assemblyText(svg,342,114,'H · Adjustable timber head',{'font-size':11});assemblyText(svg,342,132,'Screw to timber; turn to level',{'font-size':10});
+  assemblyLine(svg,280,188,335,170);assemblyText(svg,342,167,'Spike top flush with ground',{'font-size':10});
+  assemblyLine(svg,249,237,335,226);assemblyText(svg,342,222,'S ·500 mm Nuraspike',{'font-size':11});assemblyText(svg,342,239,'Drive with hitting plate',{'font-size':10});
+  assemblyText(svg,30,165,'SOIL',{'font-size':11});
+  assemblyText(svg,30,35,'NO TREAD CONCRETE',{'font-weight':700,'font-size':12});
+  assemblyText(svg,342,35,'Schematic · not to scale',{'font-size':10});
+  assemblyNote(svg,'14 sets proposed. Confirm soil, head-height fit and separate lateral restraint: GP01.');
 }
 function assemblyTreadBoards(svg) {
   assemblyRect(svg,80,155,400,98,{fill:'#e2eadc','data-part':'tread-frame'});
@@ -205,7 +204,7 @@ function assemblyTreadBoards(svg) {
   }
   assemblyText(svg,104,183,'140 frame',{'font-weight':600});assemblyText(svg,277,211,'ONE LAYER',{'font-weight':700});
   assemblyText(svg,80,262,'32 boards → 250 surface / 78 underside',{'font-size':12});
-  assemblyNote(svg,'Five rows at provisional80 width /5 gaps. Confirm product before rips and fixings.');
+  assemblyNote(svg,'Confirmed32 mm pine, about80 wide. Check actual width/gap before edge cuts.');
 }
 function assemblyFinish(svg) {
   assemblyAdd(svg,'path',{d:'M50 71 H244 V166 H396 V261 H520',fill:'none',stroke:assemblyInk,'stroke-width':4,'data-part':'one-tread-profile'});
