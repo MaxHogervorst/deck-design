@@ -16,7 +16,7 @@ The design remains **preliminary, not construction drawings**. Confirmed owner c
 - Main deck: **6600 × 2600 mm**; rebuilt section: **900 × 1970 mm**.
 - Main + rebuilt area: **18.933 m²**, excluding tread.
 - **Deck → one full-width tread → garden**. Tread: **6600 × 400 mm**, selected surface **250 mm above the garden**, retained by owner, beneath a deck about **500 mm high**. Access compliance is not verified; the owner requested structural work proceed at these levels.
-- **38 mm-thick pine decking**; 138 mm width remains provisional. The rebuilt section is illustrated with boards turned 90° along its 1970 mm depth, interpreting the owner’s description.
+- **32 mm-thick pine decking**; 80 mm width remains provisional. The rebuilt section is illustrated with boards turned 90° along its 1970 mm depth, interpreting the owner’s description.
 - Freestanding from the house. Double 140×45 bearers and 140×45 joists remain structural concepts.
 
 ## Build and view
@@ -91,6 +91,6 @@ These checks validate website behaviour, not structural design or compliance. Ge
 
 ## Specific structural proposal
 
-See [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md) for calculations, published source comparisons, remaining limitations and the concrete/stock scenarios. Current framing is19 lines +2 butt sisters,4 long joists,36 main lateral blocks,18 rebuilt blocks and a900 mm intermediate bearer atY−800 on2 ordinary piles. Six main anchor positions and a conditional foundation schedule are shown; calculated concrete≈1.342 m³ before waste, with no retained replacement included. The tread proposal is SG8 H5 on six shared pads.
+See [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md) for calculations, published source comparisons, remaining limitations and the concrete/stock scenarios. Current framing is19 lines +2 butt sisters,4 long joists,36 main lateral blocks,18 rebuilt blocks and a900 mm intermediate bearer atY−800 on2 ordinary piles. Six main anchor positions and a conditional foundation schedule are shown; calculated concrete≈1.358 m³ before waste, with no retained replacement included. The tread proposal is SG8 H5 on six shared pads.
 
-The site compares true38 mm quote-only decking with verified32 mm retail/manufacturer alternatives. Keep38 until the owner changes it. Exact current-standard connections, the pad/anchor design, good-ground bearing and retained-support capacity remain unverified; this is a specific pre-build review proposal, not certified construction drawings.
+The site records32 mm thickness and around80 mm width, with80/88/90 mm quantity comparisons. At80 mm and5 mm illustrative gaps:31 main /11 rebuilt /5 tread rows,284.4 lm illustrative stock and1644 base fixing positions. Exact current-standard connections, the pad/anchor design, good-ground bearing and retained-support capacity remain unverified; this is a specific pre-build review proposal, not certified construction drawings.

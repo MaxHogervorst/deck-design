@@ -8,11 +8,11 @@ The new proposal is19 main joist lines at285/380 mm centres, four continuous reb
 
 Tread proposal:140×45 SG8 H5 request, two rails plus19 crosspieces and two butt sisters, on six shared500×300 mm concrete pads, each bearing both rails. Proposed300 mm below cleared ground; reinforcement and exact restraint/anchor design remain to verify. This is six foundations/twelve bearing seats, not the withdrawn twelve independent footings.
 
-Conditional foundation proposal: six Ø400×900 main anchors, six Ø400×450 main ordinary piles, two350-square×450 intermediate ordinary piles, plus the six shared pads. Calculated net concrete≈1.342 m³ before waste with garden=cleared-ground and2 mm separation assumptions. Retained support reuse is conditional; replacement is not included. Planning pile stock1.2 m anchors /0.9 m ordinary must be rechecked against actual datum and manufacturer cut-end restrictions.
+Conditional foundation proposal: six Ø400×900 main anchors, six Ø400×450 main ordinary piles, two350-square×450 intermediate ordinary piles, plus the six shared pads. Calculated net concrete≈1.358 m³ before waste with garden=cleared-ground and2 mm separation assumptions. Retained support reuse is conditional; replacement is not included. Planning pile stock1.2 m anchors /0.9 m ordinary must be rechecked against actual datum and manufacturer cut-end restrictions.
 
 The retained bearer's width/depth, its own pile spacing, grade/condition and foundations remain unknown.1970 mm is the rebuilt depth, not those properties. Adding the intermediate support does not prove the retained beam. Exact current-standard built-up/ordinary-pile/hanger details and the pad/anchor design are also not verified; the table comparisons are a review proposal, not construction approval.
 
-Keep38 mm pine until the owner chooses a product. Verified shelf/manufacturer alternatives are32 mm: wide merch smooth/griptread, wide premium smooth and narrow premium smooth. At assumed138 mm width/5 mm gap, the supported stock scenario is175.2 lm in48 boards;1008 base board-fixing positions. Full evidence, calculations, cutting scenario and remaining limits: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).
+32 mm thickness is confirmed; width is approximately80 mm. Use80 mm provisionally with an illustrative5 mm gap:31 main /11 rebuilt /5 tread rows,259.27 lm row lengths,284.4 lm sample stock in78 boards,1644 base fixing positions. Exact product width/gap still govern ordering;88/90 mm comparison scenarios are included. Full calculations: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).
 
 ## Current quantities
 
@@ -27,17 +27,19 @@ Keep38 mm pine until the owner chooses a product. Verified shelf/manufacturer al
 |Rims|Front6600; interrupted rear6420 nominal|Actual joints/supports and cuts before purchase.|
 |Tread rails|2×6600 =13.2 lm|SG8 H5 request; splice over shared pad, actual connection detail.|
 |Tread short pieces|21×310 =6.51 lm|19 basic crosspieces +2 butt sisters; grade/treatment and joints review.|
-|Concrete|≈1.342 m³ net scenario before waste|6 main anchors +8 ordinary +6 shared pads, good ground/datum assumptions; retained replacement excluded.|
+|Concrete|≈1.358 m³ net scenario before waste|6 main anchors +8 ordinary +6 shared pads, good ground/datum assumptions; retained replacement excluded.|
 |12 kN structural anchor assemblies|6 main locations proposed|Complete stainless system; manufacturer/current-standard joint geometry and built-up bearer applicability not yet closed.|
 |Tread restraints / separation|Products/counts remain unselected|C1/C2/C3 labels are not a kit or drilling recipe.|
-|38 mm pine boards|175.2 lm illustrative stock in48 boards|12×2.4,10×3.0,14×4.2,12×4.8; actual width/gap/length availability and defects before ordering.|
-|Decking screws|1008 base positions;1200 planning allowance|Actual38 mm-board screw, corrosion, length/effective embedment/edges before ordering; structural fixings excluded.|
+|32 mm pine boards|284.4 lm illustrative stock in78 boards|19×2.4,17×3.0,23×4.2,19×4.8; actual width/gap/length availability and defects before ordering.|
+|Decking screws|1644 base positions;2000 planning allowance|Actual32 mm-board screw, corrosion, length/effective embedment/edges before ordering; structural fixings excluded.|
 
-## Board options
+## Selected narrow decking
 
-Keep38 mm unless owner changes it. Exact38 mm shelf product not verified: obtain merchant/custom quote. Current32 mm alternatives: Bunnings138 merch smooth$5.42/lm;138 merch griptread$5.69;88 premium smooth$6.65; Pukepine140×32 premium smooth by trade quote. Online list prices observed5 November2026, not local stock/delivered quotes. See STRUCTURAL_REVIEW for product links, grade/moisture notes and the width-dependent row quantities.
+32 mm thickness confirmed; width approximately80 mm. Use80 mm provisionally:31/11/5 main/rebuilt/tread rows at an illustrative5 mm gap,259.27 lm row lengths and284.4 lm sample stock. At88/90 mm the corresponding sample-stock scenarios are265.8/258.6 lm. Exact product/width, gap, minimum edge rip and stock lengths must be established before ordering. No further thickness choice is required.
 
-Timberlink lists H4/H5 structural framing on request; this does not confirm immediate supply or every low-clearance cut-end detail. CHH Pinex's field-cut restriction within300 of ground means it cannot be substituted without checking its particular instructions. Do not label an ungraded fence rail SG8 or assume main H3.2 offcuts suit the tread.
+Base fixing positions1644;2000 provisional allowance. Exact32 mm-board screw and corrosion/embedment/edge instructions still require product selection. Detailed width comparison and supported stock cuts are in STRUCTURAL_REVIEW.
+
+Timberlink lists H4/H5 structural framing on request; low-clearance treatment and field-cut requirements remain product-specific. Do not substitute ungraded fence timber or ignore CHH Pinex's300 mm field-cut-end restriction.
 
 ## Builder invoices: trade pricing evidence (NOT current quotes)
 Builder obtains materials from Grove Mitre 10. Invoice line prices were **ex GST**. Useful examples from 2026 invoices:

@@ -85,3 +85,9 @@ Complete remaining `SITE_MEASUREMENTS.md` evidence and verify current primary so
 - Tread140×45 SG8 H5 request,2 rails,21 short members including2 butt sisters,6 shared pads/12 bearings. Exact pad/restraint/anchor design remains unverified.
 - Alternate board seamsX2375/3895 on doubled supports;138-width stock scenario175.2 lm in48 boards,1008 base screw positions. Keep38 mm; verified retail alternatives are32 mm, compared on the website. No specific38 mm shelf product or final screw length has been established.
 - Record standards access failure and source limits candidly. Current proposal/calculations in STRUCTURAL_REVIEW; working notes and website updated together for review.
+
+## Owner board-dimension correction —5 November2026
+
+-32 mm thickness confirmed, width “80ish”. This supersedes38 mm and138 mm assumptions;80 is provisional, with88/90 comparison scenarios and no exact product inferred.
+-At80 width /5 illustrative gaps:31 main /11 rebuilt /5 tread rows,259.27 lm row lengths; example stock19×2.4 +17×3.0 +23×4.2 +19×4.8=284.4 lm in78 boards. Base board-fixing positions1644;2000 planning allowance, no final order.
+-Levels remain500/250.32 mm boards give main pile top188, tread frame top218 /underside78 before separation. Shared-pad calculation rises0.0054 m³ to0.3384; whole conditional total1.3478 (~1.35). Existing framing/structural verification conditions remain.

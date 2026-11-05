@@ -1,5 +1,12 @@
 # Site measurement record
 
+## Latest board dimensions — supersedes previous thickness/quantity scenarios
+
+Owner confirms **32 mm thick, approximately80 mm wide**. Use80 mm as a provisional calculation width, not an exact measured/product dimension.5 mm gaps are illustrative only. At80 mm:31 main /11 rebuilt /5 tread rows;259.27 lm row lengths;284.4 lm example stock in78 boards;1644 base board-fixing positions,2000 planning allowance. At88/90 mm the example stock is265.8/258.6 lm. Confirm width/product/gap before ordering or ripping.
+
+Height arithmetic now uses32 mm: main pile top188 mm; deck frame/rim bottom328; tread frame top218 and underside78, before separation/actual sizes. With2 mm separation and garden=cleared-ground datum, tread concrete heads76; six pads0.3384 m³ and conditional total1.3478 m³ (~1.35) before waste. Main framing, supports, selected500/250 surface levels and existing design-review limits remain unchanged.
+
+
 Status: **HOLD POINT** — blanks are unknown, not zero. All dimensions in mm. No private address is needed.
 
 Use the extension's front face as Y=0, garden as positive Y, and the left edge of the 6600 mm main deck as X=0. Main finished outline is X=0…6600, Y=0…2600. Rebuilt section is X=0…900, extending towards negative Y.
@@ -14,7 +21,7 @@ Use the extension's front face as Y=0, garden as positive Y, and the left edge o
 | M6 | House/site-interface matters | Owner marked this checklist unnecessary for the builder brief; managed separately, not technically verified here |
 | M7 | Actual ground/support assumptions needed for footing selection | Evidence not recorded; generic house/services checklist omitted from the builder brief |
 | M8 | Garden access tread count, run, width/location | **One full-width 6600×400 mm tread, selected surface 250 mm above garden — CONFIRMED BY USER**; safe access/support detail unverified |
-| M9 | Actual supplied board width/thickness, installation moisture/gap instructions, available stock lengths; timber grade/treatment | Pine 38 mm thickness selected; 138 mm width provisional, exact product/finish/stock unselected |
+| M9 | Actual supplied board width/thickness, installation moisture/gap instructions, available stock lengths; timber grade/treatment | Pine32 mm thickness confirmed; width approximately80 mm (provisional calculation width80), exact product/finish/stock unselected |
 
 Measure M1 and M2 separately: a bearer need not sit at the old section's back edge. The 900 mm frontage does not provide either dimension. The user has now supplied D=1970 mm; the bearer has since been confirmed at the back edge, so R≈1970 mm; its exact centre-line coordinate still needs the member width/edge offset. Record bearer coordinates at their centre lines and foundation/ground dimensions independently.
 

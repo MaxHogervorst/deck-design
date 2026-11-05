@@ -4,7 +4,7 @@ This is a concrete proposal for the owner's single pre-build plan review, not ce
 
 ## Fixed brief and assumptions
 
-- Owner retains main 6600×2600, rebuilt 900×1970, one full-width 6600×400 tread at250 above garden, deck about500, and38 mm pine. Do not reopen the rise choice. Access compliance remains unverified.
+- Owner retains main 6600×2600, rebuilt 900×1970, one full-width 6600×400 tread at250 above garden, deck about500, and32 mm pine. Do not reopen the rise choice. Access compliance remains unverified.
 - Owner reports **firm natural ground**. This does not by itself establish the applicable good-ground bearing capacity or groundwater/fill/topsoil depth.
 - Normal residential open-slatted deck:2 kPa imposed load; no roof, spa, storage load or cantilevered barrier included.
 - Auckland earthquake-zone1 is a location assumption to confirm for the actual site. No seismic subsoil classification is supplied, so classE is used conservatively for earthquake demand. Seismic classE is not a claim that the reported foundation ground is soft.
@@ -38,7 +38,7 @@ Published BRANZ Table5.8 excerpt gives zone1 /soil classD&E multiplier0.5. The f
 
 Proposed main anchors:P01/P03/P06 on rear row andP07/P09/P12 on front row, atX250/2690/6350; other six main piles ordinary. AcrossX, bracing-line gaps2440/3660, both below5 m; Y row separation1900. A120 BU anchor rating is not a complete bracing design: confirm each direction's rated load path, line/perimeter distribution, retained-strip transfer, connection geometry and actual applicable standard.
 
-Select a complete stainless12 kN system, not an assortment of angles. MiTek12KNH is the current candidate; its plates/cleats/skew nails must all be installed to its applicable detail. Its illustrated plate extends80 mm onto the pile; nominal182 mm pile exposure provides geometric space, but this does not settle the90 mm built-up bearer connection, edge distances or all fasteners. PrydaPBK12S is an alternative, with explicit bearer-width/application conditions and a different plate/pile detail. Do not mix the kits or copy its document's apparent “cantilever” labelling error as permission to use a6 kN connection at an anchor.
+Select a complete stainless12 kN system, not an assortment of angles. MiTek12KNH is the current candidate; its plates/cleats/skew nails must all be installed to its applicable detail. Its illustrated plate extends80 mm onto the pile; nominal188 mm pile exposure provides geometric space, but this does not settle the90 mm built-up bearer connection, edge distances or all fasteners. PrydaPBK12S is an alternative, with explicit bearer-width/application conditions and a different plate/pile detail. Do not mix the kits or copy its document's apparent “cantilever” labelling error as permission to use a6 kN connection at an anchor.
 
 Main bearer butt splices proposed over ordinary piles atX3910. Segments3.910+2.690 m:4×4.2 +4×3.0 m stock for four main plies =28.8 lm before kerf (26.4 installed). Do not splice over the six proposed main anchors. Complete ordinary-pile and joist/bearer connections still require the actual fastening schedule.
 
@@ -59,57 +59,55 @@ Depths are below **cleared ground**, not the grass surface. Every timber pile ha
 | Main anchors |6|Ø400×900 mm;125 square H5 anchor-grade piles,800 embedment|0.6036 m³|
 | Main ordinary |6|Ø400×450;125 square H5 structural piles,350 embedment|0.3065 m³|
 | Intermediate ordinary |2|350×350×450;125 square piles,350 embedment|0.0993 m³|
-| Tread shared pads |6|500 across tread ×300 alongX;300 below cleared ground; head rises to bearing datum|0.3330 m³ under stated level assumptions|
-| Total |14 new timber piles +6 pads|Retained support conditionally reused|**1.3424 m³ before waste/excavation variation**|
+| Tread shared pads |6|500 across tread ×300 alongX;300 below cleared ground; head rises to bearing datum|0.3384 m³ under stated level assumptions|
+| Total |14 new timber piles +6 pads|Retained support conditionally reused|**1.3478 m³ before waste/excavation variation**|
 
 Anchor footing minima follow the published BRANZ freestanding/anchor-pile guidance. Ordinary400×450 and350-square×450 are a conservative planning choice, not a claim these exact sizes are mandated. Pad dimensions, reinforcement if needed, and restraint anchorage are a separate design proposal, not a published standard footing detail.
 
-For circular holes:`πr²×depth −0.125²×timber embedment`. Square holes use width×length×depth. Tread calculation assumes garden=cleared ground,2 mm separation, head at70 mm, so500×300×370 mm each. Real topsoil/clearance levels may change this materially. Obtain concrete specification, supplier allowance and actual hole quantities before ordering.
+For circular holes:`πr²×depth −0.125²×timber embedment`. Square holes use width×length×depth. Tread calculation assumes garden=cleared ground,2 mm separation, head at76 mm, so500×300×376 mm each. Real topsoil/clearance levels may change this materially. Obtain concrete specification, supplier allowance and actual hole quantities before ordering.
 
-Nominal pile-top182 mm is before DPC and cleared-ground differences. Planning stock1.2 m anchors /0.9 m ordinary accommodates800/350 mm embedment at that datum, but confirm actual levels/cuts and the manufacturer's treated cut-end requirements first. For example, CHH Pinex's guide restricts field-cut ends within300 mm of ground; do not silently substitute it into a low-clearance cutting plan. Another supplier's treatment instructions need checking. No replacement-retained footings, contaminated ground removal or bulk concrete delivery charges are included.
+Nominal pile-top188 mm is before DPC and cleared-ground differences. Planning stock1.2 m anchors /0.9 m ordinary accommodates800/350 mm embedment at that datum, but confirm actual levels/cuts and the manufacturer's treated cut-end requirements first. For example, CHH Pinex's guide restricts field-cut ends within300 mm of ground; do not silently substitute it into a low-clearance cutting plan. Another supplier's treatment instructions need checking. No replacement-retained footings, contaminated ground removal or bulk concrete delivery charges are included.
 
 ## Tread proposal at the selected250 mm surface
 
 - Independent single-layer140×45 frame. Request **structural SG8 H5**, rather than assuming fence-gradeH4 or ordinaryH3.2 offcuts are suitable. Timberlink lists H4/H5 CCA framing on request; this is not confirmed shelf stock or approval of every field-cut/end detail.
 - Two6600 mm rails. Nineteen310 mm nominal crosspieces plus two matching butt sisters:21 short pieces,6.51 lm. Total nominal frame length19.71 lm before stock loss/joints.
 - Six shared concrete pads atX250/1470/2690/3910/5130/6350. Each500 mm pad dimension spans across both rails, leaving12 rail-bearing seats on **six foundations**. The300 mm dimension runs alongX. Rail span1220 mm; end offset250. This is a new proposal, not reinstatement of the old12 independent footing requirement.
-- Top of frame212, underside72 above garden at38 mm boards. Bearing is rail → specified separation → concrete → suitable soil. Nominal2 mm separation puts concrete head at70 for the quantity scenario.
+- Top of frame218, underside78 above garden at32 mm boards. Bearing is rail → specified separation → concrete → suitable soil. Nominal2 mm separation puts concrete head at76 for the quantity scenario.
 - Locate long rail joints over a shared pad, e.g.X3910. Proposed rail stock2×4.2 +2×3.0 m; joints and restraint need the actual detail.
 - C1 structural stainless side restraint, C2 concrete anchorage and C3 timber fasteners remain **unselected**. Neither post anchors intended for90/100 square posts nor the BOWMAC100×50 post illustration establishes a45 mm horizontal-rail connection. Pad reinforcement/anchor capacity, edge distances, embedment and fastener quantities need the matching engineer/manufacturer detail. Do not drill from the schematic.
 
 This proposal settles frame/support geometry for review but is not a validated pad/bracket design. Ground/pad adequacy and exact connections cannot honestly be marked complete from the documents available.
 
-## Decking options — thickness is the owner's remaining product choice
+## Confirmed decking selection and provisional width
 
-The verified retail/manufacturer sources list32 mm finished products; no exact38 mm finished shelf product has been verified. Keep38 mm in the working design until the owner changes it.
+**CONFIRMED BY USER:**32 mm thickness, “80ish” width. **PROVISIONAL:**80 mm calculation width and5 mm gap. Exact width could be80,88 or90 mm; do not silently identify a product from the approximation. Grade, profile, supplied moisture, actual width and available lengths still need the actual product. The older138×38 scenario is superseded.
 
-| Option | Current source evidence | Trade-off |
-|---|---|---|
-|True38 mm finished pine|Merchant/custom quote required; no specific shelf product found|Preserves brief; confirm final treatment, actual width, grading and length availability.|
-|138×32 H3.2 merch smooth|Bunnings0333819,$5.42/lm|Budget wide board; more defects/sorting;32 mm changes datums6 mm.|
-|138×32 H3.2 merch griptread|Bunnings0333820,$5.69/lm|Grooved appearance; follow graded-face instructions, not a generic “grooves up/down” rule.|
-|140×32 premium smooth|Pukepine decking brochurev1.3; price by merchant quote|Appearance recommendation if changing thickness: cleaner best face/fewer unacceptable defects; actual delivered width/moisture matters.|
-|88×32 H3.2 premium smooth|Bunnings0199671,$6.65/lm|Narrow-board look; more boards/fixings. At5 mm illustrative gaps:244.1 lm before stock loss versus158.99 lm at138 width.|
+| Width scenario | Main rows | Rebuilt boards | Tread rows | Row-length need | Example stock | Base fixings |
+|---|---:|---:|---:|---:|---:|---:|
+|80 mm provisional|31|11|5|259.27 lm|284.4 lm|1644|
+|88 mm|29|10|5|244.10 lm|265.8 lm|1548|
+|90 mm|28|10|5|237.50 lm|258.6 lm|1506|
 
-Prices observed5 November2026 are website list prices, not Auckland-stock or delivered-quote confirmations. Random-length listings do not guarantee the example lengths below. Pukepine recommends air seasoning treated-wet boards and12G decking screws, not installing with one universal gap regardless of moisture. Confirm gap from the actual product/moisture;5 mm is an illustration only. Use a compatible stainless screw:304 vs316 depending actual corrosion exposure and preservative; exact screw length/edge/end distances still require product instructions. A75 mm screw through38 mm gives37 mm nominal penetration before point/countersink effects; this arithmetic alone is not an approved fixing.
+Formula:N=ceil((covered dimension+gap)/(board width+gap)); no perimeter gap deducted. These row counts alone do not validate narrow rips. At80 mm /5 mm gap, equal trimmed edges would be65 mm main,65 rebuilt and70 tread; confirm actual minimum rip width/edge distances first. At88 mm width,28 full boards +27×5 mm gaps cover2599 mm; increasing gaps to about5.037 mm, if allowed by the actual supplier/moisture instructions, avoids the42 mm edge strips from a rigid29-row /5 mm scenario. Do not round approximate board width into a final purchase quantity.
 
-### Supported joints and stock scenario at138 mm width
+### Supported joints and illustrative stock at80 mm width
 
-Double supports at seamX2375 and3895 (sister member immediately left ofJ08/J12). Alternate main/tread seams to avoid one uninterrupted seam line. Nominal lengths before butt gap adjustment:2.375+4.225 m, or3.895+2.705 m. Each short side fits2.4/3.0 stock; each long side fits4.8/4.2 stock with trimming/kerf. Actual end gaps must be allowed at the joint, not by overhanging past the6600 outline.
-
-Main19 rows:10 use2.4+4.8 stock;9 use4.2+3.0. Tread3 rows:2 use2.4+4.8,1 uses4.2+3.0. Rebuilt7×1.97 lengths:4×4.2 stock yields8 pieces including one spare, with kerf allowance available.
+Keep double supports at seamX2375/3895. Alternate nominal splits2.375+4.225 m and3.895+2.705 m, with actual butt gap adjustment; use2.4+4.8 and4.2+3.0 stock respectively. Main31 rows:16 pairs of the first type,15 of the second. Tread5 rows:3 first,2 second. Rebuilt11×1.97 pieces:6×4.2 stock yields12 pieces including one spare, with kerf margin.
 
 | Stock length | Boards | Total |
 |---|---:|---:|
-|2.4 m|12|28.8 lm|
-|3.0 m|10|30.0 lm|
-|4.2 m|14|58.8 lm|
-|4.8 m|12|57.6 lm|
-|Total|48|**175.2 lm**|
+|2.4 m|19|45.6 lm|
+|3.0 m|17|51.0 lm|
+|4.2 m|23|96.6 lm|
+|4.8 m|19|91.2 lm|
+|Total|78|**284.4 lm**|
 
-Installed row-length need158.99 lm; difference16.21 includes the spare rebuilt piece and offcuts/kerf. Defect/waste contingency beyond this cutting scenario is not included. This is not an order until the product/actual widths and stock lengths are confirmed.140 mm boards or88 mm boards require a recalculated row/stock plan.
+Row-length need259.27 lm; difference25.13 includes one spare rebuilt piece, offcuts and kerf. Additional defect contingency is not included. Random-length product listings do not guarantee these purchase lengths.
 
-Base screw-position arithmetic:19 main rows×21 joist members×2=798;7 rebuilt×6 rows×2=84;3 tread×21 supports×2=126. Total**1008 before extras/waste**, excluding structural connector fixings. A1200-screw planning allowance leaves192 extras, but do not buy before actual board/screw selection.
+Fixing arithmetic at80 mm /5 mm gap:31 main rows×21 joist members×2=1302;11 rebuilt×6 support rows×2=132;5 tread×21 supports×2=210. Total**1644 base positions**;2000 is a provisional allowance, not a screw order. Exact screw product, corrosion protection, effective embedment and edge/end distances follow the selected32 mm board. The earlier75 mm candidate gives43 mm nominal penetration before tip/countersink effects; this alone is not a capacity check.
+
+This selection aligns with the32 mm narrow-board category in the manufacturer/retailer sources already read, but the exact product is still unidentified. Follow the product's graded face and moisture/gap instructions. The previous wide-board shopping comparison is historical;32 mm is now selected, not an alternative needing another thickness decision.
 
 ## Evidence actually read
 

@@ -5,10 +5,10 @@ const assemblySteps = [
     "id": "levels",
     "title": "Mark the selected height datums",
     "picture": "finish",
-    "parts": "Deck 500 · tread 250 mm above garden · 38 mm boards",
+    "parts": "Deck 500 · tread 250 mm above garden · 32 mm boards",
     "tools": "Laser or level · tape",
     "action": "Use the owner-selected levels: deck about 500 mm above garden, one tread at 250 mm, 400 mm total projection. Carry these datums through the foundation and framing plans.",
-    "check": "Nominal main pile top 182 mm; tread frame top 212 /underside 72 mm before separation and actual timber sizes.",
+    "check": "Nominal main pile top188 mm; tread frame top218 /underside78 mm before separation and actual timber sizes. Board width is approximately80 mm, not yet measured.",
     "status": "Owner levels retained",
     "detail": "Access compliance is not verified. Main framing is based on a 2 kPa residential deck without a cantilevered barrier; ground is reported firm natural. Retained support and exact connection details still need verification."
   },
@@ -43,7 +43,7 @@ const assemblySteps = [
     "action": "Use the footing schedule after its ground and connection assumptions are confirmed. Install all foundations before framing; set bearing tops from the selected datums.",
     "check": "Planning sizes: anchors Ø400×900 deep; ordinary main Ø400×450; M piles 350 square×450. Keep at least 100 mm concrete under timber piles.",
     "status": "Conditional foundation schedule",
-    "detail": "Tread pad proposal: 500 across the tread ×300 along X, 300 below cleared ground, raised to the bearing datum. Calculated net concrete ≈1.34 m³ for the whole scheme before waste, with stated level assumptions. This is not a dig/order instruction; pad/anchor design and good-ground suitability remain to confirm."
+    "detail": "Tread pad proposal:500 across the tread ×300 alongX,300 below cleared ground, raised to the bearing datum. With32 mm boards and2 mm separation, pad head is76 mm; calculated net concrete≈1.35 m³ before waste under the stated datum assumption. Ground bearing and exact pad/anchor details still require review."
   },
   {
     "id": "bearers",
@@ -104,12 +104,12 @@ const assemblySteps = [
     "id": "boards",
     "title": "Lay boards on all three areas",
     "picture": "boards",
-    "parts": "Selected 38 mm pine · boards in three areas · matched decking screws",
+    "parts": "32 mm pine · approximately80 mm wide · matched decking screws",
     "tools": "Driver · spacers · straightedge · saw",
     "action": "Run main boards in X and rebuilt boards in Y. Alternate main/tread board seams at X≈2375 and 3895 on the doubled supports, using the selected product’s butt gap and screw edge distances.",
-    "check": "For assumed 138 mm boards /5 mm gaps:19 main +7 rebuilt +3 tread rows. Illustrative purchase mix:12×2.4,10×3.0,14×4.2,12×4.8 m =175.2 lm including an extra rebuilt length.",
+    "check": "At provisional80 mm width /5 mm gaps:31 main +11 rebuilt +5 tread rows. Stock scenario:19×2.4,17×3.0,23×4.2,19×4.8 m =284.4 lm, including one spare rebuilt piece.",
     "status": "Needs DF01",
-    "detail": "This cut-by-stock scenario depends on those lengths being available. Base fixing count is 1008 positions before extras/waste; exact screw and gap follow the chosen product. 32 mm products are options, not a substitution for the selected 38 mm."
+    "detail": "Exact width and product gap determine the quantities:88/90 mm boards use fewer rows. Base fixing positions1644;2000 is a provisional allowance. Confirm actual product, available lengths, screw embedment and minimum edge-strip width before ordering or ripping."
   },
   {
     "id": "final",
@@ -152,7 +152,7 @@ export function renderBuildGuide(container) {
     <tr><th>B01–B18</th><td>Rebuilt cross-blocks</td><td>18 ×240 mm /4.32 lm nominal</td></tr>
     <tr><th>R1/R2 · T01–T19</th><td>Tread rails / crosspieces</td><td>2 ×6600 rails +21 ×310 short pieces, nominal; SG8 H5 request</td></tr>
     <tr><th>GP01 · DPC · C1/C2/C3</th><td>Tread foundations / separation / restraint</td><td>6 shared-pad proposals, each bearing both rails; exact hardware review required</td></tr>
-    <tr><th>TD1–TD3</th><td>Tread-board rows</td><td>3 illustrated; actual board, gaps, edge rips and screws from DF01</td></tr>
+    <tr><th>TD1–TD5</th><td>Tread-board rows</td><td>5 illustrated at80 mm width /5 mm gap; confirm actual width/product</td></tr>
   </tbody></table></div></details>
   <div class="assembly-inputs"><strong>One build:</strong> selected 500/250 mm levels → main/rebuilt/tread foundations → all framing/concealed connections → boards. Specific dimensions below remain a proposal for the builder’s pre-build review; retained support and exact connections are not remotely verified. Plan details: FP01 foundations · AP01 main connections · GP01 tread · DF01 boards.</div>
   <nav class="assembly-nav" aria-label="Assembly steps">${assemblySteps.map((step, i) => `<button type="button" data-assembly-index="${i}" title="${step.title}">${String(i + 1).padStart(2, '0')}</button>`).join('')}</nav>

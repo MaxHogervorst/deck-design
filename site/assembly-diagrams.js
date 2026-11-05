@@ -42,7 +42,7 @@ const assemblyDescriptions = {
   boards: ['Fix boards across their supports', 'Main boards run across joists. Rebuilt boards turn ninety degrees and fix at the flush cross-block rows. Two fixing dots per crossing are illustrative.'],
   'tread-box': ['Assemble one tread ladder', 'Two nominal 6600 millimetre rails and nineteen nominal 310 millimetre crosspieces make a 6600 by 400 single-layer tread frame. Exact cuts and joints remain to specify.'],
   'tread-ground': ['Typical tread bearing and restraint', 'Provisional load path: timber rail bears through specified separation onto a concrete plinth or footing; a side connector and concrete anchor provide restraint. F is a typical concrete foundation, DPC the separation, C1 the side connector, C2 the concrete anchor and C3 timber-to-connector fixings. Timber bears directly through separation onto concrete, not suspended from the unverified side connector. Connector, fixings, anchor and foundation sizes are not specified. No loose paver or shallow footing is implied.'],
-  'tread-boards': ['Lower the tread boards onto the frame', 'Three illustrative board rows sit on a single 140 millimetre frame layer. Board thickness 38 and selected surface 250 give a nominal frame underside 72 millimetres above garden. Product gaps and fixings remain to specify.'],
+  'tread-boards': ['Lower the tread boards onto the frame', 'Five illustrative board rows sit on a single 140 millimetre frame layer. Board thickness 32 and selected surface 250 give a nominal frame underside 78 millimetres above garden. Product gaps and fixings remain to specify.'],
   finish: ['Check the finished levels', 'Side profile of main deck surface about 500 millimetres and one tread surface 250 above garden, with 400 millimetres total tread projection. These selected levels are not an access-compliance finding.']
 };
 function assemblySetout(svg) {
@@ -199,13 +199,13 @@ function assemblyTreadGround(svg) {
 }
 function assemblyTreadBoards(svg) {
   assemblyRect(svg,80,155,400,98,{fill:'#e2eadc','data-part':'tread-frame'});
-  for(const [i,[x,width]] of[[80,126],[211,138],[354,126]].entries()){
-    assemblyRect(svg,x,53,width,26.6,{fill:'#e7cba3','data-part':'tread-board','data-part-id':`TD${i+1}`});
+  for(const [i,[x,width]] of[[80,70],[155,80],[240,80],[325,80],[410,70]].entries()){
+    assemblyRect(svg,x,53,width,22.4,{fill:'#e7cba3','data-part':'tread-board','data-part-id':`TD${i+1}`});
     assemblyText(svg,x+width/2,43,`TD${i+1}`,{'text-anchor':'middle','font-size':11});assemblyArrowLine(svg,x+width/2,95,x+width/2,143);
   }
   assemblyText(svg,104,183,'140 frame',{'font-weight':600});assemblyText(svg,277,211,'ONE LAYER',{'font-weight':700});
-  assemblyText(svg,80,262,'38 boards → 250 surface / 72 underside',{'font-size':12});
-  assemblyNote(svg,'TD1–TD3 illustrated only. Actual widths, gaps, edge rips and fixings follow the product.');
+  assemblyText(svg,80,262,'32 boards → 250 surface / 78 underside',{'font-size':12});
+  assemblyNote(svg,'Five rows at provisional80 width /5 gaps. Confirm product before rips and fixings.');
 }
 function assemblyFinish(svg) {
   assemblyAdd(svg,'path',{d:'M50 71 H244 V166 H396 V261 H520',fill:'none',stroke:assemblyInk,'stroke-width':4,'data-part':'one-tread-profile'});

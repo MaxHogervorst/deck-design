@@ -1,5 +1,12 @@
 # Project brief
 
+## Latest board dimensions — supersedes previous thickness/quantity scenarios
+
+Owner confirms **32 mm thick, approximately80 mm wide**. Use80 mm as a provisional calculation width, not an exact measured/product dimension.5 mm gaps are illustrative only. At80 mm:31 main /11 rebuilt /5 tread rows;259.27 lm row lengths;284.4 lm example stock in78 boards;1644 base board-fixing positions,2000 planning allowance. At88/90 mm the example stock is265.8/258.6 lm. Confirm width/product/gap before ordering or ripping.
+
+Height arithmetic now uses32 mm: main pile top188 mm; deck frame/rim bottom328; tread frame top218 and underside78, before separation/actual sizes. With2 mm separation and garden=cleared-ground datum, tread concrete heads76; six pads0.3384 m³ and conditional total1.3478 m³ (~1.35) before waste. Main framing, supports, selected500/250 surface levels and existing design-review limits remain unchanged.
+
+
 ## Current specification proposal — 5 November 2026
 
 Owner retains500 mm deck /250 mm tread levels and one full-width400 mm tread. Do not reopen the rise decision; do not assert access compliance. Firm natural ground is owner-reported, not verified good-ground bearing. One construction sequence and one pre-build plan review remain the brief.
@@ -8,11 +15,11 @@ The new proposal is19 main joist lines at285/380 mm centres, four continuous reb
 
 Tread proposal:140×45 SG8 H5 request, two rails plus19 crosspieces and two butt sisters, on six shared500×300 mm concrete pads, each bearing both rails. Proposed300 mm below cleared ground; reinforcement and exact restraint/anchor design remain to verify. This is six foundations/twelve bearing seats, not the withdrawn twelve independent footings.
 
-Conditional foundation proposal: six Ø400×900 main anchors, six Ø400×450 main ordinary piles, two350-square×450 intermediate ordinary piles, plus the six shared pads. Calculated net concrete≈1.342 m³ before waste with garden=cleared-ground and2 mm separation assumptions. Retained support reuse is conditional; replacement is not included. Planning pile stock1.2 m anchors /0.9 m ordinary must be rechecked against actual datum and manufacturer cut-end restrictions.
+Conditional foundation proposal: six Ø400×900 main anchors, six Ø400×450 main ordinary piles, two350-square×450 intermediate ordinary piles, plus the six shared pads. Calculated net concrete≈1.358 m³ before waste with garden=cleared-ground and2 mm separation assumptions. Retained support reuse is conditional; replacement is not included. Planning pile stock1.2 m anchors /0.9 m ordinary must be rechecked against actual datum and manufacturer cut-end restrictions.
 
 The retained bearer's width/depth, its own pile spacing, grade/condition and foundations remain unknown.The new reply also reports “spacing1970” with an axis comment; its reference points are ambiguous, so it is not treated as a verified along-bearer pile spacing. Adding the intermediate support does not prove the retained beam. Exact current-standard built-up/ordinary-pile/hanger details and the pad/anchor design are also not verified; the table comparisons are a review proposal, not construction approval.
 
-Keep38 mm pine until the owner chooses a product. Verified shelf/manufacturer alternatives are32 mm: wide merch smooth/griptread, wide premium smooth and narrow premium smooth. At assumed138 mm width/5 mm gap, the supported stock scenario is175.2 lm in48 boards;1008 base board-fixing positions. Full evidence, calculations, cutting scenario and remaining limits: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).
+32 mm thickness is confirmed; width is approximately80 mm. Use80 mm provisionally with an illustrative5 mm gap:31 main /11 rebuilt /5 tread rows,259.27 lm row lengths,284.4 lm sample stock in78 boards,1644 base fixing positions. Exact product width/gap still govern ordering;88/90 mm comparison scenarios are included. Full calculations: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).
 
 
 ## Earlier holistic review — superseded by current specification proposal
@@ -37,7 +44,7 @@ Review the main framing as one system: wet-service spans and 350 mm centre-line 
 | Plan dimensions | **6600 mm** along frontage × **2600 mm** outward = **17.16 m²** (main deck only) |
 | Finished surface height | **About 500 mm drop measured at intended step exit**, confirmed in this pass; remaining perimeter/corner ground levels not supplied |
 | Site | Mostly level; existing soil/grass; check local gradients and actual finished ground levels |
-| Decking | Budget **H3.2 treated pine**, **38 mm thickness selected**, with 138 mm width provisional; exact product, finish and stock lengths to confirm |
+| Decking | Budget **H3.2 treated pine**, **32 mm thickness confirmed**, width approximately80 mm (80 used provisionally); exact product, finish and stock lengths to confirm |
 | Framing preference | H3.2 SG8 timber, **double 140×45 bearers**, **140×45 joists** |
 | Piles | H5 timber; earlier concept **12 × 125×125 mm**, two rows of six |
 | Access | **One full-width 6600×400 mm tread**, surface 250 mm above garden; main deck about 500 mm. Ground-supported frame proposal; finished levels and access detail on hold |

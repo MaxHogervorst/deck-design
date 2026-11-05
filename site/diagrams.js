@@ -142,13 +142,13 @@ export function renderPlan(svg, { view = 'layout', selected = null } = {}) {
     '0 0 1180 870');
   svg.setAttribute('role', 'group');
   const defs = el('defs');
-  const boards = el('pattern', { id: `${uid}-boards`, width: 20, height: 18.8, patternUnits: 'userSpaceOnUse' });
-  boards.append(el('rect', { width: 20, height: 18.8, fill: C.timber }));
-  boards.append(el('line', { x1: 0, y1: 18.1, x2: 20, y2: 18.1, stroke: C.timberLine, 'stroke-width': .65, opacity: .7 }));
+  const boards = el('pattern', { id: `${uid}-boards`, width: 20, height: 11.05, patternUnits: 'userSpaceOnUse' });
+  boards.append(el('rect', { width: 20, height: 11.05, fill: C.timber }));
+  boards.append(el('line', { x1: 0, y1: 10.4, x2: 20, y2: 10.4, stroke: C.timberLine, 'stroke-width': .65, opacity: .7 }));
   defs.append(boards);
-  const rotatedBoards = el('pattern', { id: `${uid}-boards-rotated`, width: 18.8, height: 20, patternUnits: 'userSpaceOnUse' });
-  rotatedBoards.append(el('rect', { width: 18.8, height: 20, fill: C.timber }));
-  rotatedBoards.append(el('line', { x1: 18.1, y1: 0, x2: 18.1, y2: 20, stroke: C.timberLine, 'stroke-width': .65, opacity: .7 }));
+  const rotatedBoards = el('pattern', { id: `${uid}-boards-rotated`, width: 11.05, height: 20, patternUnits: 'userSpaceOnUse' });
+  rotatedBoards.append(el('rect', { width: 11.05, height: 20, fill: C.timber }));
+  rotatedBoards.append(el('line', { x1: 10.4, y1: 0, x2: 10.4, y2: 20, stroke: C.timberLine, 'stroke-width': .65, opacity: .7 }));
   defs.append(rotatedBoards);
   svg.append(defs, el('rect', { width: 1180, height: 870, fill: C.paper }));
 
@@ -249,7 +249,7 @@ export function renderPlan(svg, { view = 'layout', selected = null } = {}) {
 /** One full-width tread between the deck and garden, at the selected halfway level. */
 export function renderElevation(svg) {
   begin(svg, 'Deck to one tread to garden',
-    'Side section showing deck, one full-width 6600 by 400 millimetre tread, then garden. Measured total drop is about 500 millimetres. The user selects the tread surface halfway down, about 250 millimetres above the garden. That creates two approximately 250 millimetre rises. Pine decking thickness is 38 millimetres; board width remains provisional. The selected levels and allowable rises require verification; this is not an approved stair detail.',
+    'Side section showing deck, one full-width 6600 by 400 millimetre tread, then garden. Measured total drop is about 500 millimetres. The user selects the tread surface halfway down, about 250 millimetres above the garden. That creates two approximately 250 millimetre rises. Pine decking thickness is 32 millimetres; board width remains provisional. The selected levels and allowable rises require verification; this is not an approved stair detail.',
     '0 0 1080 430');
   svg.append(el('rect', { width: 1080, height: 430, fill: C.paper }));
   const deckEnd = 470, deckTop = 131, groundY = 331, treadEnd = 630, treadTop = 231;
@@ -258,8 +258,8 @@ export function renderElevation(svg) {
     d: `M 100 ${deckTop} H ${deckEnd} V ${treadTop} H ${treadEnd} V ${groundY} H 932 V 361 H 100 Z`,
     fill: '#e8eee4', stroke: 'none'
   }));
-  svg.append(el('rect', { x: 100, y: deckTop, width: deckEnd - 100, height: 15.2, fill: C.timber, stroke: C.timberLine, 'stroke-width': 1 }));
-  svg.append(el('rect', { x: deckEnd, y: treadTop, width: treadEnd - deckEnd, height: 15.2, fill: C.timber, stroke: C.timberLine, 'stroke-width': 1 }));
+  svg.append(el('rect', { x: 100, y: deckTop, width: deckEnd - 100, height: 12.8, fill: C.timber, stroke: C.timberLine, 'stroke-width': 1 }));
+  svg.append(el('rect', { x: deckEnd, y: treadTop, width: treadEnd - deckEnd, height: 12.8, fill: C.timber, stroke: C.timberLine, 'stroke-width': 1 }));
   line(svg, 100, deckTop, deckEnd, deckTop, { stroke: C.ink, 'stroke-width': 3 });
   line(svg, deckEnd, deckTop, deckEnd, treadTop, { stroke: C.amber, 'stroke-width': 2, 'stroke-dasharray': '5 4' });
   line(svg, deckEnd, treadTop, treadEnd, treadTop, { stroke: C.ink, 'stroke-width': 3 });
@@ -279,7 +279,7 @@ export function renderElevation(svg) {
 /** Independent 6600 x 400 tread ladder, including the constrained height stack. */
 export function renderTreadFrame(svg) {
   begin(svg, 'Proposed independent tread ladder frame',
-    'One full-width 6600 by 400 millimetre tread. Two long 140 by 45 rails and nineteen 310 millimetre nominal crosspieces form one layer beneath 38 millimetre decking. Surface is selected at 250 millimetres above garden, frame top is 212 and underside 72. Six shared-pad proposals support both rails; exact foundation/anchor design still needs confirmation. SG8 H5 supply, low-clearance details, pad/anchor design and wet-service joints need the pre-build review.',
+    'One full-width 6600 by 400 millimetre tread. Two long 140 by 45 rails and nineteen 310 millimetre nominal crosspieces form one layer beneath 32 millimetre decking. Surface is selected at 250 millimetres above garden, frame top is 218 and underside 78. Six shared-pad proposals support both rails; exact foundation/anchor design still needs confirmation. SG8 H5 supply, low-clearance details, pad/anchor design and wet-service joints need the pre-build review.',
     '0 0 1180 800');
   svg.append(el('rect', { width: 1180, height: 800, fill: C.paper }));
   text(svg, 90, 35, 'TREAD FRAME — PROPOSAL', { 'font-size': 21, 'font-weight': 650 });
@@ -291,10 +291,10 @@ export function renderTreadFrame(svg) {
   text(svg, 100, 222, '6 shared pads carry both rails (12 bearings). Foundation/anchor design still requires review.', { 'font-size': 15, fill: C.muted });
   text(svg, 100, 276, 'SIDE SECTION THROUGH THE 400 mm DEPTH', { 'font-size': 16, 'font-weight': 650 });
 
-  const left = 130, ground = 620, top = ground - 250, frameTop = ground - 212, frameBottom = ground - 72;
-  // Three decking rows shown in section; 5 mm gaps are illustrative, not selected.
-  for (const [x, width] of [[0, 126], [131, 138], [274, 126]]) {
-    svg.append(el('rect', { class: 'tread-section-decking', x: left + x, y: top, width, height: 38, fill: C.timber, stroke: C.timberLine, 'stroke-width': 1 }));
+  const left = 130, ground = 620, top = ground - 250, frameTop = ground - 218, frameBottom = ground - 78;
+  // Five provisional 80 mm-board rows with illustrative 5 mm gaps and 70 mm edges.
+  for (const [x, width] of [[0,70],[75,80],[160,80],[245,80],[330,70]]) {
+    svg.append(el('rect', { class: 'tread-section-decking', x: left + x, y: top, width, height: 32, fill: C.timber, stroke: C.timberLine, 'stroke-width': 1 }));
   }
   svg.append(el('rect', { class: 'tread-section-crosspiece', x: left + 45, y: frameTop, width: 310, height: 140, fill: '#dfe8d8', stroke: '#4e6947', 'stroke-width': 1.5 }));
   for (const x of [left, left + 355]) {
@@ -306,21 +306,21 @@ export function renderTreadFrame(svg) {
   dimH(svg, left, left + 400, 340, '400 mm total projection');
   dimH(svg, left + 45, left + 355, frameBottom - 18, '310 clear');
   dimV(svg, left + 445, top, ground, '250 surface height');
-  text(svg, 690, top + 10, '38 mm decking', { 'font-size': 18, 'font-weight': 600 });
-  text(svg, 690, frameTop + 25, 'Frame top: 212 mm', { 'font-size': 17 });
+  text(svg, 690, top + 10, '32 mm decking', { 'font-size': 18, 'font-weight': 600 });
+  text(svg, 690, frameTop + 25, 'Frame top: 218 mm', { 'font-size': 17 });
   text(svg, 690, frameTop + 55, '140 mm-deep members, one layer', { 'font-size': 16 });
-  text(svg, 690, frameBottom + 7, 'Frame underside: 72 mm', { 'font-size': 17 });
+  text(svg, 690, frameBottom + 7, 'Frame underside: 78 mm', { 'font-size': 17 });
   text(svg, 690, frameBottom + 38, 'Low-clearance timber / ground fixing', { 'font-size': 15, fill: C.amber });
   text(svg, 690, frameBottom + 61, 'and support details: to confirm.', { 'font-size': 15, fill: C.amber });
   text(svg, 100, 700, 'Separate ground support is recommended; build its foundations with the main deck’s.', { 'font-size': 16 });
-  text(svg, 100, 727, 'Review clearance and timber treatment again after the landing/tread levels are settled.', { 'font-size': 15, fill: C.muted });
-  text(svg, 100, 754, 'Selected surface 250; trial frame top / underside 212 /72 mm. Confirm actual sizes and separation.', { 'font-size': 15, fill: C.muted });
+  text(svg, 100, 727, 'Frame section unchanged; recheck actual timber sizes, separation and low-clearance treatment.', { 'font-size': 15, fill: C.muted });
+  text(svg, 100, 754, 'Selected surface 250; trial frame top / underside 218 /78 mm. Confirm actual sizes and separation.', { 'font-size': 15, fill: C.muted });
 }
 
 /** Rotated rebuilt boards fixed to flush cross-supports, not parallel joists. */
 export function renderDeckingDetail(svg) {
   begin(svg, 'Rebuilt-section decking support and fixing proposal',
-    'Assumed rebuilt decking runs along the 1970 millimetre depth, at ninety degrees to the main boards. J01, J02, J03 and J04 are proposed continuations. Eighteen flush cross-blocks between these joists make six support rows at 385 millimetre centres. Seven board strips illustrate a 138 millimetre width and five millimetre gaps, not an actual product selection. Two fixing-location examples are shown per board at each support row. Exact screws, block-end fixings and edge distances require a pre-build specification.',
+    'Assumed rebuilt decking runs along the 1970 millimetre depth, at ninety degrees to the main boards. J01, J02, J03 and J04 are proposed continuations. Eighteen flush cross-blocks between these joists make six support rows at 385 millimetre centres. Eleven board strips illustrate a provisional80 millimetre width and five millimetre gaps, not an actual product selection. Two fixing-location examples are shown per board at each support row. Exact screws, block-end fixings and edge distances require a pre-build specification.',
     '0 0 1180 800');
   svg.append(el('rect', { width: 1180, height: 800, fill: C.paper }));
   text(svg, 80, 36, 'REBUILT DECKING — ROTATED DIRECTION ASSUMED', { 'font-size': 21, 'font-weight': 650 });
@@ -331,8 +331,8 @@ export function renderDeckingDetail(svg) {
     text(svg, X + x * S, Y + 30, `J0${i + 1}`, { 'text-anchor': 'middle', 'font-size': 14, 'font-weight': 650 });
   }
   drawRebuiltBlocks(svg, X, Y, S);
-  // A 5 mm example gap gives two 90 mm edges and five 138 mm interior boards.
-  const boardWidths = [90, 138, 138, 138, 138, 138, 90];
+  // Provisional80 mm boards: nine full strips, two65 mm edges and ten5 mm gaps.
+  const boardWidths = [65,...Array(9).fill(80),65];
   let cursor = 0;
   for (const [i, width] of boardWidths.entries()) {
     svg.append(el('rect', { class: 'rebuilt-deck-board', 'data-board-id': i + 1, 'data-direction': 'Y', x: X + cursor * S, y: top, width: width * S, height: 1970 * S, fill: '#dfc5a0', 'fill-opacity': .58, stroke: '#b59060', 'stroke-width': .6 }));
@@ -359,9 +359,9 @@ export function renderDeckingDetail(svg) {
   svg.append(el('circle', { cx: textX + 7, cy: 364, r: 4, fill: '#85432e' }));
   text(svg, textX + 27, 370, 'Fix boards down into cross-support rows.', { 'font-size': 18, 'font-weight': 600 });
   text(svg, textX, 403, 'Two fixing locations per board at each row are shown.', { 'font-size': 16 });
-  text(svg, textX, 433, 'Exact 38 mm-board screws and edge/end distances: TBD.', { 'font-size': 16, fill: C.muted });
+  text(svg, textX, 433, 'Exact 32 mm-board screws and edge/end distances: TBD.', { 'font-size': 16, fill: C.muted });
   text(svg, textX, 487, 'Before building: agree block-end connections,', { 'font-size': 16, fill: C.amber });
   text(svg, textX, 513, 'joist continuity, bearing and supported board joints.', { 'font-size': 16, fill: C.amber });
   text(svg, 110, 712, 'Board strips and dots are fixing examples, not a final board order or screw schedule.', { 'font-size': 16, fill: C.muted });
-  text(svg, 110, 741, 'Direction is illustrated from the latest description; 138 mm width and 5 mm gaps are assumptions.', { 'font-size': 15, fill: C.muted });
+  text(svg, 110, 741, 'Direction is illustrated from the latest description; 80 mm width and5 mm gaps are assumptions; exact supplied width remains to measure.', { 'font-size': 15, fill: C.muted });
 }

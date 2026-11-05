@@ -1,14 +1,14 @@
-# One build sequence — specific proposal
+# One build sequence —32 mm narrow decking
 
-Owner retains500/250 mm datums; access compliance unverified. One pre-build builder review, then owner checks. No construction inspection visits.
+32 mm confirmed; approximately80 mm width is provisional. Selected500/250 levels remain. One pre-build review, then owner checks.
 
 ## 01 — Mark the selected height datums
 
-**Parts:** Deck 500 · tread 250 mm above garden · 38 mm boards. **Tools:** Laser or level · tape.
+**Parts:** Deck 500 · tread 250 mm above garden · 32 mm boards. **Tools:** Laser or level · tape.
 
 **Action:** Use the owner-selected levels: deck about 500 mm above garden, one tread at 250 mm, 400 mm total projection. Carry these datums through the foundation and framing plans.
 
-**Check:** Nominal main pile top 182 mm; tread frame top 212 /underside 72 mm before separation and actual timber sizes.
+**Check:** Nominal main pile top188 mm; tread frame top218 /underside78 mm before separation and actual timber sizes. Board width is approximately80 mm, not yet measured.
 
 **Owner levels retained:** Access compliance is not verified. Main framing is based on a 2 kPa residential deck without a cantilevered barrier; ground is reported firm natural. Retained support and exact connection details still need verification.
 
@@ -40,7 +40,7 @@ Owner retains500/250 mm datums; access compliance unverified. One pre-build buil
 
 **Check:** Planning sizes: anchors Ø400×900 deep; ordinary main Ø400×450; M piles 350 square×450. Keep at least 100 mm concrete under timber piles.
 
-**Conditional foundation schedule:** Tread pad proposal: 500 across the tread ×300 along X, 300 below cleared ground, raised to the bearing datum. Calculated net concrete ≈1.34 m³ for the whole scheme before waste, with stated level assumptions. This is not a dig/order instruction; pad/anchor design and good-ground suitability remain to confirm.
+**Conditional foundation schedule:** Tread pad proposal:500 across the tread ×300 alongX,300 below cleared ground, raised to the bearing datum. With32 mm boards and2 mm separation, pad head is76 mm; calculated net concrete≈1.35 m³ before waste under the stated datum assumption. Ground bearing and exact pad/anchor details still require review.
 
 ## 05 — Seat and connect both bearer lines
 
@@ -94,13 +94,13 @@ Owner retains500/250 mm datums; access compliance unverified. One pre-build buil
 
 ## 10 — Lay boards on all three areas
 
-**Parts:** Selected 38 mm pine · boards in three areas · matched decking screws. **Tools:** Driver · spacers · straightedge · saw.
+**Parts:** 32 mm pine · approximately80 mm wide · matched decking screws. **Tools:** Driver · spacers · straightedge · saw.
 
 **Action:** Run main boards in X and rebuilt boards in Y. Alternate main/tread board seams at X≈2375 and 3895 on the doubled supports, using the selected product’s butt gap and screw edge distances.
 
-**Check:** For assumed 138 mm boards /5 mm gaps:19 main +7 rebuilt +3 tread rows. Illustrative purchase mix:12×2.4,10×3.0,14×4.2,12×4.8 m =175.2 lm including an extra rebuilt length.
+**Check:** At provisional80 mm width /5 mm gaps:31 main +11 rebuilt +5 tread rows. Stock scenario:19×2.4,17×3.0,23×4.2,19×4.8 m =284.4 lm, including one spare rebuilt piece.
 
-**Needs DF01:** This cut-by-stock scenario depends on those lengths being available. Base fixing count is 1008 positions before extras/waste; exact screw and gap follow the chosen product. 32 mm products are options, not a substitution for the selected 38 mm.
+**Needs DF01:** Exact width and product gap determine the quantities:88/90 mm boards use fewer rows. Base fixing positions1644;2000 is a provisional allowance. Confirm actual product, available lengths, screw embedment and minimum edge-strip width before ordering or ripping.
 
 ## 11 — Measure the complete finished route
 
