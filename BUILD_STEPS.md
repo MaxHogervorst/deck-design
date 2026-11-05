@@ -1,18 +1,16 @@
-# One assembly sequence — main deck, rebuilt section and tread
+# One build sequence — specific proposal
 
-One pre-build plan review; then owner construction checks. No builder inspections during construction. The independent tread is built in the same programme, not added after decking.
+Owner retains500/250 mm datums; access compliance unverified. One pre-build builder review, then owner checks. No construction inspection visits.
 
-Four missing details: **GP01** final levels/tread frame/foundations, **FP01** main foundations, **AP01** structural spans/bracing/connections, **DF01** actual boards/fixings. They precede affected work; sketches do not release cuts.
+## 01 — Mark the selected height datums
 
-## 01 — Settle levels before any foundations
+**Parts:** Deck 500 · tread 250 mm above garden · 38 mm boards. **Tools:** Laser or level · tape.
 
-**Parts:** Agreed GP01 levels + FP01/AP01/DF01. **Tools:** Laser or level · tape.
+**Action:** Use the owner-selected levels: deck about 500 mm above garden, one tread at 250 mm, 400 mm total projection. Carry these datums through the foundation and framing plans.
 
-**Action:** Set one deck datum, the final garden landing level and the one-tread level. Agree these with the complete foundation and connection plan before construction.
+**Check:** Nominal main pile top 182 mm; tread frame top 212 /underside 72 mm before separation and actual timber sizes.
 
-**Check:** Current 500 mm drop ÷ 2 rises = 250 mm each. BRANZ gives 190 mm maximum for common/main private stairs; this combination is on hold.
-
-**Levels unresolved:** One tread and 400 mm projection stay in the brief. To use that 190 mm guidance, two rises total at most 380 mm. Any level solution must also recheck timber clearance and foundation heights; no landing change is selected.
+**Owner levels retained:** Access compliance is not verified. Main framing is based on a 2 kPa residential deck without a cantilevered barrier; ground is reported firm natural. Retained support and exact connection details still need verification.
 
 ## 02 — Mark the whole footprint
 
@@ -26,63 +24,63 @@ Four missing details: **GP01** final levels/tread frame/foundations, **FP01** ma
 
 ## 03 — Mark all foundation positions
 
-**Parts:** P01–P12 main pile marks + GP01 tread support marks. **Tools:** Tape · strings · level.
+**Parts:** P01–P12 main · M1/M2 intermediate rebuilt piles · six tread pads. **Tools:** Tape · strings · level.
 
-**Action:** Transfer the agreed main and tread foundation layouts together. Label ordinary and bracing piles from FP01/AP01.
+**Action:** Mark the two main rows and six shared tread pads at the same X stations. Mark M1/M2 at X=175/725, Y=−800 for the new 900 mm bearer.
 
-**Check:** Main proposal: X=250/1470/2690/3910/5130/6350; Y=350/2250. Main bays 1220 mm; rows 1900 mm apart.
+**Check:** Main X=250/1470/2690/3910/5130/6350; Y=350/2250. Proposed anchor piles P01/P03/P06/P07/P09/P12; remaining main and M piles ordinary.
 
-**Needs FP01 + GP01:** Tread footing number and locations remain to design. The former twelve-concrete-bearing layout is withdrawn; it was not a verified requirement.
+**Specific proposal for review:** Anchor lines at X=250/2690/6350 have gaps 2440/3660 mm. Six pads span both tread rails; they are six foundations, not twelve.
 
 ## 04 — Build all foundations in one operation
 
-**Parts:** Main piles/concrete + specified tread foundations and restraint components. **Tools:** Excavation · level · temporary braces · specified installation tools.
+**Parts:** 6 anchor +6 ordinary main piles ·2 ordinary M piles ·6 shared tread pads. **Tools:** Excavation · level · temporary braces · specified installation tools.
 
-**Action:** Install the main piles and ground-supported tread foundations to their respective schedules. Set every bearing height from the same agreed levels; cure concrete as specified.
+**Action:** Use the footing schedule after its ground and connection assumptions are confirmed. Install all foundations before framing; set bearing tops from the selected datums.
 
-**Check:** Main pile-top arithmetic at the old datum: 500−38−140−140=182 mm before DPC. Tread bearing heights depend on the resolved levels and frame.
+**Check:** Planning sizes: anchors Ø400×900 deep; ordinary main Ø400×450; M piles 350 square×450. Keep at least 100 mm concrete under timber piles.
 
-**Schedules required:** The picture shows a typical tread bearing, not hole dimensions or an anchor recipe. FP01/GP01 must give footing sizes/depths, ground basis, separation, restraint products and installation details.
+**Conditional foundation schedule:** Tread pad proposal: 500 across the tread ×300 along X, 300 below cleared ground, raised to the bearing datum. Calculated net concrete ≈1.34 m³ for the whole scheme before waste, with stated level assumptions. This is not a dig/order instruction; pad/anchor design and good-ground suitability remain to confirm.
 
 ## 05 — Seat and connect both bearer lines
 
-**Parts:** BA-1/BA-2 rear · BB-1/BB-2 front · AP01 connections. **Tools:** Level · strings · clamps · specified fixing tools.
+**Parts:** BA/BB doubled main bearers · BC new 900 mm doubled bearer · complete connections. **Tools:** Level · strings · clamps · specified fixing tools.
 
-**Action:** Place the doubled bearers on their scheduled bearing/separation. Install ply, splice and pile connections from AP01.
+**Action:** Seat the two main bearer lines and BC at Y=−800. Keep the proposed double 140×45 sections; obtain the ply, splice and rated connection detail before fastening.
 
-**Check:** Each pair is nominally 90 wide ×140 deep. Rear/front centres Y=350/2250; both tops share one datum.
+**Check:** Main pile centres 1220 mm apart. Splice main bearers over ordinary piles at X=3910, not the six anchor locations.
 
-**Needs AP01:** Review 1220 mm pile spans, 250 mm end offsets and bracing in both directions. MiTek 12KNH is only a candidate; doubled-bearer fit and complete rated connection remain unverified. Splices need approved ordinary-pile locations.
+**Gravity benchmark found; joints pending:** BRANZ’s published wet-service example uses a solid 140×70 bearer at 1.3 m spans /2.3 m loaded dimension. The doubled 140×45 proposal has greater section width but is not validated as a built-up member merely by that comparison.
 
-## 06 — Fit J01–J16 and the edge rims
+## 06 — Fit J01–J19, butt sisters and rims
 
-**Parts:** J01–J16 · RM1 front · RM2 rear rim line. **Tools:** Tape · square · level · clamps.
+**Parts:** 4 long joists +15 main-only · BJ1/BJ2 · RM1/RM2. **Tools:** Tape · square · level · clamps.
 
-**Action:** Set J01/J02/J03 at X=22.5/450/877.5, then use the coordinate table. Fit rims without crossing the three continuous-joist candidates.
+**Action:** Use centres 22.5/307.5/592.5/877.5, then fifteen 380 mm bays. Add BJ1/BJ2 beside J08/J12 for board seams. Keep J01–J04 continuous through the rebuilt strip.
 
-**Check:** First two bays 427.5 mm; next thirteen ≈438.46 mm. Support separations ≈2320/1900 mm for J01–J03; main end projections 350 mm from bearer centres.
+**Check:** Rebuilt support separations become 1170/1150 mm; main 1900 mm. Main end projection 350 mm from bearer centre. All joist centres ≤400 mm.
 
-**Cuts / bearing unresolved:** 4570/2600 mm are finished envelopes, not joist cuts. Rim thickness changes actual member ends. Verify retained support, wet-service spans, cantilevers, bearing, lateral restraint and the anchor-pile/joist alignment.
+**Revised source-bounded layout:** BRANZ’s worked example accepts 140×45 SG8 wet-service joists over 2.1 m at 400 centres. New layout stays below that example; full applicable standard/connection checks still apply. Finished-envelope allowance gives nominal 4525/2510 mm members with the illustrated rims; verify actual bearing faces before cutting.
 
 ## 07 — Fit the rebuilt-board supports
 
-**Parts:** B01–B12 + AP01 structural block-end fixings. **Tools:** Tape · square · straightedge · clamps.
+**Parts:** B01–B18 · selected structural block-end connections. **Tools:** Tape · square · straightedge · clamps.
 
-**Action:** Fit two flush cross-blocks between J01/J02/J03 at each of the six rows. Complete the rim junction and supported board-joint framing.
+**Action:** Fit three flush blocks between J01/J02/J03/J04 at each of the six rows. Add 36 main lateral blocks at Y600/2000, then complete rims and board-butt support pairs.
 
-**Check:** Y centres −1947.5/−1562.5/−1177.5/−792.5/−407.5/−22.5; 385 mm spacing. Nominal clear blocks 382.5 mm.
+**Check:** Rebuilt:18×240 mm. Main:36 lateral blocks:6×240,4×290,26×335 mm (11.31 lm). Their rows are250 mm from the nearest bearer.
 
-**Needs AP01:** The rebuilt boards are illustrated running in Y, across these blocks. Block-end structural fixings differ from decking screws. Add final butt-joint support before covering the frame.
+**Wet-service hanger detail required:** Specify structural fixings for lateral blocks and candidate stainless45 mm joist hangers for rebuilt block ends, with wet-service fastening schedules. Do not apply Pryda’s published dry-timber capacity table unchanged to this exposed structure.
 
 ## 08 — Fit the tread frame on its foundations
 
-**Parts:** R1/R2 rails · T01–T16 crosspieces, geometry proposal only. **Tools:** Tape · square · clamps · specified connection tools.
+**Parts:** R1/R2 ·19 crosspieces +2 butt sisters ·6 shared pads. **Tools:** Tape · square · clamps · specified connection tools.
 
-**Action:** Assemble the reviewed single-layer frame on its prepared ground supports. Install the specified restraint and separation. Keep it structurally independent of the main deck.
+**Action:** Assemble the 140×45 single-layer tread frame on its six shared ground supports. Seek SG8 H5 framing for this low, damp exposure; install reviewed separation and restraint.
 
-**Check:** Proposed outside frame 6600 ×400; two 45 mm rails leave 310 mm nominal crosspieces. Frame diagonal ≈6612 mm.
+**Check:** 6600×400 outer frame;21 short pieces ×310 mm nominal; rail bearings at X=250/1470/2690/3910/5130/6350. The rails do not load the main deck rim.
 
-**Needs resolved GP01:** 140 mm depth is a trial section. At the old 250 mm surface it leaves only 72 mm underside clearance. Final levels may require another section/support detail; do not release these cuts or assume twelve footings.
+**Specific proposal; hardware review:** H5 structural framing is listed on request by Timberlink NZ, not confirmed shelf stock. Pad reinforcement/bearing, restraint bracket, concrete anchors, timber fasteners and rail joints need a matching reviewed detail; no post-shoe substitution is specified.
 
 ## 09 — Check the complete uncovered structure
 
@@ -90,19 +88,19 @@ Four missing details: **GP01** final levels/tread frame/foundations, **FP01** ma
 
 **Action:** Check both frames, the retained support, cross-blocks and all concealed structural connections before laying any boards.
 
-**Check:** Confirm levels, bearing, specified bracing/anchors, rim joints, board-end supports and tread stability against the agreed plan.
+**Check:** Check 19 main joist lines +2 butt sisters, 18 rebuilt blocks, the intermediate bearer, retained-support condition, six main anchor assemblies and all tread bearing/restraint connections.
 
 **Owner check before covering:** Main load path: boards → joists/blocks → bearers → piles → soil. Tread: boards → box frame → its foundations → soil. No support from fascia, cladding or deck boards; no builder inspection visit is assumed.
 
 ## 10 — Lay boards on all three areas
 
-**Parts:** 38 mm pine main/rebuilt boards + TD1–TD3 illustrated tread rows. **Tools:** Driver · spacers · straightedge · saw.
+**Parts:** Selected 38 mm pine · boards in three areas · matched decking screws. **Tools:** Driver · spacers · straightedge · saw.
 
-**Action:** Lay main boards across X, rebuilt boards in the illustrated Y direction, then the tread boards across the short supports. Use DF01 throughout.
+**Action:** Run main boards in X and rebuilt boards in Y. Alternate main/tread board seams at X≈2375 and 3895 on the doubled supports, using the selected product’s butt gap and screw edge distances.
 
-**Check:** All butt ends supported; actual product gaps, edge rows, screws and edge distances followed. Keep the tread within the 400 mm envelope including the agreed edge/nosing detail.
+**Check:** For assumed 138 mm boards /5 mm gaps:19 main +7 rebuilt +3 tread rows. Illustrative purchase mix:12×2.4,10×3.0,14×4.2,12×4.8 m =175.2 lm including an extra rebuilt length.
 
-**Needs DF01:** 19 main +7 rebuilt +3 tread rows give 158.99 lm before stock losses/waste with assumed 138 mm boards. This is one provisional stock scenario. The three tread rows need rips; two fixing dots per support are illustrative.
+**Needs DF01:** This cut-by-stock scenario depends on those lengths being available. Base fixing count is 1008 positions before extras/waste; exact screw and gap follow the chosen product. 32 mm products are options, not a substitution for the selected 38 mm.
 
 ## 11 — Measure the complete finished route
 
@@ -110,6 +108,6 @@ Four missing details: **GP01** final levels/tread frame/foundations, **FP01** ma
 
 **Action:** Check the finished assembly against the resolved plan, including actual rises, going, edges, board fixings and stable ground support.
 
-**Check:** One full-width 6600 ×400 tread. Use the agreed finished levels, not the unresolved halfway-height target.
+**Check:** One 6600×400 tread at the selected 250 mm level; main about 500 mm. Compare actual framing, fixings and levels with the reviewed plan.
 
-**Owner completion check:** The pictured 500/250 mm arrangement records the unresolved starting geometry. It is not the construction target. Resolve differences from the agreed plan before use.
+**Owner completion check:** Owner completion check. The retained 250 mm rises are an owner choice, not a declaration of access compliance.

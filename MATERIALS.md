@@ -1,39 +1,43 @@
-# Materials, shopping and cutting — ESTIMATES ONLY
+# Materials — conditional review quantities, not an order
 
-No supplier order should be placed from these quantities until the footing/bracing and joist/bearer layout are verified. Always check H3.2 SG8 vs H1.2 timber labels.
+## Current specification proposal — 5 November 2026
 
-## Holistic review — 5 November 2026 (current)
+Owner retains500 mm deck /250 mm tread levels and one full-width400 mm tread. Do not reopen the rise decision; do not assert access compliance. Firm natural ground is owner-reported, not verified good-ground bearing. One construction sequence and one pre-build plan review remain the brief.
 
-**CONFIRMED BY USER:** one build sequence; choose the simplest support arrangement. **PROVISIONAL recommendation:** keep the tread independently ground-supported, and set out/build its foundations with the main deck. Build both frames and all concealed connections before boards. The owner has not selected a landing/deck height change or approved a footing/frame design.
+The new proposal is19 main joist lines at285/380 mm centres, four continuous rebuilt joists, two main board-butt sisters,36 main lateral blocks and18 rebuilt cross-blocks. Add a900 mm doubled bearer atY−800 on two ordinary piles. Main six anchor positions:P01/P03/P06/P07/P09/P12; other six main piles ordinary. This supersedes the16-line /three-continuation /12-block layout. Keep double140×45 bearers for review, with the exact built-up fastening schedule still required.
 
-**HOLD POINT — levels first:** the measured 500 mm drop and halfway tread yield 250+250 mm rises. BRANZ's published common/main private stair guidance gives a 190 mm maximum. One tread under that guidance permits at most 380 mm total drop, so a compatible level solution needs at least 120 mm change; no solution is selected. Recheck actual clearance, timber treatment and all foundation heights after any level change. Do not turn the old 250/212/72 mm arithmetic into construction datums.
+Tread proposal:140×45 SG8 H5 request, two rails plus19 crosspieces and two butt sisters, on six shared500×300 mm concrete pads, each bearing both rails. Proposed300 mm below cleared ground; reinforcement and exact restraint/anchor design remain to verify. This is six foundations/twelve bearing seats, not the withdrawn twelve independent footings.
 
-**Whole-system arithmetic:** at the old levels, deck boards underside=462; main rim bottom=322; tread frame top=212 mm. The 110 mm gap prevents simply bolting a lower ledger alongside the rim. Ground support avoids that unverified drop connection and added rim/joist loads. This is a simplicity recommendation, not a foundation/connection approval.
+Conditional foundation proposal: six Ø400×900 main anchors, six Ø400×450 main ordinary piles, two350-square×450 intermediate ordinary piles, plus the six shared pads. Calculated net concrete≈1.342 m³ before waste with garden=cleared-ground and2 mm separation assumptions. Retained support reuse is conditional; replacement is not included. Planning pile stock1.2 m anchors /0.9 m ordinary must be rechecked against actual datum and manufacturer cut-end restrictions.
 
-**Withdrawn:** the six-station/twelve-tread-footing layout and G01–G12 purchasing quantities. Support both rails, but derive foundation count, positions, bearing, spans and restraint from GP01. The two 6600 mm rails and sixteen 310 mm crosspieces remain trial geometry only; frame depth/cuts follow resolved levels. Twelve proposed *main* piles remain a separate, unverified structural layout.
+The retained bearer's width/depth, its own pile spacing, grade/condition and foundations remain unknown.1970 mm is the rebuilt depth, not those properties. Adding the intermediate support does not prove the retained beam. Exact current-standard built-up/ordinary-pile/hanger details and the pad/anchor design are also not verified; the table comparisons are a review proposal, not construction approval.
 
-Review the main framing as one system: wet-service spans and 350 mm centre-line end projections, 1220 mm pile spacing/250 mm bearer end offsets, doubled-bearer splices, bracing in both directions, actual pile/joist connector alignment, retained support capacity, three continuous joists, rear rim interruptions and block-end fixings. Actual joist ends depend on rim thickness; 4570/2600 mm are envelopes. Supported board stock joints and the final board product must be decided before covering the frame.
+Keep38 mm pine until the owner chooses a product. Verified shelf/manufacturer alternatives are32 mm: wide merch smooth/griptread, wide premium smooth and narrow premium smooth. At assumed138 mm width/5 mm gap, the supported stock scenario is175.2 lm in48 boards;1008 base board-fixing positions. Full evidence, calculations, cutting scenario and remaining limits: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).
 
-## Draft structural quantities
-| Component | Preliminary need | Critical note |
+## Current quantities
+
+| Part | Nominal quantity | Purchasing limit |
 |---|---|---|
-| H5 125×125 piles | 12 | Lengths depend on confirmed footing depth, exposed height and connection geometry; anchor-grade suitability to be checked |
-| H3.2 SG8 140×45 double bearers | 4 × 6600 mm nominal plies = **26.4 lm installed** | Splice, cuts and allowable joint positions to be engineered/checked |
-| H3.2 SG8 140×45 joists | 16 total main joist lines; J01–J03 shown with candidate continuations; cuts TBD | Three longer candidates replace three short members, not three extra joists. Side edges counted once; junction, bearings, butt supports and cuts unverified |
-| H3.2 SG8 140×45 rims | RM1/RM2: 2 × 6600 mm overall = 13.2 lm allowance; side edge joists already included in the 16-line baseline | AP01 cuts/joints; rear rim split around J01–J03, not two approved cuts |
-| H3.2 138×38 decking | Current rotated-board scenario: 19 main + 7 rebuilt + 3 tread rows = 158.99 lm (~159.0 lm) before allowances; actual product and final order unresolved | Not a purchase length/stock list; actual board width, perimeter clearances, gap/moisture, joints and waste govern |
-| Decking screws | Previous allowance **2 × 500 packs** | Count from final joist/butt layout and ends; stainless or appropriate corrosion rating |
-| DPC | At each pile top as required | Exact grade/size per detail |
-| Ordinary/anchor pile structural fixing kits | TBD | **Do not buy until connection type is verified** |
-| Concrete | TBD; earlier **~0.8–1.1 m³** not verified | Must derive from footing dimensions and soil |
-| Rebuilt cross-blocks | 12×382.5 mm nominal = 4.59 lm, 140×45 concept | Flush between J01–J03; exact hangers/structural fixings and cuts unverified |
-| Tread frame rails | 2×6600 mm nominal = 13.2 lm, 140×45 concept | Trial only: depth/grade/treatment follow resolved levels; rail/support capacity TBD |
-| Tread crosspieces | 16×310 mm nominal = 4.96 lm, 140×45 concept | Includes end pieces; frame connections/cuts unverified |
-| Tread foundations | Count and positions TBD | GP01 design after levels; former twelve-location layout withdrawn |
-| C1/C2/C3 tread restraint | Side bracket / concrete anchor / timber-fastener families | Products, quantities per location, corrosion class, embedment and edge distances TBD; not a hanging support |
+|125×125 H5 structural piles|6 main anchors +6 main ordinary +2 intermediate ordinary|Anchor-grade certification and actual cleared-ground/cut length required; retained replacements excluded.|
+|Double140×45 main bearers|4 plies×6.6 m =26.4 lm|Sample stock4×4.2 +4×3.0 m; splices over ordinaryX3910; exact ply schedule unresolved.|
+|Double140×45 intermediate bearer|2×0.9 m =1.8 lm|Y−800, support/end-projection detail review.|
+|Main joists and butt sisters|4 long +17 short =21 members|4525/2510 mm nominal with drawn rims;4×4.8 +9×5.4 stock yields an extra short piece, subject to actual cuts.|
+|Main lateral blocks L01–L36|6×240 +4×290 +26×335 =11.31 lm|Structural end-fixing schedule; keep two rows within300 of bearers.|
+|Rebuilt blocks B01–B18|18×240 =4.32 lm|Stainless hanger/structural fixing needs wet-service applicability.|
+|Rims|Front6600; interrupted rear6420 nominal|Actual joints/supports and cuts before purchase.|
+|Tread rails|2×6600 =13.2 lm|SG8 H5 request; splice over shared pad, actual connection detail.|
+|Tread short pieces|21×310 =6.51 lm|19 basic crosspieces +2 butt sisters; grade/treatment and joints review.|
+|Concrete|≈1.342 m³ net scenario before waste|6 main anchors +8 ordinary +6 shared pads, good ground/datum assumptions; retained replacement excluded.|
+|12 kN structural anchor assemblies|6 main locations proposed|Complete stainless system; manufacturer/current-standard joint geometry and built-up bearer applicability not yet closed.|
+|Tread restraints / separation|Products/counts remain unselected|C1/C2/C3 labels are not a kit or drilling recipe.|
+|38 mm pine boards|175.2 lm illustrative stock in48 boards|12×2.4,10×3.0,14×4.2,12×4.8; actual width/gap/length availability and defects before ordering.|
+|Decking screws|1008 base positions;1200 planning allowance|Actual38 mm-board screw, corrosion, length/effective embedment/edges before ordering; structural fixings excluded.|
 
-## Earlier generic retail estimate (unverified / historical)
-ChatGPT previously estimated **NZ$3, 000–4, 500** for deck materials with steps excluded or poorly scoped; do not rely on this as a quote. Earlier budget decking estimate was **NZ$5.42 per lineal metre × 132 lm = NZ$715.44** (historical, must recheck current price, stock, length mix and grade).
+## Board options
+
+Keep38 mm unless owner changes it. Exact38 mm shelf product not verified: obtain merchant/custom quote. Current32 mm alternatives: Bunnings138 merch smooth$5.42/lm;138 merch griptread$5.69;88 premium smooth$6.65; Pukepine140×32 premium smooth by trade quote. Online list prices observed5 November2026, not local stock/delivered quotes. See STRUCTURAL_REVIEW for product links, grade/moisture notes and the width-dependent row quantities.
+
+Timberlink lists H4/H5 structural framing on request; this does not confirm immediate supply or every low-clearance cut-end detail. CHH Pinex's field-cut restriction within300 of ground means it cannot be substituted without checking its particular instructions. Do not label an ungraded fence rail SG8 or assume main H3.2 offcuts suit the tread.
 
 ## Builder invoices: trade pricing evidence (NOT current quotes)
 Builder obtains materials from Grove Mitre 10. Invoice line prices were **ex GST**. Useful examples from 2026 invoices:
@@ -51,126 +55,6 @@ Builder obtains materials from Grove Mitre 10. Invoice line prices were **ex GST
 
 The actual builder resale price may include markup, fees or delivery. Ask for all-in quote; compare against direct retail at same GST basis. Never assume the bulk-concrete price applies to <1 m³.
 
-## Cost-saving opportunities to investigate
-1. Builder trade account for exact H3.2 SG8 timber, H5 structural piles and connectors; confirm markup.
-2. Compare fewer piles or altered bearer size if verified spans/bracing permit.
-3. Optimise bearer purchase lengths and joints, only at code-permitted supports.
-4. Compare 138×38 treated pine length options and moisture; ask for useful lengths rather than random-length bundles without cut plan.
-5. Compare small ready-mix/minimix concrete vs bagged premix after final footing calculation.
+## Full calculation and cutting scenario
 
-## Cutting list: TODO after design freeze
-Create a cut-by-stock schedule with: stock length, each piece, quantity, saw kerf, leftovers, butt joint/structural support, merchant price and treatment. Do **not** reuse old 4.8 m + 6 m cuts without checking their total versus actual 6.6 m lines.
-
-## Areas and geometry
-- **New main deck area:** 6.6×2.6 = **17.16 m²**, excluding rebuilt section and step.
-- **Selected full-width tread:** 6600×400 mm = **2.64 m²**, surface 250 mm above garden. Vertical access detail and framing remain unverified; no tread/landing order is released.
-- **Rebuilt old section:** user now supplies 1970 mm depth: 0.9×1.970=**1.773 m²**. Main plus rebuilt = **18.933 m²**, excluding stairs. Support details and the board/stock layout still govern timber quantities.
-- Any old 2.5 m joist cut lengths, 132 lm decking allowance, 12-pile concrete estimate or cut schedule must be recalculated.
-- Prefer to reuse sound existing bearer if structural checks validate its grade/condition/spacing/loads and permitted joist fixing; do not presume free support.
-
-## Checked quantity scenarios — 2026-11-03
-
-**PROVISIONAL, main deck only.** These calculations replace guessing from the former 2500 mm depth, but do not authorise an order. Assume actual board width b=138 mm and total covered depth D=2600 mm. No wall/perimeter gap has been deducted; if 2600 includes one, recalculate D.
-
-`rows N = ceil((D+g)/(b+g))`
-
-With 17 full-width interior rows and two equally trimmed edge rows:
-
-`edge width = [D−17 b−18 g]/2`
-
-| Example interboard gap g | Coverage with 18 full rows | Rows required | Width of each of two edge rows |
-|---|---:|---:|---:|
-| 3 mm | 2535 mm | 19 | 100 mm |
-| 4 mm | 2552 mm | 19 | 91 mm |
-| 5 mm | 2569 mm | 19 | 82 mm |
-| 6 mm | 2586 mm | 19 | 73 mm |
-
-**No gap has been selected.** Follow the actual supplier's wet/dry-board installation instructions, allowable edge ripping and fixing edge distances. Nineteen 6600 mm rows represent **125.4 lm** of full-width row-length stock before stock-length availability, supported butt joints, kerf, defects and waste. Ripping edges reduces installed board width, not the nominal board lengths purchased; possible offcut reuse requires a real cut plan.
-
-All tread frame quantities remain trial geometry until GP01 resolves levels and frame depth.
-
-The current geometric joist baseline is **16 main lines**, with two 427.5 mm bays in the 900 mm rebuilt strip and thirteen 5700/13 ≈ 438.46 mm bays across the remaining frontage. See DESIGN.md for the centre schedule. The former uniform 437 mm illustration is superseded. J01–J03 show candidate continuations to the retained bearer; if adopted, they replace three short main members within the 16 count. No member cuts, bearings or continuous spans are approved. Extra butt supports remain unquantified; the new tread-frame scenario below is geometry-only. Side edge joists are already counted once.
-
-A **two-screws-per-board-per-support illustration** is 19×16×2 = **608 screws**, before butt joints, extra supports, stairs, rebuilt section, rim connections or waste. Verify the selected decking manufacturer's screw type/length, corrosion suitability, edge distances and actual fixing pattern first. This does not validate the earlier two-500-pack allowance.
-
-Rebuilt finished area is `0.9×(1970/1000) = 1.773 m²` from the newly supplied depth. Main plus rebuilt = **18.933 m²**, excluding stairs. A separate follow-up now places the retained bearer at the back edge; support separation to proposed rear bearer is approximately 2320 mm. Exact offsets and joist lengths are not established. Decking direction, support/junction and real stock lengths still determine its order. Stair area/quantities remain separate.
-
-### Historical rebuilt-board scenario — superseded for the rotated-board proposal
-
-This earlier calculation assumed decking ran in X. It is superseded by the Y-running rebuilt-board proposal below. Nominal covered depth was 1970 mm and each row is 900 mm long. With actual 138 mm boards, each illustrative 3–6 mm gap requires **14 rows**. Twelve full interior rows plus two equal edge rows give:
-
-`edge width = [1970−12×138−13 g]/2`
-
-| Example gap | Equal edge widths |
-|---|---:|
-| 3 mm | 137.5 mm |
-| 4 mm | 131 mm |
-| 5 mm | 124.5 mm |
-| 6 mm | 118 mm |
-
-Fourteen 900 mm rows represent **12.6 lm** of row-length stock. Separate-rectangle main plus rebuilt scenario: 125.4+12.6 = **138.0 lm**, excluding tread/landing, stock-length cuts, joints, defects and waste. This assumes independently laid-out rectangles: align board courses and resolve perimeter/junction gaps before ordering. The 137.5 mm theoretical edge width is not an instruction to trim 0.5 mm before measuring actual boards. Follow the same actual-product/gap/fixing caveats as the main table.
-
-### Concrete calculation method, once the footing design is verified
-
-For each hole: `net concrete volume = hole area × hole depth − pile cross-sectional area × actual embedded pile length`, with all lengths in metres. The pile displacement applies only where timber is actually in the hole; retain any specified concrete beneath/around it. Sum the verified holes and add supplier-agreed allowance for real excavation and waste.
-
-A 400 mm square hole has area 0.1600 m²; a 400 mm diameter hole has area approximately 0.12566 m². The square has about 27.3% more gross volume at equal depth. These shapes are not interchangeable. **No hole size/depth, pile length, concrete total or footing quantity has been selected here.**
-
-### Pricing gate
-
-The invoice examples above remain historical evidence only. Obtain comparable GST-inclusive current quotes after agreeing framing, stair scope, connector schedule and stock lengths. Include delivery, cutting, all connector components and any small-load concrete/pump fees. Current retail prices have not been checked in this pass.
-
-### Continuous-joist candidate in the rebuilt 900 mm strip
-
-With the retained bearer now reported at the back edge, a joist continuous from the rebuilt back edge across the main deck would occupy a finished envelope of **4570 mm** in Y. The old-section span to proposed rear bearer is approximately **2320 mm**, followed by **1900 mm** between new bearer centres. These are geometry inputs for a multi-support check, not approved spans or cut lengths. Any such members replace overlapping separate main/rebuilt joists at those X positions; do not add them on top of the current 16-line main baseline. No stock length or splice has been selected.
-
-## Latest thickness and full-width tread selection
-
-**CONFIRMED BY USER:** 38 mm-thick pine; 138 mm board width is still a calculation assumption. Previous 32 mm thickness is superseded. The framing stack gives nominal pile exposure **500−38−140−140=182 mm**, before DPC, actual sizes and grade variation.
-
-Tread dimensions **6600×400 mm**, surface 250 mm above garden; area **2.64 m²**. Combined main + rebuilt + tread horizontal area **21.573 m²**. A separate rectangular tread layout with actual 138 mm boards and example gaps of 3–6 mm needs **3 rows / 19.8 lm** of row-length stock, before allowances. With the now-superseded X-running rebuilt-board scenario, this gave **157.8 lm** total, before merchant lengths, joints, alignment, kerf, defects and waste. No gap/product/cut schedule has been selected and none of these figures is an order.
-
-## Current rotated-board and tread-frame proposal
-
-**PROVISIONAL interpretation:** rebuilt boards turn 90° relative to the main deck and run along 1970 mm in Y. Actual board width is still assumed 138 mm, with example gaps 3–6 mm; no gap/product has been selected.
-
-| Area | Rows / nominal row length | Row-length stock |
-|---|---|---:|
-| Main deck | 19×6.6 m | 125.4 lm |
-| Rebuilt section, rotated | 7×1.970 m | 13.79 lm |
-| Full-width tread | 3×6.6 m | 19.8 lm |
-| Total | Before allowances | **158.99 lm (~159.0 lm)** |
-
-For the 900 mm rebuilt width, five full interior boards and two equal edge boards give `edge width=[900−5×138−6 g]/2`:96/93/90/87 mm for 3/4/5/6 mm gaps. This replaces the 14 rebuilt rows/12.6 lm and 157.8 lm total scenarios for the present orientation. Area stays 21.573 m² including the tread.
-
-New support geometry: **12 flush cross-blocks ×382.5 mm =4.59 lm** between J01–J03; tread **two 6.6 m rails =13.2 lm** plus **16×310 mm crosspieces =4.96 lm**, in a single 140 mm-deep layer. Tread footing number and positions remain to design; the old twelve-location assumption is withdrawn. These are not final cuts, splice positions or an order. Connections, supported stock joints, bearing and stable footings/supports remain to specify.
-
-At the 250 mm tread surface with 38 mm decking, frame top is 212 and underside 72 mm above garden before separation details. Select structural grade and treatment for that exposure; do not automatically use main-deck H3.2 offcuts or claim an unsourced clearance threshold.
-
-The drawing's two board fastenings per cross-support are illustrative. Select the 38 mm-board screw product/length/edge distances and block-end hanger/structural fixing schedule in the pre-build plan review. The builder is not providing inspections during the build; no handrails are included in the owner's brief.
-
-## Assembly parts and connection selection
-
-| Part IDs | Nominal description | Quantity / limit |
-|---|---|---|
-| P01–P12 | Main 125×125 H5 pile concept | 12 proposed; FP01 must specify lengths, classes and footings |
-| BA-1 / BA-2 | Rear double-bearer plies | Two nominal 6600 mm lengths |
-| BB-1 / BB-2 | Front double-bearer plies | Two nominal 6600 mm lengths |
-| J01–J03 | Main + rebuilt continuity candidates | Three 4570 mm finished envelopes, not cut lengths |
-| J04–J16 | Remaining main joists | Thirteen 2600 mm finished envelopes, not cut lengths |
-| B01–B12 | Rebuilt flush cross-blocks | Twelve nominal 382.5 mm clear pieces; end connection still to specify |
-| R1 / R2 | Tread long rails | Two nominal 6600 mm lengths |
-| T01–T16 | Tread crosspieces including ends | Sixteen nominal 310 mm clear pieces |
-| GP01 foundations | Cast-concrete bearing / restraint concept | Count, positions, sizes/depths and concrete volume TBD |
-| TD1–TD3 | Illustrated tread decking rows | 38 mm thick; actual row widths/gaps/cuts from DF01 |
-| C1 | Structural side-restraint bracket family | GP01 product and quantity per location TBD |
-| C2 | Concrete-anchor family | GP01 product, count, concrete, embedment and edges TBD |
-| C3 | Timber-fastener family for C1-to-rail | GP01 product, count and timber edge distances TBD |
-
-The tread weight bears directly on concrete through DPC/separation. C1/C2/C3 provide lateral/uplift restraint, not a bracket-suspended vertical load path. No tread foundation or hardware count is established. Loose pavers or repurposed post shoes are not the specified concept.
-
-### Do MiTek anchor fixings need buying?
-
-Not automatically, and not simply because there are twelve piles. AP01 must select the bracing connections and locations. MiTek is one possible complete rated system; an adequately specified alternative may be used. The manufacturer's cited 12 kN system is for anchor/brace locations, with a 6 kN cantilever application rather than a generic ordinary-pile connection.
-
-If that MiTek system is selected, the cited exposure table points the below 600 mm candidate towards **12KNH (SS304)** rather than standard hot-dip-galvanised **12KN**. This does not settle doubled 140×45 compatibility or fit at nominal 182 mm pile exposure. Confirm the full manufacturer assembly and its component list before ordering; no anchor count, generic screw substitution or partial kit is released here.
+See [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md). No supplier order is released; footing bearing assumptions, retained support, exact structural/wet-service connections and final board product are the remaining factual/design confirmations.

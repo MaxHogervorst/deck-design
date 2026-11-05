@@ -1,6 +1,21 @@
 # Project brief
 
-## Holistic review — 5 November 2026 (current)
+## Current specification proposal — 5 November 2026
+
+Owner retains500 mm deck /250 mm tread levels and one full-width400 mm tread. Do not reopen the rise decision; do not assert access compliance. Firm natural ground is owner-reported, not verified good-ground bearing. One construction sequence and one pre-build plan review remain the brief.
+
+The new proposal is19 main joist lines at285/380 mm centres, four continuous rebuilt joists, two main board-butt sisters,36 main lateral blocks and18 rebuilt cross-blocks. Add a900 mm doubled bearer atY−800 on two ordinary piles. Main six anchor positions:P01/P03/P06/P07/P09/P12; other six main piles ordinary. This supersedes the16-line /three-continuation /12-block layout. Keep double140×45 bearers for review, with the exact built-up fastening schedule still required.
+
+Tread proposal:140×45 SG8 H5 request, two rails plus19 crosspieces and two butt sisters, on six shared500×300 mm concrete pads, each bearing both rails. Proposed300 mm below cleared ground; reinforcement and exact restraint/anchor design remain to verify. This is six foundations/twelve bearing seats, not the withdrawn twelve independent footings.
+
+Conditional foundation proposal: six Ø400×900 main anchors, six Ø400×450 main ordinary piles, two350-square×450 intermediate ordinary piles, plus the six shared pads. Calculated net concrete≈1.342 m³ before waste with garden=cleared-ground and2 mm separation assumptions. Retained support reuse is conditional; replacement is not included. Planning pile stock1.2 m anchors /0.9 m ordinary must be rechecked against actual datum and manufacturer cut-end restrictions.
+
+The retained bearer's width/depth, its own pile spacing, grade/condition and foundations remain unknown.The new reply also reports “spacing1970” with an axis comment; its reference points are ambiguous, so it is not treated as a verified along-bearer pile spacing. Adding the intermediate support does not prove the retained beam. Exact current-standard built-up/ordinary-pile/hanger details and the pad/anchor design are also not verified; the table comparisons are a review proposal, not construction approval.
+
+Keep38 mm pine until the owner chooses a product. Verified shelf/manufacturer alternatives are32 mm: wide merch smooth/griptread, wide premium smooth and narrow premium smooth. At assumed138 mm width/5 mm gap, the supported stock scenario is175.2 lm in48 boards;1008 base board-fixing positions. Full evidence, calculations, cutting scenario and remaining limits: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).
+
+
+## Earlier holistic review — superseded by current specification proposal
 
 **CONFIRMED BY USER:** one build sequence; choose the simplest support arrangement. **PROVISIONAL recommendation:** keep the tread independently ground-supported, and set out/build its foundations with the main deck. Build both frames and all concealed connections before boards. The owner has not selected a landing/deck height change or approved a footing/frame design.
 

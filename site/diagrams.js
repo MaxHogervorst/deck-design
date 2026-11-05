@@ -6,7 +6,7 @@ const C = {
 };
 let sequence = 0;
 
-export const JOIST_CENTRES = [22.5, 450, 877.5, ...Array.from({ length: 13 }, (_, i) => 877.5 + (5700 / 13) * (i + 1))];
+export const JOIST_CENTRES = [22.5, 307.5, 592.5, 877.5, ...Array.from({ length: 15 }, (_, i) => 877.5 + 380 * (i + 1))];
 export const BLOCK_CENTRES = [-1947.5, -1562.5, -1177.5, -792.5, -407.5, -22.5];
 export const TREAD_SUPPORT_X = [250, 1470, 2690, 3910, 5130, 6350];
 
@@ -93,12 +93,12 @@ function arrow(parent, x1, y1, x2, y2, color = C.green) {
 function drawRebuiltBlocks(parent, x0, y0, scale) {
   let index = 0;
   for (const y of BLOCK_CENTRES) {
-    for (const left of [45, 472.5]) {
+    for (const left of [45, 330, 615]) {
       parent.append(el('rect', {
         class: 'rebuilt-block area-outline', 'data-block-id': `B${String(++index).padStart(2, '0')}`,
-        'data-y-mm': y, 'data-clear-mm': 382.5,
+        'data-y-mm': y, 'data-clear-mm': 240,
         x: x0 + left * scale, y: y0 + (y - 22.5) * scale,
-        width: 382.5 * scale, height: 45 * scale,
+        width: 240 * scale, height: 45 * scale,
         fill: '#a7c6d0', stroke: '#436b7a', 'stroke-width': 1.1
       }));
     }
@@ -107,7 +107,10 @@ function drawRebuiltBlocks(parent, x0, y0, scale) {
 
 // Single-layer ladder: symbols indicate bearing POINTS, not footing dimensions.
 function drawTreadFrame(parent, x0, y0, scale) {
-  // Dashed bands identify bearing zones only. GP01 determines footing count/positions.
+  // Six shared pad proposals support both rails. Symbols are not excavation drawings.
+  for (const x of TREAD_SUPPORT_X) parent.append(el('rect', { class: 'tread-pad', 'data-x-mm': x,
+    x: x0 + (x - 150) * scale, y: y0 - 50 * scale, width: 300 * scale, height: 500 * scale,
+    fill: '#e6e8e1', stroke: '#8d6637', 'stroke-width': 1, 'stroke-dasharray': '4 3' }));
   for (const y of [22.5, 377.5]) {
     parent.append(el('rect', { class: 'tread-bearing-zone', 'data-symbolic': 'true',
       x: x0, y: y0 + y * scale - 5, width: 6600 * scale, height: 10,
@@ -120,7 +123,7 @@ function drawTreadFrame(parent, x0, y0, scale) {
       fill: '#efd3a9', stroke: '#8d6637', 'stroke-width': 1.2
     }));
   }
-  for (const [i, x] of JOIST_CENTRES.entries()) {
+  for (const [i, x] of [...JOIST_CENTRES, 2352.5, 3872.5].entries()) {
     parent.append(el('rect', {
       class: 'tread-crosspiece', 'data-member-id': `T${String(i + 1).padStart(2, '0')}`,
       'data-x-mm': x, 'data-clear-mm': 310,
@@ -135,7 +138,7 @@ function drawTreadFrame(parent, x0, y0, scale) {
 export function renderPlan(svg, { view = 'layout', selected = null } = {}) {
   const framing = view === 'framing';
   const uid = begin(svg, framing ? 'Joist and bearer layout — provisional' : 'Deck layout and dimensions',
-    'Main deck 6600 by 2600 millimetres. Rebuilt section 900 by 1970 millimetres behind the left end. One full-width tread projects 400 millimetres. Framing view shows sixteen 45 millimetre-wide joists J01 to J16, three dashed continuation candidates in the rebuilt section, twelve flush cross-blocks for the assumed rotated decking, two double bearer lines and twelve proposed piles. The ground-supported tread frame is part of the same construction sequence. Dashed bearing zones do not specify a footing count or layout.',
+    'Main deck 6600 by 2600 millimetres. Rebuilt section 900 by 1970 millimetres behind the left end. One full-width tread projects 400 millimetres. Framing view shows nineteen 45 millimetre-wide joists J01 to J19, four dashed continuation candidates in the rebuilt section, eighteen flush cross-blocks for the assumed rotated decking, two double bearer lines and twelve proposed piles. The ground-supported tread frame is part of the same construction sequence. Six shared-pad symbols are a proposal for the independent tread; two new intermediate piles are also shown.',
     '0 0 1180 870');
   svg.setAttribute('role', 'group');
   const defs = el('defs');
@@ -159,7 +162,7 @@ export function renderPlan(svg, { view = 'layout', selected = null } = {}) {
   extension.append(el('rect', { x: X + RW, y: Y - RH, width: W - RW, height: RH, fill: '#e6ece4', ...outline(selected, 'extension', '#99a99a') }));
   line(extension, X + RW + 2, Y - RH, X + W - 2, Y - RH, { stroke: C.paper, 'stroke-width': 5 });
   line(extension, X + RW, Y - RH, X + W, Y - RH, { stroke: '#99a99a', 'stroke-dasharray': '8 6', 'stroke-width': 1.7 });
-  const tread = interactive(svg, 'tread', 'One full-width tread: 6600 by 400 millimetres, selected surface 250 millimetres above garden; ground-supported box-frame proposal; foundation layout unresolved', selected);
+  const tread = interactive(svg, 'tread', 'One full-width tread: 6600 by 400 millimetres, selected surface 250 millimetres above garden; ground-supported box-frame proposal; six shared-pad proposal', selected);
   tread.append(el('rect', { x: TX, y: TY, width: TW, height: TH, rx: 1, fill: framing ? '#f1eee5' : `url(#${uid}-boards)`, ...outline(selected, 'tread', C.outline) }));
 
   if (framing) {
@@ -171,35 +174,48 @@ export function renderPlan(svg, { view = 'layout', selected = null } = {}) {
       // Split the double bearer into its two 45 mm plies in the plan.
       line(bearer, X, py, X + W, py, { stroke: '#b17c3d', 'stroke-width': .8 });
       for (const pile of [250, 1470, 2690, 3910, 5130, 6350]) {
-        bearer.append(el('rect', { class: 'pile', 'data-x-mm': pile, 'data-y-mm': position, x: X + pile * S - 8.125, y: py - 8.125, width: 16.25, height: 16.25, fill: '#fffefa', stroke: C.amber, 'stroke-width': 2 }));
+        bearer.append(el('rect', { class: 'pile', 'data-x-mm': pile, 'data-y-mm': position, 'data-pile-class': [250,2690,6350].includes(pile) ? 'anchor' : 'ordinary', x: X + pile * S - 8.125, y: py - 8.125, width: 16.25, height: 16.25, fill: [250,2690,6350].includes(pile) ? '#c08d45' : '#fffefa', stroke: C.amber, 'stroke-width': 2 }));
       }
     }
-    // Align J01–J03 with the 900 mm-wide rebuilt strip. This is a layout option,
+    // Align J01–J04 with the 900 mm-wide rebuilt strip. This is a layout option,
     // not a verified span, bearing, continuity or cutting detail.
     const centres = JOIST_CENTRES;
-    const joists = interactive(svg, 'joists', 'Sixteen provisional 140 by 45 joists J01 to J16; centres 427.5 millimetres twice then approximately 438.46 millimetres thirteen times. J01 to J03 have dashed rebuilt-section continuation candidates.', selected);
+    const joists = interactive(svg, 'joists', 'Nineteen provisional 140 by 45 joists J01 to J19; centres 285 millimetres three times, then 380 millimetres fifteen times. J01 to J04 have dashed rebuilt-section continuation candidates.', selected);
     for (const [i, centre] of centres.entries()) {
       const px = X + (centre - 22.5) * S;
       const id = `J${String(i + 1).padStart(2, '0')}`;
-      if (i < 3) {
+      if (i < 4) {
         joists.append(el('rect', { class: 'rebuilt-joist-extension', 'data-member-id': id, 'data-x-mm': centre, x: px, y: Y - RH, width: 45 * S, height: RH, fill: '#edf5e7', stroke: '#426b49', 'stroke-width': 1.4, 'stroke-dasharray': '6 4' }));
       }
-      joists.append(el('rect', { class: 'main-joist', 'data-member-id': id, 'data-x-mm': centre, x: px, y: Y + (i < 3 ? 0 : 45 * S), width: 45 * S, height: H - (i < 3 ? 45 : 90) * S, fill: selected === 'joists' ? '#164c34' : '#456b4c', stroke: '#234c32', 'stroke-width': .7 }));
+      joists.append(el('rect', { class: 'main-joist', 'data-member-id': id, 'data-x-mm': centre, x: px, y: Y + (i < 4 ? 0 : 45 * S), width: 45 * S, height: H - (i < 4 ? 45 : 90) * S, fill: selected === 'joists' ? '#164c34' : '#456b4c', stroke: '#234c32', 'stroke-width': .7 }));
       text(svg, X + centre * S, Y + 23, id, {
         class: 'deck-label joist-id', 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 650,
         fill: '#203d2b', 'paint-order': 'stroke', stroke: '#ffffff', 'stroke-width': 4, 'stroke-linejoin': 'round'
       });
     }
+    for (const [i, cx] of [2352.5, 3872.5].entries()) joists.append(el('rect', { class: 'butt-joist', 'data-member-id': `BJ${i+1}`, x: X + (cx - 22.5)*S, y: Y + 45*S, width: 45*S, height: (2600-90)*S, fill: '#78926e', stroke: '#375b35', 'stroke-width': .8 }));
+    // Added intermediate support shortens the rebuilt spans without claiming old-beam capacity.
+    const midY = Y - 800*S;
+    bearer.append(el('rect', { class: 'rebuilt-new-bearer', x: X, y: midY - 45*S, width: RW, height: 90*S, fill: '#f4d6a6', stroke: C.amber, 'stroke-width': 1.5 }));
+    for (const px of [175,725]) bearer.append(el('rect', { class:'rebuilt-new-pile', x:X+px*S-8.125, y:midY-8.125, width:16.25, height:16.25, fill:'#fffefa', stroke:C.amber, 'stroke-width':1.5 }));
+    text(svg, X + RW + 14, midY + 5, 'New 900 bearer · Y−800 · 2 piles', {'font-size':12,fill:C.amber});
+    const supportCentres = [...JOIST_CENTRES,2352.5,3872.5].sort((a,b)=>a-b);
+    let lateralIndex=0;
+    for(const cy of [600,2000]) for(let k=0;k<supportCentres.length-1;k++) {
+      const clear=supportCentres[k+1]-supportCentres[k]-45;
+      if(clear<=0) continue;
+      joists.append(el('rect',{class:'main-lateral-block','data-member-id':`L${String(++lateralIndex).padStart(2,'0')}`,'data-clear-mm':clear,'data-y-mm':cy,x:X+(supportCentres[k]+22.5)*S,y:Y+(cy-22.5)*S,width:clear*S,height:45*S,fill:'#b8d7e4',stroke:'#436b7a','stroke-width':.7}));
+    }
     // Rims occupy the finished envelope. Joists terminate at their inside faces.
     joists.append(el('rect', { class: 'main-rim', 'data-member-id': 'RM1', x: X, y: Y + (2600 - 45) * S, width: W, height: 45 * S, fill: '#b48d59', stroke: '#7c603c', 'stroke-width': .9 }));
-    for (const [start, end] of [[45, 427.5], [472.5, 855], [900, 6600]]) joists.append(el('rect', { class: 'main-rim', 'data-member-id': 'RM2', x: X + start * S, y: Y, width: (end - start) * S, height: 45 * S, fill: '#b48d59', stroke: '#7c603c', 'stroke-width': .9 }));
-    const blocking = interactive(svg, 'blocking', 'Twelve flush cross-blocks between J01 to J03, at six support rows 385 millimetres apart, for the assumed rotated rebuilt decking; block-end fixing detail is provisional', selected);
+    for (const [start, end] of [[45, 285], [330, 570], [615, 855], [900, 6600]]) joists.append(el('rect', { class: 'main-rim', 'data-member-id': 'RM2', x: X + start * S, y: Y, width: (end - start) * S, height: 45 * S, fill: '#b48d59', stroke: '#7c603c', 'stroke-width': .9 }));
+    const blocking = interactive(svg, 'blocking', 'Eighteen flush cross-blocks between J01 to J04, at six support rows 385 millimetres apart, for the assumed rotated rebuilt decking; block-end fixing detail is provisional', selected);
     drawRebuiltBlocks(blocking, X, Y, S);
     drawTreadFrame(tread, TX, TY, S);
     text(svg, X + W + 11, Y + 350 * S + 5, 'A', { fill: C.amber, 'font-size': 17, 'font-weight': 700 });
     text(svg, X + W + 11, Y + 2250 * S + 5, 'B', { fill: C.amber, 'font-size': 17, 'font-weight': 700 });
-    text(svg, X, 818, 'J01–J16: 45 mm wide · first 2 bays 427.5 mm · remaining 13 bays ≈438.46 mm', { 'font-size': 16, fill: C.ink });
-    text(svg, X, 845, 'Dashed J01–J03: continuation option. Blue: flush blocks. Tread: ground-supported frame; foundations TBD.', { 'font-size': 15, fill: C.muted });
+    text(svg, X, 818, '19 lines +2 butt sisters. L01–L36: lateral blocks at Y600 /2000, within 300 of bearers.', { 'font-size': 16, fill: C.ink });
+    text(svg, X, 845, '4 long joists +15 short +2 butt sisters. Filled piles: 6 proposed anchors. Tread: 6 shared pads.', { 'font-size': 15, fill: C.muted });
   } else {
     text(svg, X + W / 2, Y + H / 2 - 5, 'MAIN DECK', { class: 'deck-label', 'text-anchor': 'middle', 'font-size': 31, 'font-weight': 550, 'letter-spacing': 2.5 });
     text(svg, X + W / 2, Y + H / 2 + 29, '6.60 × 2.60 m  /  17.16 m²', { class: 'deck-label', 'text-anchor': 'middle', 'font-size': 19, fill: '#5f664e' });
@@ -217,7 +233,7 @@ export function renderPlan(svg, { view = 'layout', selected = null } = {}) {
   }
   text(labels, X + RW + (W - RW) / 2, Y - RH / 2 - 12, 'HOUSE EXTENSION', { 'text-anchor': 'middle', 'font-size': 25, 'font-weight': 450, 'letter-spacing': 2 });
   text(labels, X + RW + (W - RW) / 2, Y - RH / 2 + 20, '5700 mm frontage · rear extent not surveyed', { 'text-anchor': 'middle', 'font-size': 17, fill: C.muted });
-  text(labels, TX + TW / 2, TY + TH / 2 + 6, framing ? 'TREAD FRAME · SUPPORTS TBD' : 'ONE TREAD · 6600 × 400 mm', { 'text-anchor': 'middle', 'font-size': 17, 'font-weight': 600, 'letter-spacing': .6 });
+  text(labels, TX + TW / 2, TY + TH / 2 + 6, framing ? 'TREAD FRAME · 6 SHARED PADS' : 'ONE TREAD · 6600 × 400 mm', { 'text-anchor': 'middle', 'font-size': 17, 'font-weight': 600, 'letter-spacing': .6 });
   text(labels, X + W / 2, 781, 'GARDEN', { 'text-anchor': 'middle', 'font-size': 17, 'letter-spacing': 3, fill: C.green });
   const retained = interactive(svg, 'rebuilt', 'Retained bearer at rebuilt-section back edge, approximately Y minus 1970 millimetres; exact offset and capacity unverified', selected);
   retained.append(el('rect', { x: X + 2, y: Y - RH - 4, width: RW - 4, height: 8, fill: C.green, stroke: C.green, 'stroke-width': 1.5 }));
@@ -256,14 +272,14 @@ export function renderElevation(svg) {
   dimV(svg, 970, deckTop, groundY, '≈500 mm measured drop');
   text(svg, 437, 183, '≈250 mm', { 'text-anchor': 'end', 'font-size': 14, fill: C.amber });
   text(svg, 662, 286, '≈250 mm', { 'font-size': 14, fill: C.amber });
-  text(svg, 100, 399, '250 mm rises exceed BRANZ’s 190 mm common/main private stair guidance. Resolve levels first.', { 'font-size': 15, fill: C.muted });
+  text(svg, 100, 399, 'Owner-selected 500/250 mm levels retained. Access compliance is not verified.', { 'font-size': 15, fill: C.muted });
 }
 
 
 /** Independent 6600 x 400 tread ladder, including the constrained height stack. */
 export function renderTreadFrame(svg) {
   begin(svg, 'Proposed independent tread ladder frame',
-    'One full-width 6600 by 400 millimetre tread. Two long 140 by 45 rails and sixteen 310 millimetre nominal crosspieces form one layer beneath 38 millimetre decking. Surface is selected at 250 millimetres above garden, frame top is 212 and underside 72. Dashed bearing zones show where rail support is needed; the footing count, locations, dimensions and restraint connectors are not specified. Grade and treatment for low clearance, supports, anchorage, joints, spans and access geometry need the pre-build plan check.',
+    'One full-width 6600 by 400 millimetre tread. Two long 140 by 45 rails and nineteen 310 millimetre nominal crosspieces form one layer beneath 38 millimetre decking. Surface is selected at 250 millimetres above garden, frame top is 212 and underside 72. Six shared-pad proposals support both rails; exact foundation/anchor design still needs confirmation. SG8 H5 supply, low-clearance details, pad/anchor design and wet-service joints need the pre-build review.',
     '0 0 1180 800');
   svg.append(el('rect', { width: 1180, height: 800, fill: C.paper }));
   text(svg, 90, 35, 'TREAD FRAME — PROPOSAL', { 'font-size': 21, 'font-weight': 650 });
@@ -271,8 +287,8 @@ export function renderTreadFrame(svg) {
   drawTreadFrame(svg, X, Y, S);
   dimH(svg, X, X + 6600 * S, 72, '6600 mm outer frame');
   dimV(svg, X + 6600 * S + 38, Y, Y + 400 * S, '400 mm');
-  text(svg, 100, 195, 'Box-frame geometry: 2 rails + 16 crosspieces. 310 mm clear; cuts not released.', { 'font-size': 16 });
-  text(svg, 100, 222, 'Support both rails. Bearing zones are not a footing layout or an assumed count of twelve.', { 'font-size': 15, fill: C.muted });
+  text(svg, 100, 195, '2 rails +19 crosspieces +2 butt sisters. 310 mm clear; six shared-pad proposal.', { 'font-size': 16 });
+  text(svg, 100, 222, '6 shared pads carry both rails (12 bearings). Foundation/anchor design still requires review.', { 'font-size': 15, fill: C.muted });
   text(svg, 100, 276, 'SIDE SECTION THROUGH THE 400 mm DEPTH', { 'font-size': 16, 'font-weight': 650 });
 
   const left = 130, ground = 620, top = ground - 250, frameTop = ground - 212, frameBottom = ground - 72;
@@ -298,19 +314,19 @@ export function renderTreadFrame(svg) {
   text(svg, 690, frameBottom + 61, 'and support details: to confirm.', { 'font-size': 15, fill: C.amber });
   text(svg, 100, 700, 'Separate ground support is recommended; build its foundations with the main deck’s.', { 'font-size': 16 });
   text(svg, 100, 727, 'Review clearance and timber treatment again after the landing/tread levels are settled.', { 'font-size': 15, fill: C.muted });
-  text(svg, 100, 754, 'Current 250 mm surface is on hold. The 212/72 mm stack is arithmetic, not a build datum.', { 'font-size': 15, fill: C.muted });
+  text(svg, 100, 754, 'Selected surface 250; trial frame top / underside 212 /72 mm. Confirm actual sizes and separation.', { 'font-size': 15, fill: C.muted });
 }
 
 /** Rotated rebuilt boards fixed to flush cross-supports, not parallel joists. */
 export function renderDeckingDetail(svg) {
   begin(svg, 'Rebuilt-section decking support and fixing proposal',
-    'Assumed rebuilt decking runs along the 1970 millimetre depth, at ninety degrees to the main boards. J01, J02 and J03 are proposed continuations. Twelve flush cross-blocks between these joists make six support rows at 385 millimetre centres. Seven board strips illustrate a 138 millimetre width and five millimetre gaps, not an actual product selection. Two fixing-location examples are shown per board at each support row. Exact screws, block-end fixings and edge distances require a pre-build specification.',
+    'Assumed rebuilt decking runs along the 1970 millimetre depth, at ninety degrees to the main boards. J01, J02, J03 and J04 are proposed continuations. Eighteen flush cross-blocks between these joists make six support rows at 385 millimetre centres. Seven board strips illustrate a 138 millimetre width and five millimetre gaps, not an actual product selection. Two fixing-location examples are shown per board at each support row. Exact screws, block-end fixings and edge distances require a pre-build specification.',
     '0 0 1180 800');
   svg.append(el('rect', { width: 1180, height: 800, fill: C.paper }));
   text(svg, 80, 36, 'REBUILT DECKING — ROTATED DIRECTION ASSUMED', { 'font-size': 21, 'font-weight': 650 });
   const X = 110, top = 125, S = .25, Y = top + 1970 * S;
   // Underlying members remain visible through the illustrative decking strips.
-  for (const [i, x] of JOIST_CENTRES.slice(0, 3).entries()) {
+  for (const [i, x] of JOIST_CENTRES.slice(0, 4).entries()) {
     svg.append(el('rect', { class: 'detail-long-joist', 'data-member-id': `J0${i + 1}`, x: X + (x - 22.5) * S, y: top, width: 45 * S, height: 1970 * S, fill: '#426b49', stroke: '#21472c', 'stroke-width': 1 }));
     text(svg, X + x * S, Y + 30, `J0${i + 1}`, { 'text-anchor': 'middle', 'font-size': 14, 'font-weight': 650 });
   }
@@ -333,11 +349,11 @@ export function renderDeckingDetail(svg) {
   text(svg, X + 900 * S + 75, Y + 27, 'Boards run Y', { 'text-anchor': 'start', 'font-size': 13, fill: C.green });
 
   const textX = 460;
-  text(svg, textX, 140, 'J01–J03: proposed full-length continuations', { 'font-size': 19, 'font-weight': 600 });
+  text(svg, textX, 140, 'J01–J04: proposed full-length continuations', { 'font-size': 19, 'font-weight': 600 });
   text(svg, textX, 171, 'They run parallel to these boards.', { 'font-size': 16, fill: C.muted });
   svg.append(el('rect', { x: textX, y: 210, width: 28, height: 12, fill: '#a7c6d0', stroke: '#436b7a' }));
-  text(svg, textX + 42, 222, '12 flush cross-blocks in 6 rows', { 'font-size': 18, 'font-weight': 600 });
-  text(svg, textX, 253, 'Two blocks per row, 382.5 mm nominal clear length.', { 'font-size': 16 });
+  text(svg, textX + 42, 222, '18 flush cross-blocks in 6 rows', { 'font-size': 18, 'font-weight': 600 });
+  text(svg, textX, 253, 'Three blocks per row, 240 mm nominal clear length.', { 'font-size': 16 });
   text(svg, textX, 283, 'Rows: 385 mm centres. Tops flush with joists.', { 'font-size': 16 });
   text(svg, textX, 313, 'No extra batten layer or extra finished height.', { 'font-size': 16, fill: C.muted });
   svg.append(el('circle', { cx: textX + 7, cy: 364, r: 4, fill: '#85432e' }));

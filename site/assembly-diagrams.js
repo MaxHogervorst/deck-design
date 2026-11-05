@@ -30,17 +30,17 @@ function assemblyPart(svg, x, y, label) {
   assemblyText(svg, x, y + 4, label, { 'text-anchor': 'middle', 'font-size': 10, 'font-weight': 700 });
 }
 function assemblyNote(svg, value) { assemblyText(svg, 24, 283, value, { 'font-size': 11, fill: '#6a736c' }); }
-const assemblyJoistCentres = [22.5, 450, 877.5, ...Array.from({ length: 13 }, (_, i) => 877.5 + 5700 / 13 * (i + 1))];
+const assemblyJoistCentres = [22.5, 307.5, 592.5, 877.5, ...Array.from({ length: 15 }, (_, i) => 877.5 + 380 * (i + 1))];
 const assemblyBlockRows = [-1947.5, -1562.5, -1177.5, -792.5, -407.5, -22.5];
 const assemblyPileX = [250, 1470, 2690, 3910, 5130, 6350];
 const assemblyDescriptions = {
   setout: ['Mark all three finished outlines', 'One set-out for the main deck 6600 by 2600, rebuilt section 900 by 1970 and single tread 6600 by 400 millimetres. Main-deck diagonals approximately 7094 millimetres. Rebuilt and tread outlines are schematic.'],
   'pile-grid': ['Mark proposed support centres', 'Twelve proposed main pile positions at six X stations on bearer centre lines Y350 and Y2250. Pile classes and footing sizes remain unassigned.'],
   bearer: ['Lower bearer plies onto the specified pile connection', 'Exploded arrangement of two side-by-side bearer plies, separation and pile top. Connection symbol is a placeholder, not a bolt or nail pattern.'],
-  joists: ['Position J01 to J16 and RM1/RM2 rims', 'Sixteen proposed joist lines. J01 to J03 continue as candidates through the rebuilt area. RM1 is the front rim line; RM2 is the rear rim, interrupted around the three continuation joists. Rim joints require AP01. This is a layout illustration, not verified cut lengths or bearing detail.'],
-  blocking: ['Fit B01 to B12 flush', 'Twelve nominal 382.5 millimetre cross-blocks between three long joists, in six rows at 385 millimetre centres. Block-end connections require the reviewed fixing detail.'],
+  joists: ['Position J01 to J19 and RM1/RM2 rims', 'Nineteen proposed joist lines. J01 to J04 continue as candidates through the rebuilt area. RM1 is the front rim line; RM2 is the rear rim, interrupted around the four continuation joists. Rim joints require AP01. This is a layout illustration, not verified cut lengths or bearing detail.'],
+  blocking: ['Fit B01 to B18 flush', 'Eighteen nominal 240 millimetre cross-blocks between four long joists, in six rows at 385 millimetre centres. Block-end connections require the reviewed fixing detail.'],
   boards: ['Fix boards across their supports', 'Main boards run across joists. Rebuilt boards turn ninety degrees and fix at the flush cross-block rows. Two fixing dots per crossing are illustrative.'],
-  'tread-box': ['Assemble one tread ladder', 'Two nominal 6600 millimetre rails and sixteen nominal 310 millimetre crosspieces make a 6600 by 400 single-layer tread frame. Exact cuts and joints remain to specify.'],
+  'tread-box': ['Assemble one tread ladder', 'Two nominal 6600 millimetre rails and nineteen nominal 310 millimetre crosspieces make a 6600 by 400 single-layer tread frame. Exact cuts and joints remain to specify.'],
   'tread-ground': ['Typical tread bearing and restraint', 'Provisional load path: timber rail bears through specified separation onto a concrete plinth or footing; a side connector and concrete anchor provide restraint. F is a typical concrete foundation, DPC the separation, C1 the side connector, C2 the concrete anchor and C3 timber-to-connector fixings. Timber bears directly through separation onto concrete, not suspended from the unverified side connector. Connector, fixings, anchor and foundation sizes are not specified. No loose paver or shallow footing is implied.'],
   'tread-boards': ['Lower the tread boards onto the frame', 'Three illustrative board rows sit on a single 140 millimetre frame layer. Board thickness 38 and selected surface 250 give a nominal frame underside 72 millimetres above garden. Product gaps and fixings remain to specify.'],
   finish: ['Check the finished levels', 'Side profile of main deck surface about 500 millimetres and one tread surface 250 above garden, with 400 millimetres total tread projection. These selected levels are not an access-compliance finding.']
@@ -60,21 +60,28 @@ function assemblySetout(svg) {
   assemblyNote(svg,'One baseline for all areas. Keep both main-deck diagonals equal.');
 }
 function assemblyPileGrid(svg) {
-  const x0=65,y0=63,s=.065;
+  const x0=110,y0=112,s=.045;
   assemblyRect(svg,x0,y0,6600*s,2600*s,{fill:'#fff'});
+  assemblyRect(svg,x0,y0-1970*s,900*s,1970*s,{fill:'#f1f5ed','stroke-dasharray':'4 3'});
   let n=0;
   for(const y of [350,2250]) {
     assemblyLine(svg,x0,y0+y*s,x0+6600*s,y0+y*s,{stroke:'#be925d','stroke-width':5});
     for(const x of assemblyPileX){
-      assemblyRect(svg,x0+x*s-5,y0+y*s-5,10,10,{fill:'#fff','data-part':'proposed-pile'});
-      assemblyText(svg,x0+x*s,y0+y*s-13,`P${String(++n).padStart(2,'0')}`,{'text-anchor':'middle','font-size':10});
+      const anchor=[250,2690,6350].includes(x);
+      assemblyRect(svg,x0+x*s-4,y0+y*s-4,8,8,{fill:anchor?'#c08d45':'#fff','data-part':'proposed-pile','data-pile-class':anchor?'anchor':'ordinary'});
+      assemblyText(svg,x0+x*s,y0+y*s-10,`P${String(++n).padStart(2,'0')}`,{'text-anchor':'middle','font-size':9});
     }
   }
-  assemblyDim(svg,x0+250*s,x0+1470*s,47,'1220 typical');
-  assemblyText(svg,505,y0+350*s+4,'A',{'font-weight':700});assemblyText(svg,505,y0+2250*s+4,'B',{'font-weight':700});
-  assemblyRect(svg,x0,y0+2600*s,6600*s,400*s,{fill:'none','stroke-dasharray':'4 3','data-part':'tread-foundation-zone'});
-  assemblyText(svg,279,252,'Tread foundations: GP01 positions / count TBD',{'font-size':10,'text-anchor':'middle'});
-  assemblyNote(svg,'P01–P12: proposed main piles only. Include tread foundations in the same work.');
+  assemblyLine(svg,x0,y0-800*s,x0+900*s,y0-800*s,{stroke:'#be925d','stroke-width':5});
+  for(const [i,x] of [175,725].entries()){
+    assemblyRect(svg,x0+x*s-3,y0-800*s-3,6,6,{fill:'#fff','data-part':'intermediate-pile'});
+    assemblyText(svg,x0+x*s,y0-800*s-10,`M${i+1}`,{'text-anchor':'middle','font-size':9});
+  }
+  assemblyText(svg,170,75,'BC:900 bearer · Y−800',{'font-size':11});
+  assemblyRect(svg,x0,y0+2600*s,6600*s,400*s,{fill:'none','stroke-dasharray':'4 3'});
+  for(const x of assemblyPileX) assemblyRect(svg,x0+(x-150)*s,y0+2550*s,300*s,500*s,{fill:'none','stroke-dasharray':'3 2','data-part':'shared-tread-pad'});
+  assemblyText(svg,270,267,'6 shared tread pads · typical plan symbols',{'font-size':11,'text-anchor':'middle'});
+  assemblyNote(svg,'Filled:6 anchor proposals. White:6 main ordinary +2 intermediate ordinary.');
 }
 function assemblyBearer(svg) {
   assemblyRect(svg,210,163,125,92,{fill:'#eef0eb','data-part':'pile'});assemblyText(svg,272,229,'H5 pile',{'text-anchor':'middle'});
@@ -92,34 +99,41 @@ function assemblyJoists(svg) {
   assemblyRect(svg,x0,y0,6600*s,2600*s,{fill:'#fff'});
   for(const y of[350,2250])assemblyRect(svg,x0,y0+(y-45)*s,6600*s,90*s,{fill:'#edd1a8',stroke:'#9a703b'});
   for(const [i,x] of assemblyJoistCentres.entries()){
-    if(i<3)assemblyRect(svg,x0+(x-22.5)*s,y0-1970*s,45*s,1970*s,{fill:'#edf5e9','stroke-dasharray':'4 3','data-part':'candidate-continuation'});
-    assemblyRect(svg,x0+(x-22.5)*s,y0+(i<3?0:45*s),45*s,(i<3?2555:2510)*s,{fill:'#456b4c',stroke:'#244c3b','data-part':'main-joist'});
+    if(i<4)assemblyRect(svg,x0+(x-22.5)*s,y0-1970*s,45*s,1970*s,{fill:'#edf5e9','stroke-dasharray':'4 3','data-part':'candidate-continuation'});
+    assemblyRect(svg,x0+(x-22.5)*s,y0+(i<4?0:45*s),45*s,(i<4?2555:2510)*s,{fill:'#456b4c',stroke:'#244c3b','data-part':'main-joist'});
     assemblyText(svg,x0+x*s,y0+17,`${i+1}`,{'text-anchor':'middle','font-size':9,'paint-order':'stroke',stroke:'#fff','stroke-width':3});
   }
   assemblyRect(svg,x0,y0+2555*s,6600*s,45*s,{fill:'#d6b788',stroke:'#87683d','data-part':'rim','data-part-id':'RM1'});
-  for(const [start,end] of [[45,427.5],[472.5,855],[900,6600]]) assemblyRect(svg,x0+start*s,y0,(end-start)*s,45*s,{fill:'#d6b788',stroke:'#87683d','data-part':'rim','data-part-id':'RM2'});
+  for(const [start,end] of [[45,285],[330,570],[615,855],[900,6600]]) assemblyRect(svg,x0+start*s,y0,(end-start)*s,45*s,{fill:'#d6b788',stroke:'#87683d','data-part':'rim','data-part-id':'RM2'});
   assemblyText(svg,464,274,'RM1',{'font-size':11});
   assemblyText(svg,62,127,'RM2',{'font-size':11});
-  assemblyText(svg,120,35,'J01–J03: rebuilt + main candidate',{'font-size':12});
-  assemblyText(svg,330,109,'J04–J16: main',{'font-size':12});
+  for(const cx of [2352.5,3872.5]) assemblyRect(svg,x0+(cx-22.5)*s,y0+45*s,45*s,2510*s,{fill:'#78926e','data-part':'butt-sister'});
+  assemblyRect(svg,x0,y0-845*s,900*s,90*s,{fill:'#edd1a8','data-part':'intermediate-bearer'});
+  const sorted=[...assemblyJoistCentres,2352.5,3872.5].sort((a,b)=>a-b);
+  for(const cy of [600,2000]) for(let k=0;k<sorted.length-1;k++) {
+    const clear=sorted[k+1]-sorted[k]-45;
+    if(clear>0) assemblyRect(svg,x0+(sorted[k]+22.5)*s,y0+(cy-22.5)*s,clear*s,45*s,{fill:'#b8d7e4','data-part':'main-lateral-block'});
+  }
+  assemblyText(svg,120,35,'J01–J04: rebuilt + main candidate',{'font-size':12});
+  assemblyText(svg,330,109,'J05–J19: main',{'font-size':12});
   assemblyArrowLine(svg,320,70,320,120);
-  assemblyNote(svg,'16 joist lines. RM1/RM2 joints: AP01. Envelopes are not cut lengths.');
+  assemblyNote(svg,'19 lines +lateral blocks Y600/2000. Rims /connections: AP01.');
 }
 function assemblyBlocking(svg) {
   const x0=135,y0=36,s=.1;
-  for(const [i,x] of assemblyJoistCentres.slice(0,3).entries()){
+  for(const [i,x] of assemblyJoistCentres.slice(0,4).entries()){
     assemblyRect(svg,x0+(x-22.5)*s,y0,45*s,1970*s,{fill:'#e3ece0','data-part':'long-joist'});
     assemblyText(svg,x0+x*s,y0-10,`J0${i+1}`,{'text-anchor':'middle','font-size':11});
   }
   let n=0;
-  for(const row of assemblyBlockRows)for(const left of[45,472.5]){
+  for(const row of assemblyBlockRows)for(const left of[45,330,615]){
     const y=y0+(row+1970-22.5)*s;
-    assemblyRect(svg,x0+left*s,y,382.5*s,45*s,{fill:'#b2ced9',stroke:'#416b7c','data-part':'cross-block'});
-    if(n<2)assemblyText(svg,x0+(left+191.25)*s,y+19,`B${String(n+1).padStart(2,'0')}`,{'text-anchor':'middle','font-size':10});
+    assemblyRect(svg,x0+left*s,y,240*s,45*s,{fill:'#b2ced9',stroke:'#416b7c','data-part':'cross-block'});
+    if(n<2)assemblyText(svg,x0+(left+120)*s,y+19,`B${String(n+1).padStart(2,'0')}`,{'text-anchor':'middle','font-size':10});
     n++;
   }
-  assemblyArrowLine(svg,270,65,224,65);assemblyText(svg,285,67,'B01–B12',{'font-weight':650});
-  assemblyText(svg,285,99,'2 pieces per row');assemblyText(svg,285,126,'6 rows × 385 centres');assemblyText(svg,285,153,'382.5 clear per block');assemblyText(svg,285,187,'TOPS FLUSH',{'font-weight':700});
+  assemblyArrowLine(svg,270,65,224,65);assemblyText(svg,285,67,'B01–B18',{'font-weight':650});
+  assemblyText(svg,285,99,'3 pieces per row');assemblyText(svg,285,126,'6 rows × 385 centres');assemblyText(svg,285,153,'240 clear per block');assemblyText(svg,285,187,'TOPS FLUSH',{'font-weight':700});
   assemblyNote(svg,'No extra batten layer. Block-end fixings follow the reviewed detail.');
 }
 function assemblyBoardsPanel(svg,x0,y0,rotated) {
@@ -151,14 +165,14 @@ function assemblyTreadBox(svg) {
   const x0=55,y0=110,s=.067;
   assemblyRect(svg,x0,65,6600*s,7,{fill:'#e8caa0','data-part':'tread-rail'});assemblyPart(svg,31,68,'R1');
   assemblyRect(svg,x0,205,6600*s,7,{fill:'#e8caa0','data-part':'tread-rail'});assemblyPart(svg,31,209,'R2');
-  for(const [i,x] of assemblyJoistCentres.entries()){
+  for(const [i,x] of [...assemblyJoistCentres,2352.5,3872.5].entries()){
     const px=x0+(x-22.5)*s;
     assemblyRect(svg,px,y0,45*s,65,{fill:'#a9c09e','data-part':'tread-crosspiece'});
-    if([0,7,15].includes(i))assemblyText(svg,px+2,y0-10,`T${String(i+1).padStart(2,'0')}`,{'text-anchor':'middle','font-size':10});
+    if([0,8,18].includes(i))assemblyText(svg,px+2,y0-10,`T${String(i+1).padStart(2,'0')}`,{'text-anchor':'middle','font-size':10});
   }
   for(const x of[155,360]){assemblyArrowLine(svg,x,82,x,103);assemblyArrowLine(svg,x,195,x,180);}
   assemblyDim(svg,x0,x0+6600*s,45,'6600 outer');assemblyText(svg,444,245,'400 outer',{'font-size':12});
-  assemblyText(svg,180,246,'R1 + R2 · 16 × T pieces · one layer',{'text-anchor':'middle','font-size':12});
+  assemblyText(svg,180,246,'R1 + R2 · 19 T +2 butt sisters · one layer',{'text-anchor':'middle','font-size':12});
   assemblyNote(svg,'Exploded view. T clear length 310 nominal; exact cuts / joints follow the plan.');
 }
 function assemblyTreadGround(svg) {
@@ -199,8 +213,8 @@ function assemblyFinish(svg) {
   assemblyText(svg,259,116,'250 rise',{'font-size':12});assemblyText(svg,408,205,'250 rise',{'font-size':12});
   assemblyDim(svg,244,396,193,'400 projection');
   assemblyLine(svg,27,71,27,261,{stroke:'#89968e'});assemblyText(svg,19,166,'500',{'transform':'rotate(-90 19 166)','text-anchor':'middle','font-size':12});
-  assemblyText(svg,280,23,'CURRENT LEVELS · HOLD',{'text-anchor':'middle','font-size':13,'font-weight':700,fill:assemblyArrow});
-  assemblyNote(svg,'250 + 250 rises exceed BRANZ common/main private 190 mm guidance.');
+  assemblyText(svg,280,23,'OWNER-SELECTED LEVELS',{'text-anchor':'middle','font-size':13,'font-weight':700,fill:assemblyArrow});
+  assemblyNote(svg,'500 /250 mm retained as requested. Access compliance is not verified.');
 }
 
 export function renderAssemblyDiagram(svg, type) {

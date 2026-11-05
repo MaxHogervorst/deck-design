@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = (name) => readFile(path.join(root, name), 'utf8');
-const files = ['PROJECT.md', 'DESIGN.md', 'MATERIALS.md', 'OPEN_ISSUES.md', 'SITE_MEASUREMENTS.md', 'BUILD_STEPS.md', 'REFERENCES.md', 'DECISIONS.md'];
+const files = ['STRUCTURAL_REVIEW.md', 'PROJECT.md', 'DESIGN.md', 'MATERIALS.md', 'OPEN_ISSUES.md', 'SITE_MEASUREMENTS.md', 'BUILD_STEPS.md', 'REFERENCES.md', 'DECISIONS.md'];
 const sources = Object.fromEntries(await Promise.all(files.map(async name => [name, await read(name)])));
 const css = await read('site/styles.css');
 const diagrams = (await read('site/diagrams.js')).replace(/^export\s+/gm, '');

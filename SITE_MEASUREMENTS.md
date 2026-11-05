@@ -49,3 +49,11 @@ The tread remains ground-supported as a provisional simplicity recommendation wi
 Record the final deck/tread/garden datums and ground/bearing evidence for FP01 and GP01 together. Tread foundation number/locations are TBD; the former G01–G12 layout is withdrawn, not a measured fact. Specify footing depths/sizes, separation, bearing and restraint for the actual frame and exposure. C1/C2/C3 are schematic restraint families with no product/count selected.
 
 Deck rim bottom at the old datum is 500−38−140=322 mm; trial tread frame top is 250−38=212 mm. A 110 mm vertical gap prevents a simple side-fixed ledger connection. These are geometry findings, not proof of structural capacity.
+
+## Latest site reply and structural proposal — 5 November2026
+
+Owner reports **firm natural ground** at the new footings. The supplied “spacing1970” has ambiguous endpoints/direction:1970 is already the recorded rebuilt front-to-back depth, but it might be a newly reported support spacing. Preserve the reply without declaring its axis established. Retained beam cross-section, along-beam pile spacing and condition remain unverified. No hidden soil bearing or timber condition has been verified.
+
+Owner explicitly declines changing the one-tread/250 mm level choice. Keep500/250 datums for the working structural proposal; do not assert access compliance or keep asking for another tread.
+
+The new19-line/4-continuation layout, Y−800 intermediate bearer and proposed foundation schedule supersede earlier16-line and unsupported-foundation quantities. See STRUCTURAL_REVIEW; old dated scenarios above are historical, not current cut/order instructions.

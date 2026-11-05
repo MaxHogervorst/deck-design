@@ -75,3 +75,13 @@ Complete remaining `SITE_MEASUREMENTS.md` evidence and verify current primary so
 - Withdraw six-station/twelve-tread-footing layout and G01–G12 order quantities. Retain one tread, 400 mm projection and full width; two rails / sixteen crosspieces remain trial geometry pending levels/section/support design.
 - 250 mm rises explicitly conflict with published BRANZ common/main private 190 mm guidance. No new height, landing fill or changed tread count is selected. Frame clearance and foundation levels depend on the eventual solution.
 - Whole-system review adds explicit span/cantilever, pile/joist alignment, rim/end-cut, retained-support, stock-joint and concealed-connection dependencies. No project-specific structural compliance is asserted.
+
+## Specific structural and product work — 5 November2026
+
+- Owner says to retain the selected stair levels, asks the assistant to work out structure/foundations/rebuilt support/tread details, and asks for decking options. Firm natural ground is reported. Do not keep reopening the rise choice; no compliance waiver or verified access conclusion is inferred.
+- Source-bounded proposal changes main grid to19 lines at285/380 centres,4 continuous left joists,2 main butt sisters,18×240 rebuilt blocks,36 main lateral blocks atY600/2000 and a new900 bearer atY−800 on2 ordinary piles. It does not prove the earlier grid unsafe or certify the retained bearer.
+- Preliminary bracing budget≈71 BU per direction with Auckland-zone1 /classE assumptions; propose6 anchors P01/P03/P06/P07/P09/P12, respecting sub5 m bracing-line gaps. Complete current-standard load path/connections remain to verify.
+- Conditional foundation calculation:6 main anchor Ø400×900,6 ordinary Ø400×450,2 intermediate350-square×450,6 shared500×300 tread pads at300 below CGL and nominal70 head.≈1.342 m³ before waste under stated datum/pile-displacement assumptions. Retained replacement excluded; no dig/order approval.
+- Tread140×45 SG8 H5 request,2 rails,21 short members including2 butt sisters,6 shared pads/12 bearings. Exact pad/restraint/anchor design remains unverified.
+- Alternate board seamsX2375/3895 on doubled supports;138-width stock scenario175.2 lm in48 boards,1008 base screw positions. Keep38 mm; verified retail alternatives are32 mm, compared on the website. No specific38 mm shelf product or final screw length has been established.
+- Record standards access failure and source limits candidly. Current proposal/calculations in STRUCTURAL_REVIEW; working notes and website updated together for review.
