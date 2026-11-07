@@ -2,7 +2,7 @@
 8 November 2026 (Auckland). **Design development only; not a construction or purchasing schedule.**
 
 ## Confirmed by user
-Both deck and tread use excavated holes with structural H5 timber posts/poles set in concrete. This decision supersedes every earlier foundation proposal. Main deck 6600 × 2600; rebuilt section 900 × 1970; one full-width tread 6600 × 400 mm. Selected deck/tread surfaces +500/+250 mm relative to garden. All tread foundations, including concrete and excavation, must fit inside its footprint. Pine decking is 32 mm thick, approximately 80 mm wide. Main framing preference is double 140 × 45 bearers and 140 × 45 SG8 joists. Freestanding; no handrails proposed. One pre-build builder discussion and one owner build sequence, without builder inspection visits. Website changes and publication each require express permission.
+Both deck and tread use excavated holes with structural H5 timber posts/poles set in concrete. This decision supersedes every earlier foundation proposal. Main deck 6600 × 2600; rebuilt section 900 × 1970; one full-width tread 6600 × 400 mm. Selected deck/tread surfaces +500/+250 mm relative to garden. All tread foundations, including concrete and excavation, must fit inside its footprint. Pine decking is 32 mm thick, approximately 80 mm wide. Main framing preference is double 140 × 45 bearers and 140 × 45 SG8 joists. Freestanding; no handrails proposed. One pre-build builder discussion and one owner build sequence, without builder inspection visits. The owner subsequently authorised this website revision and publication on 8 November 2026.
 
 ## Status and design basis
 **PROVISIONAL:** coordinates below are a candidate to develop with the builder and a suitably qualified NZ structural designer where specific design is needed. No pile rating, footing adequacy, connection capacity or compliance is established by this brief. Firm natural ground is owner-reported, not verified good ground. Current applicable NZS 3604 clauses/tables have not been accessed in full.
@@ -138,14 +138,14 @@ All structural details above must be resolved at the single pre-build discussion
 
 If soil, buried conflicts, post treatment or dimensions differ from the agreed plan, stop the affected operation and have that deviation resolved before continuing. This does not assume a builder inspection visit.
 
-## 7. Proposed website scope — awaiting owner permission
-After permission, replace the outdated foundation content with:
+## 7. Authorised website revision — 8 November 2026
+The owner authorised implementing and publishing the following scope:
 - One dimensioned plan, main section and tread head section with clear provisional labels.
 - One concise materials/cost table, including unresolved costs as quote pending.
 - Eleven illustrated actions matching the sequence above.
 - One compact pre-build discussion list covering FP01/AP01/GP01/DF01/RB01.
 
-No website files, build output or publication are changed by this documentation revision. Publication remains a separate permission.
+The website and standalone Pages output now implement this scope. Historical working documents are not embedded in the public page. Structural design status remains provisional.
 
 ## Sources and limits
 - CHH Pinex Specification & Installation Guide, January2026, §1.3 (read this session): https://chhwoodproducts.co.nz/assets/Uploads/PinexSpecificationInstallationGuideCurrent.pdf
@@ -154,3 +154,4 @@ No website files, build output or publication are changed by this documentation 
 - MiTek12kN Pile Fixing2024v1 (PDF located; diagram not verified this session): https://mitek.co.nz/wp-content/uploads/2024/03/12kN-Pile-Fixing_2024-v1.pdf
 
 The public guidance is context, not a substitute for the applicable current standard or a specific structural design. No site-specific footing or connection is marked verified.
+

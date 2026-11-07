@@ -1,5 +1,9 @@
 # Decision log
 
+## Website revision authorised — 8 November 2026
+
+The owner explicitly authorised making the changes, developing the new plan and publishing it. This authorises the current H5-in-concrete website revision and GitHub Pages deployment. The concept remains provisional where marked; publication does not approve unresolved structural details. Future unrelated publication still requires permission.
+
 ## Current brief — 8 November 2026 (supersedes older foundation and quantity schedules)
 
 **CONFIRMED BY USER:** use excavated holes with structural H5 timber posts/poles in concrete for BOTH deck and tread. Every tread foundation must remain within its400 mm footprint. Preserve6600×2600 main /900×1970 rebuilt /6600×400 tread, selected500/250 levels,32 mm pine approximately80 wide, double140×45 main bearers and140×45 SG8 joist preference. One pre-build discussion, one owner build sequence, no builder inspections during construction and no handrails proposed.
@@ -11,7 +15,6 @@ See [the current H5-in-concrete development brief](FOUNDATION_REVISION.md) for d
 ---
 
 ## Historical record — superseded where inconsistent with the current brief
-
 
 ## Current revision — 6 November 2026: confirmed boards and simpler tread supports
 
