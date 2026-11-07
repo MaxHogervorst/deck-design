@@ -19,12 +19,12 @@ function overall(){
  b+=label(210,Y(-800)+4,'BC · 900 double bearer / 2 posts',11);
  b+=label(782,Y(350)+4,'BA',12)+label(782,Y(2250)+4,'BB',12);
  b+=rect(X(0),Y(2600),6600*s,400*s,'#faf3e4');
- [2600,2955].forEach(y=>{b+=rect(X(0),Y(y),6600*s,45*s,timber);});
- joists.forEach(x=>b+=rect(X(x-22.5),Y(2645),45*s,310*s,green));
+ [2650,2810].forEach(y=>{b+=rect(X(0),Y(y),6600*s,140*s,timber);});
+ for(const[y,xs]of[[2720,[125,1150,2175,3200,4225,5250,6250]],[2880,[350,1375,2400,3425,4450,5475,6475]]])xs.forEach(x=>{b+=rect(X(x-100),Y(y-100),200*s,200*s,'none');b+=rect(X(x-62.5),Y(y-62.5),125*s,125*s,'#314b3c');});
  b+=line(X(0),Y(3090),X(6600),Y(3090))+label(X(3300),Y(3290),'6600',14,'middle');
- b+=label(95,670,'Selected box step: flush rails + crosspieces; post / footing layout to specify',12);
+ b+=label(95,670,'Tread: short boards, shallow bearers, 14 staggered post candidates; connections open',12);
  b+=label(30,Y(1300),'2600',12)+label(28,Y(2850),'400',12);
- return svg(b,900,700,'Overall plan with nineteen base joists, two butt sisters, sixteen candidate deck posts and a single-layer timber box step with support positions awaiting specification');
+ return svg(b,900,700,'Overall plan with nineteen base joists, two butt sisters, sixteen candidate deck posts and a shallow tread with fourteen staggered candidate posts');
 }
 function mainSection(){
  let b=label(60,40,'DECK SECTION · main framing stack',19)+label(60,68,'Schematic, not to scale; levels relative to garden, before separation layers',12);
@@ -40,36 +40,39 @@ function mainSection(){
  return svg(b,930,650,'Main deck section showing board surface 500, joist underside 328 and bearer underside 188 millimetres');
 }
 function treadSection(){
- let b=label(60,35,'SELECTED TREAD · timber box step',20)+label(60,62,'Schematic, not to scale · 6600 × 400 footprint · surface +250 above garden',12);
- b+=label(60,100,'TOP VIEW · assemble the ladder frame flat',14);
- b+=rect(80,125,740,150,'#eff4ec');
- b+=rect(80,125,740,18,timber)+rect(80,257,740,18,timber);
- [80,180,280,380,480,580,680,802].forEach(x=>b+=rect(x,143,18,114,green));
- b+=label(450,340,'Long rails + short crosspieces · all tops flush',13,'middle');
- b+=line(80,295,820,295)+label(450,318,'6600 overall',13,'middle')+label(835,205,'400',13);
- b+=label(60,365,'SIDE VIEW · seat and fix a long rail to its timber supports',14);
- b+=rect(80,395,740,20,'#e0bf8e')+rect(80,415,740,72,green);
- b+=rect(202,487,56,133,timber)+rect(642,487,56,133,timber);
- b+=rect(170,555,120,85,concrete)+rect(610,555,120,85,concrete);
- b+=label(450,390,'32 mm decking over one framing layer',13,'middle');
- b+=label(450,520,'H5 posts set in concrete',13,'middle');
- b+=label(60,680,'Support locations, bearing / fixings, frame depth and ground line are not specified here.',12);
- b+=label(60,704,'Check clearance, treatment and drainage; every footing and excavation stays inside the footprint.',12);
- return svg(b,930,735,'Conventional timber box step: top view of flush rails and crosspieces, and side view of a rail on illustrative H5 posts in concrete; support layout not specified');
+ let b=label(45,32,'TREAD · short boards on shallow bearers',20)+label(45,57,'Design development · all dimensions in mm · connections and ground unverified',12);
+ const s=.112,X=x=>80+x*s,Y=y=>108+y*.4;
+ b+=label(45,88,'PLAN · 6600 × 400; staggered ordinary-pile candidates',14);
+ b+=rect(X(0),Y(0),6600*s,160,'#f5f7f2');
+ [50,210].forEach(y=>b+=rect(X(0),Y(y),6600*s,56,timber));
+ for(const[y,xs]of[[120,[125,1150,2175,3200,4225,5250,6250]],[280,[350,1375,2400,3425,4450,5475,6475]]])xs.forEach(x=>{b+=rect(X(x-100),Y(y-100),200*s,80,'none');b+=rect(X(x-62.5),Y(y-62.5),125*s,50,'#314b3c');});
+ b+=label(450,292,'200-square footing envelopes; 20 mm to nearest depth edge',12,'middle');
+ b+=label(45,330,'CROSS-SECTION · 50 mm board end overhang selected',14);
+ const C=y=>230+y*1.1;
+ b+=rect(C(0),362,440,20,'#e0bf8e');
+ [50,210].forEach(y=>b+=rect(C(y),382,154,90,timber));
+ [120,280].forEach(y=>b+=rect(C(y-62.5),474,137.5,90,'#b28a56'));
+ b+=line(190,548,720,548)+label(735,552,'garden 0',12);
+ b+=line(190,598,720,598,'#71847b',1,'5 4')+label(735,602,'ground −50?',12);
+ b+=label(220,640,'+250 boards · +218 bearer top · +128 underside · +126 pile top',12);
+ b+=label(45,675,'Two 90 × 70 plies per bearer: 90 deep × 140 wide, centred on 125-square piles.',12);
+ b+=label(45,698,'Full 125 mm pile-top bearing across the bearer width; complete fixings still to check.',12);
+ b+=label(45,721,'Weight to tread posts; positive sideways ties to the freestanding deck. Drainage required.',12);
+ return svg(b,960,750,'Candidate shallow tread plan and cross-section with fifty millimetre board overhang and centred timber bearing, and fourteen staggered footing envelopes');
 }
-const views={plan:[overall,'Two main bearer rows and two rebuilt bearer lines give 16 candidate deck/rebuilt posts, independent of the old rear timber. The selected tread is a conventional timber box step; its post count and footing layout are still to specify.'],main:[mainSection,'Main framing preference retained: double 140 × 45 SG8 bearers and 140 × 45 SG8 joists. Post tops and footing bottoms must be set from measured cleared-ground levels.'],tread:[treadSection,'Assemble a single-layer ladder frame, seat and secure it on H5 posts in concrete, then lay decking. Support positions in the side-view illustration are symbolic, not a set-out plan. Resolve frame depth, clearance, bearing, restraint and all footings within 400 mm before building.']};
+const views={plan:[overall,'16 deck/rebuilt posts plus 14 staggered tread candidates. H5 posts in concrete for both. Ordinary tread footings rely on a checked lateral connection to the freestanding deck.'],main:[mainSection,'Main preference: double 140 × 45 SG8 bearers and 140 × 45 SG8 joists. Final pile, anchor, splice and rim connections remain to check.'],tread:[treadSection,'Owner accepts 50 mm board end overhang. The two shallow bearers have full-width pile-top bearing; actual pine-board suitability and all structural connections remain to verify. Conditional 50 mm ground reduction must drain. Not a dig, drill or order drawing.']};
 function show(view){const[draw,caption]=views[view];document.querySelector('#drawing').innerHTML=draw();document.querySelector('#drawing-caption').textContent=caption;document.querySelector('#drawing-panel').setAttribute('aria-labelledby',`tab-${view}`);document.querySelectorAll('[data-view]').forEach(b=>{const selected=b.dataset.view===view;b.setAttribute('aria-selected',String(selected));b.tabIndex=selected?0:-1;});}
 document.querySelectorAll('[data-view]').forEach(button=>{button.onclick=()=>show(button.dataset.view);button.onkeydown=e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const keys=Object.keys(views),i=keys.indexOf(button.dataset.view),next=e.key==='Home'?0:e.key==='End'?2:(i+(e.key==='ArrowRight'?1:2))%3;show(keys[next]);document.querySelector(`#tab-${keys[next]}`).focus();};});
 const steps=[
  ['Set datums and mark the footprints','Tape, strings, level','Mark 6600 × 2600 main, 900 × 1970 rebuilt and 6600 × 400 tread. Check main diagonal 7093.7 mm and tread diagonal 6612.1 mm. Survey the ground at every support.'],
- ['Mark all approved post holes','Tape, paint, approved post plan','Locate services before digging. Check every tread excavation, including tolerance, stays within the 400 mm footprint. Use the agreed box-step post and footing schedule.'],
+ ['Mark all approved post holes','Tape, paint, approved post plan','Locate services before digging. Check every tread excavation, including tolerance, stays within the 400 mm footprint. Use the checked staggered tread post and footing schedule.'],
  ['Dig to the agreed bearing level','Spade or auger, depth rod','Check actual soil, hole size and base levels against FP01 and GP01. Resolve any variation before proceeding.'],
  ['Place and temporarily brace the H5 posts','Level, clamps, temporary braces','Confirm treatment and structural marks, protected ends, embedment and agreed bearing levels. Do not cut posts low without the approved treatment detail.'],
  ['Place concrete and allow it to cure','Specified concrete, placement tools','Provide the specified concrete below and around each post. Maintain alignment and temporary restraint; follow the agreed cure and loading times.'],
  ['Assemble and fix the doubled bearers','Clamps, drill, specified connectors','Fit main and rebuilt bearers. Check direct bearing, ply fastening, supported splices and every connection against AP01.'],
  ['Fit main joists, rims and restraint','Square, saw, drill','Check centres, continuous-member junctions, new rebuilt rear support and complete bracing in both directions. Install structural block-end fixings.'],
- ['Assemble the timber box frame','Tape, square, clamps, saw and specified fasteners','On a flat surface, assemble the two long rails and short crosspieces. Keep all tops flush. Check the agreed frame dimensions, diagonal, supported joints and complete connection schedule.'],
- ['Seat and secure the box; finish joint supports','Level, clamps, drill and specified connectors','Seat the box on the agreed H5 post bearings and secure it using GP01. Check both rails, restraint, ground clearance and drainage. Finish all main-deck and tread board-joint supports before covering.'],
+ ['Prepare the shallow tread bearers','Tape, square, clamps, saw and specified fasteners','Build each bearer from two 90 × 70 H5 SG8 plies. Use supported, staggered joints and the checked ply-fixing schedule. Confirm the 50 mm board end projections and direct pile bearings.'],
+ ['Seat the tread bearers and connect deck restraint','Level, clamps, drill and specified connectors','Seat the bearers on DPC over the agreed H5 pile tops. Install the checked positive deck ties and bearer restraint. Check ground clearance and drainage before covering.'],
  ['Lay the 32 mm pine decking','Spacers, drill/driver, specified screws','Dry-lay the actual width and supplier gap. Check edge rips, supported seams, screw embedment and end distances.'],
  ['Finish and check against the agreed plan','Tape, level, agreed plan','Check fixings, stability, dimensions, drainage and safe usable access. These are owner checks; no builder visit is assumed.']
 ];
@@ -79,7 +82,7 @@ function stepDrawing(i){
  else if(i<5){b=ground()+rect(115,155,90,60,'white');if(i>2)b+=rect(145,68,30,127,timber)+line(145,90,85,155,green,3)+line(175,90,235,155,green,3);if(i===4)b+=rect(115,160,30,50,concrete)+rect(175,160,30,50,concrete)+rect(115,195,90,15,concrete);b+=label(160,35,['','','Approved footing depth','Brace posts plumb','Concrete below and around'][i],12,'middle');}
  else if(i===5){b=rect(70,115,30,75,timber)+rect(220,115,30,75,timber)+rect(40,77,240,19,timber)+rect(40,99,240,19,timber)+label(160,40,'Double bearer · specified ply fixings',12,'middle');[70,110,150,190,230,270].forEach(x=>b+=rect(x,87,3,3,green));}
  else if(i===6){b=rect(40,40,240,140,'#f5f7f2');[70,120,170,220,270].forEach(x=>b+=rect(x,40,7,140,green));[70,150].forEach(y=>b+=rect(40,y,240,8,timber));b+=label(160,205,'Joists + rims + structural restraint',12,'middle');}
- else if(i===7){b=rect(40,60,240,105,'#eff4ec')+rect(40,60,240,10,timber)+rect(40,155,240,10,timber);[40,95,150,205,270].forEach(x=>b+=rect(x,70,10,85,green));b+=label(160,35,'Assemble the box frame flat',12,'middle')+label(160,205,'Rails + crosspieces · tops flush',12,'middle');}
+ else if(i===7){b=rect(40,65,240,35,timber)+rect(40,115,240,35,timber)+label(160,35,'Two shallow built-up bearers',12,'middle')+label(160,205,'Supported staggered ply joints',12,'middle');}
  else if(i===8){b=rect(45,80,230,45,green)+rect(80,125,30,65,timber)+rect(210,125,30,65,timber)+rect(65,170,60,40,concrete)+rect(195,170,60,40,concrete)+label(160,35,'Seat and secure on H5 supports',12,'middle')+label(160,232,'Bearings / fixings to GP01',11,'middle');}
  else {for(let y=45;y<180;y+=22)b+=rect(40,y,240,18,timber);if(i===9){[70,140,210,260].forEach(x=>[54,98,142].forEach(y=>b+=rect(x,y,3,3,green)));b+=label(160,208,'Supplier gaps + specified screws',12,'middle');}else b+=label(160,208,'Owner completion check',12,'middle');}
  return svg(b,320,240,`Step ${i+1}: ${steps[i][0]}`);
