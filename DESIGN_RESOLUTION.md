@@ -1,5 +1,5 @@
 # Design resolution — H5 posts in concrete
-8 November 2026, Auckland. Supersedes the retained-support dependency and candidate counts in FOUNDATION_REVISION.md. **Builder discussion design, not construction release.**
+8 November 2026, Auckland. Current selection: conventional timber box step on H5 posts in concrete. Supersedes all centred-post/transverse-head tread proposals and their quantities. **Builder discussion design, not construction release.**
 
 ## What is settled and what is still conditional
 The user selected excavated H5 timber posts in concrete for both deck and tread, with no foundation comparison. Keep the confirmed footprints, 32 mm pine, main double140×45 bearers /140×45 SG8 joists, selected500/250 levels, freestanding layout and one pre-build discussion followed by one owner sequence. No handrails are proposed; this is not a compliance finding.
@@ -17,9 +17,9 @@ Coordinates: X left-to-right, Y outward from facade; garden level Z0. Dimensions
 | Main BB |2250|250/1470/2690/3910/5130/6350|6|Double140×45 SG8,6600 long|
 | Rebuilt BC |−800|175/725|2|Double140×45 SG8,900 long|
 | New rebuilt BR |−1795|175/725|2|Double140×45 SG8,900 long|
-| Tread concept |2800|250, then six equal1016.7 bays to6350|7 candidate|Head/post/rail system still needs specific design|
+| Tread box step |Within Y2600…3000|Support locations to specify|TBD|Single-layer ladder frame seated and fixed on H5 posts in concrete|
 
-**16 new deck/rebuilt posts.** If the seven-post tread survives its design check, the combined candidate total is23. The former21 total depended on an unverified retained rear support and is superseded. Do not order23 posts as a verified final quantity.
+**16 candidate new deck/rebuilt posts, plus tread posts still to specify.** No overall post count is released. All seven-post and23-post tread/combined scenarios are withdrawn for the selected box-step approach.
 
 Four continuous joists can run from rebuilt Y−1970 to the front-rim inner face Y2555, a nominal4525 mm member. Their successive bearer spacings are995/1150/1900 mm; rear projection175 mm to bearer centre. Keep19 base main joist lines: X22.5/307.5/592.5/877.5, then1257.5 +380×i, i0…14. Add two board-butt sister joists at2352.5/3872.5 alongside J08/J12, giving seam lines2375/3895. This gives4 long and17 short members, including sisters. Short members run Y45…2555, nominal2510 mm.
 
@@ -48,17 +48,20 @@ With a2 mm separation layer as an example, main/rebuilt pile top is500−32−14
 
 MiTek12KNH is the complete stainless candidate for the six anchors, and OPF is the ordinary-pile connection family. The published12KNH square-pile detail includes a scarf and plate geometry that needs checking at this low top and with the90 mm built-up bearer. Some nails may extend into an area where the normal low-pile detailing limits matter. **Do not adopt its scarf, plate or a TC3 Type2A/2B connector as automatically suitable.** The latter's explicit double140×45 geometry is for its own foundation system, not proof of this project's anchor load path. Built-up ply fastening and both-ply force transfer remain one bounded AP01 design task.
 
-## 3. Tread: what the arithmetic establishes
-A140 mm single-layer ladder frame under32 mm decking at+250 gives frame top+218 and underside+78. With transverse-head depth h below the bearing surface and separator d, post top is no higher than+78−h−d. At garden/cleared-ground0, **this is below the published150 mm pile-top minimum even with a zero-depth head.** Therefore the centred-post drawing is not a standard timber-pile detail waiting for a few bolt sizes.
+## 3. Selected tread: conventional timber box step
+**CONFIRMED BY USER:** adopt a conventional single-layer timber box/ladder frame on H5 posts concreted into the ground. Two long rails and short crosspieces have flush tops; decking is fixed directly above. Assemble the box flat, then seat and secure it on the agreed post bearings. No separate bearer layer is selected for this tread.
 
-To obtain150 mm exposure by ground lowering alone requires at least72+h+d mm lowering beneath that support, plus a drainage/finished-ground solution; meeting a300 mm field-cut-end restriction instead requires222+h+d. Those formulas identify the constraint, not an authorised drainage/excavation design. The selected tread height is unchanged.
+Keep6600×400 overall,32 mm pine and selected surface+250. A140 mm frame is an illustration, not a final member selection: its top is+218 and underside+78 above garden. Choose the actual member depth, grade/treatment and support spacing together with bearing, ground clearance, drainage and the manufacturer's processing requirements.
 
-For the existing centred-row concept, use seven candidate stations as above, with140×45 rails atY2622.5/2977.5 and crosspieces flush between them. Nineteen base crosspiece positions can follow the main joist grid; two additional butt sisters align with seams2375/3895. Nominal lengths:2×6600 rails +21×310 crosspieces =19.71 installed lm. Rail stock joints must be over designed supports; do not assume a6.6 m continuous H5 SG8 rail is stocked.
+The selected construction method does not waive the published pile-top clearance or low cutting/drilling restrictions. Resolve a suitable bearing/connection and any necessary ground lowering/drainage in GP01 before construction. Do not automatically copy a notched-post detail into this low NZ installation.
 
-A350 square centred excavation occupiesY2625…2975, with only25 mm tolerance to each footprint edge. That is a spatial envelope, not a footing design. A required larger footing cannot simply project outside the tread. H5 structural framing availability, low post connection, footing resistance and wet-service crosspiece joints still form **one specific-design package GP01**.
+Support positions, post rows/count, footing shapes/depths and structural fixings remain to specify. Every excavation and concrete footing, including construction tolerance, stays within the400 mm footprint. Do not assume two conventional wide holes fit across that width. The earlier centred-row grid,350-square tread envelope, seven supports, fabricated heads and their tread-specific quantities are withdrawn.
 
-### Loads to give the designer, not a completed design
-Use the applicable domestic deck actions. MiTek's domestic floor/balcony hanger guidance illustrates2.0 kPa live,0.4 kPa dead and1.8 kN point loads. On the2.64 m² tread, those uniform assumptions total5.28 kN live and1.056 kN dead. A1.8 kN load at the200 mm edge creates0.36 kNm transverse moment about the centred post row, before design factors, dynamics or load combinations. This explains why vertical bearing alone does not prove stability. Do not add or factor these actions without the applicable design rules. No head thickness, bolts, footing depth, steel grade or bracing-unit rating is invented here.
+Construction sequence for this tread within the overall owner build: set out the agreed supports → dig and concrete H5 posts → assemble the box on a flat surface → seat/fix and restrain the box → complete supported board joints → lay decking. Repeat supports along the6.6 m length as designed; do not treat it as an unsupported long span.
+
+[Bunnings' Australian step-building guide](https://www.bunnings.com.au/diy-advice/building-construction/decking/how-to-add-a-step-to-your-deck) illustrates a ladder frame seated on posts in concrete. Its timber grades, post notches, coating advice and footing dimensions are not adopted as NZ specifications. It is a construction-method reference only.
+
+The approved footing/connection schedule must provide adequate bearing, restraint and durability for the selected box frame. No new tread material quantities, concrete volume or overall budget are issued until that layout exists.
 
 ## 4. Fresh main/rebuilt framing takeoff and a workable cut scenario
 This is a dimensional takeoff; final connection design could alter it. All below is140×45 SG8 H3.2 for the main/rebuilt structure only.
@@ -103,7 +106,7 @@ For the rebuilt240 mm support blocks, stainless MiTek JH47×90 is a relevant can
 The selected500/250 surfaces create two250 mm rises. MBIE D1/AS1 Table6 has maximum risers from180 to220 mm across its stair categories. **250 mm does not fit any of those standard table rows.** Levels remain the user's selected geometry, but where this access route is subject to those requirements it needs a resolved compliance approach, rather than a statement that the height is simply unverified. No level, tread-count or handrail change is imposed by this record. [Current MBIE D1 document listing](https://www.building.govt.nz/building-code-compliance/d-access/d1-access-routes/acceptable-solutions-and-verification-methods).
 
 ## 7. Remaining release conditions — no further owner preference questions now
-1. **GP01 specific tread design:** low pile/head/rail arrangement and all footings inside400, including stability and drainage/clearance.
+1. **GP01 box-step support detail:** frame depth and member spacing, H5 post bearings/fixings and count, all footings inside400, restraint, treatment and drainage/clearance.
 2. **AP01 complete main connections:** double-bearer ply and splice fixings, low anchor-pile detail and final bracing distribution. Recheck applicability of the published member tables under the current cited standard.
 3. **Site footing basis:** actual bearing ground, spot levels and existing-footing conflicts. This requires physical evidence, not another guessed quantity.
 4. **Actual board and timber product:** confirm width/moisture/stock, manufacturer cut-end conditions and compatible screws before buying. The owner has already said these are unknown; do not repeat the same question.
@@ -112,4 +115,4 @@ The selected500/250 surfaces create two250 mm rises. MBIE D1/AS1 Table6 has maxi
 One pre-build discussion must settle the design and any specialist input before construction. Then retain the same11 owner actions, updating the post/footing and rear-bearer drawings accordingly. No builder inspection visits are added. If actual soil or dimensions differ, stop affected work and resolve the deviation.
 
 ## Evidence and scope
-Primary sources actually read in this pass: Northpine's2025 booklet linked from its current span-table page; BRANZ Bulletin560 (pile requirements) and Bulletin611 (deck framing and clearance); MiTek2024 full on-site guide, printed42/45–50/55–56; CHH Pinex January2026 §1.3; MBIE's currently listed D1/AS1 amendment6 and Table6; Fluid manufacturer fixing page; NZ Timber's current retail product. Full NZS3604 download was attempted but returned403. Source extracts are used for the stated checks, not as proof of the entire project. Source PDFs stay in research scratch and are not republished.
+Primary sources actually read in this pass: Northpine's2025 booklet linked from its current span-table page; BRANZ Bulletin560 (pile requirements) and Bulletin611 (deck framing and clearance); MiTek2024 full on-site guide, printed42/45–50/55–56; Bunnings Australian box-step construction guide; CHH Pinex January2026 §1.3; MBIE's currently listed D1/AS1 amendment6 and Table6; Fluid manufacturer fixing page; NZ Timber's current retail product. Full NZS3604 download was attempted but returned403. Source extracts are used for the stated checks, not as proof of the entire project. Source PDFs stay in research scratch and are not republished.
