@@ -9,12 +9,13 @@ function overall(){
  let b=label(95,24,'PLAN · H5 posts in concrete',17)+label(95,46,'Candidate framing and support geometry — dimensions in mm',12);
  b+=rect(X(0),Y(0),6600*s,2600*s,'#f5f7f2')+rect(X(0),Y(-1970),900*s,1970*s,'#f5f7f2');
  for(const y of[350,2250])b+=rect(X(0),Y(y-45),6600*s,90*s,timber);
- b+=rect(X(0),Y(-845),900*s,90*s,timber);
+ b+=rect(X(0),Y(-845),900*s,90*s,timber)+rect(X(0),Y(-1840),900*s,90*s,timber);
  joists.forEach((x,i)=>{b+=rect(X(x-22.5),Y(i<4?-1970:0),45*s,(i<4?4570:2600)*s,green);if(i>=4)b+=label(X(x),Y(0)-12,`J${String(i+1).padStart(2,'0')}`,9,'middle');});
  [350,2250].forEach(y=>[250,1470,2690,3910,5130,6350].forEach(x=>{b+=rect(X(x-62.5),Y(y-62.5),125*s,125*s,'#314b3c');}));
- [175,725].forEach(x=>{b+=rect(X(x-62.5),Y(-862.5),125*s,125*s,'#314b3c');});
- b+=label(210,113,'Rebuilt 900 × 1970',13)+label(210,137,'J01–J04 continue: candidate',11)+label(210,163,'Retained rear support unverified',11);
- b+=line(X(0),Y(-1970),X(900),Y(-1970),'#a66d40',4,'6 4');
+ [-800,-1795].forEach(y=>[175,725].forEach(x=>{b+=rect(X(x-62.5),Y(y-62.5),125*s,125*s,'#314b3c');}));
+ [2352.5,3872.5].forEach(x=>b+=rect(X(x-22.5),Y(45),45*s,2510*s,green));
+ b+=label(210,113,'Rebuilt 900 × 1970',13)+label(210,137,'J01–J04 continue: candidate',11)+label(210,163,'BR at Y−1795 · 2 new H5 posts',11);
+
  b+=label(210,Y(-800)+4,'BC · 900 double bearer / 2 posts',11);
  b+=label(782,Y(350)+4,'BA',12)+label(782,Y(2250)+4,'BB',12);
  b+=rect(X(0),Y(2600),6600*s,400*s,'#faf3e4');
@@ -23,7 +24,7 @@ function overall(){
  b+=line(X(0),Y(3090),X(6600),Y(3090))+label(X(3300),Y(3290),'6600',14,'middle');
  b+=label(95,670,'Tread: 7 centred posts · Y2800 · squares show excavation envelope only',12);
  b+=label(30,Y(1300),'2600',12)+label(28,Y(2850),'400',12);
- return svg(b,900,700,'Overall plan with nineteen joists, fourteen deck posts and seven candidate centred tread posts');
+ return svg(b,900,700,'Overall plan with nineteen base joists, two butt sisters, sixteen deck posts and seven candidate centred tread posts');
 }
 function mainSection(){
  let b=label(60,40,'DECK SECTION · main framing stack',19)+label(60,68,'Schematic, not to scale; levels relative to garden, before separation layers',12);
@@ -56,7 +57,7 @@ function treadSection(){
  b+=label(60,637,'Dashed head is symbolic: no head depth, plate, bolt or post-top level is specified.',12);
  return svg(b,960,670,'Tread section, both rails supported by a designed transverse head above a centred H5 timber post in concrete');
 }
-const views={plan:[overall,'Two bearer rows and the rebuilt intermediate support give 14 candidate deck posts. Seven centred tread posts make 21 new posts in this concept. Rim, blocking and board-joint details are still to specify.'],main:[mainSection,'Main framing preference retained: double 140 × 45 SG8 bearers and 140 × 45 SG8 joists. Post tops and footing bottoms must be set from measured cleared-ground levels.'],tread:[treadSection,'The 350 square is a footprint test only. Soil bearing, depth, cover, construction tolerance and the designed head must all fit inside the 400 mm tread. The low-clearance connection remains unresolved.']};
+const views={plan:[overall,'Two main bearer rows and two rebuilt bearer lines give 16 candidate deck/rebuilt posts, independent of the old rear timber. Seven candidate tread posts bring the concept to 23. Final tread and connection design remains open.'],main:[mainSection,'Main framing preference retained: double 140 × 45 SG8 bearers and 140 × 45 SG8 joists. Post tops and footing bottoms must be set from measured cleared-ground levels.'],tread:[treadSection,'The 350 square is a footprint test only. Soil bearing, depth, cover, construction tolerance and the designed head must all fit inside the 400 mm tread. The low-clearance connection remains unresolved.']};
 function show(view){const[draw,caption]=views[view];document.querySelector('#drawing').innerHTML=draw();document.querySelector('#drawing-caption').textContent=caption;document.querySelector('#drawing-panel').setAttribute('aria-labelledby',`tab-${view}`);document.querySelectorAll('[data-view]').forEach(b=>{const selected=b.dataset.view===view;b.setAttribute('aria-selected',String(selected));b.tabIndex=selected?0:-1;});}
 document.querySelectorAll('[data-view]').forEach(button=>{button.onclick=()=>show(button.dataset.view);button.onkeydown=e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const keys=Object.keys(views),i=keys.indexOf(button.dataset.view),next=e.key==='Home'?0:e.key==='End'?2:(i+(e.key==='ArrowRight'?1:2))%3;show(keys[next]);document.querySelector(`#tab-${keys[next]}`).focus();};});
 const steps=[
@@ -66,7 +67,7 @@ const steps=[
  ['Place and temporarily brace the H5 posts','Level, clamps, temporary braces','Confirm treatment and structural marks, protected ends, embedment and designed head levels. Do not cut posts low without the approved treatment detail.'],
  ['Place concrete and allow it to cure','Specified concrete, placement tools','Provide the specified concrete below and around each post. Maintain alignment and temporary restraint; follow the agreed cure and loading times.'],
  ['Assemble and fix the doubled bearers','Clamps, drill, specified connectors','Fit main and rebuilt bearers. Check direct bearing, ply fastening, supported splices and every connection against AP01.'],
- ['Fit main joists, rims and restraint','Square, saw, drill','Check centres, continuous-member junctions, retained support and complete bracing in both directions. Install structural block-end fixings.'],
+ ['Fit main joists, rims and restraint','Square, saw, drill','Check centres, continuous-member junctions, new rebuilt rear support and complete bracing in both directions. Install structural block-end fixings.'],
  ['Install tread heads and both rails','Tools from the designed GP01 detail','Check head fixings, both rail bearings, levels, corrosion separation and resistance to sideways movement, uplift and edge-load rotation.'],
  ['Fit crosspieces and board-joint supports','Square, saw, drill','Check support spacing for the actual decking and support all rail and board joints. Complete concealed connections before covering.'],
  ['Lay the 32 mm pine decking','Spacers, drill/driver, specified screws','Dry-lay the actual width and supplier gap. Check edge rips, supported seams, screw embedment and end distances.'],
