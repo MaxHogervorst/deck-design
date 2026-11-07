@@ -1,5 +1,18 @@
 # Deck design — structural proposal for pre-build review
 
+## Current brief — 8 November 2026 (supersedes older foundation and quantity schedules)
+
+**CONFIRMED BY USER:** use excavated holes with structural H5 timber posts/poles in concrete for BOTH deck and tread. Every tread foundation must remain within its400 mm footprint. Preserve6600×2600 main /900×1970 rebuilt /6600×400 tread, selected500/250 levels,32 mm pine approximately80 wide, double140×45 main bearers and140×45 SG8 joist preference. One pre-build discussion, one owner build sequence, no builder inspections during construction and no handrails proposed.
+
+See [the current H5-in-concrete development brief](FOUNDATION_REVISION.md) for dimensioned concept sketches, fresh candidate quantities, costs awaiting quotes and11 assembly actions. Exact posts, footings, bracing, connections and tread framing are **not yet construction specifications**. The centred tread-post/transverse-head concept needs specific structural and low-clearance durability design. Historical support quantities, concrete volumes, stock orders and budgets below are withdrawn as current instructions; matching numbers in the new brief are freshly derived candidate geometry, not carried-forward orders.
+
+**Website permission boundary:** do not modify site/, docs/, website build scripts/output or publish without asking the owner. Documentation development is permitted. Older instructions to update or deploy the website do not override this requirement. Current full-standard checks and project-specific connection capacities remain open.
+
+---
+
+## Historical record — superseded where inconsistent with the current brief
+
+
 ## Current revision — 6 November 2026: confirmed boards and simpler tread supports
 
 **CONFIRMED BY USER:** decking is32 mm pine, approximately80 mm wide. The board choice is not provisional.80 mm is the calculation width and5 mm gaps remain illustrative; actual cover width/gap govern final cuts. Keep31 main /11 rebuilt /5 tread rows,284.4 lm example stock,1644 base screw positions. Remove alternate88/90 product shopping scenarios from the website.
