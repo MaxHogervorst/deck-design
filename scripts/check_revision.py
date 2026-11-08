@@ -23,7 +23,8 @@ h4_counts=Counter(c for n,s,cs in h4_alloc for c in cs for _ in range(n));assert
 xs,u,solve,mom=beam(list(np.arange(-1.925,-.0449,.025))+[-1.925,-.8,-.045],[-1.925,-.8],6.5e6*.045*.14**3/12)
 fg,qg=u(lambda x:.6*.45);F=np.repeat(np.zeros_like(fg)[:,None],len(xs),axis=1)
 for i in range(len(xs)):F[2*i,i]=2.7
-_,R=solve(F);rebuilt_uplift=float(-R.min())
+_,R=solve(F);# Include the45mm front rim beyond the modelled joist end:point may act atY0.
+rebuilt_uplift=max(float(-R.min()),2.7*.8/1.125)
 # Outer rail continuous over six pads;2.7kN stair point with rear/front board edge eccentricity.
 pads=[.175,1.325,2.640,3.960,5.275,6.425]
 xs,u,solve,mom=beam(list(np.arange(0,6.6001,.025))+pads,pads,6.5e6*.045*.14**3/12)

@@ -35,7 +35,7 @@ fixings=[
  ('F1','Built-up main/rebuilt bearers','90×4SS structural nails,two rows≤250centres,alternate faces; connector exclusions apply.'),
  ('F2','Ordinary pile/bearer','Four100×3.75SS skew nails at each ordinary seated joint; no blanket soil lowering.'),
  ('F3','Ordinary joist/rim/block','NZS3604Table7.5 schedule; joist/rim basis2×100×3.75SS per joint; short curtailed tread pieces3per end,subject to the2.7kN stair-action check.'),
- ('F4','Rebuilt rear uplift','3genuineSSCPC40pairs,each cleat2specified14g×35intojoist +2specified14g×75intobearer. Rear zero-dead uplift demand1.812kN vs2.688kN/pair preliminary screen.'),
+ ('F4','Rebuilt rear uplift (front board edge included)','3genuineSSCPC40pairs,each cleat2specified14g×35intojoist +2specified14g×75intobearer. Rear zero-dead uplift demand1.920kN vs2.688kN/pair preliminary screen.'),
  ('F5','Tread cleats - draft','7×414mm140×45H4 cleats,top+468/bottom+54. TwoM12upper bolts atZ380 and two lower atZ152 per cleat,80mm across the140face. M12×120/50-square washers are provisional; not a drilling release.'),
  ('F6','Rebuilt/main lateral tie - draft','TwoM12×120bolts through adjacent140mm rims atX200/700,Z398; washers/nut access and whole bracing transfer to confirm.'),
  ('F7','Anchors and outer pads','Four corner anchor assemblies and six outer pad restraint points need complete applicable standard/manufacturer details. No connection approval is inferred from a component screen.')

@@ -249,7 +249,7 @@
     "warning": "Conditional geometry,not a concrete order. Main anchor section and complete outer pad restraint remain unverified."
   },
   "screens": {
-    "rebuilt_zero_dead_uplift_ULS_kN": 1.8120000108602696,
+    "rebuilt_zero_dead_uplift_ULS_kN": 1.9200000000000002,
     "SSCPC40_pair_conservative_screen_kN": 2.688,
     "outer_rail_point_ULS_kN": 4.306690140845071,
     "outer_rail_max_M_ULS_kNm": 1.0391170338509232,

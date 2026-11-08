@@ -79,7 +79,7 @@ Allow 4 mm kerf per cut and 5 mm end trim. Board example at 88 mm/~5 mm gaps: 28
 |F1|Built-up main/rebuilt bearers|90×4 SS structural nails, two rows≤250 centres, alternate faces; connector exclusions apply.|
 |F2|Ordinary pile/bearer|Four 100×3.75 SS skew nails at each ordinary seated joint; no blanket soil lowering.|
 |F3|Ordinary joist/rim/block|NZS 3604 Table 7.5 schedule; joist/rim basis 2×100×3.75 SS per joint; short curtailed tread pieces 3 per end, subject to the 2.7 kN stair-action check.|
-|F4|Rebuilt rear uplift|3 genuine SSCPC40 pairs, each cleat 2 specified 14 g×35 intojoist +2 specified 14 g×75 intobearer. Rear zero-dead uplift demand 1.812 kN vs 2.688 kN/pair preliminary screen.|
+|F4|Rebuilt rear uplift (front board edge included)|3 genuine SSCPC40 pairs, each cleat 2 specified 14 g×35 intojoist +2 specified 14 g×75 intobearer. Rear zero-dead uplift demand 1.920 kN vs 2.688 kN/pair preliminary screen.|
 |F5|Tread cleats - draft|7×414 mm 140×45 H4 cleats, top +468/bottom +54. TwoM12 upper bolts atZ380 and two lower atZ152 per cleat, 80 mm across the 140 face. M12×120/50-square washers are provisional; not a drilling release.|
 |F6|Rebuilt/main lateral tie - draft|TwoM12×120 bolts through adjacent 140 mm rims atX200/700, Z398; washers/nut access and whole bracing transfer to confirm.|
 |F7|Anchors and outer pads|Four corner anchor assemblies and six outer pad restraint points need complete applicable standard/manufacturer details. No connection approval is inferred from a component screen.|
