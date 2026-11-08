@@ -1,5 +1,37 @@
 # Structural proposal and board options — 5 November 2026
 
+## Structural calculations — latest status
+
+See [STRUCTURAL_CALCULATION_REVIEW.md](STRUCTURAL_CALCULATION_REVIEW.md) and calculations/structural_check.py. Actual preliminary beam/reaction and cleat-equilibrium calculations were run and reference/mesh/equilibrium checks passed. Main member-table comparisons are favourable; a conditional gravity-bearing screen gives84.5 kPa against assumed100 kPa good ground; gross EQ bracing demand80.9 BU versus720 BU only if all six anchors qualify. These are not a complete structural pass.
+
+Correction: domestic-stair concentrated action is2.7 kN, not the earlier1.8 kN deck screening action; independent-tread line-load applicability also needs checking. Rebuilt joists can require hold-down; proposed tread cleats amplify bolt forces and have no established full resistance/load path. No new foundation or tread replacement is selected. The owner asked why the box had changed: reducing depth140→90 creates clearance; removing its crosspieces was not necessary for that gain. The ordinary box has not been rejected and the two-bearer proposal has not been proved better. Published site remains the prior marked development snapshot; no new publication in this calculation pass.
+
+## Publication and fixing check — current pass
+
+CONFIRMED BY USER: **50 mm tread-board overhang is acceptable** (the15 mm message was corrected); retain centred bearer/pile bearing. Owner explicitly requested publishing current progress before resolving the fixing questions. Published to https://maxhogervorst.github.io/deck-design/ via PR4, commit427f0d5d40a495a001ae7dc52a1b4d93a03fabbe; Pages deployment and live contents verified. This is a development guide, not construction approval.
+
+See [DECK_FIXINGS_CHECK.md](DECK_FIXINGS_CHECK.md) for the subsequent source check: standard ordinary joist/rim/block nailing and built-up-ply geometry confirmed; rated bearer splices required; complete low anchor/both-ply connection and tread-tie/main-frame load transfer still need a qualified structural check. MiTek's scarf label is25 degrees, not25 mm. No new foundation system, anchor positions or site assumptions are introduced. Site/drainage and actual board suitability remain unverified. One pre-build discussion; no builder inspections during construction.
+
+## Developed resolution — 8 November 2026
+
+See [DESIGN_RESOLUTION.md](DESIGN_RESOLUTION.md), the current developed proposal. Owner reports retained support and exact board product unknown. Use a new rear bearer on two new posts in the design; do not assume retained support capacity. Candidate counts become16 deck/rebuilt +7 tread =23, subject to tread specific design. Verified manufacturer member-table comparisons, fresh framing cut scenario and cost benchmark are recorded there. Footing/connection/low-tread/access release conditions remain explicit. Older quantities below are historical.
+
+## Website revision authorised — 8 November 2026
+
+The owner explicitly authorised making the changes, developing the new plan and publishing it. This authorises the current H5-in-concrete website revision and GitHub Pages deployment. The concept remains provisional where marked; publication does not approve unresolved structural details. Future unrelated publication still requires permission.
+
+## Current brief — 8 November 2026 (supersedes older foundation and quantity schedules)
+
+**CONFIRMED BY USER:** use excavated holes with structural H5 timber posts/poles in concrete for BOTH deck and tread. Every tread foundation must remain within its400 mm footprint. Preserve6600×2600 main /900×1970 rebuilt /6600×400 tread, selected500/250 levels,32 mm pine approximately80 wide, double140×45 main bearers and140×45 SG8 joist preference. One pre-build discussion, one owner build sequence, no builder inspections during construction and no handrails proposed.
+
+See [the current H5-in-concrete development brief](FOUNDATION_REVISION.md) for dimensioned concept sketches, fresh candidate quantities, costs awaiting quotes and11 assembly actions. Exact posts, footings, bracing, connections and tread framing are **not yet construction specifications**. The centred tread-post/transverse-head concept needs specific structural and low-clearance durability design. Historical support quantities, concrete volumes, stock orders and budgets below are withdrawn as current instructions; matching numbers in the new brief are freshly derived candidate geometry, not carried-forward orders.
+
+**Website permission boundary:** do not modify site/, docs/, website build scripts/output or publish without asking the owner. Documentation development is permitted. Older instructions to update or deploy the website do not override this requirement. Current full-standard checks and project-specific connection capacities remain open.
+
+---
+
+## Historical record — superseded where inconsistent with the current brief
+
 ## Current revision — 6 November 2026: confirmed boards and simpler tread supports
 
 **CONFIRMED BY USER:** decking is32 mm pine, approximately80 mm wide. The board choice is not provisional.80 mm is the calculation width and5 mm gaps remain illustrative; actual cover width/gap govern final cuts. Keep31 main /11 rebuilt /5 tread rows,284.4 lm example stock,1644 base screw positions. Remove alternate88/90 product shopping scenarios from the website.

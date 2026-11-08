@@ -1,5 +1,85 @@
 # Project brief
 
+> **Latest publication direction:** owner explicitly asks to simplify/publish the agreed plan and remove the ground-lowering proposal and other alternatives. [CURRENT_DESIGN.md](CURRENT_DESIGN.md) and [SHOPPING_LIST.md](SHOPPING_LIST.md) now describe the concise active plan. Keep500/250mm surfaces and surrounding ground levels; ordinary footing holes remain. Do not present old scarfed-anchor excavation, larger-post options or un-rated tread connector candidates as adopted details. Exact main anchor and tread support/restraint connections remain unfinished, clearly noted once. Active shopping totals exclude the withdrawn connector candidates.
+
+> **Latest owner direction — standard route, no paid designer appointment:** keep the500mm deck. The owner declines commissioning a structural designer and asks for our best ordinary-detail work. [STANDARD_ROUTE_REVIEW.md](STANDARD_ROUTE_REVIEW.md) records the actual geometry/source review:100mm ground lowering is not a mandatory deck-height requirement; rework the main anchor connection before adopting that excavation. A larger, standard bolted anchor-head candidate keeps its lowest seat cut above150mm at unchanged soil, but approved pile supply and complete joist-tie fit are not verified. Do not label an un-rated tread bracket assembly approved. No new foundation selection, order, website revision or publication is made by this local review.
+
+> **Publication and lists authorised:** owner said “Publish this” and requested the shopping list and specific connection/drainage guidance. Use [SHOPPING_LIST.md](SHOPPING_LIST.md), [PREBUILD_CHECKLIST.md](PREBUILD_CHECKLIST.md), and [DRAINAGE_CLEARANCE.md](DRAINAGE_CLEARANCE.md). No photo can be supplied or is required; measure actual drainage/outlet levels on site. This supersedes older photo-dependent wording.
+
+> **Current working specification — 8 November 2026:** [STANDARD_DETAILS.md](STANDARD_DETAILS.md) supersedes conflicting historical design/quantity schedules below. Owner reports flat normal ground and successful previous extension piles; use100 kPa assumed allowable bearing for planning, without another soil questionnaire. Standard main nailing, six complete stainless12KNH kits and genuineSSCPC40 rebuilt-joist hold-down pairs are selected. Fresh proposal:20 deck/rebuilt piles (six anchors +14 ordinary);127.8 lm main framing unchanged. Tread: short400 mm front-to-back pine boards directly on doubled140×45 rails,19 lower90×45 crosspieces, seven dimensioned concrete-pad proposals; PBB0140/SS replaces the smaller bracket for the unfinished full restraint check. Main standard anchor geometry proposes100 mm drained under-deck ground reduction; outlet remains to verify. Prices and limits are recorded in the specification. No owner preference questions or construction-phase builder inspections added. Current proposal and lists published via PR6/main4ded261; live HTML/CSV verified. See PROGRESS.md for the record.
+
+CONFIRMED BY USER: H5 posts in concrete were a suggestion; choose a simpler practical tread support, retain the selected heights and minimise finishing cost. The owner answered the material clarification: **keep pine on the tread**. Develop a conventional timber box on low concrete pads/plinths, with impervious separation and matched stainless restraint. Main/rebuilt timber framing and pile development stay as the working approach.
+
+See [CONCRETE_SUPPORTED_PINE_TREAD.md](CONCRETE_SUPPORTED_PINE_TREAD.md):140 mm-deep H4 SG8 frame, doubled edge rails,32 mm pine, nominal concrete bearing+76 with2 mm DPC. Seven freshly derived1000 mm support stations are a layout candidate, not the old centred-pole design. Natural pine and the plain front rail/minimal fascia are the base finish. The full pad/anchor schedule is not yet verified; no volumes, order or construction release. No website files changed in this pass. The earlier pending material question is answered; do not repeat it.
+
+## Latest owner direction — simple build takes priority over H5 tread posts
+
+CONFIRMED BY USER: H5 posts concreted into holes were a suggestion, not a binding foundation method. The owner now authorises choosing a simpler practical alternative. Preserve the selected deck/tread heights; choose the simplest cost-effective finish. Buried foundations may extend beneath adjacent landscaping. Do not continue treating the old H5-only/no-alternative instruction as current.
+
+Retain conventional main-deck framing and its established timber-pile development unless a demonstrated improvement justifies changing it. Reconsider the low tread support from first principles. A clarification about retaining pine versus a plain-concrete tread has been asked; do not select a changed tread surface until answered. No new footprint or rise selection is made. Do not reuse withdrawn post counts, concrete volumes or budgets. No website files changed in this pass.
+
+## Latest owner clarification — buried footings may extend beyond the tread
+
+**CONFIRMED BY USER:** the400 mm limit concerns the visible tread; underground excavation/concrete may extend beneath the adjacent path, grass and garden. The owner wants a neat finish and permits detail changes. All older statements requiring every tread footing/excavation to stay within400 mm are superseded. See [TREAD_LANDSCAPING_BRIEF.md](TREAD_LANDSCAPING_BRIEF.md).
+
+Return development to the conventional timber box/ladder baseline on concreted H5 posts. Keep6600×400 and+250 as the working visible dimensions; no replacement dimensions are selected. Conceal concrete/pile heads with a proper finish layout, preserve timber/processing clearance and drainage, and coordinate wider footings with the path base and lawn/garden cover. Do not bury framing or pile-head fixings for appearance. The former14-post/200-square-footing/0.1754375 m³ scenario was driven by the withdrawn restriction and must not be reused as a current order. Derive support positions/quantities afresh. No website files changed in this clarification pass; the published snapshot is now behind this brief.
+
+## Structural calculations — latest status
+
+See [STRUCTURAL_CALCULATION_REVIEW.md](STRUCTURAL_CALCULATION_REVIEW.md) and calculations/structural_check.py. Actual preliminary beam/reaction and cleat-equilibrium calculations were run and reference/mesh/equilibrium checks passed. Main member-table comparisons are favourable; a conditional gravity-bearing screen gives84.5 kPa against assumed100 kPa good ground; gross EQ bracing demand80.9 BU versus720 BU only if all six anchors qualify. These are not a complete structural pass.
+
+Correction: domestic-stair concentrated action is2.7 kN, not the earlier1.8 kN deck screening action; independent-tread line-load applicability also needs checking. Rebuilt joists can require hold-down; proposed tread cleats amplify bolt forces and have no established full resistance/load path. No new foundation or tread replacement is selected. The owner asked why the box had changed: reducing depth140→90 creates clearance; removing its crosspieces was not necessary for that gain. The ordinary box has not been rejected and the two-bearer proposal has not been proved better. Published site remains the prior marked development snapshot; no new publication in this calculation pass.
+
+## Publication and fixing check — current pass
+
+CONFIRMED BY USER: **50 mm tread-board overhang is acceptable** (the15 mm message was corrected); retain centred bearer/pile bearing. Owner explicitly requested publishing current progress before resolving the fixing questions. Published to https://maxhogervorst.github.io/deck-design/ via PR4, commit427f0d5d40a495a001ae7dc52a1b4d93a03fabbe; Pages deployment and live contents verified. This is a development guide, not construction approval.
+
+See [DECK_FIXINGS_CHECK.md](DECK_FIXINGS_CHECK.md) for the subsequent source check: standard ordinary joist/rim/block nailing and built-up-ply geometry confirmed; rated bearer splices required; complete low anchor/both-ply connection and tread-tie/main-frame load transfer still need a qualified structural check. MiTek's scarf label is25 degrees, not25 mm. No new foundation system, anchor positions or site assumptions are introduced. Site/drainage and actual board suitability remain unverified. One pre-build discussion; no builder inspections during construction.
+
+## Current tread development — simpler direct bearing
+
+CONFIRMED BY USER: connect the tread to the freestanding deck frame for sideways restraint; its own concreted H5 posts carry its weight. See [SIMPLER_TREAD.md](SIMPLER_TREAD.md). PROVISIONAL: short front-to-back boards over two 90-deep ×140-wide built-up H5 SG8 bearers, directly seated on 14 staggered 125-square H5 piles. This supersedes the six shared-footing / side-bolted suspension proposal. All tread excavation remains inside400; no website change is made.
+
+The new geometry gives128 mm framing clearance above the garden reference. A conditional50 mm drained ground reduction gives178 mm framing clearance /176 mm pile exposure. Do not assume an outlet exists.200-square ×450-deep ordinary footing envelopes and their0.1754375 m³ net concrete are review quantities, not an order or anchor rating. The exact lateral ties/combined bracing, joint fixings, actual ground and50 mm board end projections still need checking before building. No riser-height discussion is reopened.
+
+## Latest footing/fixing development — review only
+
+See FOOTINGS_AND_FIXINGS_REVIEW.md. It records a dimensional paired-footing/side-bolted box-step concept, capacity checks still required, and a fresh geometric takeoff. This is not a released ordinary bearing detail: bolts would carry vertical load. Do not order56 bolts,14 tread piles or0.593 m³ concrete from this proposal, and do not treat it as verified NZS3604 construction. Website unchanged.
+
+## Owner direction — ordinary box step retained
+
+CONFIRMED BY USER: proceed with an ordinary single-layer timber box/ladder frame, seated and fixed on H5 timber posts in concrete. Keep6600×400 mm overall,32 mm pine decking and selected250 mm surface. Do not reopen the owner’s riser-height preference in routine framing discussion. This preference is not an independent compliance determination.
+
+The90 mm frame and125 mm lowered-ground scenario in BOX_STEP_WORKING_SPEC.md remain unverified development proposals, not adopted dimensions or required excavation. Do not make custom heads, special fabrication or drainage excavation default requirements. Complete an ordinary timber bearing/fixing and within-footprint footing detail before releasing construction quantities; ordinary construction is not itself a checked connection specification. All excavation/concrete remains inside the400 mm tread footprint. No change to the public website is made by this record update; it already shows the selected box-step method.
+
+## Box-step working specification — 8 November 2026
+
+See BOX_STEP_WORKING_SPEC.md. Develop90×45 SG8 H5 single-layer tread framing (not yet a construction specification); frame levels218/128 mm. Rail support/bearing/footings inside400 remain unresolved. Record75 mm316SS board-screw basis and a draft main ply-nailing layout for verification. A125 mm lowered-ground clearance scenario depends on a real drainage outlet; owner answer pending. Pinepac house-pile instructions provide a documented150 mm processing route; see the conditional stock schedule in the working specification. No website change in this pass.
+
+## Latest owner selection — conventional box step
+
+The owner selected a single-layer timber box/ladder tread frame seated and fixed on H5 posts in concrete, and authorised the website update. See DESIGN_RESOLUTION.md. Withdraw the centred-row/custom-head concept, seven tread supports and23-post combined quantity. Keep6600×400 and250 surface; exact frame/support/footing/clearance detail remains GP01.
+
+## Developed resolution — 8 November 2026
+
+See [DESIGN_RESOLUTION.md](DESIGN_RESOLUTION.md), the current developed proposal. Owner reports retained support and exact board product unknown. Use a new rear bearer on two new posts in the design; do not assume retained support capacity. Candidate counts become16 deck/rebuilt +7 tread =23, subject to tread specific design. Verified manufacturer member-table comparisons, fresh framing cut scenario and cost benchmark are recorded there. Footing/connection/low-tread/access release conditions remain explicit. Older quantities below are historical.
+
+## Website revision authorised — 8 November 2026
+
+The owner explicitly authorised making the changes, developing the new plan and publishing it. This authorises the current H5-in-concrete website revision and GitHub Pages deployment. The concept remains provisional where marked; publication does not approve unresolved structural details. Future unrelated publication still requires permission.
+
+## Current brief — 8 November 2026 (supersedes older foundation and quantity schedules)
+
+**CONFIRMED BY USER:** use excavated holes with structural H5 timber posts/poles in concrete for BOTH deck and tread. Every tread foundation must remain within its400 mm footprint. Preserve6600×2600 main /900×1970 rebuilt /6600×400 tread, selected500/250 levels,32 mm pine approximately80 wide, double140×45 main bearers and140×45 SG8 joist preference. One pre-build discussion, one owner build sequence, no builder inspections during construction and no handrails proposed.
+
+See [the current H5-in-concrete development brief](FOUNDATION_REVISION.md) for dimensioned concept sketches, fresh candidate quantities, costs awaiting quotes and11 assembly actions. Exact posts, footings, bracing, connections and tread framing are **not yet construction specifications**. The centred tread-post/transverse-head concept needs specific structural and low-clearance durability design. Historical support quantities, concrete volumes, stock orders and budgets below are withdrawn as current instructions; matching numbers in the new brief are freshly derived candidate geometry, not carried-forward orders.
+
+**Website permission boundary:** do not modify site/, docs/, website build scripts/output or publish without asking the owner. Documentation development is permitted. Older instructions to update or deploy the website do not override this requirement. Current full-standard checks and project-specific connection capacities remain open.
+
+---
+
+## Historical record — superseded where inconsistent with the current brief
+
 ## Current revision — 6 November 2026: confirmed boards and simpler tread supports
 
 **CONFIRMED BY USER:** decking is32 mm pine, approximately80 mm wide. The board choice is not provisional.80 mm is the calculation width and5 mm gaps remain illustrative; actual cover width/gap govern final cuts. Keep31 main /11 rebuilt /5 tread rows,284.4 lm example stock,1644 base screw positions. Remove alternate88/90 product shopping scenarios from the website.
