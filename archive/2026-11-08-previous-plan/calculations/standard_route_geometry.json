@@ -1,0 +1,37 @@
+{
+  "scope": "Geometry check only; candidate standard bolted main anchor route, not complete connection verification",
+  "surface_mm": 500,
+  "existing_stacked_timber_mm": 312,
+  "bearer_bottom_mm": 188.0,
+  "ordinary_pile_top_mm": 187.25,
+  "ordinary_top_clearance_at_existing_soil_mm": 187.25,
+  "candidate_figure_6_10_anchor": {
+    "pile_width_mm": 200,
+    "bearer_width_mm": 90,
+    "remaining_back_section_mm": 110,
+    "minimum_remaining_from_figure_mm": 100,
+    "seat_lowest_cut_mm": 187.25,
+    "pile_top_mm": 328,
+    "bolt_centre_example_mm": 258,
+    "required_process_clearance_mm": 150,
+    "process_clearance_at_existing_soil_mm": 187.25,
+    "candidate_M12_bolt_length_mm": 240,
+    "nominal_body_grip_mm": 200,
+    "anchor_grade_and_NZS3605_supply_confirmed": false,
+    "paired_joists_clear_mm": 335,
+    "clear_each_side_of_200mm_head_mm": 67.5,
+    "full_joist_tie_fit_capacity_confirmed": false
+  },
+  "retro_kit_review": {
+    "model": "12KNRFH",
+    "source": "MiTek2024guide,p47",
+    "no_scarf_application_confirmed": false,
+    "reason": "Published small section sketches still show a reduced pile neck; do not claim this automatically avoids the cut-clearance issue"
+  },
+  "decisions": {
+    "retain_height_mm": 500,
+    "mandatory_blanket_excavation_mm": null,
+    "owner_paid_structural_designer_planned": false,
+    "tread_assembly_verified": false
+  }
+}

@@ -1,5 +1,7 @@
 # What the100mm ground lowering means
 
+> **Latest owner direction — standard route, no paid designer appointment:** keep the500mm deck. The owner declines commissioning a structural designer and asks for our best ordinary-detail work. [STANDARD_ROUTE_REVIEW.md](STANDARD_ROUTE_REVIEW.md) records the actual geometry/source review:100mm ground lowering is not a mandatory deck-height requirement; rework the main anchor connection before adopting that excavation. A larger, standard bolted anchor-head candidate keeps its lowest seat cut above150mm at unchanged soil, but approved pile supply and complete joist-tie fit are not verified. Do not label an un-rated tread bracket assembly approved. No new foundation selection, order, website revision or publication is made by this local review.
+
 8 November 2026. The owner cannot upload photos. Continue using the reported flat grassed site and normal ground; a photograph is not a prerequisite for this explanation or shopping list.
 
 **Keep the deck surface at about500mm, the pine tread at250mm and the surrounding lawn/path at their chosen levels.** The100mm is a proposed removal of soil **under the main deck/rebuilt area**, so the selected main anchor-pile fixings have enough clearance above soil. It is not a proposal to lower the deck, lower the garden, or dig out under the tread.

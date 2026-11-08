@@ -1,5 +1,15 @@
 # Site measurement record
 
+## Latest owner clarification — buried footings may extend beyond the tread
+
+**CONFIRMED BY USER:** the400 mm limit concerns the visible tread; underground excavation/concrete may extend beneath the adjacent path, grass and garden. The owner wants a neat finish and permits detail changes. All older statements requiring every tread footing/excavation to stay within400 mm are superseded. See [TREAD_LANDSCAPING_BRIEF.md](TREAD_LANDSCAPING_BRIEF.md).
+
+Return development to the conventional timber box/ladder baseline on concreted H5 posts. Keep6600×400 and+250 as the working visible dimensions; no replacement dimensions are selected. Conceal concrete/pile heads with a proper finish layout, preserve timber/processing clearance and drainage, and coordinate wider footings with the path base and lawn/garden cover. Do not bury framing or pile-head fixings for appearance. The former14-post/200-square-footing/0.1754375 m³ scenario was driven by the withdrawn restriction and must not be reused as a current order. Derive support positions/quantities afresh. No website files changed in this clarification pass; the published snapshot is now behind this brief.
+
+## Developed resolution — 8 November 2026
+
+See [DESIGN_RESOLUTION.md](DESIGN_RESOLUTION.md), the current developed proposal. Owner reports retained support and exact board product unknown. Use a new rear bearer on two new posts in the design; do not assume retained support capacity. Candidate counts become16 deck/rebuilt +7 tread =23, subject to tread specific design. Verified manufacturer member-table comparisons, fresh framing cut scenario and cost benchmark are recorded there. Footing/connection/low-tread/access release conditions remain explicit. Older quantities below are historical.
+
 ## Latest board dimensions — supersedes previous thickness/quantity scenarios
 
 Owner confirms **32 mm thick, approximately80 mm wide**. Use80 mm as a provisional calculation width, not an exact measured/product dimension.5 mm gaps are illustrative only. At80 mm:31 main /11 rebuilt /5 tread rows;259.27 lm row lengths;284.4 lm example stock in78 boards;1644 base board-fixing positions,2000 planning allowance. At88/90 mm the example stock is265.8/258.6 lm. Confirm width/product/gap before ordering or ripping.

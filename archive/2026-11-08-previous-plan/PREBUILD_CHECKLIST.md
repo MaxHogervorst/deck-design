@@ -1,5 +1,7 @@
 # One pre-build connection check
 
+> **Latest owner direction — standard route, no paid designer appointment:** keep the500mm deck. The owner declines commissioning a structural designer and asks for our best ordinary-detail work. [STANDARD_ROUTE_REVIEW.md](STANDARD_ROUTE_REVIEW.md) records the actual geometry/source review:100mm ground lowering is not a mandatory deck-height requirement; rework the main anchor connection before adopting that excavation. A larger, standard bolted anchor-head candidate keeps its lowest seat cut above150mm at unchanged soil, but approved pile supply and complete joist-tie fit are not verified. Do not label an un-rated tread bracket assembly approved. No new foundation selection, order, website revision or publication is made by this local review.
+
 8 November 2026. Take this sheet, the current plan and the manufacturer sheets to the single pre-build discussion. **The owner does not need to calculate connection capacities.** The builder checks an ordinary detail against the actual plan; any detail outside the published instructions needs the connector manufacturer's technical support or a suitably qualified NZ structural designer. No construction-phase builder inspections are added.
 
 The requested result is **one annotated foundation/fixing drawing and matching fastener schedule**, with each item below marked confirmed or revised. A statement that the parts are “standard” is not a complete connection detail. The current preliminary calculations are evidence for that review, not certification.

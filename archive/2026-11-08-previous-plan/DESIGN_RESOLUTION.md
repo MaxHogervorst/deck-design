@@ -1,4 +1,9 @@
 # Design resolution — H5 posts in concrete
+
+> **Current working plan:** [PROGRESS.md](PROGRESS.md) supersedes conflicting historical schedules below. Use continuous 6.6 m main bearer and tread rail plies cut from 7.2 m stock; main/rebuilt stock remains 127.8 lm in 29 lengths, tread stock is 33.6 lm in five lengths. Tread is a minimum-H4 SG8 pine box on low concrete supports, with no added fascia. PBB8515/SS is a geometry candidate, not a rated connection. Remaining site/product and two structural connection tasks are listed in [OPEN_ISSUES.md](OPEN_ISSUES.md). No owner preference questions are pending. The owner subsequently requested publication: the current pine-box website is live via PR5, commit c5253bd; see the publication record in PROGRESS.md.
+
+**CURRENT TREAD UPDATE:** see [SIMPLER_TREAD.md](SIMPLER_TREAD.md). The owner requested simpler low-clearance framing and confirmed sideways restraint to the freestanding deck. The new direct-bearing / short-board recommendation supersedes the tread-development details below; main/rebuilt development remains separately recorded. New details remain subject to their stated structural/site/product checks. Website unchanged.
+
 8 November 2026, Auckland. Current selection: conventional timber box step on H5 posts in concrete. Supersedes all centred-post/transverse-head tread proposals and their quantities. **Builder discussion design, not construction release.**
 
 ## What is settled and what is still conditional
