@@ -1,0 +1,24 @@
+{
+  "support_X_m": [
+    0.25,
+    1.0675,
+    1.66,
+    2.9675,
+    3.91,
+    5.13,
+    6.0075,
+    6.525
+  ],
+  "mesh_nodes": 140,
+  "patterns": 512,
+  "loaded_dimension_screen_m": 2.0,
+  "dead_kPa": 0.6,
+  "imposed_kPa": 2.0,
+  "alternative_service_point_to_bearer_kN": 3.0,
+  "max_service_pile_reaction_kN": 6.579823024553257,
+  "max_uls_pile_reaction_kN": 9.456148997066352,
+  "max_uls_bearer_moment_kNm": 1.0162336482437948,
+  "maximum_gravity_pressure_including_deep_footing_and_pile_kPa": 73.95222086370006,
+  "equilibrium_error_kN": 1.4154011296341196e-11,
+  "scope": "Continuous bearer gravity-demand envelope, no inferred member/connection resistance. Ground100kPa assumed; no tread loads transferred to deck."
+}

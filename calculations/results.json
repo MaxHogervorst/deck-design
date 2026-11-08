@@ -1,0 +1,222 @@
+{
+  "assumptions": {
+    "area_live_kPa": 2,
+    "dead_kPa": 0.6,
+    "deck_point_kN": 1.8,
+    "stair_point_kN": 2.7,
+    "Ewet_GPa": 6.5,
+    "ULS": "1.2G+1.5Q (screen only)",
+    "joist_tributary_width_m": 0.38
+  },
+  "main_joist": {
+    "label": "main joist",
+    "supports_m": [
+      0.35,
+      2.25
+    ],
+    "max_uls_udl_moment_kNm": 0.6211289999867379,
+    "max_uls_point_moment_kNm": 1.3892039999764656,
+    "max_uls_udl_reactions_kN": [
+      1.874429999985043,
+      1.8744299999802154
+    ],
+    "min_uls_udl_reactions_kN": [
+      0.31892999999696986,
+      0.31892999999809374
+    ],
+    "max_uls_point_reactions_kN": [
+      3.553048421076885,
+      3.5530484210679467
+    ],
+    "min_uls_point_reactions_kN": [
+      -0.14168842103862175,
+      -0.14168842103945128
+    ],
+    "min_point_reactions_zero_dead_credit_kN": [
+      -0.4973684210225893,
+      -0.49736842103568085
+    ],
+    "full_service_reactions_kN": [
+      1.2844000000021063,
+      1.2843999999883695
+    ],
+    "full_service_max_deflection_mm": 2.0983051910743775,
+    "ULS_udl_equilibrium_error_kN": 4.694955535455847e-11
+  },
+  "rebuilt_joist": {
+    "label": "rebuilt continuous joist",
+    "supports_m": [
+      -1.795,
+      -0.8,
+      0.35,
+      2.25
+    ],
+    "max_uls_udl_moment_kNm": 0.4788280064510544,
+    "max_uls_point_moment_kNm": 1.0797744600021306,
+    "max_uls_udl_reactions_kN": [
+      0.9822631159639985,
+      1.7535073061377788,
+      2.8086855317370922,
+      1.6793836745281943
+    ],
+    "min_uls_udl_reactions_kN": [
+      0.07916511272028695,
+      -0.2446606252920512,
+      0.3620332463640914,
+      0.29012663782366616
+    ],
+    "max_uls_point_reactions_kN": [
+      3.463000122242532,
+      2.944677840137067,
+      3.4637805093531457,
+      3.6799122976136585
+    ],
+    "min_uls_point_reactions_kN": [
+      -0.10984278802164757,
+      -0.6435012292712937,
+      -0.48820035008450563,
+      0.22393074516446057
+    ],
+    "min_point_reactions_zero_dead_credit_kN": [
+      -0.2819662845648965,
+      -0.8881790694117268,
+      -1.0023709627469728,
+      -0.09544930548766917
+    ],
+    "full_service_reactions_kN": [
+      0.6215570708511188,
+      0.883558867161075,
+      1.8567272124012717,
+      1.1533168495857964
+    ],
+    "full_service_max_deflection_mm": 1.2691152143119455,
+    "ULS_udl_equilibrium_error_kN": 4.653877283544716e-11
+  },
+  "bracing": {
+    "area_m2": 21.573,
+    "Auckland_zone1_assumed_soil_DE_multiplier": 0.5,
+    "EQ_demand_BU_each": 80.89875,
+    "candidate_six_anchor_capacity_BU": 720,
+    "tread_EQ_demand_kN": 0.9900000000000001,
+    "EQ_reference_zone3_factor1_BU": 161.7975
+  },
+  "current_drop_cleat_equilibrium": [
+    {
+      "horizontal_load_kN": 0.5,
+      "top_group_tension_kN": 1.6761363636363635,
+      "top_bolt_tension_kN": 0.8380681818181818,
+      "top_contact_compression_kN": 1.1761363636363635,
+      "bending_moment_kNm": 0.1035,
+      "gross_bending_stress_MPa": 1.6140350877192982,
+      "washer_face_stress_MPa": 0.34847390578197884,
+      "transverse_load_top_bolt_inplane_shear_kN": 1.4024621207005912
+    },
+    {
+      "horizontal_load_kN": 1,
+      "top_group_tension_kN": 3.352272727272727,
+      "top_bolt_tension_kN": 1.6761363636363635,
+      "top_contact_compression_kN": 2.352272727272727,
+      "bending_moment_kNm": 0.207,
+      "gross_bending_stress_MPa": 3.2280701754385963,
+      "washer_face_stress_MPa": 0.6969478115639577,
+      "transverse_load_top_bolt_inplane_shear_kN": 2.8049242414011823
+    },
+    {
+      "horizontal_load_kN": 2,
+      "top_group_tension_kN": 6.704545454545454,
+      "top_bolt_tension_kN": 3.352272727272727,
+      "top_contact_compression_kN": 4.704545454545454,
+      "bending_moment_kNm": 0.414,
+      "gross_bending_stress_MPa": 6.456140350877193,
+      "washer_face_stress_MPa": 1.3938956231279154,
+      "transverse_load_top_bolt_inplane_shear_kN": 5.609848482802365
+    }
+  ],
+  "single_box_rail_screen": {
+    "stair_service_point_kN": 2.7,
+    "screen_uls_point_kN": 4.050000000000001,
+    "span_m": 1.025,
+    "moment_kNm": 1.0378125,
+    "stress_90x45_MPa": 17.083333333333332,
+    "stress_90x140_MPa": 5.491071428571429
+  },
+  "tests": "textbook uniform simple beam reactions, moment and deflection matched; joist uniform-load equilibrium errors below tolerance",
+  "bearer_envelope": {
+    "loaded_dimension_m": 2.0,
+    "left": {
+      "service_max_reaction_kN": [
+        4.250315846892861,
+        7.417219672094349,
+        7.519678688429618,
+        2.7795508195923198
+      ],
+      "ULS_max_reaction_kN": [
+        6.098113442498294,
+        10.657463606489411,
+        10.792709508058655,
+        3.9942609834968663
+      ],
+      "ULS_max_moment_kNm": 1.271709600000554,
+      "service_point_reaction_max_kN": [
+        4.703222950827977,
+        4.578208428877984,
+        4.639356388402766,
+        3.583550819659192
+      ],
+      "dead_reaction_kN": [
+        0.9245344262343476,
+        1.5612196721209695,
+        1.6226950819490322,
+        0.5835508196593365
+      ],
+      "ULS_point_moment_kNm": 1.0944388098821234
+    },
+    "right": {
+      "service_max_reaction_kN": [
+        2.717299180314042,
+        7.883893442601493,
+        4.1504959016539935
+      ],
+      "ULS_max_reaction_kN": [
+        3.908943442478824,
+        11.290672131158727,
+        5.959517213134437
+      ],
+      "ULS_max_moment_kNm": 1.3729620000369853,
+      "service_point_reaction_max_kN": [
+        3.55668442622257,
+        4.783893442615656,
+        4.655864754062335
+      ],
+      "dead_reaction_kN": [
+        0.5566844262425684,
+        1.783893442619401,
+        0.8874221311508702
+      ],
+      "ULS_point_moment_kNm": 1.0885703062224115
+    },
+    "service_point_reaction_envelope_kN": 4.783893442615656,
+    "max_service_pile_reaction_kN": 7.883893442601493,
+    "deep_footing_and_pile_self_weight_kN": 2.4669082499999995,
+    "maximum_gravity_soil_pressure_kPa": 84.49634034776729,
+    "conditional_allowable_soil_pressure_kPa": 100,
+    "limitation": "Uniform transverse reaction envelope with span-wise live patterns, not a coupled grillage or lateral foundation calculation; soil unverified."
+  },
+  "limitations": [
+    "0.6 kPa permanent action is an explicit screening allowance, not a measured dead load.",
+    "Beam supports are ideal rigid bearings; negative reaction values are required hold-down demands, not resistance supplied automatically.",
+    "Distributed and concentrated imposed actions are alternative cases. Point load is applied to one joist without credit for transverse sharing.",
+    "No strength grade is assigned to decking. No timber or bolt resistance is inferred from demand alone.",
+    "EQ bracing comparison is not a wind, distribution, torsion, soil or complete load-path verification."
+  ],
+  "tread_global_centreline_screen": {
+    "interpretation": "No pile-head moment resistance; reactions applied at y120/280. Real head/soil moments may redistribute these demands. This is a required load-path sensitivity, not a proven footing failure.",
+    "point_2_7_at_front_edge_service_rear_kN": -2.025,
+    "point_2_7_at_front_edge_service_front_kN": 4.7250000000000005,
+    "conditional_independent_tread_line_kN_per_m": 2.2,
+    "conditional_full_width_line_service_total_kN": 14.52,
+    "conditional_full_width_front_edge_rear_kN": -10.889999999999999,
+    "conditional_full_width_front_edge_front_kN": 25.41,
+    "line_case_scope": "Full-width front-edge line is a conservative interpretation of the independent-tread rule; actual applicability/load placement must be confirmed. Do not claim this rule automatically mandates a simultaneous full-width front-edge line for every tread system."
+  }
+}
