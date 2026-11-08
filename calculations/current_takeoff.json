@@ -106,8 +106,8 @@
       }
     ]
   },
-  "tread_minimum_H4_SG8_140x45": {
-    "installed_lm": 31.02,
+  "tread_minimum_H4_SG8_all_sections": {
+    "installed_lm": 30.58,
     "stock_lm": 33.6,
     "stock_lengths": 5,
     "stock_mm_counts": {
@@ -121,7 +121,7 @@
         "cuts_mm": [
           6600
         ],
-        "part": "unspliced tread rail ply"
+        "part": "140x45 unspliced tread rail ply"
       },
       {
         "count": 1,
@@ -145,11 +145,63 @@
           220,
           220,
           220,
+          220
+        ],
+        "part": "90x45 lower tread crosspieces"
+      }
+    ]
+  },
+  "tread_rails_140x45": {
+    "installed_lm": 26.4,
+    "stock_lm": 28.8,
+    "stock_lengths": 4,
+    "stock_mm_counts": {
+      "7200": 4
+    },
+    "allocations": [
+      {
+        "count": 4,
+        "stock_mm": 7200,
+        "cuts_mm": [
+          6600
+        ],
+        "part": "140x45 unspliced tread rail ply"
+      }
+    ]
+  },
+  "tread_lower_crosspieces_90x45": {
+    "installed_lm": 4.18,
+    "stock_lm": 4.8,
+    "stock_lengths": 1,
+    "stock_mm_counts": {
+      "4800": 1
+    },
+    "allocations": [
+      {
+        "count": 1,
+        "stock_mm": 4800,
+        "cuts_mm": [
+          220,
+          220,
+          220,
+          220,
+          220,
+          220,
+          220,
+          220,
+          220,
+          220,
+          220,
+          220,
+          220,
+          220,
+          220,
+          220,
           220,
           220,
           220
         ],
-        "part": "tread crosspieces"
+        "part": "90x45 lower tread crosspieces"
       }
     ]
   },
@@ -163,8 +215,6 @@
     2302.5,
     2682.5,
     3062.5,
-    3277.5,
-    3322.5,
     3442.5,
     3822.5,
     4202.5,
@@ -180,16 +230,16 @@
     300,
     1300,
     2300,
-    3300,
+    3100,
     4300,
     5300,
     6300
   ],
   "tread_bracket_station_candidates_mm": [
     300,
-    1300,
+    1400,
     2400,
-    3200,
+    3160,
     4300,
     5200,
     6300
@@ -198,21 +248,63 @@
     "surface": 250,
     "frame_top": 218,
     "frame_bottom": 78,
-    "concrete_bearing_with_2mm_DPC": 76
+    "lower_crosspiece_top": 168,
+    "concrete_bearing_with_0_75mm_DPC": 77.25
   },
-  "board_example_only": {
-    "width_mm": 80,
-    "gap_mm": 5,
-    "main_rows": 31,
-    "main_outer_rips_mm": 65,
-    "rebuilt_rows": 11,
-    "rebuilt_outer_rips_mm": 65,
-    "tread_rows": 5,
-    "tread_outer_rips_mm": 70,
-    "installed_row_lm_before_joint_gaps": 259.27,
-    "main_base_screws": 1302,
-    "rebuilt_base_screws": 132,
-    "tread_base_screws": 210
-  },
-  "tread_crosspiece_end_nails_3_per_end": 126
+  "board_examples_only": [
+    {
+      "board_mm": 88,
+      "example_gaps_mm": [
+        5.037037037037037,
+        5,
+        5.0285714285714285
+      ],
+      "rows_main_rebuilt_tread": [
+        28,
+        10,
+        71
+      ],
+      "outer_rips_mm": [
+        88.0,
+        75.5,
+        88.0
+      ],
+      "installed_row_lm": 232.9,
+      "stock_counts_mm": {
+        "4200": 41,
+        "3000": 28
+      },
+      "stock_lm": 256.2,
+      "base_screws": 1580
+    },
+    {
+      "board_mm": 90,
+      "example_gaps_mm": [
+        5,
+        5,
+        5
+      ],
+      "rows_main_rebuilt_tread": [
+        28,
+        10,
+        70
+      ],
+      "outer_rips_mm": [
+        62.5,
+        67.5,
+        67.5
+      ],
+      "installed_row_lm": 232.5,
+      "stock_counts_mm": {
+        "4200": 40,
+        "3000": 28
+      },
+      "stock_lm": 252.0,
+      "base_screws": 1576
+    }
+  ],
+  "tread_lower_crosspiece_end_nails_2_per_end": 76,
+  "main_pile_count": 20,
+  "anchor_count": 6,
+  "ordinary_count": 14
 }
