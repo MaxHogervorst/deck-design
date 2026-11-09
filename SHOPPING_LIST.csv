@@ -1,13 +1,21 @@
-Item,Quantity/specification,Suggested supplier,Price/status,Source
-Main/rebuilt H3.2 SG8,106.8 stock lm in140×45,NZ Timber,$6.84/m; $730.51 inclGST,https://www.nztimber.net.nz/shop/p/150x50-140x45-h32-sg8-wt-rad-framing-1-metre
-Tread H4 SG8,"22.8 stock lm in140×45:2×7.2m,1×6m,1×2.4m",Waipapa Pine stockist,"Quote exact grade,section and lengths",https://www.fwp.co.nz/wp-content/uploads/2023/11/Building-Products-Information-Waipapa-Pine-H4-H5-H6-MG-RS-SG8-Framing-Timber.pdf
-32mm pine boards,270lm price allowance;88mm suggested width,Warehouse Building Supplies,$2.99/m; $807.30 inclGST,https://www.warehousebuildingsupplies.co.nz/shop/timber-decking-merch-grade-30/106672-deck-merch-h32-100x4088x32-smthrandom-30605
-Main/rebuilt piles,16 total:4 candidate anchors +12 ordinary,Local timber merchant,H5 NZS3605; anchor size/stock pending;12ordinary750mm basis,
-Concrete,Planning net1.263268m³: main0.986875 +six outer pads0.276393,Ready-mix supplier,"25MPa; conditional geometry,not an order; crowns/waste/actual anchor section additional",
-Board screws,1500 allowance;1254 base positions,Fastener merchant,75mm10gSS316 basis;confirm pine head/penetration,
-Ordinary structural nails,500×100×3.75 SS +200×90×4 SS allowances,Fastener merchant,Exact packs/profile; excludes proprietary connector fasteners,
-Rebuilt hold-downs,3 pairs genuineSSCPC40;12each14g×35 and14g×75 SS screws,MiTek stockist,Rear row only; complete manufacturer pattern; coordinate final joints,
-Cleat/tie bolts - provisional,30×M12×120 SS316 bolt/nut sets;60×50×50×3 washers,Fastener merchant,28for7cleats +2rim ties; full hanging joint remains unverified,
-Main anchor connections,4 complete standard/manufacturer assemblies,Connector merchant,Hardware/grade/fit and bracing must be confirmed; no untested substitute kit,
-Outer-rail pad restraint,6 bearing positions; final positive-restraint detail pending,Connector merchant,No old14-restraint order; verify uplift/shear path to deck or pad,
-DPC +cut treatment,150mm×30m DPC roll; compatible preservative,Building merchant,0.75mm nominal embossed Supercourse500; protect exposed DPC,
+Item,Quantity,Store,Price basis,Line NZD incl GST,Posted or estimate,Source
+"Framing 140×45 H3.2 SG8, wet (main deck and rebuilt strip)","100.8 m: 6×7.2 m, 8×6.0 m, 2×4.8 m",Bunnings,"6.0 m $70.91 and 4.8 m $56.73 posted; 7.2 m not listed online, priced at the same $11.82/m",1191.34,estimate,https://www.bunnings.co.nz/140-x-45mm-sg8-h3-2-treated-green-radiata-timber-framing-6m_p0616262
+"Step framing 140×45 H4 SG8 (rails, crosspieces, cleats)",31.8 m: 4 lengths of at least 6.7 m plus 3.0 m,"Bunnings or Mitre 10, price in store",140×45 H4 has no online price at either store; basis Bunnings 150×50 SG8 H4 rough sawn $17.11/m (special order),544.1,estimate,https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210
+"Decking 88×32 H3.2 merch griptread, random lengths",270 m (263 m laid),"Bunnings, in store",$4.55/m posted; premium smooth is $6.65/m,1228.5,posted,https://www.bunnings.co.nz/88-x-32mm-merch-griptread-decking-random-lengths_p0307690
+"Ordinary piles 125×125 H5, 750 mm",12,Bunnings,$21.04 each,252.48,posted,https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396
+"Corner anchor piles 125×125 H5, 1.2 m",4,Bunnings,$32.42 each,129.68,posted,https://www.bunnings.co.nz/125-x-125mm-1-2m-square-h5-anchor-pile_p0276402
+"Anchor pile fixing kits, LUMBERLOK 12KNH stainless",4,Bunnings,$84.93 each (galvanised 12KN is $37.89),339.72,posted,https://www.bunnings.co.nz/lumberlok-12kn-pile-fixing-high-corrosion-stainless-steel-12knh_p0827939
+"Concrete for the 16 pile holes, about 0.99 m³",110 bags of 20 kg Cemix Multicrete (104 needed at 10 L a bag),Bunnings,$11.24 a bag. A mini-mix truck for 1.2 m³ is usually cheaper and far less work; phone for a quote,1236.4,posted,https://www.bunnings.co.nz/cemix-20kg-multicrete_p0232228
+"Concrete pavers 300×300, about 40 mm thick",12 (two per pad),"Mitre 10, price in store",Mitre 10 Urban Paving 300×300×40 has no online price; basis Bunnings WestStone 300×300×37 $10.83 (special order),129.96,estimate,https://www.mitre10.co.nz/shop/urban-paving-paver-300x300x40mm-natural/p/387387
+"GAP7 basecourse for the six paver pits, about 0.32 m³",22 bags of 15 L,Bunnings,$9.79 a bag (Daltons 0-7 mm). A trailer scoop from a landscape yard is much cheaper,215.38,posted,https://www.bunnings.co.nz/daltons-15l-0-7mm-sub-base-metal_p0237633
+Decking screws 10g×65 316 stainless,3×500 (1254 needed),Bunnings,$116.00 per 500 (Building King),348.0,posted,https://www.bunnings.co.nz/decking-screw-65-x-10g-316-stainless-steel-500-pack_p0379643
+Framing nails 90×4 316 stainless jolt head,"2×2 kg (bearer and rail plies, about 230 nails)",Mitre 10,$129.00 per 2 kg (Ecko),258.0,posted,https://www.mitre10.co.nz/shop/ecko-jolt-head-nails-90-x-4-0mm-2kg-316-stainless-steel/p/307864
+Framing nails 100×4 316 stainless jolt head,"5×500 g (joists, rims, crosspieces, skew nails, about 210 nails)",Bunnings,$35.59 per 500 g (NZ Nails),177.95,posted,https://www.bunnings.co.nz/nz-nails-100-x-4mm-500g-316-stainless-steel-jolt-head-nail_p0383199
+Batten screws 14g×100 316 stainless,"100 pack (12 for the step cleats, 12 for the hold-down cleats)",Bunnings,$77.05 per 100 (Bremick XTP),77.05,posted,https://www.bunnings.co.nz/bremick-xtp-14g-x-100mm-t40-stainless-steel-316-black-bugle-batten-100-pack_p0575899
+Hex screws 14g×35 stainless for the hold-down cleats,100 pack (12 needed),Bunnings,$71.93 per 100 (LUMBERLOK),71.93,posted,https://www.bunnings.co.nz/lumberlok-17-14g-x-35mm-stainless-steel-hex-head-screws-100-pack_p0200542
+"Hold-down cleats, LUMBERLOK SSCPC40 stainless",6 (three pairs),Bunnings,$3.43 each,20.58,posted,https://www.bunnings.co.nz/lumberlok-2-0-x-40mm-stainless-steel-concealed-purlin-cleat_p0277084
+"Rim tie bolts M12×120 316 coach bolts, nuts and 50 mm square washers","2 bolts and nuts, 4 washers",Bunnings,$4.90 + $1.25 + 2×$3.54 per bolt,26.46,posted,https://www.bunnings.co.nz/zenith-m12-x-120mm-316-stainless-steel-coach-head-bolt-and-nut_p0236593
+"DPC Supercourse 500, 150 mm×30 m",1 roll (pile tops and paver tops),Bunnings,$27.42,27.42,posted,https://www.bunnings.co.nz/thermakraft-supercourse-500-dpc-150mmx30m_p0207794
+"Plastic packers, mixed 1 to 10 mm, 75 mm wide",1 pack of 600 (Titan),Bunnings,$59.00,59.0,posted,https://www.bunnings.co.nz/titan-75mm-600-piece-mixed-window-packers_p0647610
+"Cut-end preservative, Metalex Green 1 L","1, brushed on every saw cut in treated timber",Bunnings,$66.00,66.0,posted,https://www.bunnings.co.nz/metalex-1l-green-timber-preserve-44501_p0709374
+TOTAL,,,,6399.95,posted 4534.55 + estimates 1865.4,

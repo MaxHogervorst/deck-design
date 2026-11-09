@@ -1,5 +1,5 @@
 {
-  "status": "Working proposal; full hanging connection, bracing and footing verification unfinished",
+  "status": "Working DIY plan, 10 November 2026. Tread bears on six concrete pavers on compacted GAP7 and is tied sideways to the deck by three cleats. No second pour, no formwork, no anchors in the pads. Items the owner would ideally have checked are listed at the end of the plan.",
   "main_joist_centres_mm": [
     22.5,
     459.5,
@@ -22,12 +22,17 @@
   "main_base_lines": 16,
   "main_joist_members_with_supported_butt": 17,
   "max_spacing_mm": 437.0,
+  "main_joist_cut_mm": 2510,
   "main_bearer_Y_mm": [
     300,
     2510
   ],
   "main_span_mm": 2210,
   "wet_table_span_at450_mm": 2350,
+  "front_rim_Y_mm": [
+    2555,
+    2600
+  ],
   "rebuilt_joists": 3,
   "rebuilt_joist_cut_mm": 1880,
   "rebuilt_bearer_Y_mm": [
@@ -37,33 +42,35 @@
   "rear_bearer_rear_face_Y_mm": -1970,
   "rebuilt_lateral_blocks": 2,
   "main_lateral_block_rows": 0,
-  "cleat_X_mm": [
-    175,
-    1230,
-    2300,
-    3200,
-    4200,
-    5370,
-    6425
-  ],
-  "front_rim_outer_infill_cuts_mm": [
-    105,
-    915,
-    930,
-    760,
-    860,
-    1030,
-    915,
-    105
-  ],
-  "cleats": 7,
-  "cleat_cut_mm": 414,
-  "cleat_top_Z_mm": 468,
-  "cleat_bottom_Z_mm": 54,
-  "upper_bolt_Z_mm": 380,
-  "lower_bolt_Z_mm": 152,
-  "cleat_bolt_quantity_proposal": 28,
-  "cleat_bolts": "M12x120 SS316 candidate,2 upper+2 lower per cleat;full joint not verified",
+  "tread": {
+    "rails": "two double 140x45 H4 SG8 rails, 90 wide, continuous 6600",
+    "inner_rail_Y_mm": [
+      2600,
+      2690
+    ],
+    "outer_rail_Y_mm": [
+      2910,
+      3000
+    ],
+    "crosspieces": 17,
+    "crosspiece_cut_mm": 220,
+    "lateral_cleats": 3,
+    "cleat_X_mm": [
+      1000,
+      3300,
+      5600
+    ],
+    "cleat_cut_mm": 250,
+    "cleat_Y_mm": [
+      2555,
+      2600
+    ],
+    "cleat_Z_mm": [
+      78,
+      328
+    ],
+    "cleat_fixing": "2x 14g x100 SS screws into bearer face + 2x 14g x100 SS screws into inner rail, per cleat; lateral tie only, carries no tread weight"
+  },
   "main_pile_X_mm": [
     62.5,
     1357.5,
@@ -75,19 +82,41 @@
   "timber_piles": 16,
   "candidate_anchor_piles": 4,
   "ordinary_piles": 12,
-  "outer_tread_pads": 6,
-  "outer_pad_X_mm": [
-    175,
-    1325,
-    2640,
-    3960,
-    5275,
-    6425
+  "tread_pads": 6,
+  "tread_pad_X_mm": [
+    420,
+    1765,
+    3060,
+    3540,
+    4835,
+    6180
   ],
-  "main_stock_lm": 106.8,
-  "main_installed_lm": 98.93,
-  "H4_stock_lm": 22.8,
-  "H4_installed_lm": 21.368,
+  "tread_paver_mm": 300,
+  "pavers_per_pad": 2,
+  "tread_pad_type": "two 300x300 concrete pavers per pad, one under each rail, on compacted GAP7 in one 450x800 pit dug to firm ground",
+  "tread_paver_Y_centres_mm": [
+    2645,
+    2955
+  ],
+  "tread_pit_mm": [
+    450,
+    800
+  ],
+  "tread_pad_top_Z_mm": [
+    45,
+    75
+  ],
+  "tread_pad_target_top_mm": 60,
+  "rail_bottom_Z_mm": 78,
+  "packer_range_mm": [
+    3,
+    33
+  ],
+  "pad_restraint": "none in the pads; the tread is held to the deck by the three tie cleats. Rails sit on DPC and plastic packers on the pavers.",
+  "main_stock_lm": 100.8,
+  "main_installed_lm": 94.075,
+  "H4_stock_lm": 31.8,
+  "H4_installed_lm": 30.89,
   "main_stock_allocations": [
     {
       "count": 6,
@@ -100,8 +129,8 @@
       "count": 6,
       "stock_mm": 6000,
       "cuts_mm": [
-        2465,
-        2465,
+        2510,
+        2510,
         900
       ]
     },
@@ -109,8 +138,8 @@
       "count": 1,
       "stock_mm": 6000,
       "cuts_mm": [
-        2465,
-        2465,
+        2510,
+        2510,
         382.5,
         382.5
       ]
@@ -119,20 +148,13 @@
       "count": 1,
       "stock_mm": 6000,
       "cuts_mm": [
-        2465,
-        2465
+        2510,
+        2510
       ]
     },
     {
       "count": 1,
-      "stock_mm": 3000,
-      "cuts_mm": [
-        2465
-      ]
-    },
-    {
-      "count": 1,
-      "stock_mm": 4200,
+      "stock_mm": 4800,
       "cuts_mm": [
         1880,
         1880
@@ -140,67 +162,39 @@
     },
     {
       "count": 1,
-      "stock_mm": 2400,
+      "stock_mm": 4800,
       "cuts_mm": [
+        2510,
         1880
-      ]
-    },
-    {
-      "count": 1,
-      "stock_mm": 6000,
-      "cuts_mm": [
-        105,
-        915,
-        930,
-        760,
-        860,
-        1030,
-        915,
-        105
       ]
     }
   ],
   "H4_stock_allocations": [
     {
-      "count": 2,
+      "count": 4,
       "stock_mm": 7200,
       "cuts_mm": [
         6600,
-        414
+        220,
+        220
       ]
     },
     {
       "count": 1,
-      "stock_mm": 6000,
+      "stock_mm": 3000,
       "cuts_mm": [
-        414,
-        414,
-        414,
-        414,
-        310,
-        310,
-        310,
-        310,
-        310,
-        310,
-        310,
-        310,
-        310,
-        310,
-        310
-      ]
-    },
-    {
-      "count": 1,
-      "stock_mm": 2400,
-      "cuts_mm": [
-        414,
-        310,
-        310,
-        310,
-        310,
-        310,
-        310
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        250,
+        250,
+        250
       ]
     }
   ],
@@ -215,13 +209,13 @@
     "base_screws": 1254,
     "purchase_allowance_screws": 1500,
     "width_basis_mm": 88,
-    "gaps": "Illustrative ~5mm;actual board/moisture instructions govern"
+    "gaps": "Illustrative ~5mm; actual board/moisture instructions govern"
   },
   "concrete_geometry_only": {
     "main_net_m3": 0.986875,
-    "outer_pad_each_m3": 0.04606549999999999,
-    "six_pads_m3": 0.27639299999999994,
-    "combined_net_m3": 1.2632679999999998,
+    "readymix_order_m3": 1.2,
+    "bags_20kg_needed": 104,
+    "bags_20kg_buy": 115,
     "main_anchor_holes_mm": [
       350,
       350,
@@ -232,38 +226,38 @@
       350,
       450
     ],
-    "outer_pad_base_mm": [
-      350,
-      350,
-      350
-    ],
-    "outer_pad_head_mm": [
-      200,
-      90,
-      177.25
-    ],
-    "outer_pad_centre_Y_mm": 2955,
-    "outer_pad_base_bottom_Z_mm": -450,
-    "outer_pad_base_top_Z_mm": -100,
-    "outer_pad_top_Z_mm": 77.25,
-    "warning": "Conditional geometry,not a concrete order. Main anchor section and complete outer pad restraint remain unverified."
+    "gap7_m3": 0.32400000000000007,
+    "gap7_bags_25kg": 24,
+    "warning": "Planning geometry, not a concrete order. Anchor section is provisional 125 square."
   },
   "screens": {
     "rebuilt_zero_dead_uplift_ULS_kN": 1.9200000000000002,
     "SSCPC40_pair_conservative_screen_kN": 2.688,
-    "outer_rail_point_ULS_kN": 4.306690140845071,
-    "outer_rail_max_M_ULS_kNm": 1.0391170338509232,
-    "outer_rail_bending_screen_capacity_kNm": 1.1007360000000002,
-    "outer_rail_utilisation": 0.9440202136124585,
-    "inner_rail_full_point_reaction_ULS_kN": 4.306690140845071,
-    "inner_rail_max_M_ULS_kNm": 0.9485019015460172,
-    "inner_cleat_max_reaction_ULS_kN": 5.299398560443337,
-    "rim_eccentricity_mm": 90,
-    "rim_eccentric_moment_kNm": 0.47694587043990033,
-    "cleat_local_eccentricity_mm": 45,
-    "cleat_local_moment_kNm": 0.23847293521995017,
-    "main_bearer_max_M_ULS_kNm": 1.4571240825595768,
+    "rail_point_ULS_kN": 4.637903225806452,
+    "double_rail_max_M_ULS_kNm": 1.960620154831954,
+    "double_rail_bending_screen_capacity_kNm": 2.2014720000000003,
+    "double_rail_utilisation": 0.8905950903904086,
+    "max_pad_reaction_ULS_kN": 6.64023246001848,
+    "min_pad_reaction_ULS_kN": -2.223658266570404,
+    "pad_reaction_each_ULS_kN": [
+      6.64023246001848,
+      4.922614534153121,
+      5.598210951353176,
+      5.598210951376834,
+      4.922614534112579,
+      6.640232459942872
+    ],
+    "pad_bearing_kPa_each": [
+      36.890180333436,
+      27.347858523072897,
+      31.101171951962087,
+      31.101171952093523,
+      27.347858522847662,
+      36.89018033301596
+    ],
+    "pad_bearing_kPa_max": 36.890180333436,
+    "main_bearer_max_M_ULS_kNm": 1.4571240825844953,
     "main_loaded_width_envelope_m": 2.0,
-    "note": "Beam/component demand screens only;not full rim-cleat-bolt-nog-pad-anchorage verification. Outer rail must be continuous6600mm."
+    "note": "Beam/component demand screens only; not a full connection or foundation verification. Rails must be continuous 6600 mm."
   }
 }
