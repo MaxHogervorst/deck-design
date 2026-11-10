@@ -291,8 +291,12 @@
     "max_paver_reaction_ULS_kN": 7.127061730222776,
     "min_paver_reaction_ULS_kN": -2.3595585044082954,
     "paver_bearing_kPa_max": 79.18957478025307,
+    "liftoff_tie_ULS_kN": -4.719117008818482,
+    "liftoff_paver_ULS_kN": 9.486620234611106,
+    "liftoff_paver_bearing_kPa": 105.40689149567896,
+    "liftoff_max_M_ULS_kNm": 1.0705265419356835,
     "main_bearer_max_M_ULS_kNm": 1.4571240825595768,
     "main_loaded_width_envelope_m": 2.0,
-    "note": "Beam/component demand screens only; not a full connection or foundation verification. Step frames are separate 900 mm members."
+    "note": "Beam/component demand screens only; not a full connection or foundation verification. Step frames are separate 900 mm members. Pavers are compression-only: liftoff_* is the case with the far paver removed and the centre tie as the second support."
   }
 }

@@ -79,8 +79,34 @@ bearing = pad_R / (paver / 1000) ** 2
 cap = 0.8 * 0.8 * 11.7 * (90 * 140**2 / 6) / 1e6
 assert M < 0.65 * cap, (M, cap)
 assert bearing <= 100, bearing
-assert pad_min < -1, pad_min  # uplift is real; the tie is a hold-down, not a sideways-only cleat
+assert pad_min < -1, pad_min  # uplift is real; a paver cannot hold it, so the tie is a hold-down
 assert np.max(abs(R.sum(axis=0) - F[::2].sum(axis=0))) < 1e-6
+# Pavers take compression only. Where the two-support screen goes into tension, drop that
+# paver and put the centre tie in as the second support. A single support is a mechanism.
+lift_tie, lift_paver, lift_M = 0.0, 0.0, M
+for i, x in enumerate(xs):
+    reacted = dict(zip(local_supports, R[:, i]))
+    if min(reacted.values()) >= -1e-6:
+        continue
+    kept = [s for s, r in reacted.items() if r >= -1e-6]
+    assert len(kept) == 1, (x, reacted)
+    sup = sorted(kept + [0.45])
+    pts = list(np.arange(0, 0.9001, 0.025)) + sup
+    xs2, u2, solve2, mom2 = beam(pts, sup, EI)
+    j = int(np.argmin(np.abs(xs2 - x)))
+    g2, qg2 = u2(lambda x: 0.6 * 0.2)
+    f2 = 1.2 * g2
+    f2[2 * j] += point
+    D2, R2 = solve2(f2)
+    M2 = float(abs(mom2(D2, 1.2 * qg2)).max())
+    rmap = dict(zip(sup, R2[:, 0]))
+    assert abs(sum(rmap.values()) - float(f2[::2].sum())) < 1e-6
+    lift_tie = min(lift_tie, rmap[0.45])
+    lift_paver = max(lift_paver, max(v for s, v in rmap.items() if s != 0.45))
+    lift_M = max(lift_M, M2)
+lift_bearing = lift_paver / (paver / 1000) ** 2
+assert lift_tie < -4, lift_tie
+assert lift_M < 0.65 * cap, (lift_M, cap)
 # Reference check and the main-bearer gravity envelope. Unchanged deck.
 xt, ut, st, mt = beam([0, 0.5, 1], [0, 1], 1)
 ft, qt = ut(lambda x: 1)
@@ -206,9 +232,13 @@ out = {
         'max_paver_reaction_ULS_kN': pad_R,
         'min_paver_reaction_ULS_kN': pad_min,
         'paver_bearing_kPa_max': bearing,
+        'liftoff_tie_ULS_kN': lift_tie,
+        'liftoff_paver_ULS_kN': lift_paver,
+        'liftoff_paver_bearing_kPa': lift_bearing,
+        'liftoff_max_M_ULS_kNm': lift_M,
         'main_bearer_max_M_ULS_kNm': main_M,
         'main_loaded_width_envelope_m': 2.0,
-        'note': 'Beam/component demand screens only; not a full connection or foundation verification. Step frames are separate 900 mm members.',
+        'note': 'Beam/component demand screens only; not a full connection or foundation verification. Step frames are separate 900 mm members. Pavers are compression-only: liftoff_* is the case with the far paver removed and the centre tie as the second support.',
     },
 }
 assert out['main_stock_lm'] == 100.8 and out['H4_stock_lm'] == 24.0
@@ -224,6 +254,10 @@ summary = {
     'uplift_kN': round(pad_min, 2),
     'paver_kN': round(pad_R, 2),
     'bearing_kPa': round(bearing, 1),
+    'liftoff_tie_kN': round(lift_tie, 2),
+    'liftoff_paver_kN': round(lift_paver, 2),
+    'liftoff_bearing_kPa': round(lift_bearing, 1),
+    'liftoff_M': round(lift_M, 3),
     'rebuilt_uplift_kN': round(rebuilt_uplift, 2),
     'bags_buy': out['concrete_geometry_only']['bags_20kg_buy'],
     'gap7_m3': round(gap7_m3, 3),
