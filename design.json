@@ -1,5 +1,5 @@
 {
-  "status": "Working DIY plan, 10 November 2026. Tread bears on six concrete pavers on compacted GAP7 and is tied sideways to the deck by three cleats. No second pour, no formwork, no anchors in the pads. Items the owner would ideally have checked are listed at the end of the plan.",
+  "status": "Working DIY plan, 10 November 2026. The step is five short H4 frames, one in each bay between the front piles, each on four pavers and screwed to the front bearer. No continuous 6.6 m rail, no plastic packers, no second pour. Items the owner would ideally have checked are listed at the end of the plan.",
   "main_joist_centres_mm": [
     22.5,
     459.5,
@@ -33,6 +33,7 @@
     2555,
     2600
   ],
+  "butt_joist_centre_mm": 3956,
   "rebuilt_joists": 3,
   "rebuilt_joist_cut_mm": 1880,
   "rebuilt_bearer_Y_mm": [
@@ -41,9 +42,41 @@
   ],
   "rear_bearer_rear_face_Y_mm": -1970,
   "rebuilt_lateral_blocks": 2,
+  "rebuilt_block_cut_mm": 380,
   "main_lateral_block_rows": 0,
   "tread": {
-    "rails": "two double 140x45 H4 SG8 rails, 90 wide, continuous 6600",
+    "frames": 5,
+    "frame_X_mm": [
+      710,
+      2005,
+      3300,
+      4595,
+      5890
+    ],
+    "frame_len_mm": 900,
+    "frame_X_extent_mm": [
+      [
+        260,
+        1160
+      ],
+      [
+        1555,
+        2455
+      ],
+      [
+        2850,
+        3750
+      ],
+      [
+        4145,
+        5045
+      ],
+      [
+        5440,
+        6340
+      ]
+    ],
+    "rails": "five separate double 140x45 H4 frames, each 900 long, inner Y2600-2690 and outer Y2910-3000",
     "inner_rail_Y_mm": [
       2600,
       2690
@@ -52,24 +85,30 @@
       2910,
       3000
     ],
-    "crosspieces": 17,
+    "crosspieces_per_frame": 3,
+    "crosspieces": 15,
     "crosspiece_cut_mm": 220,
-    "lateral_cleats": 3,
-    "cleat_X_mm": [
-      1000,
+    "ties": 5,
+    "tie_X_mm": [
+      710,
+      2005,
       3300,
-      5600
+      4595,
+      5890
     ],
-    "cleat_cut_mm": 250,
-    "cleat_Y_mm": [
+    "tie_cut_mm": 250,
+    "tie_Y_mm": [
       2555,
       2600
     ],
-    "cleat_Z_mm": [
+    "tie_Z_mm": [
       78,
       328
     ],
-    "cleat_fixing": "2x 14g x100 SS screws into bearer face + 2x 14g x100 SS screws into inner rail, per cleat; lateral tie only, carries no tread weight"
+    "tie_fixing": "4x 14g x100 SS screws into the bearer face and 2x 14g x100 SS screws into the inner rail, per frame. Hold-down and lateral tie.",
+    "board_gap_mm": 395.0,
+    "board_length_mm": 6400,
+    "board_inset_mm": 100
   },
   "main_pile_X_mm": [
     62.5,
@@ -82,41 +121,43 @@
   "timber_piles": 16,
   "candidate_anchor_piles": 4,
   "ordinary_piles": 12,
-  "tread_pads": 6,
-  "tread_pad_X_mm": [
-    420,
-    1765,
-    3060,
-    3540,
-    4835,
-    6180
+  "tread_frames": 5,
+  "tread_paver_x_mm": [
+    490,
+    930,
+    1785,
+    2225,
+    3080,
+    3520,
+    4375,
+    4815,
+    5670,
+    6110
   ],
   "tread_paver_mm": 300,
-  "pavers_per_pad": 2,
-  "tread_pad_type": "two 300x300 concrete pavers per pad, one under each rail, on compacted GAP7 in one 450x800 pit dug to firm ground",
+  "pavers_per_frame": 4,
+  "paver_count": 20,
+  "tread_pad_type": "four 300x300 pavers per frame, two along each rail, on compacted GAP7 in one pit dug to firm ground",
   "tread_paver_Y_centres_mm": [
     2645,
     2955
   ],
+  "tread_paver_dx_mm": 220,
   "tread_pit_mm": [
-    450,
+    760,
     800
   ],
+  "tread_pit_count": 5,
   "tread_pad_top_Z_mm": [
     45,
     75
   ],
-  "tread_pad_target_top_mm": 60,
   "rail_bottom_Z_mm": 78,
-  "packer_range_mm": [
-    3,
-    33
-  ],
-  "pad_restraint": "none in the pads; the tread is held to the deck by the three tie cleats. Rails sit on DPC and plastic packers on the pavers.",
+  "pad_restraint": "each frame is screwed to the front bearer through a 250 mm H4 tie. Pavers take the weight. An H4 offcut packer, screwed to the rail, takes up a low paver. No plastic packers.",
   "main_stock_lm": 100.8,
-  "main_installed_lm": 94.075,
-  "H4_stock_lm": 31.8,
-  "H4_installed_lm": 30.89,
+  "main_installed_lm": 94.07,
+  "H4_stock_lm": 24.0,
+  "H4_installed_lm": 22.55,
   "main_stock_allocations": [
     {
       "count": 6,
@@ -140,8 +181,8 @@
       "cuts_mm": [
         2510,
         2510,
-        382.5,
-        382.5
+        380,
+        380
       ]
     },
     {
@@ -172,16 +213,18 @@
   "H4_stock_allocations": [
     {
       "count": 4,
-      "stock_mm": 7200,
+      "stock_mm": 4800,
       "cuts_mm": [
-        6600,
-        220,
-        220
+        900,
+        900,
+        900,
+        900,
+        900
       ]
     },
     {
       "count": 1,
-      "stock_mm": 3000,
+      "stock_mm": 4800,
       "cuts_mm": [
         220,
         220,
@@ -192,6 +235,14 @@
         220,
         220,
         220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        250,
+        250,
         250,
         250,
         250
@@ -200,16 +251,16 @@
   ],
   "decking": {
     "main_rows": 28,
-    "rebuilt_rows": 22,
-    "tread_rows": 5,
-    "stock_4200": 39,
-    "stock_3000": 33,
-    "stock_lm": 262.8,
-    "pricing_allowance_lm": 270,
-    "base_screws": 1254,
+    "rebuilt_rows": 21,
+    "tread_rows": 4,
+    "stock_4200": 38,
+    "stock_3000": 32,
+    "stock_lm": 255.6,
+    "pricing_allowance_lm": 255.6,
+    "base_screws": 1206,
     "purchase_allowance_screws": 1500,
     "width_basis_mm": 88,
-    "gaps": "Illustrative ~5mm; actual board/moisture instructions govern"
+    "gaps": "About 5 mm on the main deck and about 6 mm on the rebuilt strip. Step is four boards on the 400 mm frame with a small front overhang."
   },
   "concrete_geometry_only": {
     "main_net_m3": 0.986875,
@@ -226,38 +277,22 @@
       350,
       450
     ],
-    "gap7_m3": 0.32400000000000007,
-    "gap7_bags_25kg": 24,
-    "warning": "Planning geometry, not a concrete order. Anchor section is provisional 125 square."
+    "auger_diameter_mm": 400,
+    "gap7_m3": 0.45599999999999996,
+    "gap7_bags_15l": 31,
+    "warning": "Planning geometry, not a concrete order. Anchor section is provisional 125 square. Square-hole volume; a 400 mm auger hole is about the same."
   },
   "screens": {
     "rebuilt_zero_dead_uplift_ULS_kN": 1.9200000000000002,
-    "SSCPC40_pair_conservative_screen_kN": 2.688,
     "rail_point_ULS_kN": 4.637903225806452,
-    "double_rail_max_M_ULS_kNm": 1.960620154831954,
+    "double_rail_max_M_ULS_kNm": 1.0705265419356835,
     "double_rail_bending_screen_capacity_kNm": 2.2014720000000003,
-    "double_rail_utilisation": 0.8905950903904086,
-    "max_pad_reaction_ULS_kN": 6.64023246001848,
-    "min_pad_reaction_ULS_kN": -2.223658266570404,
-    "pad_reaction_each_ULS_kN": [
-      6.64023246001848,
-      4.922614534153121,
-      5.598210951353176,
-      5.598210951376834,
-      4.922614534112579,
-      6.640232459942872
-    ],
-    "pad_bearing_kPa_each": [
-      36.890180333436,
-      27.347858523072897,
-      31.101171951962087,
-      31.101171952093523,
-      27.347858522847662,
-      36.89018033301596
-    ],
-    "pad_bearing_kPa_max": 36.890180333436,
-    "main_bearer_max_M_ULS_kNm": 1.4571240825844953,
+    "double_rail_utilisation": 0.486277609679198,
+    "max_paver_reaction_ULS_kN": 7.127061730222776,
+    "min_paver_reaction_ULS_kN": -2.3595585044082954,
+    "paver_bearing_kPa_max": 79.18957478025307,
+    "main_bearer_max_M_ULS_kNm": 1.4571240825595768,
     "main_loaded_width_envelope_m": 2.0,
-    "note": "Beam/component demand screens only; not a full connection or foundation verification. Rails must be continuous 6600 mm."
+    "note": "Beam/component demand screens only; not a full connection or foundation verification. Step frames are separate 900 mm members."
   }
 }
