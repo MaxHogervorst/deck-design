@@ -1,0 +1,253 @@
+{
+  "status": "Working proposal; pad restraint hardware and four-anchor bracing still to confirm with the builder. Tread no longer hangs from the deck.",
+  "main_joist_centres_mm": [
+    22.5,
+    459.5,
+    896.5,
+    1333.5,
+    1770.5,
+    2207.5,
+    2644.5,
+    3081.5,
+    3518.5,
+    3933,
+    3978,
+    4392.5,
+    4829.5,
+    5266.5,
+    5703.5,
+    6140.5,
+    6577.5
+  ],
+  "main_base_lines": 16,
+  "main_joist_members_with_supported_butt": 17,
+  "max_spacing_mm": 437.0,
+  "main_joist_cut_mm": 2510,
+  "main_bearer_Y_mm": [
+    300,
+    2510
+  ],
+  "main_span_mm": 2210,
+  "wet_table_span_at450_mm": 2350,
+  "front_rim_Y_mm": [
+    2555,
+    2600
+  ],
+  "rebuilt_joists": 3,
+  "rebuilt_joist_cut_mm": 1880,
+  "rebuilt_bearer_Y_mm": [
+    -1925,
+    -800
+  ],
+  "rear_bearer_rear_face_Y_mm": -1970,
+  "rebuilt_lateral_blocks": 2,
+  "main_lateral_block_rows": 0,
+  "tread": {
+    "rails": "two double 140x45 H4 SG8 rails, 90 wide, continuous 6600",
+    "inner_rail_Y_mm": [
+      2600,
+      2690
+    ],
+    "outer_rail_Y_mm": [
+      2910,
+      3000
+    ],
+    "crosspieces": 17,
+    "crosspiece_cut_mm": 220,
+    "lateral_cleats": 3,
+    "cleat_X_mm": [
+      1000,
+      3300,
+      5600
+    ],
+    "cleat_cut_mm": 250,
+    "cleat_Y_mm": [
+      2555,
+      2600
+    ],
+    "cleat_Z_mm": [
+      78,
+      328
+    ],
+    "cleat_fixing": "2x 14g x100 SS screws into bearer face + 2x 14g x100 SS screws into inner rail, per cleat; lateral tie only, carries no tread weight"
+  },
+  "main_pile_X_mm": [
+    62.5,
+    1357.5,
+    2652.5,
+    3947.5,
+    5242.5,
+    6537.5
+  ],
+  "timber_piles": 16,
+  "candidate_anchor_piles": 4,
+  "ordinary_piles": 12,
+  "tread_pads": 6,
+  "tread_pad_X_mm": [
+    400,
+    1740,
+    3035,
+    4330,
+    5625,
+    6200
+  ],
+  "tread_pad_top_mm": [
+    300,
+    450
+  ],
+  "tread_pad_top_Y_mm": [
+    2575,
+    3025
+  ],
+  "tread_pad_base_mm": [
+    350,
+    500,
+    350
+  ],
+  "tread_pad_base_Z_mm": [
+    -450,
+    -100
+  ],
+  "tread_pad_top_Z_mm": 77.25,
+  "pad_restraint": "2 SS angle brackets per pad (one per rail), each 1x M10x75 SS316 sleeve anchor + 2x 14g x35 SS screws; brackets on the crosspiece side, anchors >=100 from plinth edges",
+  "main_stock_lm": 100.8,
+  "main_installed_lm": 94.075,
+  "H4_stock_lm": 31.8,
+  "H4_installed_lm": 30.89,
+  "main_stock_allocations": [
+    {
+      "count": 6,
+      "stock_mm": 7200,
+      "cuts_mm": [
+        6600
+      ]
+    },
+    {
+      "count": 6,
+      "stock_mm": 6000,
+      "cuts_mm": [
+        2510,
+        2510,
+        900
+      ]
+    },
+    {
+      "count": 1,
+      "stock_mm": 6000,
+      "cuts_mm": [
+        2510,
+        2510,
+        382.5,
+        382.5
+      ]
+    },
+    {
+      "count": 1,
+      "stock_mm": 6000,
+      "cuts_mm": [
+        2510,
+        2510
+      ]
+    },
+    {
+      "count": 1,
+      "stock_mm": 3000,
+      "cuts_mm": [
+        2510
+      ]
+    },
+    {
+      "count": 1,
+      "stock_mm": 4200,
+      "cuts_mm": [
+        1880,
+        1880
+      ]
+    },
+    {
+      "count": 1,
+      "stock_mm": 2400,
+      "cuts_mm": [
+        1880
+      ]
+    }
+  ],
+  "H4_stock_allocations": [
+    {
+      "count": 4,
+      "stock_mm": 7200,
+      "cuts_mm": [
+        6600,
+        220,
+        220
+      ]
+    },
+    {
+      "count": 1,
+      "stock_mm": 3000,
+      "cuts_mm": [
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        250,
+        250,
+        250
+      ]
+    }
+  ],
+  "decking": {
+    "main_rows": 28,
+    "rebuilt_rows": 22,
+    "tread_rows": 5,
+    "stock_4200": 39,
+    "stock_3000": 33,
+    "stock_lm": 262.8,
+    "pricing_allowance_lm": 270,
+    "base_screws": 1254,
+    "purchase_allowance_screws": 1500,
+    "width_basis_mm": 88,
+    "gaps": "Illustrative ~5mm; actual board/moisture instructions govern"
+  },
+  "concrete_geometry_only": {
+    "main_net_m3": 0.986875,
+    "pad_base_each_m3": 0.06124999999999999,
+    "pad_head_each_m3": 0.02392875,
+    "six_pads_m3": 0.5110725,
+    "combined_net_m3": 1.4979475,
+    "readymix_pour_m3": 1.3543749999999999,
+    "readymix_order_m3": 1.6,
+    "plinth_bags_m3": 0.1435725,
+    "plinth_bags_20kg": 16,
+    "plinth_bags_buy": 18,
+    "main_anchor_holes_mm": [
+      350,
+      350,
+      900
+    ],
+    "ordinary_holes_mm": [
+      350,
+      350,
+      450
+    ],
+    "warning": "Planning geometry, not a concrete order. Anchor section and pad restraint hardware remain to confirm."
+  },
+  "screens": {
+    "rebuilt_zero_dead_uplift_ULS_kN": 1.9200000000000002,
+    "SSCPC40_pair_conservative_screen_kN": 2.688,
+    "rail_point_ULS_kN": 4.637903225806452,
+    "double_rail_max_M_ULS_kNm": 1.8666812903411387,
+    "double_rail_bending_screen_capacity_kNm": 2.2014720000000003,
+    "double_rail_utilisation": 0.8479241572643842,
+    "max_pad_reaction_ULS_kN": 8.506947341317815,
+    "pad_bearing_kPa_on_base": 48.61112766467323,
+    "main_bearer_max_M_ULS_kNm": 1.4571240825844953,
+    "main_loaded_width_envelope_m": 2.0,
+    "note": "Beam/component demand screens only; not a full connection or foundation verification. Rails must be continuous 6600 mm."
+  }
+}
