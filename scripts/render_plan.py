@@ -220,6 +220,164 @@ a = body.index('<h2 id="three-drawings">')
 bb = body.index('<h2 id="foundations">', a)
 body = body[:a] + '''<h2 id="three-drawings">Three drawings</h2><div class="tabs" role="tablist" aria-label="Drawings"><button id="tab-piles" role="tab" aria-controls="drawing-panel" aria-selected="true" data-view="piles">1 · Piles, pads & heights</button><button id="tab-framing" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="framing">2 · Framing</button><button id="tab-fixings" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="fixings">3 · Fixings & step section</button></div><div id="drawing-panel" role="tabpanel" aria-labelledby="tab-piles"><div id="drawing"></div><p id="drawing-caption" class="caption"></p></div><p class="note">Download: <a href="drawings/piles.svg">piles</a> · <a href="drawings/framing.svg">framing</a> · <a href="drawings/fixings.svg">fixings</a></p>''' + body[bb:]
 body = body.replace('href="docs/', 'href="').replace('archive/', '<a href="https://github.com/MaxHogervorst/deck-design/tree/main/archive">archive/</a>')
+
+def chip(label, inner):
+    return f'<svg viewBox="0 0 320 200" role="img" aria-label="{E(label)}"><rect width="320" height="200" fill="#f7f4ee"/>{inner}</svg>'
+
+def tx(x, y, s, size=15, anchor='start', fill='#21382f'):
+    return f'<text x="{x}" y="{y}" font-size="{size}" font-weight="650" text-anchor="{anchor}" fill="{fill}">{E(s)}</text>'
+
+figs = []
+# 1 Measure. Section: old boards, tape down to the path, grass lower.
+figs.append(chip('Tape from the old boards down to the concrete path. Grass is lower. Mark the drain.',
+    '<rect x="0" y="168" width="320" height="32" fill="#e4ecdf"/>'
+    '<rect x="78" y="146" width="150" height="22" fill="#cfc6b4" stroke="#52675b"/>'
+    '<rect x="18" y="28" width="22" height="140" fill="#e7e2d6" stroke="#52675b"/>'
+    '<rect x="40" y="46" width="200" height="12" fill="#c4a574" stroke="#52675b"/>'
+    '<line x1="150" y1="58" x2="150" y2="146" stroke="#254c3e" stroke-width="2" stroke-dasharray="4 3"/>'
+    '<polygon points="146,138 154,138 150,148" fill="#254c3e"/>'
+    + tx(148, 24, 'old boards', 14, 'start')
+    + tx(92, 116, 'tape', 14, 'end', '#254c3e')
+    + tx(100, 162, 'path', 14, 'middle')
+    + tx(270, 186, 'grass, lower', 13, 'middle', '#3d5c45')
+    + tx(188, 78, '330 mm', 14)
+    + tx(188, 98, 'joists', 13)
+    + tx(188, 122, '190 mm', 14)
+    + tx(188, 142, 'bearers', 13)
+    + tx(16, 22, 'sill', 13)))
+# 2 Set out. Plan: deck, path left in place, drain to the west, one pile slid off the path.
+figs.append(chip('Plan of the deck outline over the path, drain to the west, one pile moved off the concrete.',
+    '<rect x="0" y="0" width="320" height="200" fill="#e4ecdf"/>'
+    '<rect x="78" y="28" width="210" height="120" fill="#f7f4ee" stroke="#254c3e" stroke-width="2"/>'
+    '<rect x="78" y="70" width="210" height="28" fill="#cfc6b4"/>'
+    '<line x1="48" y1="16" x2="48" y2="184" stroke="#a33b32" stroke-width="4"/>'
+    '<circle cx="110" cy="48" r="5" fill="#af6b3c"/>'
+    '<circle cx="250" cy="48" r="5" fill="#456b54"/>'
+    '<circle cx="110" cy="128" r="5" fill="#456b54"/>'
+    '<circle cx="250" cy="128" r="5" fill="#af6b3c"/>'
+    '<circle cx="168" cy="58" r="5" fill="none" stroke="#a33b32"/>'
+    '<circle cx="168" cy="112" r="5" fill="#456b54"/>'
+    '<line x1="168" y1="64" x2="168" y2="104" stroke="#254c3e" stroke-width="2"/>'
+    + tx(183, 90, 'slide it', 13, 'start', '#254c3e')
+    + tx(183, 44, '6.6 × 2.6', 14)
+    + tx(160, 162, 'path stays', 14, 'middle')
+    + tx(48, 14, 'drain', 12, 'middle', '#a33b32')))
+# 3 Dig. Ordinary hole versus anchor, no auger on the pipe.
+figs.append(chip('Ordinary hole 450 deep, corner hole 900 deep. Spade near the pipe, no auger.',
+    '<rect x="0" y="78" width="320" height="122" fill="#efe6d4"/>'
+    '<rect x="36" y="78" width="70" height="70" fill="#f7f4ee" stroke="#52675b"/>'
+    '<rect x="58" y="40" width="26" height="70" fill="#c4a574" stroke="#52675b"/>'
+    '<rect x="190" y="36" width="70" height="130" fill="#f7f4ee" stroke="#52675b"/>'
+    '<rect x="210" y="16" width="26" height="90" fill="#af6b3c" stroke="#52675b"/>'
+    '<line x1="300" y1="20" x2="300" y2="170" stroke="#a33b32" stroke-width="4"/>'
+    '<line x1="286" y1="48" x2="314" y2="76" stroke="#a33b32" stroke-width="3"/>'
+    '<line x1="314" y1="48" x2="286" y2="76" stroke="#a33b32" stroke-width="3"/>'
+    + tx(71, 34, '450', 15, 'middle')
+    + tx(186, 30, '900', 15, 'end')
+    + tx(71, 168, 'ordinary', 13, 'middle')
+    + tx(225, 182, 'corner', 13, 'middle')
+    + tx(300, 16, 'pipe', 12, 'middle', '#a33b32')
+    + tx(300, 108, 'hand', 13, 'middle')
+    + tx(300, 126, 'dig', 13, 'middle')))
+# 4 Pour. Concrete below ground, pile tops left long.
+figs.append(chip('Concrete filled to just below the ground. Pile tops are not level yet.',
+    '<rect x="0" y="108" width="320" height="60" fill="#efe6d4"/>'
+    '<rect x="70" y="118" width="64" height="50" fill="#d5d8d4" stroke="#52675b"/>'
+    '<rect x="88" y="40" width="28" height="100" fill="#c4a574" stroke="#52675b"/>'
+    '<rect x="190" y="126" width="64" height="42" fill="#d5d8d4" stroke="#52675b"/>'
+    '<rect x="208" y="56" width="28" height="90" fill="#c4a574" stroke="#52675b"/>'
+    '<line x1="16" y1="108" x2="304" y2="108" stroke="#52675b"/>'
+    + tx(16, 100, 'ground', 13)
+    + tx(160, 28, 'leave them long', 16, 'middle')
+    + tx(102, 148, '100', 12, 'middle')
+    + tx(160, 190, 'mix it, then tip it in', 15, 'middle')))
+# 5 Cut. String off the path, grass pile taller.
+figs.append(chip('String line set off the concrete path. The grass pile is left taller.',
+    '<rect x="0" y="158" width="320" height="42" fill="#e4ecdf"/>'
+    '<rect x="16" y="112" width="88" height="46" fill="#cfc6b4" stroke="#52675b"/>'
+    '<rect x="140" y="52" width="26" height="136" fill="#c4a574" stroke="#52675b"/>'
+    '<rect x="240" y="52" width="26" height="148" fill="#c4a574" stroke="#52675b"/>'
+    '<line x1="16" y1="52" x2="300" y2="52" stroke="#254c3e" stroke-width="2"/>'
+    + tx(168, 32, 'one string', 16, 'middle', '#254c3e')
+    + tx(60, 140, 'path', 14, 'middle')
+    + tx(118, 88, '150', 14, 'middle')
+    + tx(16, 184, 'grass side stands taller', 14)))
+# 6 Bearers.
+figs.append(chip('Two long double bearers on the piles, and the short rebuilt bearers by the house.',
+    '<rect x="0" y="0" width="320" height="200" fill="#e4ecdf"/>'
+    '<rect x="36" y="48" width="250" height="16" fill="#c4a574" stroke="#52675b"/>'
+    '<rect x="36" y="120" width="250" height="16" fill="#c4a574" stroke="#52675b"/>'
+    + ''.join(f'<rect x="{x}" y="44" width="10" height="24" fill="#456b54"/>' for x in (48, 110, 172, 234))
+    + ''.join(f'<rect x="{x}" y="116" width="10" height="24" fill="#456b54"/>' for x in (48, 110, 172, 234))
+    + '<rect x="36" y="18" width="70" height="12" fill="#b08958" stroke="#52675b"/>'
+    '<rect x="36" y="78" width="70" height="12" fill="#b08958" stroke="#52675b"/>'
+    + tx(200, 42, 'main', 14)
+    + tx(200, 114, 'main', 14)
+    + tx(114, 16, 'rebuilt', 13)
+    + tx(160, 178, 'nail the two plies first', 14, 'middle')))
+# 7 Joists. Screw from the side.
+figs.append(chip('Joists across the bearers. The screws go in from the side, not down through the top.',
+    '<rect x="16" y="36" width="150" height="14" fill="#c4a574" stroke="#52675b"/>'
+    '<rect x="16" y="150" width="150" height="14" fill="#c4a574" stroke="#52675b"/>'
+    + ''.join(f'<rect x="{x}" y="36" width="10" height="128" fill="#456b54" stroke="#52675b"/>' for x in (28, 58, 88))
+    + '<rect x="118" y="36" width="10" height="128" fill="#254c3e"/>'
+    '<rect x="130" y="36" width="10" height="128" fill="#254c3e"/>'
+    + tx(24, 28, 'joists', 13)
+    + tx(150, 28, 'double', 13)
+    + '<rect x="196" y="70" width="100" height="28" fill="#c4a574" stroke="#52675b"/>'
+    '<rect x="214" y="98" width="64" height="22" fill="#b08958" stroke="#52675b"/>'
+    '<line x1="196" y1="88" x2="230" y2="108" stroke="#21382f" stroke-width="3"/>'
+    '<line x1="246" y1="78" x2="246" y2="108" stroke="#a33b32" stroke-width="3"/>'
+    '<line x1="236" y1="70" x2="256" y2="90" stroke="#a33b32" stroke-width="3"/>'
+    + tx(250, 64, 'from the side', 13, 'middle')
+    + tx(250, 168, 'not down', 13, 'middle', '#a33b32')
+    + tx(250, 186, 'through the top', 12, 'middle', '#a33b32')))
+# 8 Ties.
+figs.append(chip('Five ties screwed to the face of the front bearer, above the step.',
+    '<rect x="30" y="70" width="230" height="22" fill="#c4a574" stroke="#52675b"/>'
+    + ''.join(f'<rect x="{x}" y="92" width="16" height="28" fill="#b08958" stroke="#52675b"/>' for x in (48, 92, 136, 180, 224))
+    + ''.join(f'<line x1="{x}" y1="78" x2="{x+16}" y2="100" stroke="#21382f" stroke-width="2"/>' for x in (48, 92, 136, 180, 224))
+    + tx(145, 48, 'bearer face', 15, 'middle')
+    + tx(145, 150, '5 ties', 16, 'middle')
+    + tx(145, 174, 'screws go in sideways', 13, 'middle')))
+# 9 Pits and pavers.
+figs.append(chip('Five pits between the front piles, four pavers in each, taped down from the rim.',
+    '<rect x="24" y="36" width="270" height="16" fill="#c4a574" stroke="#52675b"/>'
+    + ''.join(f'<rect x="{x}" y="70" width="40" height="36" fill="none" stroke="#52675b" stroke-dasharray="3 2"/>' for x in (36, 90, 144, 198, 252))
+    + ''.join(f'<rect x="{x}" y="{y}" width="12" height="12" fill="#cfc6b4" stroke="#52675b"/>' for x in (40, 56) for y in (76, 90))
+    + tx(160, 28, 'front bearer', 14, 'middle')
+    + tx(160, 132, '4 pavers', 15, 'middle')
+    + tx(160, 156, '400–420 below the rim', 14, 'middle', '#254c3e')
+    + tx(160, 180, 'lower is fine', 13, 'middle', '#637069')))
+# 10 One frame.
+figs.append(chip('One 900 mm frame built where it sits: inner rail, three crosspieces, outer rail.',
+    '<rect x="40" y="48" width="200" height="18" fill="#c4a574" stroke="#52675b"/>'
+    '<rect x="40" y="130" width="200" height="18" fill="#c4a574" stroke="#52675b"/>'
+    + ''.join(f'<rect x="{x}" y="66" width="18" height="64" fill="#456b54" stroke="#52675b"/>' for x in (48, 130, 214))
+    + '<rect x="70" y="36" width="28" height="16" fill="#b08958" stroke="#52675b"/>'
+    + tx(250, 62, 'inner', 13)
+    + tx(250, 144, 'outer', 13)
+    + tx(160, 28, '900', 14, 'middle')
+    + tx(160, 176, 'then the next bay', 15, 'middle')
+    + tx(84, 30, 'tie', 12)))
+# 11 Boards.
+figs.append(chip('Boards run along the deck. Butts land on the doubled joist. Four boards on the step.',
+    ''.join(f'<rect x="16" y="{y}" width="150" height="8" fill="#c4a574" stroke="#52675b"/>' for y in range(28, 124, 12))
+    + '<rect x="16" y="136" width="168" height="8" fill="#456b54" stroke="#52675b"/>'
+    + '<rect x="16" y="150" width="168" height="8" fill="#456b54" stroke="#52675b"/>'
+    + '<line x1="118" y1="24" x2="118" y2="124" stroke="#254c3e" stroke-width="2" stroke-dasharray="3 2"/>'
+    + tx(178, 64, '28 deck', 14)
+    + tx(178, 86, 'butts', 13, 'start', '#254c3e')
+    + tx(196, 156, '4 step', 14)
+    + tx(16, 186, 'along the length', 15)))
+titles = ['Measure first', 'String the deck', 'Dig the holes', 'Pour, leave the tops', 'Cut to the path', 'Bearers', 'Joists from the side', 'Ties on the bearer', 'Pits and pavers', 'One frame at a time', 'Boards']
+assert len(figs) == len(steps) == len(titles) == 11
+ol_at = body.index('<ol>', body.index('<h2 id="build-order">'))
+ol_end = body.index('</ol>', ol_at) + 5
+cards = ''.join(
+    f'<details class="step" open><summary><span class="step-number">{n}</span>{E(title)}</summary><div class="step-content">{fig}<div><p>{inline(text)}</p></div></div></details>'
+    for n, (title, text, fig) in enumerate(zip(titles, steps, figs), 1))
+body = body[:ol_at] + '<div class="steps">' + cards + '</div>' + body[ol_end:]
 html = '''<!doctype html><html lang="en-NZ"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#254c3e"><meta name="description" content="Owner-builder guide for a 6.6 m Auckland deck and a low step of five short frames: layout, foundations, fixings, build order and a priced shopping list."><title>Deck and step build guide</title><!-- INLINE_STYLES --></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="#main">Auckland deck <span>10 / 11 / 2026 · BUILD GUIDE</span></a><nav aria-label="Sections"><a href="#three-drawings">Drawings</a><a href="#foundations">Foundations</a><a href="#shopping-list">Shopping list</a><a href="#build-order">Build order</a><a href="#assumptions-and-what-i-would-get-checked-in-an-ideal-world">Assumptions</a></nav><button id="print">Print</button></header><main id="main">''' + body + '''</main><footer><span>Owner-builder working plan · read the assumptions before building</span><button id="copy-link">Copy link</button></footer><p id="message" role="status"></p><!-- INLINE_SCRIPT --></body></html>'''
 (root / 'site/index.html').write_text(html)
 print('Rendered guide, CSV and page; posted', posted, 'estimates', est, 'total', total)
