@@ -32,8 +32,12 @@ main_counts = Counter(c for n, s, cs in main_alloc for c in cs for _ in range(n)
 assert main_counts == Counter({6600: 6, 2510: 17, 900: 6, 380: 2, 1880: 3}), main_counts
 h4_counts = Counter(c for n, s, cs in h4_alloc for c in cs for _ in range(n))
 assert h4_counts == Counter({6600: 8, 500: 17, 240: 17}), h4_counts
-pile_x = [62.5, 1357.5, 2652.5, 3947.5, 5242.5, 6537.5]
-bay = (pile_x[1] - pile_x[0]) / 1000
+# Line 2 and line 3 moved 12 November. The path is 960 wide and the old
+# line 2 sat in the middle of it. Line 2 is 200 onto the grass. Line 3 is
+# 1,230 past the concrete: 400 to the blue pipe, 130 to the sewage, 500
+# clear, 200 to the hole centre. The 130 is 870 minus 740 off the deck.
+pile_x = [62.5, 677.5, 3067.5, 3947.5, 5242.5, 6537.5]
+bay = 1.295
 rise = 500 / 3
 going = 280
 assert 190 >= rise >= 150
@@ -204,7 +208,7 @@ out = {
         'step_pile_bearing_kPa': bearing,
         'main_bearer_max_M_ULS_kNm': main_M,
         'main_loaded_width_envelope_m': 2.0,
-        'note': 'Beam screens only. Full 140 between the 1.30 m piles. The 120 mm rip is only where the path is in the way, and that bay gets a pile each side of the concrete. Not a foundation or bracing check.',
+        'note': 'Beam screens only. Ordinary bays stay doubled 140 at 1.30 m. The path bay is 2.39 m and is a doubled 190, so the 140 envelope does not cover it. The 120 mm rip does not cross that bay. Not a foundation or bracing check.',
     },
 }
 assert out['main_stock_lm'] == 100.8 and out['H4_stock_lm'] == 72.0
