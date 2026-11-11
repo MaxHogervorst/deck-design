@@ -64,7 +64,7 @@ def money(n):
 
 md = f'''# Deck and step build guide
 
-{DATE} · How I am going to build the 6.6 m deck and the two steps in front of it. One plan, a set-out sheet, three drawings, a bill of materials and the build order. Written for me, doing the work. It is not an engineer's design. The ROBO preview ISL38807 is not this build. That sheet says preview only, and the quantities below are this deck, not that export.
+{DATE} · How I am going to build the 6.6 m deck and the two steps in front of it. One plan, a set-out sheet, three drawings, a bill of materials and the build order. Written for me, doing the work. It is not an engineer's design. Consent is not required: Building Act Schedule 1, exemption 24, because a fall is about 500 mm. The sheets are still drawn to AS/NZS 1100.501 and the Auckland Council AC1011 document list. They are not lodged.
 
 ## What we are building
 
@@ -83,7 +83,7 @@ Heights. The path is where you walk and the grass is lower, so the steps are tap
 
 ## The sheets
 
-[Sheet 1 · Plan and elevation](docs/drawings/sheet.svg) · [Sheet 2 · Notes and details](docs/drawings/sheet2.svg). Same A2 sheet as the preview. Title block ref ISL38807. The lines are this build.
+[Sheet 1 · Foundation and framing](docs/drawings/sheet.svg) · [Sheet 2 · Section and details](docs/drawings/sheet2.svg) · [Sheet 3 · Site, levels and schedules](docs/drawings/sheet3.svg). A2, to AS/NZS 1100.501 and the Auckland Council AC1011 list. Consent is not required. These sheets are not lodged.
 
 ## Three drawings
 
@@ -240,7 +240,7 @@ while i < len(lines):
 body = '\n'.join(parts)
 a = body.index('<h2 id="three-drawings">')
 bb = body.index('<h2 id="foundations">', a)
-body = body[:a] + '''<h2 id="three-drawings">Drawings</h2><div class="tabs" role="tablist" aria-label="Drawings"><button id="tab-sheet" role="tab" aria-controls="drawing-panel" aria-selected="true" data-view="sheet">Sheet 1</button><button id="tab-sheet2" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="sheet2">Sheet 2</button><button id="tab-piles" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="piles">Piles</button><button id="tab-framing" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="framing">Framing</button><button id="tab-fixings" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="fixings">Steps</button></div><div id="drawing-panel" role="tabpanel" aria-labelledby="tab-sheet"><div id="drawing"></div><p id="drawing-caption" class="caption"></p></div><p class="note">Download: <a href="drawings/sheet.svg">sheet 1</a> · <a href="drawings/sheet2.svg">sheet 2</a> · <a href="drawings/piles.svg">piles</a> · <a href="drawings/framing.svg">framing</a> · <a href="drawings/fixings.svg">steps</a></p>''' + body[bb:]
+body = body[:a] + '''<h2 id="three-drawings">Drawings</h2><div class="tabs" role="tablist" aria-label="Drawings"><button id="tab-sheet" role="tab" aria-controls="drawing-panel" aria-selected="true" data-view="sheet">Sheet 1</button><button id="tab-sheet2" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="sheet2">Sheet 2</button><button id="tab-sheet3" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="sheet3">Sheet 3</button><button id="tab-piles" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="piles">Piles</button><button id="tab-framing" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="framing">Framing</button><button id="tab-fixings" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="fixings">Steps</button></div><div id="drawing-panel" role="tabpanel" aria-labelledby="tab-sheet"><div id="drawing"></div><p id="drawing-caption" class="caption"></p></div><p class="note">Download: <a href="drawings/sheet.svg">sheet 1</a> · <a href="drawings/sheet2.svg">sheet 2</a> · <a href="drawings/sheet3.svg">sheet 3</a> · <a href="drawings/piles.svg">piles</a> · <a href="drawings/framing.svg">framing</a> · <a href="drawings/fixings.svg">steps</a></p>''' + body[bb:]
 body = body.replace('href="docs/', 'href="').replace('archive/', '<a href="https://github.com/MaxHogervorst/deck-design/tree/main/archive">archive/</a>')
 
 
@@ -570,7 +570,7 @@ def _note(x, y, lines, to=None, size=7.6):
         out.append(_dot(*to))
     return ''.join(out)
 
-def _title(parts, sheet_no, scale):
+def _title(parts, sheet_no, scale, drawing_title):
     top, bot = 742, 818
     parts.append(_box(10, 10, 1168, 820, BLUE, 2.6))
     parts.append(_box(16, 16, 1156, 808, BLUE, 0.7))
@@ -580,14 +580,15 @@ def _title(parts, sheet_no, scale):
     parts.append(_tx(92, 776, 'MH', 26, 'middle', INK, '700'))
     parts.append(_tx(92, 796, 'DECK', 12, 'middle', INK, '700'))
     parts.append(_tx(92, 812, 'WORKING PLAN', 6.5, 'middle', INK, '500'))
-    parts.append(_tx(180, 770, 'PROPOSED DECK FOR MAX HOGERVORST', 13, 'start', INK, '700'))
-    parts.append(_tx(180, 788, '18B FORMBY AVENUE, POINT CHEVALIER, AUCKLAND', 9.5, 'start', INK, '500'))
-    parts.append(_tx(180, 810, 'PLEASE NOTE ALL THE SCALES SPECIFIED IN THIS DRAWING ARE FOR AN A2 SHEET WITH A 10mm MARGIN', 6.4, 'start', INK, '400'))
+    parts.append(_tx(180, 760, drawing_title, 8, 'start', INK, '700'))
+    parts.append(_tx(180, 776, 'PROPOSED DECK FOR MAX HOGERVORST', 11, 'start', INK, '700'))
+    parts.append(_tx(180, 792, '18B FORMBY AVENUE, POINT CHEVALIER, AUCKLAND 1022', 8, 'start', INK, '500'))
+    parts.append(_tx(180, 810, 'FLAT 2 DP 122876 · DIMS IN mm · DO NOT SCALE · EXEMPTION 24 · NOT LODGED', 6.2, 'start', INK, '400'))
     rows = [
         ('DRAWN', 'MH', 'REVISION', 'A'),
         ('DATE', '11/11/26', 'SCALE', scale),
         ('APPROVED', '—', 'SIZE', 'A2'),
-        ('SHEET', f'{sheet_no} OF 2', 'DWG NO.', '0001'),
+        ('SHEET', f'{sheet_no} OF 3', 'DWG NO.', '0001'),
     ]
     rh = (bot - top) / 4
     xs = [860, 936, 1024, 1110, 1172]
@@ -616,7 +617,7 @@ def PY(y):
     return 206 + y * K
 
 s1 = []
-_title(s1, 1, '1:25 & NTS')
+_title(s1, 1, '1:25', '01  FOUNDATION, FRAMING AND LONG SECTION')
 # Rebuilt strip at the house, then the deck, then the two steps.
 s1.append(_box(PX(0), PY(-1970), 900 * K, 1970 * K))
 s1.append(_box(PX(0), PY(0), 6600 * K, 2600 * K))
@@ -655,9 +656,19 @@ s1.append(_hdim(PX(0), PX(6600), chain + 16, '6600'))
 s1.append(_tx(PX(0) - 2, chain - 10, '62.5', 7, 'end', RED))
 s1.append(_tx(PX(6600) + 2, chain - 10, '62.5', 7, 'start', RED))
 cx = PX(3300)
-s1.append(_tx(cx, chain + 40, 'PLAN', 10, 'middle', GREEN, '700'))
-s1.append(_ln(cx - 16, chain + 43, cx + 16, chain + 43, GREEN, 0.8))
+s1.append(_tx(cx, chain + 40, 'FOUNDATION AND FRAMING PLAN', 10, 'middle', GREEN, '700'))
+s1.append(_ln(cx - 70, chain + 43, cx + 70, chain + 43, GREEN, 0.8))
 s1.append(_tx(cx, chain + 54, 'SCALE 1:25', 7.5, 'middle', GREEN, '600'))
+s1.append(_tx(640, 250, 'LOCAL DATUM', 8, 'start', GREEN, '700'))
+s1.append(_tx(640, 264, 'PATH = 0.000', 8, 'start', GREEN, '500'))
+s1.append(_tx(640, 278, 'FFL +500 BOARDS', 8, 'start', GREEN, '500'))
+s1.append(_tx(640, 292, 'NOT AKL 1946', 8, 'start', GREEN, '500'))
+s1.append(_tx(640, 314, 'SECTION A-A BELOW', 8, 'start', GREEN, '600'))
+s1.append(_tx(640, 328, 'SECTION B-B: SHEET 2', 8, 'start', GREEN, '600'))
+s1.append(_tx(640, 350, 'NO BRACES. NOTE 7.', 8, 'start', GREEN, '600'))
+s1.append(_ln(640, 372, 720, 372, RED, 0.7))
+s1.append(_tx(680, 366, '1000', 7, 'middle', RED))
+s1.append(_tx(680, 386, 'SCALE BAR 1:25', 6.5, 'middle', INK, '500'))
 
 s1.append(_note(188, 46, ['88×32 H3.2 MERCH GRADE', 'GRIPTREAD DECKING.', 'ABOUT 5mm GAP. BOARDS', 'ALONG THE DECK.'], (PX(1800), PY(30))))
 s1.append(_note(360, 46, ['140×45 SG8 H3.2', 'DOUBLE BEARER'], (PX(2200), PY(300))))
@@ -679,46 +690,68 @@ s1.append(_box(PX(0), EZ(468), 6600 * K, 140 * K))
 s1.append(_box(PX(0), EZ(500), 6600 * K, 32 * K))
 s1.append(_vdim(PX(0) - 16, EZ(500), EZ(0), '500'))
 s1.append(_tx(PX(80), 600, 'APPROX 500 TO TOP OF BOARDS', 7.5, 'start', RED))
-s1.append(_tx(cx, 708, 'ELEVATION', 10, 'middle', GREEN, '700'))
-s1.append(_ln(cx - 28, 711, cx + 28, 711, GREEN, 0.8))
-s1.append(_tx(cx, 724, 'SCALE 1:25', 7.5, 'middle', GREEN, '600'))
-s1.append(_tx(640, 250, 'SHEET 1 OF 2', 11, 'start', GREEN, '700'))
-s1.append(_tx(640, 266, 'PLAN AND ELEVATION', 8, 'start', GREEN, '500'))
-(root / 'site/drawings' / 'sheet.svg').write_text(_sheet(s1, 'Sheet 1. Plan and elevation. Ref ISL38807. Owner-builder working plan.'))
+s1.append(_tx(cx, 708, 'LONG SECTION A-A', 10, 'middle', GREEN, '700'))
+s1.append(_ln(cx - 48, 711, cx + 48, 711, GREEN, 0.8))
+s1.append(_tx(cx, 724, 'SCALE 1:25  ·  LOOKING TOWARD THE HOUSE', 7.5, 'middle', GREEN, '600'))
+(root / 'site/drawings' / 'sheet.svg').write_text(_sheet(s1, 'Sheet 1. Foundation and framing plan, long section. Ref ISL38807. Consent exempt, not lodged.'))
 
 # Sheet 2. Notes, end elevation, pile hole, two steps.
 s2 = []
-_title(s2, 2, '1:25, 1:10 & NTS')
+_title(s2, 2, '1:25 / 1:10', '02  SECTION, PILE AND STEPS')
 notes = [
-    'NOTES',
-    '1. OWNER-BUILDER WORKING PLAN.',
-    'REF NO. ISL38807.',
-    'NOT FOR CONSENT.',
-    '2. TIMBER IS 140×45 SG8.',
-    'H3.2 ON THE DECK AND THE',
-    'REBUILT STRIP. H4 ON THE STEPS.',
-    'PILES ARE 125×125 H5.',
-    '3. 16 PILES. HOLES 400×400,',
-    '600 DEEP. NO ANCHOR PILES',
-    'AND NO BRACKETS.',
-    '4. SIX STEP PILES. HOLES',
-    '300×300 AND 400 DEEP.',
-    '5. THE PATH STAYS. NO HOLE',
-    'IN IT. WEST DRAINS: SPADE,',
-    'AND 500 CLEAR OF A PIPE.',
-    '6. RISES ARE TAPED OFF THE',
-    'PATH. IF THE TAPE IS NOT 500,',
-    'DIVIDE IT BY THREE.',
-    '7. NO HANDRAIL. THREE RISES',
-    'IS THE LIMIT.',
-    '8. RIP THE BOTTOM STEP TO',
-    '120 MIN OVER THE PATH.',
-    'LEAVE 15 OF AIR.',
-    '9. SCREWS INTO A BEARER GO',
-    'IN FROM THE SIDE.',
+    'GENERAL NOTES',
+    '1. AS/NZS 1100.501:2002.',
+    'DIMENSIONS ARE IN MILLIMETRES.',
+    'THEY GOVERN. DO NOT SCALE.',
+    'SCALES ARE FOR A2, 10 mm MARGIN.',
+    '2. BUILDING ACT SCHEDULE 1,',
+    'EXEMPTION 24. THE FALL IS',
+    'ABOUT 500, UNDER 1.5 m.',
+    'CONSENT IS NOT REQUIRED.',
+    'THESE SHEETS ARE NOT LODGED.',
+    'DRAWN TO AC1011 PRACTICE.',
+    'NOT A PS1. NOT CHECKED.',
+    '3. OWNER AND DESIGNER:',
+    'MAX HOGERVORST.',
+    'LEGAL, FROM THE RATING',
+    'RECORD: FLAT 2 DP 122876',
+    'AND CARPORT 2 DP 122876.',
+    '4. DATUM IS THE PATH = 0.',
+    'FFL +500, TOP OF BOARDS.',
+    'NOT AN AUCKLAND 1946 LEVEL.',
+    'GRASS IS LOWER. UNTAPED.',
+    'BOUNDARIES NOT SURVEYED.',
+    '5. FINISHED SIZES.',
+    'DECK AND REBUILT STRIP:',
+    '140×45 SG8 H3.2.',
+    'STEPS: 140×45 SG8 H4.',
+    'PILES: 125×125 H5.',
+    'BOARDS: 88×32 H3.2.',
+    '6. 16 PILES. HOLE 400×400,',
+    '600 DEEP. SIX STEP PILES,',
+    'HOLE 300×300, 400 DEEP.',
+    'NO ROD. NO ANCHOR.',
+    'NO BRACKET. CONCRETE IS',
+    '4:1 BUILDERS MIX, OR A TRUCK.',
+    '7. NZS 3604 cl 7.4.2.2 WOULD',
+    'WANT SUBFLOOR BRACES. THIS',
+    'DECK IS 2600 OUT, OVER 2 m.',
+    'NONE ARE SHOWN. DEPARTURE,',
+    'ON OWNER DIRECTION.',
+    '8. THE PATH STAYS.',
+    'NO HOLE IN IT. WEST DRAINS:',
+    'SPADE, AND 500 CLEAR.',
+    '9. STAIRS. THREE EQUAL RISES,',
+    'TWO GOINGS OF 280. IF THE',
+    'TAPE IS 500, RISE IS 167 AND',
+    '2R+G IS 614. NO BARRIER:',
+    'THE FALL IS UNDER 1 m.',
+    '10. VERIFY EVERY SIZE ON SITE',
+    'BEFORE ORDERING.',
 ]
 for i, line in enumerate(notes):
-    s2.append(_tx(36, 42 + i * 12, line, 8, 'start', GREEN, '700' if i == 0 else '500'))
+    s3_note_y = 32 + i * 9.15
+    s2.append(_tx(36, s3_note_y, line, 6.9, 'start', GREEN, '700' if i == 0 else '500'))
 
 # End elevation, short direction, 1:25.
 def EY(y):
@@ -734,9 +767,9 @@ s2.append(_box(EY(0), EZ2(468), 2600 * K, 140 * K))
 s2.append(_box(EY(0), EZ2(500), 2600 * K, 32 * K))
 s2.append(_box(EY(2600), EZ2(333), 280 * K, 32 * K))
 s2.append(_box(EY(2880), EZ2(167), 280 * K, 32 * K))
-s2.append(_tx(EY(1400), 668, 'END ELEVATION', 10, 'middle', GREEN, '700'))
-s2.append(_ln(EY(1400) - 42, 671, EY(1400) + 42, 671, GREEN, 0.8))
-s2.append(_tx(EY(1400), 684, 'SCALE 1:25', 7.5, 'middle', GREEN, '600'))
+s2.append(_tx(EY(1400), 668, 'CROSS SECTION B-B', 10, 'middle', GREEN, '700'))
+s2.append(_ln(EY(1400) - 48, 671, EY(1400) + 48, 671, GREEN, 0.8))
+s2.append(_tx(EY(1400), 684, 'SCALE 1:25  ·  LOOKING ALONG THE DECK', 7, 'middle', GREEN, '600'))
 
 # Detail A, pile hole, 1:10.
 k10 = 0.2
@@ -784,8 +817,101 @@ s2.append(_note(SY(3180), SZ(150), ['RIP TO 120 MIN', 'OVER THE PATH'], (SY(3110
 s2.append(_tx(SY(2750), 458, 'DETAIL B - TWO STEPS', 10, 'middle', GREEN, '700'))
 s2.append(_ln(SY(2580), 461, SY(2920), 461, GREEN, 0.8))
 s2.append(_tx(SY(2750), 474, 'SCALE 1:10', 7.5, 'middle', GREEN, '600'))
-s2.append(_tx(SY(2700), SZ(-36), 'PATH = 0', 7.5, 'middle', GREEN, '500'))
-(root / 'site/drawings' / 'sheet2.svg').write_text(_sheet(s2, 'Sheet 2. Notes, end elevation, pile hole and the two steps. Ref ISL38807. Owner-builder working plan.'))
-print('sheets', len(s1), len(s2))
+s2.append(_tx(SY(2700), SZ(-90), 'PATH = 0.000 LOCAL', 7.5, 'middle', GREEN, '500'))
+(root / 'site/drawings' / 'sheet2.svg').write_text(_sheet(s2, 'Sheet 2. Notes, cross section, pile hole and the two steps. Ref ISL38807. Consent exempt, not lodged.'))
+
+# Sheet 3. Site of the works only, levels, schedules. No invented boundaries.
+s3 = []
+_title(s3, 3, '1:100', '03  SITE, LEVELS AND SCHEDULES')
+ks = 0.02
+
+def SX(x):
+    return 70 + x * ks
+
+def SY3(y):
+    return 150 + y * ks
+
+s3.append(_tx(36, 40, 'SITE PLAN — WORKS AREA ONLY', 11, 'start', GREEN, '700'))
+s3.append(_tx(36, 54, 'SCALE 1:100. HOUSE DEPTH, PATH WIDTH AND BOUNDARIES ARE NOT SURVEYED, SO THEY ARE NOT DIMENSIONED.', 7, 'start', GREEN, '500'))
+s3.append(_ln(SX(0), SY3(-1970), SX(900), SY3(-1970), INK, 1.3))
+s3.append(_tx(SX(0), SY3(-1970) - 8, 'EXISTING HOUSE WALL', 7.5, 'start', GREEN, '600'))
+s3.append(_box(SX(0), SY3(-1970), 900 * ks, 1970 * ks))
+s3.append(_tx(SX(1100), SY3(-1100), 'REBUILT 900×1970', 7, 'start', INK, '600'))
+s3.append(_box(SX(0), SY3(0), 6600 * ks, 2600 * ks))
+s3.append(_tx(SX(3300), SY3(1200), 'DECK 6600×2600', 8, 'middle', INK, '700'))
+s3.append(_tx(SX(3300), SY3(1200) + 12, 'FFL +500', 7.5, 'middle', GREEN, '600'))
+s3.append(_box(SX(0), SY3(2600), 6600 * ks, 560 * ks))
+s3.append(_tx(SX(6800), SY3(3000), 'STEPS', 7, 'start', INK, '600'))
+s3.append(_hdim(SX(0), SX(6600), SY3(3600), '6600'))
+s3.append(_vdim(SX(9000), SY3(0), SY3(2600), '2600'))
+s3.append(_vdim(SX(9800), SY3(2600), SY3(3160), '560'))
+s3.append(_ln(SX(0), SY3(4800), SX(1000), SY3(4800), RED, 0.7))
+s3.append(_tx(SX(500), SY3(4800) - 4, '1000', 7, 'middle', RED))
+s3.append(_tx(SX(500), SY3(4800) + 12, 'SCALE BAR 1:100', 6.5, 'middle', INK))
+s3.append(_tx(36, 300, 'NORTH IS NOT SURVEYED. NO ARROW.', 7.2, 'start', GREEN, '600'))
+s3.append(_tx(36, 316, 'WEST END: DRAINS. SPADE. 500 CLEAR. PATH STAYS. NO HOLE IN IT.', 7.2, 'start', GREEN, '500'))
+s3.append(_tx(36, 332, 'PATH = 0.000 LOCAL.', 7.2, 'start', GREEN, '500'))
+
+# Schedules, right side.
+s3.append(_tx(560, 40, 'LEVELS — LOCAL DATUM', 9, 'start', GREEN, '700'))
+s3.append(_tx(560, 54, 'PATH SURFACE IS 0. NOT AUCKLAND 1946.', 7, 'start', INK, '500'))
+levels = [
+    ('PATH', '0'),
+    ('GRASS', 'LOWER, NOT TAPED'),
+    ('PILE TOP', '+187'),
+    ('BEARER TOP', '+328'),
+    ('JOIST TOP', '+468'),
+    ('DECK BOARDS, FFL', '+500'),
+    ('TOP STEP BOARD', '+333'),
+    ('BOTTOM STEP BOARD', '+167'),
+]
+s3.append(_ln(560, 64, 1120, 64, INK, 0.6))
+for i, (name, val) in enumerate(levels):
+    y = 80 + i * 16
+    s3.append(_tx(566, y, name, 7.5, 'start', INK, '500'))
+    s3.append(_tx(1114, y, val, 7.5, 'end', INK, '600'))
+    s3.append(_ln(560, y + 4, 1120, y + 4, INK, 0.3))
+s3.append(_tx(560, 230, 'PILE SCHEDULE', 9, 'start', GREEN, '700'))
+s3.append(_ln(560, 238, 1120, 238, INK, 0.6))
+heads = [('MARK', 566), ('QTY', 660), ('MEMBER', 720), ('HOLE', 900), ('NOTE', 1040)]
+for label, x in heads:
+    s3.append(_tx(x, 254, label, 7, 'start', INK, '700'))
+rows_p = [
+    ('P1', '16', '125×125 H5', '400×400×600', 'NO ROD'),
+    ('P2', '6', '125×125 H5', '300×300×400', 'STEPS'),
+    ('R', '4', '125×125 H5', '400×400×600', 'REBUILT'),
+]
+for i, row in enumerate(rows_p):
+    y = 272 + i * 16
+    xs = [566, 660, 720, 900, 1040]
+    for val, x in zip(row, xs):
+        s3.append(_tx(x, y, val, 7.5, 'start', INK, '500'))
+s3.append(_tx(560, 330, 'FRAMING SCHEDULE — FINISHED SIZES', 9, 'start', GREEN, '700'))
+s3.append(_ln(560, 338, 1120, 338, INK, 0.6))
+framing = [
+    'BEARERS  140×45 SG8 H3.2, DOUBLE, AT Y300 AND Y2510',
+    'JOISTS  140×45 SG8 H3.2, 437 CENTRES, DOUBLED AT 3956',
+    'REBUILT  140×45 SG8 H3.2, 900×1970, NOT INTO THE DECK',
+    'STEPS  140×45 SG8 H4, TWO GOINGS OF 280, FULL WIDTH',
+    'BOARDS  88×32 H3.2 MERCH GRIPTREAD, ALONG THE DECK',
+    'BOTTOM BEAM RIPPED TO 120 MIN WHERE IT MEETS THE PATH',
+]
+for i, line in enumerate(framing):
+    s3.append(_tx(566, 356 + i * 16, line, 7.2, 'start', INK, '500'))
+s3.append(_tx(560, 470, 'DRAWING INDEX', 9, 'start', GREEN, '700'))
+s3.append(_ln(560, 478, 1120, 478, INK, 0.6))
+index = [
+    '01  FOUNDATION AND FRAMING PLAN, LONG SECTION A-A   1:25',
+    '02  CROSS SECTION B-B, DETAIL A PILE, DETAIL B STEPS  1:25 / 1:10',
+    '03  SITE, LEVELS AND SCHEDULES   1:100',
+]
+for i, line in enumerate(index):
+    s3.append(_tx(566, 496 + i * 16, line, 7.2, 'start', INK, '500'))
+s3.append(_tx(560, 570, 'REVISION A  ·  11/11/26  ·  WORKING SET', 8, 'start', GREEN, '700'))
+s3.append(_tx(560, 586, 'CONSENT NOT REQUIRED. NOT LODGED. NOT ENGINEER CHECKED.', 7.2, 'start', GREEN, '500'))
+s3.append(_tx(560, 610, 'BRACING IS A DEPARTURE FROM NZS 3604 cl 7.4.2.2.', 7.2, 'start', GREEN, '500'))
+s3.append(_tx(560, 626, 'SEE NOTE 7 ON SHEET 2.', 7.2, 'start', GREEN, '500'))
+(root / 'site/drawings' / 'sheet3.svg').write_text(_sheet(s3, 'Sheet 3. Site of the works, levels and schedules. Ref ISL38807. Consent exempt, not lodged. Boundaries not surveyed.'))
+print('sheets', len(s1), len(s2), len(s3))
 
 
