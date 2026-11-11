@@ -1,74 +1,100 @@
 # Deck and step build guide
 
-10 November 2026 · How I am going to build the 6.6 m deck and the low step in front of it. One plan, three drawings, a priced shopping list and the build order, written for an owner doing the work. It is not an engineer's design; the things I have assumed, and would ideally have checked, are listed at the end.
+11 November 2026 · How I am going to build the 6.6 m deck and the two steps in front of it. One plan, three drawings, a bill of materials and the build order. Written for me, doing the work. It is not an engineer's design. The ROBO preview ISL38807 is not this build. That sheet says preview only, and the quantities below are this deck, not that export.
 
 ## What we are building
 
 | Part | What |
 |---|---|
-| Main deck | 6600×2600 mm, boards about 500 mm above the lawn. Two double 140×45 H3.2 bearers on 16 timber piles in rows at Y300 and Y2510; 140×45 joists across them, 2.21 m span (the table limit at 450 centres is 2.35 m). |
-| Main joists | 17 members. End joist flush with the deck edge, then 437 mm centres, and one doubled joist centred at 3956 so the board butts have something to land on. Plain rims at Y0 and Y2555; no blocking, because the rims are within 300 mm of the bearers. |
-| Rebuilt strip | 900×1970 mm beside the house. Old bearer replaced. Two 900 mm double bearers at Y−1925 and Y−800, three separate 1880 mm joists, two blocks cut at 380 mm, screws and skew nails down into the bearer. Nothing runs through into the main deck. |
-| Step | 400 mm deep, boards 250 mm above the lawn, stopping about 100 mm short of each end of the deck. Five separate 900 mm frames of double 140×45 H4, one in each gap between the front piles, centred at X710, 2005, 3300, 4595, 5890. Each frame sits on four pavers and is screwed to the front bearer. The boards run along X across the frames. The gap between frames is 395 mm, under the 450 mm the deck joists already use. |
-| Boards | 32 mm treated pine, all running along X. 28 rows on the deck, 21 on the rebuilt strip, 4 on the step. |
-| Finish | Natural treated pine, plain front edge, no handrails. Lawn and path stay at their present levels. |
+| Main deck | 6600×2600 mm, boards level with the old deck, about 500 mm. Two double 140×45 H3.2 bearers on 16 timber piles at Y300 and Y2510. Joists 140×45 across them, span 2.21 m. The wet-service table at 450 centres allows 2.35 m. |
+| Main joists | 17 members. Flush at the end, then 437 mm centres, one doubled joist centred at 3956 for the board butts. Rims at Y0 and Y2555. No blocking. |
+| Rebuilt strip | 900×1970 mm beside the house. Two 900 mm double bearers at Y−1925 and Y−800, three joists of 1880, two blocks cut at 380. Nothing runs through into the main deck. |
+| Steps | Two steps, three rises, the full width of the deck, sticking out 560 mm. Going 280. Rise about 167 if the path-to-board tape is 500. Double 140×45 H4. Bottom step: a ribbon screwed to the front piles, joists out, a front beam on six small piles. Top step built on that and screwed to the bearer. Not a cut stringer. |
+| Boards | 88×32 merch griptread, along X. 28 rows on the deck, 21 on the rebuilt strip, three on each step. A board on the face of the boundary joist, and one on each riser. |
+| Finish | Natural, no handrail. Three rises is the limit. One more rise and it would need a rail. Lawn and path stay as they are. |
 
-Set-out, X from the left edge. Joists: flush, then every 437 mm, double at 3956. Main piles: 62.5, 1357.5, 2652.5, 3947.5, 5242.5, 6537.5 on rows Y300 and Y2510. Rebuilt piles: X175 and X725 on Y−1925 and Y−800. Step frames: 710, 2005, 3300, 4595, 5890. Pavers sit 220 mm each side of those centres, on Y2645 and Y2955.
+Set-out, X from the left edge. Piles: 62.5, 1357.5, 2652.5, 3947.5, 5242.5, 6537.5 on Y300 and Y2510. The six step piles are on those same X, at Y3115. Rebuilt piles: X175 and X725 on Y−1925 and Y−800.
 
-Heights, lawn = 0: deck boards top +500, joist and rim top +468, bearer top +328, pile top +187 (DPC under the bearer). Step boards top +250, rail top +218, rail bottom +78. Under the rail: an H4 packer if needed, DPC, and a paver top anywhere between +45 and +75.
+Heights. The path is where you walk and the grass is lower, so the steps are taped off the path. Deck boards +500 if that is what the old deck measures, joist top +468, bearer top +328, pile top +187. Bottom step board about +167, framing top +135. Top step board about +333, framing top +301. If the tape from the path to the deck boards is not 500, divide whatever it is by three.
 
 ## Three drawings
 
-[1 · Piles, pads and heights](docs/drawings/piles.svg) · [2 · Framing and sizes](docs/drawings/framing.svg) · [3 · Fixings and step section](docs/drawings/fixings.svg)
+[1 · Piles and heights](docs/drawings/piles.svg) · [2 · Framing and sizes](docs/drawings/framing.svg) · [3 · Fixings and the two steps](docs/drawings/fixings.svg)
 
 ## Foundations
 
-16 timber piles: 12 ordinary (450 deep) and 4 corner anchors (900 deep) with 12 kN fixing kits. Holes can be 350×350 square or about 400 mm round from an auger, but not on the concrete path and not on the drains. One pour of about 0.99 m³ fills every hole to 100 mm below ground; nothing in it needs to be level, because the piles are cut to a string afterwards. A mini-mix truck for 1.2 m³ is the way to do this. 115 bags of 20 kg is the fallback if the truck cannot get in. Mix those bags. Do not use the no-mix post-hole bags.
+16 timber piles, all the same: 400×400 holes, 600 deep. No 900 mm anchors and no brackets. 600 is deep enough that the deck is not sitting in the ground that swells. Four anchors would be more hole than this deck needs. The step has six smaller holes, 300×300 and 400 deep, plus two spare if the path is in the way.
 
-The concrete path stays. The deck is built over it. Matching the old boards, the joists have about 330 mm of air over the path and the bearers about 190 mm, so nothing timber sits on the concrete. No pile hole goes through the path. If a mark lands on the concrete, slide that pile along the bearer onto soil. Keep piles on a bearer within 1.4 m of each other. If the slide would open a bigger gap, add an ordinary 750 mm pile on the other side of the path instead.
+Concrete volume leaves the pile in the hole. The twelve main holes are 1.15 m³, the 1.1 m³ counted on site. With the four rebuilt holes and the step holes it is about 1.82 m³, so a truck order is 2.0 m³. The other way is builders mix dumped in front of the garage, plus cement, four shovels of mix to one of cement, and each hole concreted as it is dug so a shower does not fill twelve of them. Do not use the no-mix post-hole bags.
 
-The waste (red) and the rainwater (blue) run together down the west side, about 700 to 900 mm off the garage, the house and the deck. Most of that run is 430 to 550 mm deep. Beside the concrete pad it is only 240 to 270 mm deep. A downpipe drops into a gully trap at the bend, and the rainwater is slung under the house. An ordinary hole is 450 mm and a corner hole is 900 mm, so a hole on that line will hit the pipe. Tape the line onto the ground from the locate plan before marking holes. No hole edge within 500 mm of a pipe. Hand dig within a metre of it. The west edge of the deck stays put: the two west corner holes reach about 110 mm past the deck edge, which still leaves about 600 mm to a pipe 740 mm off the deck, but only if that offset is right on the day. The step pits are shallow, but they stay off the 240 mm pipe by the pad as well.
+The path stays. The deck is built over it. Joists want about 330 mm of air over it and the bearers about 190 mm, so the piles clear 150 mm. No hole through the concrete. If a mark lands on it, slide that pile along the bearer onto soil and do not open a bay past 1.4 m. If the slide would be bigger than that, add a pile on the other side of the path.
 
-The step does not get concrete. Each of the five frames has one pit, 760×800 mm, dug to firm ground in the middle of the bay so it stays off the pile holes and off the path. Compacted GAP7, then four 300×300 pavers. The frames are screwed to the deck, so a paver does not have to be a perfect level and it does not have to hold the step from sliding away.
+The waste and the stormwater run together down the west side, about 700 to 900 mm off the deck, mostly 430 to 550 mm deep and only 240 to 270 mm deep beside the pad. Stormwater goes out through the gate. The waste is beside it. The services reply that put no power within 10 m is wrong. Orange is power, white is fibre, water is its own pipe. Tape what you can find, paint the holes, and dig them with a spade. No hole edge within 500 mm of a pipe. The careful ground is from the path outward, plus the west end, the gully trap and the rebuilt piles.
 
-### Why the step is five short frames
+### The two steps
 
-A timber pile has to stand at least 150 mm clear of the ground, and under a 250 mm step there is only about 78 mm, so short piles are out. A single 6.6 m ladder rail is a special-order length, it is too heavy to lift in one piece, and the pads it needs clash with the corner pile holes. Five 900 mm frames use ordinary 4.8 m H4, each one is light enough to assemble where it sits, and the pavers land in the open ground between the holes. With someone standing on the end of a frame the rail is about 49% of my bending screen, and it stays there if the far paver lifts, because the moment is the short overhang. A paver cannot hold the rail down. If it lifts, the tie has to hold about 4.7 kN, which is why each frame is screwed to the bearer instead of sitting loose.
+A single 250 mm rise is too big. About 190 is the limit and 200 is a push. Two steps make three rises of about 167, and 2×167+280 comes out at 613, inside 550 to 700. No handrail at three rises.
 
-### Setting the pavers without a level
+Build the deck first. Then the bottom step, then the top step on it, set back 280 mm. Tape the rises off the path until they match. Do not cut a stringer.
 
-1. Build the deck frame first. Its rim is straight and level, so every step measurement is a tape held down from the rim top.
-2. Dig each pit to firm ground, keep it off the pile concrete, fill with GAP7 in two layers and tamp each one hard. Bed the four pavers and tap them down until the top is 400 to 420 mm below the rim top. Lower is fine, higher is not.
-3. Build that frame on the pavers, pack each rail with an H4 offcut screwed to the rail until the frame top is 250 mm below the rim top, and screw the tie on. Then do the next frame.
+The bottom framing only has about 135 mm above the path, and a 140 is deeper than that, so over the path the ribbon and the front beam get ripped. Leave 15 mm of air and at least 120 mm of timber, and put a spare pile each side of the path so the thin piece is not spanning 1.3 m. Everywhere else the grass is lower and the full 140 stays. On the full 140 the beam screen is about 71%. The ripped half-bay is about 47%. The small pile sees about 28 kPa on a 300×300.
+
+The underside of that bottom step is not 150 mm clear of the path. There is no way to have that and still walk off onto the path in even rises. It is H4 because it will stay damp. The deck piles themselves do clear 150 mm.
 
 ## Shopping list
 
-Do the measurements in build step 1 before you buy fasteners or lock the timber lengths.
+Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 2026. Laid out as a supplier comparison. The quantities are this build, not the ROBO bill. Measure first, then buy. Nothing has been bought. Prices include GST. Placemakers is a phone call. A blank cell means no price was found.
 
-[Download the CSV](docs/shopping-list.csv). NZD including GST, read from bunnings.co.nz and mitre10.co.nz on 10 November 2026. Posted means the price shown online for that exact product; estimate means the item is sold in store or by special order and a listed stand-in was used for the price. Timber and heavy items at both stores are click-and-collect or in-store only. Nothing has been bought and no supplier has been contacted.
+[Download the CSV](docs/shopping-list.csv).
 
-| Item | Quantity | Store | Price basis | Line |
-|---|---|---|---|---|
-| Framing 140×45 H3.2 SG8, wet (main deck and rebuilt strip) | 100.8 m: 6×7.2 m, 8×6.0 m, 2×4.8 m | [Bunnings](https://www.bunnings.co.nz/140-x-45mm-sg8-h3-2-treated-green-radiata-timber-framing-6m_p0616262) | 6.0 m $70.91 and 4.8 m $56.73 posted; 7.2 m not listed online, priced at the same $11.82/m (estimate) | $1,191.34 |
-| Step framing 140×45 H4 SG8 (short frame rails, crosspieces, ties) | 24 m: 5×4.8 m | [Bunnings or Mitre 10, price in store](https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210) | 140×45 H4 has no online price; basis Bunnings 150×50 SG8 H4 rough sawn $17.11/m. Ordinary 4.8 m lengths, not a 6.7 m rail (estimate) | $410.64 |
-| Decking 88×32 H3.2 merch griptread, 4.2 m and 3.0 m | 38×4.2 m and 32×3.0 m (255.6 m) | [Bunnings, in store](https://www.bunnings.co.nz/88-x-32mm-merch-griptread-decking-random-lengths_p0307690) | $4.55/m posted. Ask for these lengths. A random-length mix will not land the butts on the doubled joist | $1,162.98 |
-| Ordinary piles 125×125 H5, 750 mm | 12 | [Bunnings](https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396) | $21.04 each | $252.48 |
-| Corner anchor piles 125×125 H5, 1.2 m | 4 | [Bunnings](https://www.bunnings.co.nz/125-x-125mm-1-2m-square-h5-anchor-pile_p0276402) | $32.42 each | $129.68 |
-| Anchor pile fixing kits, LUMBERLOK 12KNH stainless | 4 | [Bunnings](https://www.bunnings.co.nz/lumberlok-12kn-pile-fixing-high-corrosion-stainless-steel-12knh_p0827939) | $84.93 each (galvanised 12KN is $37.89). Confirm the bracket fits a 90 mm double bearer and a 125 mm pile before buying four | $339.72 |
-| Concrete for the 16 pile holes, about 0.99 m³ | Mini-mix 1.2 m³. Fallback: 115 bags of 20 kg (104 needed) | [Bunnings for bags; phone a mini-mix yard](https://www.bunnings.co.nz/cemix-20kg-multicrete_p0232228) | $11.24 a bag, which is the figure in the total. Order the truck first. Bags only if it cannot reach the lawn | $1,292.60 |
-| Concrete pavers 300×300, about 40 mm thick | 20 (four per frame) | [Mitre 10, price in store](https://www.mitre10.co.nz/shop/urban-paving-paver-300x300x40mm-natural/p/387387) | Mitre 10 Urban Paving 300×300×40 has no online price; basis Bunnings WestStone 300×300×37 $10.83. A thicker block is better if the store has one (estimate) | $216.60 |
-| GAP7 basecourse for the five step pits | 31 bags of 15 L (about 0.46 m³), or one trailer scoop | [Bunnings, or a landscape yard](https://www.bunnings.co.nz/daltons-15l-0-7mm-sub-base-metal_p0237633) | $9.79 a bag (Daltons 0-7 mm). A scoop is much cheaper than 31 bags | $303.49 |
-| Decking screws 10g×65 316 stainless | 3×500 (1206 needed) | [Bunnings](https://www.bunnings.co.nz/decking-screw-65-x-10g-316-stainless-steel-500-pack_p0379643) | $116.00 per 500 (Building King) | $348.00 |
-| Framing nails 90×4 316 stainless jolt head | 2×2 kg (bearer plies and the short step rails) | [Mitre 10](https://www.mitre10.co.nz/shop/ecko-jolt-head-nails-90-x-4-0mm-2kg-316-stainless-steel/p/307864) | $129.00 per 2 kg (Ecko) | $258.00 |
-| Framing nails 100×4 316 stainless jolt head | 5×500 g (joists, rims, crosspieces, skew nails) | [Bunnings](https://www.bunnings.co.nz/nz-nails-100-x-4mm-500g-316-stainless-steel-jolt-head-nail_p0383199) | $35.59 per 500 g (NZ Nails) | $177.95 |
-| Batten screws 14g×100 316 stainless | 100 pack (30 for the five step ties, 6 skewed into the rebuilt joists) | [Bunnings](https://www.bunnings.co.nz/bremick-xtp-14g-x-100mm-t40-stainless-steel-316-black-bugle-batten-100-pack_p0575899) | $77.05 per 100 (Bremick XTP) | $77.05 |
-| Rim tie bolts M12×120 316 coach bolts, nuts and 50 mm square washers | 2 bolts and nuts, 4 washers | [Bunnings](https://www.bunnings.co.nz/zenith-m12-x-120mm-316-stainless-steel-coach-head-bolt-and-nut_p0236593) | $4.90 + $1.25 + 2×$3.54 per bolt | $26.46 |
-| DPC Supercourse 500, 150 mm×30 m | 1 roll (pile tops and paver tops) | [Bunnings](https://www.bunnings.co.nz/thermakraft-supercourse-500-dpc-150mmx30m_p0207794) | $27.42 | $27.42 |
-| Cut-end preservative, Metalex Green 1 L | 1, brushed on every saw cut in treated timber | [Bunnings](https://www.bunnings.co.nz/metalex-1l-green-timber-preserve-44501_p0709374) | $66.00 | $66.00 |
+### Timber
 
-**Posted prices $4,461.83 + estimates $1,818.58 = about $6,280 including GST.** The concrete line is the bag price, so the total still covers the holes if the truck cannot get in; a mini-mix quote should be lower. Delivery, tool hire (auger, drop saw, tamper) and soil disposal are extra. Galvanised fasteners instead of stainless, if the GIS check says you are outside the sea-spray zone, cuts a lot of the fixing cost. Trade merchants will beat most of these prices.
+| Description | Qty | Unit | Bunnings | Mitre 10 | Comments |
+|---|---|---|---|---|---|
+| 140×45 SG8 H3.2 framing, wet. Main deck and rebuilt strip | 100.8 | m | [$1,191.34](https://www.bunnings.co.nz/140-x-45mm-sg8-h3-2-treated-green-radiata-timber-framing-6m_p0616262) | POA | 6×7.2 m, 8×6.0 m, 2×4.8 m. 7.2 m is not listed, priced at the 6.0 m rate of $11.82/m |
+| 140×45 SG8 H4 framing for the two steps | 72 | m | [$1,231.92](https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210) | POA | 8×7.2 m and 3×4.8 m. No 140×45 H4 price online, so this is 150×50 H4 at $17.11/m. Splice over a pile if 7.2 m H4 is not in the rack |
 
-If 140×45 H4 cannot be had, rough-sawn 150×50 H4 SG8 works for the step frames. The rails are then 10 mm deeper and 10 mm wider, so cut the crosspieces at 200 mm and aim the paver tops 10 mm lower. Still cut them at 900 mm. Do not go back to a 6.6 m rail.
+### Piles
+
+| Description | Qty | Unit | Bunnings | Mitre 10 | Comments |
+|---|---|---|---|---|---|
+| 125×125 H5 pile, 1.2 m | 16 | ea | [$518.72](https://www.bunnings.co.nz/125-x-125mm-1-2m-square-h5-anchor-pile_p0276402) | POA | The 16 deck and rebuilt piles. 600 in the ground plus about 190 above the path, and the grass is lower, so 750 mm is too short. $32.42. Cut to the string |
+| 125×125 H5 pile, 750 mm | 8 | ea | [$168.32](https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396) | POA | Six under the bottom step and two spare for the path. $21.04. Most of the length gets cut off |
+
+### Decking
+
+| Description | Qty | Unit | Bunnings | Mitre 10 | Comments |
+|---|---|---|---|---|---|
+| 88×32 H3.2 merch griptread | 291.6 | m | [$1,326.78](https://www.bunnings.co.nz/88-x-32mm-merch-griptread-decking-random-lengths_p0307690) | POA | 43×4.2 m and 37×3.0 m at $4.55/m. Named lengths, so the butts land on the doubled joist |
+
+### Fasteners
+
+| Description | Qty | Unit | Bunnings | Mitre 10 | Comments |
+|---|---|---|---|---|---|
+| Decking screws 10g×65 316 stainless | 1500 | ea | [$348.00](https://www.bunnings.co.nz/decking-screw-65-x-10g-316-stainless-steel-500-pack_p0379643) | POA | 3×500 at $116. 1384 positions |
+| Framing nails 90×4 316 stainless jolt head | 6 | kg | POA | [$387.00](https://www.mitre10.co.nz/shop/ecko-jolt-head-nails-90-x-4-0mm-2kg-316-stainless-steel/p/307864) | 3×2 kg at $129, Mitre 10. Bearer plies and the step beams |
+| Framing nails 100×4 316 stainless jolt head | 4 | kg | [$284.72](https://www.bunnings.co.nz/nz-nails-100-x-4mm-500g-316-stainless-steel-jolt-head-nail_p0383199) | POA | 8×500 g at $35.59. Joists, rims, skew nails |
+| Batten screws 14g×100 316 stainless | 100 | ea | [$77.05](https://www.bunnings.co.nz/bremick-xtp-14g-x-100mm-t40-stainless-steel-316-black-bugle-batten-100-pack_p0575899) | POA | One box, $77.05. Step ribbons, and the rebuilt joists |
+| M12×120 316 coach bolt, nut, two 50 mm washers | 2 | ea | [$26.46](https://www.bunnings.co.nz/zenith-m12-x-120mm-316-stainless-steel-coach-head-bolt-and-nut_p0236593) | POA | The two rim ties. $4.90 + $1.25 + 2×$3.54 each |
+
+### Concrete
+
+| Description | Qty | Unit | Bunnings | Mitre 10 | Comments |
+|---|---|---|---|---|---|
+| Ready-mix, small load | 2.0 | m³ | $650.00 | POA | About $650, not a quote. On site the figure was about $600 for the 1.1 m³ in the twelve holes. This load covers the rebuilt holes and the step as well. Do not add the cement as well |
+| Portland cement, 20 kg. Only if mixing on site | 36 | ea | [$417.24](https://www.bunnings.co.nz/cemix-20kg-low-carbon-cement_p0581734) | POA | Cemix Ecostrong $11.59, used as GP cement. Four shovels of builders mix to one shovel of cement, and a bit more cement if the mix looks lean Not in the total. |
+| Builders mix, dumped in front of the garage | 2.5 | m³ | POA | POA | Only with the cement. Phone a yard. Not priced Not in the total. |
+
+### DPC
+
+| Description | Qty | Unit | Bunnings | Mitre 10 | Comments |
+|---|---|---|---|---|---|
+| DPC Supercourse 500, 150 mm×30 m | 1 | ea | [$27.42](https://www.bunnings.co.nz/thermakraft-supercourse-500-dpc-150mmx30m_p0207794) | POA | On every pile top. $27.42 |
+| Metalex Green, 1 L | 1 | ea | [$66.00](https://www.bunnings.co.nz/metalex-1l-green-timber-preserve-44501_p0709374) | POA | On every saw cut. $66 |
+
+**Posted $3,230.47 + estimates $3,073.26 = about $6,304 including GST.** The total uses the truck. If the holes are mixed on site, take the truck out and add the cement. The builders mix is a yard quote and is not in the number either way. Do not add the truck and the cement together.
+
+Pack sizes are already rounded up for the nails and the screws. Pile lengths are long on purpose. No allowance for a wasted bolt, or for timber used as a temporary brace. Delivery, the mixer and carting the spoil are extra. Galvanised fasteners, if the map says the site is outside the sea-spray zone, cut a lot of the fixing cost.
 
 ### Cut list
 
@@ -81,57 +107,59 @@ If 140×45 H4 cannot be had, rough-sawn 150×50 H4 SG8 works for the step frames
 | 1×4800 | 1880 + 1880 |
 | 1×4800 | 2510 + 1880 |
 
-Main and rebuilt: 100.8 m bought, 94.07 m used. 6600 = 4 bearer plies + 2 rims; 2510 = 17 joists; 900 = 4 rebuilt bearer plies + 2 rebuilt rims; 380 = 2 blocks; 1880 = 3 rebuilt joists. If 7.2 m lengths are not in stock, splice each bearer ply over a pile (stagger the two plies) and each rim at a joist.
+Main and rebuilt: 100.8 m bought, 94.07 m used. 6600 is the bearer plies and the rims. 2510 is the 17 joists. 900 is the rebuilt bearers and rims. 380 is the two blocks. 1880 is the three rebuilt joists. If 7.2 m is not in stock, splice each bearer ply over a pile and stagger the two plies.
 
 | 140×45 H4 stock | Cuts, mm |
 |---|---|
-| 4×4800 | 900 + 900 + 900 + 900 + 900 |
-| 1×4800 | 220 + 220 + 220 + 220 + 220 + 220 + 220 + 220 + 220 + 220 + 220 + 220 + 220 + 220 + 220 + 250 + 250 + 250 + 250 + 250 |
+| 8×7200 | 6600 |
+| 1×4800 | 500 + 500 + 500 + 500 + 500 + 500 + 500 + 500 + 500 |
+| 1×4800 | 500 + 500 + 500 + 500 + 500 + 500 + 500 + 500 |
+| 1×4800 | 240 + 240 + 240 + 240 + 240 + 240 + 240 + 240 + 240 + 240 + 240 + 240 + 240 + 240 + 240 + 240 + 240 |
 
-Step: 24 m bought, 22.55 m used. 900 = the 20 rail plies (four per frame); 220 = 15 crosspieces (three per frame, at the ends and the middle); 250 = 5 ties. Ask for five 4.8 m lengths. Allow 4 mm per saw cut and 5 mm end trim. Boards: 28 rows on the deck from the 4.2 m and 3.0 m lengths, 21 rows of 900 mm on the rebuilt strip, 4 step boards cut to 6400 mm. 1206 screw positions, buy 1500.
+Steps: 72 m bought, 65.38 m used. 6600 is the eight long plies, two doubles on each step. 500 is the 17 bottom-step joists. 240 is the 17 top-step joists. If there is no 7.2 m H4, cut each long ply as 3950 and 2650 from 4.8 m so the joint lands on a pile. 1384 screw positions, buy 1500.
 
 ## Fixings
 
 | ID | Joint | Detail |
 |---|---|---|
-| F1 | Double bearers and double step rails | 90×4 stainless nails, two rows at 250 mm centres, alternating faces. Same pattern on each 900 mm step rail. |
-| F2 | Ordinary pile to bearer | Four 100×4 stainless skew nails at each pile. |
-| F3 | Joists, rims, blocks, crosspieces | NZS 3604 Table 7.5 nailing: two 100×4 stainless per joist end through the rim, two per crosspiece end. |
-| F4 | Rebuilt joists to the bearer | Four 100×4 skew nails and two 14g×100 screws skewed down from the joist into the bearer, at each rebuilt joist. The point-load screen can put about 1.9 kN of uplift on one support. This is ordinary carpentry, not a rated bracket. |
-| F5 | Step ties (hold-down and sideways) | Five 250 mm 140×45 H4 ties on the front bearer face, at X710, 2005, 3300, 4595, 5890, bottom +78. Four 14g×100 screws into the bearer and two into the inner rail. A paver cannot pull the rail down. If the far paver lifts when someone stands on the end of a frame, the tie has to hold about 4.7 kN and the near paver takes about 9.5 kN. Those two screws into the inner rail are ordinary carpentry, not a rated hold-down. The outer rail is only nailed on through the crosspieces. |
-| F6 | Rebuilt to main rim tie | Two M12×120 stainless coach bolts through the adjacent rims at X200/700, Z398, 50 mm square washers both sides. |
-| F7 | Corner anchor piles | Four corner piles with complete LUMBERLOK 12 kN kits fitted to the maker's sheet. Check the sheet fits a 90 mm double bearer. These brace the whole deck; see the assumptions. |
-| F8 | Step rails on pavers | No fixing into the paver. DPC on the paver, then one H4 offcut packer screwed to the side of the rail if the paver is low. The five ties (F5) hold the frames to the deck. |
+| F1 | Double bearers and the step beams | 90×4 stainless nails, two rows at 250 mm centres, staggered. Same on each double step beam and ribbon. |
+| F2 | Pile to bearer, and the small step piles | Four 100×4 stainless skew nails. Same four nails from the front beam down into each small pile. |
+| F3 | Joists, rims, blocks | Two 100×4 stainless per joist end, through the rim or into the ribbon. |
+| F4 | Rebuilt joists | Four 100×4 skew nails and two 14g×100 screws, skewed in from the side of the joist. The point-load screen can put about 1.9 kN of uplift on one support. Ordinary carpentry, not a rated bracket. |
+| F5 | Bottom-step ribbon to the front piles | Four 14g×100 screws into each pile, in from the side. A bolt through is fine if you would rather drill the pile. Ordinary screws, not a bracket. |
+| F6 | Rebuilt strip to the main rim | Two M12×120 stainless coach bolts at X200 and X700, 50 mm square washers both sides. |
+| F7 | Top-step ribbon to the front bearer | Four 14g×100 screws into the bearer face at each pile. The front of this step sits on the bottom step, packed so the rises match. |
+| F8 | Face board and the two risers | A decking board on the boundary joist, and one on each riser. The top board laps over the face board. |
 
 ## Build order
 
-1. Before you buy. Match the old deck: the new boards sit at that same 500 mm height, not 500 mm above the low grass. Measure from the old boards down to the concrete path. Joists need about 330 mm of air under them and the bearers about 190 mm, or timber lands on the concrete. The grass is the low side, so the pile string is set off the path. Check the sill and the cladding against this height. Stainless or galvanised still depends on the sea-spray zone. Mark the waste and rainwater from the locate plan before you hire an auger. Call beforeUdig as well for anything that plan does not show.
-2. Set out. String the 6600×2600 outline, the 900×1970 rebuilt strip and the 400 mm step. Leave the concrete path where it is. The deck is built over it, not through it. End joist flush with the deck edge, then joists at 437 mm centres, with one doubled joist centred at 3956 (the two plies touching). Mark the 16 pile holes from Drawing 1, then shift any mark that lands on the path or within 500 mm of a drain. Do not mark the step pits yet.
-3. Dig. Twelve ordinary holes and four corner anchor holes, after the shifts in the path-and-drains section. Ordinary holes 450 deep, anchor holes 900 deep, down to firm natural ground, not topsoil. A 400 mm auger is fine only well clear of the path and the drains. The west end, the gully trap, the rebuilt piles and every hole beside the path are dug by hand. If a hole shows pipe, plastic or bedding sand, stop and move it. If a hole is still soft or wet at depth, stop and read the assumptions.
-4. Pour. You want a second person for this. Stand all 16 piles long and plumb, brace them, and fill every hole to about 100 mm below ground in one go, about 0.99 m³. Order 1.2 m³ of mini-mix. Buy 115 bags of 20 kg only if the truck cannot reach the lawn (104 are the calculated fill). Nothing in this pour needs to be level; the piles get cut later.
-5. Cut the piles. After the concrete has set, string a line along each pile row with a water level or laser. The concrete path is the high ground and the grass is lower, so set the string off the path. On the path the line matches the old deck: pile tops end up about 310 mm below the old boards. Every pile stays at least 150 mm clear of the path, and the piles on the grass stand taller. Mark every pile, cut square, brush preservative on the cuts, and lay a square of DPC on each pile top.
-6. Bearers. Nail up the two 6.6 m main double bearers and two 0.9 m rebuilt double bearers (F1). Seat them on the piles at Y300 and Y2510, and at Y−1925 and Y−800, and skew-nail (F2). Fit the four corner anchor kits the way the sheet in the box shows. Take out the old rear bearer; do not reuse it.
-7. Joists and rims. 17 main joists of 2510 mm: flush at each end, 437 mm centres, the doubled joist centred at 3956. Three rebuilt joists of 1880 mm, two blocks cut at 380 mm over the Y−800 bearer, and two 14g×100 screws skewed from each rebuilt joist down into that bearer (F4). Nail the 6.6 m rims at Y0 and Y2555 and the 900 mm rebuilt rims. Two M12 rim ties where the rebuilt strip meets the main deck (F6).
-8. Step ties. Screw five 250 mm H4 ties to the outside face of the front bearer at X710, 2005, 3300, 4595, 5890, bottoms at +78 (390 mm down from the rim top). Four 14g×100 screws into the bearer on each tie (F5). The frames get screwed to these once they are packed.
-9. Step pits. With the deck frame up, dig five pits 760×800 mm centred at X710, 2005, 3300, 4595, 5890, Y2800, about 150 mm deep or down to firm ground. Stay out of the pile concrete: the pit edge wants about 90 mm of soil between it and the hole, and the pavers want 100 mm. Fill with GAP7 in two layers and tamp each hard. In each pit bed four 300×300 pavers, two along each rail, centred 220 mm each side of the pit centre (Y2645 and Y2955). Tap them down until a straight edge and a tape put the top about 400 to 420 mm below the deck rim. Lower is fine. Higher is not.
-10. Step frames, in place. Do not build one 6.6 m ladder and try to lift it. For each bay, nail a double 900 mm H4 rail (F1), set it on the inner pavers against the tie, and screw an H4 offcut packer to the side of the rail so the rail top is 250 mm below the deck rim and the rail does not rock. Nail the three 220 mm crosspieces (ends and middle) to that rail, set the outer double rail, nail the crosspieces through into it, and pack that rail the same way. Then put two 14g×100 screws from the tie into the inner rail. Five frames, one at a time.
-11. Boards. Lay 28 rows on the main deck, 21 on the rebuilt strip and 4 on the step, all along X. Deck butts go on the doubled joist at 3956, so use the 4.2 m and 3.0 m lengths and trim them to meet there. Cut the step boards to 6400 mm, centre them (they stop about 100 mm short of each deck end), and put the step butt on the middle crosspiece of the centre frame. About 5 mm gaps on the deck and about 6 mm on the rebuilt strip. The four step boards sit on the 400 mm frame with a small overhang on the front. Two screws per board per joist or crosspiece. Brush every cut. Keep lawn, path and garden clear of the timber.
+1. Before you buy. Match the old deck: the new boards sit at that same 500 mm, not 500 mm above the low grass. Measure from the old boards down to the concrete path. Joists need about 330 mm of air over the path and the bearers about 190 mm. The steps are measured off the path as well, because that is where you walk. Tape that height and divide by three. If it is 500, each rise is 167. The lawn is lower and is not the step. Check the sill and the cladding. Stainless or galvanised still depends on the sea-spray zone. A services reply that says no power within 10 m is not to be trusted: there is power. Mark the stormwater and the waste before any digging.
+2. Set out. String the 6600×2600 outline and the 900×1970 rebuilt strip. The steps stick out 560 mm past the front, two goings of 280. Leave the path. End joist flush, then 437 mm centres, doubled joist centred at 3956. Mark the 16 pile holes, then the six step holes on the same X, 560 mm out. Shift any mark that lands on the path or within 500 mm of a pipe. Paint the marks.
+3. Dig, with a spade. Every deck hole is 400×400 and 600 deep, down to firm ground, not topsoil. No 900 mm anchor holes. At 600 a shovel is enough. An auger only earns its keep past 600, and these holes do not go there. About ten minutes a hole. The west end, the gully trap, the rebuilt piles and every hole beside the path are the careful ones. Stormwater goes out through the gate, and the waste is beside it. Power is the orange, fibre is the white, water is its own pipe. If the spade finds pipe, plastic or bedding sand, stop and move the hole. No hole edge within 500 mm of a pipe, and no bearer bay past 1.4 m.
+4. Concrete. One hole at a time, unless the weather is settled and every hole is open. The twelve main holes are 1.15 m³, the 1.1 m³ counted on site, pile left in the hole. Rebuilt holes and the step holes bring it to about 1.82 m³. Order 2.0 m³ if a truck is coming, and barrow it. Otherwise builders mix dumped in front of the garage, plus cement: four shovels of mix to one of cement, a bit more cement if it looks lean, mixer hired. Fill to about 100 mm below the ground. Do not use the no-mix post-hole bags. Nothing in the hole has to be level.
+5. Cut the piles. String off the path, not the lawn. On the path the tops finish about 310 mm below the old boards, and at least 150 mm clear of the path. The grass piles stand taller. Cut square, preservative on the cut, DPC on the top.
+6. Bearers. Nail the two 6.6 m double bearers and the two 0.9 m rebuilt bearers (F1). Seat them on the piles and skew-nail (F2). No anchor brackets. Take out the old rear bearer and do not reuse it.
+7. Joists and rims. 17 joists of 2510: flush at each end, 437 centres, the doubled joist at 3956. Screws into a bearer go in from the side of the joist, not down through the top. Three rebuilt joists of 1880, two blocks cut at 380, and the skewed 14g screws (F4). Rims at Y0 and Y2555. Two M12 bolts where the rebuilt strip meets the deck (F6). Get the deck frame up before the steps. The step height is in mid-air until the deck is there. Offcuts can be a temporary step.
+8. Step piles. With the deck frame up, dig the six small holes, 300×300 and 400 deep, on the same X as the front piles and 560 mm out from the face. Not 600. Stand a 750 mm pile, plumb it, and concrete it. Cut it so the front beam will finish with its top about 135 mm above the path.
+9. Bottom step. Screw a double H4 ribbon to the front piles, four 14g×100 screws each (F5). Joists out from it, cut about 500, on the same lines as the deck joists. Double front beam on the small piles. Top of this framing about 135 mm above the path, so the 32 mm board finishes at about 167. A 140 does not fit over the path. Rip the bottom of the ribbon and the beam where they would touch it, leave 15 mm of air, and do not go under 120 mm deep. If that rip is in a bay, put a spare pile each side of the path.
+10. Top step, on the bottom one. Set it back one going, 280 mm. Double ribbon screwed to the face of the front bearer (F7), short joists cut about 240, front beam packed off the bottom step so the framing top is about 301 mm above the path. The board then finishes at about 333. Tape the three rises off the path and make them equal. Do not cut a stringer. No handrail. Three rises is the limit. One more would need a rail.
+11. Boards. 28 rows on the deck, 21 on the rebuilt strip, three on each step, all along X. Butts on the doubled joist at 3956, so use the 4.2 m and 3.0 m lengths. A decking board on the face of the boundary joist, the top board over it, and a board on each riser. About 5 mm gaps on the deck and about 6 mm on the rebuilt strip. Two screws per board per joist. Preservative on every cut.
 
 ## Assumptions, and what I would get checked in an ideal world
 
-This is what I would do. None of it has been checked by an engineer or a builder, and no council consent is involved: the deck is under 1.5 m, so it is exempt building work, but it still has to be built properly.
+We walked it on 11 November. The holes, the concrete and the two steps follow that conversation. It is still not an engineering sign-off, and there is no consent. Under 1.5 m the work is exempt. Exempt is not the same thing as the stair rules or the bracing rules being met on paper.
 
-- **The four corner piles as anchors.** A freestanding deck needs something to stop it racking. My default is four corner anchor piles with 12 kN kits in 900 mm holes. An engineer would size this properly from the deck weight and the site wind and earthquake loads. I also need the bracket in the box to fit a 90 mm double bearer and a 125 mm pile. If the sheet shows a single bearer, I will not pack it out to suit.
-- **The ground.** Every footing assumes firm natural clay at about 100 kPa under the topsoil, which is normal for Auckland but not guaranteed. One step paver is asked for about 79 kPa while both pavers stay down, and about 105 kPa if the far one lifts. That second figure is just over the 100 kPa assumption, and either figure is a lot for a 40 mm patio paver. A thicker paver or a concrete block from the same yard is better if they have it. If a hole hits soft, wet or filled ground, that hole needs a deeper or wider footing, and someone who knows soils should look at it.
-- **The step frames.** Each double rail is checked as a short beam only, at 49% of my screen with a 2.7 kN point load on the end of a frame. Pretending both pavers can pull down shows about 2.4 kN trying to lift the far paver. They cannot. With that paver out of the sum, the centre tie holds about 4.7 kN and the bending does not get worse. The two screws into the inner rail are ordinary carpentry, not a rated connection, and the outer rail only reaches them through the nailed crosspieces. I would rather have the screws than pretend the frame only sits on the pavers.
-- **Stainless everywhere, until I check.** The list is priced in 316 stainless because I do not yet know if the site is in the sea-spray zone (within 500 m of the sea or a harbour, or 100 m of a tidal estuary or sheltered inlet). Outside it, NZS 3604 allows hot-dip galvanised, which is about a quarter of the price. I will check the GIS viewer before I buy a single nail.
-- **The concrete path and the drains.** The path stays and the deck spans it. The locate plan puts the waste and rainwater down the west side, 700 to 900 mm off the deck, 430 to 550 mm deep, and only 240 to 270 mm deep beside the pad. Those depths are approximate. The drawn pile marks are the starting grid. On the day, no hole goes through concrete or within 500 mm of a found pipe, and no bearer bay grows past 1.4 m. The west corner anchors stay 900 mm deep only if the hand digging confirms that clearance.
-- **The 250 mm step.** A single 250 mm rise is above what the stair rules allow for a compliant step. It is our choice for this garden, and nothing here claims access compliance. The step boards stop about 100 mm short of the deck ends so they are not cantilevering past the end frames.
-- **Timber and prices.** 140×45 H4 is not listed online; 4.8 m lengths cut into 900 mm frames are the ask, and rough-sawn 150×50 is the fallback in the shopping list. Decking is named 4.2 m and 3.0 m lengths, not a random mix. Prices were read on 10 November 2026 and will drift.
-- **The old rebuilt strip.** I am replacing the old bearer and not relying on any retained timber. The rebuilt joists are screwed and skew-nailed to the new bearer. If what comes out of the ground is worse than expected, the rebuilt piles get the same treatment as the main ones.
+- **No anchor piles.** A freestanding deck needs something against racking. Four 900 mm anchors with brackets was the old default, and the ROBO preview counts bracing that way. On site, four anchors was more than this wants, and 600 mm on every pile was the call. I am following that. It is not a bracing calculation, and I am not buying the brackets.
+- **The ground.** Firm clay at about 100 kPa under the topsoil. That is the usual Auckland assumption, not a test. A step pile is at about 28 kPa on a 300×300. If a hole is soft or wet at 600, that hole gets deeper or wider and it is no longer a spade job.
+- **The steps.** The front beam, full 140 over a 1.30 m bay, is about 71% of my bending screen under a factored point load. Ripped to 120 mm, with a pile each side of the path, that half-bay is about 47%. The screws are ordinary screws. The bottom step does not have 150 mm clearance over the path. The rises are even. They are not a consented stair.
+- **The services reply.** It said no gas and no power within 10 m. The power is there. Drain depths are approximate. Paint, spade, and move a hole rather than dig through a pipe.
+- **Stainless until the map is checked.** 316 because I have not confirmed the sea-spray zone. Outside it, hot-dip galvanised is allowed and much cheaper.
+- **The path.** It stays. The deck spans it. The steps are taped off it, not off the lawn.
+- **Prices.** Read on 11 November 2026 where a figure is shown. The H4 line is 150×50 because 140×45 H4 is not listed. The truck is a round figure, not a quote.
+- **The rebuilt strip.** The old bearer comes out. If the ground there is worse than the main holes, those four piles get the same 600 mm and the same concrete.
 
 ## Sources
 
-Northpine wet-service tables: 140×45 SG8 at 450 centres spans 2.35 m; NZS 3604 Table 7.2 allows an 1100 mm cantilever against the rebuilt 755 mm; §7.1.2 allows rims within 300 mm of a support to replace blocking; §6.4 requires piles to stand 150 mm clear of the ground. [Northpine tables](https://www.northpine.co.nz/span-tables) · [MiTek LUMBERLOK data](https://mitek.co.nz/wp-content/uploads/2021/06/LUMBERLOK-Timber-Connectors-Characteristic-Loadings-Data.pdf) · [BRANZ Bulletin 611, low bearers on concrete](https://d39d3mj7qio96p.cloudfront.net/media/documents/BU611-Timber-Slat-Deck.pdf) · [H4 SG8 product information](https://www.fwp.co.nz/wp-content/uploads/2023/11/Building-Products-Information-Waipapa-Pine-H4-H5-H6-MG-RS-SG8-Framing-Timber.pdf).
+Northpine wet-service tables: 140×45 SG8 at 450 centres spans 2.35 m. NZS 3604 wants a pile 150 mm clear of the ground. The deck piles meet that. The bottom step does not. The stair proportion used here is a rise under 190 and 2R+G between 550 and 700. [Northpine tables](https://www.northpine.co.nz/span-tables) · [BRANZ Bulletin 611](https://d39d3mj7qio96p.cloudfront.net/media/documents/BU611-Timber-Slat-Deck.pdf).
 
-Reproduce with `OPENBLAS_NUM_THREADS=1 python scripts/check_revision.py`; data in design.json. The step frames are 900 mm. They do not need to be one continuous rail. Earlier plans are in archive/.
+Reproduce with `OPENBLAS_NUM_THREADS=1 python scripts/check_revision.py`. Earlier plans, including the five short frames, are in archive/. Drawing ISL38807 is a preview and is not for construction.
