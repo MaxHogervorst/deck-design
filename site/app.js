@@ -1,5 +1,6 @@
 const drawings = {}; // INLINE_DRAWINGS
-const captions={sheet:'Sheet 1. Foundation and framing plan, and long section A-A. Drawn to the consent document standard. Not lodged.',sheet2:'Sheet 2. The notes, cross section B-B, the pile hole and the two steps.',sheet3:'Sheet 3. The works area, the local levels and the schedules. Boundaries are not surveyed.',piles:'16 piles in 600 mm holes, and six smaller step piles. No anchor kits. The path stays. No hole in it, and none within 500 mm of the west drains.',framing:'Boards along the deck. 17 joists at 437 mm centres, one doubled at 3956. Two steps, 560 mm out, not a cut stringer.',fixings:'Side view of the two steps. Three rises taped off the path. The bottom beam is ripped where it would hit the path.'};
-function show(view){document.querySelector('#drawing').innerHTML=drawings[view];document.querySelector('#drawing-caption').textContent=captions[view];document.querySelector('#drawing-panel').setAttribute('aria-labelledby','tab-'+view);document.querySelectorAll('[data-view]').forEach(b=>{const yes=b.dataset.view===view;b.setAttribute('aria-selected',String(yes));b.tabIndex=yes?0:-1;});}
-document.querySelectorAll('[data-view]').forEach(b=>{b.onclick=()=>show(b.dataset.view);b.onkeydown=e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const keys=Object.keys(drawings),i=keys.indexOf(b.dataset.view),n=e.key==='Home'?0:e.key==='End'?keys.length-1:(i+(e.key==='ArrowRight'?1:keys.length-1))%keys.length;show(keys[n]);document.querySelector('#tab-'+keys[n]).focus();};});
-document.querySelector('#print').onclick=()=>window.print();document.querySelector('#copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);document.querySelector('#message').textContent='Link copied.';}catch{document.querySelector('#message').textContent=location.href;}};show('sheet');
+for (const id of ['sheet','sheet2','sheet3','piles','framing','fixings']) {
+  const el = document.querySelector('#view-' + id);
+  if (el) el.innerHTML = drawings[id];
+}
+document.querySelector('#print').onclick = () => window.print();
