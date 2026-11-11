@@ -81,9 +81,9 @@ Set-out, X from the left edge. Piles: 62.5, 1357.5, 2652.5, 3947.5, 5242.5, 6537
 
 Heights. The path is where you walk and the grass is lower, so the steps are taped off the path. Deck boards +500 if that is what the old deck measures, joist top +468, bearer top +328, pile top +187. Bottom step board about +167, framing top +135. Top step board about +333, framing top +301. If the tape from the path to the deck boards is not 500, divide whatever it is by three.
 
-## The sheet
+## The sheets
 
-[Open the set-out sheet](docs/drawings/sheet.svg). Plan, long side and the two steps, with the sizes on this page. Same build as the notes below. Not the ROBO preview, and not for consent.
+[Sheet 1 · Plan and elevation](docs/drawings/sheet.svg) · [Sheet 2 · Notes and details](docs/drawings/sheet2.svg). Same A2 sheet as the preview: blue border, plan, elevation, green notes, red sizes, title block. These two sheets are this build. They are not drawing ISL38807.
 
 ## Three drawings
 
@@ -240,7 +240,7 @@ while i < len(lines):
 body = '\n'.join(parts)
 a = body.index('<h2 id="three-drawings">')
 bb = body.index('<h2 id="foundations">', a)
-body = body[:a] + '''<h2 id="three-drawings">Drawings</h2><div class="tabs" role="tablist" aria-label="Drawings"><button id="tab-sheet" role="tab" aria-controls="drawing-panel" aria-selected="true" data-view="sheet">Sheet</button><button id="tab-piles" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="piles">1 · Piles</button><button id="tab-framing" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="framing">2 · Framing</button><button id="tab-fixings" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="fixings">3 · Steps</button></div><div id="drawing-panel" role="tabpanel" aria-labelledby="tab-sheet"><div id="drawing"></div><p id="drawing-caption" class="caption"></p></div><p class="note">Download: <a href="drawings/sheet.svg">set-out sheet</a> · <a href="drawings/piles.svg">piles</a> · <a href="drawings/framing.svg">framing</a> · <a href="drawings/fixings.svg">steps</a></p>''' + body[bb:]
+body = body[:a] + '''<h2 id="three-drawings">Drawings</h2><div class="tabs" role="tablist" aria-label="Drawings"><button id="tab-sheet" role="tab" aria-controls="drawing-panel" aria-selected="true" data-view="sheet">Sheet 1</button><button id="tab-sheet2" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="sheet2">Sheet 2</button><button id="tab-piles" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="piles">Piles</button><button id="tab-framing" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="framing">Framing</button><button id="tab-fixings" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="fixings">Steps</button></div><div id="drawing-panel" role="tabpanel" aria-labelledby="tab-sheet"><div id="drawing"></div><p id="drawing-caption" class="caption"></p></div><p class="note">Download: <a href="drawings/sheet.svg">sheet 1</a> · <a href="drawings/sheet2.svg">sheet 2</a> · <a href="drawings/piles.svg">piles</a> · <a href="drawings/framing.svg">framing</a> · <a href="drawings/fixings.svg">steps</a></p>''' + body[bb:]
 body = body.replace('href="docs/', 'href="').replace('archive/', '<a href="https://github.com/MaxHogervorst/deck-design/tree/main/archive">archive/</a>')
 
 
@@ -531,224 +531,261 @@ bd += text(40, 648, 'F6 two M12 bolts where the rebuilt strip meets the deck. F8
 bd += text(40, 676, 'Bottom step is H4. It does not clear the path by 150 mm. The deck piles do.', 13)
 svg('fixings', 'Side of the two steps: three rises off the path, ribbon screwed to the piles, small piles under the front beam', bd, h=720)
 
-# Set-out sheet. Same geometry as the guide. Not a copy of the ROBO preview.
-Sht = 0.098
-OX, OY = 168, 34
+# Two A2 sheets in the preview sheet format. Geometry is this build, not ISL38807.
+BLUE, GREEN, RED, INK = '#0033cc', '#008f2d', '#d10000', '#111111'
+K = 0.08  # 1:25 when the viewBox is 2 units per paper millimetre
+
+def _ln(x, y, x2, y2, stroke=INK, sw=0.8, dash=''):
+    extra = f' stroke-dasharray="{dash}"' if dash else ''
+    return f'<line x1="{x:.2f}" y1="{y:.2f}" x2="{x2:.2f}" y2="{y2:.2f}" stroke="{stroke}" stroke-width="{sw}" fill="none"{extra}/>'
+
+def _tx(x, y, s, size=8, anchor='start', fill=INK, weight='500'):
+    return f'<text x="{x:.2f}" y="{y:.2f}" font-size="{size}" font-weight="{weight}" text-anchor="{anchor}" fill="{fill}">{E(s)}</text>'
+
+def _box(x, y, w, h, stroke=INK, sw=0.8, dash=''):
+    extra = f' stroke-dasharray="{dash}"' if dash else ''
+    return f'<rect x="{x:.2f}" y="{y:.2f}" width="{w:.2f}" height="{h:.2f}" fill="none" stroke="{stroke}" stroke-width="{sw}"{extra}/>'
+
+def _dot(x, y):
+    return f'<circle cx="{x:.2f}" cy="{y:.2f}" r="1.7" fill="{GREEN}"/>'
+
+def _hdim(x1, x2, y, label):
+    mid = (x1 + x2) / 2
+    return (_ln(x1, y, x2, y, RED, 0.6)
+            + _ln(x1 - 2.4, y + 2.4, x1 + 2.4, y - 2.4, RED, 0.6)
+            + _ln(x2 - 2.4, y + 2.4, x2 + 2.4, y - 2.4, RED, 0.6)
+            + _tx(mid, y - 2.6, label, 8, 'middle', RED))
+
+def _vdim(x, y1, y2, label):
+    mid = (y1 + y2) / 2
+    return (_ln(x, y1, x, y2, RED, 0.6)
+            + _ln(x - 2.4, y1 - 2.4, x + 2.4, y1 + 2.4, RED, 0.6)
+            + _ln(x - 2.4, y2 - 2.4, x + 2.4, y2 + 2.4, RED, 0.6)
+            + _tx(x - 4, mid + 2, label, 8, 'end', RED))
+
+def _note(x, y, lines, to=None, size=7.6):
+    out = [''.join(_tx(x, y + i * 10.5, line, size, 'start', GREEN, '600') for i, line in enumerate(lines))]
+    if to:
+        out.append(_ln(x, y + (len(lines) - 1) * 10.5 + 3, to[0], to[1], GREEN, 0.55))
+        out.append(_dot(*to))
+    return ''.join(out)
+
+def _title(parts, sheet_no, scale):
+    top, bot = 742, 818
+    parts.append(_box(10, 10, 1168, 820, BLUE, 2.6))
+    parts.append(_box(16, 16, 1156, 808, BLUE, 0.7))
+    parts.append(_box(16, top, 1156, bot - top, INK, 0.9))
+    parts.append(_ln(168, top, 168, bot, INK, 0.8))
+    parts.append(_ln(860, top, 860, bot, INK, 0.8))
+    parts.append(_tx(92, 776, 'MH', 26, 'middle', INK, '700'))
+    parts.append(_tx(92, 796, 'DECK', 12, 'middle', INK, '700'))
+    parts.append(_tx(92, 812, 'WORKING PLAN', 6.5, 'middle', INK, '500'))
+    parts.append(_tx(180, 770, 'PROPOSED DECK FOR MAX HOGERVORST', 13, 'start', INK, '700'))
+    parts.append(_tx(180, 788, '18B FORMBY AVENUE, POINT CHEVALIER, AUCKLAND', 9.5, 'start', INK, '500'))
+    parts.append(_tx(180, 810, 'PLEASE NOTE ALL THE SCALES SPECIFIED IN THIS DRAWING ARE FOR AN A2 SHEET WITH A 10mm MARGIN', 6.4, 'start', INK, '400'))
+    rows = [
+        ('DRAWN', 'MH', 'REVISION', 'A'),
+        ('DATE', '11/11/26', 'SCALE', scale),
+        ('APPROVED', '—', 'SIZE', 'A2'),
+        ('SHEET', f'{sheet_no} OF 2', 'DWG NO.', '0001'),
+    ]
+    rh = (bot - top) / 4
+    xs = [860, 936, 1024, 1110, 1172]
+    for i, row in enumerate(rows):
+        y = top + i * rh
+        if i:
+            parts.append(_ln(860, y, 1172, y, INK, 0.55))
+        for x in xs[1:-1]:
+            parts.append(_ln(x, y, x, y + rh, INK, 0.45))
+        for j, cell in enumerate(row):
+            parts.append(_tx(xs[j] + 5, y + rh * 0.68, cell, 7.4, 'start', INK, '650' if j % 2 == 0 else '500'))
+    parts.append(_tx(848, 810, 'NOT ISL38807', 6.5, 'end', INK, '500'))
+
+def _sheet(parts, label):
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1188 840" role="img" '
+        f'aria-label="{E(label)}"><title>{E(label)}</title>'
+        '<style>text{font-family:Arial,Helvetica,sans-serif}</style>'
+        + ''.join(parts) + '</svg>'
+    )
 
 def PX(x):
-    return OX + x * Sht
+    return 100 + x * K
 
 def PY(y):
-    return OY + (y + 1970) * Sht
+    return 206 + y * K
 
-def piece(x, y, w, h, fill, stroke='#1c1c1c', sw=1, dash=''):
-    extra = f' stroke-dasharray="{dash}"' if dash else ''
-    return f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"{extra}/>'
-
-def ln(x, y, x2, y2, stroke='#1c1c1c', sw=1.2, dash=''):
-    extra = f' stroke-dasharray="{dash}"' if dash else ''
-    return f'<line x1="{x:.1f}" y1="{y:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{stroke}" stroke-width="{sw}"{extra}/>'
-
-def tx(x, y, s, size=13, anchor='start', fill='#1c1c1c', weight='650'):
-    return f'<text x="{x:.1f}" y="{y:.1f}" font-size="{size}" font-weight="{weight}" text-anchor="{anchor}" fill="{fill}">{E(s)}</text>'
-
-def hdim(x1, x2, y, label):
-    mid = (x1 + x2) / 2
-    return (ln(x1, y, x2, y, '#9a2b2b', 1) + ln(x1, y - 4, x1, y + 4, '#9a2b2b', 1)
-            + ln(x2, y - 4, x2, y + 4, '#9a2b2b', 1)
-            + tx(mid, y - 5, label, 12, 'middle', '#9a2b2b'))
-
-def vdim(x, y1, y2, label):
-    mid = (y1 + y2) / 2
-    return (ln(x, y1, x, y2, '#9a2b2b', 1) + ln(x - 4, y1, x + 4, y1, '#9a2b2b', 1)
-            + ln(x - 4, y2, x + 4, y2, '#9a2b2b', 1)
-            + tx(x + 8, mid + 4, label, 12, 'start', '#9a2b2b'))
-
-sh = []
-sh.append('<rect width="1680" height="1188" fill="#ffffff"/>')
-sh.append('<rect x="16" y="16" width="1648" height="1156" fill="none" stroke="#1d4e89" stroke-width="3"/>')
-sh.append('<rect x="22" y="22" width="1636" height="1144" fill="none" stroke="#1d4e89" stroke-width="0.8"/>')
-sh.append(tx(40, 78, 'PLAN', 16, 'start', '#1d6b3a'))
-sh.append(tx(40, 98, 'house', 12, 'start', '#1d6b3a', '500'))
-sh.append(tx(40, 114, 'at the', 12, 'start', '#1d6b3a', '500'))
-sh.append(tx(40, 130, 'back', 12, 'start', '#1d6b3a', '500'))
-
-# Outlines. House at the back (top), steps at the front (bottom).
-sh.append(piece(PX(0), PY(-1970), 900 * Sht, 1970 * Sht, '#f4f7f2'))
-sh.append(piece(PX(0), PY(0), 6600 * Sht, 2600 * Sht, '#f7f4ee'))
-sh.append(piece(PX(0), PY(2600), 6600 * Sht, 280 * Sht, '#f3e6c8'))
-sh.append(piece(PX(0), PY(2880), 6600 * Sht, 280 * Sht, '#f7ecd2'))
-# Path reminder, not a survey. Runs out from the house, under the deck.
-sh.append(piece(PX(2850), PY(-1970), 900 * Sht, 5130 * Sht, 'none', '#8a8172', 1, '5 4'))
-sh.append(tx(PX(3300), PY(1400), 'path under here', 12, 'middle', '#6d6456', '500'))
-sh.append(tx(PX(3300), PY(1400) + 16, 'tape it · no hole', 12, 'middle', '#6d6456', '500'))
-# West drain, approximate.
-sh.append(ln(PX(-780), PY(-1970), PX(-780), PY(3160), '#a33b32', 3))
-sh.append(tx(46, 250, 'drain', 12, 'middle', '#a33b32'))
-sh.append(tx(46, 266, 'tape', 11, 'middle', '#a33b32', '500'))
-sh.append(tx(46, 280, '500 clear', 11, 'middle', '#a33b32', '500'))
-# Joists
+s1 = []
+_title(s1, 1, '1:25 & NTS')
+# Rebuilt strip at the house, then the deck, then the two steps.
+s1.append(_box(PX(0), PY(-1970), 900 * K, 1970 * K))
+s1.append(_box(PX(0), PY(0), 6600 * K, 2600 * K))
+s1.append(_box(PX(0), PY(2600), 6600 * K, 560 * K))
+s1.append(_ln(PX(0), PY(2880), PX(6600), PY(2880), INK, 0.45))
 for x in d['main_joist_centres_mm']:
-    sh.append(piece(PX(x - 22.5), PY(45), 45 * Sht, 2510 * Sht, '#c9d5c4', '#52675b', 0.6))
-for x in (3933, 3978):
-    sh.append(piece(PX(x - 22.5), PY(45), 45 * Sht, 2510 * Sht, '#254c3e', '#254c3e', 0.6))
+    heavy = x in (3933, 3978)
+    s1.append(_ln(PX(x), PY(45), PX(x), PY(2555), INK, 1.05 if heavy else 0.4))
 for x in (22.5, 450, 877.5):
-    sh.append(piece(PX(x - 22.5), PY(-1925), 45 * Sht, 1880 * Sht, '#c9d5c4', '#52675b', 0.6))
-# Bearers and rims
-for y in (300, 2510):
-    sh.append(piece(PX(0), PY(y - 45), 6600 * Sht, 90 * Sht, '#c4a574', '#1c1c1c', 0.8))
-for y in (-1925, -800):
-    sh.append(piece(PX(0), PY(y - 45), 900 * Sht, 90 * Sht, '#c4a574', '#1c1c1c', 0.8))
-for y, length in ((0, 6600), (2555, 6600), (-1970, 900), (-45, 900)):
-    sh.append(piece(PX(0), PY(y), length * Sht, 45 * Sht, '#b08958', '#1c1c1c', 0.7))
-# Step members
-sh.append(piece(PX(0), PY(2555), 6600 * Sht, 90 * Sht, '#c4a574', '#1c1c1c', 0.8))
-sh.append(piece(PX(0), PY(3070), 6600 * Sht, 90 * Sht, '#c4a574', '#1c1c1c', 0.8))
-sh.append(piece(PX(0), PY(2600), 6600 * Sht, 90 * Sht, '#af6b3c', '#1c1c1c', 0.8))
-sh.append(piece(PX(0), PY(2880), 6600 * Sht, 90 * Sht, '#af6b3c', '#1c1c1c', 0.8))
-for x in d['main_joist_centres_mm']:
-    sh.append(piece(PX(x - 22.5), PY(2645), 45 * Sht, 425 * Sht, '#d7e0d2', '#52675b', 0.5))
-# Piles
+    s1.append(_ln(PX(x), PY(-1925), PX(x), PY(-45), INK, 0.4))
+for y, length in ((300, 6600), (2510, 6600), (-1925, 900), (-800, 900)):
+    s1.append(_ln(PX(0), PY(y - 45), PX(length), PY(y - 45), INK, 0.9))
+    s1.append(_ln(PX(0), PY(y + 45), PX(length), PY(y + 45), INK, 0.9))
+s1.append(_ln(PX(0), PY(2555), PX(6600), PY(2555), INK, 0.7))
+s1.append(_ln(PX(0), PY(3070), PX(6600), PY(3070), INK, 0.7))
+s1.append(_ln(PX(0), PY(3160), PX(6600), PY(3160), INK, 0.7))
 for y in (300, 2510):
     for x in pile_x:
-        sh.append(piece(PX(x - 200), PY(y - 200), 400 * Sht, 400 * Sht, 'none', '#7d8b82', 0.8, '3 2'))
-        sh.append(piece(PX(x - 62.5), PY(y - 62.5), 125 * Sht, 125 * Sht, '#254c3e', '#1c1c1c', 0.8))
+        s1.append(_box(PX(x - 200), PY(y - 200), 400 * K, 400 * K, '#8a8a8a', 0.4, '2 1.4'))
+        s1.append(_box(PX(x - 62.5), PY(y - 62.5), 125 * K, 125 * K, INK, 0.8))
 for y in (-1925, -800):
     for x in (175, 725):
-        sh.append(piece(PX(x - 200), PY(y - 200), 400 * Sht, 400 * Sht, 'none', '#7d8b82', 0.8, '3 2'))
-        sh.append(piece(PX(x - 62.5), PY(y - 62.5), 125 * Sht, 125 * Sht, '#254c3e', '#1c1c1c', 0.8))
+        s1.append(_box(PX(x - 62.5), PY(y - 62.5), 125 * K, 125 * K, INK, 0.8))
 for x in pile_x:
-    sh.append(piece(PX(x - 150), PY(3115 - 150), 300 * Sht, 300 * Sht, 'none', '#af6b3c', 0.8, '3 2'))
-    sh.append(piece(PX(x - 62.5), PY(3115 - 62.5), 125 * Sht, 125 * Sht, '#af6b3c', '#1c1c1c', 0.8))
+    s1.append(_box(PX(x - 62.5), PY(3115 - 62.5), 125 * K, 125 * K, INK, 0.8))
 
-sh.append(tx(PX(500), PY(-700), 'rebuilt', 13, 'middle', '#1d6b3a'))
-sh.append(tx(PX(500), PY(-560), '900 wide', 12, 'middle', '#1d6b3a', '500'))
-sh.append(tx(PX(1600), PY(900), 'deck  6600 × 2600', 15, 'start'))
-sh.append(tx(PX(1800), PY(1700), 'joists 437 crs', 13, 'middle', '#254c3e'))
-sh.append(tx(PX(4300), PY(1100), 'board butts', 12, 'start', '#254c3e'))
-sh.append(tx(PX(6100), PY(2740), 'top step', 13, 'end'))
-sh.append(tx(PX(6100), PY(3020), 'bottom step', 13, 'end'))
-sh.append(tx(PX(62.5), PY(-400), '62.5', 11, 'middle', '#9a2b2b', '500'))
+s1.append(_vdim(PX(0) - 16, PY(-1970), PY(0), '1970'))
+s1.append(_vdim(PX(0) - 34, PY(0), PY(2600), '2600'))
+s1.append(_vdim(PX(0) - 16, PY(2600), PY(3160), '560'))
+chain = PY(3160) + 18
+for a, b in zip(pile_x, pile_x[1:]):
+    s1.append(_ln(PX(a), PY(y=2510) if False else PY(3115), PX(a), chain, RED, 0.35))
+    s1.append(_hdim(PX(a), PX(b), chain, '1295'))
+s1.append(_ln(PX(pile_x[-1]), PY(3115), PX(pile_x[-1]), chain, RED, 0.35))
+s1.append(_hdim(PX(0), PX(6600), chain + 16, '6600'))
+s1.append(_tx(PX(0) - 2, chain - 10, '62.5', 7, 'end', RED))
+s1.append(_tx(PX(6600) + 2, chain - 10, '62.5', 7, 'start', RED))
+cx = PX(3300)
+s1.append(_tx(cx, chain + 40, 'PLAN', 10, 'middle', GREEN, '700'))
+s1.append(_ln(cx - 16, chain + 43, cx + 16, chain + 43, GREEN, 0.8))
+s1.append(_tx(cx, chain + 54, 'SCALE 1:25', 7.5, 'middle', GREEN, '600'))
 
-# Dimensions outside the plan
-sh.append(hdim(PX(0), PX(6600), PY(3160) + 22, '6600'))
-sh.append(vdim(PX(6600) + 16, PY(0), PY(2600), '2600'))
-sh.append(vdim(PX(0) - 16, PY(-1970), PY(0), '1970'))
-sh.append(vdim(PX(6600) + 58, PY(2600), PY(3160), '560'))
-sh.append(tx(PX(80), PY(3160) + 42, 'piles at 1295 centres · two goings of 280 · step piles on the same X, at Y3115', 12, 'start', '#9a2b2b', '500'))
+s1.append(_note(188, 46, ['88×32 H3.2 MERCH GRADE', 'GRIPTREAD DECKING.', 'ABOUT 5mm GAP. BOARDS', 'ALONG THE DECK.'], (PX(1800), PY(30))))
+s1.append(_note(360, 46, ['140×45 SG8 H3.2', 'DOUBLE BEARER'], (PX(2200), PY(300))))
+s1.append(_note(500, 46, ['NOTE', 'DECKING IS FIXED WITH', 'DECKING SCREWS'], (PX(4200), PY(80))))
+s1.append(_note(188, 108, ['140×45 SG8 H3.2 JOIST', 'AT 437 CENTRES', 'DOUBLED AT 3956'], (PX(1770.5), PY(400))))
+s1.append(_note(400, 108, ['125×125 H5 PILE', 'HOLE 400×400×600', 'NO ANCHOR BRACKET'], (PX(2652.5), PY(300))))
+s1.append(_note(560, 118, ['TWO STEPS', 'GOING 280', 'SEE SHEET 2'], (PX(5000), PY(2880))))
+s1.append(_tx(PX(450), 34, 'REBUILT 900×1970', 7.5, 'middle', GREEN, '600'))
 
-# Section
-sec_s = 0.46
+# Long elevation, aligned with the plan. True 1:25, so it is the thin strip.
+def EZ(z):
+    return 648 - z * K
+
+s1.append(_ln(PX(0), EZ(0), PX(6600), EZ(0), INK, 0.9))
+for x in pile_x:
+    s1.append(_box(PX(x - 62.5), EZ(187), 125 * K, (187 + 40) * K))
+s1.append(_box(PX(0), EZ(328), 6600 * K, 140 * K))
+s1.append(_box(PX(0), EZ(468), 6600 * K, 140 * K))
+s1.append(_box(PX(0), EZ(500), 6600 * K, 32 * K))
+s1.append(_vdim(PX(0) - 16, EZ(500), EZ(0), '500'))
+s1.append(_tx(PX(80), 600, 'APPROX 500 TO TOP OF BOARDS', 7.5, 'start', RED))
+s1.append(_tx(cx, 708, 'ELEVATION', 10, 'middle', GREEN, '700'))
+s1.append(_ln(cx - 28, 711, cx + 28, 711, GREEN, 0.8))
+s1.append(_tx(cx, 724, 'SCALE 1:25', 7.5, 'middle', GREEN, '600'))
+s1.append(_tx(640, 250, 'SHEET 1 OF 2', 11, 'start', GREEN, '700'))
+s1.append(_tx(640, 266, 'PLAN AND ELEVATION', 8, 'start', GREEN, '500'))
+(root / 'site/drawings' / 'sheet.svg').write_text(_sheet(s1, 'Sheet 1. Plan and elevation of the proposed deck. Owner-builder working plan, not drawing ISL38807.'))
+
+# Sheet 2. Notes, end elevation, pile hole, two steps.
+s2 = []
+_title(s2, 2, '1:25, 1:10 & NTS')
+notes = [
+    'NOTES',
+    '1. OWNER-BUILDER WORKING PLAN.',
+    'THIS IS NOT DRAWING ISL38807.',
+    'IT IS NOT FOR CONSENT.',
+    '2. TIMBER IS 140×45 SG8.',
+    'H3.2 ON THE DECK AND THE',
+    'REBUILT STRIP. H4 ON THE STEPS.',
+    'PILES ARE 125×125 H5.',
+    '3. 16 PILES. HOLES 400×400,',
+    '600 DEEP. NO ANCHOR PILES',
+    'AND NO BRACKETS.',
+    '4. SIX STEP PILES. HOLES',
+    '300×300 AND 400 DEEP.',
+    '5. THE PATH STAYS. NO HOLE',
+    'IN IT. WEST DRAINS: SPADE,',
+    'AND 500 CLEAR OF A PIPE.',
+    '6. RISES ARE TAPED OFF THE',
+    'PATH. IF THE TAPE IS NOT 500,',
+    'DIVIDE IT BY THREE.',
+    '7. NO HANDRAIL. THREE RISES',
+    'IS THE LIMIT.',
+    '8. RIP THE BOTTOM STEP TO',
+    '120 MIN OVER THE PATH.',
+    'LEAVE 15 OF AIR.',
+    '9. SCREWS INTO A BEARER GO',
+    'IN FROM THE SIDE.',
+]
+for i, line in enumerate(notes):
+    s2.append(_tx(36, 42 + i * 12, line, 8, 'start', GREEN, '700' if i == 0 else '500'))
+
+# End elevation, short direction, 1:25.
+def EY(y):
+    return 40 + (y + 200) * K
+
+def EZ2(z):
+    return 640 - z * K
+
+s2.append(_ln(EY(0), EZ2(0), EY(3160), EZ2(0), INK, 0.8))
+for y in (300, 2510, 3115):
+    s2.append(_box(EY(y - 62.5), EZ2(187 if y < 3000 else 40), 125 * K, (187 if y < 3000 else 80) * K))
+s2.append(_box(EY(0), EZ2(468), 2600 * K, 140 * K))
+s2.append(_box(EY(0), EZ2(500), 2600 * K, 32 * K))
+s2.append(_box(EY(2600), EZ2(333), 280 * K, 32 * K))
+s2.append(_box(EY(2880), EZ2(167), 280 * K, 32 * K))
+s2.append(_tx(EY(1400), 668, 'END ELEVATION', 10, 'middle', GREEN, '700'))
+s2.append(_ln(EY(1400) - 42, 671, EY(1400) + 42, 671, GREEN, 0.8))
+s2.append(_tx(EY(1400), 684, 'SCALE 1:25', 7.5, 'middle', GREEN, '600'))
+
+# Detail A, pile hole, 1:10.
+k10 = 0.2
+ax, ay = 760, 210
+s2.append(_box(ax, ay - 120, 80, 120))
+s2.append(_box(ax + 27.5, ay - 168, 25, 150))
+s2.append(_ln(ax - 16, ay, ax + 96, ay, INK, 0.7))
+for i in range(-2, 8):
+    s2.append(_ln(ax - 10 + i * 8, ay + 4, ax + 6 + i * 8, ay + 22, '#777', 0.4))
+s2.append(_note(ax + 96, ay - 150, ['125×125 H5 PILE'], (ax + 40, ay - 150)))
+s2.append(_note(ax + 96, ay - 70, ['400×400 HOLE', '600 DEEP', 'NO ROD'], (ax + 70, ay - 60)))
+s2.append(_note(ax - 150, ay - 20, ['150 MIN CLEAR', 'OF THE PATH', 'ON THE DECK PILES'], (ax + 10, ay - 8)))
+s2.append(_tx(ax + 40, ay + 42, 'DETAIL A - PILE', 10, 'middle', GREEN, '700'))
+s2.append(_ln(ax - 10, ay + 45, ax + 90, ay + 45, GREEN, 0.8))
+s2.append(_tx(ax + 40, ay + 58, 'SCALE 1:10', 7.5, 'middle', GREEN, '600'))
+
+# Detail B, the two steps, 1:10.
+bx, bz = 700, 640
 
 def SY(y):
-    return 900 + (y - 2400) * sec_s
+    return bx + (y - 2350) * k10
 
 def SZ(z):
-    return 390 - z * sec_s
+    return bz - z * k10
 
-sh.append(tx(900, 58, 'STEPS  ·  cut through the front', 16, 'start', '#1d6b3a'))
-sh.append(tx(900, 76, 'tape the rises off the path', 12, 'start', '#1d6b3a', '500'))
-sh.append(piece(SY(2480), SZ(0), (3300 - 2480) * sec_s, 36, '#efe6d4', '#52675b', 0.8))
-sh.append(piece(SY(2520), SZ(46), 620 * sec_s, 28, '#cfc6b4', '#52675b', 0.8))
-sh.append(ln(SY(2420), SZ(0), SY(3320), SZ(0), '#52675b', 1.2))
-sh.append(piece(SY(2465), SZ(328), 90 * sec_s, 140 * sec_s, '#c4a574'))
-sh.append(piece(SY(2380), SZ(468), 220 * sec_s, 140 * sec_s, '#456b54'))
-sh.append(piece(SY(2555), SZ(468), 45 * sec_s, 140 * sec_s, '#c4a574'))
-sh.append(piece(SY(2380), SZ(500), 220 * sec_s, 32 * sec_s, '#d7b98a'))
-sh.append(piece(SY(2555), SZ(135), 90 * sec_s, 120 * sec_s, '#c4a574'))
-sh.append(piece(SY(2645), SZ(135), 425 * sec_s, 45 * sec_s, '#456b54'))
-sh.append(piece(SY(3070), SZ(135), 90 * sec_s, 120 * sec_s, '#c4a574'))
-sh.append(piece(SY(2600), SZ(301), 90 * sec_s, 140 * sec_s, '#af6b3c'))
-sh.append(piece(SY(2690), SZ(301), 190 * sec_s, 45 * sec_s, '#456b54'))
-sh.append(piece(SY(2880), SZ(301), 90 * sec_s, 140 * sec_s, '#af6b3c'))
-sh.append(piece(SY(2600), SZ(333), 280 * sec_s, 32 * sec_s, '#d7b98a'))
-sh.append(piece(SY(2880), SZ(167), 280 * sec_s, 32 * sec_s, '#d7b98a'))
-sh.append(piece(SY(3052), SZ(20), 26, 70, '#af6b3c'))
-sh.append(tx(SY(2360), SZ(530), '+500', 12, 'start', '#9a2b2b'))
-sh.append(tx(SY(2680), SZ(370), '+333', 12, 'start', '#9a2b2b'))
-sh.append(tx(SY(3000), SZ(200), '+167', 12, 'start', '#9a2b2b'))
-sh.append(tx(SY(2700), SZ(-30), 'path = 0', 12, 'start', '#6d6456', '500'))
-sh.append(hdim(SY(2600), SY(2880), SZ(-8), '280'))
-sh.append(hdim(SY(2880), SY(3160), SZ(70), '280'))
-sh.append(tx(SY(3180), SZ(150), 'rip to', 11, 'start', '#1d6b3a'))
-sh.append(tx(SY(3180), SZ(134), '120 min', 11, 'start', '#1d6b3a'))
-sh.append(tx(SY(3180), SZ(100), 'over path', 11, 'start', '#1d6b3a', '500'))
+s2.append(_ln(SY(2350), SZ(0), SY(3250), SZ(0), INK, 0.8))
+s2.append(_box(SY(2465), SZ(328), 90 * k10, 140 * k10))
+s2.append(_box(SY(2380), SZ(468), 220 * k10, 140 * k10))
+s2.append(_box(SY(2380), SZ(500), 220 * k10, 32 * k10))
+s2.append(_box(SY(2555), SZ(135), 90 * k10, 120 * k10))
+s2.append(_box(SY(2645), SZ(135), 425 * k10, 45 * k10))
+s2.append(_box(SY(3070), SZ(135), 90 * k10, 120 * k10))
+s2.append(_box(SY(2600), SZ(301), 90 * k10, 140 * k10))
+s2.append(_box(SY(2690), SZ(301), 190 * k10, 45 * k10))
+s2.append(_box(SY(2880), SZ(301), 90 * k10, 140 * k10))
+s2.append(_box(SY(2600), SZ(333), 280 * k10, 32 * k10))
+s2.append(_box(SY(2880), SZ(167), 280 * k10, 32 * k10))
+s2.append(_box(SY(3052), SZ(20), 25, 36))
+s2.append(_hdim(SY(2600), SY(2880), SZ(40), '280'))
+s2.append(_hdim(SY(2880), SY(3160), SZ(-16), '280'))
+s2.append(_tx(SY(2320), SZ(500), '+500', 8, 'end', RED))
+s2.append(_tx(SY(2700), SZ(360), '+333', 8, 'start', RED))
+s2.append(_tx(SY(3000), SZ(190), '+167', 8, 'start', RED))
+s2.append(_note(SY(3180), SZ(150), ['RIP TO 120 MIN', 'OVER THE PATH'], (SY(3110), SZ(80))))
+s2.append(_tx(SY(2750), 458, 'DETAIL B - TWO STEPS', 10, 'middle', GREEN, '700'))
+s2.append(_ln(SY(2580), 461, SY(2920), 461, GREEN, 0.8))
+s2.append(_tx(SY(2750), 474, 'SCALE 1:10', 7.5, 'middle', GREEN, '600'))
+s2.append(_tx(SY(2700), SZ(-36), 'PATH = 0', 7.5, 'middle', GREEN, '500'))
+(root / 'site/drawings' / 'sheet2.svg').write_text(_sheet(s2, 'Sheet 2. Notes, end elevation, pile hole and the two steps. Owner-builder working plan, not drawing ISL38807.'))
+print('sheets', len(s1), len(s2))
 
-# Notes
-sh.append(tx(1360, 58, 'NOTES', 16, 'start', '#1d6b3a'))
-notes = [
-    '140×45 SG8. H3.2 on the deck.',
-    'H4 on both steps.',
-    '88×32 griptread, along the length.',
-    '16 piles, 125×125 H5.',
-    'Holes 400×400, 600 deep.',
-    'No anchor brackets.',
-    'Six step piles, holes',
-    '300×300 and 400 deep.',
-    'Joists at 437. Doubled',
-    'at 3956 for the butts.',
-    'Screws into a bearer',
-    'go in from the side.',
-    'Path stays. No hole in it.',
-    'West drains: spade, and',
-    '500 mm clear of a pipe.',
-    'Rises off the path. If the',
-    'tape is not 500, divide by 3.',
-    'No handrail. Three rises',
-    'is the limit.',
-    'Not drawing ISL38807.',
-    'Not for consent.',
-]
-ny = 82
-for note in notes:
-    sh.append(tx(1360, ny, note, 12, 'start', '#1c1c1c', '500'))
-    ny += 16
-
-# Long elevation, aligned with the plan
-sh.append(tx(40, 690, 'LONG SIDE', 16, 'start', '#1d6b3a'))
-sh.append(tx(160, 690, 'steps are towards you · pile tops cut to one string off the path', 12, 'start', '#1d6b3a', '500'))
-GZ = 900
-
-def EZ(z):
-    return GZ - z * 0.34
-
-sh.append(ln(PX(0), EZ(0), PX(6600), EZ(0), '#52675b', 1.4))
-sh.append(piece(PX(0), EZ(0), 6600 * Sht, 28, '#efe6d4', 'none'))
-for x in pile_x:
-    sh.append(piece(PX(x - 62.5), EZ(187), 125 * Sht, (187 + 80) * 0.34, '#c4a574'))
-    sh.append(ln(PX(x), EZ(187), PX(x), EZ(187) + 46, '#7d8b82', 1, '3 2'))
-sh.append(piece(PX(0), EZ(468), 6600 * Sht, 140 * 0.34, '#456b54'))
-sh.append(piece(PX(0), EZ(328), 6600 * Sht, 140 * 0.34, '#c4a574'))
-sh.append(piece(PX(0), EZ(500), 6600 * Sht, 32 * 0.34, '#d7b98a'))
-sh.append(tx(PX(6700), EZ(490), '+500', 12, 'start', '#9a2b2b'))
-sh.append(tx(PX(200), EZ(300), 'bearer', 12, 'start', '#9a2b2b'))
-sh.append(tx(PX(5200), EZ(160), 'pile top +187', 12, 'start', '#9a2b2b'))
-sh.append(tx(PX(80), EZ(-36), '600 deep, all 16 the same', 12, 'start', '#1d6b3a'))
-sh.append(tx(PX(2800), EZ(0) + 20, 'path / string  0', 12, 'start', '#6d6456', '500'))
-
-# Title block
-sh.append('<rect x="22" y="1048" width="1636" height="118" fill="#f7f4ee" stroke="#1d4e89"/>')
-sh.append(ln(300, 1048, 300, 1166, '#1d4e89', 1))
-sh.append(ln(1280, 1048, 1280, 1166, '#1d4e89', 1))
-sh.append(ln(1280, 1107, 1658, 1107, '#1d4e89', 0.8))
-sh.append(tx(48, 1095, 'WORKING', 22))
-sh.append(tx(48, 1122, 'PLAN', 22))
-sh.append(tx(48, 1148, 'owner-builder', 12, 'start', '#1d6b3a', '500'))
-sh.append(tx(320, 1088, 'DECK AND TWO STEPS', 22))
-sh.append(tx(320, 1116, '18B FORMBY AVENUE, POINT CHEVALIER', 15, 'start', '#1c1c1c', '500'))
-sh.append(tx(320, 1142, 'Not the ROBO preview ISL38807. Dimensions in millimetres. Read the assumptions before building.', 13, 'start', '#1d6b3a', '500'))
-sh.append(tx(1300, 1078, 'DATE   11 / 11 / 2026', 14))
-sh.append(tx(1300, 1100, 'SHEET   1 of 1', 14))
-sh.append(tx(1300, 1136, 'Holes 600. No anchors.', 13, 'start', '#1c1c1c', '500'))
-sh.append(tx(1300, 1154, 'Two steps. Rise about 167.', 13, 'start', '#1c1c1c', '500'))
-
-sheet = (
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 1188" role="img" '
-    'aria-label="Set-out sheet for the 6.6 m deck and two steps. Owner-builder working plan, not the ROBO preview.">'
-    '<title>Set-out sheet · deck and two steps</title>'
-    '<style>text{font-family:system-ui,sans-serif}</style>'
-    + ''.join(sh) + '</svg>'
-)
-(root / 'site/drawings' / 'sheet.svg').write_text(sheet)
-print('sheet', len(sheet))
 
