@@ -1,6 +1,6 @@
 # Deck and step build guide
 
-11 November 2026 · How I am going to build the 6.6 m deck and the two steps in front of it. One plan, three drawings, a bill of materials and the build order. Written for me, doing the work. It is not an engineer's design. The ROBO preview ISL38807 is not this build. That sheet says preview only, and the quantities below are this deck, not that export.
+11 November 2026 · How I am going to build the 6.6 m deck and the two steps in front of it. One plan, a set-out sheet, three drawings, a bill of materials and the build order. Written for me, doing the work. It is not an engineer's design. The ROBO preview ISL38807 is not this build. That sheet says preview only, and the quantities below are this deck, not that export.
 
 ## What we are building
 
@@ -16,6 +16,10 @@
 Set-out, X from the left edge. Piles: 62.5, 1357.5, 2652.5, 3947.5, 5242.5, 6537.5 on Y300 and Y2510. The six step piles are on those same X, at Y3115. Rebuilt piles: X175 and X725 on Y−1925 and Y−800.
 
 Heights. The path is where you walk and the grass is lower, so the steps are taped off the path. Deck boards +500 if that is what the old deck measures, joist top +468, bearer top +328, pile top +187. Bottom step board about +167, framing top +135. Top step board about +333, framing top +301. If the tape from the path to the deck boards is not 500, divide whatever it is by three.
+
+## The sheet
+
+[Open the set-out sheet](docs/drawings/sheet.svg). Plan, long side and the two steps, with the sizes on this page. Same build as the notes below. Not the ROBO preview, and not for consent.
 
 ## Three drawings
 
