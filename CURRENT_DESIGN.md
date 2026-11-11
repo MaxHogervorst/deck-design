@@ -17,9 +17,9 @@ Set-out, X from the left edge. Piles: 62.5, 1357.5, 2652.5, 3947.5, 5242.5, 6537
 
 Heights. The path is where you walk and the grass is lower, so the steps are taped off the path. Deck boards +500 if that is what the old deck measures, joist top +468, bearer top +328, pile top +187. Bottom step board about +167, framing top +135. Top step board about +333, framing top +301. If the tape from the path to the deck boards is not 500, divide whatever it is by three.
 
-## The sheet
+## The sheets
 
-[Open the set-out sheet](docs/drawings/sheet.svg). Plan, long side and the two steps, with the sizes on this page. Same build as the notes below. Not the ROBO preview, and not for consent.
+[Sheet 1 · Plan and elevation](docs/drawings/sheet.svg) · [Sheet 2 · Notes and details](docs/drawings/sheet2.svg). Same A2 sheet as the preview: blue border, plan, elevation, green notes, red sizes, title block. These two sheets are this build. They are not drawing ISL38807.
 
 ## Three drawings
 
