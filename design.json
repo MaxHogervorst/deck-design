@@ -63,8 +63,8 @@
     "small_piles_buy": 8,
     "small_pile_X_mm": [
       62.5,
-      1357.5,
-      2652.5,
+      677.5,
+      3067.5,
       3947.5,
       5242.5,
       6537.5
@@ -79,8 +79,8 @@
   },
   "main_pile_X_mm": [
     62.5,
-    1357.5,
-    2652.5,
+    677.5,
+    3067.5,
     3947.5,
     5242.5,
     6537.5
@@ -253,8 +253,8 @@
     "step_beam_util_120": 0.47467334158003976,
     "step_pile_reaction_ULS_kN": 2.5287416404146383,
     "step_pile_bearing_kPa": 28.097129337940427,
-    "main_bearer_max_M_ULS_kNm": 1.4571240825595768,
+    "main_bearer_max_M_ULS_kNm": 3.2140511394555946,
     "main_loaded_width_envelope_m": 2.0,
-    "note": "Beam screens only. Full 140 between the 1.30 m piles. The 120 mm rip is only where the path is in the way, and that bay gets a pile each side of the concrete. Not a foundation or bracing check."
+    "note": "Beam screens only. Ordinary bays stay doubled 140 at 1.30 m. The path bay is 2.39 m and is a doubled 190, so the 140 envelope does not cover it. The 120 mm rip does not cross that bay. Not a foundation or bracing check."
   }
 }
