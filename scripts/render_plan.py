@@ -239,10 +239,22 @@ while i < len(lines):
             i += 1
         parts.append('<p>' + inline(' '.join(p)) + '</p>')
 body = '\n'.join(parts)
-a = body.index('<h2 id="three-drawings">')
-bb = body.index('<h2 id="foundations">', a)
-body = body[:a] + '''<h2 id="three-drawings">Drawings</h2><div class="tabs" role="tablist" aria-label="Drawings"><button id="tab-sheet" role="tab" aria-controls="drawing-panel" aria-selected="true" data-view="sheet">Sheet 1</button><button id="tab-sheet2" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="sheet2">Sheet 2</button><button id="tab-sheet3" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="sheet3">Sheet 3</button><button id="tab-piles" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="piles">Piles</button><button id="tab-framing" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="framing">Framing</button><button id="tab-fixings" role="tab" aria-controls="drawing-panel" aria-selected="false" tabindex="-1" data-view="fixings">Steps</button></div><div id="drawing-panel" role="tabpanel" aria-labelledby="tab-sheet"><div id="drawing"></div><p id="drawing-caption" class="caption"></p></div><p class="note">Download: <a href="drawings/sheet.svg">sheet 1</a> · <a href="drawings/sheet2.svg">sheet 2</a> · <a href="drawings/sheet3.svg">sheet 3</a> · <a href="drawings/piles.svg">piles</a> · <a href="drawings/framing.svg">framing</a> · <a href="drawings/fixings.svg">steps</a></p>''' + body[bb:]
-body = body.replace('href="docs/', 'href="').replace('archive/', '<a href="https://github.com/MaxHogervorst/deck-design/tree/main/archive">archive/</a>')
+shop = body.index('<h2 id="shopping-list">')
+build = body.index('<h2 id="build-order">')
+schedules = body[shop:build].replace('href="docs/', 'href="', 1)
+schedules = schedules.replace('<h2 id="shopping-list">Shopping list</h2>', '<h2 id="shopping-list">Bill of materials</h2>', 1)
+sheets = '''<section id="sheets" aria-label="Drawing set">
+<figure class="sheet"><div id="view-sheet"></div><figcaption>01 · Foundation, framing and long section</figcaption></figure>
+<figure class="sheet"><div id="view-sheet2"></div><figcaption>02 · Section, pile and steps</figcaption></figure>
+<figure class="sheet"><div id="view-sheet3"></div><figcaption>03 · Site, levels and schedules</figcaption></figure>
+<p class="note"><a href="drawings/sheet.svg">Sheet 1</a> · <a href="drawings/sheet2.svg">Sheet 2</a> · <a href="drawings/sheet3.svg">Sheet 3</a></p>
+<details class="sketches"><summary>Working sketches</summary>
+<figure class="sheet"><div id="view-piles"></div><figcaption>Piles</figcaption></figure>
+<figure class="sheet"><div id="view-framing"></div><figcaption>Framing</figcaption></figure>
+<figure class="sheet"><div id="view-fixings"></div><figcaption>Steps</figcaption></figure>
+</details>
+</section>'''
+body = sheets + schedules
 
 
 def chip(label, inner):
@@ -398,14 +410,7 @@ figs.append(chip('Boards along the deck, three on each step, and a board on the 
     + tx(36, 184, 'face board', 14)))
 titles = ['Measure first', 'String the deck', 'Dig to 600', 'Concrete as you go', 'Cut to the path', 'Bearers', 'Joists from the side', 'Step piles', 'Bottom step', 'Top step', 'Boards and the face']
 assert len(figs) == len(steps) == len(titles) == 11
-
-ol_at = body.index('<ol>', body.index('<h2 id="build-order">'))
-ol_end = body.index('</ol>', ol_at) + 5
-cards = ''.join(
-    f'<details class="step" open><summary><span class="step-number">{n}</span>{E(title)}</summary><div class="step-content">{fig}<div><p>{inline(text)}</p></div></div></details>'
-    for n, (title, text, fig) in enumerate(zip(titles, steps, figs), 1))
-body = body[:ol_at] + '<div class="steps">' + cards + '</div>' + body[ol_end:]
-html = '''<!doctype html><html lang="en-NZ"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#254c3e"><meta name="description" content="Owner-builder guide for a 6.6 m Auckland deck and a low step of two steps in front of a 6.6 m deck: layout, holes, fixings and a priced bill of materials."><title>Deck and step build guide</title><!-- INLINE_STYLES --></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="#main">Auckland deck <span>11 / 11 / 2026 · BUILD GUIDE</span></a><nav aria-label="Sections"><a href="#three-drawings">Drawings</a><a href="#foundations">Foundations</a><a href="#shopping-list">Shopping list</a><a href="#build-order">Build order</a><a href="#assumptions-and-what-i-would-get-checked-in-an-ideal-world">Assumptions</a></nav><button id="print">Print</button></header><main id="main">''' + body + '''</main><footer><span>Owner-builder working plan · read the assumptions before building</span><button id="copy-link">Copy link</button></footer><p id="message" role="status"></p><!-- INLINE_SCRIPT --></body></html>'''
+html = '''<!doctype html><html lang="en-NZ"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#254c3e"><meta name="description" content="ISL38807. Proposed deck for 18B Formby Avenue. Three sheets, not lodged."><title>ISL38807 · 18B Formby Avenue</title><!-- INLINE_STYLES --></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="#main">ISL38807 <span>18B FORMBY AVENUE · NOT LODGED</span></a><nav aria-label="Sections"><a href="#sheets">Sheets</a><a href="#shopping-list">Schedule</a></nav><button id="print">Print</button></header><main id="main">''' + body + '''</main><footer><span>AS/NZS 1100.501 · Exemption 24 · Do not scale</span></footer><p id="message" role="status"></p><!-- INLINE_SCRIPT --></body></html>'''
 (root / 'site/index.html').write_text(html)
 print('Rendered guide, CSV and page; posted', posted, 'estimates', est, 'total', total)
 
