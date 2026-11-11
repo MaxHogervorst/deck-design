@@ -1,4 +1,4 @@
-"""Demand and quantity checks for the five short step frames (10 November 2026)."""
+"""Demand and quantity checks. Deck unchanged. Steps and holes follow the 11 November site conversation."""
 import json, itertools
 from pathlib import Path
 from collections import Counter
@@ -9,8 +9,7 @@ base = [22.5 + 437 * i for i in range(16)]
 joists = sorted([x for i, x in enumerate(base) if i != 9] + [3933, 3978])
 assert len(joists) == 17 and max(np.diff(joists)) <= 450
 assert abs(300 - 22.5) <= 300 and abs(2510 - 2532.5) <= 300
-# Main deck: joists between the rims, seated on bearers at Y300/2510. Blocks are cut at 380 mm
-# so a tape measure can hit them; the clear gap between the rebuilt joists is 382 mm.
+# Main deck and rebuilt strip. Unchanged members.
 main_alloc = [
     (6, 7200, [6600]),
     (6, 6000, [2510, 2510, 900]),
@@ -19,36 +18,26 @@ main_alloc = [
     (1, 4800, [1880, 1880]),
     (1, 4800, [2510, 1880]),
 ]
-# Five short H4 frames, one in each bay between the front piles. No 6.6 m rail.
-# Each frame: four 900 mm plies (a double rail each side), three 220 mm crosspieces, one 250 mm tie.
-h4_alloc = [(4, 4800, [900, 900, 900, 900, 900]), (1, 4800, [220] * 15 + [250] * 5)]
+# Two steps, full width. Eight 6.6 m H4 plies (two doubles for each step) and the short joists.
+# 7.2 m stock so each ply is one piece. Joists cut long and trimmed to the opening.
+h4_alloc = [
+    (8, 7200, [6600]),
+    (1, 4800, [500] * 9),
+    (1, 4800, [500] * 8),
+    (1, 4800, [240] * 17),
+]
 for n, s, cs in main_alloc + h4_alloc:
     assert sum(cs) + 4 * len(cs) + 5 <= s, (s, cs)
 main_counts = Counter(c for n, s, cs in main_alloc for c in cs for _ in range(n))
 assert main_counts == Counter({6600: 6, 2510: 17, 900: 6, 380: 2, 1880: 3}), main_counts
 h4_counts = Counter(c for n, s, cs in h4_alloc for c in cs for _ in range(n))
-assert h4_counts == Counter({900: 20, 220: 15, 250: 5}), h4_counts
+assert h4_counts == Counter({6600: 8, 500: 17, 240: 17}), h4_counts
 pile_x = [62.5, 1357.5, 2652.5, 3947.5, 5242.5, 6537.5]
-frames = [710, 2005, 3300, 4595, 5890]
-assert frames == [round((a + b) / 2, 1) for a, b in zip(pile_x, pile_x[1:])]
-frame_len = 900
-paver = 300
-paver_dx = 220  # two pavers along each rail, 100 mm clear of the pile holes
-paver_y = [2645, 2955]
-pit = [760, 800]
-paver_x = [c + dx for c in frames for dx in (-paver_dx, paver_dx)]
-for p in paver_x:
-    for x in pile_x:
-        gap = abs(p - x) - paver / 2 - 350 / 2
-        assert gap >= 100, (p, x, gap)
-for c in frames:
-    for x in pile_x:
-        gap = abs(c - x) - pit[0] / 2 - 350 / 2
-        assert gap >= 80, (c, x, gap)
-assert max(c + frame_len / 2 for c in frames) <= 6600
-assert min(c - frame_len / 2 for c in frames) >= 0
-board_gap = (pile_x[1] - pile_x[0]) - frame_len
-assert board_gap <= 450, board_gap
+bay = (pile_x[1] - pile_x[0]) / 1000
+rise = 500 / 3
+going = 280
+assert 190 >= rise >= 150
+assert 550 <= 2 * rise + going <= 700
 # Rebuilt joists are separate members. 2.7 kN stair point, zero dead credit.
 xs, u, solve, mom = beam(
     list(np.arange(-1.925, -0.0449, 0.025)) + [-1.925, -0.8, -0.045],
@@ -61,52 +50,31 @@ for i in range(len(xs)):
     F[2 * i, i] = 2.7
 _, R = solve(F)
 rebuilt_uplift = max(float(-R.min()), 2.7 * 0.8 / 1.125)
-# One 900 mm double rail on two pavers, 230 mm cantilevers. Factored stair point, any position.
-# Two supports so the rail is not a mechanism; the far support can go into uplift, which the tie has to hold.
-EI = 6.5e6 * 0.09 * 0.14**3 / 12
-local_supports = [0.23, 0.67]
-xs, u, solve, mom = beam(list(np.arange(0, 0.9001, 0.025)) + local_supports, local_supports, EI)
-g, qg = u(lambda x: 0.6 * 0.2)
-F = np.repeat((1.2 * g)[:, None], len(xs), axis=1)
+# Lower front beam, one bay, someone standing mid-bay. Full 140, and the 120 mm rip
+# over the path on a half bay (a pile each side of the concrete).
 point = 1.5 * 2.7 * 355 / 310
-for i in range(len(xs)):
-    F[2 * i, i] += point
-D, R = solve(F)
-M = float(abs(mom(D, np.repeat((1.2 * qg)[:, None], len(xs), axis=1))).max())
-pad_R = float(R.max())
-pad_min = float(R.min())
-bearing = pad_R / (paver / 1000) ** 2
-cap = 0.8 * 0.8 * 11.7 * (90 * 140**2 / 6) / 1e6
-assert M < 0.65 * cap, (M, cap)
+
+def bay_screen(span, depth, width=0.09):
+    EI = 6.5e6 * width * depth**3 / 12
+    pts = list(np.arange(0, span + 1e-9, 0.025)) + [0, span, span / 2]
+    xs, u, solve, mom = beam(pts, [0, span], EI)
+    g, qg = u(lambda x: 0.6 * 0.45)
+    F = np.repeat((1.2 * g)[:, None], len(xs), axis=1)
+    j = int(np.argmin(np.abs(xs - span / 2)))
+    F[2 * j, :] += point
+    D, R = solve(F)
+    M = float(abs(mom(D, np.repeat((1.2 * qg)[:, None], len(xs), axis=1))).max())
+    cap = 0.8 * 0.8 * 11.7 * (width * 1000 * (depth * 1000)**2 / 6) / 1e6
+    react = float(R.max())
+    assert np.max(abs(R.sum(axis=0) - F[::2].sum(axis=0))) < 1e-6
+    return M, cap, react
+
+M140, cap140, R140 = bay_screen(bay, 0.14)
+M120, cap120, R120 = bay_screen(bay / 2, 0.12)
+assert M140 < 0.8 * cap140, (M140, cap140)
+assert M120 < 0.8 * cap120, (M120, cap120)
+bearing = R140 / 0.3**2
 assert bearing <= 100, bearing
-assert pad_min < -1, pad_min  # uplift is real; a paver cannot hold it, so the tie is a hold-down
-assert np.max(abs(R.sum(axis=0) - F[::2].sum(axis=0))) < 1e-6
-# Pavers take compression only. Where the two-support screen goes into tension, drop that
-# paver and put the centre tie in as the second support. A single support is a mechanism.
-lift_tie, lift_paver, lift_M = 0.0, 0.0, M
-for i, x in enumerate(xs):
-    reacted = dict(zip(local_supports, R[:, i]))
-    if min(reacted.values()) >= -1e-6:
-        continue
-    kept = [s for s, r in reacted.items() if r >= -1e-6]
-    assert len(kept) == 1, (x, reacted)
-    sup = sorted(kept + [0.45])
-    pts = list(np.arange(0, 0.9001, 0.025)) + sup
-    xs2, u2, solve2, mom2 = beam(pts, sup, EI)
-    j = int(np.argmin(np.abs(xs2 - x)))
-    g2, qg2 = u2(lambda x: 0.6 * 0.2)
-    f2 = 1.2 * g2
-    f2[2 * j] += point
-    D2, R2 = solve2(f2)
-    M2 = float(abs(mom2(D2, 1.2 * qg2)).max())
-    rmap = dict(zip(sup, R2[:, 0]))
-    assert abs(sum(rmap.values()) - float(f2[::2].sum())) < 1e-6
-    lift_tie = min(lift_tie, rmap[0.45])
-    lift_paver = max(lift_paver, max(v for s, v in rmap.items() if s != 0.45))
-    lift_M = max(lift_M, M2)
-lift_bearing = lift_paver / (paver / 1000) ** 2
-assert lift_tie < -4, lift_tie
-assert lift_M < 0.65 * cap, (lift_M, cap)
 # Reference check and the main-bearer gravity envelope. Unchanged deck.
 xt, ut, st, mt = beam([0, 0.5, 1], [0, 1], 1)
 ft, qt = ut(lambda x: 1)
@@ -126,17 +94,25 @@ for pat in itertools.product([0, 1], repeat=len(patches)):
 dm, rm = sm(np.array(fm).T)
 main_M = float(abs(mm(dm, np.array(qu).T)).max())
 assert np.max(abs(rm.sum(axis=0) - np.array(fm).T[::2].sum(axis=0))) < 1e-6
-main_concrete = 4 * (0.35**2 * 0.9 - 0.125**2 * 0.8) + 12 * (0.35**2 * 0.45 - 0.125**2 * 0.35)
-bag_yield = 0.0095
-bags_needed = int(np.ceil(main_concrete / bag_yield))
-gap7_m3 = len(frames) * (pit[0] / 1000) * (pit[1] / 1000) * 0.15
-gap7_bags_15l = int(np.ceil(gap7_m3 / 0.015))
-main_rows, rebuilt_rows, tread_rows = 28, 21, 4
-crosspieces = 15
-base_screws = main_rows * 17 * 2 + rebuilt_rows * 3 * 2 + tread_rows * crosspieces * 2 + tread_rows * 2
-stock_4200, stock_3000 = 38, 32
+# Hole volume with the pile left in, the way it was counted on site. 400 square by 600, twelve main plus four rebuilt.
+# Step holes 300 square by 400. Two extra step holes are allowed for where the path forces a ripped beam.
+main_concrete = round(12 * (0.4 * 0.4 * 0.6), 3)
+rebuilt_concrete = round(4 * (0.4 * 0.4 * 0.6), 3)
+step_concrete = round(6 * (0.3 * 0.3 * 0.4), 3)
+extra_step_concrete = round(2 * (0.3 * 0.3 * 0.4), 3)
+concrete = round(main_concrete + rebuilt_concrete + step_concrete + extra_step_concrete, 3)
+order_m3 = 2.0
+assert concrete < order_m3
+cement_bags = 36  # about 16 bags per m³, plus a margin
+mix_m3 = 2.5
+main_rows, rebuilt_rows, tread_rows, face_rows = 28, 21, 6, 3
+# Full-length rows each take a 4.2 and a 3.0. The 38/32 lengths already covered 28 + 21 + 4; two more step rows and three face boards.
+stock_4200 = 38 + (tread_rows - 4) + face_rows
+stock_3000 = 32 + (tread_rows - 4) + face_rows
+base_screws = main_rows * 17 * 2 + rebuilt_rows * 3 * 2 + (tread_rows + face_rows) * 17 * 2
+assert base_screws <= 1500
 out = {
-    'status': 'Working DIY plan, 10 November 2026. The step is five short H4 frames, one in each bay between the front piles, each on four pavers and screwed to the front bearer. No continuous 6.6 m rail, no plastic packers, no second pour. Items the owner would ideally have checked are listed at the end of the plan.',
+    'status': 'Working DIY plan, 11 November 2026. Holes are 600 deep, no anchor kits. Two steps, three rises, measured off the path. Follows the site conversation, not the ROBO preview ISL38807.',
     'main_joist_centres_mm': joists,
     'main_base_lines': 16,
     'main_joist_members_with_supported_butt': 17,
@@ -155,43 +131,32 @@ out = {
     'rebuilt_block_cut_mm': 380,
     'main_lateral_block_rows': 0,
     'tread': {
-        'frames': len(frames),
-        'frame_X_mm': frames,
-        'frame_len_mm': frame_len,
-        'frame_X_extent_mm': [[c - frame_len // 2, c + frame_len // 2] for c in frames],
-        'rails': 'five separate double 140x45 H4 frames, each 900 long, inner Y2600-2690 and outer Y2910-3000',
-        'inner_rail_Y_mm': [2600, 2690],
-        'outer_rail_Y_mm': [2910, 3000],
-        'crosspieces_per_frame': 3,
-        'crosspieces': crosspieces,
-        'crosspiece_cut_mm': 220,
-        'ties': len(frames),
-        'tie_X_mm': frames,
-        'tie_cut_mm': 250,
-        'tie_Y_mm': [2555, 2600],
-        'tie_Z_mm': [78, 328],
-        'tie_fixing': '4x 14g x100 SS screws into the bearer face and 2x 14g x100 SS screws into the inner rail, per frame. Hold-down and lateral tie.',
-        'board_gap_mm': board_gap,
-        'board_length_mm': 6400,
-        'board_inset_mm': 100,
+        'kind': 'two steps, three equal rises, ribbon screwed to the piles, not a cut stringer',
+        'rises': 3,
+        'rise_mm': round(rise, 1),
+        'going_mm': going,
+        'projection_mm': going * 2,
+        'lower_board_Z_mm': round(rise, 1),
+        'upper_board_Z_mm': round(2 * rise, 1),
+        'lower_framing_top_Z_mm': round(rise - 32, 1),
+        'upper_framing_top_Z_mm': round(2 * rise - 32, 1),
+        'lower_beam_min_depth_mm': 120,
+        'joist_count': 17,
+        'lower_joist_cut_mm': 500,
+        'upper_joist_cut_mm': 240,
+        'long_plies': 8,
+        'small_piles': 6,
+        'small_piles_buy': 8,
+        'small_pile_X_mm': pile_x,
+        'small_pile_Y_mm': 3115,
+        'small_hole_mm': [300, 300, 400],
+        'handrail': False,
     },
     'main_pile_X_mm': pile_x,
     'timber_piles': 16,
-    'candidate_anchor_piles': 4,
-    'ordinary_piles': 12,
-    'tread_frames': len(frames),
-    'tread_paver_x_mm': paver_x,
-    'tread_paver_mm': paver,
-    'pavers_per_frame': 4,
-    'paver_count': len(frames) * 4,
-    'tread_pad_type': 'four 300x300 pavers per frame, two along each rail, on compacted GAP7 in one pit dug to firm ground',
-    'tread_paver_Y_centres_mm': paver_y,
-    'tread_paver_dx_mm': paver_dx,
-    'tread_pit_mm': pit,
-    'tread_pit_count': len(frames),
-    'tread_pad_top_Z_mm': [45, 75],
-    'rail_bottom_Z_mm': 78,
-    'pad_restraint': 'each frame is screwed to the front bearer through a 250 mm H4 tie. Pavers take the weight. An H4 offcut packer, screwed to the rail, takes up a low paver. No plastic packers.',
+    'candidate_anchor_piles': 0,
+    'ordinary_piles': 16,
+    'step_piles': 6,
     'main_stock_lm': round(sum(n * s for n, s, c in main_alloc) / 1000, 3),
     'main_installed_lm': round(sum(n * sum(c) for n, s, c in main_alloc) / 1000, 3),
     'H4_stock_lm': round(sum(n * s for n, s, c in h4_alloc) / 1000, 3),
@@ -202,6 +167,7 @@ out = {
         'main_rows': main_rows,
         'rebuilt_rows': rebuilt_rows,
         'tread_rows': tread_rows,
+        'face_rows': face_rows,
         'stock_4200': stock_4200,
         'stock_3000': stock_3000,
         'stock_lm': round(stock_4200 * 4.2 + stock_3000 * 3.0, 1),
@@ -209,60 +175,55 @@ out = {
         'base_screws': base_screws,
         'purchase_allowance_screws': 1500,
         'width_basis_mm': 88,
-        'gaps': 'About 5 mm on the main deck and about 6 mm on the rebuilt strip. Step is four boards on the 400 mm frame with a small front overhang.',
+        'gaps': 'About 5 mm on the main deck and about 6 mm on the rebuilt strip. Three boards on each step. One board on the boundary-joist face and one on each riser.',
     },
     'concrete_geometry_only': {
-        'main_net_m3': main_concrete,
-        'readymix_order_m3': 1.2,
-        'bags_20kg_needed': bags_needed,
-        'bags_20kg_buy': int(np.ceil(bags_needed * 1.1)),
-        'main_anchor_holes_mm': [350, 350, 900],
-        'ordinary_holes_mm': [350, 350, 450],
-        'auger_diameter_mm': 400,
-        'gap7_m3': gap7_m3,
-        'gap7_bags_15l': gap7_bags_15l,
-        'warning': 'Planning geometry, not a concrete order. Anchor section is provisional 125 square. Square-hole volume; a 400 mm auger hole is about the same.',
+        'main_12_holes_m3': main_concrete,
+        'rebuilt_4_holes_m3': rebuilt_concrete,
+        'step_holes_m3': step_concrete,
+        'extra_path_holes_m3': extra_step_concrete,
+        'main_net_m3': concrete,
+        'readymix_order_m3': order_m3,
+        'cement_20kg_buy': cement_bags,
+        'builders_mix_m3': mix_m3,
+        'hole_mm': [400, 400, 600],
+        'step_hole_mm': [300, 300, 400],
+        'warning': 'Volume leaves the pile in the hole. Not a concrete order. The 2.0 m³ is the truck figure; mixing uses the cement and the builders mix instead.',
     },
     'screens': {
         'rebuilt_zero_dead_uplift_ULS_kN': rebuilt_uplift,
-        'rail_point_ULS_kN': point,
-        'double_rail_max_M_ULS_kNm': M,
-        'double_rail_bending_screen_capacity_kNm': cap,
-        'double_rail_utilisation': M / cap,
-        'max_paver_reaction_ULS_kN': pad_R,
-        'min_paver_reaction_ULS_kN': pad_min,
-        'paver_bearing_kPa_max': bearing,
-        'liftoff_tie_ULS_kN': lift_tie,
-        'liftoff_paver_ULS_kN': lift_paver,
-        'liftoff_paver_bearing_kPa': lift_bearing,
-        'liftoff_max_M_ULS_kNm': lift_M,
+        'step_point_ULS_kN': point,
+        'step_beam_span_m': bay,
+        'step_beam_M_140_kNm': M140,
+        'step_beam_cap_140_kNm': cap140,
+        'step_beam_util_140': M140 / cap140,
+        'step_beam_M_120_half_kNm': M120,
+        'step_beam_cap_120_kNm': cap120,
+        'step_beam_util_120': M120 / cap120,
+        'step_pile_reaction_ULS_kN': R140,
+        'step_pile_bearing_kPa': bearing,
         'main_bearer_max_M_ULS_kNm': main_M,
         'main_loaded_width_envelope_m': 2.0,
-        'note': 'Beam/component demand screens only; not a full connection or foundation verification. Step frames are separate 900 mm members. Pavers are compression-only: liftoff_* is the case with the far paver removed and the centre tie as the second support.',
+        'note': 'Beam screens only. Full 140 between the 1.30 m piles. The 120 mm rip is only where the path is in the way, and that bay gets a pile each side of the concrete. Not a foundation or bracing check.',
     },
 }
-assert out['main_stock_lm'] == 100.8 and out['H4_stock_lm'] == 24.0
-assert out['concrete_geometry_only']['bags_20kg_buy'] == 115
-assert out['decking']['base_screws'] == 1206
-assert out['paver_count'] == 20
+assert out['main_stock_lm'] == 100.8 and out['H4_stock_lm'] == 72.0
+assert out['decking']['base_screws'] == base_screws
+assert out['concrete_geometry_only']['main_12_holes_m3'] == 1.152
 (root / 'design.json').write_text(json.dumps(out, indent=2) + '\n')
 summary = {
-    'frames': frames,
-    'board_gap_mm': board_gap,
-    'util': round(M / cap, 3),
-    'M': round(M, 3),
-    'uplift_kN': round(pad_min, 2),
-    'paver_kN': round(pad_R, 2),
+    'rise_mm': round(rise, 1),
+    'going_mm': going,
+    'two_R_plus_G': round(2 * rise + going, 1),
+    'util_140': round(M140 / cap140, 3),
+    'M140': round(M140, 3),
+    'util_120': round(M120 / cap120, 3),
     'bearing_kPa': round(bearing, 1),
-    'liftoff_tie_kN': round(lift_tie, 2),
-    'liftoff_paver_kN': round(lift_paver, 2),
-    'liftoff_bearing_kPa': round(lift_bearing, 1),
-    'liftoff_M': round(lift_M, 3),
-    'rebuilt_uplift_kN': round(rebuilt_uplift, 2),
-    'bags_buy': out['concrete_geometry_only']['bags_20kg_buy'],
-    'gap7_m3': round(gap7_m3, 3),
-    'gap7_bags': gap7_bags_15l,
+    'concrete_m3': round(concrete, 3),
+    'main_12_m3': round(main_concrete, 3),
     'screws': base_screws,
     'deck_lm': out['decking']['stock_lm'],
+    'H4_m': out['H4_stock_lm'],
+    'rebuilt_uplift_kN': round(rebuilt_uplift, 2),
 }
 print(json.dumps(summary, indent=2))
