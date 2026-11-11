@@ -19,7 +19,7 @@ Heights. The path is where you walk and the grass is lower, so the steps are tap
 
 ## The sheets
 
-[Sheet 1 · Plan and elevation](docs/drawings/sheet.svg) · [Sheet 2 · Notes and details](docs/drawings/sheet2.svg). Same A2 sheet as the preview: blue border, plan, elevation, green notes, red sizes, title block. These two sheets are this build. They are not drawing ISL38807.
+[Sheet 1 · Plan and elevation](docs/drawings/sheet.svg) · [Sheet 2 · Notes and details](docs/drawings/sheet2.svg). Same A2 sheet as the preview. Title block ref ISL38807. The lines are this build.
 
 ## Three drawings
 

@@ -83,7 +83,7 @@ Heights. The path is where you walk and the grass is lower, so the steps are tap
 
 ## The sheets
 
-[Sheet 1 · Plan and elevation](docs/drawings/sheet.svg) · [Sheet 2 · Notes and details](docs/drawings/sheet2.svg). Same A2 sheet as the preview: blue border, plan, elevation, green notes, red sizes, title block. These two sheets are this build. They are not drawing ISL38807.
+[Sheet 1 · Plan and elevation](docs/drawings/sheet.svg) · [Sheet 2 · Notes and details](docs/drawings/sheet2.svg). Same A2 sheet as the preview. Title block ref ISL38807. The lines are this build.
 
 ## Three drawings
 
@@ -599,7 +599,7 @@ def _title(parts, sheet_no, scale):
             parts.append(_ln(x, y, x, y + rh, INK, 0.45))
         for j, cell in enumerate(row):
             parts.append(_tx(xs[j] + 5, y + rh * 0.68, cell, 7.4, 'start', INK, '650' if j % 2 == 0 else '500'))
-    parts.append(_tx(848, 810, 'NOT ISL38807', 6.5, 'end', INK, '500'))
+    parts.append(_tx(848, 810, 'REF NO. ISL38807', 6.5, 'end', INK, '500'))
 
 def _sheet(parts, label):
     return (
@@ -684,7 +684,7 @@ s1.append(_ln(cx - 28, 711, cx + 28, 711, GREEN, 0.8))
 s1.append(_tx(cx, 724, 'SCALE 1:25', 7.5, 'middle', GREEN, '600'))
 s1.append(_tx(640, 250, 'SHEET 1 OF 2', 11, 'start', GREEN, '700'))
 s1.append(_tx(640, 266, 'PLAN AND ELEVATION', 8, 'start', GREEN, '500'))
-(root / 'site/drawings' / 'sheet.svg').write_text(_sheet(s1, 'Sheet 1. Plan and elevation of the proposed deck. Owner-builder working plan, not drawing ISL38807.'))
+(root / 'site/drawings' / 'sheet.svg').write_text(_sheet(s1, 'Sheet 1. Plan and elevation. Ref ISL38807. Owner-builder working plan.'))
 
 # Sheet 2. Notes, end elevation, pile hole, two steps.
 s2 = []
@@ -692,8 +692,8 @@ _title(s2, 2, '1:25, 1:10 & NTS')
 notes = [
     'NOTES',
     '1. OWNER-BUILDER WORKING PLAN.',
-    'THIS IS NOT DRAWING ISL38807.',
-    'IT IS NOT FOR CONSENT.',
+    'REF NO. ISL38807.',
+    'NOT FOR CONSENT.',
     '2. TIMBER IS 140×45 SG8.',
     'H3.2 ON THE DECK AND THE',
     'REBUILT STRIP. H4 ON THE STEPS.',
@@ -785,7 +785,7 @@ s2.append(_tx(SY(2750), 458, 'DETAIL B - TWO STEPS', 10, 'middle', GREEN, '700')
 s2.append(_ln(SY(2580), 461, SY(2920), 461, GREEN, 0.8))
 s2.append(_tx(SY(2750), 474, 'SCALE 1:10', 7.5, 'middle', GREEN, '600'))
 s2.append(_tx(SY(2700), SZ(-36), 'PATH = 0', 7.5, 'middle', GREEN, '500'))
-(root / 'site/drawings' / 'sheet2.svg').write_text(_sheet(s2, 'Sheet 2. Notes, end elevation, pile hole and the two steps. Owner-builder working plan, not drawing ISL38807.'))
+(root / 'site/drawings' / 'sheet2.svg').write_text(_sheet(s2, 'Sheet 2. Notes, end elevation, pile hole and the two steps. Ref ISL38807. Owner-builder working plan.'))
 print('sheets', len(s1), len(s2))
 
 
