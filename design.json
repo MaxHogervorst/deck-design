@@ -35,11 +35,12 @@
   ],
   "butt_joist_centre_mm": 3956,
   "rebuilt_joists": 3,
-  "rebuilt_joist_cut_mm": 1400,
+  "rebuilt_joist_cut_mm": 1970,
   "rebuilt_bearer_Y_mm": [
-    0
+    0,
+    -1970
   ],
-  "rear_bearer_rear_face_Y_mm": -1100,
+  "rear_bearer_rear_face_Y_mm": -1970,
   "rebuilt_lateral_blocks": 0,
   "rebuilt_block_cut_mm": 0,
   "main_lateral_block_rows": 0,
@@ -86,8 +87,8 @@
   "candidate_anchor_piles": 0,
   "ordinary_piles": 10,
   "step_piles": 5,
-  "main_stock_lm": 73.2,
-  "main_installed_lm": 61.87,
+  "main_stock_lm": 74.4,
+  "main_installed_lm": 63.58,
   "H4_stock_lm": 72.0,
   "H4_installed_lm": 65.38,
   "main_stock_allocations": [
@@ -111,15 +112,15 @@
       "stock_mm": 6000,
       "cuts_mm": [
         2510,
-        1400,
-        1400
+        1970
       ]
     },
     {
       "count": 1,
-      "stock_mm": 4800,
+      "stock_mm": 6000,
       "cuts_mm": [
-        1400,
+        1970,
+        1970,
         900,
         900
       ]
@@ -188,14 +189,14 @@
   ],
   "decking": {
     "main_rows": 28,
-    "rebuilt_rows": 12,
+    "rebuilt_rows": 21,
     "tread_rows": 6,
     "face_rows": 3,
     "stock_4200": 43,
     "stock_3000": 37,
     "stock_lm": 291.6,
     "pricing_allowance_lm": 291.6,
-    "base_screws": 1330,
+    "base_screws": 1384,
     "purchase_allowance_screws": 1500,
     "width_basis_mm": 88,
     "gaps": "About 5 mm on the main deck and about 6 mm on the rebuilt strip. Three boards on each step. One board on the boundary-joist face and one on each riser."

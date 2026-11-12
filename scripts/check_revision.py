@@ -13,8 +13,8 @@ assert abs(300 - 22.5) <= 300 and abs(2510 - 2532.5) <= 300
 main_alloc = [
     (2, 7200, [6600]),
     (8, 6000, [2510, 2510]),
-    (1, 6000, [2510, 1400, 1400]),
-    (1, 4800, [1400, 900, 900]),
+    (1, 6000, [2510, 1970]),
+    (1, 6000, [1970, 1970, 900, 900]),
 ]
 # Two steps, full width. Eight 6.6 m H4 plies (two doubles for each step) and the short joists.
 # 7.2 m stock so each ply is one piece. Joists cut long and trimmed to the opening.
@@ -27,7 +27,7 @@ h4_alloc = [
 for n, s, cs in main_alloc + h4_alloc:
     assert sum(cs) + 4 * len(cs) + 5 <= s, (s, cs)
 main_counts = Counter(c for n, s, cs in main_alloc for c in cs for _ in range(n))
-assert main_counts == Counter({6600: 2, 2510: 17, 1400: 3, 900: 2}), main_counts
+assert main_counts == Counter({6600: 2, 2510: 17, 1970: 3, 900: 2}), main_counts
 h4_counts = Counter(c for n, s, cs in h4_alloc for c in cs for _ in range(n))
 assert h4_counts == Counter({6600: 8, 500: 17, 240: 17}), h4_counts
 # NZS 3604:2011 Table 6.4(b), 2 kPa, wet in service. Spans are for a bearer
@@ -47,11 +47,10 @@ rise = 500 / 3
 going = 280
 assert 190 >= rise >= 150
 assert 550 <= 2 * rise + going <= 700
-# Rebuilt strip. No new holes. A bearer is bolted to the existing bearer and
-# three joists cantilever toward the house. NZS 3604 Table 7.2, wet, balcony
-# column: 140×45 at 450 centres may cantilever 1100 mm. It is not fixed to the house.
-rebuilt_projection = 1100
-assert rebuilt_projection <= 1100
+# Rebuilt strip spans from the existing bearer to a ledger on the house.
+# NZS 3604 Table 7.1(b), wet: 140×45 at 450 centres spans 2.35 m. No new piles.
+rebuilt_span = 1970
+assert rebuilt_span <= 2350
 rebuilt_uplift = 0.0
 # Step front beam is a doubled 140, which Table 6.4(b) allows to 3.0 m at a
 # loaded dimension of 1.30 m, continuous. The longest step bay is 2.39 m.
@@ -105,7 +104,7 @@ order_m3 = 2.0
 assert concrete < order_m3
 cement_bags = 36  # about 16 bags per m³, plus a margin
 mix_m3 = 2.5
-main_rows, rebuilt_rows, tread_rows, face_rows = 28, 12, 6, 3
+main_rows, rebuilt_rows, tread_rows, face_rows = 28, 21, 6, 3
 # Full-length rows each take a 4.2 and a 3.0. The 38/32 lengths already covered 28 + 21 + 4; two more step rows and three face boards.
 stock_4200 = 38 + (tread_rows - 4) + face_rows
 stock_3000 = 32 + (tread_rows - 4) + face_rows
@@ -124,9 +123,9 @@ out = {
     'front_rim_Y_mm': [2555, 2600],
     'butt_joist_centre_mm': 3956,
     'rebuilt_joists': 3,
-    'rebuilt_joist_cut_mm': 1400,
-    'rebuilt_bearer_Y_mm': [0],
-    'rear_bearer_rear_face_Y_mm': -1100,
+    'rebuilt_joist_cut_mm': 1970,
+    'rebuilt_bearer_Y_mm': [0, -1970],
+    'rear_bearer_rear_face_Y_mm': -1970,
     'rebuilt_lateral_blocks': 0,
     'rebuilt_block_cut_mm': 0,
     'main_lateral_block_rows': 0,
@@ -202,7 +201,7 @@ out = {
         'note': 'Spans checked to NZS 3604:2011 Table 6.4(b), wet, 2 kPa, bearer continuous over two spans. Not a foundation or bracing check.',
     },
 }
-assert out['main_stock_lm'] == 73.2 and out['H4_stock_lm'] == 72.0
+assert out['main_stock_lm'] == 74.4 and out['H4_stock_lm'] == 72.0
 assert out['decking']['base_screws'] == base_screws
 assert out['concrete_geometry_only']['main_10_holes_m3'] == 0.96
 (root / 'design.json').write_text(json.dumps(out, indent=2) + '\n')
