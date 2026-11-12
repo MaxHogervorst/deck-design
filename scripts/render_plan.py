@@ -658,7 +658,7 @@ for a, b in zip(pile_x, pile_x[1:]):
     s1.append(_ln(PX(a), PY(y=2510) if False else PY(3115), PX(a), chain, RED, 0.35))
     s1.append(_hdim(PX(a), PX(b), chain, str(int(round(b - a)))))
 s1.append(_ln(PX(pile_x[-1]), PY(3115), PX(pile_x[-1]), chain, RED, 0.35))
-s1.append(_tx(PX((pile_x[1] + pile_x[2]) / 2), PY(2200), '190 BAY', 8, 'middle', RED, '700'))
+s1.append(_tx(PX((pile_x[1] + pile_x[2]) / 2), PY(2200), '190×45 DOUBLE', 8, 'middle', RED, '700'))
 s1.append(_hdim(PX(0), PX(6600), chain + 16, '6600'))
 s1.append(_tx(PX(0) - 2, chain - 10, '62.5', 7, 'end', RED))
 s1.append(_tx(PX(6600) + 2, chain - 10, '62.5', 7, 'start', RED))
@@ -678,7 +678,7 @@ s1.append(_tx(680, 366, '1000', 7, 'middle', RED))
 s1.append(_tx(680, 386, 'SCALE BAR 1:25', 6.5, 'middle', INK, '500'))
 
 s1.append(_note(188, 46, ['88×32 H3.2 MERCH GRADE', 'GRIPTREAD DECKING.', 'ABOUT 5mm GAP. BOARDS', 'ALONG THE DECK.'], (PX(1800), PY(30))))
-s1.append(_note(360, 46, ['140×45 SG8 H3.2', 'DOUBLE BEARER'], (PX(2200), PY(300))))
+s1.append(_note(360, 46, ['DOUBLE BEARER', '140×45, AND 190×45', 'ON THE 2390 BAY'], (PX(2200), PY(300))))
 s1.append(_note(500, 46, ['NOTE', 'DECKING IS FIXED WITH', 'DECKING SCREWS'], (PX(4200), PY(80))))
 s1.append(_note(188, 108, ['140×45 SG8 H3.2 JOIST', 'AT 437 CENTRES', 'DOUBLED AT 3956'], (PX(1770.5), PY(400))))
 s1.append(_note(400, 108, ['125×125 H5 PILE', 'HOLE 400×400×600', 'NO ANCHOR BRACKET'], (PX(2652.5), PY(300))))
@@ -692,7 +692,12 @@ def EZ(z):
 s1.append(_ln(PX(0), EZ(0), PX(6600), EZ(0), INK, 0.9))
 for x in pile_x:
     s1.append(_box(PX(x - 62.5), EZ(187), 125 * K, (187 + 40) * K))
-s1.append(_box(PX(0), EZ(328), 6600 * K, 140 * K))
+belly_a = pile_x[1] + 62.5
+belly_b = pile_x[2] - 62.5
+s1.append(_box(PX(0), EZ(328), belly_a * K, 140 * K))
+s1.append(_box(PX(belly_a), EZ(328), (belly_b - belly_a) * K, 190 * K))
+s1.append(_box(PX(belly_b), EZ(328), (6600 - belly_b) * K, 140 * K))
+s1.append(_tx(PX((belly_a + belly_b) / 2), EZ(110), '190', 7, 'middle', RED))
 s1.append(_box(PX(0), EZ(468), 6600 * K, 140 * K))
 s1.append(_box(PX(0), EZ(500), 6600 * K, 32 * K))
 s1.append(_vdim(PX(0) - 16, EZ(500), EZ(0), '500'))
@@ -902,7 +907,7 @@ for i, row in enumerate(rows_p):
 s3.append(_tx(560, 330, 'FRAMING SCHEDULE — FINISHED SIZES', 9, 'start', GREEN, '700'))
 s3.append(_ln(560, 338, 1120, 338, INK, 0.6))
 framing = [
-    'BEARERS  140×45 SG8 H3.2, DOUBLE, AT Y300 AND Y2510',
+    'BEARERS  140×45 SG8 H3.2 DOUBLE. 190×45 DOUBLE ON THE 2390 BAY. TOPS LINED UP',
     'JOISTS  140×45 SG8 H3.2, 437 CENTRES, DOUBLED AT 3956',
     'REBUILT  140×45 SG8 H3.2, 900×1970, NOT INTO THE DECK',
     'STEPS  140×45 SG8 H4, TWO GOINGS OF 280, FULL WIDTH',
