@@ -47,57 +47,57 @@ The underside of that bottom step is not 150 mm clear of the path. There is no w
 
 ## Shopping list
 
-Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 2026. Laid out as a supplier comparison. The quantities are this build, not the ROBO bill. Measure first, then buy. Nothing has been bought. Prices include GST. Placemakers is a phone call. A blank cell means no price was found.
+Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 2026. Prices read 12 November 2026 and include GST. Each line is the cheapest posted price, so the store changes from line to line. Freight is not included. The truck figure is a published Waikato list, not an Auckland quote. Nothing has been bought.
 
 [Download the CSV](docs/shopping-list.csv).
 
 ### Timber
 
-| Description | Qty | Unit | Bunnings | Mitre 10 | Comments |
+| Description | Qty | Unit | Cheapest | Store | Comments |
 |---|---|---|---|---|---|
-| 140×45 SG8 H3.2 framing, wet. Main deck and rebuilt strip | 100.8 | m | [$1,191.34](https://www.bunnings.co.nz/140-x-45mm-sg8-h3-2-treated-green-radiata-timber-framing-6m_p0616262) | POA | 6×7.2 m, 8×6.0 m, 2×4.8 m. 7.2 m is not listed, priced at the 6.0 m rate of $11.82/m |
-| 190×45 SG8 H3.2 for the one long bearer bay | 12 | m | POA | POA | 2×6.0 m. The bay between the moved piles is 2.39 m. Doubled 190 on both bearer lines. Notch the underside at each pile so the top lines up with the 140. Price not taken |
-| 140×45 SG8 H4 framing for the two steps | 72 | m | [$1,231.92](https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210) | POA | 8×7.2 m and 3×4.8 m. No 140×45 H4 price online, so this is 150×50 H4 at $17.11/m. Splice over a pile if 7.2 m H4 is not in the rack |
+| 140×45 SG8 H3.2 framing, wet. Main deck and rebuilt strip | 102 | m | [$877.20](https://rangitikeitimber.co.nz/products/140x45-h3-2-tw-sg8-framing) | Rangitikei Timber | 17×6.0 m at $51.60, Marton, in stock. Freight to Auckland is extra. Bunnings green 6.0 m is $70.91 if you collect it in town. 7.2 m is still not listed, so splice each bearer ply over a pile |
+| 190×45 SG8 H3.2 for the one long bearer bay | 9.6 | m | [$112.04](https://rangitikeitimber.co.nz/products/190x45-h3-2-tw-sg8-framing) | Rangitikei Timber | 2×4.8 m at $56.02. Cut each one in half and you have the four 2.39 m plies. ITM Stratford is $77.42 a 4.8 m length, but they only ship in Taranaki. Bunnings 4.8 m is $86.50 |
+| 150×50 SG8 H4 for the two steps. 140×45 H4 is not listed | 72 | m | [$1,231.92](https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210) | Bunnings | Special order at $17.11/m. ITM Stratford has 150×50 H4 No.2 at $52.46 a 6.0 m length, and Mitre 10 has N2 grade at $11.96/m. Neither is SG8, so they are not used for the step beams |
 
 ### Piles
 
-| Description | Qty | Unit | Bunnings | Mitre 10 | Comments |
+| Description | Qty | Unit | Cheapest | Store | Comments |
 |---|---|---|---|---|---|
-| 125×125 H5 pile, 1.2 m | 16 | ea | [$518.72](https://www.bunnings.co.nz/125-x-125mm-1-2m-square-h5-anchor-pile_p0276402) | POA | The 16 deck and rebuilt piles. 600 in the ground plus about 190 above the path, and the grass is lower, so 750 mm is too short. $32.42. Cut to the string |
-| 125×125 H5 pile, 750 mm | 8 | ea | [$168.32](https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396) | POA | Six under the bottom step and two spare for the path. $21.04. Most of the length gets cut off |
+| 125×125 H5 pile, 1.2 m | 16 | ea | [$414.24](https://kiwitimber.co.nz/index.php?route=product/product&product_id=248) | Kiwi Timber | Horotiu, $25.89 including GST. Renovation Warehouse is $26.60. Bunnings is $32.42 and Mitre 10 is $36.50. Rangitikei lists $22.07 but that length is sold out |
+| 125×125 H5 pile, 750 mm | 8 | ea | [$110.48](https://rangitikeitimber.co.nz/products/125x125-h5-tw-house-piles) | Rangitikei Timber | Marton, in stock at $13.81. Bunnings is $21.04. Freight is extra |
 
 ### Decking
 
-| Description | Qty | Unit | Bunnings | Mitre 10 | Comments |
+| Description | Qty | Unit | Cheapest | Store | Comments |
 |---|---|---|---|---|---|
-| 88×32 H3.2 merch griptread | 291.6 | m | [$1,326.78](https://www.bunnings.co.nz/88-x-32mm-merch-griptread-decking-random-lengths_p0307690) | POA | 43×4.2 m and 37×3.0 m at $4.55/m. Named lengths, so the butts land on the doubled joist |
+| 88×32 H3.2 merch griptread | 291.6 | m | [$1,326.78](https://www.bunnings.co.nz/88-x-32mm-merch-griptread-decking-random-lengths_p0307690) | Bunnings | 43×4.2 m and 37×3.0 m at $4.55/m. The listed price is the random-length bin. Named lengths, so the butts land on the doubled joist. Trade price is $4.33/m and needs a PowerPass |
 
 ### Fasteners
 
-| Description | Qty | Unit | Bunnings | Mitre 10 | Comments |
+| Description | Qty | Unit | Cheapest | Store | Comments |
 |---|---|---|---|---|---|
-| Decking screws 10g×65 316 stainless | 1500 | ea | [$348.00](https://www.bunnings.co.nz/decking-screw-65-x-10g-316-stainless-steel-500-pack_p0379643) | POA | 3×500 at $116. 1384 positions |
-| Framing nails 90×4 316 stainless jolt head | 6 | kg | POA | [$387.00](https://www.mitre10.co.nz/shop/ecko-jolt-head-nails-90-x-4-0mm-2kg-316-stainless-steel/p/307864) | 3×2 kg at $129, Mitre 10. Bearer plies and the step beams |
-| Framing nails 100×4 316 stainless jolt head | 4 | kg | [$284.72](https://www.bunnings.co.nz/nz-nails-100-x-4mm-500g-316-stainless-steel-jolt-head-nail_p0383199) | POA | 8×500 g at $35.59. Joists, rims, skew nails |
-| Batten screws 14g×100 316 stainless | 100 | ea | [$77.05](https://www.bunnings.co.nz/bremick-xtp-14g-x-100mm-t40-stainless-steel-316-black-bugle-batten-100-pack_p0575899) | POA | One box, $77.05. Step ribbons, and the rebuilt joists |
-| M12×120 316 coach bolt, nut, two 50 mm washers | 2 | ea | [$26.46](https://www.bunnings.co.nz/zenith-m12-x-120mm-316-stainless-steel-coach-head-bolt-and-nut_p0236593) | POA | The two rim ties. $4.90 + $1.25 + 2×$3.54 each |
+| Decking screws 10g×65 316 stainless | 1500 | ea | [$348.00](https://www.bunnings.co.nz/decking-screw-65-x-10g-316-stainless-steel-500-pack_p0379643) | Bunnings | 3×500 at $116. 1384 positions |
+| Framing nails 90×4 316 stainless jolt head | 6 | kg | [$387.00](https://www.mitre10.co.nz/shop/ecko-jolt-head-nails-90-x-4-0mm-2kg-316-stainless-steel/p/307864) | Mitre 10 | 3×2 kg at $129. Bearer plies and the step beams |
+| Framing nails 100×4 316 stainless jolt head | 4 | kg | [$284.72](https://www.bunnings.co.nz/nz-nails-100-x-4mm-500g-316-stainless-steel-jolt-head-nail_p0383199) | Bunnings | 8×500 g at $35.59. Joists, rims, skew nails |
+| Batten screws 14g×100 316 stainless | 100 | ea | [$77.05](https://www.bunnings.co.nz/bremick-xtp-14g-x-100mm-t40-stainless-steel-316-black-bugle-batten-100-pack_p0575899) | Bunnings | One box, $77.05. Step ribbons, and the rebuilt joists |
+| M12×120 316 coach bolt, nut, two 50 mm washers | 2 | ea | [$26.46](https://www.bunnings.co.nz/zenith-m12-x-120mm-316-stainless-steel-coach-head-bolt-and-nut_p0236593) | Bunnings | The two rim ties. $4.90 + $1.25 + 2×$3.54 each |
 
 ### Concrete
 
-| Description | Qty | Unit | Bunnings | Mitre 10 | Comments |
+| Description | Qty | Unit | Cheapest | Store | Comments |
 |---|---|---|---|---|---|
-| Ready-mix, small load | 2.0 | m³ | $650.00 | POA | About $650, not a quote. On site the figure was about $600 for the 1.1 m³ in the twelve holes. This load covers the rebuilt holes and the step as well. Do not add the cement as well |
-| Portland cement, 20 kg. Only if mixing on site | 36 | ea | [$417.24](https://www.bunnings.co.nz/cemix-20kg-low-carbon-cement_p0581734) | POA | Cemix Ecostrong $11.59, used as GP cement. Four shovels of builders mix to one shovel of cement, and a bit more cement if the mix looks lean Not in the total. |
-| Builders mix, dumped in front of the garage | 2.5 | m³ | POA | POA | Only with the cement. Phone a yard. Not priced Not in the total. |
+| Ready-mix 20 MPa, small load | 2.0 | m³ | [$709.56](https://calk.nz/calculator/concrete-calculator/) | Bowers, via Kiwi Timber | Waikato list, $297.28/m³ including GST, plus the $115 small-load charge published with it. Not a Point Chevalier quote. Auckland plants price by the address. Do not add the cement as well |
+| Portland cement, 20 kg. Only if mixing on site | 36 | ea | [$417.24](https://www.bunnings.co.nz/cemix-20kg-low-carbon-cement_p0581734) | Bunnings | Cemix Ecostrong $11.59, used as GP cement. Four shovels of builders mix to one shovel of cement Not in the total. |
+| Builders mix BM20. Only if mixing on site | 2.5 | m³ | [$316.25](https://www.aucklandaggregates.co.nz/shop/product/577984/bm-20--builders-mix-virgin-aggregate/) | Auckland Aggregates | $126.50/m³ including GST. Cartage is priced by the kilometre and is not in this figure. This replaces the truck, so it is not in the total Not in the total. |
 
 ### DPC
 
-| Description | Qty | Unit | Bunnings | Mitre 10 | Comments |
+| Description | Qty | Unit | Cheapest | Store | Comments |
 |---|---|---|---|---|---|
-| DPC Supercourse 500, 150 mm×30 m | 1 | ea | [$27.42](https://www.bunnings.co.nz/thermakraft-supercourse-500-dpc-150mmx30m_p0207794) | POA | On every pile top. $27.42 |
-| Metalex Green, 1 L | 1 | ea | [$66.00](https://www.bunnings.co.nz/metalex-1l-green-timber-preserve-44501_p0709374) | POA | On every saw cut. $66 |
+| DPC Supercourse 500, 150 mm×30 m | 1 | ea | [$27.42](https://www.bunnings.co.nz/thermakraft-supercourse-500-dpc-150mmx30m_p0207794) | Bunnings | On every pile top. $27.42 |
+| Metalex Green, 1 L | 1 | ea | [$66.00](https://www.bunnings.co.nz/metalex-1l-green-timber-preserve-44501_p0709374) | Bunnings | On every saw cut. $66 |
 
-**Posted $3,230.47 + estimates $3,073.26 = about $6,304 including GST.** The total uses the truck. If the holes are mixed on site, take the truck out and add the cement. The builders mix is a yard quote and is not in the number either way. Do not add the truck and the cement together.
+**Posted $5,289.31 + estimates $709.56 = about $5,999 including GST.** The total uses the truck. If the holes are mixed on site, take the truck out and add the cement. The builders mix is a yard quote and is not in the number either way. Do not add the truck and the cement together.
 
 Pack sizes are already rounded up for the nails and the screws. Pile lengths are long on purpose. No allowance for a wasted bolt, or for timber used as a temporary brace. Delivery, the mixer and carting the spoil are extra. Galvanised fasteners, if the map says the site is outside the sea-spray zone, cut a lot of the fixing cost.
 
@@ -160,7 +160,7 @@ We walked it on 11 November. The holes, the concrete and the two steps follow th
 - **The services reply.** It said no gas and no power within 10 m. The power is there. Drain depths are approximate. Paint, spade, and move a hole rather than dig through a pipe.
 - **Stainless until the map is checked.** 316 because I have not confirmed the sea-spray zone. Outside it, hot-dip galvanised is allowed and much cheaper.
 - **The path.** It stays. Line 2 moves off it. The bay beside it is 2.39 m because the sewage is 130 mm past the blue pipe, and that bay is a doubled 190. The steps are taped off the path, not off the lawn.
-- **Prices.** Read on 11 November 2026 where a figure is shown. The H4 line is 150×50 because 140×45 H4 is not listed. The truck is a round figure, not a quote.
+- **Prices.** Read on 12 November 2026. Each line is the cheapest posted price, and the store is named. Freight from Marton or Horotiu is not in the total. The H4 line is 150×50 SG8 because 140×45 H4 is not listed. No.2 H4 is cheaper and is the wrong grade. The truck is a Waikato list price plus the published small-load charge, not a Point Chevalier quote.
 - **The rebuilt strip.** The old bearer comes out. If the ground there is worse than the main holes, those four piles get the same 600 mm and the same concrete.
 
 ## Sources
