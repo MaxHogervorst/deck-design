@@ -76,10 +76,10 @@ Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 202
 
 | Description | Qty | Unit | Cheapest | Store | Comments |
 |---|---|---|---|---|---|
-| Decking screws 10g×65 316 stainless | 1500 | ea | [$348.00](https://www.bunnings.co.nz/decking-screw-65-x-10g-316-stainless-steel-500-pack_p0379643) | Bunnings | 3×500 at $116. 1384 positions |
-| Framing nails 90×4 316 stainless jolt head | 6 | kg | [$387.00](https://www.mitre10.co.nz/shop/ecko-jolt-head-nails-90-x-4-0mm-2kg-316-stainless-steel/p/307864) | Mitre 10 | 3×2 kg at $129. Bearer plies and the step beams |
-| Framing nails 100×4 316 stainless jolt head | 4 | kg | [$284.72](https://www.bunnings.co.nz/nz-nails-100-x-4mm-500g-316-stainless-steel-jolt-head-nail_p0383199) | Bunnings | 8×500 g at $35.59. Joists, rims, skew nails |
-| Batten screws 14g×100 316 stainless | 100 | ea | [$77.05](https://www.bunnings.co.nz/bremick-xtp-14g-x-100mm-t40-stainless-steel-316-black-bugle-batten-100-pack_p0575899) | Bunnings | One box, $77.05. Step ribbons, and the rebuilt joists |
+| Decking screws 10g×65, coated for treated pine | 1500 | ea | [$227.76](https://www.bunnings.co.nz/buildex-10g-x-65mm-climacoat-rapiddrive-treated-pine-screws-500-pack_p0417168) | Bunnings | 3×500 Buildex Climacoat at $75.92. CCA decking, zone C, so stainless is not required. A 304 decking screw is about $234 for the same 1500 and is the one to take if the heads will show. 1384 positions |
+| Framing nails 90×3.55 galvanised jolt head | 7 | kg | [$78.63](https://www.bunnings.co.nz/nz-nails-90-x-3-55mm-5kg-galvanised-jolt-head-nail_p0318485) | Bunnings | 1×5 kg at $51.98 and 1×2 kg at $26.65. Hot-dip galvanised. Bearer plies and the step beams. The stainless nails only came in 4 mm |
+| Framing nails 100×4 galvanised flat head | 5 | kg | [$51.77](https://www.bunnings.co.nz/nz-nails-100-x-4mm-5kg-galvanised-flat-head-nail_p0318604) | Bunnings | One 5 kg tub at $51.77. Joists, rims and the skew nails. The heads are buried, so a flat head is fine |
+| Batten screws 14g×100 class 3 galvanised | 100 | ea | [$29.95](https://www.bunnings.co.nz/titan-14g-x-100mm-cl3-gal-bugle-batten-screw-100-pack_p0579091) | Bunnings | One box, $29.95. Step ribbons, and the rebuilt joists. Class 3, for outside |
 | M12×120 316 coach bolt, nut, two 50 mm washers | 2 | ea | [$26.46](https://www.bunnings.co.nz/zenith-m12-x-120mm-316-stainless-steel-coach-head-bolt-and-nut_p0236593) | Bunnings | The two rim ties. $4.90 + $1.25 + 2×$3.54 each |
 
 ### Concrete
@@ -97,9 +97,9 @@ Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 202
 | DPC Supercourse 500, 150 mm×30 m | 1 | ea | [$27.42](https://www.bunnings.co.nz/thermakraft-supercourse-500-dpc-150mmx30m_p0207794) | Bunnings | On every pile top. $27.42 |
 | Metalex Green, 1 L | 1 | ea | [$66.00](https://www.bunnings.co.nz/metalex-1l-green-timber-preserve-44501_p0709374) | Bunnings | On every saw cut. $66 |
 
-**Posted $5,840.86 + estimates $650.00 = about $6,491 including GST.** The total uses the truck. If the holes are mixed on site, take the truck out and add the cement. The builders mix is a yard quote and is not in the number either way. Do not add the truck and the cement together.
+**Posted $5,132.20 + estimates $650.00 = about $5,782 including GST.** The total uses the truck. If the holes are mixed on site, take the truck out and add the cement. The builders mix is a yard quote and is not in the number either way. Do not add the truck and the cement together.
 
-Pack sizes are already rounded up for the nails and the screws. Pile lengths are long on purpose. No allowance for a wasted bolt, or for timber used as a temporary brace. Delivery, the mixer and carting the spoil are extra. Galvanised fasteners, if the map says the site is outside the sea-spray zone, cut a lot of the fixing cost.
+Pack sizes are already rounded up for the nails and the screws. Pile lengths are long on purpose. No allowance for a wasted bolt, or for timber used as a temporary brace. Delivery, the mixer and carting the spoil are extra. The nails and the screws are galvanised. The two bolts stay stainless.
 
 ### Cut list
 
@@ -127,9 +127,9 @@ Steps: 72 m bought, 65.38 m used. 6600 is the eight long plies, two doubles on e
 
 | ID | Joint | Detail |
 |---|---|---|
-| F1 | Double bearers and the step beams | 90×4 stainless nails, two rows at 250 mm centres, staggered. Same on each double step beam and ribbon. |
-| F2 | Pile to bearer, and the small step piles | Four 100×4 stainless skew nails. Same four nails from the front beam down into each small pile. |
-| F3 | Joists, rims, blocks | Two 100×4 stainless per joist end, through the rim or into the ribbon. |
+| F1 | Double bearers and the step beams | 90×3.55 galvanised jolt nails, two rows at 250 mm centres, staggered. Same on each double step beam and ribbon. |
+| F2 | Pile to bearer, and the small step piles | Four 100×4 galvanised skew nails. Same four nails from the front beam down into each small pile. |
+| F3 | Joists, rims, blocks | Two 100×4 galvanised nails per joist end, through the rim or into the ribbon. |
 | F4 | Rebuilt joists | Four 100×4 skew nails and two 14g×100 screws, skewed in from the side of the joist. The point-load screen can put about 1.9 kN of uplift on one support. Ordinary carpentry, not a rated bracket. |
 | F5 | Bottom-step ribbon to the front piles | Four 14g×100 screws into each pile, in from the side. A bolt through is fine if you would rather drill the pile. Ordinary screws, not a bracket. |
 | F6 | Rebuilt strip to the main rim | Two M12×120 stainless coach bolts at X200 and X700, 50 mm square washers both sides. |
@@ -138,7 +138,7 @@ Steps: 72 m bought, 65.38 m used. 6600 is the eight long plies, two doubles on e
 
 ## Build order
 
-1. Before you buy. Match the old deck: the new boards sit at that same 500 mm, not 500 mm above the low grass. Measure from the old boards down to the concrete path. Joists need about 330 mm of air over the path and the bearers about 190 mm. The steps are measured off the path as well, because that is where you walk. Tape that height and divide by three. If it is 500, each rise is 167. The lawn is lower and is not the step. Check the sill and the cladding. Stainless or galvanised still depends on the sea-spray zone. A services reply that says no power within 10 m is not to be trusted: there is power. Mark the stormwater and the waste before any digging.
+1. Before you buy. Match the old deck: the new boards sit at that same 500 mm, not 500 mm above the low grass. Measure from the old boards down to the concrete path. Joists need about 330 mm of air over the path and the bearers about 190 mm. The steps are measured off the path as well, because that is where you walk. Tape that height and divide by three. If it is 500, each rise is 167. The lawn is lower and is not the step. Check the sill and the cladding. Formby Avenue is about 1.1 km from the harbour, outside the 500 m sea-spray zone, so the nails and the screws are galvanised. The two bolts stay stainless. A services reply that says no power within 10 m is not to be trusted: there is power. Mark the stormwater and the waste before any digging.
 2. Set out. String the 6600×2600 outline and the 900×1970 rebuilt strip. The steps stick out 560 mm past the front, two goings of 280. Leave the path. End joist flush, then 437 mm centres, doubled joist centred at 3956. Lines 1, 4, 5 and 6 stay. Line 2 moves 200 mm onto the grass, so the 400 hole stops at the concrete. Line 3 is 1,230 mm past the right edge of the concrete: 400 to the blue pipe, 130 to the sewage, 500 clear, 200 to the middle of the hole. Paint the marks. The six step holes go on those same lines, 560 mm out.
 3. Dig, with a spade. Every deck hole is 400×400 and 600 deep, down to firm ground, not topsoil. No 900 mm anchor holes. At 600 a shovel is enough. An auger only earns its keep past 600, and these holes do not go there. About ten minutes a hole. No hole in the concrete, no hole between the blue pipe and the sewage, and no hole edge within 500 mm of either. The 2.39 m bay is the doubled 190. Every other bearer bay stays under 1.4 m.
 4. Concrete. One hole at a time, unless the weather is settled and every hole is open. The twelve main holes are 1.15 m³, the 1.1 m³ counted on site, pile left in the hole. Rebuilt holes and the step holes bring it to about 1.82 m³. Order 2.0 m³ if a truck is coming, and barrow it. Otherwise builders mix dumped in front of the garage, plus cement: four shovels of mix to one of cement, a bit more cement if it looks lean, mixer hired. Fill to about 100 mm below the ground. Do not use the no-mix post-hole bags. Nothing in the hole has to be level.
@@ -158,7 +158,7 @@ We walked it on 11 November. The holes, the concrete and the two steps follow th
 - **The ground.** Firm clay at about 100 kPa under the topsoil. That is the usual Auckland assumption, not a test. A step pile is at about 28 kPa on a 300×300. If a hole is soft or wet at 600, that hole gets deeper or wider and it is no longer a spade job.
 - **The steps.** The front beam, full 140 over a 1.30 m bay, is about 71% of my bending screen under a factored point load. Ripped to 120 mm, that half-bay is about 47%. The ripped piece does not cross the 2.39 m gap. The screws are ordinary screws. The bottom step does not have 150 mm clearance over the path. The rises are even. They are not a consented stair.
 - **The services reply.** It said no gas and no power within 10 m. The power is there. Drain depths are approximate. Paint, spade, and move a hole rather than dig through a pipe.
-- **Stainless until the map is checked.** 316 because I have not confirmed the sea-spray zone. Outside it, hot-dip galvanised is allowed and much cheaper.
+- **Fixings.** Formby Avenue is about 1.1 km from the harbour, past the 500 m sea-spray line, so this is zone C. The nails and the screws are galvanised. The deck is open, so the two bolts stay 316. The decking is CCA. Do not swap in ACQ timber and keep these screws.
 - **The path.** It stays. Line 2 moves off it. The bay beside it is 2.39 m because the sewage is 130 mm past the blue pipe, and that bay is a doubled 190. The steps are taped off the path, not off the lawn.
 - **Prices.** Auckland only, read on 12 November 2026. Marton, Horotiu and Stratford are left out. Each line is the cheapest posted price, and the store is named. The H4 line is 150×50 SG8 because 140×45 H4 is not listed. N2 H4 is cheaper and is the wrong grade. The truck is the figure from site, not a Point Chevalier quote.
 - **The rebuilt strip.** The old bearer comes out. If the ground there is worse than the main holes, those four piles get the same 600 mm and the same concrete.
