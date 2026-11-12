@@ -35,14 +35,13 @@
   ],
   "butt_joist_centre_mm": 3956,
   "rebuilt_joists": 3,
-  "rebuilt_joist_cut_mm": 1880,
+  "rebuilt_joist_cut_mm": 1400,
   "rebuilt_bearer_Y_mm": [
-    -1925,
-    -800
+    0
   ],
-  "rear_bearer_rear_face_Y_mm": -1970,
-  "rebuilt_lateral_blocks": 2,
-  "rebuilt_block_cut_mm": 380,
+  "rear_bearer_rear_face_Y_mm": -1100,
+  "rebuilt_lateral_blocks": 0,
+  "rebuilt_block_cut_mm": 0,
   "main_lateral_block_rows": 0,
   "tread": {
     "kind": "two steps, three equal rises, ribbon screwed to the piles, not a cut stringer",
@@ -83,12 +82,12 @@
     5242.5,
     6537.5
   ],
-  "timber_piles": 14,
+  "timber_piles": 10,
   "candidate_anchor_piles": 0,
-  "ordinary_piles": 14,
+  "ordinary_piles": 10,
   "step_piles": 5,
-  "main_stock_lm": 72.0,
-  "main_installed_lm": 67.67,
+  "main_stock_lm": 73.2,
+  "main_installed_lm": 61.87,
   "H4_stock_lm": 72.0,
   "H4_installed_lm": 65.38,
   "main_stock_allocations": [
@@ -100,26 +99,7 @@
       ]
     },
     {
-      "count": 6,
-      "stock_mm": 6000,
-      "cuts_mm": [
-        2510,
-        2510,
-        900
-      ]
-    },
-    {
-      "count": 1,
-      "stock_mm": 6000,
-      "cuts_mm": [
-        2510,
-        2510,
-        380,
-        380
-      ]
-    },
-    {
-      "count": 1,
+      "count": 8,
       "stock_mm": 6000,
       "cuts_mm": [
         2510,
@@ -128,18 +108,20 @@
     },
     {
       "count": 1,
-      "stock_mm": 4800,
+      "stock_mm": 6000,
       "cuts_mm": [
-        1880,
-        1880
+        2510,
+        1400,
+        1400
       ]
     },
     {
       "count": 1,
       "stock_mm": 4800,
       "cuts_mm": [
-        2510,
-        1880
+        1400,
+        900,
+        900
       ]
     }
   ],
@@ -206,24 +188,24 @@
   ],
   "decking": {
     "main_rows": 28,
-    "rebuilt_rows": 21,
+    "rebuilt_rows": 12,
     "tread_rows": 6,
     "face_rows": 3,
     "stock_4200": 43,
     "stock_3000": 37,
     "stock_lm": 291.6,
     "pricing_allowance_lm": 291.6,
-    "base_screws": 1384,
+    "base_screws": 1330,
     "purchase_allowance_screws": 1500,
     "width_basis_mm": 88,
     "gaps": "About 5 mm on the main deck and about 6 mm on the rebuilt strip. Three boards on each step. One board on the boundary-joist face and one on each riser."
   },
   "concrete_geometry_only": {
     "main_10_holes_m3": 0.96,
-    "rebuilt_4_holes_m3": 0.384,
+    "rebuilt_4_holes_m3": 0,
     "step_holes_m3": 0.18,
     "extra_path_holes_m3": 0,
-    "main_net_m3": 1.524,
+    "main_net_m3": 1.14,
     "readymix_order_m3": 2.0,
     "cement_20kg_buy": 36,
     "builders_mix_m3": 2.5,
@@ -240,14 +222,14 @@
     "warning": "Volume leaves the pile in the hole. Not a concrete order. The 2.0 m\u00b3 is the truck figure; mixing uses the cement and the builders mix instead."
   },
   "screens": {
-    "rebuilt_zero_dead_uplift_ULS_kN": 1.9200000000000002,
+    "rebuilt_zero_dead_uplift_ULS_kN": 0.0,
     "step_point_ULS_kN": 4.637903225806452,
     "step_beam_span_m": 2.39,
     "step_beam_table_m": 3.0,
     "bearer_table_m": 2.7,
-    "step_pile_reaction_ULS_kN": 2.7061316383885363,
-    "step_pile_bearing_kPa": 30.068129315428184,
-    "main_bearer_max_M_ULS_kNm": 3.7564787192178435,
+    "step_pile_reaction_ULS_kN": 2.706131625908291,
+    "step_pile_bearing_kPa": 30.06812917675879,
+    "main_bearer_max_M_ULS_kNm": 3.756478719159095,
     "note": "Spans checked to NZS 3604:2011 Table 6.4(b), wet, 2 kPa, bearer continuous over two spans. Not a foundation or bracing check."
   }
 }
