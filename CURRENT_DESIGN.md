@@ -47,7 +47,7 @@ The underside of that bottom step is not 150 mm clear of the path. There is no w
 
 ## Shopping list
 
-Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 2026. Prices read 12 November 2026 and include GST. Each line is the cheapest posted price, so the store changes from line to line. Freight is not included. The truck figure is a published Waikato list, not an Auckland quote. Nothing has been bought.
+Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 2026. Auckland prices only, read 12 November 2026, including GST. Each line is the cheapest posted price, so the store can change. Delivery is extra. The truck is not a quote. Nothing has been bought.
 
 [Download the CSV](docs/shopping-list.csv).
 
@@ -55,16 +55,16 @@ Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 202
 
 | Description | Qty | Unit | Cheapest | Store | Comments |
 |---|---|---|---|---|---|
-| 140×45 SG8 H3.2 framing, wet. Main deck and rebuilt strip | 102 | m | [$877.20](https://rangitikeitimber.co.nz/products/140x45-h3-2-tw-sg8-framing) | Rangitikei Timber | 17×6.0 m at $51.60, Marton, in stock. Freight to Auckland is extra. Bunnings green 6.0 m is $70.91 if you collect it in town. 7.2 m is still not listed, so splice each bearer ply over a pile |
-| 190×45 SG8 H3.2 for the one long bearer bay | 9.6 | m | [$112.04](https://rangitikeitimber.co.nz/products/190x45-h3-2-tw-sg8-framing) | Rangitikei Timber | 2×4.8 m at $56.02. Cut each one in half and you have the four 2.39 m plies. ITM Stratford is $77.42 a 4.8 m length, but they only ship in Taranaki. Bunnings 4.8 m is $86.50 |
-| 150×50 SG8 H4 for the two steps. 140×45 H4 is not listed | 72 | m | [$1,231.92](https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210) | Bunnings | Special order at $17.11/m. ITM Stratford has 150×50 H4 No.2 at $52.46 a 6.0 m length, and Mitre 10 has N2 grade at $11.96/m. Neither is SG8, so they are not used for the step beams |
+| 140×45 SG8 H3.2 framing, wet. Main deck and rebuilt strip | 102 | m | [$1,205.47](https://www.bunnings.co.nz/140-x-45mm-sg8-h3-2-treated-green-radiata-timber-framing-6m_p0616262) | Bunnings | 17×6.0 m at $70.91. Green, not kiln dried. 7.2 m is not listed, so splice each bearer ply over a pile. The 4.8 m length is $58.42 and works out dearer per metre |
+| 190×45 SG8 H3.2 for the one long bearer bay | 9.6 | m | [$173.00](https://www.bunnings.co.nz/190-x-45mm-sg8-h3-2-treated-green-radiata-timber-framing-4-8m_p0616614) | Bunnings | 2×4.8 m at $86.50. Cut each one in half for the four 2.39 m plies. A 6.0 m length is $108.12 and leaves more waste. Kiln-dried 6.0 m is $131.34 |
+| 150×50 SG8 H4 for the two steps. 140×45 H4 is not listed | 72 | m | [$1,231.92](https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210) | Bunnings | Special order at $17.11/m. Mitre 10 lists 150×50 H4 from $11.96/m, but that is N2 grade, not SG8 |
 
 ### Piles
 
 | Description | Qty | Unit | Cheapest | Store | Comments |
 |---|---|---|---|---|---|
-| 125×125 H5 pile, 1.2 m | 16 | ea | [$414.24](https://kiwitimber.co.nz/index.php?route=product/product&product_id=248) | Kiwi Timber | Horotiu, $25.89 including GST. Renovation Warehouse is $26.60. Bunnings is $32.42 and Mitre 10 is $36.50. Rangitikei lists $22.07 but that length is sold out |
-| 125×125 H5 pile, 750 mm | 8 | ea | [$110.48](https://rangitikeitimber.co.nz/products/125x125-h5-tw-house-piles) | Rangitikei Timber | Marton, in stock at $13.81. Bunnings is $21.04. Freight is extra |
+| 125×125 H5 pile, 1.2 m | 16 | ea | [$518.72](https://www.bunnings.co.nz/125-x-125mm-1-2m-square-h5-anchor-pile_p0276402) | Bunnings | The 16 deck and rebuilt piles. $32.42. Mitre 10 is $36.50 for the same 1.2 m |
+| 125×125 H5 pile, 750 mm | 8 | ea | [$168.32](https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396) | Bunnings | Six under the bottom step and two spare. $21.04. Most of the length gets cut off |
 
 ### Decking
 
@@ -86,7 +86,7 @@ Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 202
 
 | Description | Qty | Unit | Cheapest | Store | Comments |
 |---|---|---|---|---|---|
-| Ready-mix 20 MPa, small load | 2.0 | m³ | [$709.56](https://calk.nz/calculator/concrete-calculator/) | Bowers, via Kiwi Timber | Waikato list, $297.28/m³ including GST, plus the $115 small-load charge published with it. Not a Point Chevalier quote. Auckland plants price by the address. Do not add the cement as well |
+| Ready-mix 20 MPa, small load | 2.0 | m³ | [$650.00](https://www.firth.co.nz/temporary-fuel-surcharge) | Auckland plant | Not a published price. On site the figure was about $600 for the 1.1 m³ in the twelve holes. This load is still about $650 until Firth or Allied prices Point Chevalier. Firth adds $9.90/m³ fuel on top of the quote. Do not add the cement as well |
 | Portland cement, 20 kg. Only if mixing on site | 36 | ea | [$417.24](https://www.bunnings.co.nz/cemix-20kg-low-carbon-cement_p0581734) | Bunnings | Cemix Ecostrong $11.59, used as GP cement. Four shovels of builders mix to one shovel of cement Not in the total. |
 | Builders mix BM20. Only if mixing on site | 2.5 | m³ | [$316.25](https://www.aucklandaggregates.co.nz/shop/product/577984/bm-20--builders-mix-virgin-aggregate/) | Auckland Aggregates | $126.50/m³ including GST. Cartage is priced by the kilometre and is not in this figure. This replaces the truck, so it is not in the total Not in the total. |
 
@@ -97,7 +97,7 @@ Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 202
 | DPC Supercourse 500, 150 mm×30 m | 1 | ea | [$27.42](https://www.bunnings.co.nz/thermakraft-supercourse-500-dpc-150mmx30m_p0207794) | Bunnings | On every pile top. $27.42 |
 | Metalex Green, 1 L | 1 | ea | [$66.00](https://www.bunnings.co.nz/metalex-1l-green-timber-preserve-44501_p0709374) | Bunnings | On every saw cut. $66 |
 
-**Posted $5,289.31 + estimates $709.56 = about $5,999 including GST.** The total uses the truck. If the holes are mixed on site, take the truck out and add the cement. The builders mix is a yard quote and is not in the number either way. Do not add the truck and the cement together.
+**Posted $5,840.86 + estimates $650.00 = about $6,491 including GST.** The total uses the truck. If the holes are mixed on site, take the truck out and add the cement. The builders mix is a yard quote and is not in the number either way. Do not add the truck and the cement together.
 
 Pack sizes are already rounded up for the nails and the screws. Pile lengths are long on purpose. No allowance for a wasted bolt, or for timber used as a temporary brace. Delivery, the mixer and carting the spoil are extra. Galvanised fasteners, if the map says the site is outside the sea-spray zone, cut a lot of the fixing cost.
 
@@ -160,7 +160,7 @@ We walked it on 11 November. The holes, the concrete and the two steps follow th
 - **The services reply.** It said no gas and no power within 10 m. The power is there. Drain depths are approximate. Paint, spade, and move a hole rather than dig through a pipe.
 - **Stainless until the map is checked.** 316 because I have not confirmed the sea-spray zone. Outside it, hot-dip galvanised is allowed and much cheaper.
 - **The path.** It stays. Line 2 moves off it. The bay beside it is 2.39 m because the sewage is 130 mm past the blue pipe, and that bay is a doubled 190. The steps are taped off the path, not off the lawn.
-- **Prices.** Read on 12 November 2026. Each line is the cheapest posted price, and the store is named. Freight from Marton or Horotiu is not in the total. The H4 line is 150×50 SG8 because 140×45 H4 is not listed. No.2 H4 is cheaper and is the wrong grade. The truck is a Waikato list price plus the published small-load charge, not a Point Chevalier quote.
+- **Prices.** Auckland only, read on 12 November 2026. Marton, Horotiu and Stratford are left out. Each line is the cheapest posted price, and the store is named. The H4 line is 150×50 SG8 because 140×45 H4 is not listed. N2 H4 is cheaper and is the wrong grade. The truck is the figure from site, not a Point Chevalier quote.
 - **The rebuilt strip.** The old bearer comes out. If the ground there is worse than the main holes, those four piles get the same 600 mm and the same concrete.
 
 ## Sources
