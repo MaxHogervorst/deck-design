@@ -13,8 +13,8 @@ assert abs(300 - 22.5) <= 300 and abs(2510 - 2532.5) <= 300
 main_alloc = [
     (2, 7200, [6600]),
     (8, 6000, [2510, 2510]),
-    (1, 6000, [2510, 1970]),
-    (1, 6000, [1970, 1970, 900, 900]),
+    (1, 6000, [2510, 2270, 900]),
+    (1, 6000, [2270, 2270, 900]),
 ]
 # Two steps, full width. Eight 6.6 m H4 plies (two doubles for each step) and the short joists.
 # 7.2 m stock so each ply is one piece. Joists cut long and trimmed to the opening.
@@ -27,7 +27,7 @@ h4_alloc = [
 for n, s, cs in main_alloc + h4_alloc:
     assert sum(cs) + 4 * len(cs) + 5 <= s, (s, cs)
 main_counts = Counter(c for n, s, cs in main_alloc for c in cs for _ in range(n))
-assert main_counts == Counter({6600: 2, 2510: 17, 1970: 3, 900: 2}), main_counts
+assert main_counts == Counter({6600: 2, 2510: 17, 2270: 3, 900: 2}), main_counts
 h4_counts = Counter(c for n, s, cs in h4_alloc for c in cs for _ in range(n))
 assert h4_counts == Counter({6600: 8, 500: 17, 240: 17}), h4_counts
 # NZS 3604:2011 Table 6.4(b), 2 kPa, wet in service. Spans are for a bearer
@@ -47,10 +47,15 @@ rise = 500 / 3
 going = 280
 assert 190 >= rise >= 150
 assert 550 <= 2 * rise + going <= 700
-# Rebuilt strip spans from the existing bearer to a ledger on the house.
-# NZS 3604 Table 7.1(b), wet: 140×45 at 450 centres spans 2.35 m. No new piles.
+# Rebuilt strip. Joists run from the house ledger to the first new bearer,
+# 45 mm beside the deck joists so the two can be nailed through the lap.
+# Supports are the ledger, the existing bearer and the new bearer at Y300.
+# The long span is 1970 mm. Table 7.1(b) allows 2350 mm at 450 centres.
+rebuilt_x = [67.5, 504.5, 851.5]
+assert max(b - a for a, b in zip(rebuilt_x, rebuilt_x[1:])) <= 450
 rebuilt_span = 1970
-assert rebuilt_span <= 2350
+rebuilt_cut = 2270
+assert rebuilt_span <= 2350 and rebuilt_cut <= 2350
 rebuilt_uplift = 0.0
 # Step front beam is a doubled 140, which Table 6.4(b) allows to 3.0 m at a
 # loaded dimension of 1.30 m, continuous. The longest step bay is 2.39 m.
@@ -123,7 +128,8 @@ out = {
     'front_rim_Y_mm': [2555, 2600],
     'butt_joist_centre_mm': 3956,
     'rebuilt_joists': 3,
-    'rebuilt_joist_cut_mm': 1970,
+    'rebuilt_joist_X_mm': rebuilt_x,
+    'rebuilt_joist_cut_mm': rebuilt_cut,
     'rebuilt_bearer_Y_mm': [0, -1970],
     'rear_bearer_rear_face_Y_mm': -1970,
     'rebuilt_lateral_blocks': 0,
