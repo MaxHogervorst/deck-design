@@ -10,29 +10,29 @@ t = d['tread']
 deck = d['decking']
 pile_x = d['main_pile_X_mm']
 DATE = '11 November 2026'
-# category, item, qty, unit, bunnings unit text, bunnings line or None, mitre line or None, comment, kind, url
+# category, item, qty, unit, line price, store, comment, kind, url
+# Prices read 12 November 2026, GST included. Each line is the cheapest posted price. Freight is not in the number.
 rows = [
-    ('Timber', '140×45 SG8 H3.2 framing, wet. Main deck and rebuilt strip', '100.8', 'm', 6 * 85.10 + 8 * 70.91 + 2 * 56.73, None, '6×7.2 m, 8×6.0 m, 2×4.8 m. 7.2 m is not listed, priced at the 6.0 m rate of $11.82/m', 'estimate', 'https://www.bunnings.co.nz/140-x-45mm-sg8-h3-2-treated-green-radiata-timber-framing-6m_p0616262'),
-    ('Timber', '190×45 SG8 H3.2 for the one long bearer bay', '12', 'm', None, None, '2×6.0 m. The bay between the moved piles is 2.39 m. Doubled 190 on both bearer lines. Notch the underside at each pile so the top lines up with the 140. Price not taken', 'estimate', ''),
-    ('Timber', '140×45 SG8 H4 framing for the two steps', f'{d["H4_stock_lm"]:.0f}', 'm', d['H4_stock_lm'] * 17.11, None, '8×7.2 m and 3×4.8 m. No 140×45 H4 price online, so this is 150×50 H4 at $17.11/m. Splice over a pile if 7.2 m H4 is not in the rack', 'estimate', 'https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210'),
-    ('Piles', '125×125 H5 pile, 1.2 m', '16', 'ea', 16 * 32.42, None, 'The 16 deck and rebuilt piles. 600 in the ground plus about 190 above the path, and the grass is lower, so 750 mm is too short. $32.42. Cut to the string', 'posted', 'https://www.bunnings.co.nz/125-x-125mm-1-2m-square-h5-anchor-pile_p0276402'),
-    ('Piles', '125×125 H5 pile, 750 mm', '8', 'ea', 8 * 21.04, None, 'Six under the bottom step and two spare for the path. $21.04. Most of the length gets cut off', 'posted', 'https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396'),
-    ('Decking', '88×32 H3.2 merch griptread', f'{deck["stock_lm"]}', 'm', deck['stock_lm'] * 4.55, None, f'{deck["stock_4200"]}×4.2 m and {deck["stock_3000"]}×3.0 m at $4.55/m. Named lengths, so the butts land on the doubled joist', 'posted', 'https://www.bunnings.co.nz/88-x-32mm-merch-griptread-decking-random-lengths_p0307690'),
-    ('Fasteners', 'Decking screws 10g×65 316 stainless', '1500', 'ea', 3 * 116.00, None, f'3×500 at $116. {deck["base_screws"]} positions', 'posted', 'https://www.bunnings.co.nz/decking-screw-65-x-10g-316-stainless-steel-500-pack_p0379643'),
-    ('Fasteners', 'Framing nails 90×4 316 stainless jolt head', '6', 'kg', None, 3 * 129.00, '3×2 kg at $129, Mitre 10. Bearer plies and the step beams', 'posted', 'https://www.mitre10.co.nz/shop/ecko-jolt-head-nails-90-x-4-0mm-2kg-316-stainless-steel/p/307864'),
-    ('Fasteners', 'Framing nails 100×4 316 stainless jolt head', '4', 'kg', 8 * 35.59, None, '8×500 g at $35.59. Joists, rims, skew nails', 'posted', 'https://www.bunnings.co.nz/nz-nails-100-x-4mm-500g-316-stainless-steel-jolt-head-nail_p0383199'),
-    ('Fasteners', 'Batten screws 14g×100 316 stainless', '100', 'ea', 77.05, None, 'One box, $77.05. Step ribbons, and the rebuilt joists', 'posted', 'https://www.bunnings.co.nz/bremick-xtp-14g-x-100mm-t40-stainless-steel-316-black-bugle-batten-100-pack_p0575899'),
-    ('Fasteners', 'M12×120 316 coach bolt, nut, two 50 mm washers', '2', 'ea', 2 * (4.90 + 1.25 + 2 * 3.54), None, 'The two rim ties. $4.90 + $1.25 + 2×$3.54 each', 'posted', 'https://www.bunnings.co.nz/zenith-m12-x-120mm-316-stainless-steel-coach-head-bolt-and-nut_p0236593'),
-    ('Concrete', 'Ready-mix, small load', '2.0', 'm³', 650, None, 'About $650, not a quote. On site the figure was about $600 for the 1.1 m³ in the twelve holes. This load covers the rebuilt holes and the step as well. Do not add the cement as well', 'estimate', ''),
-    ('Concrete', 'Portland cement, 20 kg. Only if mixing on site', '36', 'ea', 36 * 11.59, None, 'Cemix Ecostrong $11.59, used as GP cement. Four shovels of builders mix to one shovel of cement, and a bit more cement if the mix looks lean', 'alt', 'https://www.bunnings.co.nz/cemix-20kg-low-carbon-cement_p0581734'),
-    ('Concrete', 'Builders mix, dumped in front of the garage', '2.5', 'm³', None, None, 'Only with the cement. Phone a yard. Not priced', 'alt', ''),
-    ('DPC', 'DPC Supercourse 500, 150 mm×30 m', '1', 'ea', 27.42, None, 'On every pile top. $27.42', 'posted', 'https://www.bunnings.co.nz/thermakraft-supercourse-500-dpc-150mmx30m_p0207794'),
-    ('DPC', 'Metalex Green, 1 L', '1', 'ea', 66.00, None, 'On every saw cut. $66', 'posted', 'https://www.bunnings.co.nz/metalex-1l-green-timber-preserve-44501_p0709374'),
+    ('Timber', '140×45 SG8 H3.2 framing, wet. Main deck and rebuilt strip', '102', 'm', 17 * 51.60, 'Rangitikei Timber', '17×6.0 m at $51.60, Marton, in stock. Freight to Auckland is extra. Bunnings green 6.0 m is $70.91 if you collect it in town. 7.2 m is still not listed, so splice each bearer ply over a pile', 'posted', 'https://rangitikeitimber.co.nz/products/140x45-h3-2-tw-sg8-framing'),
+    ('Timber', '190×45 SG8 H3.2 for the one long bearer bay', '9.6', 'm', 2 * 56.02, 'Rangitikei Timber', '2×4.8 m at $56.02. Cut each one in half and you have the four 2.39 m plies. ITM Stratford is $77.42 a 4.8 m length, but they only ship in Taranaki. Bunnings 4.8 m is $86.50', 'posted', 'https://rangitikeitimber.co.nz/products/190x45-h3-2-tw-sg8-framing'),
+    ('Timber', '150×50 SG8 H4 for the two steps. 140×45 H4 is not listed', '72', 'm', 72 * 17.11, 'Bunnings', 'Special order at $17.11/m. ITM Stratford has 150×50 H4 No.2 at $52.46 a 6.0 m length, and Mitre 10 has N2 grade at $11.96/m. Neither is SG8, so they are not used for the step beams', 'posted', 'https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210'),
+    ('Piles', '125×125 H5 pile, 1.2 m', '16', 'ea', 16 * 25.89, 'Kiwi Timber', 'Horotiu, $25.89 including GST. Renovation Warehouse is $26.60. Bunnings is $32.42 and Mitre 10 is $36.50. Rangitikei lists $22.07 but that length is sold out', 'posted', 'https://kiwitimber.co.nz/index.php?route=product/product&product_id=248'),
+    ('Piles', '125×125 H5 pile, 750 mm', '8', 'ea', 8 * 13.81, 'Rangitikei Timber', 'Marton, in stock at $13.81. Bunnings is $21.04. Freight is extra', 'posted', 'https://rangitikeitimber.co.nz/products/125x125-h5-tw-house-piles'),
+    ('Decking', '88×32 H3.2 merch griptread', f'{deck["stock_lm"]}', 'm', deck['stock_lm'] * 4.55, 'Bunnings', f'{deck["stock_4200"]}×4.2 m and {deck["stock_3000"]}×3.0 m at $4.55/m. The listed price is the random-length bin. Named lengths, so the butts land on the doubled joist. Trade price is $4.33/m and needs a PowerPass', 'posted', 'https://www.bunnings.co.nz/88-x-32mm-merch-griptread-decking-random-lengths_p0307690'),
+    ('Fasteners', 'Decking screws 10g×65 316 stainless', '1500', 'ea', 3 * 116.00, 'Bunnings', f'3×500 at $116. {deck["base_screws"]} positions', 'posted', 'https://www.bunnings.co.nz/decking-screw-65-x-10g-316-stainless-steel-500-pack_p0379643'),
+    ('Fasteners', 'Framing nails 90×4 316 stainless jolt head', '6', 'kg', 3 * 129.00, 'Mitre 10', '3×2 kg at $129. Bearer plies and the step beams', 'posted', 'https://www.mitre10.co.nz/shop/ecko-jolt-head-nails-90-x-4-0mm-2kg-316-stainless-steel/p/307864'),
+    ('Fasteners', 'Framing nails 100×4 316 stainless jolt head', '4', 'kg', 8 * 35.59, 'Bunnings', '8×500 g at $35.59. Joists, rims, skew nails', 'posted', 'https://www.bunnings.co.nz/nz-nails-100-x-4mm-500g-316-stainless-steel-jolt-head-nail_p0383199'),
+    ('Fasteners', 'Batten screws 14g×100 316 stainless', '100', 'ea', 77.05, 'Bunnings', 'One box, $77.05. Step ribbons, and the rebuilt joists', 'posted', 'https://www.bunnings.co.nz/bremick-xtp-14g-x-100mm-t40-stainless-steel-316-black-bugle-batten-100-pack_p0575899'),
+    ('Fasteners', 'M12×120 316 coach bolt, nut, two 50 mm washers', '2', 'ea', 2 * (4.90 + 1.25 + 2 * 3.54), 'Bunnings', 'The two rim ties. $4.90 + $1.25 + 2×$3.54 each', 'posted', 'https://www.bunnings.co.nz/zenith-m12-x-120mm-316-stainless-steel-coach-head-bolt-and-nut_p0236593'),
+    ('Concrete', 'Ready-mix 20 MPa, small load', '2.0', 'm³', 2 * 297.28 + 115, 'Bowers, via Kiwi Timber', 'Waikato list, $297.28/m³ including GST, plus the $115 small-load charge published with it. Not a Point Chevalier quote. Auckland plants price by the address. Do not add the cement as well', 'estimate', 'https://calk.nz/calculator/concrete-calculator/'),
+    ('Concrete', 'Portland cement, 20 kg. Only if mixing on site', '36', 'ea', 36 * 11.59, 'Bunnings', 'Cemix Ecostrong $11.59, used as GP cement. Four shovels of builders mix to one shovel of cement', 'alt', 'https://www.bunnings.co.nz/cemix-20kg-low-carbon-cement_p0581734'),
+    ('Concrete', 'Builders mix BM20. Only if mixing on site', '2.5', 'm³', 2.5 * 126.50, 'Auckland Aggregates', '$126.50/m³ including GST. Cartage is priced by the kilometre and is not in this figure. This replaces the truck, so it is not in the total', 'alt', 'https://www.aucklandaggregates.co.nz/shop/product/577984/bm-20--builders-mix-virgin-aggregate/'),
+    ('DPC', 'DPC Supercourse 500, 150 mm×30 m', '1', 'ea', 27.42, 'Bunnings', 'On every pile top. $27.42', 'posted', 'https://www.bunnings.co.nz/thermakraft-supercourse-500-dpc-150mmx30m_p0207794'),
+    ('DPC', 'Metalex Green, 1 L', '1', 'ea', 66.00, 'Bunnings', 'On every saw cut. $66', 'posted', 'https://www.bunnings.co.nz/metalex-1l-green-timber-preserve-44501_p0709374'),
 ]
 priced = []
-for cat, item, qty, unit, line, mitre, comment, kind, url in rows:
-    use = mitre if line is None else line
-    priced.append((cat, item, qty, unit, None if line is None else round(float(line), 2), None if mitre is None else round(float(mitre), 2), round(float(use), 2) if use and kind != 'alt' else 0.0, comment, kind, url))
+for cat, item, qty, unit, price, store, comment, kind, url in rows:
+    priced.append((cat, item, qty, unit, round(float(price), 2), store, round(float(price), 2) if kind != 'alt' else 0.0, comment, kind, url))
 posted = round(sum(r[6] for r in priced if r[8] == 'posted'), 2)
 est = round(sum(r[6] for r in priced if r[8] == 'estimate'), 2)
 total = round(posted + est, 2)
@@ -61,7 +61,7 @@ fixings = [
 ]
 
 def money(n):
-    return 'POA' if not n else f'${n:,.2f}'
+    return f'${n:,.2f}'
 
 md = f'''# Deck and step build guide
 
@@ -112,26 +112,21 @@ The underside of that bottom step is not 150 mm clear of the path. There is no w
 
 ## Shopping list
 
-Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. {DATE}. Laid out as a supplier comparison. The quantities are this build, not the ROBO bill. Measure first, then buy. Nothing has been bought. Prices include GST. Placemakers is a phone call. A blank cell means no price was found.
+Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. {DATE}. Prices read 12 November 2026 and include GST. Each line is the cheapest posted price, so the store changes from line to line. Freight is not included. The truck figure is a published Waikato list, not an Auckland quote. Nothing has been bought.
 
 [Download the CSV](docs/shopping-list.csv).
 
 '''
 last = None
-for cat, item, qty, unit, line, mitre, use, comment, kind, url in priced:
+for cat, item, qty, unit, price, store, use, comment, kind, url in priced:
     if cat != last:
         if last:
             md += '\n'
-        md += f'### {cat}\n\n| Description | Qty | Unit | Bunnings | Mitre 10 | Comments |\n|---|---|---|---|---|---|\n'
+        md += f'### {cat}\n\n| Description | Qty | Unit | Cheapest | Store | Comments |\n|---|---|---|---|---|---|\n'
         last = cat
-    b = money(line)
-    m = money(mitre)
-    if url and b != 'POA':
-        b = f'[{b}]({url})'
-    elif url and m != 'POA':
-        m = f'[{m}]({url})'
+    cell = f'[{money(price)}]({url})' if url else money(price)
     note = comment + (' Not in the total.' if kind == 'alt' else '')
-    md += f'| {item} | {qty} | {unit} | {b} | {m} | {note} |\n'
+    md += f'| {item} | {qty} | {unit} | {cell} | {store} | {note} |\n'
 md += f'''
 **Posted ${posted:,.2f} + estimates ${est:,.2f} = about ${total:,.0f} including GST.** The total uses the truck. If the holes are mixed on site, take the truck out and add the cement. The builders mix is a yard quote and is not in the number either way. Do not add the truck and the cement together.
 
@@ -179,7 +174,7 @@ We walked it on 11 November. The holes, the concrete and the two steps follow th
 - **The services reply.** It said no gas and no power within 10 m. The power is there. Drain depths are approximate. Paint, spade, and move a hole rather than dig through a pipe.
 - **Stainless until the map is checked.** 316 because I have not confirmed the sea-spray zone. Outside it, hot-dip galvanised is allowed and much cheaper.
 - **The path.** It stays. Line 2 moves off it. The bay beside it is 2.39 m because the sewage is 130 mm past the blue pipe, and that bay is a doubled 190. The steps are taped off the path, not off the lawn.
-- **Prices.** Read on {DATE} where a figure is shown. The H4 line is 150×50 because 140×45 H4 is not listed. The truck is a round figure, not a quote.
+- **Prices.** Read on 12 November 2026. Each line is the cheapest posted price, and the store is named. Freight from Marton or Horotiu is not in the total. The H4 line is 150×50 SG8 because 140×45 H4 is not listed. No.2 H4 is cheaper and is the wrong grade. The truck is a Waikato list price plus the published small-load charge, not a Point Chevalier quote.
 - **The rebuilt strip.** The old bearer comes out. If the ground there is worse than the main holes, those four piles get the same 600 mm and the same concrete.
 
 ## Sources
@@ -191,9 +186,9 @@ Reproduce with `OPENBLAS_NUM_THREADS=1 python scripts/check_revision.py`. Earlie
 (root / 'CURRENT_DESIGN.md').write_text(md)
 b = io.StringIO(newline='')
 w = csv.writer(b, lineterminator='\n')
-w.writerow(['Category', 'Description', 'Qty', 'Unit', 'Bunnings NZD', 'Mitre 10 NZD', 'In total NZD', 'Posted, estimate or alternative', 'Comments', 'Source'])
-for cat, item, qty, unit, line, mitre, use, comment, kind, url in priced:
-    w.writerow([cat, item, qty, unit, '' if line is None else f'{line:.2f}', '' if mitre is None else f'{mitre:.2f}', f'{use:.2f}', kind, comment, url])
+w.writerow(['Category', 'Description', 'Qty', 'Unit', 'Cheapest NZD', 'Store', 'In total NZD', 'Posted, estimate or alternative', 'Comments', 'Source'])
+for cat, item, qty, unit, price, store, use, comment, kind, url in priced:
+    w.writerow([cat, item, qty, unit, f'{price:.2f}', store, f'{use:.2f}', kind, comment, url])
 w.writerow(['TOTAL', '', '', '', '', '', f'{total:.2f}', f'posted {posted:.2f} + estimates {est:.2f}', 'Truck is in the total. Cement and builders mix are not.', ''])
 (root / 'SHOPPING_LIST.csv').write_text(b.getvalue())
 
