@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 const port = Number(process.env.PORT || 3000);
 const server = http.createServer(async (req, res) => {
   const pathname = new URL(req.url, 'http://localhost').pathname;
-  if (!['/', '/index.html', '/shopping-list.csv', '/drawings/sheet.svg', '/drawings/sheet2.svg', '/drawings/sheet3.svg', '/drawings/piles.svg', '/drawings/framing.svg', '/drawings/fixings.svg'].includes(pathname)) {
+  if (!['/', '/index.html', '/shopping-list.csv', '/drawings/sheet.svg', '/drawings/sheet2.svg', '/drawings/sheet3.svg'].includes(pathname)) {
     res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end('Not found');
     return;

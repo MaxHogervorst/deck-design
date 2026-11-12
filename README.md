@@ -2,7 +2,7 @@
 
 Website: https://maxhogervorst.github.io/deck-design/
 
-[The build guide](CURRENT_DESIGN.md) · [Shopping CSV](docs/shopping-list.csv) · [Three drawings](docs/drawings/)
+[The build guide](CURRENT_DESIGN.md) · [Shopping CSV](docs/shopping-list.csv) · [Sheets](docs/drawings/)
 
 One owner-builder guide. The deck, the two steps and the shopping list are in [CURRENT_DESIGN.md](CURRENT_DESIGN.md). The site is the three sheets and that list.
 

@@ -1,6 +1,6 @@
 # Deck and step build guide
 
-11 November 2026 · How I am going to build the 6.6 m deck and the two steps in front of it. One plan, a set-out sheet, three drawings, a bill of materials and the build order. Written for me, doing the work. It is not an engineer's design. Consent is not required: Building Act Schedule 1, exemption 24, because a fall is about 500 mm. The sheets are still drawn to AS/NZS 1100.501 and the Auckland Council AC1011 document list. They are not lodged.
+11 November 2026 · How I am going to build the 6.6 m deck and the two steps in front of it. One plan, three sheets, a bill of materials and the build order. Written for me, doing the work. It is not an engineer's design. Consent is not required: Building Act Schedule 1, exemption 24, because a fall is about 500 mm. The sheets are still drawn to AS/NZS 1100.501 and the Auckland Council AC1011 document list. They are not lodged.
 
 ## What we are building
 
@@ -20,10 +20,6 @@ Heights. The path is where you walk and the grass is lower, so the steps are tap
 ## The sheets
 
 [Sheet 1 · Foundation and framing](docs/drawings/sheet.svg) · [Sheet 2 · Section and details](docs/drawings/sheet2.svg) · [Sheet 3 · Site, levels and schedules](docs/drawings/sheet3.svg). A2, to AS/NZS 1100.501 and the Auckland Council AC1011 list. Consent is not required. These sheets are not lodged.
-
-## Three drawings
-
-[1 · Piles and heights](docs/drawings/piles.svg) · [2 · Framing and sizes](docs/drawings/framing.svg) · [3 · Fixings and the two steps](docs/drawings/fixings.svg)
 
 ## Foundations
 
