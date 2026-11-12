@@ -54,18 +54,17 @@
     "upper_board_Z_mm": 333.3,
     "lower_framing_top_Z_mm": 134.7,
     "upper_framing_top_Z_mm": 301.3,
-    "lower_beam_min_depth_mm": 120,
+    "lower_beam_min_depth_mm": 150,
     "joist_count": 17,
     "lower_joist_cut_mm": 500,
     "upper_joist_cut_mm": 240,
     "long_plies": 8,
-    "small_piles": 6,
-    "small_piles_buy": 8,
+    "small_piles": 5,
+    "small_piles_buy": 5,
     "small_pile_X_mm": [
       62.5,
       677.5,
       3067.5,
-      3947.5,
       5242.5,
       6537.5
     ],
@@ -81,21 +80,20 @@
     62.5,
     677.5,
     3067.5,
-    3947.5,
     5242.5,
     6537.5
   ],
-  "timber_piles": 16,
+  "timber_piles": 14,
   "candidate_anchor_piles": 0,
-  "ordinary_piles": 16,
-  "step_piles": 6,
-  "main_stock_lm": 100.8,
-  "main_installed_lm": 94.07,
+  "ordinary_piles": 14,
+  "step_piles": 5,
+  "main_stock_lm": 72.0,
+  "main_installed_lm": 67.67,
   "H4_stock_lm": 72.0,
   "H4_installed_lm": 65.38,
   "main_stock_allocations": [
     {
-      "count": 6,
+      "count": 2,
       "stock_mm": 7200,
       "cuts_mm": [
         6600
@@ -221,11 +219,11 @@
     "gaps": "About 5 mm on the main deck and about 6 mm on the rebuilt strip. Three boards on each step. One board on the boundary-joist face and one on each riser."
   },
   "concrete_geometry_only": {
-    "main_12_holes_m3": 1.152,
+    "main_10_holes_m3": 0.96,
     "rebuilt_4_holes_m3": 0.384,
-    "step_holes_m3": 0.216,
-    "extra_path_holes_m3": 0.072,
-    "main_net_m3": 1.824,
+    "step_holes_m3": 0.18,
+    "extra_path_holes_m3": 0,
+    "main_net_m3": 1.524,
     "readymix_order_m3": 2.0,
     "cement_20kg_buy": 36,
     "builders_mix_m3": 2.5,
@@ -244,17 +242,12 @@
   "screens": {
     "rebuilt_zero_dead_uplift_ULS_kN": 1.9200000000000002,
     "step_point_ULS_kN": 4.637903225806452,
-    "step_beam_span_m": 1.295,
-    "step_beam_M_140_kNm": 1.5694406871646323,
-    "step_beam_cap_140_kNm": 2.2014720000000003,
-    "step_beam_util_140": 0.7129051321863881,
-    "step_beam_M_120_half_kNm": 0.767740460058289,
-    "step_beam_cap_120_kNm": 1.6174080000000002,
-    "step_beam_util_120": 0.47467334158003976,
-    "step_pile_reaction_ULS_kN": 2.5287416404146383,
-    "step_pile_bearing_kPa": 28.097129337940427,
-    "main_bearer_max_M_ULS_kNm": 3.2140511394555946,
-    "main_loaded_width_envelope_m": 2.0,
-    "note": "Beam screens only. Ordinary bays stay doubled 140 at 1.30 m. The path bay is 2.39 m and is a doubled 190, so the 140 envelope does not cover it. The 120 mm rip does not cross that bay. Not a foundation or bracing check."
+    "step_beam_span_m": 2.39,
+    "step_beam_table_m": 3.0,
+    "bearer_table_m": 2.7,
+    "step_pile_reaction_ULS_kN": 2.7061316383885363,
+    "step_pile_bearing_kPa": 30.068129315428184,
+    "main_bearer_max_M_ULS_kNm": 3.7564787192178435,
+    "note": "Spans checked to NZS 3604:2011 Table 6.4(b), wet, 2 kPa, bearer continuous over two spans. Not a foundation or bracing check."
   }
 }

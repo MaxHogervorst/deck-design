@@ -11,7 +11,7 @@ assert len(joists) == 17 and max(np.diff(joists)) <= 450
 assert abs(300 - 22.5) <= 300 and abs(2510 - 2532.5) <= 300
 # Main deck and rebuilt strip. Unchanged members.
 main_alloc = [
-    (6, 7200, [6600]),
+    (2, 7200, [6600]),
     (6, 6000, [2510, 2510, 900]),
     (1, 6000, [2510, 2510, 380, 380]),
     (1, 6000, [2510, 2510]),
@@ -29,15 +29,22 @@ h4_alloc = [
 for n, s, cs in main_alloc + h4_alloc:
     assert sum(cs) + 4 * len(cs) + 5 <= s, (s, cs)
 main_counts = Counter(c for n, s, cs in main_alloc for c in cs for _ in range(n))
-assert main_counts == Counter({6600: 6, 2510: 17, 900: 6, 380: 2, 1880: 3}), main_counts
+assert main_counts == Counter({6600: 2, 2510: 17, 900: 6, 380: 2, 1880: 3}), main_counts
 h4_counts = Counter(c for n, s, cs in h4_alloc for c in cs for _ in range(n))
 assert h4_counts == Counter({6600: 8, 500: 17, 240: 17}), h4_counts
-# Line 2 and line 3 moved 12 November. The path is 960 wide and the old
-# line 2 sat in the middle of it. Line 2 is 200 onto the grass. Line 3 is
-# 1,230 past the concrete: 400 to the blue pipe, 130 to the sewage, 500
-# clear, 200 to the hole centre. The 130 is 870 minus 740 off the deck.
-pile_x = [62.5, 677.5, 3067.5, 3947.5, 5242.5, 6537.5]
-bay = 1.295
+# NZS 3604:2011 Table 6.4(b), 2 kPa, wet in service. Spans are for a bearer
+# continuous over two or more spans. Loaded dimension over 1.30 m uses the
+# 1.65 m column. A doubled 190×45 is a built-up 190×90 (cl 2.4.4.7), which
+# is thicker than the 190×70 the table lists at 2.7 m. The pile at 3947.5
+# is not required. Line 2 stays 200 mm onto the grass. Line 3 stays 1,230 mm
+# past the concrete, clear of both pipes.
+pile_x = [62.5, 677.5, 3067.5, 5242.5, 6537.5]
+bays = [b - a for a, b in zip(pile_x, pile_x[1:])]
+assert bays == [615, 2390, 2175, 1295], bays
+assert max(bays) <= 2700
+# Each 190 piece bears on three piles, so each piece is continuous over two spans.
+assert pile_x[2] - pile_x[0] <= 4800
+assert pile_x[-1] - pile_x[2] <= 4800
 rise = 500 / 3
 going = 280
 assert 190 >= rise >= 150
@@ -54,9 +61,11 @@ for i in range(len(xs)):
     F[2 * i, i] = 2.7
 _, R = solve(F)
 rebuilt_uplift = max(float(-R.min()), 2.7 * 0.8 / 1.125)
-# Lower front beam, one bay, someone standing mid-bay. Full 140, and the 120 mm rip
-# over the path on a half bay (a pile each side of the concrete).
+# Step front beam is a doubled 140, which Table 6.4(b) allows to 3.0 m at a
+# loaded dimension of 1.30 m, continuous. The longest step bay is 2.39 m.
+# Do not rip it. A ripped section is not in the table.
 point = 1.5 * 2.7 * 355 / 310
+step_span = max(bays) / 1000
 
 def bay_screen(span, depth, width=0.09):
     EI = 6.5e6 * width * depth**3 / 12
@@ -67,18 +76,14 @@ def bay_screen(span, depth, width=0.09):
     j = int(np.argmin(np.abs(xs - span / 2)))
     F[2 * j, :] += point
     D, R = solve(F)
-    M = float(abs(mom(D, np.repeat((1.2 * qg)[:, None], len(xs), axis=1))).max())
-    cap = 0.8 * 0.8 * 11.7 * (width * 1000 * (depth * 1000)**2 / 6) / 1e6
     react = float(R.max())
     assert np.max(abs(R.sum(axis=0) - F[::2].sum(axis=0))) < 1e-6
-    return M, cap, react
+    return react
 
-M140, cap140, R140 = bay_screen(bay, 0.14)
-M120, cap120, R120 = bay_screen(bay / 2, 0.12)
-assert M140 < 0.8 * cap140, (M140, cap140)
-assert M120 < 0.8 * cap120, (M120, cap120)
+R140 = bay_screen(step_span, 0.14)
 bearing = R140 / 0.3**2
 assert bearing <= 100, bearing
+assert step_span <= 3.0
 # Reference check and the main-bearer gravity envelope. Unchanged deck.
 xt, ut, st, mt = beam([0, 0.5, 1], [0, 1], 1)
 ft, qt = ut(lambda x: 1)
@@ -86,7 +91,7 @@ dt, rt = st(ft)
 assert np.allclose(rt[:, 0], [0.5, 0.5]) and abs(abs(mt(dt, qt)).max() - 0.125) < 1e-9
 sx = [x / 1000 for x in pile_x]
 bounds = [0] + sx + [6.6]
-xm, um, sm, mm = beam(list(np.arange(0, 6.6001, 0.025)) + sx, sx, 6.5e6 * 0.09 * 0.14**3 / 12)
+xm, um, sm, mm = beam(list(np.arange(0, 6.6001, 0.025)) + sx, sx, 6.5e6 * 0.09 * 0.19**3 / 12)
 gm, qgm = um(lambda x: 0.6 * 2.0)
 patches = [um(lambda x, a=a, b=b: 4.0 if a < x < b else 0) for a, b in zip(bounds, bounds[1:])]
 fm, qu = [], []
@@ -98,13 +103,12 @@ for pat in itertools.product([0, 1], repeat=len(patches)):
 dm, rm = sm(np.array(fm).T)
 main_M = float(abs(mm(dm, np.array(qu).T)).max())
 assert np.max(abs(rm.sum(axis=0) - np.array(fm).T[::2].sum(axis=0))) < 1e-6
-# Hole volume with the pile left in, the way it was counted on site. 400 square by 600, twelve main plus four rebuilt.
-# Step holes 300 square by 400. Two extra step holes are allowed for where the path forces a ripped beam.
-main_concrete = round(12 * (0.4 * 0.4 * 0.6), 3)
+# 400 square by 600. Ten main piles plus four rebuilt. Five step holes, 300 square by 400.
+main_concrete = round(10 * (0.4 * 0.4 * 0.6), 3)
 rebuilt_concrete = round(4 * (0.4 * 0.4 * 0.6), 3)
-step_concrete = round(6 * (0.3 * 0.3 * 0.4), 3)
-extra_step_concrete = round(2 * (0.3 * 0.3 * 0.4), 3)
-concrete = round(main_concrete + rebuilt_concrete + step_concrete + extra_step_concrete, 3)
+step_concrete = round(5 * (0.3 * 0.3 * 0.4), 3)
+extra_step_concrete = 0
+concrete = round(main_concrete + rebuilt_concrete + step_concrete, 3)
 order_m3 = 2.0
 assert concrete < order_m3
 cement_bags = 36  # about 16 bags per m³, plus a margin
@@ -144,23 +148,23 @@ out = {
         'upper_board_Z_mm': round(2 * rise, 1),
         'lower_framing_top_Z_mm': round(rise - 32, 1),
         'upper_framing_top_Z_mm': round(2 * rise - 32, 1),
-        'lower_beam_min_depth_mm': 120,
+        'lower_beam_min_depth_mm': 150,
         'joist_count': 17,
         'lower_joist_cut_mm': 500,
         'upper_joist_cut_mm': 240,
         'long_plies': 8,
-        'small_piles': 6,
-        'small_piles_buy': 8,
+        'small_piles': 5,
+        'small_piles_buy': 5,
         'small_pile_X_mm': pile_x,
         'small_pile_Y_mm': 3115,
         'small_hole_mm': [300, 300, 400],
         'handrail': False,
     },
     'main_pile_X_mm': pile_x,
-    'timber_piles': 16,
+    'timber_piles': 14,
     'candidate_anchor_piles': 0,
-    'ordinary_piles': 16,
-    'step_piles': 6,
+    'ordinary_piles': 14,
+    'step_piles': 5,
     'main_stock_lm': round(sum(n * s for n, s, c in main_alloc) / 1000, 3),
     'main_installed_lm': round(sum(n * sum(c) for n, s, c in main_alloc) / 1000, 3),
     'H4_stock_lm': round(sum(n * s for n, s, c in h4_alloc) / 1000, 3),
@@ -182,7 +186,7 @@ out = {
         'gaps': 'About 5 mm on the main deck and about 6 mm on the rebuilt strip. Three boards on each step. One board on the boundary-joist face and one on each riser.',
     },
     'concrete_geometry_only': {
-        'main_12_holes_m3': main_concrete,
+        'main_10_holes_m3': main_concrete,
         'rebuilt_4_holes_m3': rebuilt_concrete,
         'step_holes_m3': step_concrete,
         'extra_path_holes_m3': extra_step_concrete,
@@ -197,34 +201,29 @@ out = {
     'screens': {
         'rebuilt_zero_dead_uplift_ULS_kN': rebuilt_uplift,
         'step_point_ULS_kN': point,
-        'step_beam_span_m': bay,
-        'step_beam_M_140_kNm': M140,
-        'step_beam_cap_140_kNm': cap140,
-        'step_beam_util_140': M140 / cap140,
-        'step_beam_M_120_half_kNm': M120,
-        'step_beam_cap_120_kNm': cap120,
-        'step_beam_util_120': M120 / cap120,
+        'step_beam_span_m': step_span,
+        'step_beam_table_m': 3.0,
+        'bearer_table_m': 2.7,
         'step_pile_reaction_ULS_kN': R140,
         'step_pile_bearing_kPa': bearing,
         'main_bearer_max_M_ULS_kNm': main_M,
-        'main_loaded_width_envelope_m': 2.0,
-        'note': 'Beam screens only. Ordinary bays stay doubled 140 at 1.30 m. The path bay is 2.39 m and is a doubled 190, so the 140 envelope does not cover it. The 120 mm rip does not cross that bay. Not a foundation or bracing check.',
+        'note': 'Spans checked to NZS 3604:2011 Table 6.4(b), wet, 2 kPa, bearer continuous over two spans. Not a foundation or bracing check.',
     },
 }
-assert out['main_stock_lm'] == 100.8 and out['H4_stock_lm'] == 72.0
+assert out['main_stock_lm'] == 72.0 and out['H4_stock_lm'] == 72.0
 assert out['decking']['base_screws'] == base_screws
-assert out['concrete_geometry_only']['main_12_holes_m3'] == 1.152
+assert out['concrete_geometry_only']['main_10_holes_m3'] == 0.96
 (root / 'design.json').write_text(json.dumps(out, indent=2) + '\n')
 summary = {
     'rise_mm': round(rise, 1),
     'going_mm': going,
     'two_R_plus_G': round(2 * rise + going, 1),
-    'util_140': round(M140 / cap140, 3),
-    'M140': round(M140, 3),
-    'util_120': round(M120 / cap120, 3),
+    'bearer_bays_mm': bays,
+    'bearer_table_m': 2.7,
+    'step_span_m': step_span,
     'bearing_kPa': round(bearing, 1),
     'concrete_m3': round(concrete, 3),
-    'main_12_m3': round(main_concrete, 3),
+    'main_m3': round(main_concrete, 3),
     'screws': base_screws,
     'deck_lm': out['decking']['stock_lm'],
     'H4_m': out['H4_stock_lm'],
