@@ -167,4 +167,4 @@ We walked it on 11 November. The holes, the concrete and the two steps follow th
 
 Northpine wet-service tables: 140×45 SG8 at 450 centres spans 2.35 m. NZS 3604 wants a pile 150 mm clear of the ground. The deck piles meet that. The bottom step does not. The stair proportion used here is a rise under 190 and 2R+G between 550 and 700. [Northpine tables](https://www.northpine.co.nz/span-tables) · [BRANZ Bulletin 611](https://d39d3mj7qio96p.cloudfront.net/media/documents/BU611-Timber-Slat-Deck.pdf).
 
-Reproduce with `OPENBLAS_NUM_THREADS=1 python scripts/check_revision.py`. Earlier plans, including the five short frames, are in archive/. Drawing ISL38807 is a preview and is not for construction.
+Reproduce with `OPENBLAS_NUM_THREADS=1 python scripts/check_revision.py`. Drawing ISL38807 is a preview and is not for construction.
