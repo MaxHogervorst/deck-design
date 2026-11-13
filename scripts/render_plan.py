@@ -16,7 +16,7 @@ rows = [
     ('Timber', '140×45 SG8 H3.2 framing, wet. Joists, rims and the rebuilt strip', '72', 'm', 12 * 70.91, 'Bunnings', '12×6.0 m at $70.91. The two rims are 6.6 m, so splice each one. 7.2 m is not listed. The main bearers are the 190 line, not this one', 'posted', 'https://www.bunnings.co.nz/140-x-45mm-sg8-h3-2-treated-green-radiata-timber-framing-6m_p0616262'),
     ('Timber', '190×70 SG8 H3.2 doubled bearers, both rows, full length', '28.8', 'm', None, 'Merchant', 'Six 4.8 m lengths. Four plies. Each long piece butts on the pile at 4500 and runs over the two 2.1 m bays. The end piece is the 1.8 m bay. Not on the Bunnings rack. Ask the yard', 'alt', ''),
     ('Timber', '150×50 SG8 H4 for the two steps. 140×45 H4 is not listed', '72', 'm', 72 * 17.11, 'Bunnings', 'Special order at $17.11/m. Mitre 10 lists 150×50 H4 from $11.96/m, but that is N2 grade, not SG8', 'posted', 'https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210'),
-    ('Piles', '125×125 H5 pile, 1.2 m', '8', 'ea', 8 * 32.42, 'Bunnings', 'Eight under the deck, four on each bearer. None for the rebuilt strip. $32.42. Mitre 10 is $36.50 for the same 1.2 m', 'posted', 'https://www.bunnings.co.nz/125-x-125mm-1-2m-square-h5-anchor-pile_p0276402'),
+    ('Piles', '125×125 H5 house pile, 6.0 m', '1', 'ea', 8 * 21.04, 'Bunnings', 'One 6.0 m length, cut into the eight deck piles. Bunnings does not sell 6.0 m. Eight 0.75 m piles are the same 6.0 m at $21.04. Two 3.6 m lengths are $103.82 each. None for the rebuilt strip', 'posted', 'https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396'),
     ('Piles', '125×125 H5 pile, 750 mm', '4', 'ea', 4 * 21.04, 'Bunnings', 'Four under the bottom step, on the same lines as the deck piles. Later, with the steps. $21.04. Most of the length gets cut off', 'posted', 'https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396'),
     ('Decking', '88×32 H3.2 merch griptread', f'{deck["stock_lm"]}', 'm', deck['stock_lm'] * 4.55, 'Bunnings', f'{deck["stock_4200"]}×4.2 m and {deck["stock_3000"]}×3.0 m at $4.55/m. The listed price is the random-length bin. Named lengths, so the butts land on the doubled joist. Trade price is $4.33/m and needs a PowerPass', 'posted', 'https://www.bunnings.co.nz/88-x-32mm-merch-griptread-decking-random-lengths_p0307690'),
     ('Fasteners', 'Decking screws 10g×65, coated for treated pine', '1500', 'ea', 3 * 75.92, 'Bunnings', f'3×500 Buildex Climacoat at $75.92. CCA decking, zone C, so stainless is not required. A 304 decking screw is about $234 for the same 1500 and is the one to take if the heads will show. {deck["base_screws"]} positions', 'posted', 'https://www.bunnings.co.nz/buildex-10g-x-65mm-climacoat-rapiddrive-treated-pine-screws-500-pack_p0417168'),
@@ -25,8 +25,8 @@ rows = [
     ('Fasteners', 'Batten screws 14g×100 class 3 galvanised', '100', 'ea', 29.95, 'Bunnings', 'One box, $29.95. Step ribbons, and the rebuilt joists. Class 3, for outside', 'posted', 'https://www.bunnings.co.nz/titan-14g-x-100mm-cl3-gal-bugle-batten-screw-100-pack_p0579091'),
     ('Fasteners', 'M12×120 316 coach bolt, nut, two 50 mm washers', '5', 'ea', 5 * (4.90 + 1.25 + 2 * 3.54), 'Bunnings', 'Two into the existing bearer and three through the house ledger into the framing. $4.90 + $1.25 + 2×$3.54 each. Not into the weatherboards', 'posted', 'https://www.bunnings.co.nz/zenith-m12-x-120mm-316-stainless-steel-coach-head-bolt-and-nut_p0236593'),
     ('Concrete', 'Ready-mix 20 MPa, small load', '2.0', 'm³', 650, 'Auckland plant', 'Not a published price. On site the figure was about $600 for the 1.1 m³ in the twelve holes. This load is still about $650 until Firth or Allied prices Point Chevalier. Firth adds $9.90/m³ fuel on top of the quote. Do not add the cement as well', 'estimate', 'https://www.firth.co.nz/temporary-fuel-surcharge'),
-    ('Concrete', 'Portland cement, 20 kg. Only if mixing on site', '36', 'ea', 36 * 11.59, 'Bunnings', 'Cemix Ecostrong $11.59, used as GP cement. Four shovels of builders mix to one shovel of cement', 'alt', 'https://www.bunnings.co.nz/cemix-20kg-low-carbon-cement_p0581734'),
-    ('Concrete', 'Builders mix BM20. Only if mixing on site', '2.5', 'm³', 2.5 * 126.50, 'Auckland Aggregates', '$126.50/m³ including GST. Cartage is priced by the kilometre and is not in this figure. This replaces the truck, so it is not in the total', 'alt', 'https://www.aucklandaggregates.co.nz/shop/product/577984/bm-20--builders-mix-virgin-aggregate/'),
+    ('Concrete', 'Portland cement, 20 kg. Only if mixing on site', '12', 'ea', 12 * 11.59, 'Bunnings', 'Cemix Ecostrong $11.59. Twelve bags for the 0.59 m³ in the eight holes. Four shovels of builders mix to one shovel of cement. Not premixed concrete bags. Steps are later', 'alt', 'https://www.bunnings.co.nz/cemix-20kg-low-carbon-cement_p0581734'),
+    ('Concrete', 'Builders mix BM20. Only if mixing on site', '1.0', 'm³', 1.0 * 126.50, 'Auckland Aggregates', '$126.50/m³ including GST. Cartage is priced by the kilometre and is not in this figure. This replaces the truck, so it is not in the total', 'alt', 'https://www.aucklandaggregates.co.nz/shop/product/577984/bm-20--builders-mix-virgin-aggregate/'),
     ('DPC', 'DPC Supercourse 500, 150 mm×30 m', '1', 'ea', 27.42, 'Bunnings', 'On every pile top. $27.42', 'posted', 'https://www.bunnings.co.nz/thermakraft-supercourse-500-dpc-150mmx30m_p0207794'),
     ('DPC', 'Metalex Green, 1 L', '1', 'ea', 66.00, 'Bunnings', 'On every saw cut. $66', 'posted', 'https://www.bunnings.co.nz/metalex-1l-green-timber-preserve-44501_p0709374'),
 ]
@@ -41,8 +41,8 @@ steps = [
     'Before you buy. Match the old deck: the new boards sit at that same 500 mm, not 500 mm above the low grass. Measure from the old boards down to the concrete path. Joists need about 330 mm of air over the path and the bearers about 190 mm. The steps are measured off the path as well, because that is where you walk. Tape that height and divide by three. If it is 500, each rise is 167. The lawn is lower and is not the step. Check the sill and the cladding. Formby Avenue is about 1.1 km from the harbour, outside the 500 m sea-spray zone, so the nails and the screws are galvanised. The two bolts stay stainless. A services reply that says no power within 10 m is not to be trusted: there is power. Mark the stormwater and the waste before any digging.',
     'Set out. String the 6600×2600 outline. The rebuilt strip is 900 wide and runs 1970 back to the house wall. It has no holes. The steps stick out 560 mm past the front, two goings of 280. Leave the path. End joist flush, then 437 mm centres, doubled joist centred at 3956. Four pile lines, measured from the eastern end: 300, 2400, 4500, 6300, on both bearers. That is 300 mm past each end pile, then bays of 2100, 2100 and 1800. Eight holes. Paint the marks and shift a line if it lands on the path or within 500 mm of a pipe. The four step holes go on those same lines, 560 mm out, when the steps are built. Do not mark holes in the gap by the house.',
     'Dig, with a spade. Every deck hole is 400×400 and 600 deep, down to firm ground, not topsoil. No 900 mm anchor holes. At 600 a shovel is enough. An auger only earns its keep past 600, and these holes do not go there. About ten minutes a hole. No hole in the concrete, no hole between the blue pipe and the sewage, and no hole edge within 500 mm of either. No spare hole on the pipe side of the path.',
-    f'Concrete. The eight deck holes are this pour. They are {cv["main_holes_m3"]:.2f} m³ with the pile left in the hole. The four step holes are later and bring the whole job to about {cv["main_net_m3"]:.2f} m³. Order {cv["readymix_order_m3"]:.1f} m³ only if the yard will not sell less, and ask what they charge to take the rest back. Otherwise builders mix dumped in front of the garage, plus cement: four shovels of mix to one of cement, a bit more cement if it looks lean, mixer hired. Fill to about 100 mm below the ground. Do not use the no-mix post-hole bags. Nothing in the hole has to be level.',
-    'Cut the piles. String off the path, not the lawn. The bearer is 190 deep, so the pile tops finish at about +138, which is 190 mm below the bearer top at +328. That is 12 mm under the 150 mm NZS 3604 wants between H3.2 and the path. The grass is lower, so those piles stand taller. Cut square, preservative on the cut, DPC on the top. Do not notch the bearer.',
+    f'Concrete. The eight deck holes are this pour. Fill to 100 mm below the ground. The pile sits on 100 mm of concrete at the bottom, so the concrete is about {cv["main_pour_m3"]:.2f} m³. Twelve 20 kg bags of cement and 1 m³ of builders mix, four shovels of mix to one of cement. The four step holes are later. Order {cv["readymix_order_m3"]:.1f} m³ only if the yard will not sell less, and ask what they charge to take the rest back. A hired mixer. Do not use premixed concrete bags. Nothing in the hole has to be level.',
+    'Cut the piles. One 6.0 m length makes the eight piles. String off the path, not the lawn. The bearer is 190 deep, so the pile tops finish at about +138, which is 190 mm below the bearer top at +328. That is 12 mm under the 150 mm NZS 3604 wants between H3.2 and the path. The grass is lower, so cut those piles first. Cut square, preservative on the cut, DPC on the top. Do not notch the bearer.',
     'Bearers. Doubled 190×70 on both rows of the deck, the whole length (F1). Each ply is a 4.8 m length from the eastern end, butted on the pile at 4500, so that piece runs over the two 2.1 m bays. The remaining piece is the 1.8 m bay. Seat them and skew-nail (F2). No anchor brackets. Leave the existing bearer at the back edge. The rebuilt strip bolts to it at one end and to the house framing at the other.',
     'Joists and rims. 17 joists of 2510: flush at each end, 437 centres, the doubled joist at 3956. Screws into a bearer go in from the side of the joist, not down through the top. The rebuilt strip is three joists of 2270, 45 mm beside the deck joists, from the house ledger to the first new bearer so the lap can be nailed (F4, F6). No blocks and no holes. Rims at Y0 and Y2555. Get the deck frame up before the steps. The step height is in mid-air until the deck is there. Offcuts can be a temporary step.',
     'Step piles. Later, with the deck frame up. Dig the four small holes, 300×300 and 400 deep, on the same X as the front piles and 560 mm out from the face. Not 600. No extra hole beside the path. Stand a 750 mm pile, plumb it, and concrete it. Cut it so the front beam will finish with its top about 135 mm above the path.',
@@ -91,7 +91,7 @@ Heights. The path is where you walk and the grass is lower, so the steps are tap
 
 8 timber piles under the deck: 400×400 holes, 600 deep. No holes for the rebuilt strip. No 900 mm anchors and no brackets. The step has four smaller holes, 300×300 and 400 deep, dug later. No spare hole on the pipe side of the path.
 
-Concrete volume leaves the pile in the hole. The eight deck holes are {cv["main_holes_m3"]:.2f} m³. With the four step holes it is about {cv["main_net_m3"]:.2f} m³. A truck minimum is still often {cv["readymix_order_m3"]:.1f} m³, which is more than the holes. Ask the yard the smallest load and the fee to take the rest back. The other way is builders mix dumped in front of the garage, plus cement, four shovels of mix to one of cement. Do not use the no-mix post-hole bags.
+The eight holes are dug 400×400×600. Fill to 100 mm below the ground. The pile sits on 100 mm of concrete at the bottom, so this pour is about {cv["main_pour_m3"]:.2f} m³. Twelve 20 kg bags of cement and 1 m³ of builders mix. Not premixed concrete bags. A truck minimum is still often {cv["readymix_order_m3"]:.1f} m³, which is more than the holes. Ask the yard the smallest load and the fee to take the rest back. The steps are a later pour.
 
 The path stays. The deck is built over it. A 190 bearer with its top at +328 has its underside at +138, which is 12 mm under the 150 mm NZS 3604 wants for H3.2 above a surface. The grass is lower, so the piles there still clear 150 mm. No hole through the concrete. Do not open a bay past 2.7 m. The longest bay is 2.1 m.
 
@@ -498,22 +498,25 @@ s2.append(_tx(EY(1400), 668, 'CROSS SECTION B-B', 10, 'middle', GREEN, '700'))
 s2.append(_ln(EY(1400) - 48, 671, EY(1400) + 48, 671, GREEN, 0.8))
 s2.append(_tx(EY(1400), 684, 'SCALE 1:25  ·  LOOKING ALONG THE DECK', 7, 'middle', GREEN, '600'))
 
-# Detail A, pile hole, 1:10.
-k10 = 0.2
-ax, ay = 760, 210
-s2.append(_box(ax, ay - 120, 80, 120))
-s2.append(_box(ax + 27.5, ay - 168, 25, 150))
-s2.append(_ln(ax - 16, ay, ax + 96, ay, INK, 0.7))
-for i in range(-2, 8):
-    s2.append(_ln(ax - 10 + i * 8, ay + 4, ax + 6 + i * 8, ay + 22, '#777', 0.4))
-s2.append(_note(ax + 96, ay - 150, ['125×125 H5 PILE'], (ax + 40, ay - 150)))
-s2.append(_note(ax + 96, ay - 70, ['400×400 HOLE', '600 DEEP', 'NO ROD'], (ax + 70, ay - 60)))
-s2.append(_note(ax - 150, ay - 20, ['150 MIN CLEAR', 'OF THE PATH', 'ON THE DECK PILES'], (ax + 10, ay - 8)))
-s2.append(_tx(ax + 40, ay + 42, 'DETAIL A - PILE', 10, 'middle', GREEN, '700'))
-s2.append(_ln(ax - 10, ay + 45, ax + 90, ay + 45, GREEN, 0.8))
-s2.append(_tx(ax + 40, ay + 58, 'SCALE 1:10', 7.5, 'middle', GREEN, '600'))
+# Detail A, pile hole. 0.2 units per mm. The hole is below the ground line.
+ax, ay = 760, 168
+s2.append(_box(ax, ay, 80, 120))
+s2.append(_box(ax + 27.5, ay - 30, 25, 130))
+s2.append(_ln(ax - 24, ay, ax + 104, ay, INK, 0.7))
+for i in range(-3, 0):
+    s2.append(_ln(ax - 8 + i * 8, ay + 6, ax + 8 + i * 8, ay + 22, '#777', 0.4))
+for i in range(11, 14):
+    s2.append(_ln(ax - 8 + i * 8, ay + 6, ax + 8 + i * 8, ay + 22, '#777', 0.4))
+s2.append(_note(ax + 110, ay - 16, ['125×125 H5 PILE'], (ax + 40, ay - 16)))
+s2.append(_note(ax + 110, ay + 48, ['400×400 HOLE', '600 DEEP', 'NO ROD'], (ax + 70, ay + 48)))
+s2.append(_note(ax - 168, ay - 24, ['150 MIN CLEAR', 'OF THE PATH'], (ax + 12, ay - 8)))
+s2.append(_note(ax - 168, ay + 88, ['100 CONCRETE', 'UNDER THE PILE'], (ax + 24, ay + 108)))
+s2.append(_tx(ax + 40, ay + 148, 'DETAIL A - PILE', 10, 'middle', GREEN, '700'))
+s2.append(_ln(ax - 10, ay + 151, ax + 90, ay + 151, GREEN, 0.8))
+s2.append(_tx(ax + 40, ay + 164, 'SCALE 1:10', 7.5, 'middle', GREEN, '600'))
 
 # Detail B, the two steps, 1:10.
+k10 = 0.2
 bx, bz = 700, 640
 
 def SY(y):

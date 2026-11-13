@@ -206,13 +206,14 @@
   },
   "concrete_geometry_only": {
     "main_holes_m3": 0.768,
+    "main_pour_m3": 0.59,
     "rebuilt_4_holes_m3": 0,
     "step_holes_m3": 0.144,
     "extra_path_holes_m3": 0,
-    "main_net_m3": 0.912,
+    "main_net_m3": 0.59,
     "readymix_order_m3": 2.0,
-    "cement_20kg_buy": 36,
-    "builders_mix_m3": 2.5,
+    "cement_20kg_buy": 12,
+    "builders_mix_m3": 1.0,
     "hole_mm": [
       400,
       400,
@@ -223,7 +224,7 @@
       300,
       400
     ],
-    "warning": "Volume leaves the pile in the hole. Not a concrete order. The 2.0 m\u00b3 is the truck figure; mixing uses the cement and the builders mix instead."
+    "warning": "Pour is the eight holes filled to 100 mm below the ground, with the pile sitting on 100 mm of concrete. Not a truck order. The 2.0 m\u00b3 is the truck minimum. Mixing uses 12 bags of cement and 1 m\u00b3 of builders mix. Steps are later."
   },
   "screens": {
     "rebuilt_zero_dead_uplift_ULS_kN": 0.0,

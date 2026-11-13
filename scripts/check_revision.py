@@ -100,16 +100,19 @@ for pat in itertools.product([0, 1], repeat=len(patches)):
 dm, rm = sm(np.array(fm).T)
 main_M = float(abs(mm(dm, np.array(qu).T)).max())
 assert np.max(abs(rm.sum(axis=0) - np.array(fm).T[::2].sum(axis=0))) < 1e-6
-# 400 square by 600. Eight main piles. No rebuilt holes. Four step holes, 300 square by 400.
+# 400 square by 600. Eight main piles. Fill stops 100 mm below ground.
+# The pile sits on 100 mm of concrete, so 400 mm of it is in the concrete.
 main_concrete = round(8 * (0.4 * 0.4 * 0.6), 3)
+main_pour = round(8 * (0.4 * 0.4 * 0.5 - 0.125 * 0.125 * 0.4), 3)
 rebuilt_concrete = 0
 step_concrete = round(4 * (0.3 * 0.3 * 0.4), 3)
 extra_step_concrete = 0
-concrete = round(main_concrete + rebuilt_concrete + step_concrete, 3)
+concrete = round(main_pour + rebuilt_concrete, 3)
 order_m3 = 2.0
 assert concrete < order_m3
-cement_bags = 36  # about 16 bags per m³, plus a margin
-mix_m3 = 2.5
+assert main_pour == 0.59
+cement_bags = 12  # 16 bags per m³ of the 0.59 m³ pour, plus a margin. Steps are later.
+mix_m3 = 1.0
 main_rows, rebuilt_rows, tread_rows, face_rows = 28, 21, 6, 3
 # Full-length rows each take a 4.2 and a 3.0. The 38/32 lengths already covered 28 + 21 + 4; two more step rows and three face boards.
 stock_4200 = 38 + (tread_rows - 4) + face_rows
@@ -185,6 +188,7 @@ out = {
     },
     'concrete_geometry_only': {
         'main_holes_m3': main_concrete,
+        'main_pour_m3': main_pour,
         'rebuilt_4_holes_m3': rebuilt_concrete,
         'step_holes_m3': step_concrete,
         'extra_path_holes_m3': extra_step_concrete,
@@ -194,7 +198,7 @@ out = {
         'builders_mix_m3': mix_m3,
         'hole_mm': [400, 400, 600],
         'step_hole_mm': [300, 300, 400],
-        'warning': 'Volume leaves the pile in the hole. Not a concrete order. The 2.0 m³ is the truck figure; mixing uses the cement and the builders mix instead.',
+        'warning': 'Pour is the eight holes filled to 100 mm below the ground, with the pile sitting on 100 mm of concrete. Not a truck order. The 2.0 m³ is the truck minimum. Mixing uses 12 bags of cement and 1 m³ of builders mix. Steps are later.',
     },
     'screens': {
         'rebuilt_zero_dead_uplift_ULS_kN': rebuilt_uplift,
