@@ -32,17 +32,18 @@ h4_counts = Counter(c for n, s, cs in h4_alloc for c in cs for _ in range(n))
 assert h4_counts == Counter({6600: 8, 500: 17, 240: 17}), h4_counts
 # NZS 3604:2011 Table 6.4(b), 2 kPa, wet in service. Spans are for a bearer
 # continuous over two or more spans. Loaded dimension over 1.30 m uses the
-# 1.65 m column. A doubled 190×45 is a built-up 190×90 (cl 2.4.4.7), which
-# is thicker than the 190×70 the table lists at 2.7 m. The pile at 3947.5
-# is not required. Line 2 stays 200 mm onto the grass. Line 3 stays 1,230 mm
-# past the concrete, clear of both pipes.
-pile_x = [62.5, 677.5, 3067.5, 5242.5, 6537.5]
+# 1.65 m column, where a 190×70 spans 2.7 m. The bearers are two 190×70
+# plies. Piles are 300 mm in from each end of the 6600 deck, then 2100,
+# 2100 and the 1800 that is left. Eight piles. The long piece butts on the
+# pile at 4500 and runs over two spans. The end piece is the single 1800.
+pile_x = [300, 2400, 4500, 6300]
 bays = [b - a for a, b in zip(pile_x, pile_x[1:])]
-assert bays == [615, 2390, 2175, 1295], bays
+assert bays == [2100, 2100, 1800], bays
 assert max(bays) <= 2700
-# Each 190 piece bears on three piles, so each piece is continuous over two spans.
-assert pile_x[2] - pile_x[0] <= 4800
-assert pile_x[-1] - pile_x[2] <= 4800
+assert pile_x[0] == 300 and 6600 - pile_x[-1] == 300
+# The 4.8 m length covers the two long bays. The end piece is one bay.
+assert pile_x[2] - 0 <= 4800
+assert 6600 - pile_x[2] <= 4800
 rise = 500 / 3
 going = 280
 assert 190 >= rise >= 150
@@ -58,7 +59,7 @@ rebuilt_cut = 2270
 assert rebuilt_span <= 2350 and rebuilt_cut <= 2350
 rebuilt_uplift = 0.0
 # Step front beam is a doubled 140, which Table 6.4(b) allows to 3.0 m at a
-# loaded dimension of 1.30 m, continuous. The longest step bay is 2.39 m.
+# loaded dimension of 1.30 m, continuous. The longest step bay is 2.1 m.
 # Do not rip it. A ripped section is not in the table.
 point = 1.5 * 2.7 * 355 / 310
 step_span = max(bays) / 1000
@@ -87,7 +88,7 @@ dt, rt = st(ft)
 assert np.allclose(rt[:, 0], [0.5, 0.5]) and abs(abs(mt(dt, qt)).max() - 0.125) < 1e-9
 sx = [x / 1000 for x in pile_x]
 bounds = [0] + sx + [6.6]
-xm, um, sm, mm = beam(list(np.arange(0, 6.6001, 0.025)) + sx, sx, 6.5e6 * 0.09 * 0.19**3 / 12)
+xm, um, sm, mm = beam(list(np.arange(0, 6.6001, 0.025)) + sx, sx, 6.5e6 * 0.14 * 0.19**3 / 12)
 gm, qgm = um(lambda x: 0.6 * 2.0)
 patches = [um(lambda x, a=a, b=b: 4.0 if a < x < b else 0) for a, b in zip(bounds, bounds[1:])]
 fm, qu = [], []
@@ -99,10 +100,10 @@ for pat in itertools.product([0, 1], repeat=len(patches)):
 dm, rm = sm(np.array(fm).T)
 main_M = float(abs(mm(dm, np.array(qu).T)).max())
 assert np.max(abs(rm.sum(axis=0) - np.array(fm).T[::2].sum(axis=0))) < 1e-6
-# 400 square by 600. Ten main piles. No rebuilt holes. Five step holes, 300 square by 400.
-main_concrete = round(10 * (0.4 * 0.4 * 0.6), 3)
+# 400 square by 600. Eight main piles. No rebuilt holes. Four step holes, 300 square by 400.
+main_concrete = round(8 * (0.4 * 0.4 * 0.6), 3)
 rebuilt_concrete = 0
-step_concrete = round(5 * (0.3 * 0.3 * 0.4), 3)
+step_concrete = round(4 * (0.3 * 0.3 * 0.4), 3)
 extra_step_concrete = 0
 concrete = round(main_concrete + rebuilt_concrete + step_concrete, 3)
 order_m3 = 2.0
@@ -150,18 +151,18 @@ out = {
         'lower_joist_cut_mm': 500,
         'upper_joist_cut_mm': 240,
         'long_plies': 8,
-        'small_piles': 5,
-        'small_piles_buy': 5,
+        'small_piles': 4,
+        'small_piles_buy': 4,
         'small_pile_X_mm': pile_x,
         'small_pile_Y_mm': 3115,
         'small_hole_mm': [300, 300, 400],
         'handrail': False,
     },
     'main_pile_X_mm': pile_x,
-    'timber_piles': 10,
+    'timber_piles': 8,
     'candidate_anchor_piles': 0,
-    'ordinary_piles': 10,
-    'step_piles': 5,
+    'ordinary_piles': 8,
+    'step_piles': 4,
     'main_stock_lm': round(sum(n * s for n, s, c in main_alloc) / 1000, 3),
     'main_installed_lm': round(sum(n * sum(c) for n, s, c in main_alloc) / 1000, 3),
     'H4_stock_lm': round(sum(n * s for n, s, c in h4_alloc) / 1000, 3),
@@ -183,7 +184,7 @@ out = {
         'gaps': 'About 5 mm on the main deck and about 6 mm on the rebuilt strip. Three boards on each step. One board on the boundary-joist face and one on each riser.',
     },
     'concrete_geometry_only': {
-        'main_10_holes_m3': main_concrete,
+        'main_holes_m3': main_concrete,
         'rebuilt_4_holes_m3': rebuilt_concrete,
         'step_holes_m3': step_concrete,
         'extra_path_holes_m3': extra_step_concrete,
@@ -209,7 +210,7 @@ out = {
 }
 assert out['main_stock_lm'] == 74.4 and out['H4_stock_lm'] == 72.0
 assert out['decking']['base_screws'] == base_screws
-assert out['concrete_geometry_only']['main_10_holes_m3'] == 0.96
+assert out['concrete_geometry_only']['main_holes_m3'] == 0.768
 (root / 'design.json').write_text(json.dumps(out, indent=2) + '\n')
 summary = {
     'rise_mm': round(rise, 1),
