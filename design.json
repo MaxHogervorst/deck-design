@@ -234,7 +234,7 @@
     "bearer_table_m": 2.7,
     "step_pile_reaction_ULS_kN": 2.659151613761741,
     "step_pile_bearing_kPa": 29.546129041797123,
-    "main_bearer_max_M_ULS_kNm": 3.736521649306445,
-    "note": "Spans checked to NZS 3604:2011 Table 6.4(b), wet, 2 kPa, bearer continuous over two spans. Not a foundation or bracing check."
+    "main_bearer_max_M_ULS_kNm": 3.736521649896078,
+    "note": "Bearers are two 190\u00d745 plies, chosen 15 November 2026. Table 6.4(b) lists a 190\u00d770 at 2.7 m for a 1.65 m loaded dimension. It does not list a 190\u00d745. Not a foundation or bracing check."
   }
 }

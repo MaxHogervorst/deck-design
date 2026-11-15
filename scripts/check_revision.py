@@ -30,16 +30,13 @@ main_counts = Counter(c for n, s, cs in main_alloc for c in cs for _ in range(n)
 assert main_counts == Counter({6600: 2, 2510: 17, 2270: 3, 900: 2}), main_counts
 h4_counts = Counter(c for n, s, cs in h4_alloc for c in cs for _ in range(n))
 assert h4_counts == Counter({6600: 8, 500: 17, 240: 17}), h4_counts
-# NZS 3604:2011 Table 6.4(b), 2 kPa, wet in service. Spans are for a bearer
-# continuous over two or more spans. Loaded dimension over 1.30 m uses the
-# 1.65 m column, where a 190×70 spans 2.7 m. The bearers are two 190×70
-# plies. Piles are 300 mm in from each end of the 6600 deck, then 2100,
-# 2100 and the 1800 that is left. Eight piles. The long piece butts on the
-# pile at 4500 and runs over two spans. The end piece is the single 1800.
+# Bays are 2100, 2100 and 1800. The bearers are two 190×45 plies, 90 mm
+# wide. Table 6.4(b) does not list a 190×45. The listed 190×70 spans 2.7 m
+# in the 1.65 m column. The double 190×45 is the size chosen 15 Nov 2026.
+# The long piece butts on the pile at 4500 and runs over two spans.
 pile_x = [300, 2400, 4500, 6300]
 bays = [b - a for a, b in zip(pile_x, pile_x[1:])]
 assert bays == [2100, 2100, 1800], bays
-assert max(bays) <= 2700
 assert pile_x[0] == 300 and 6600 - pile_x[-1] == 300
 # The 4.8 m length covers the two long bays. The end piece is one bay.
 assert pile_x[2] - 0 <= 4800
@@ -88,7 +85,7 @@ dt, rt = st(ft)
 assert np.allclose(rt[:, 0], [0.5, 0.5]) and abs(abs(mt(dt, qt)).max() - 0.125) < 1e-9
 sx = [x / 1000 for x in pile_x]
 bounds = [0] + sx + [6.6]
-xm, um, sm, mm = beam(list(np.arange(0, 6.6001, 0.025)) + sx, sx, 6.5e6 * 0.14 * 0.19**3 / 12)
+xm, um, sm, mm = beam(list(np.arange(0, 6.6001, 0.025)) + sx, sx, 6.5e6 * 0.09 * 0.19**3 / 12)
 gm, qgm = um(lambda x: 0.6 * 2.0)
 patches = [um(lambda x, a=a, b=b: 4.0 if a < x < b else 0) for a, b in zip(bounds, bounds[1:])]
 fm, qu = [], []
@@ -209,7 +206,7 @@ out = {
         'step_pile_reaction_ULS_kN': R140,
         'step_pile_bearing_kPa': bearing,
         'main_bearer_max_M_ULS_kNm': main_M,
-        'note': 'Spans checked to NZS 3604:2011 Table 6.4(b), wet, 2 kPa, bearer continuous over two spans. Not a foundation or bracing check.',
+        'note': 'Bearers are two 190×45 plies, chosen 15 November 2026. Table 6.4(b) lists a 190×70 at 2.7 m for a 1.65 m loaded dimension. It does not list a 190×45. Not a foundation or bracing check.',
     },
 }
 assert out['main_stock_lm'] == 74.4 and out['H4_stock_lm'] == 72.0

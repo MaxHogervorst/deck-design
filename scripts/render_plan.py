@@ -14,7 +14,7 @@ DATE = '11 November 2026'
 # Prices read 12 November 2026, GST included, Auckland stores only. Each line is the cheapest posted price. Delivery is extra.
 rows = [
     ('Timber', '140×45 SG8 H3.2 framing, wet. Joists, rims and the rebuilt strip', '72', 'm', 12 * 70.91, 'Bunnings', '12×6.0 m at $70.91. The two rims are 6.6 m, so splice each one. 7.2 m is not listed. The main bearers are the 190 line, not this one', 'posted', 'https://www.bunnings.co.nz/140-x-45mm-sg8-h3-2-treated-green-radiata-timber-framing-6m_p0616262'),
-    ('Timber', '190×70 SG8 H3.2 doubled bearers, both rows, full length', '28.8', 'm', None, 'Merchant', 'Six 4.8 m lengths. Four plies. Each long piece butts on the pile at 4500 and runs over the two 2.1 m bays. The end piece is the 1.8 m bay. Not on the Bunnings rack. Ask the yard', 'alt', ''),
+    ('Timber', '190×45 SG8 H3.2 doubled bearers, both rows, full length', '28.8', 'm', 6 * 86.50, 'Bunnings', 'Six 4.8 m lengths at $86.50, read 15 November 2026. Two plies, 90 mm wide, so the pair sits on the 125 pile. Four pieces butt on the pile at 4500 and run over the two 2.1 m bays. The other two lengths are cut into the four end pieces', 'posted', 'https://www.bunnings.co.nz/190-x-45mm-sg8-h3-2-treated-green-radiata-timber-framing-4-8m_p0616614'),
     ('Timber', '150×50 SG8 H4 for the two steps. 140×45 H4 is not listed', '72', 'm', 72 * 17.11, 'Bunnings', 'Special order at $17.11/m. Mitre 10 lists 150×50 H4 from $11.96/m, but that is N2 grade, not SG8', 'posted', 'https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210'),
     ('Piles', '125×125 H5 house pile, 6.0 m', '1', 'ea', 8 * 21.04, 'Bunnings', 'One 6.0 m length, cut into the eight deck piles. Bunnings does not sell 6.0 m. Eight 0.75 m piles are the same 6.0 m at $21.04. Two 3.6 m lengths are $103.82 each. None for the rebuilt strip', 'posted', 'https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396'),
     ('Piles', '125×125 H5 pile, 750 mm', '4', 'ea', 4 * 21.04, 'Bunnings', 'Four under the bottom step, on the same lines as the deck piles. Later, with the steps. $21.04. Most of the length gets cut off', 'posted', 'https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396'),
@@ -43,7 +43,7 @@ steps = [
     'Dig, with a spade. Every deck hole is 400×400 and 600 deep, down to firm ground, not topsoil. No 900 mm anchor holes. At 600 a shovel is enough. An auger only earns its keep past 600, and these holes do not go there. About ten minutes a hole. No hole in the concrete, no hole between the blue pipe and the sewage, and no hole edge within 500 mm of either. No spare hole on the pipe side of the path.',
     f'Concrete. The eight deck holes are this pour. Fill to 100 mm below the ground. The pile sits on 100 mm of concrete at the bottom, so the concrete is about {cv["main_pour_m3"]:.2f} m³. Twelve 20 kg bags of cement and 1 m³ of builders mix, four shovels of mix to one of cement. The four step holes are later. Order {cv["readymix_order_m3"]:.1f} m³ only if the yard will not sell less, and ask what they charge to take the rest back. A hired mixer. Do not use premixed concrete bags. Nothing in the hole has to be level.',
     'Cut the piles. One 6.0 m length makes the eight piles. String off the path, not the lawn. The bearer is 190 deep, so the pile tops finish at about +138, which is 190 mm below the bearer top at +328. That is 12 mm under the 150 mm NZS 3604 wants between H3.2 and the path. The grass is lower, so cut those piles first. Cut square, preservative on the cut, DPC on the top. Do not notch the bearer.',
-    'Bearers. Doubled 190×70 on both rows of the deck, the whole length (F1). Each ply is a 4.8 m length from the eastern end, butted on the pile at 4500, so that piece runs over the two 2.1 m bays. The remaining piece is the 1.8 m bay. Seat them and skew-nail (F2). No anchor brackets. Leave the existing bearer at the back edge. The rebuilt strip bolts to it at one end and to the house framing at the other.',
+    'Bearers. Doubled 190×45 on both rows of the deck, the whole length (F1). The pair is 90 mm wide and sits on the 125 pile. Each ply is a 4.8 m length from the eastern end, butted on the pile at 4500, so that piece runs over the two 2.1 m bays. The remaining piece is the 1.8 m bay. Seat them and skew-nail (F2). No anchor brackets. Leave the existing bearer at the back edge. The rebuilt strip bolts to it at one end and to the house framing at the other.',
     'Joists and rims. 17 joists of 2510: flush at each end, 437 centres, the doubled joist at 3956. Screws into a bearer go in from the side of the joist, not down through the top. The rebuilt strip is three joists of 2270, 45 mm beside the deck joists, from the house ledger to the first new bearer so the lap can be nailed (F4, F6). No blocks and no holes. Rims at Y0 and Y2555. Get the deck frame up before the steps. The step height is in mid-air until the deck is there. Offcuts can be a temporary step.',
     'Step piles. Later, with the deck frame up. Dig the four small holes, 300×300 and 400 deep, on the same X as the front piles and 560 mm out from the face. Not 600. No extra hole beside the path. Stand a 750 mm pile, plumb it, and concrete it. Cut it so the front beam will finish with its top about 135 mm above the path.',
     'Bottom step. Screw the inner ply of the H4 ribbon to the front piles, four 14g×100 screws each, then nail the outer ply to the inner one (F5). Joists out from it, cut about 500, on the same lines as the deck joists. Double front beam on the small piles, full depth, one piece so it runs over the piles. Top of this framing about 135 mm above the path, so the 32 mm board finishes at about 167. Do not rip it. Where the full depth meets the concrete, chase the path under the timber. A ripped beam is not a size in Table 6.4.',
@@ -72,14 +72,14 @@ md = f'''# Deck and step build guide
 
 | Part | What |
 |---|---|
-| Main deck | 6600×2600 mm, boards level with the old deck, about 500 mm. Two double 190×70 H3.2 bearers on 8 timber piles at Y300 and Y2510. Joists 140×45 across them, span 2.21 m. NZS 3604 Table 7.1(b), wet, allows 2.35 m at 450 centres. |
+| Main deck | 6600×2600 mm, boards level with the old deck, about 500 mm. Two double 190×45 H3.2 bearers on 8 timber piles at Y300 and Y2510. The pair is 90 mm wide. Joists 140×45 across them, span 2.21 m. NZS 3604 Table 7.1(b), wet, allows 2.35 m at 450 centres. |
 | Main joists | 17 members. Flush at the end, then 437 mm centres, one doubled joist centred at 3956 for the board butts. Rims at Y0 and Y2555. No blocking. |
 | Rebuilt strip | 900×1970 mm, from the house wall to the existing bearer, then 300 mm on to the first new bearer. No piles. Three 140×45 joists of 2270, each 45 mm beside a deck joist so the lap can be nailed. The long span is 1970 mm. Table 7.1(b) allows 2350 mm. The main deck is not carried by the house. |
 | Steps | Two steps, three rises, the full width of the deck, sticking out 560 mm. Going 280. Rise about 167 if the path-to-board tape is 500. Double H4, the listed 150×50 SG8. Bottom step: a ribbon on the front piles, joists out, a front beam on four small piles. Top step built on that and screwed to the bearer. Not a cut stringer. The beam is not ripped. Built after the deck. |
 | Boards | 88×32 merch griptread, along X. 28 rows on the deck, 21 on the rebuilt strip, three on each step. A board on the face of the boundary joist, and one on each riser. |
 | Finish | Natural, no handrail. Three rises is the limit. One more rise and it would need a rail. Lawn and path stay as they are. |
 
-Set-out, X from the eastern end. Piles: 300, 2400, 4500, 6300 on Y300 and Y2510. Eight holes. The bearer overhangs 300 mm past each end pile. The bays are 2100, 2100 and 1800 mm. NZS 3604 Table 6.4(b), wet, 2 kPa, allows a 190×70 bearer to span 2.7 m when it is continuous over two or more spans and the loaded dimension is 1.65 m. These bearers are two 190×70 plies. The long piece butts on the pile at 4500 and covers the two 2.1 m bays. The end piece is the single 1.8 m bay. The same standard caps a bearer overhang at 200 mm when the bearers are more than 2 m apart, and these are 2.21 m apart. The 300 mm is the set-out from the builder. Mark the holes and move one if it lands on the path or within 500 mm of a pipe. The four step piles are on those same X, at Y3115, and they are dug with the steps. The rebuilt strip has no piles.
+Set-out, X from the eastern end. Piles: 300, 2400, 4500, 6300 on Y300 and Y2510. Eight holes. The bearer overhangs 300 mm past each end pile. The bays are 2100, 2100 and 1800 mm. The bearers are two 190×45 plies, 90 mm wide, nailed as clause 2.4.4.7, and the pair sits on the 125 pile. Table 6.4(b) does not list a 190×45. It lists a 190×70 spanning 2.7 m at a loaded dimension of 1.65 m, wet, 2 kPa, continuous over two spans. The double 190×45 is the size chosen on 15 November 2026. The long piece butts on the pile at 4500 and covers the two 2.1 m bays. The end piece is the single 1.8 m bay. The same standard caps a bearer overhang at 200 mm when the bearers are more than 2 m apart, and these are 2.21 m apart. The 300 mm is the set-out from the builder. Mark the holes and move one if it lands on the path or within 500 mm of a pipe. The four step piles are on those same X, at Y3115, and they are dug with the steps. The rebuilt strip has no piles.
 
 Heights. The path is where you walk and the grass is lower, so the steps are taped off the path. Deck boards +500 if that is what the old deck measures, joist top +468, bearer top +328, pile top +138. Bottom step board about +167, framing top +135. Top step board about +333, framing top +301. If the tape from the path to the deck boards is not 500, divide whatever it is by three.
 
@@ -128,7 +128,7 @@ for cat, item, qty, unit, price, store, use, comment, kind, url in priced:
     note = comment + (' Not in the total.' if kind == 'alt' else '')
     md += f'| {item} | {qty} | {unit} | {cell} | {store} | {note} |\n'
 md += f'''
-**Posted ${posted:,.2f} + estimates ${est:,.2f} = about ${total:,.0f} including GST.** The total uses the truck and does not include the 190×70 bearers, which are not a posted price. If the holes are mixed on site, take the truck out and add the cement. The builders mix is a yard quote and is not in the number either way. Do not add the truck and the cement together.
+**Posted ${posted:,.2f} + estimates ${est:,.2f} = about ${total:,.0f} including GST.** The total uses the truck, and the 190×45 bearers are in the posted price. If the holes are mixed on site, take the truck out and add the cement. The builders mix is a yard quote and is not in the number either way. Do not add the truck and the cement together.
 
 Pack sizes are already rounded up for the nails and the screws. Pile lengths are long on purpose. No allowance for a wasted bolt, or for timber used as a temporary brace. Delivery, the mixer and carting the spoil are extra. The nails and the screws are galvanised. The bolts stay stainless.
 
@@ -140,7 +140,7 @@ Pack sizes are already rounded up for the nails and the screws. Pile lengths are
 for a in d['main_stock_allocations']:
     md += '| {n}×{s} | {cuts} |\n'.format(n=a['count'], s=a['stock_mm'], cuts=' + '.join(str(int(c)) if float(c).is_integer() else str(c) for c in a['cuts_mm']))
 md += f'''
-Main and rebuilt: {d["main_stock_lm"]} m in the cut list, {d["main_installed_lm"]} m used. 6600 is the two rims. 2510 is the 17 joists. 2270 is the three rebuilt joists, 45 mm beside the deck joists and lapped to the first new bearer. 900 is the bearer on the existing one, and the house ledger. Buy 12×6.0 m and splice the rims. 7.2 m is not listed. The main bearers are not in this list. They are six 4.8 m lengths of 190×70. Four run from the eastern end to the pile at 4500. The other two lengths are cut into the four end pieces.
+Main and rebuilt: {d["main_stock_lm"]} m in the cut list, {d["main_installed_lm"]} m used. 6600 is the two rims. 2510 is the 17 joists. 2270 is the three rebuilt joists, 45 mm beside the deck joists and lapped to the first new bearer. 900 is the bearer on the existing one, and the house ledger. Buy 12×6.0 m and splice the rims. 7.2 m is not listed. The main bearers are not in this list. They are six 4.8 m lengths of 190×45. Four run from the eastern end to the pile at 4500. The other two lengths are cut into the four end pieces.
 
 | 140×45 H4 stock | Cuts, mm |
 |---|---|
@@ -173,13 +173,13 @@ We walked it on 11 November. The holes, the concrete and the two steps follow th
 - **The steps.** The front beam is a doubled 140, full depth, continuous, and the longest bay is 2.1 m. Table 6.4(b) allows 3.0 m at a loaded dimension of 1.30 m. It is not ripped. Where it meets the path, the concrete is chased. The screws go through the inner ply only. The bottom step does not have 150 mm clearance over the path. The rises are even. They are not a consented stair. The four step holes are dug after the deck.
 - **The services reply.** It said no gas and no power within 10 m. The power is there. Drain depths are approximate. Paint, spade, and move a hole rather than dig through a pipe.
 - **Fixings.** Formby Avenue is about 1.1 km from the harbour, past the 500 m sea-spray line, so this is zone C. The nails and the screws are galvanised. The deck is open, so the two bolts stay 316. The decking is CCA. Do not swap in ACQ timber and keep these screws.
-- **The path.** It stays. The piles are on a regular grid, 300 mm in from each end, then 2.1 m, 2.1 m and 1.8 m. Paint them and move a hole if it lands on the concrete or within 500 mm of a pipe. Both bearers are doubled 190×70. Table 6.4(b) allows one 190×70 to span 2.7 m, and the longest bay is 2.1 m. The steps are taped off the path, not off the lawn.
+- **The path.** It stays. The piles are on a regular grid, 300 mm in from each end, then 2.1 m, 2.1 m and 1.8 m. Paint them and move a hole if it lands on the concrete or within 500 mm of a pipe. Both bearers are doubled 190×45, 90 mm wide, on the 125 piles. Table 6.4(b) does not list a 190×45. The listed 190×70 spans 2.7 m, and the longest bay is 2.1 m. The double 190×45 is the size chosen on 15 November 2026. The steps are taped off the path, not off the lawn.
 - **Prices.** Auckland only, read on 12 November 2026. Marton, Horotiu and Stratford are left out. Each line is the cheapest posted price, and the store is named. The H4 line is 150×50 SG8 because 140×45 H4 is not listed. N2 H4 is cheaper and is the wrong grade. The truck is the figure from site, not a Point Chevalier quote.
 - **The rebuilt strip.** No holes. The joists run from the house ledger to the first new bearer, 45 mm beside the deck joists, and the lap is nailed. The long span is 1970 mm and Table 7.1(b) allows 2350 mm. Bolt the ledger into the framing and flash it. Do not fix it to the weatherboards. The main deck is on its own eight piles.
 
 ## Sources
 
-Northpine wet-service joist table, which reproduces NZS 3604 Table 7.1(b): 140×45 SG8 at 450 centres spans 2.35 m. Bearer spans are NZS 3604:2011 Table 6.4(b), 2 kPa, wet in service: a 190×70 continuous over two or more spans spans 2.7 m at a loaded dimension of 1.65 m, and a 140×90 spans 3.0 m at 1.30 m. NZS 3604 wants H3.2 150 mm clear of a surface. The 190 bearer over the path is at 138 mm, and the bottom step is closer than that. The stair proportion used here is a rise under 190 and 2R+G between 550 and 700. [Northpine tables](https://www.northpine.co.nz/span-tables) · [BRANZ Bulletin 611](https://d39d3mj7qio96p.cloudfront.net/media/documents/BU611-Timber-Slat-Deck.pdf).
+Northpine wet-service joist table, which reproduces NZS 3604 Table 7.1(b): 140×45 SG8 at 450 centres spans 2.35 m. Bearer spans are NZS 3604:2011 Table 6.4(b), 2 kPa, wet in service: a 190×70 continuous over two or more spans spans 2.7 m at a loaded dimension of 1.65 m, and a 140×90 spans 3.0 m at 1.30 m. The table does not list a 190×45. The bearers on this job are two 190×45 plies. NZS 3604 wants H3.2 150 mm clear of a surface. The 190 bearer over the path is at 138 mm, and the bottom step is closer than that. The stair proportion used here is a rise under 190 and 2R+G between 550 and 700. [Northpine tables](https://www.northpine.co.nz/span-tables) · [BRANZ Bulletin 611](https://d39d3mj7qio96p.cloudfront.net/media/documents/BU611-Timber-Slat-Deck.pdf).
 
 Reproduce with `OPENBLAS_NUM_THREADS=1 python scripts/check_revision.py`. Drawing ISL38807 is a preview and is not for construction.
 '''
@@ -348,8 +348,9 @@ for x in d['main_joist_centres_mm']:
 for x in d['rebuilt_joist_X_mm']:
     s1.append(_ln(PX(x), PY(-1970), PX(x), PY(300), RED, 0.7))
 for y, length in ((300, 6600), (2510, 6600)):
-    s1.append(_ln(PX(0), PY(y - 70), PX(length), PY(y - 70), INK, 0.9))
-    s1.append(_ln(PX(0), PY(y + 70), PX(length), PY(y + 70), INK, 0.9))
+    s1.append(_ln(PX(0), PY(y - 45), PX(length), PY(y - 45), INK, 0.9))
+    s1.append(_ln(PX(0), PY(y), PX(length), PY(y), INK, 0.35))
+    s1.append(_ln(PX(0), PY(y + 45), PX(length), PY(y + 45), INK, 0.9))
 s1.append(_ln(PX(0), PY(2555), PX(6600), PY(2555), INK, 0.7))
 s1.append(_ln(PX(0), PY(3070), PX(6600), PY(3070), INK, 0.7))
 s1.append(_ln(PX(0), PY(3160), PX(6600), PY(3160), INK, 0.7))
@@ -368,7 +369,7 @@ for a, b in zip(pile_x, pile_x[1:]):
     s1.append(_ln(PX(a), PY(y=2510) if False else PY(3115), PX(a), chain, RED, 0.35))
     s1.append(_hdim(PX(a), PX(b), chain, str(int(round(b - a)))))
 s1.append(_ln(PX(pile_x[-1]), PY(3115), PX(pile_x[-1]), chain, RED, 0.35))
-s1.append(_tx(PX((pile_x[1] + pile_x[2]) / 2), PY(2200), '190×70 DOUBLE', 8, 'middle', RED, '700'))
+s1.append(_tx(PX((pile_x[1] + pile_x[2]) / 2), PY(2200), '190×45 DOUBLE', 8, 'middle', RED, '700'))
 s1.append(_hdim(PX(0), PX(6600), chain + 16, '6600'))
 s1.append(_tx(PX(0) - 2, chain - 10, '300', 7, 'end', RED))
 s1.append(_tx(PX(6600) + 2, chain - 10, '300', 7, 'start', RED))
@@ -388,7 +389,7 @@ s1.append(_tx(680, 366, '1000', 7, 'middle', RED))
 s1.append(_tx(680, 386, 'SCALE BAR 1:25', 6.5, 'middle', INK, '500'))
 
 s1.append(_note(188, 46, ['88×32 H3.2 MERCH GRADE', 'GRIPTREAD DECKING.', 'ABOUT 5mm GAP. BOARDS', 'ALONG THE DECK.'], (PX(1800), PY(30))))
-s1.append(_note(360, 46, ['DOUBLE BEARER', '190×70 BOTH ROWS', 'SPLICED AT 4500'], (PX(2400), PY(300))))
+s1.append(_note(360, 46, ['DOUBLE BEARER', '190×45 BOTH ROWS', '90 WIDE ON THE PILE'], (PX(2400), PY(300))))
 s1.append(_note(500, 46, ['NOTE', 'DECKING IS FIXED WITH', 'DECKING SCREWS'], (PX(4200), PY(80))))
 s1.append(_note(188, 108, ['140×45 SG8 H3.2 JOIST', 'AT 437 CENTRES', 'DOUBLED AT 3956'], (PX(1770.5), PY(400))))
 s1.append(_note(400, 108, ['125×125 H5 PILE', 'HOLE 400×400×600', 'NO ANCHOR BRACKET'], (PX(4500), PY(300))))
@@ -403,7 +404,7 @@ s1.append(_ln(PX(0), EZ(0), PX(6600), EZ(0), INK, 0.9))
 for x in pile_x:
     s1.append(_box(PX(x - 62.5), EZ(138), 125 * K, (138 + 40) * K))
 s1.append(_box(PX(0), EZ(328), 6600 * K, 190 * K))
-s1.append(_tx(PX(3300), EZ(110), '190×70 DOUBLE', 7, 'middle', RED))
+s1.append(_tx(PX(3300), EZ(110), '190×45 DOUBLE', 7, 'middle', RED))
 s1.append(_box(PX(0), EZ(468), 6600 * K, 140 * K))
 s1.append(_box(PX(0), EZ(500), 6600 * K, 32 * K))
 s1.append(_vdim(PX(0) - 16, EZ(500), EZ(0), '500'))
@@ -440,8 +441,8 @@ notes = [
     'GRASS IS LOWER. UNTAPED.',
     'BOUNDARIES NOT SURVEYED.',
     '5. FINISHED SIZES.',
-    'BEARERS: 190×70 SG8 H3.2,',
-    'DOUBLED, FULL LENGTH.',
+    'BEARERS: 190×45 SG8 H3.2,',
+    'DOUBLED, 90 WIDE.',
     'JOISTS AND REBUILT STRIP:',
     '140×45 SG8 H3.2.',
     'STEPS: 150×50 SG8 H4.',
@@ -485,7 +486,8 @@ def EZ2(z):
 s2.append(_ln(EY(-100), EZ2(0), EY(3400), EZ2(0), INK, 0.8))
 for y in (300, 2510):
     s2.append(_box(EY(y - 62.5), EZ2(138), 125 * K, (138 + 80) * K))
-    s2.append(_box(EY(y - 70), EZ2(328), 140 * K, 190 * K))
+    s2.append(_box(EY(y - 45), EZ2(328), 90 * K, 190 * K))
+    s2.append(_ln(EY(y), EZ2(328), EY(y), EZ2(138), INK, 0.4))
 s2.append(_box(EY(0), EZ2(468), 2555 * K, 140 * K))
 s2.append(_box(EY(0), EZ2(500), 2600 * K, 32 * K))
 s2.append(_box(EY(2555), EZ2(135), 605 * K, 150 * K))
@@ -529,7 +531,8 @@ s2.append(_ln(SY(2280), SZ(0), SY(2448), SZ(0), INK, 0.8))
 s2.append(_ln(SY(2572), SZ(0), SY(3053), SZ(0), INK, 0.8))
 s2.append(_ln(SY(3178), SZ(0), SY(3380), SZ(0), INK, 0.8))
 s2.append(_box(SY(2510 - 62.5), SZ(138), 125 * k10, (138 + 220) * k10))
-s2.append(_box(SY(2510 - 70), SZ(328), 140 * k10, 190 * k10))
+s2.append(_box(SY(2510 - 45), SZ(328), 90 * k10, 190 * k10))
+s2.append(_ln(SY(2510), SZ(328), SY(2510), SZ(138), INK, 0.4))
 s2.append(_box(SY(2360), SZ(468), 195 * k10, 140 * k10))
 s2.append(_box(SY(2360), SZ(500), 240 * k10, 32 * k10))
 s2.append(_box(SY(2555), SZ(135), 605 * k10, 150 * k10))
@@ -620,7 +623,7 @@ for i, row in enumerate(rows_p):
 s3.append(_tx(560, 330, 'FRAMING SCHEDULE — FINISHED SIZES', 9, 'start', GREEN, '700'))
 s3.append(_ln(560, 338, 1120, 338, INK, 0.6))
 framing = [
-    'BEARERS  190×70 SG8 H3.2 DOUBLE, BOTH ROWS. SPLICE ON THE PILE AT 4500',
+    'BEARERS  190×45 SG8 H3.2 DOUBLE, 90 WIDE. SPLICE ON THE PILE AT 4500',
     'JOISTS  140×45 SG8 H3.2, 437 CENTRES, DOUBLED AT 3956',
     'REBUILT  3 JOISTS, 45 mm BESIDE THE DECK JOISTS, LAP NAILED',
     'STEPS  150×50 SG8 H4 DOUBLE, FULL DEPTH, TWO GOINGS OF 280',
@@ -638,7 +641,7 @@ index = [
 ]
 for i, line in enumerate(index):
     s3.append(_tx(566, 496 + i * 16, line, 7.2, 'start', INK, '500'))
-s3.append(_tx(560, 570, 'REVISION A  ·  11/11/26  ·  WORKING SET', 8, 'start', GREEN, '700'))
+s3.append(_tx(560, 570, 'REVISION B  ·  15/11/26  ·  BEARERS 190×45 DOUBLE', 8, 'start', GREEN, '700'))
 s3.append(_tx(560, 586, 'CONSENT NOT REQUIRED. NOT LODGED. NOT ENGINEER CHECKED.', 7.2, 'start', GREEN, '500'))
 s3.append(_tx(560, 610, 'BRACING IS A DEPARTURE FROM NZS 3604 cl 7.4.2.2.', 7.2, 'start', GREEN, '500'))
 s3.append(_tx(560, 626, 'SEE NOTE 7 ON SHEET 2.', 7.2, 'start', GREEN, '500'))
