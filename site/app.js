@@ -1,5 +1,5 @@
 const drawings = {}; // INLINE_DRAWINGS
-for (const id of ['sheet','sheet2','sheet3']) {
+for (const id of ['sheet','sheet2','sheet3','pieces']) {
   const el = document.querySelector('#view-' + id);
   if (el) el.innerHTML = drawings[id];
 }

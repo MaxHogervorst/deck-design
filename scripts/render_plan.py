@@ -14,7 +14,7 @@ DATE = '11 November 2026'
 # Prices read 12 November 2026, GST included, Auckland stores only. Each line is the cheapest posted price. Delivery is extra.
 rows = [
     ('Timber', '140×45 SG8 H3.2 framing, wet. Joists, rims and the rebuilt strip', '72', 'm', 12 * 70.91, 'Bunnings', '12×6.0 m at $70.91. The two rims are 6.6 m, so splice each one. 7.2 m is not listed. The main bearers are the 190 line, not this one', 'posted', 'https://www.bunnings.co.nz/140-x-45mm-sg8-h3-2-treated-green-radiata-timber-framing-6m_p0616262'),
-    ('Timber', '190×45 SG8 H3.2 doubled bearers, both rows, full length', '28.8', 'm', 6 * 86.50, 'Bunnings', 'Six 4.8 m lengths at $86.50, read 15 November 2026. Two plies, 90 mm wide, so the pair sits on the 125 pile. Four pieces butt on the pile at 4500 and run over the two 2.1 m bays. The other two lengths are cut into the four end pieces', 'posted', 'https://www.bunnings.co.nz/190-x-45mm-sg8-h3-2-treated-green-radiata-timber-framing-4-8m_p0616614'),
+    ('Timber', '190×45 SG8 H3.2 doubled bearers, both rows, full length', '28.8', 'm', 6 * 86.50, 'Bunnings', 'Six 4.8 m lengths at $86.50, read 15 November 2026. Two plies, 90 mm wide, so the pair sits on the 125 pile. The joints are staggered: one ply butts on the pile at 2400, the other on the pile at 4500, so one board runs through wherever the other is cut.', 'posted', 'https://www.bunnings.co.nz/190-x-45mm-sg8-h3-2-treated-green-radiata-timber-framing-4-8m_p0616614'),
     ('Timber', '150×50 SG8 H4 for the two steps. 140×45 H4 is not listed', '72', 'm', 72 * 17.11, 'Bunnings', 'Special order at $17.11/m. Mitre 10 lists 150×50 H4 from $11.96/m, but that is N2 grade, not SG8', 'posted', 'https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210'),
     ('Piles', '125×125 H5 house pile, 6.0 m', '1', 'ea', 8 * 21.04, 'Bunnings', 'One 6.0 m length, cut into the eight deck piles. Bunnings does not sell 6.0 m. Eight 0.75 m piles are the same 6.0 m at $21.04. Two 3.6 m lengths are $103.82 each. None for the rebuilt strip', 'posted', 'https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396'),
     ('Piles', '125×125 H5 pile, 750 mm', '4', 'ea', 4 * 21.04, 'Bunnings', 'Four under the bottom step, on the same lines as the deck piles. Later, with the steps. $21.04. Most of the length gets cut off', 'posted', 'https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396'),
@@ -43,7 +43,7 @@ steps = [
     'Dig, with a spade. Every deck hole is 400×400 and 600 deep, down to firm ground, not topsoil. No 900 mm anchor holes. At 600 a shovel is enough. An auger only earns its keep past 600, and these holes do not go there. About ten minutes a hole. No hole in the concrete, no hole between the blue pipe and the sewage, and no hole edge within 500 mm of either. No spare hole on the pipe side of the path.',
     f'Concrete. The eight deck holes are this pour. Fill to 100 mm below the ground. The pile sits on 100 mm of concrete at the bottom, so the concrete is about {cv["main_pour_m3"]:.2f} m³. Twelve 20 kg bags of cement and 1 m³ of builders mix, four shovels of mix to one of cement. The four step holes are later. Order {cv["readymix_order_m3"]:.1f} m³ only if the yard will not sell less, and ask what they charge to take the rest back. A hired mixer. Do not use premixed concrete bags. Nothing in the hole has to be level.',
     'Cut the piles. One 6.0 m length makes the eight piles. String off the path, not the lawn. The bearer is 190 deep, so the pile tops finish at about +138, which is 190 mm below the bearer top at +328. That is 12 mm under the 150 mm NZS 3604 wants between H3.2 and the path. The grass is lower, so cut those piles first. Cut square, preservative on the cut, DPC on the top. Do not notch the bearer.',
-    'Bearers. Doubled 190×45 on both rows of the deck, the whole length (F1). The pair is 90 mm wide and sits on the 125 pile. Each ply is a 4.8 m length from the eastern end, butted on the pile at 4500, so that piece runs over the two 2.1 m bays. The remaining piece is the 1.8 m bay. Seat them and skew-nail (F2). No anchor brackets. Leave the existing bearer at the back edge. The rebuilt strip bolts to it at one end and to the house framing at the other.',
+    'Bearers. Doubled 190×45 on both rows of the deck, the whole length (F1). The pair is 90 mm wide and sits on the 125 pile. The two plies do not stop on the same pile. On each bearer, one ply butts at 2400 and the other at 4500, so one board is continuous across the other cut and the nails share the load into it. Seat them and skew-nail (F2). No anchor brackets. Leave the existing bearer at the back edge. The rebuilt strip bolts to it at one end and to the house framing at the other.',
     'Joists and rims. 17 joists of 2510: flush at each end, 437 centres, the doubled joist at 3956. Screws into a bearer go in from the side of the joist, not down through the top. The rebuilt strip is three joists of 2270, 45 mm beside the deck joists, from the house ledger to the first new bearer so the lap can be nailed (F4, F6). No blocks and no holes. Rims at Y0 and Y2555. Get the deck frame up before the steps. The step height is in mid-air until the deck is there. Offcuts can be a temporary step.',
     'Step piles. Later, with the deck frame up. Dig the four small holes, 300×300 and 400 deep, on the same X as the front piles and 560 mm out from the face. Not 600. No extra hole beside the path. Stand a 750 mm pile, plumb it, and concrete it. Cut it so the front beam will finish with its top about 135 mm above the path.',
     'Bottom step. Screw the inner ply of the H4 ribbon to the front piles, four 14g×100 screws each, then nail the outer ply to the inner one (F5). Joists out from it, cut about 500, on the same lines as the deck joists. Double front beam on the small piles, full depth, one piece so it runs over the piles. Top of this framing about 135 mm above the path, so the 32 mm board finishes at about 167. Do not rip it. Where the full depth meets the concrete, chase the path under the timber. A ripped beam is not a size in Table 6.4.',
@@ -79,7 +79,7 @@ md = f'''# Deck and step build guide
 | Boards | 88×32 merch griptread, along X. 28 rows on the deck, 21 on the rebuilt strip, three on each step. A board on the face of the boundary joist, and one on each riser. |
 | Finish | Natural, no handrail. Three rises is the limit. One more rise and it would need a rail. Lawn and path stay as they are. |
 
-Set-out, X from the eastern end. Piles: 300, 2400, 4500, 6300 on Y300 and Y2510. Eight holes. The bearer overhangs 300 mm past each end pile. The bays are 2100, 2100 and 1800 mm. The bearers are two 190×45 plies, 90 mm wide, nailed as clause 2.4.4.7, and the pair sits on the 125 pile. Table 6.4(b) does not list a 190×45. It lists a 190×70 spanning 2.7 m at a loaded dimension of 1.65 m, wet, 2 kPa, continuous over two spans. The double 190×45 is the size chosen on 15 November 2026. The long piece butts on the pile at 4500 and covers the two 2.1 m bays. The end piece is the single 1.8 m bay. The same standard caps a bearer overhang at 200 mm when the bearers are more than 2 m apart, and these are 2.21 m apart. The 300 mm is the set-out from the builder. Mark the holes and move one if it lands on the path or within 500 mm of a pipe. The four step piles are on those same X, at Y3115, and they are dug with the steps. The rebuilt strip has no piles.
+Set-out, X from the eastern end. Piles: 300, 2400, 4500, 6300 on Y300 and Y2510. Eight holes. The bearer overhangs 300 mm past each end pile. The bays are 2100, 2100 and 1800 mm. The bearers are two 190×45 plies, 90 mm wide, nailed as clause 2.4.4.7, and the pair sits on the 125 pile. Table 6.4(b) does not list a 190×45. It lists a 190×70 spanning 2.7 m at a loaded dimension of 1.65 m, wet, 2 kPa, continuous over two spans. The double 190×45 is the size chosen on 15 November 2026. The two plies do not butt on the same pile. One stops at 2400 and the other at 4500, so one board runs through at each cut. The same standard caps a bearer overhang at 200 mm when the bearers are more than 2 m apart, and these are 2.21 m apart. The 300 mm is the set-out from the builder. Mark the holes and move one if it lands on the path or within 500 mm of a pipe. The four step piles are on those same X, at Y3115, and they are dug with the steps. The rebuilt strip has no piles.
 
 Heights. The path is where you walk and the grass is lower, so the steps are taped off the path. Deck boards +500 if that is what the old deck measures, joist top +468, bearer top +328, pile top +138. Bottom step board about +167, framing top +135. Top step board about +333, framing top +301. If the tape from the path to the deck boards is not 500, divide whatever it is by three.
 
@@ -140,7 +140,7 @@ Pack sizes are already rounded up for the nails and the screws. Pile lengths are
 for a in d['main_stock_allocations']:
     md += '| {n}×{s} | {cuts} |\n'.format(n=a['count'], s=a['stock_mm'], cuts=' + '.join(str(int(c)) if float(c).is_integer() else str(c) for c in a['cuts_mm']))
 md += f'''
-Main and rebuilt: {d["main_stock_lm"]} m in the cut list, {d["main_installed_lm"]} m used. 6600 is the two rims. 2510 is the 17 joists. 2270 is the three rebuilt joists, 45 mm beside the deck joists and lapped to the first new bearer. 900 is the bearer on the existing one, and the house ledger. Buy 12×6.0 m and splice the rims. 7.2 m is not listed. The main bearers are not in this list. They are six 4.8 m lengths of 190×45. Four run from the eastern end to the pile at 4500. The other two lengths are cut into the four end pieces.
+Main and rebuilt: {d["main_stock_lm"]} m in the cut list, {d["main_installed_lm"]} m used. 6600 is the two rims. 2510 is the 17 joists. 2270 is the three rebuilt joists, 45 mm beside the deck joists and lapped to the first new bearer. 900 is the bearer on the existing one, and the house ledger. Buy 12×6.0 m and splice the rims. 7.2 m is not listed. The main bearers are not in this list. They are six 4.8 m lengths of 190×45. On each bearer one ply is 2.40 m then 4.20 m, joint on the pile at 2400. The other ply is 4.50 m then 2.10 m, joint on the pile at 4500. Two sticks make the 4.50 m pieces, one stick makes both 2.10 m pieces, two sticks make the 4.20 m pieces, and one stick makes both 2.40 m pieces.
 
 | 140×45 H4 stock | Cuts, mm |
 |---|---|
@@ -238,14 +238,31 @@ shop = body.index('<h2 id="shopping-list">')
 build = body.index('<h2 id="build-order">')
 schedules = body[shop:build].replace('href="docs/', 'href="', 1)
 schedules = schedules.replace('<h2 id="shopping-list">Shopping list</h2>', '<h2 id="shopping-list">Bill of materials</h2>', 1)
-sheets = '''<section id="sheets" aria-label="Drawing set">
+sheets = '''<section id="bearer" aria-label="One bearer">
+<h2>One bearer</h2>
+<p class="note">East on the left. Looking down at one bearer. The other bearer is the same. Grey marks are the four piles. The gap is drawn in so the cut shows. The boards butt tight on the pile.</p>
+<div class="one-bearer">
+<div class="ob-piles"><span style="left:4.5%">300</span><span style="left:36.4%">2400</span><span style="left:68.2%">4500</span><span style="left:95.5%">6300</span></div>
+<div class="ob-track">
+<i class="ob-pile" style="left:4.5%"></i><i class="ob-pile" style="left:36.4%"></i><i class="ob-pile" style="left:68.2%"></i><i class="ob-pile" style="left:95.5%"></i>
+<div class="ob-ply"><b style="left:0;width:67%">4.50 m</b><b style="left:69.3%;width:30.7%">2.10 m</b></div>
+<div class="ob-ply"><b style="left:0;width:35.2%">2.40 m</b><b style="left:37.5%;width:62.5%">4.20 m</b></div>
+</div>
+<p class="ob-bays">300 mm past the end pile, then 2100, 2100 and 1800, then 300 mm past the last pile.</p>
+</div>
+<p>The top board stops on the pile at 4500. The bottom board stops on the pile at 2400. Where one board is cut, the other runs straight through that pile.</p>
+</section>
+<section id="pieces" aria-label="Piece plan">
+<figure class="sheet"><div id="view-pieces"></div><figcaption>Piece plan · each bar is one board, seen from above. Bearer joints are staggered.</figcaption></figure>
+</section>
+<section id="sheets" aria-label="Drawing set">
 <figure class="sheet"><div id="view-sheet"></div><figcaption>01 · Foundation, framing and long section</figcaption></figure>
 <figure class="sheet"><div id="view-sheet2"></div><figcaption>02 · Section, pile and steps</figcaption></figure>
 <figure class="sheet"><div id="view-sheet3"></div><figcaption>03 · Site, levels and schedules</figcaption></figure>
-<p class="note"><a href="drawings/sheet.svg">Sheet 1</a> · <a href="drawings/sheet2.svg">Sheet 2</a> · <a href="drawings/sheet3.svg">Sheet 3</a></p>
+<p class="note"><a href="drawings/pieces.svg">Piece plan</a> · <a href="drawings/sheet.svg">Sheet 1</a> · <a href="drawings/sheet2.svg">Sheet 2</a> · <a href="drawings/sheet3.svg">Sheet 3</a></p>
 </section>'''
 body = sheets + schedules
-html = '''<!doctype html><html lang="en-NZ"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#254c3e"><meta name="description" content="ISL38807. Proposed deck for 18B Formby Avenue. Three sheets, not lodged."><title>ISL38807 · 18B Formby Avenue</title><!-- INLINE_STYLES --></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="#main">ISL38807 <span>18B FORMBY AVENUE · NOT LODGED</span></a><nav aria-label="Sections"><a href="#sheets">Sheets</a><a href="#shopping-list">Schedule</a></nav><button id="print">Print</button></header><main id="main">''' + body + '''</main><footer><span>AS/NZS 1100.501 · Exemption 24 · Do not scale</span></footer><p id="message" role="status"></p><!-- INLINE_SCRIPT --></body></html>'''
+html = '''<!doctype html><html lang="en-NZ"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#254c3e"><meta name="description" content="ISL38807. Proposed deck for 18B Formby Avenue. Three sheets, not lodged."><title>ISL38807 · 18B Formby Avenue</title><!-- INLINE_STYLES --></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="#main">ISL38807 <span>18B FORMBY AVENUE · NOT LODGED</span></a><nav aria-label="Sections"><a href="#bearer">Bearer</a><a href="#pieces">Pieces</a><a href="#sheets">Sheets</a><a href="#shopping-list">Schedule</a></nav><button id="print">Print</button></header><main id="main">''' + body + '''</main><footer><span>AS/NZS 1100.501 · Exemption 24 · Do not scale</span></footer><p id="message" role="status"></p><!-- INLINE_SCRIPT --></body></html>'''
 (root / 'site/index.html').write_text(html)
 print('Rendered guide, CSV and page; posted', posted, 'estimates', est, 'total', total)
 
@@ -347,10 +364,12 @@ for x in d['main_joist_centres_mm']:
     s1.append(_ln(PX(x), PY(45), PX(x), PY(2555), INK, 1.05 if heavy else 0.4))
 for x in d['rebuilt_joist_X_mm']:
     s1.append(_ln(PX(x), PY(-1970), PX(x), PY(300), RED, 0.7))
-for y, length in ((300, 6600), (2510, 6600)):
-    s1.append(_ln(PX(0), PY(y - 45), PX(length), PY(y - 45), INK, 0.9))
-    s1.append(_ln(PX(0), PY(y), PX(length), PY(y), INK, 0.35))
-    s1.append(_ln(PX(0), PY(y + 45), PX(length), PY(y + 45), INK, 0.9))
+for y in (300, 2510):
+    s1.append(_ln(PX(0), PY(y - 45), PX(4485), PY(y - 45), INK, 0.9))
+    s1.append(_ln(PX(4515), PY(y - 45), PX(6600), PY(y - 45), INK, 0.9))
+    s1.append(_ln(PX(0), PY(y), PX(6600), PY(y), INK, 0.35))
+    s1.append(_ln(PX(0), PY(y + 45), PX(2385), PY(y + 45), INK, 0.9))
+    s1.append(_ln(PX(2415), PY(y + 45), PX(6600), PY(y + 45), INK, 0.9))
 s1.append(_ln(PX(0), PY(2555), PX(6600), PY(2555), INK, 0.7))
 s1.append(_ln(PX(0), PY(3070), PX(6600), PY(3070), INK, 0.7))
 s1.append(_ln(PX(0), PY(3160), PX(6600), PY(3160), INK, 0.7))
@@ -389,7 +408,7 @@ s1.append(_tx(680, 366, '1000', 7, 'middle', RED))
 s1.append(_tx(680, 386, 'SCALE BAR 1:25', 6.5, 'middle', INK, '500'))
 
 s1.append(_note(188, 46, ['88×32 H3.2 MERCH GRADE', 'GRIPTREAD DECKING.', 'ABOUT 5mm GAP. BOARDS', 'ALONG THE DECK.'], (PX(1800), PY(30))))
-s1.append(_note(360, 46, ['DOUBLE BEARER', '190×45 BOTH ROWS', '90 WIDE ON THE PILE'], (PX(2400), PY(300))))
+s1.append(_note(360, 46, ['DOUBLE BEARER 190×45', 'JOINTS STAGGERED', 'ONE PLY AT 2400', 'OTHER PLY AT 4500'], (PX(2400), PY(300))))
 s1.append(_note(500, 46, ['NOTE', 'DECKING IS FIXED WITH', 'DECKING SCREWS'], (PX(4200), PY(80))))
 s1.append(_note(188, 108, ['140×45 SG8 H3.2 JOIST', 'AT 437 CENTRES', 'DOUBLED AT 3956'], (PX(1770.5), PY(400))))
 s1.append(_note(400, 108, ['125×125 H5 PILE', 'HOLE 400×400×600', 'NO ANCHOR BRACKET'], (PX(4500), PY(300))))
@@ -623,7 +642,7 @@ for i, row in enumerate(rows_p):
 s3.append(_tx(560, 330, 'FRAMING SCHEDULE — FINISHED SIZES', 9, 'start', GREEN, '700'))
 s3.append(_ln(560, 338, 1120, 338, INK, 0.6))
 framing = [
-    'BEARERS  190×45 SG8 H3.2 DOUBLE, 90 WIDE. SPLICE ON THE PILE AT 4500',
+    'BEARERS  190×45 SG8 H3.2 DOUBLE, 90 WIDE. JOINTS STAGGERED, 2400 AND 4500',
     'JOISTS  140×45 SG8 H3.2, 437 CENTRES, DOUBLED AT 3956',
     'REBUILT  3 JOISTS, 45 mm BESIDE THE DECK JOISTS, LAP NAILED',
     'STEPS  150×50 SG8 H4 DOUBLE, FULL DEPTH, TWO GOINGS OF 280',
@@ -646,6 +665,99 @@ s3.append(_tx(560, 586, 'CONSENT NOT REQUIRED. NOT LODGED. NOT ENGINEER CHECKED.
 s3.append(_tx(560, 610, 'BRACING IS A DEPARTURE FROM NZS 3604 cl 7.4.2.2.', 7.2, 'start', GREEN, '500'))
 s3.append(_tx(560, 626, 'SEE NOTE 7 ON SHEET 2.', 7.2, 'start', GREEN, '500'))
 (root / 'site/drawings' / 'sheet3.svg').write_text(_sheet(s3, 'Sheet 3. Site of the works, levels and schedules. Ref ISL38807. Consent exempt, not lodged. Boundaries not surveyed.'))
-print('sheets', len(s1), len(s2), len(s3))
+
+# Top-down of the individual boards. East on the left, the house at the top.
+# The bearer butt is on the pile at 4500. Each rim is cut on the joist at 3518
+# so both halves come out of a 6.0 m board.
+k = 0.132
+ox, oy, y0 = 78, 86, -2140
+GAP = 90
+
+def SX(mm):
+    return ox + mm * k
+
+def SY(mm):
+    return oy + (mm - y0) * k
+
+def board(x, y, w, h, fill):
+    return f'<rect x="{SX(x):.2f}" y="{SY(y):.2f}" width="{w * k:.2f}" height="{h * k:.2f}" fill="{fill}" stroke="{INK}" stroke-width="0.8"/>'
+
+BEAR, JOIST_F, RIM_F, REB = '#c4a15a', '#f3e6c4', '#8d6b3e', '#7d9a78'
+parts = [
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 860" role="img" aria-label="Top-down piece plan. Each bar is one board.">',
+    '<title>Piece plan. Each bar is one board, seen from above.</title>',
+    '<style>text{font-family:Arial,Helvetica,sans-serif}</style>',
+    '<rect width="1180" height="860" fill="#faf9f5"/>',
+    _tx(24, 36, 'EACH BAR IS ONE BOARD', 16, 'start', INK, '700'),
+    _tx(24, 56, 'EAST ON THE LEFT  ·  HOUSE AT THE TOP  ·  LOOKING DOWN', 11, 'start', GREEN, '600'),
+]
+# Piles first, under the timber.
+for yb in (300, 2510):
+    for x in pile_x:
+        parts.append(f'<rect x="{SX(x - 62.5):.2f}" y="{SY(yb - 62.5):.2f}" width="{125 * k:.2f}" height="{125 * k:.2f}" fill="#d5ddd4" stroke="{INK}" stroke-width="0.7"/>')
+# Rims, each one two pieces, joint on the joist at 3518.
+rim_joint = 3518.5
+for y in (0, 2555):
+    parts.append(board(0, y, rim_joint - GAP, 45, RIM_F))
+    parts.append(board(rim_joint + GAP, y, 6600 - rim_joint - GAP, 45, RIM_F))
+# Bearers. House-side ply butts at 4500. Front-side ply butts at 2400.
+for yb in (300, 2510):
+    parts.append(board(0, yb - 45, 4500 - GAP, 45, BEAR))
+    parts.append(board(4500 + GAP, yb - 45, 6600 - 4500 - GAP, 45, BEAR))
+    parts.append(board(0, yb, 2400 - GAP, 45, BEAR))
+    parts.append(board(2400 + GAP, yb, 6600 - 2400 - GAP, 45, BEAR))
+# Deck joists sit on the bearers, so they are drawn over them.
+for x in d['main_joist_centres_mm']:
+    parts.append(board(x - 22.5, 45, 45, 2510, JOIST_F))
+# Rebuilt strip. Ledger at the house, three joists, and the piece on the existing bearer.
+parts.append(board(0, -1970, 900, 45, REB))
+for x in d['rebuilt_joist_X_mm']:
+    parts.append(board(x - 22.5, -1970, 45, 2270, REB))
+parts.append(board(0, -45, 900, 45, REB))
+# Labels
+parts.append(_tx(SX(1200), SY(230), '2.40 m', 12, 'middle', INK, '700'))
+parts.append(_tx(SX(4500), SY(230), '4.20 m', 12, 'middle', INK, '700'))
+parts.append(_tx(SX(2250), SY(400), '4.50 m', 12, 'middle', INK, '700'))
+parts.append(_tx(SX(5550), SY(400), '2.10 m', 12, 'middle', INK, '700'))
+parts.append(_tx(SX(2400), SY(560), 'JOINT', 11, 'middle', RED, '700'))
+parts.append(_tx(SX(4500), SY(560), 'JOINT', 11, 'middle', RED, '700'))
+parts.append(_tx(SX(rim_joint), SY(-28), 'RIM JOINT', 11, 'middle', RED, '700'))
+parts.append(_tx(24, SY(-2080), 'HOUSE', 13, 'start', GREEN, '700'))
+parts.append(_tx(SX(20), SY(2680), 'FRONT', 13, 'start', GREEN, '700'))
+parts.append(_tx(16, SY(1300), 'EAST', 13, 'start', GREEN, '700'))
+parts.append(_tx(SX(980), SY(-1900), 'LEDGER 900', 11, 'start', INK, '600'))
+parts.append(_tx(SX(980), SY(-1100), '3 REBUILT JOISTS, 2.27 m', 12, 'start', INK, '600'))
+parts.append(_tx(SX(2500), SY(1400), '17 JOISTS, 2.51 m', 13, 'middle', INK, '700'))
+parts.append(_tx(SX(2500), SY(1560), 'FULL WIDTH, BETWEEN THE TWO RIMS', 11, 'middle', INK, '600'))
+parts.append(_vdim(SX(6780), SY(0), SY(2600), '2600'))
+parts.append(_tx(SX(6900), SY(1300), 'JOIST 2510', 11, 'start', RED, '700'))
+parts.append(_tx(SX(6900), SY(1480), 'RIM 45 EACH EDGE', 11, 'start', RED, '600'))
+parts.append(_tx(SX(3956), SY(1700), 'DOUBLE', 11, 'middle', RED, '700'))
+# Zoom, so the two side-by-side plies and the butt are readable.
+zx, zy = 860, 90
+parts.append(_tx(zx, zy, 'AT A JOINT', 13, 'start', INK, '700'))
+parts.append(f'<rect x="{zx}" y="{zy + 16}" width="270" height="168" fill="white" stroke="{INK}" stroke-width="0.8"/>')
+parts.append(f'<rect x="{zx + 106}" y="{zy + 36}" width="58" height="70" fill="#d5ddd4" stroke="{INK}" stroke-width="0.8"/>')
+parts.append(f'<rect x="{zx + 16}" y="{zy + 46}" width="238" height="20" fill="{BEAR}" stroke="{INK}" stroke-width="0.8"/>')
+parts.append(f'<rect x="{zx + 16}" y="{zy + 70}" width="108" height="20" fill="{BEAR}" stroke="{INK}" stroke-width="0.8"/>')
+parts.append(f'<rect x="{zx + 140}" y="{zy + 70}" width="114" height="20" fill="{BEAR}" stroke="{INK}" stroke-width="0.8"/>')
+parts.append(_tx(zx + 135, zy + 112, 'ONE BOARD RUNS THROUGH', 10, 'middle', INK, '600'))
+parts.append(_tx(zx + 135, zy + 128, 'THE OTHER STOPS ON THE PILE', 10, 'middle', RED, '700'))
+parts.append(_tx(zx + 135, zy + 146, 'THE OTHER JOINT IS SWAPPED', 10, 'middle', INK, '500'))
+parts.append(_tx(zx + 135, zy + 168, 'BOTH BEARERS ARE THE SAME', 10, 'middle', INK, '500'))
+# Legend
+lx, ly = 900, 748
+parts.append(_tx(lx, ly, '190×45 BEARER', 12, 'start', INK, '600'))
+parts.append(f'<rect x="{lx - 28}" y="{ly - 12}" width="18" height="12" fill="{BEAR}" stroke="{INK}" stroke-width="0.6"/>')
+parts.append(_tx(lx, ly + 22, '140×45 JOIST', 12, 'start', INK, '600'))
+parts.append(f'<rect x="{lx - 28}" y="{ly + 10}" width="18" height="12" fill="{JOIST_F}" stroke="{INK}" stroke-width="0.6"/>')
+parts.append(_tx(lx, ly + 44, '140×45 RIM', 12, 'start', INK, '600'))
+parts.append(f'<rect x="{lx - 28}" y="{ly + 32}" width="18" height="12" fill="{RIM_F}" stroke="{INK}" stroke-width="0.6"/>')
+parts.append(_tx(lx, ly + 66, 'REBUILT STRIP', 12, 'start', INK, '600'))
+parts.append(f'<rect x="{lx - 28}" y="{ly + 54}" width="18" height="12" fill="{REB}" stroke="{INK}" stroke-width="0.6"/>')
+parts.append(_tx(24, 830, 'The gap is drawn wide so the cut shows. The boards actually butt tight. House-side ply joints at 4500. Front-side ply joints at 2400. Joists are 2510 because each rim takes 45. The deck is 2600.', 11, 'start', INK, '500'))
+parts.append('</svg>')
+(root / 'site/drawings' / 'pieces.svg').write_text(''.join(parts))
+print('sheets', len(s1), len(s2), len(s3), 'pieces')
 
 
