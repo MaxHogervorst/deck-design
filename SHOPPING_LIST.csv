@@ -1,19 +1,20 @@
 Category,Description,Qty,Unit,Cheapest NZD,Store,In total NZD,"Posted, estimate or alternative",Comments,Source
-Timber,"140×45 SG8 H3.2 framing, wet. Joists, rims and the rebuilt strip",72,m,541.93,NZ Timber,541.93,posted,"Quote 00067524, 16 November 2026. Twelve 6.0 m at $39.27 ex GST, $45.16 including GST. The two rims are 6.6 m, so splice each one. The main bearers are the 190 line, not this one",
-Timber,"190×45 SG8 H3.2 doubled bearers, both rows, full length",28.8,m,248.40,NZ Timber,248.40,posted,"Quote 00067524. Six 4.8 m at $36.00 ex GST, $41.40 including GST. Two plies, 90 mm wide, so the pair sits on the 125 pile. One ply butts at 2400 and the other at 4500",
-Timber,"150×50 SG8 H4, 36 m",36,m,615.96,Bunnings,615.96,posted,,https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210
-Piles,"125×125 H5, 3.0 m, cut into the eight deck piles",2,ea,108.10,NZ Timber,108.10,posted,"Quote 00067524. Two 3.0 m at $47.00 ex GST, $54.05 including GST. The quote calls them anchor piles. Cut them into the eight ordinary piles. No anchor brackets. None for the rebuilt strip",
-Piles,"125×125 H5 pile, 750 mm",4,ea,84.16,Bunnings,84.16,posted,"Four under the bottom step, on the same lines as the deck piles. Later, with the steps. $21.04. Most of the length gets cut off",https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396
-Decking,88×32 H3.2 merch griptread,291.6,m,1326.78,Bunnings,1326.78,posted,"43×4.2 m and 37×3.0 m at $4.55/m. The listed price is the random-length bin. Named lengths, so the butts land on the doubled joist. Trade price is $4.33/m and needs a PowerPass",https://www.bunnings.co.nz/88-x-32mm-merch-griptread-decking-random-lengths_p0307690
-Fasteners,"Decking screws 10g×65, coated for treated pine",1500,ea,227.76,Bunnings,227.76,posted,"3×500 Buildex Climacoat at $75.92. CCA decking, zone C, so stainless is not required. A 304 decking screw is about $234 for the same 1500 and is the one to take if the heads will show. 1384 positions",https://www.bunnings.co.nz/buildex-10g-x-65mm-climacoat-rapiddrive-treated-pine-screws-500-pack_p0417168
-Fasteners,Framing nails 90×3.55 galvanised jolt head,7,kg,78.63,Bunnings,78.63,posted,1×5 kg at $51.98 and 1×2 kg at $26.65. Hot-dip galvanised. Bearer plies and the step beams. The stainless nails only came in 4 mm,https://www.bunnings.co.nz/nz-nails-90-x-3-55mm-5kg-galvanised-jolt-head-nail_p0318485
-Fasteners,Framing nails 100×4 galvanised flat head,5,kg,51.77,Bunnings,51.77,posted,"One 5 kg tub at $51.77. Joists, rims and the skew nails. The heads are buried, so a flat head is fine",https://www.bunnings.co.nz/nz-nails-100-x-4mm-5kg-galvanised-flat-head-nail_p0318604
-Fasteners,Batten screws 14g×100 class 3 galvanised,100,ea,29.95,Bunnings,29.95,posted,"One box, $29.95. Step ribbons, and the rebuilt joists. Class 3, for outside",https://www.bunnings.co.nz/titan-14g-x-100mm-cl3-gal-bugle-batten-screw-100-pack_p0579091
-Fasteners,"M12×120 316 coach bolt, nut, two 50 mm washers",5,ea,66.15,Bunnings,66.15,posted,Two into the existing bearer and three through the house ledger into the framing. $4.90 + $1.25 + 2×$3.54 each. Not into the weatherboards,https://www.bunnings.co.nz/zenith-m12-x-120mm-316-stainless-steel-coach-head-bolt-and-nut_p0236593
-Concrete,"Cemix Multicrete 20 kg, 59 bags",59,ea,663.16,Bunnings,663.16,posted,,https://www.bunnings.co.nz/cemix-20kg-multicrete_p0232228
-Concrete,"Cement 20 kg, 12 bags",12,ea,139.08,Bunnings,0.00,alt,,https://www.bunnings.co.nz/cemix-20kg-low-carbon-cement_p0581734
-Concrete,"Builders mix, 1 m³",1.0,m³,126.50,Auckland Aggregates,0.00,alt,,https://www.aucklandaggregates.co.nz/shop/product/577984/bm-20--builders-mix-virgin-aggregate/
-DPC,"DPC Supercourse 500, 150 mm×30 m",1,ea,27.42,Bunnings,27.42,posted,On every pile top. $27.42,https://www.bunnings.co.nz/thermakraft-supercourse-500-dpc-150mmx30m_p0207794
-DPC,"Metalex Green, 1 L",1,ea,66.00,Bunnings,66.00,posted,On every saw cut. $66,https://www.bunnings.co.nz/metalex-1l-green-timber-preserve-44501_p0709374
-Delivery,"NZ Timber tipper, quote 00067524",1,ea,126.50,NZ Timber,126.50,posted,"Tipper freight on the quote, $110.00 ex GST, $126.50 including GST. This is the delivery of the 190, the 140 and the two pile lengths",
+Deck,"140×45 SG8 H3.2, 12×6.0 m",72,m,541.93,NZ Timber,541.93,posted,,
+Deck,"190×45 SG8 H3.2, 6×4.8 m",28.8,m,248.40,NZ Timber,248.40,posted,,
+Deck,"125×125 H5, 2×3.0 m",2,ea,108.10,NZ Timber,108.10,posted,,
+Deck,88×32 decking,226.8,m,1031.94,Bunnings,1031.94,posted,,https://www.bunnings.co.nz/88-x-32mm-merch-griptread-decking-random-lengths_p0307690
+Deck,"Decking screws 10g×65, 3×500",1500,ea,227.76,Bunnings,227.76,posted,,https://www.bunnings.co.nz/buildex-10g-x-65mm-climacoat-rapiddrive-treated-pine-screws-500-pack_p0417168
+Deck,"Nails 90×3.55 galv, 5 kg + 2 kg",7,kg,78.63,Bunnings,78.63,posted,,https://www.bunnings.co.nz/nz-nails-90-x-3-55mm-5kg-galvanised-jolt-head-nail_p0318485
+Deck,"Nails 100×4 galv, 5 kg",5,kg,51.77,Bunnings,51.77,posted,,https://www.bunnings.co.nz/nz-nails-100-x-4mm-5kg-galvanised-flat-head-nail_p0318604
+Deck,"Batten screws 14g×100, 100",100,ea,29.95,Bunnings,29.95,posted,,https://www.bunnings.co.nz/titan-14g-x-100mm-cl3-gal-bugle-batten-screw-100-pack_p0579091
+Deck,"M12×120 316 bolts, 5",5,ea,66.15,Bunnings,66.15,posted,,https://www.bunnings.co.nz/zenith-m12-x-120mm-316-stainless-steel-coach-head-bolt-and-nut_p0236593
+Deck,"Cemix Multicrete 20 kg, 59 bags",59,ea,663.16,Bunnings,663.16,posted,,https://www.bunnings.co.nz/cemix-20kg-multicrete_p0232228
+Deck,"Cement 20 kg, 12 bags",12,ea,139.08,Bunnings,0.00,alt,,https://www.bunnings.co.nz/cemix-20kg-low-carbon-cement_p0581734
+Deck,"Builders mix, 1 m³",1.0,m³,126.50,Auckland Aggregates,0.00,alt,,https://www.aucklandaggregates.co.nz/shop/product/577984/bm-20--builders-mix-virgin-aggregate/
+Deck,DPC 150 mm×30 m,1,ea,27.42,Bunnings,27.42,posted,,https://www.bunnings.co.nz/thermakraft-supercourse-500-dpc-150mmx30m_p0207794
+Deck,"Metalex, 1 L",1,ea,66.00,Bunnings,66.00,posted,,https://www.bunnings.co.nz/metalex-1l-green-timber-preserve-44501_p0709374
+Deck,NZ Timber tipper,1,ea,126.50,NZ Timber,126.50,posted,,
+Steps,"150×50 SG8 H4, 36 m",36,m,615.96,Bunnings,615.96,posted,,https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210
+Steps,"125×125 H5, 4×0.75 m",4,ea,84.16,Bunnings,84.16,posted,,https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396
+Steps,88×32 decking,64.8,m,294.84,Bunnings,294.84,posted,,https://www.bunnings.co.nz/88-x-32mm-merch-griptread-decking-random-lengths_p0307690
 TOTAL,,,,,,4262.67,posted 4262.67 + estimates 0.00,Truck is in the total. Cement and builders mix are not.,
