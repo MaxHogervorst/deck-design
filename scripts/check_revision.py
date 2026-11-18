@@ -16,20 +16,19 @@ main_alloc = [
     (1, 6000, [2510, 2270, 900]),
     (1, 6000, [2270, 2270, 900]),
 ]
-# Two steps, full width. Eight 6.6 m H4 plies (two doubles for each step) and the short joists.
-# 7.2 m stock so each ply is one piece. Joists cut long and trimmed to the opening.
+# One step frame. Four 6.6 m plies, twelve joists, twelve upper-tread packers.
+# Bought by the metre, so the stock length is the piece.
 h4_alloc = [
-    (8, 7200, [6600]),
-    (1, 4800, [500] * 9),
-    (1, 4800, [500] * 8),
-    (1, 4800, [240] * 17),
+    (4, 6600, [6600]),
+    (12, 500, [500]),
+    (12, 240, [240]),
 ]
-for n, s, cs in main_alloc + h4_alloc:
+for n, s, cs in main_alloc:
     assert sum(cs) + 4 * len(cs) + 5 <= s, (s, cs)
 main_counts = Counter(c for n, s, cs in main_alloc for c in cs for _ in range(n))
 assert main_counts == Counter({6600: 2, 2510: 17, 2270: 3, 900: 2}), main_counts
 h4_counts = Counter(c for n, s, cs in h4_alloc for c in cs for _ in range(n))
-assert h4_counts == Counter({6600: 8, 500: 17, 240: 17}), h4_counts
+assert h4_counts == Counter({6600: 4, 500: 12, 240: 12}), h4_counts
 # Bays are 2100, 2100 and 1800. The bearers are two 190×45 plies, 90 mm
 # wide. Table 6.4(b) does not list a 190×45. The listed 190×70 spans 2.7 m
 # in the 1.65 m column. The double 190×45 is the size chosen 15 Nov 2026.
@@ -209,7 +208,7 @@ out = {
         'note': 'Bearers are two 190×45 plies, chosen 15 November 2026. Table 6.4(b) lists a 190×70 at 2.7 m for a 1.65 m loaded dimension. It does not list a 190×45. Not a foundation or bracing check.',
     },
 }
-assert out['main_stock_lm'] == 74.4 and out['H4_stock_lm'] == 72.0
+assert out['main_stock_lm'] == 74.4 and out['H4_installed_lm'] == 35.28
 assert out['decking']['base_screws'] == base_screws
 assert out['concrete_geometry_only']['main_holes_m3'] == 0.768
 (root / 'design.json').write_text(json.dumps(out, indent=2) + '\n')
