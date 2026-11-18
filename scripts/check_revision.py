@@ -16,19 +16,19 @@ main_alloc = [
     (1, 6000, [2510, 2270, 900]),
     (1, 6000, [2270, 2270, 900]),
 ]
-# One step frame. Four 6.6 m plies, twelve joists, twelve upper-tread packers.
-# Bought by the metre, so the stock length is the piece.
+# Six 6.0 m lengths of 150×50 H4. Each long ply is 4500 + 2100, joint on the pile at 4500.
+# The 1500 mm offcuts are the twelve 500 mm joists. The other two offcuts are the packers.
 h4_alloc = [
-    (4, 6600, [6600]),
-    (12, 500, [500]),
-    (12, 240, [240]),
+    (4, 6000, [4500, 500, 500, 500]),
+    (1, 6000, [2100, 2100, 240, 240, 240, 240, 240, 240, 240]),
+    (1, 6000, [2100, 2100, 240, 240, 240, 240, 240]),
 ]
 for n, s, cs in main_alloc:
     assert sum(cs) + 4 * len(cs) + 5 <= s, (s, cs)
 main_counts = Counter(c for n, s, cs in main_alloc for c in cs for _ in range(n))
 assert main_counts == Counter({6600: 2, 2510: 17, 2270: 3, 900: 2}), main_counts
 h4_counts = Counter(c for n, s, cs in h4_alloc for c in cs for _ in range(n))
-assert h4_counts == Counter({6600: 4, 500: 12, 240: 12}), h4_counts
+assert h4_counts == Counter({4500: 4, 2100: 4, 500: 12, 240: 12}), h4_counts
 # Bays are 2100, 2100 and 1800. The bearers are two 190×45 plies, 90 mm
 # wide. Table 6.4(b) does not list a 190×45. The listed 190×70 spans 2.7 m
 # in the 1.65 m column. The double 190×45 is the size chosen 15 Nov 2026.

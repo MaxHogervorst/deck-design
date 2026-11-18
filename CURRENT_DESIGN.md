@@ -41,7 +41,7 @@ The step is one H4 frame, not two. Double ribbon on the front piles, 12 joists o
 
 ## Shopping list
 
-Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 2026. The 190, the 140 and the two deck-pile lengths are NZ Timber quote 00067524, 16 November 2026, shown including GST. The quote itself is ex GST. Other lines are the earlier posted prices. The tipper on that quote is included. Other delivery is extra.
+Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 2026. The 190 and the 140 are NZ Timber quote 00067524, shown including GST. The four pile lengths are at that quote's rate. The H4 is Auckland Aggregates.
 
 [Download the CSV](docs/shopping-list.csv).
 
@@ -51,7 +51,7 @@ Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 202
 |---|---|---|---|---|
 | 140×45 SG8 H3.2, 12×6.0 m | 72 | m | $541.93 | NZ Timber |
 | 190×45 SG8 H3.2, 6×4.8 m | 28.8 | m | $248.40 | NZ Timber |
-| 125×125 H5, 2×3.0 m | 2 | ea | $108.10 | NZ Timber |
+| 125×125 H5, 4×3.0 m | 4 | ea | $216.20 | NZ Timber |
 | 88×32 decking | 226.8 | m | [$1,031.94](https://www.bunnings.co.nz/88-x-32mm-merch-griptread-decking-random-lengths_p0307690) | Bunnings |
 | Decking screws 10g×65, 3×500 | 1500 | ea | [$227.76](https://www.bunnings.co.nz/buildex-10g-x-65mm-climacoat-rapiddrive-treated-pine-screws-500-pack_p0417168) | Bunnings |
 | Nails 90×3.55 galv, 5 kg + 2 kg | 7 | kg | [$78.63](https://www.bunnings.co.nz/nz-nails-90-x-3-55mm-5kg-galvanised-jolt-head-nail_p0318485) | Bunnings |
@@ -65,19 +65,18 @@ Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 202
 | Metalex, 1 L | 1 | ea | [$66.00](https://www.bunnings.co.nz/metalex-1l-green-timber-preserve-44501_p0709374) | Bunnings |
 | NZ Timber tipper | 1 | ea | $126.50 | NZ Timber |
 
-**Deck $3,268.**
+**Deck $3,376.**
 
 ### Steps
 
 | Description | Qty | Unit | Price | Store |
 |---|---|---|---|---|
-| 150×50 SG8 H4, 36 m | 36 | m | [$615.96](https://www.bunnings.co.nz/150-x-50mm-sg8-h4-wet-sawn-treated-timber-per-linear-metre_p0276210) | Bunnings |
-| 125×125 H5, 4×0.75 m | 4 | ea | [$84.16](https://www.bunnings.co.nz/125-x-125mm-0-75m-square-h5-anchor-pile_p0276396) | Bunnings |
+| 150×50 H4 SG8, 6×6.0 m | 6 | ea | [$341.55](https://www.aucklandaggregates.co.nz/product/retaining-wall-rails-150x50-rs-h4-sg8/) | Auckland Aggregates |
 | 88×32 decking | 64.8 | m | [$294.84](https://www.bunnings.co.nz/88-x-32mm-merch-griptread-decking-random-lengths_p0307690) | Bunnings |
 
-**Steps $995.**
+**Steps $636.**
 
-**$4,263 including GST.** The concrete in that number is the 59 bags. The cement and the builders mix are the other way to make the same holes. Do not add them as well.
+**$4,012 including GST.** The concrete in that number is the 59 bags. The cement and the builders mix are the other way to make the same holes. Do not add them as well.
 
 ### Cut list
 
@@ -90,13 +89,13 @@ Prepared for Max Hogervorst, 18B Formby Avenue, Point Chevalier. 11 November 202
 
 Main and rebuilt: 74.4 m in the cut list, 64.48 m used. 6600 is the two rims. 2510 is the 17 joists. 2270 is the three rebuilt joists, 45 mm beside the deck joists and lapped to the first new bearer. 900 is the bearer on the existing one, and the house ledger. Buy 12×6.0 m and splice the rims. 7.2 m is not listed. The main bearers are not in this list. They are six 4.8 m lengths of 190×45. On each bearer one ply is 2.40 m then 4.20 m, joint on the pile at 2400. The other ply is 4.50 m then 2.10 m, joint on the pile at 4500. Two sticks make the 4.50 m pieces, one stick makes both 2.10 m pieces, two sticks make the 4.20 m pieces, and one stick makes both 2.40 m pieces.
 
-| 140×45 H4 stock | Cuts, mm |
+| 150×50 H4 stock | Cuts, mm |
 |---|---|
-| 4×6600 | 6600 |
-| 12×500 | 500 |
-| 12×240 | 240 |
+| 4×6000 | 4500 + 500 + 500 + 500 |
+| 1×6000 | 2100 + 2100 + 240 + 240 + 240 + 240 + 240 + 240 + 240 |
+| 1×6000 | 2100 + 2100 + 240 + 240 + 240 + 240 + 240 |
 
-Steps: 36 m bought. Four plies of 6600, the double ribbon and the double front beam. Twelve joists of 500. Twelve packers of 240 for the upper tread.
+Steps: six 6.0 m lengths. Four are cut 4500 + 500 + 500 + 500. The 4500 runs to the pile at 4500, and the three 500s are joists. The other two lengths are cut 2100 + 2100, which finish the four plies, and the remainder is the twelve packers of 240.
 
 ## Fixings
 
@@ -117,10 +116,10 @@ Steps: 36 m bought. Four plies of 6600, the double ribbon and the double front b
 2. Set out. String the 6600×2600 outline. The rebuilt strip is 900 wide and runs 1970 back to the house wall. It has no holes. The steps stick out 560 mm past the front, two goings of 280. Leave the path. End joist flush, then 437 mm centres, doubled joist centred at 3956. Four pile lines, measured from the eastern end: 300, 2400, 4500, 6300, on both bearers. That is 300 mm past each end pile, then bays of 2100, 2100 and 1800. Eight holes. Paint the marks and shift a line if it lands on the path or within 500 mm of a pipe. The four step holes go on those same lines, 560 mm out, when the steps are built. Do not mark holes in the gap by the house.
 3. Dig, with a spade. Every deck hole is 400×400 and 600 deep, down to firm ground, not topsoil. No 900 mm anchor holes. At 600 a shovel is enough. An auger only earns its keep past 600, and these holes do not go there. About ten minutes a hole. No hole in the concrete, no hole between the blue pipe and the sewage, and no hole edge within 500 mm of either. No spare hole on the pipe side of the path.
 4. Concrete. Eight holes, about 0.59 m³. Fill to 100 mm below the ground. The pile sits on 100 mm of concrete. 59 bags of Multicrete, or 12 bags of cement and 1 m³ of builders mix. Not a truck. The step holes are later.
-5. Cut the piles. Two 3.0 m lengths make the eight piles. String off the path, not the lawn. The bearer is 190 deep, so the pile tops finish at about +138, which is 190 mm below the bearer top at +328. That is 12 mm under the 150 mm NZS 3604 wants between H3.2 and the path. The grass is lower, so cut those piles first. Cut square, preservative on the cut, DPC on the top. Do not notch the bearer.
+5. Cut the piles. Four 3.0 m lengths. Cut each in half and stand the 1.5 m piece, so there is room to brace it. After the concrete, cut the top to about +138. Keep the offcuts. Four of them are the step piles. String off the path, not the lawn. The grass is lower, so cut those piles first. Cut square, preservative on the cut, DPC on the top. Do not notch the bearer.
 6. Bearers. Doubled 190×45 on both rows of the deck, the whole length (F1). The pair is 90 mm wide and sits on the 125 pile. The two plies do not stop on the same pile. On each bearer, one ply butts at 2400 and the other at 4500, so one board is continuous across the other cut and the nails share the load into it. Seat them and skew-nail (F2). No anchor brackets. Leave the existing bearer at the back edge. The rebuilt strip bolts to it at one end and to the house framing at the other.
 7. Joists and rims. 17 joists of 2510: flush at each end, 437 centres, the doubled joist at 3956. Screws into a bearer go in from the side of the joist, not down through the top. The rebuilt strip is three joists of 2270, 45 mm beside the deck joists, from the house ledger to the first new bearer so the lap can be nailed (F4, F6). No blocks and no holes. Rims at Y0 and Y2555. Get the deck frame up before the steps. The step height is in mid-air until the deck is there. Offcuts can be a temporary step.
-8. Step piles. Later, with the deck frame up. Dig the four small holes, 300×300 and 400 deep, on the same X as the front piles and 560 mm out from the face. Not 600. No extra hole beside the path. Stand a 750 mm pile, plumb it, and concrete it. Cut it so the front beam will finish with its top about 135 mm above the path.
+8. Step piles. Later. Use four of the H5 offcuts. Dig the four small holes, 300×300 and 400 deep, on the same X as the front piles and 560 mm out. Cut the offcut so the front beam finishes with its top about 135 mm above the path.
 9. Bottom step. One frame. Double H4 ribbon on the front piles, 12 joists of 500 out from it, double front beam on the four small piles. Nail the upper-tread packers on the inner half of those joists. Do not build a second frame. Do not rip the beam. Chase the path where the beam meets it.
 10. Boards. 28 rows on the deck, 21 on the rebuilt strip, three on each step, all along X. Butts on the doubled joist at 3956. Tape the three rises off the path and make them equal. No handrail.
 
@@ -134,7 +133,7 @@ We walked it on 11 November. The holes, the concrete and the two steps follow th
 - **The services reply.** It said no gas and no power within 10 m. The power is there. Drain depths are approximate. Paint, spade, and move a hole rather than dig through a pipe.
 - **Fixings.** Formby Avenue is about 1.1 km from the harbour, past the 500 m sea-spray line, so this is zone C. The nails and the screws are galvanised. The deck is open, so the two bolts stay 316. The decking is CCA. Do not swap in ACQ timber and keep these screws.
 - **The path.** It stays. The piles are on a regular grid, 300 mm in from each end, then 2.1 m, 2.1 m and 1.8 m. Paint them and move a hole if it lands on the concrete or within 500 mm of a pipe. Both bearers are doubled 190×45, 90 mm wide, on the 125 piles. Table 6.4(b) does not list a 190×45. The listed 190×70 spans 2.7 m, and the longest bay is 2.1 m. The double 190×45 is the size chosen on 15 November 2026. The steps are taped off the path, not off the lawn.
-- **Prices.** The 190×45, the 140×45 and the two 3.0 m piles are NZ Timber quote 00067524, shown including GST. The concrete in the total is 59 bags of Multicrete. Cement plus builders mix is the other option and is not added.
+- **Prices.** The 190×45 and the 140×45 are NZ Timber quote 00067524, shown including GST. The piles are four lengths at that quote's rate. The H4 is Auckland Aggregates, $8.25 a metre plus GST. The concrete in the total is 59 bags of Multicrete. Cement plus builders mix is the other option and is not added.
 - **The rebuilt strip.** No holes. The joists run from the house ledger to the first new bearer, 45 mm beside the deck joists, and the lap is nailed. The long span is 1970 mm and Table 7.1(b) allows 2350 mm. Bolt the ledger into the framing and flash it. Do not fix it to the weatherboards. The main deck is on its own eight piles.
 
 ## Sources

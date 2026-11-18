@@ -92,7 +92,7 @@
   "step_piles": 4,
   "main_stock_lm": 74.4,
   "main_installed_lm": 64.48,
-  "H4_stock_lm": 35.28,
+  "H4_stock_lm": 36.0,
   "H4_installed_lm": 35.28,
   "main_stock_allocations": [
     {
@@ -132,22 +132,39 @@
   "H4_stock_allocations": [
     {
       "count": 4,
-      "stock_mm": 6600,
+      "stock_mm": 6000,
       "cuts_mm": [
-        6600
-      ]
-    },
-    {
-      "count": 12,
-      "stock_mm": 500,
-      "cuts_mm": [
+        4500,
+        500,
+        500,
         500
       ]
     },
     {
-      "count": 12,
-      "stock_mm": 240,
+      "count": 1,
+      "stock_mm": 6000,
       "cuts_mm": [
+        2100,
+        2100,
+        240,
+        240,
+        240,
+        240,
+        240,
+        240,
+        240
+      ]
+    },
+    {
+      "count": 1,
+      "stock_mm": 6000,
+      "cuts_mm": [
+        2100,
+        2100,
+        240,
+        240,
+        240,
+        240,
         240
       ]
     }
