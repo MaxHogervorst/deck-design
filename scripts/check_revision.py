@@ -74,7 +74,7 @@ def bay_screen(span, depth, width=0.09):
     return react
 
 R140 = bay_screen(step_span, 0.14)
-bearing = R140 / 0.3**2
+bearing = R140 / 0.2**2
 assert bearing <= 100, bearing
 assert step_span <= 3.0
 # Reference check and the main-bearer gravity envelope. Unchanged deck.
@@ -101,7 +101,7 @@ assert np.max(abs(rm.sum(axis=0) - np.array(fm).T[::2].sum(axis=0))) < 1e-6
 main_concrete = round(8 * (0.4 * 0.4 * 0.6), 3)
 main_pour = round(8 * (0.4 * 0.4 * 0.5 - 0.125 * 0.125 * 0.4), 3)
 rebuilt_concrete = 0
-step_concrete = round(4 * (0.3 * 0.3 * 0.4), 3)
+step_concrete = round(2 * (0.2 * 0.2 * 0.2), 3)
 extra_step_concrete = 0
 concrete = round(main_pour + rebuilt_concrete, 3)
 order_m3 = 2.0
@@ -150,18 +150,18 @@ out = {
         'lower_joist_cut_mm': 500,
         'upper_joist_cut_mm': 240,
         'long_plies': 8,
-        'small_piles': 4,
-        'small_piles_buy': 4,
-        'small_pile_X_mm': pile_x,
+        'small_piles': 2,
+        'small_piles_buy': 0,
+        'small_pile_X_mm': [300, 6300],
         'small_pile_Y_mm': 3115,
-        'small_hole_mm': [300, 300, 400],
+        'small_hole_mm': [200, 200, 200],
         'handrail': False,
     },
     'main_pile_X_mm': pile_x,
     'timber_piles': 8,
     'candidate_anchor_piles': 0,
     'ordinary_piles': 8,
-    'step_piles': 4,
+    'step_piles': 2,
     'main_stock_lm': round(sum(n * s for n, s, c in main_alloc) / 1000, 3),
     'main_installed_lm': round(sum(n * sum(c) for n, s, c in main_alloc) / 1000, 3),
     'H4_stock_lm': round(sum(n * s for n, s, c in h4_alloc) / 1000, 3),
@@ -193,8 +193,8 @@ out = {
         'cement_20kg_buy': cement_bags,
         'builders_mix_m3': mix_m3,
         'hole_mm': [400, 400, 600],
-        'step_hole_mm': [300, 300, 400],
-        'warning': 'Pour is the eight holes filled to 100 mm below the ground, with the pile sitting on 100 mm of concrete. Not a truck order. The 2.0 m³ is the truck minimum. Mixing uses 12 bags of cement and 1 m³ of builders mix. Steps are later.',
+        'step_hole_mm': [200, 200, 200],
+        'warning': 'Pour is the eight holes filled to 100 mm below the ground, with the pile sitting on 100 mm of concrete. Not a truck order. The 2.0 m³ is the truck minimum. Mixing uses 12 bags of cement and 1 m³ of builders mix. The step is two holes, 200×200×200, 2 bags, later. The deck order stays 59 bags.',
     },
     'screens': {
         'rebuilt_zero_dead_uplift_ULS_kN': rebuilt_uplift,

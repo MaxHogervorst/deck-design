@@ -64,19 +64,17 @@
     "lower_joist_cut_mm": 500,
     "upper_joist_cut_mm": 240,
     "long_plies": 8,
-    "small_piles": 4,
-    "small_piles_buy": 4,
+    "small_piles": 2,
+    "small_piles_buy": 0,
     "small_pile_X_mm": [
       300,
-      2400,
-      4500,
       6300
     ],
     "small_pile_Y_mm": 3115,
     "small_hole_mm": [
-      300,
-      300,
-      400
+      200,
+      200,
+      200
     ],
     "handrail": false
   },
@@ -89,7 +87,7 @@
   "timber_piles": 8,
   "candidate_anchor_piles": 0,
   "ordinary_piles": 8,
-  "step_piles": 4,
+  "step_piles": 2,
   "main_stock_lm": 74.4,
   "main_installed_lm": 64.48,
   "H4_stock_lm": 36.0,
@@ -187,7 +185,7 @@
     "main_holes_m3": 0.768,
     "main_pour_m3": 0.59,
     "rebuilt_4_holes_m3": 0,
-    "step_holes_m3": 0.144,
+    "step_holes_m3": 0.016,
     "extra_path_holes_m3": 0,
     "main_net_m3": 0.59,
     "readymix_order_m3": 2.0,
@@ -199,11 +197,11 @@
       600
     ],
     "step_hole_mm": [
-      300,
-      300,
-      400
+      200,
+      200,
+      200
     ],
-    "warning": "Pour is the eight holes filled to 100 mm below the ground, with the pile sitting on 100 mm of concrete. Not a truck order. The 2.0 m\u00b3 is the truck minimum. Mixing uses 12 bags of cement and 1 m\u00b3 of builders mix. Steps are later."
+    "warning": "Pour is the eight holes filled to 100 mm below the ground, with the pile sitting on 100 mm of concrete. Not a truck order. The 2.0 m\u00b3 is the truck minimum. Mixing uses 12 bags of cement and 1 m\u00b3 of builders mix. The step is two holes, 200\u00d7200\u00d7200, 2 bags, later. The deck order stays 59 bags."
   },
   "screens": {
     "rebuilt_zero_dead_uplift_ULS_kN": 0.0,
@@ -212,7 +210,7 @@
     "step_beam_table_m": 3.0,
     "bearer_table_m": 2.7,
     "step_pile_reaction_ULS_kN": 2.659151613761741,
-    "step_pile_bearing_kPa": 29.546129041797123,
+    "step_pile_bearing_kPa": 66.47879034404352,
     "main_bearer_max_M_ULS_kNm": 3.736521649896078,
     "note": "Bearers are two 190\u00d745 plies, chosen 15 November 2026. Table 6.4(b) lists a 190\u00d770 at 2.7 m for a 1.65 m loaded dimension. It does not list a 190\u00d745. Not a foundation or bracing check."
   }
