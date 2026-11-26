@@ -17,10 +17,11 @@
     5266.5,
     5703.5,
     6140.5,
-    6577.5
+    6509,
+    6877.5
   ],
-  "main_base_lines": 16,
-  "main_joist_members_with_supported_butt": 17,
+  "main_base_lines": 17,
+  "main_joist_members_with_supported_butt": 18,
   "max_spacing_mm": 437.0,
   "main_joist_cut_mm": 2510,
   "main_bearer_Y_mm": [
@@ -82,26 +83,44 @@
     300,
     2400,
     4500,
-    6300
+    6600
   ],
   "timber_piles": 8,
   "candidate_anchor_piles": 0,
   "ordinary_piles": 8,
   "step_piles": 2,
-  "main_stock_lm": 74.4,
-  "main_installed_lm": 64.48,
+  "main_stock_lm": 75.0,
+  "main_installed_lm": 67.59,
   "H4_stock_lm": 36.0,
   "H4_installed_lm": 35.28,
   "main_stock_allocations": [
     {
       "count": 2,
-      "stock_mm": 7200,
+      "stock_mm": 6000,
       "cuts_mm": [
-        6600
+        3519,
+        2270
       ]
     },
     {
-      "count": 8,
+      "count": 2,
+      "stock_mm": 6000,
+      "cuts_mm": [
+        3381,
+        2510
+      ]
+    },
+    {
+      "count": 2,
+      "stock_mm": 6000,
+      "cuts_mm": [
+        2510,
+        2510,
+        900
+      ]
+    },
+    {
+      "count": 5,
       "stock_mm": 6000,
       "cuts_mm": [
         2510,
@@ -113,17 +132,14 @@
       "stock_mm": 6000,
       "cuts_mm": [
         2510,
-        2270,
-        900
+        2270
       ]
     },
     {
       "count": 1,
-      "stock_mm": 6000,
+      "stock_mm": 3000,
       "cuts_mm": [
-        2270,
-        2270,
-        900
+        2510
       ]
     }
   ],
@@ -176,7 +192,7 @@
     "stock_3000": 37,
     "stock_lm": 291.6,
     "pricing_allowance_lm": 291.6,
-    "base_screws": 1384,
+    "base_screws": 1440,
     "purchase_allowance_screws": 1500,
     "width_basis_mm": 88,
     "gaps": "About 5 mm on the main deck and about 6 mm on the rebuilt strip. Three boards on each step. One board on the boundary-joist face and one on each riser."
@@ -211,7 +227,7 @@
     "bearer_table_m": 2.7,
     "step_pile_reaction_ULS_kN": 2.659151613761741,
     "step_pile_bearing_kPa": 66.47879034404352,
-    "main_bearer_max_M_ULS_kNm": 3.736521649896078,
+    "main_bearer_max_M_ULS_kNm": 3.727080000258982,
     "note": "Bearers are two 190\u00d745 plies, chosen 15 November 2026. Table 6.4(b) lists a 190\u00d770 at 2.7 m for a 1.65 m loaded dimension. It does not list a 190\u00d745. Not a foundation or bracing check."
   }
 }
